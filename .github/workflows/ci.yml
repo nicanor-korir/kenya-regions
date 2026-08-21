@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+
+      # The data must be reproducible from the committed sources. If this
+      # leaves the tree dirty, someone edited a generated file by hand.
+      - name: Data build is reproducible
+        run: |
+          npm run build:data
+          git diff --exit-code -- data src/generated
+
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+
+      # v1 shipped a package.json pointing at a file that was never published,
+      # so it broke on install. Prove the published artifact actually imports.
+      - name: Install the packed tarball and import it
+        run: |
+          npm pack
+          mkdir -p /tmp/consumer && cd /tmp/consumer
+          npm init -y > /dev/null
+          npm install "$GITHUB_WORKSPACE"/kenya-regions-*.tgz
+
+          cat > esm.mjs <<'JS'
+          import { counties, getCounty, getWardsByCounty } from 'kenya-regions'
+          import { counties as sub } from 'kenya-regions/counties'
+          import wards from 'kenya-regions/data/wards.json' with { type: 'json' }
+          const ok = counties.length === 47 && sub.length === 47 &&
+            wards.length === 1450 && getCounty('KE-30').code === 47 &&
+            getWardsByCounty('Kiambu').length === 60
+          if (!ok) { console.error('ESM smoke test failed'); process.exit(1) }
+          console.log('ESM entry points OK')
+          JS
+
+          cat > cjs.cjs <<'JS'
+          const { counties, getConstituenciesByCounty } = require('kenya-regions')
+          const { wards } = require('kenya-regions/wards')
+          const ok = counties.length === 47 && wards.length === 1450 &&
+            getConstituenciesByCounty('nairobi').length === 17
+          if (!ok) { console.error('CJS smoke test failed'); process.exit(1) }
+          console.log('CJS entry points OK')
+          JS
+
+          node esm.mjs
+          node cjs.cjs
+
+      - name: Types resolve for both ESM and CJS consumers
+        run: npx --yes @arethetypeswrong/cli@latest --pack . --profile node16

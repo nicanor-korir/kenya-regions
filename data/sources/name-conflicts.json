@@ -1,0 +1,142 @@
+{
+  "_comment": "Wards where iebc-hierarchy.csv and the 2013 IEBC boundary shapefile assign different names to the same ward code. The package uses the iebc-hierarchy name. These are code-assignment disagreements between the sources, not spelling variants, so they are not exposed as aliases.",
+  "generated": "scripts/build-data.mjs",
+  "count": 27,
+  "conflicts": [
+    {
+      "code": 97,
+      "hierarchy": "Bura",
+      "shapefile": "Hirimani"
+    },
+    {
+      "code": 209,
+      "hierarchy": "Elwak North",
+      "shapefile": "Shimbir Fatuma"
+    },
+    {
+      "code": 228,
+      "hierarchy": "Illeret",
+      "shapefile": "Dukana"
+    },
+    {
+      "code": 229,
+      "hierarchy": "North Horr",
+      "shapefile": "Maikona"
+    },
+    {
+      "code": 230,
+      "hierarchy": "Dukana",
+      "shapefile": "Turbi"
+    },
+    {
+      "code": 231,
+      "hierarchy": "Maikona",
+      "shapefile": "North Horr"
+    },
+    {
+      "code": 232,
+      "hierarchy": "Turbi",
+      "shapefile": "Illeret"
+    },
+    {
+      "code": 285,
+      "hierarchy": "Kibirichia",
+      "shapefile": "Mwanganthia"
+    },
+    {
+      "code": 286,
+      "hierarchy": "Mwanganthia",
+      "shapefile": "Abothuguchi Central"
+    },
+    {
+      "code": 289,
+      "hierarchy": "Kiagu",
+      "shapefile": "Kibirichia"
+    },
+    {
+      "code": 360,
+      "hierarchy": "Chuluni",
+      "shapefile": "Nzambani"
+    },
+    {
+      "code": 361,
+      "hierarchy": "Nzambani",
+      "shapefile": "Chuluni"
+    },
+    {
+      "code": 641,
+      "hierarchy": "Riwo",
+      "shapefile": "Lokori/Kochodin"
+    },
+    {
+      "code": 653,
+      "hierarchy": "Kapckok",
+      "shapefile": "Kasei"
+    },
+    {
+      "code": 654,
+      "hierarchy": "Kasei",
+      "shapefile": "Kapchok"
+    },
+    {
+      "code": 677,
+      "hierarchy": "Kwanza",
+      "shapefile": "Kapomboi"
+    },
+    {
+      "code": 813,
+      "hierarchy": "Kinamba",
+      "shapefile": "Githiga"
+    },
+    {
+      "code": 1062,
+      "hierarchy": "Muhudu",
+      "shapefile": "Gisambai"
+    },
+    {
+      "code": 1064,
+      "hierarchy": "Gisambai",
+      "shapefile": "Banja"
+    },
+    {
+      "code": 1065,
+      "hierarchy": "Banja",
+      "shapefile": "Muhudu"
+    },
+    {
+      "code": 1111,
+      "hierarchy": "Kimilili",
+      "shapefile": "Kibingei"
+    },
+    {
+      "code": 1112,
+      "hierarchy": "Kibingei",
+      "shapefile": "Kimilili"
+    },
+    {
+      "code": 1430,
+      "hierarchy": "Makongeni",
+      "shapefile": "Maringo/Hamza"
+    },
+    {
+      "code": 1431,
+      "hierarchy": "Maringo/Hamza",
+      "shapefile": "Viwandani"
+    },
+    {
+      "code": 1433,
+      "hierarchy": "Viwandani",
+      "shapefile": "Makongeni"
+    },
+    {
+      "code": 1441,
+      "hierarchy": "Ziwani/Kariokor",
+      "shapefile": "Pangani"
+    },
+    {
+      "code": 1442,
+      "hierarchy": "Pangani",
+      "shapefile": "Ziwani/Kariokor"
+    }
+  ]
+}

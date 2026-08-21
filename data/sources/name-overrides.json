@@ -1,0 +1,54 @@
+{
+  "_comment": [
+    "Manual corrections applied on top of the raw sources, each with a reason.",
+    "Kept separate from the source files so the sources stay verbatim copies of",
+    "what was published upstream and every deviation is reviewable."
+  ],
+
+  "constituencies": {
+    "61": {
+      "name": "Chuka/Igambang'ombe",
+      "reason": "iebc-hierarchy.csv truncates the name to 'CHUKA/IGAMBANG'OM'"
+    },
+    "251": {
+      "name": "Suba North",
+      "aliases": ["Mbita"],
+      "reason": "renamed by IEBC in the 2013 delimitation; Mbita is the pre-2013 name"
+    },
+    "252": {
+      "name": "Suba South",
+      "aliases": ["Gwasi", "Suba"],
+      "reason": "renamed by IEBC in the 2013 delimitation; Gwasi is the pre-2013 name"
+    }
+  },
+
+  "wards": {
+    "1016": {
+      "name": "Shinoyi-Shikomari-Esumeyia",
+      "reason": "iebc-hierarchy.csv truncates the name to 'SHINOYI-SHIKOMARI-'"
+    },
+    "1323": {
+      "name": "Majoge Basi",
+      "reason": "iebc-hierarchy.csv truncates the name to 'MAJOGE'"
+    },
+    "1389": {
+      "name": "Woodley/Kenyatta Golf Course",
+      "reason": "iebc-hierarchy.csv truncates the name to 'WOODLEY/KENYATTA GOLF'"
+    },
+    "1420": {
+      "name": "Matopeni/Spring Valley",
+      "reason": "iebc-hierarchy.csv truncates the name to 'MATOPENI'"
+    }
+  },
+
+  "_rejectedAliases": {
+    "_comment": "Names the COD-AB source carries that are wrong rather than historical, so they must not become searchable aliases.",
+    "constituencies": {
+      "58": ["Cental Imenti"],
+      "61": ["Maara"],
+      "98": ["Mukurweni"],
+      "185": ["Kajiado West"],
+      "186": ["Kajiado East"]
+    }
+  }
+}

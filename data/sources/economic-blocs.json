@@ -1,0 +1,51 @@
+[
+  {
+    "code": "LREB",
+    "name": "Lake Region Economic Bloc",
+    "counties": [
+      "Bomet", "Bungoma", "Busia", "Homa Bay", "Kakamega", "Kericho", "Kisii",
+      "Kisumu", "Migori", "Nandi", "Nyamira", "Siaya", "Trans Nzoia", "Vihiga"
+    ]
+  },
+  {
+    "code": "NOREB",
+    "name": "North Rift Economic Bloc",
+    "counties": [
+      "Baringo", "Elgeyo-Marakwet", "Nandi", "Samburu", "Trans Nzoia",
+      "Turkana", "Uasin Gishu", "West Pokot"
+    ]
+  },
+  {
+    "code": "FCDC",
+    "name": "Frontier Counties Development Council",
+    "counties": [
+      "Garissa", "Isiolo", "Lamu", "Mandera", "Marsabit", "Tana River", "Wajir"
+    ]
+  },
+  {
+    "code": "JKP",
+    "name": "Jumuiya ya Kaunti za Pwani",
+    "altName": "Coast Region Economic Bloc",
+    "counties": [
+      "Kilifi", "Kwale", "Lamu", "Mombasa", "Taita-Taveta", "Tana River"
+    ]
+  },
+  {
+    "code": "MKAREB",
+    "name": "Mt. Kenya and Aberdares Region Economic Bloc",
+    "counties": [
+      "Embu", "Kiambu", "Kirinyaga", "Laikipia", "Meru", "Murang'a",
+      "Nakuru", "Nyandarua", "Nyeri", "Tharaka-Nithi"
+    ]
+  },
+  {
+    "code": "SEKEB",
+    "name": "South Eastern Kenya Economic Bloc",
+    "counties": ["Kitui", "Machakos", "Makueni"]
+  },
+  {
+    "code": "NAMETRO",
+    "name": "Nairobi Metropolitan Area",
+    "counties": ["Kajiado", "Kiambu", "Machakos", "Murang'a", "Nairobi"]
+  }
+]

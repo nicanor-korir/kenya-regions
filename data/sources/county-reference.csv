@@ -1,0 +1,48 @@
+county_code,name,capital,former_province,area_sqkm,population_2019,population_2009,asal
+1,Mombasa,Mombasa,Coast,212.5,1208333,939370,
+2,Kwale,Kwale,Coast,8270.3,866820,649931,semi-arid
+3,Kilifi,Kilifi,Coast,12245.9,1453787,1109735,semi-arid
+4,Tana River,Hola,Coast,35375.8,315943,240075,arid
+5,Lamu,Lamu,Coast,6497.7,143920,101539,semi-arid
+6,Taita-Taveta,Mwatate,Coast,17083.9,340671,284657,semi-arid
+7,Garissa,Garissa,North Eastern,45720.2,841353,623060,arid
+8,Wajir,Wajir,North Eastern,55840.6,781263,661941,arid
+9,Mandera,Mandera,North Eastern,25797.7,867457,1025756,arid
+10,Marsabit,Marsabit,Eastern,66923.1,459785,291166,arid
+11,Isiolo,Isiolo,Eastern,25336.1,268002,143294,arid
+12,Meru,Meru,Eastern,7003.1,1545714,1356301,semi-arid
+13,Tharaka-Nithi,Kathwana,Eastern,2609.5,393177,365330,semi-arid
+14,Embu,Embu,Eastern,2555.9,608599,516212,semi-arid
+15,Kitui,Kitui,Eastern,24385.1,1136187,1012709,semi-arid
+16,Machakos,Machakos,Eastern,5952.9,1421932,1098584,
+17,Makueni,Wote,Eastern,8008.9,987653,884527,semi-arid
+18,Nyandarua,Ol Kalou,Central,3107.7,638289,596268,
+19,Nyeri,Nyeri,Central,2361.0,759164,693558,semi-arid
+20,Kirinyaga,Kerugoya,Central,1205.4,610411,528054,
+21,Murang'a,Murang'a,Central,2325.8,1056640,942581,
+22,Kiambu,Kiambu,Central,2449.2,2417735,1623282,
+23,Turkana,Lodwar,Rift Valley,98597.8,926976,855399,arid
+24,West Pokot,Kapenguria,Rift Valley,8418.2,621241,512690,semi-arid
+25,Samburu,Maralal,Rift Valley,20182.5,310327,223947,arid
+26,Trans Nzoia,Kitale,Rift Valley,2469.9,990341,818757,
+27,Uasin Gishu,Eldoret,Rift Valley,2955.3,1163186,894179,
+28,Elgeyo-Marakwet,Iten,Rift Valley,3049.7,454480,369998,
+29,Nandi,Kapsabet,Rift Valley,2884.5,885711,752965,
+30,Baringo,Kabarnet,Rift Valley,11075.3,666763,555561,arid
+31,Laikipia,Rumuruti,Rift Valley,8696.1,518560,399227,semi-arid
+32,Nakuru,Nakuru,Rift Valley,7509.5,2162202,1603325,
+33,Narok,Narok,Rift Valley,17921.2,1157873,850920,semi-arid
+34,Kajiado,Kajiado,Rift Valley,21292.7,1117840,687312,semi-arid
+35,Kericho,Kericho,Rift Valley,2454.5,901777,752396,
+36,Bomet,Bomet,Rift Valley,1997.9,875689,730129,
+37,Kakamega,Kakamega,Western,3033.8,1867579,1660651,
+38,Vihiga,Mbale,Western,531.3,590013,554622,
+39,Bungoma,Bungoma,Western,2206.9,1670570,1375063,
+40,Busia,Busia,Western,1628.4,893681,743946,
+41,Siaya,Siaya,Nyanza,2496.1,993183,842304,
+42,Kisumu,Kisumu,Nyanza,2009.5,1155574,968909,
+43,Homa Bay,Homa Bay,Nyanza,3154.7,1131950,963794,
+44,Migori,Migori,Nyanza,2586.4,1116436,917170,
+45,Kisii,Kisii,Nyanza,1317.9,1266860,1152282,
+46,Nyamira,Nyamira,Nyanza,912.5,605576,598252,
+47,Nairobi,Nairobi,Nairobi,694.9,4397073,3138369,

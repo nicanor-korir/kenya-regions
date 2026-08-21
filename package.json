@@ -1,0 +1,129 @@
+{
+  "name": "kenya-regions",
+  "version": "2.0.0",
+  "description": "Offline dataset and typed API for every way Kenya is divided: 47 counties, 290 constituencies, 1450 wards, the 8 former provinces, ISO 3166-2 codes, OCHA p-codes, regional economic blocs and the ASAL classification. No network, no dependencies.",
+  "keywords": [
+    "kenya",
+    "counties",
+    "constituencies",
+    "wards",
+    "sub-counties",
+    "provinces",
+    "regions",
+    "iebc",
+    "knbs",
+    "iso-3166-2",
+    "pcodes",
+    "administrative-divisions",
+    "east-africa",
+    "geodata",
+    "dropdown"
+  ],
+  "license": "MIT",
+  "author": "Nicanor Korir",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicanor-korir/kenya-regions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nicanor-korir/kenya-regions/issues"
+  },
+  "homepage": "https://github.com/nicanor-korir/kenya-regions#readme",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./counties": {
+      "import": {
+        "types": "./dist/counties.d.ts",
+        "default": "./dist/counties.js"
+      },
+      "require": {
+        "types": "./dist/counties.d.cts",
+        "default": "./dist/counties.cjs"
+      }
+    },
+    "./constituencies": {
+      "import": {
+        "types": "./dist/constituencies.d.ts",
+        "default": "./dist/constituencies.js"
+      },
+      "require": {
+        "types": "./dist/constituencies.d.cts",
+        "default": "./dist/constituencies.cjs"
+      }
+    },
+    "./wards": {
+      "import": {
+        "types": "./dist/wards.d.ts",
+        "default": "./dist/wards.js"
+      },
+      "require": {
+        "types": "./dist/wards.d.cts",
+        "default": "./dist/wards.cjs"
+      }
+    },
+    "./provinces": {
+      "import": {
+        "types": "./dist/provinces.d.ts",
+        "default": "./dist/provinces.js"
+      },
+      "require": {
+        "types": "./dist/provinces.d.cts",
+        "default": "./dist/provinces.cjs"
+      }
+    },
+    "./blocs": {
+      "import": {
+        "types": "./dist/blocs.d.ts",
+        "default": "./dist/blocs.js"
+      },
+      "require": {
+        "types": "./dist/blocs.d.cts",
+        "default": "./dist/blocs.cjs"
+      }
+    },
+    "./data/*.json": "./data/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "data/*.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build:data": "node scripts/build-data.mjs",
+    "build": "npm run build:data && tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "prettier --check \"{src,scripts,test}/**/*.{ts,mjs}\"",
+    "format": "prettier --write \"{src,scripts,test}/**/*.{ts,mjs}\"",
+    "prepublishOnly": "npm run build && npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
