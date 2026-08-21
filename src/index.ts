@@ -7,6 +7,10 @@
  * blocs, and the ASAL classification. See the README for what each one is and
  * when it is the right one to use.
  *
+ * Above all of that sits `kenya`, the country record: the codes the rest of
+ * the world identifies Kenya by, and the national totals the subdivisions roll
+ * up to.
+ *
  * Everything is bundled — no network calls, no runtime dependencies.
  */
 
@@ -42,6 +46,12 @@ export {
   type WardOptionsInit,
 } from './wards.js'
 
+export {
+  formatCurrency,
+  isPostalCode,
+  kenya,
+  toInternationalPhone,
+} from './country.js'
 export { getProvince, provinces } from './provinces.js'
 export { blocs, getBloc } from './blocs.js'
 export { search, type SearchInit } from './search.js'

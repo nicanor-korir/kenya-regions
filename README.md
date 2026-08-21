@@ -2,19 +2,21 @@
 
 Every way Kenya is divided up, as offline data with a typed API.
 
-47 counties, 290 constituencies, 1450 wards, the 8 former provinces, ISO 3166-2
-codes, OCHA place codes, the regional economic blocs and the ASAL
-classification — bundled into the package. No network calls, no runtime
-dependencies, works in Node, the browser, a build step or a serverless cold
-start.
+Kenya itself, then 47 counties, 290 constituencies, 1450 wards, the 8 former
+provinces, ISO 3166-1 and 3166-2 codes, OCHA place codes, the regional economic
+blocs and the ASAL classification — bundled into the package. No network calls,
+no runtime dependencies, works in Node, the browser, a build step or a
+serverless cold start.
 
 ```bash
 npm install kenya-regions
 ```
 
 ```ts
-import { counties, getCounty, getWardsByCounty, search } from 'kenya-regions'
+import { kenya, counties, getCounty, getWardsByCounty, search } from 'kenya-regions'
 
+kenya.codes.iso3166Alpha2          // 'KE'
+kenya.currency.code                // 'KES'
 counties.length                    // 47
 getCounty('KE-30')                 // Nairobi
 getCounty(47)                      // also Nairobi
@@ -29,6 +31,69 @@ search('mbita')[0].region.name     // 'Suba North' — matched on its former nam
 The reason this package exists is that "Kenya's regions" is not one list. There
 are several schemes in active use, they were created for different purposes,
 and — this is the part that bites — **they do not nest into each other**.
+
+### 0. Kenya in the world
+
+Above every subdivision sits the country itself. The `kenya` record holds the
+identifiers other systems use to refer to Kenya, and the national figures the
+subdivisions roll up to.
+
+```ts
+import { kenya } from 'kenya-regions'
+
+kenya.codes.iso3166Alpha2       // 'KE'   — ISO 3166-1
+kenya.codes.iso3166Alpha3       // 'KEN'
+kenya.codes.unM49               // '404'  — UN statistical code
+kenya.codes.callingCode         // '+254' — ITU
+kenya.currency.code             // 'KES'  — ISO 4217
+kenya.timeZone.iana             // 'Africa/Nairobi'
+kenya.location.intermediateRegion // { name: 'Eastern Africa', unM49: '014' }
+kenya.location.borders.map((b) => b.iso3166Alpha3)  // ETH SOM SSD TZA UGA
+```
+
+The codes deliberately nest into the subdivision data, and the build asserts
+it: every county `isoCode` extends `codes.iso3166Alpha2` (`KE` → `KE-30`), and
+every county `pcode` extends `codes.ochaPcode` (`KE` → `KE047`). So the country
+record is the root of the same code trees the counties sit in, not a separate
+fact sheet bolted on the side.
+
+Where Kenya sits in the UN M49 statistical hierarchy, which is what most
+international datasets group by:
+
+```
+001 World → 002 Africa → 202 Sub-Saharan Africa → 014 Eastern Africa → 404 Kenya
+```
+
+`kenya.subdivisions` and `kenya.legislature` are **derived at build time** from
+the actual datasets rather than typed in, so they cannot drift:
+
+```ts
+kenya.subdivisions.wards                            // 1450
+kenya.legislature.nationalAssembly.total            // 349
+kenya.legislature.senate.total                      // 67
+kenya.legislature.countyAssemblies.electedWardMembers  // 1450
+```
+
+That last group is worth dwelling on, because the seat counts *are* the region
+counts: 290 constituencies elect 290 MPs, 47 counties elect 47 senators **and**
+47 county woman representatives, and 1450 wards elect 1450 MCAs. Add the 12
+nominated members and the National Assembly's 349 falls out; the Speaker sits
+ex officio on top. If you have ever wondered why Kenya has exactly those seat
+numbers, it is because of the map.
+
+A few helpers come with it:
+
+```ts
+import { toInternationalPhone, formatCurrency, isPostalCode } from 'kenya-regions'
+
+toInternationalPhone('0712 345 678')  // '+254712345678'
+formatCurrency(1234.5)                // 'KSh 1,234.50'
+isPostalCode('00100')                 // true
+```
+
+`formatCurrency` asks `Intl` for the currency *code* and substitutes the symbol
+itself, because ICU renders KES as "Ksh", "KSh" or "KES" depending on the Node
+version and browser. Pass `currencyDisplay` to take the runtime's own output.
 
 ### 1. The devolved hierarchy — counties, constituencies, wards
 
@@ -278,6 +343,7 @@ import { counties, countyOptions } from 'kenya-regions/counties'   // ~25 KB
 
 | Entry point | Size |
 | --- | --- |
+| `kenya-regions/country` | ~5 KB |
 | `kenya-regions/blocs` | ~2 KB |
 | `kenya-regions/provinces` | ~2 KB |
 | `kenya-regions/counties` | ~25 KB |
@@ -299,6 +365,34 @@ import counties from 'kenya-regions/data/counties.json' with { type: 'json' }
 ---
 
 ## Shape of the data
+
+```ts
+interface Country {
+  name: { common, official, swahili: { common, official } }
+  demonym: string
+  motto: { text, language, translation }
+  flag: string                     // emoji
+  codes: {                         // ISO 3166-1, UN M49, IOC, FIFA, ITU, TLD…
+    iso3166Alpha2, iso3166Alpha3, iso3166Numeric, unM49,
+    ioc, fifa, vehicle, ochaPcode, callingCode, tld
+  }
+  location: {                      // M49 groupings, neighbours, centroid, bbox
+    continent, region, subregion, intermediateRegion,
+    landlocked, coastline, borders, centroid, boundingBox
+  }
+  capital: { name, countyCode, coordinates }
+  languages: { official, national }
+  currency: { code, numeric, name, symbol, subunit, subunitsPerUnit }
+  timeZone: { iana, abbreviation, utcOffset, observesDst }
+  conventions: { drivingSide, dateFormat, postalCodeFormat, … }
+  area: { totalKm2, waterPercent, note }
+  population: { 2009, 2019 }
+  government: { type, independenceDate, republicDate, … }
+  legislature: { nationalAssembly, senate, countyAssemblies }
+  subdivisions: { counties, constituencies, wards, … }   // derived at build
+  memberships: string[]
+}
+```
 
 ```ts
 interface County {
@@ -337,7 +431,9 @@ traceable, and `npm run build:data` regenerates the datasets from them offline.
 | [OCHA COD-AB for Kenya](https://data.humdata.org/dataset/cod-ab-ken) | P-codes, areas, centroids, former names |
 | IEBC 2013 boundary shapefile | Independent cross-check of ward names |
 | KNBS 2019 and 2009 censuses | Population |
-| ISO 3166-2:KE | County ISO codes and the withdrawn province codes |
+| ISO 3166-1 / 3166-2:KE | Country codes, county ISO codes, withdrawn province codes |
+| UN M49 | Kenya's place in the world statistical hierarchy |
+| Constitution of Kenya, Articles 97, 98 and 177 | Parliamentary seat counts |
 | ASAL policy / NDMA | Arid and semi-arid classification |
 | IGRTC / Council of Governors | Economic bloc membership |
 
@@ -356,6 +452,10 @@ hold, and the same assertions run again in the test suite:
 - county → constituency assignment agrees between two independent sources
 - ISO codes, p-codes and slugs are unique
 - 23 ASAL counties, 9 of them arid
+- the country record agrees with the datasets: its population equals the sum of
+  the counties, its capital resolves to a real county, every county ISO code
+  and p-code extends the country's, and each chamber's seats add up to its
+  stated total and match the region counts
 
 ### Known limitations
 
@@ -372,6 +472,10 @@ Honest about what is unresolved rather than papering over it:
   or a "Central". `getWard('township')` returns the lowest-coded match; scope
   with `getWardsByConstituency` or use the code when it matters.
 - **ASAL is county-level**, though the underlying reality is sub-county-level.
+- **Two national areas.** `kenya.area.totalKm2` is 580,367 km², the
+  internationally cited figure. The gazetted county areas sum to roughly
+  591,346 km². The two are measured differently and are not meant to reconcile,
+  so the build does not assert they do.
 
 Corrections are welcome — open an issue with a source and the build will be
 updated.

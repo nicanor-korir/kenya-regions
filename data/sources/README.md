@@ -6,6 +6,7 @@ generated except `name-conflicts.json`.
 
 | File | What it is | Provides |
 | --- | --- | --- |
+| `country.json` | Hand-maintained country record | ISO 3166-1, UN M49, ISO 4217, calling code, TLD, borders, bbox, seat counts |
 | `iebc-hierarchy.csv` | IEBC county / constituency / ward listing, 1450 rows | The 47/290/1450 backbone and all three code sets |
 | `cod-ab-admin1.csv` | OCHA Common Operational Dataset, admin level 1 | County p-codes, areas, centroids |
 | `cod-ab-admin2.csv` | OCHA Common Operational Dataset, admin level 2 | Constituency p-codes, areas, centroids, former names |
@@ -19,7 +20,10 @@ Upstream references:
 
 - OCHA COD-AB for Kenya — https://data.humdata.org/dataset/cod-ab-ken
 - KNBS 2019 Kenya Population and Housing Census
-- ISO 3166-2:KE
+- ISO 3166-1 and ISO 3166-2:KE
+- UN M49 standard country and area codes
+- Constitution of Kenya 2010, Articles 97, 98 and 177 (seat counts)
+- Kenya national boundary via geoBoundaries ADM0 (bounding box)
 - ASAL policy / National Drought Management Authority
 
 ## Changing the data

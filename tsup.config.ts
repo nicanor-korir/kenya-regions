@@ -8,6 +8,7 @@ export default defineConfig({
     'src/wards.ts',
     'src/provinces.ts',
     'src/blocs.ts',
+    'src/country.ts',
   ],
   format: ['esm', 'cjs'],
   dts: true,

@@ -95,6 +95,16 @@
         "default": "./dist/blocs.cjs"
       }
     },
+    "./country": {
+      "import": {
+        "types": "./dist/country.d.ts",
+        "default": "./dist/country.js"
+      },
+      "require": {
+        "types": "./dist/country.d.cts",
+        "default": "./dist/country.cjs"
+      }
+    },
     "./data/*.json": "./data/*.json",
     "./package.json": "./package.json"
   },

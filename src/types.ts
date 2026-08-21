@@ -159,3 +159,192 @@ export interface RegionOption {
   /** Original record, for callers that need more than the label. */
   region: County | Constituency | Ward
 }
+
+/* ------------------------------------------------------------- country --- */
+
+export interface CountryName {
+  common: string
+  official: string
+  swahili: { common: string; official: string }
+}
+
+/** Identifiers other systems use to refer to Kenya. */
+export interface CountryCodes {
+  /** ISO 3166-1 alpha-2, `"KE"`. The prefix on every county `isoCode`. */
+  iso3166Alpha2: string
+  /** ISO 3166-1 alpha-3, `"KEN"`. */
+  iso3166Alpha3: string
+  /** ISO 3166-1 numeric, `"404"`. */
+  iso3166Numeric: string
+  /** UN M49 country code, `"404"`. Same digits as ISO numeric, by design. */
+  unM49: string
+  /** International Olympic Committee code. */
+  ioc: string
+  /** FIFA country code. */
+  fifa: string
+  /** International vehicle registration code, `"EAK"`. */
+  vehicle: string
+  /** OCHA place code for the country, `"KE"`. County p-codes extend it. */
+  ochaPcode: string
+  /** ITU country calling code, `"+254"`. */
+  callingCode: string
+  /** Internet top-level domains. */
+  tld: string[]
+}
+
+/** A UN M49 statistical grouping Kenya belongs to. */
+export interface M49Region {
+  name: string
+  unM49: string
+}
+
+export interface BorderingCountry {
+  iso3166Alpha3: string
+  name: string
+}
+
+export interface BoundingBox {
+  west: number
+  south: number
+  east: number
+  north: number
+}
+
+export interface CountryLocation {
+  continent: string
+  /** UN M49 region: Africa (002). */
+  region: M49Region
+  /** UN M49 subregion: Sub-Saharan Africa (202). */
+  subregion: M49Region
+  /** UN M49 intermediate region: Eastern Africa (014). */
+  intermediateRegion: M49Region
+  landlocked: boolean
+  coastline: string
+  borders: BorderingCountry[]
+  centroid: Centroid
+  /** Extent of the national boundary, for fitting a map. */
+  boundingBox: BoundingBox
+}
+
+export interface CapitalCity {
+  name: string
+  /** The county the capital sits in, so it joins to the county data. */
+  countyCode: CountyCode
+  coordinates: Centroid
+}
+
+export interface Language {
+  iso639_3: string
+  iso639_1: string
+  name: string
+}
+
+export interface Currency {
+  /** ISO 4217 alphabetic code, `"KES"`. */
+  code: string
+  /** ISO 4217 numeric code, `"404"`. */
+  numeric: string
+  name: string
+  symbol: string
+  subunit: string
+  subunitsPerUnit: number
+}
+
+export interface TimeZone {
+  /** IANA identifier, `"Africa/Nairobi"`. */
+  iana: string
+  abbreviation: string
+  utcOffset: string
+  observesDst: boolean
+}
+
+export interface CountryConventions {
+  drivingSide: 'left' | 'right'
+  dateFormat: string
+  /** `#` stands for a digit. */
+  postalCodeFormat: string
+  postalCodeExample: string
+  startOfWeek: string
+}
+
+export interface CountryArea {
+  totalKm2: number
+  waterPercent: number
+  /** Why this does not equal the sum of the county areas. */
+  note: string
+}
+
+export interface Government {
+  type: string
+  independenceFrom: string
+  /** ISO 8601 date. */
+  independenceDate: string
+  republicDate: string
+  constitutionDate: string
+  /** When the counties took over from the provinces. */
+  devolutionEffectiveDate: string
+}
+
+/**
+ * Seat counts, which fall straight out of the subdivisions: one member per
+ * constituency, one senator and one woman representative per county, one
+ * member of a county assembly per ward. Speakers sit ex officio and are not
+ * counted in the totals.
+ */
+export interface Legislature {
+  nationalAssembly: {
+    total: number
+    constituencyMembers: number
+    countyWomanRepresentatives: number
+    nominatedMembers: number
+    basis: string
+  }
+  senate: {
+    total: number
+    electedMembers: number
+    nominatedWomen: number
+    nominatedYouth: number
+    nominatedPersonsWithDisabilities: number
+    basis: string
+  }
+  countyAssemblies: {
+    electedWardMembers: number
+    basis: string
+  }
+}
+
+/** How many of each subdivision exist, for quick reference. */
+export interface SubdivisionCounts {
+  counties: number
+  constituencies: number
+  wards: number
+  formerProvinces: number
+  economicBlocs: number
+  asalCounties: number
+}
+
+/**
+ * Kenya itself: the identifiers the rest of the world uses for the country,
+ * and the national figures its subdivisions roll up to.
+ */
+export interface Country {
+  name: CountryName
+  demonym: string
+  motto: { text: string; language: string; translation: string }
+  /** Flag as an emoji. */
+  flag: string
+  codes: CountryCodes
+  location: CountryLocation
+  capital: CapitalCity
+  languages: { official: Language[]; national: Language[] }
+  currency: Currency
+  timeZone: TimeZone
+  conventions: CountryConventions
+  area: CountryArea
+  population: Population
+  government: Government
+  legislature: Legislature
+  /** Derived from the bundled datasets at build time, never hand-written. */
+  subdivisions: SubdivisionCounts
+  memberships: string[]
+}

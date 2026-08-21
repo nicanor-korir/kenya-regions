@@ -295,6 +295,26 @@ const provinces = PROVINCES.map((p) => ({
   counties: counties.filter((c) => c.formerProvince === p.name).map((c) => c.code),
 }))
 
+/* -------------------------------------------------------------- country --- */
+
+const countrySrc = JSON.parse(readFileSync(src('country.json'), 'utf8'))
+delete countrySrc._comment
+delete countrySrc.legislature._comment
+
+// Derived rather than hand-written, so the country record can never drift out
+// of step with the datasets it summarises.
+const country = {
+  ...countrySrc,
+  subdivisions: {
+    counties: counties.length,
+    constituencies: constituencies.length,
+    wards: wards.length,
+    formerProvinces: PROVINCES.length,
+    economicBlocs: blocSrc.length,
+    asalCounties: counties.filter((c) => c.asal !== null).length,
+  },
+}
+
 const blocs = blocSrc.map((b) => ({
   code: b.code,
   name: b.name,
@@ -356,6 +376,63 @@ const asal = counties.filter((c) => c.asal)
 check(asal.length === 23, `expected 23 ASAL counties, got ${asal.length}`)
 check(asal.filter((c) => c.asal === 'arid').length === 9, 'expected 9 arid counties')
 
+// The country record must agree with the datasets and with itself.
+check(
+  country.population[2019] === sum(2019),
+  'country 2019 population disagrees with the sum of the counties',
+)
+check(
+  country.population[2009] === sum(2009),
+  'country 2009 population disagrees with the sum of the counties',
+)
+check(
+  counties.some((c) => c.code === country.capital.countyCode),
+  `capital references unknown county ${country.capital.countyCode}`,
+)
+check(
+  counties.every((c) => c.isoCode.startsWith(`${country.codes.iso3166Alpha2}-`)),
+  'county ISO codes do not all extend the country alpha-2 code',
+)
+check(
+  counties.every((c) => c.pcode.startsWith(country.codes.ochaPcode)),
+  'county p-codes do not all extend the country p-code',
+)
+
+const assembly = country.legislature.nationalAssembly
+check(
+  assembly.constituencyMembers === constituencies.length,
+  'National Assembly constituency seats disagree with the constituency count',
+)
+check(
+  assembly.countyWomanRepresentatives === counties.length,
+  'county woman representative seats disagree with the county count',
+)
+check(
+  assembly.total ===
+    assembly.constituencyMembers +
+      assembly.countyWomanRepresentatives +
+      assembly.nominatedMembers,
+  'National Assembly seats do not add up to its stated total',
+)
+
+const senate = country.legislature.senate
+check(
+  senate.electedMembers === counties.length,
+  'elected Senate seats disagree with the county count',
+)
+check(
+  senate.total ===
+    senate.electedMembers +
+      senate.nominatedWomen +
+      senate.nominatedYouth +
+      senate.nominatedPersonsWithDisabilities,
+  'Senate seats do not add up to its stated total',
+)
+check(
+  country.legislature.countyAssemblies.electedWardMembers === wards.length,
+  'county assembly seats disagree with the ward count',
+)
+
 // Slugs are the human-facing lookup key, so they must be unique per level.
 for (const [label, items] of [['county', counties], ['constituency', constituencies]]) {
   const slugs = new Set(items.map((i) => i.slug))
@@ -392,7 +469,20 @@ const write = (name, type, data) => {
   console.log(`  ${name.padEnd(16)} ${String(data.length).padStart(5)} records  ${kb.padStart(7)} KB`)
 }
 
+/** Same as `write`, for the one record that is an object rather than a list. */
+const writeObject = (name, type, data) => {
+  writeFileSync(out(`${name}.json`), JSON.stringify(data) + '\n')
+  writeFileSync(
+    gen(`${name}.ts`),
+    `${BANNER}import type { ${type} } from '../types.js'\n\n` +
+      `export const ${name}: ${type} = ${JSON.stringify(data, null, 1)}\n`,
+  )
+  const kb = (JSON.stringify(data).length / 1024).toFixed(1)
+  console.log(`  ${name.padEnd(16)} ${'1'.padStart(5)} record   ${kb.padStart(7)} KB`)
+}
+
 console.log('kenya-regions data build')
+writeObject('country', 'Country', country)
 write('counties', 'County', counties)
 write('constituencies', 'Constituency', constituencies)
 write('wards', 'Ward', wards)

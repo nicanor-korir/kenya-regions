@@ -50,21 +50,26 @@ jobs:
           npm install "$GITHUB_WORKSPACE"/kenya-regions-*.tgz
 
           cat > esm.mjs <<'JS'
-          import { counties, getCounty, getWardsByCounty } from 'kenya-regions'
+          import { counties, getCounty, getWardsByCounty, kenya } from 'kenya-regions'
           import { counties as sub } from 'kenya-regions/counties'
+          import { kenya as country } from 'kenya-regions/country'
           import wards from 'kenya-regions/data/wards.json' with { type: 'json' }
           const ok = counties.length === 47 && sub.length === 47 &&
             wards.length === 1450 && getCounty('KE-30').code === 47 &&
-            getWardsByCounty('Kiambu').length === 60
+            getWardsByCounty('Kiambu').length === 60 &&
+            kenya.codes.iso3166Alpha2 === 'KE' &&
+            country.subdivisions.wards === wards.length
           if (!ok) { console.error('ESM smoke test failed'); process.exit(1) }
           console.log('ESM entry points OK')
           JS
 
           cat > cjs.cjs <<'JS'
-          const { counties, getConstituenciesByCounty } = require('kenya-regions')
+          const { counties, getConstituenciesByCounty, kenya } = require('kenya-regions')
           const { wards } = require('kenya-regions/wards')
           const ok = counties.length === 47 && wards.length === 1450 &&
-            getConstituenciesByCounty('nairobi').length === 17
+            getConstituenciesByCounty('nairobi').length === 17 &&
+            kenya.currency.code === 'KES' &&
+            kenya.legislature.senate.total === 67
           if (!ok) { console.error('CJS smoke test failed'); process.exit(1) }
           console.log('CJS entry points OK')
           JS
