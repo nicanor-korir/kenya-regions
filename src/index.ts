@@ -48,6 +48,7 @@ export {
 } from './wards.js'
 
 export {
+  getConstituencyCodeOfSubCounty,
   getSubCounty,
   getWardCodesBySubCounty,
   requireSubCounty,

@@ -1,0 +1,67 @@
+name: Data correction
+description: A region name, code, figure or relationship is wrong
+title: "[data] "
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for this — corrections are the most valuable contribution to this package.
+
+        Please check the **Known limitations** section of the README first. The 12 wards
+        without a sub-county, the 27 ward code conflicts, duplicate ward names and the two
+        national area figures are all known and documented.
+
+  - type: dropdown
+    id: level
+    attributes:
+      label: Which level?
+      options:
+        - County
+        - Constituency
+        - Ward
+        - Sub-county
+        - Province
+        - Economic bloc
+        - Country
+    validations:
+      required: true
+
+  - type: input
+    id: region
+    attributes:
+      label: Which region?
+      description: Name and code if you have it.
+      placeholder: "Ward 1016, Shinoyi-Shikomari-"
+    validations:
+      required: true
+
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is currently wrong?
+      placeholder: "The name is truncated to 'Shinoyi-Shikomari-'."
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct
+    attributes:
+      label: What should it be?
+      placeholder: "Shinoyi-Shikomari-Esumeyia"
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: |
+        A gazette notice, IEBC or KNBS publication, county government page, or official
+        dataset. Local knowledge is welcome and useful context, but on its own it cannot
+        be committed — every figure here has to be checkable by a stranger. Say so
+        honestly if you do not have a document; the issue will be labelled `needs-source`
+        and stay open.
+      placeholder: "Kenya Gazette Notice No. ... / https://..."
+    validations:
+      required: true

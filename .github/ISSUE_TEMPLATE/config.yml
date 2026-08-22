@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation
+    url: https://nicanor-korir.github.io/kenya-regions/
+    about: The full reference, including known limitations and data provenance.
+  - name: Which "sub-county" do I want?
+    url: https://github.com/nicanor-korir/kenya-regions#2-sub-counties--the-one-that-causes-the-most-confusion
+    about: The term means two different things. Both are shipped, under separate names.

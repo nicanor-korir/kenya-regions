@@ -21,6 +21,7 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm test
+      - run: npm run test:coverage
 
       # The data must be reproducible from the committed sources. If this
       # leaves the tree dirty, someone edited a generated file by hand.

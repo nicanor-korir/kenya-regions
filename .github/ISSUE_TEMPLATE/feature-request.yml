@@ -1,0 +1,27 @@
+name: Feature or dataset request
+description: Suggest a new field, dataset or helper
+title: "[feat] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the problem rather than the solution, so alternatives stay open.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like added?
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Is there a source for the data?
+      description: |
+        New datasets need something authoritative behind them. If you know where the data
+        lives, say so — that is usually the hardest part.

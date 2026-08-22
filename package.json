@@ -133,11 +133,13 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "lint": "prettier --check \"{src,scripts,test}/**/*.{ts,mjs}\"",
     "format": "prettier --write \"{src,scripts,test}/**/*.{ts,mjs}\"",
     "prepublishOnly": "npm run build && npm run typecheck && npm test"
   },
   "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.9",
     "prettier": "^3.4.2",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2",

@@ -2,11 +2,22 @@
 
 Every way Kenya is divided up, as offline data with a typed API.
 
+[![npm version](https://img.shields.io/npm/v/kenya-regions?style=flat-square&color=0F6B5C&label=npm)](https://www.npmjs.com/package/kenya-regions)
+[![npm downloads](https://img.shields.io/npm/dm/kenya-regions?style=flat-square&color=0F6B5C&label=downloads%2Fmonth)](https://www.npmjs.com/package/kenya-regions)
+[![CI](https://img.shields.io/github/actions/workflow/status/nicanor-korir/kenya-regions/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/nicanor-korir/kenya-regions/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/github/deployments/nicanor-korir/kenya-regions/github-pages?style=flat-square&label=docs)](https://nicanor-korir.github.io/kenya-regions/)
+[![Coverage](https://img.shields.io/badge/coverage-%E2%89%A595%25-0F6B5C?style=flat-square)](#how-it-is-validated)
+[![Types](https://img.shields.io/npm/types/kenya-regions?style=flat-square&color=0F6B5C)](#shape-of-the-data)
+[![Dependencies](https://img.shields.io/badge/dependencies-0-0F6B5C?style=flat-square)](https://www.npmjs.com/package/kenya-regions?activeTab=dependencies)
+[![Node](https://img.shields.io/node/v/kenya-regions?style=flat-square&color=0F6B5C)](https://www.npmjs.com/package/kenya-regions)
+[![License](https://img.shields.io/npm/l/kenya-regions?style=flat-square&color=0F6B5C)](LICENSE)
+
 Kenya itself, then 47 counties, 290 constituencies, 1450 wards, the 301
-administrative sub-counties, the 8 former provinces, ISO 3166-1 and 3166-2 codes, OCHA place codes, the regional economic
-blocs and the ASAL classification — bundled into the package. No network calls,
-no runtime dependencies, works in Node, the browser, a build step or a
-serverless cold start.
+administrative sub-counties, the 8 former provinces, ISO 3166-1 and 3166-2
+codes, OCHA place codes, the regional economic blocs and the ASAL
+classification — bundled into the package. No network calls, no runtime
+dependencies, works in Node, the browser, a build step or a serverless cold
+start.
 
 ```bash
 npm install kenya-regions
@@ -522,16 +533,72 @@ updated.
 
 ## Contributing
 
+Corrections are the most valuable contribution here — this is reference data
+about a real country, so a misspelled ward is a bug. See
+[CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
+
+### Quick start
+
 ```bash
-npm install
-npm run build:data   # regenerate data/ and src/generated/ from data/sources/
-npm test
-npm run build
+git clone https://github.com/YOUR-USERNAME/kenya-regions.git
+cd kenya-regions && npm install && npm test
 ```
 
-Data changes go in `data/sources/`, never in the generated files. Corrections
-that deviate from a source belong in `data/sources/name-overrides.json` with a
-reason, so every deviation stays reviewable.
+| Command | What it does |
+| --- | --- |
+| `npm run build:data` | Regenerate `data/` and `src/generated/` from `data/sources/` |
+| `npm test` | Run the suite |
+| `npm run test:coverage` | Run it with the enforced coverage thresholds |
+| `npm run typecheck` | `tsc --noEmit` |
+| `npm run build` | Produce `dist/` |
+| `npm run format` | Prettier |
+
+### The one rule
+
+**Never edit a file the build generates.** Everything in `data/*.json` and
+`src/generated/` comes from `data/sources/` via `scripts/build-data.mjs`. Edit
+the output directly and your change vanishes on the next build — and CI will
+fail, because it checks the tree still reproduces from source.
+
+```
+data/sources/  ──  npm run build:data  ──▶  data/*.json + src/generated/
+   edit here                                    never edit these
+```
+
+Corrections that need to deviate from what a source says go in
+`data/sources/name-overrides.json` with a `reason`, so every deviation stays
+reviewable.
+
+### Reporting something wrong
+
+- **[Data correction](https://github.com/nicanor-korir/kenya-regions/issues/new?template=data-correction.yml)**
+  — a name, code or figure is wrong. Please include a source: a gazette notice,
+  an IEBC or KNBS publication, a county government page or an official dataset.
+  Local knowledge is genuinely welcome context, but on its own it cannot be
+  committed, because every figure here has to be checkable by a stranger. Say so
+  honestly if you have no document — the issue gets labelled `needs-source` and
+  stays open.
+- **[Bug report](https://github.com/nicanor-korir/kenya-regions/issues/new?template=bug-report.yml)**
+  — the library misbehaves. Include the version, your Node version, and the
+  smallest snippet that reproduces it.
+- **[Feature or dataset request](https://github.com/nicanor-korir/kenya-regions/issues/new?template=feature-request.yml)**
+  — describe the problem rather than the solution, so alternatives stay open.
+
+Check **[Known limitations](#known-limitations)** first — the 12 wards without a
+sub-county, the 27 ward code conflicts, duplicate ward names and the two
+national area figures are all known and documented.
+
+### Pull requests
+
+Fork, branch from `main` with a descriptive name, make the change with a test,
+and open a PR. A PR is ready when typecheck, tests and coverage pass, the data
+build leaves the tree clean, and any data change cites its source.
+
+CI runs all of that on Node 18, 20 and 22, then installs the packed tarball and
+imports it through every entry point — the check that exists because v1 shipped
+a `package.json` pointing at a file that was not in the tarball.
+
+Reviews aim to be quick and specific. If a PR goes quiet, a nudge is welcome.
 
 ## License
 

@@ -1,0 +1,52 @@
+name: Bug report
+description: The library behaves incorrectly
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you expected, and what you got instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: The smallest snippet that shows it. This will be formatted as TypeScript.
+      render: typescript
+      placeholder: |
+        import { getCounty } from 'kenya-regions'
+        getCounty('KE-30')   // expected Nairobi, got undefined
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: kenya-regions version
+      placeholder: "2.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: node
+    attributes:
+      label: Node version
+      placeholder: "20.11.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: modules
+    attributes:
+      label: How are you importing it?
+      options:
+        - ESM (import)
+        - CommonJS (require)
+        - Bundler (Vite, webpack, Next.js, ...)
+        - Raw JSON from kenya-regions/data
+    validations:
+      required: true

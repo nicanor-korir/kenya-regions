@@ -15,8 +15,6 @@ interface Indexable {
 }
 
 export interface Index<T extends Indexable> {
-  byCode: Map<number, T>
-  byText: Map<string, T>
   get(query: Query): T | undefined
 }
 
@@ -57,14 +55,6 @@ export function createIndex<T extends Indexable>(
   }
 
   return {
-    get byCode() {
-      build()
-      return byCode!
-    },
-    get byText() {
-      build()
-      return byText!
-    },
     get(query: Query): T | undefined {
       build()
       if (typeof query === 'number') {
@@ -81,13 +71,4 @@ export function createIndex<T extends Indexable>(
       return byText!.get(normalize(trimmed))
     },
   }
-}
-
-/** Narrows `County | CountyCode` style arguments down to a plain code. */
-export function toCode<T extends { code: number }>(
-  value: number | string | T,
-  index: Index<T & Indexable>,
-): number | undefined {
-  if (typeof value === 'object' && value !== null) return value.code
-  return index.get(value)?.code
 }
