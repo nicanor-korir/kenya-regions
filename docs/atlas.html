@@ -405,6 +405,12 @@ h3.sec em { font-style: normal; color: var(--ink); }
 .pick[disabled]:hover { background: none; }
 .picks.plain .pick { cursor: default; }
 .leaf { padding: 7px 11px; font-size: 14px; display: flex; justify-content: space-between; gap: 12px; }
+.picks-key {
+  font-size: 12px;
+  color: var(--ink-3);
+  margin: 5px 2px 0;
+  text-align: right;
+}
 .leaf em { font-style: normal; font-family: "JetBrains Mono", monospace; font-size: 11.5px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
 
 .note {
@@ -1225,8 +1231,12 @@ footer {
   const cell = (label, value, cls) =>
     `<div class="idcell ${cls || ''}"><span>${esc(label)}</span><b>${value}</b></div>`
 
-  const picks = (items, opts) => {
-    const o = opts || {}
+  /**
+   * `key` names what the right-hand column holds. Any list whose column is not
+   * self-describing gets one: a bare 722 next to a ward is not a quantity, a
+   * rank or a population — it is the IEBC's code — and nothing said so.
+   */
+  const picks = (items, key) => {
     const rows = items.map((it) =>
       `<li>${it.go
         ? `<button class="pick" data-go="${it.go}"${it.hover ? ` data-hover="${it.hover}"` : ''}>` +
@@ -1235,7 +1245,8 @@ footer {
     const filter = items.length > 12
       ? `<input class="filter" type="search" placeholder="Filter ${items.length}…" aria-label="Filter list">`
       : ''
-    return filter + `<ul class="picks">${rows}</ul>`
+    const caption = key ? `<p class="picks-key">${esc(key)}</p>` : ''
+    return filter + `<ul class="picks">${rows}</ul>` + caption
   }
 
   function render() {
@@ -1267,13 +1278,15 @@ footer {
         `<p class="psub">Created by the 2010 Constitution and the 2012 boundary review. This is the only hierarchy that nests cleanly.</p>` +
         `<div class="idgrid">${cell('Counties', '47', 'acc')}${cell('Constituencies', '290')}${cell('Wards', num(1450))}${cell('Sub-counties', String(A.subCounties.length))}</div>` +
         `<h3 class="sec">All counties <em>47</em></h3>` +
-        picks(G.counties.map((c) => ({
-          label: c.name,
-          meta: `${(constituenciesIn.get(c.code) || []).length} · ${num(c.pop19)}`,
-          go: 'county:' + c.code,
-          hover: 'county:' + c.code,
-        }))) +
-        `<p style="font-size:12px;color:var(--ink-3);margin:6px 2px 0">Constituencies · population 2019</p>`
+        picks(
+          G.counties.map((c) => ({
+            label: c.name,
+            meta: `${(constituenciesIn.get(c.code) || []).length} · ${num(c.pop19)}`,
+            go: 'county:' + c.code,
+            hover: 'county:' + c.code,
+          })),
+          'Constituencies · population 2019',
+        )
       return
     }
 
@@ -1300,13 +1313,24 @@ footer {
         `<p class="psub">One of ${(wardsIn.get(k.code) || []).length} wards in ${esc(k.name)}, ${esc(c.name)} County. Elects one MCA.</p>` +
         `<div class="idgrid">${cell('IEBC code', String(w.code), 'acc')}${cell('Constituency', String(k.code))}${cell('County', String(c.code))}</div>` +
         `<h3 class="sec">Sits inside</h3>` +
-        picks([
-          { label: c.name + ' County', meta: String(c.code), go: 'county:' + c.code },
-          { label: k.name + ' constituency', meta: String(k.code), go: 'constituency:' + k.code },
-          w.subCounty
-            ? { label: subCounty.get(w.subCounty).name + ' sub-county', meta: 'admin', go: 'subCounty:' + w.subCounty }
-            : { label: 'No sub-county matched', meta: 'unmapped' },
-        ]) +
+        picks(
+          [
+            { label: c.name + ' County', meta: 'county ' + c.code, go: 'county:' + c.code },
+            {
+              label: k.name + ' constituency',
+              meta: 'constituency ' + k.code,
+              go: 'constituency:' + k.code,
+            },
+            w.subCounty
+              ? {
+                  label: subCounty.get(w.subCounty).name + ' sub-county',
+                  meta: 'no code',
+                  go: 'subCounty:' + w.subCounty,
+                }
+              : { label: 'No sub-county matched', meta: 'unmapped' },
+          ],
+          'Sub-counties are named, not numbered',
+        ) +
         (w.subCounty ? '' :
           `<div class="note warn"><p class="note-h">Unmapped</p><p>Twelve of the 1,450 wards are spelled differently enough in the KNBS sub-county listing that no confident match was possible. This is one of them, so its sub-county is <code>null</code> rather than a guess.</p></div>`)
       return
@@ -1322,7 +1346,7 @@ footer {
         `<p class="psub">An administrative sub-county: a national government unit, headed by a deputy county commissioner.</p>` +
         `<div class="idgrid">${cell('Wards', String(ws.length), 'acc')}${cell('County', String(c.code))}${cell('Slug', '<span style="font-size:12px">' + esc(s.slug) + '</span>')}</div>` +
         `<h3 class="sec">Wards <em>${ws.length}</em></h3>` +
-        picks(ws.map((w) => ({ label: w.name, meta: String(w.code), go: 'ward:' + w.code }))) +
+        picks(ws.map((w) => ({ label: w.name, meta: String(w.code), go: 'ward:' + w.code })), 'IEBC ward code') +
         `<div class="note"><p class="note-h">Two meanings</p><p>“Sub-county” is used for both this unit and for a constituency. They coincide often but not always, which is why the package keeps them apart. <a href="index.html#subcounties">The difference, in full</a>.</p></div>`
       return
     }
@@ -1340,11 +1364,10 @@ footer {
         `<p class="pname">${esc(k.name)}</p>` +
         `<div class="idgrid">${cell('IEBC code', String(k.code), 'acc')}${cell('p-code', k.pcode)}${cell('Wards', String(ws.length))}${cell('Area km²', num(Math.round(k.areaKm2)))}${cell('Lat, long', '<span style="font-size:12px">' + k.lat.toFixed(3) + ', ' + k.lng.toFixed(3) + '</span>')}</div>` +
         `<h3 class="sec">Wards <em>${ws.length}</em></h3>` +
-        picks(ws.map((w) => ({
-          label: w.name,
-          meta: String(w.code),
-          go: 'ward:' + w.code,
-        })))
+        picks(
+          ws.map((w) => ({ label: w.name, meta: String(w.code), go: 'ward:' + w.code })),
+          'IEBC ward code',
+        )
       return
     }
 
@@ -1442,11 +1465,13 @@ footer {
         `<p class="psub">${esc(dt.name)} district, ${esc(pr.name)} Province. Headed by a Chief.</p>` +
         `<div class="idgrid">${cell('Sub-locations', String(subs.length), 'acc')}${cell('Population 2009', num(people))}${cell('Households', num(homes))}</div>` +
         `<h3 class="sec">Sub-locations <em>${subs.length}</em></h3>` +
-        picks(subs.map((s) => ({
-          label: s.name,
-          meta: `${num(s.pop)} · ${s.km2 ? num(s.km2) + ' km²' : '—'}`,
-        }))) +
-        `<p style="font-size:12px;color:var(--ink-3);margin:6px 2px 0">Population 2009 · area</p>` +
+        picks(
+          subs.map((s) => ({
+            label: s.name,
+            meta: `${num(s.pop)} · ${s.km2 ? num(s.km2) + ' km²' : '—'}`,
+          })),
+          'Population 2009 · area',
+        ) +
         boundaryNote
       return
     }
@@ -1465,7 +1490,7 @@ footer {
         `<h3 class="sec">Locations <em>${ls.length}</em></h3>` +
         picks(ls.map((l) => ({
           label: l.name,
-          meta: `${(subLocationsIn.get(l.code) || []).length} sub-loc.`,
+          meta: `${(subLocationsIn.get(l.code) || []).length} sub-locations`,
           go: 'location:' + l.code,
         }))) +
         boundaryNote
@@ -1484,11 +1509,11 @@ footer {
         `<p class="psub">One of the ${A.districts.length} districts counted in 2009.</p>` +
         `<div class="idgrid">${cell('Divisions', String(dvs.length), 'acc')}${cell('Code', String(dt.code))}${cell('Counties today', String(todays.length))}</div>` +
         `<h3 class="sec">Today it is inside</h3>` +
-        picks(todays.map((c) => ({ label: c.name + ' County', meta: String(c.code) }))) +
+        picks(todays.map((c) => ({ label: c.name + ' County', meta: String(c.code) })), 'County code') +
         `<h3 class="sec">Divisions <em>${dvs.length}</em></h3>` +
         picks(dvs.map((dv) => ({
           label: dv.name,
-          meta: `${(locationsIn.get(dv.code) || []).length} loc.`,
+          meta: `${(locationsIn.get(dv.code) || []).length} locations`,
           go: 'division:' + dv.code,
         }))) +
         boundaryNote
@@ -1507,11 +1532,11 @@ footer {
       `<h3 class="sec">Districts <em>${ds.length}</em></h3>` +
       picks(ds.map((d) => ({
         label: d.name,
-        meta: `${(divisionsIn.get(d.code) || []).length} div.`,
+        meta: `${(divisionsIn.get(d.code) || []).length} divisions`,
         go: 'district:' + d.code,
       }))) +
       `<h3 class="sec">Counties today <em>${todayCounties.length}</em></h3>` +
-      picks(todayCounties.map((c) => ({ label: c.name, meta: String(c.code) }))) +
+      picks(todayCounties.map((c) => ({ label: c.name, meta: String(c.code) })), 'County code') +
       boundaryNote
   }
 
