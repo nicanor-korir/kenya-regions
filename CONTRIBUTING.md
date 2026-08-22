@@ -208,11 +208,9 @@ docs/index.html   the standalone documentation page
 docs/plans/       scoped but unbuilt work, and decisions to leave things out
 ```
 
-Boundary geometry beyond the coarse county outlines lives in a separate
-repository,
-[kenya-regions-geo](https://github.com/nicanor-korir/kenya-regions-geo). It
-builds against the published `kenya-regions`, so a boundary cannot claim a code
-this package does not issue.
+Boundary geometry beyond the coarse county outlines is parked, unpublished, in
+[kenya-regions-geo](https://github.com/nicanor-korir/kenya-regions-geo). Do not
+add finer boundaries here without a reason the outlines cannot serve.
 
 ## Releasing
 

@@ -21,9 +21,8 @@ import type {
  * ```
  *
  * Boundaries are simplified to roughly a kilometre, so a point close to a
- * county border can resolve to the wrong side of it. For finer tiers, and for
- * levels below the county, use
- * [kenya-regions-geo](https://github.com/nicanor-korir/kenya-regions-geo).
+ * county border can resolve to the wrong side of it. Finer tiers are not
+ * published; see the README for why.
  *
  * Properties carry the same codes as the rest of this package, so
  * `getCounty(feature.properties.code)` gives you the full record.

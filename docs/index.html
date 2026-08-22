@@ -1301,25 +1301,8 @@ locateCounty(51.5, -0.12)                         // undefined, not in Kenya</co
           </div>
 
           <h3>Finer tiers and other levels</h3>
-          <p>Boundaries at higher detail, and levels below the county, live in a separate package:</p>
-          <div class="code"><div class="code-bar"><span>shell</span></div><pre><code>npm install kenya-regions-geo</code></pre></div>
-          <div class="code"><div class="code-bar"><span>typescript</span></div><pre><code>import { locate } from 'kenya-regions-geo'
-import { counties } from 'kenya-regions-geo/counties-detailed'
-
-locate(counties, -1.2864, 36.8172)?.properties.name</code></pre></div>
-          <div class="tablewrap" style="max-width:var(--measure)">
-            <table>
-              <thead><tr><th>Entry point</th><th>Simplified to</th><th class="num">Gzipped</th></tr></thead>
-              <tbody>
-                <tr><td><code>kenya-regions/outlines</code></td><td>~1 km</td><td class="num">14.7 KB</td></tr>
-                <tr><td><code>kenya-regions-geo/counties-compact</code></td><td>~1 km</td><td class="num">14.8 KB</td></tr>
-                <tr><td><code>kenya-regions-geo/counties</code></td><td>~200 m</td><td class="num">54 KB</td></tr>
-                <tr><td><code>kenya-regions-geo/counties-detailed</code></td><td>~40 m</td><td class="num">177 KB</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p>The split exists because npm downloads the whole tarball on install regardless of which subpath is imported. Subpath exports only help bundlers, so anything shipped in the main package is paid for by everyone, including the person who only wanted a dropdown.</p>
-          <p>Constituency boundaries are not published yet. The obvious source has its Nairobi polygons carrying the administrative sub-counties rather than the constituencies, so a point in the CBD resolves to the wrong constituency. See <a href="https://github.com/nicanor-korir/kenya-regions/blob/main/docs/plans/03-constituency-boundaries.md">the plan</a> for the evidence and what would unblock it.</p>
+          <p>Not published. Boundaries at higher detail, and levels below the county, are parked in <a href="https://github.com/nicanor-korir/kenya-regions-geo">kenya-regions-geo</a>, which is <strong>not on npm</strong>. It waits for a use case the outlines here do not already cover.</p>
+          <p>The gap worth having is constituency and ward boundaries. That is blocked on finding a source whose geometry can be trusted rather than on effort: the obvious one has its Nairobi polygons carrying the administrative sub-counties rather than the constituencies, so a point in the CBD resolves to the wrong constituency. See <a href="https://github.com/nicanor-korir/kenya-regions/blob/main/docs/plans/03-constituency-boundaries.md">the plan</a>.</p>
         </div>
       </section>
 

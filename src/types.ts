@@ -482,8 +482,7 @@ export interface CountyOutlineGeometry {
  *
  * Coarse on purpose. It draws a recognisable national map and answers which
  * county a point is in, but a boundary can be out by about a kilometre, so a
- * point near a border may resolve to the wrong side. `kenya-regions-geo` ships
- * finer tiers for when that matters.
+ * point near a border may resolve to the wrong side.
  */
 export interface CountyOutline {
   type: 'Feature'
