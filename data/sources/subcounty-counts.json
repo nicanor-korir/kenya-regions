@@ -1,0 +1,47 @@
+{
+  "_comment": [
+    "The number of national government sub-counties is contested and moving.",
+    "This file records what each source says, so the discrepancy is documented",
+    "rather than silently resolved in favour of whichever was loaded first."
+  ],
+  "shipped": {
+    "count": 301,
+    "basis": "knbs-subcounty-wards.csv, the KNBS/DHIS2 sub-county listing mapped to wards",
+    "note": "Independently matches the AfroCave county/sub-county table, which also totals 301."
+  },
+  "otherSources": [
+    {
+      "count": 301,
+      "asOf": "current",
+      "source": "AfroCave, List of Counties and Sub-Counties in Kenya",
+      "url": "https://blog.afro.co.ke/list-of-counties/",
+      "note": "Its per-county lists are largely the constituencies: Baringo is listed as Baringo Central, Baringo North, Baringo South, Eldama Ravine, Mogotio, Tiaty, which are that county's six constituencies rather than its administrative sub-counties."
+    },
+    {
+      "count": 314,
+      "asOf": "2023",
+      "source": "Wikipedia, Sub-counties of Kenya",
+      "url": "https://en.wikipedia.org/wiki/Sub-counties_of_Kenya",
+      "note": "No accompanying list is published."
+    },
+    {
+      "count": 341,
+      "asOf": "2024-11-26",
+      "source": "314 plus the 27 sub-counties gazetted by the Interior Ministry",
+      "url": "https://www.the-star.co.ke/news/realtime/2024-11-26-mudavadi-gazettes-27-new-sub-counties",
+      "note": "Part of 578 new administrative units: 27 sub-counties, 59 divisions, 170 locations and 322 sub-locations, across 31 counties. Press lists of the 27 are unreliable \u2014 several print 31 names under a headline count of 27 \u2014 so no list is committed here."
+    }
+  ],
+  "gazettements": [
+    {
+      "date": "2024-11-26",
+      "authority": "Interior Ministry / Prime Cabinet Secretary",
+      "subCounties": 27,
+      "divisions": 59,
+      "locations": 170,
+      "subLocations": 322,
+      "countiesAffected": 31,
+      "note": "Not yet reflected in any dataset shipped here. Applying it needs the gazette notice itself, not press summaries."
+    }
+  ]
+}

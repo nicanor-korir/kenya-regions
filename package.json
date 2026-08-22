@@ -17,7 +17,13 @@
     "administrative-divisions",
     "east-africa",
     "geodata",
-    "dropdown"
+    "dropdown",
+    "districts",
+    "divisions",
+    "locations",
+    "sub-locations",
+    "census",
+    "provincial-administration"
   ],
   "license": "MIT",
   "author": "Nicanor Korir",
@@ -83,6 +89,46 @@
       "require": {
         "types": "./dist/subcounties.d.cts",
         "default": "./dist/subcounties.cjs"
+      }
+    },
+    "./districts": {
+      "import": {
+        "types": "./dist/districts.d.ts",
+        "default": "./dist/districts.js"
+      },
+      "require": {
+        "types": "./dist/districts.d.cts",
+        "default": "./dist/districts.cjs"
+      }
+    },
+    "./divisions": {
+      "import": {
+        "types": "./dist/divisions.d.ts",
+        "default": "./dist/divisions.js"
+      },
+      "require": {
+        "types": "./dist/divisions.d.cts",
+        "default": "./dist/divisions.cjs"
+      }
+    },
+    "./locations": {
+      "import": {
+        "types": "./dist/locations.d.ts",
+        "default": "./dist/locations.js"
+      },
+      "require": {
+        "types": "./dist/locations.d.cts",
+        "default": "./dist/locations.cjs"
+      }
+    },
+    "./sublocations": {
+      "import": {
+        "types": "./dist/sublocations.d.ts",
+        "default": "./dist/sublocations.js"
+      },
+      "require": {
+        "types": "./dist/sublocations.d.cts",
+        "default": "./dist/sublocations.cjs"
       }
     },
     "./provinces": {

@@ -123,6 +123,7 @@ const cod1 = readCsv('cod-ab-admin1.csv')
 const cod2 = readCsv('cod-ab-admin2.csv')
 const shapefileWards = readCsv('iebc-shapefile-wards.csv')
 const subCountyWards = readCsv('knbs-subcounty-wards.csv')
+const census2009 = readCsv('knbs-2009-sublocations.csv')
 const blocSrc = JSON.parse(readFileSync(src('economic-blocs.json'), 'utf8'))
 const overrides = JSON.parse(readFileSync(src('name-overrides.json'), 'utf8'))
 const rejectedAliases = overrides._rejectedAliases
@@ -377,6 +378,109 @@ for (const ward of wards) {
     : null
 }
 
+/* -------------------------------------- provincial administration --- */
+
+/*
+ * The 2009 census enumerates province -> district -> division -> location ->
+ * sub-location. Names repeat across parents (several districts have a
+ * "Township" division), so identity at every level is the full path, and the
+ * emitted codes are assigned from that path in sorted order. They are stable
+ * across builds but carry no official authority — the README says so plainly.
+ */
+const PROVINCE_BY_NAME = new Map(PROVINCES.map((p) => [key(p.name), p.code]))
+
+const districtIds = new Map()
+const divisionIds = new Map()
+const locationIds = new Map()
+const districts = []
+const divisions = []
+const locations = []
+const subLocations = []
+
+const censusRows = [...census2009].sort((a, b) =>
+  `${a.province}|${a.district}|${a.division}|${a.location}|${a.sublocation}`.localeCompare(
+    `${b.province}|${b.district}|${b.division}|${b.location}|${b.sublocation}`,
+  ),
+)
+
+for (const row of censusRows) {
+  const provinceCode = PROVINCE_BY_NAME.get(key(row.province))
+  if (!provinceCode) throw new Error(`Unknown province in census data: ${row.province}`)
+
+  const dKey = `${row.province}|${row.district}`
+  if (!districtIds.has(dKey)) {
+    districtIds.set(dKey, districts.length + 1)
+    districts.push({
+      code: districts.length + 1,
+      name: titleCase(row.district),
+      slug: slugify(row.district),
+      formerProvinceCode: provinceCode,
+      countyCodes: [],
+    })
+  }
+  const districtCode = districtIds.get(dKey)
+
+  const vKey = `${dKey}|${row.division}`
+  if (!divisionIds.has(vKey)) {
+    divisionIds.set(vKey, divisions.length + 1)
+    divisions.push({
+      code: divisions.length + 1,
+      name: titleCase(row.division),
+      slug: slugify(row.division),
+      districtCode,
+      formerProvinceCode: provinceCode,
+    })
+  }
+  const divisionCode = divisionIds.get(vKey)
+
+  const lKey = `${vKey}|${row.location}`
+  if (!locationIds.has(lKey)) {
+    locationIds.set(lKey, locations.length + 1)
+    locations.push({
+      code: locations.length + 1,
+      name: titleCase(row.location),
+      slug: slugify(row.location),
+      divisionCode,
+      districtCode,
+      formerProvinceCode: provinceCode,
+    })
+  }
+  const locationCode = locationIds.get(lKey)
+
+  subLocations.push({
+    code: subLocations.length + 1,
+    name: titleCase(row.sublocation),
+    slug: slugify(row.sublocation),
+    locationCode,
+    divisionCode,
+    districtCode,
+    formerProvinceCode: provinceCode,
+    population: {
+      2009: Number(row.total),
+      male: Number(row.male),
+      female: Number(row.female),
+    },
+    households: Number(row.households),
+    areaKm2: Number(row.area_sqkm),
+    densityPerKm2: Number(row.density),
+  })
+}
+
+// Districts predate the counties and do not nest into them, but where a
+// district name matches a county or a constituency the link is worth keeping.
+const countyByKey = new Map(counties.map((c) => [key(c.name), c]))
+for (const district of districts) {
+  const direct = countyByKey.get(key(district.name))
+  if (direct) {
+    district.countyCodes = [direct.code]
+    continue
+  }
+  const viaConstituency = constituencies.filter((k) => key(k.name) === key(district.name))
+  district.countyCodes = [...new Set(viaConstituency.map((k) => k.countyCode))].sort(
+    (a, b) => a - b,
+  )
+}
+
 /* ----------------------------------------------------------- overlays --- */
 
 const countyByName = new Map(counties.map((c) => [c.name, c]))
@@ -492,6 +596,55 @@ for (const ward of wards) {
   }
 }
 
+// Provincial administration: the 2009 census is a closed dataset, so the
+// counts are exact and the population must reconcile with the published total.
+check(districts.length === 158, `expected 158 districts, got ${districts.length}`)
+check(divisions.length === 635, `expected 635 divisions, got ${divisions.length}`)
+check(locations.length === 2723, `expected 2723 locations, got ${locations.length}`)
+check(subLocations.length === 7150, `expected 7150 sub-locations, got ${subLocations.length}`)
+
+const censusTotal = subLocations.reduce((t, s) => t + s.population[2009], 0)
+check(
+  censusTotal === 38610097,
+  `sub-location populations sum to ${censusTotal}, expected the 2009 census total 38610097`,
+)
+for (const sub of subLocations) {
+  check(
+    sub.population[2009] === sub.population.male + sub.population.female,
+    `sub-location ${sub.name} male + female does not equal its total`,
+  )
+}
+
+const divisionByCode = new Map(divisions.map((d) => [d.code, d]))
+const districtByCode = new Map(districts.map((d) => [d.code, d]))
+for (const location of locations) {
+  const division = divisionByCode.get(location.divisionCode)
+  check(!!division, `location ${location.name} has unknown division`)
+  if (division) {
+    check(
+      division.districtCode === location.districtCode,
+      `location ${location.name} disagrees with its division about the district`,
+    )
+  }
+}
+const locationByCode = new Map(locations.map((l) => [l.code, l]))
+for (const sub of subLocations) {
+  const location = locationByCode.get(sub.locationCode)
+  check(!!location, `sub-location ${sub.name} has unknown location`)
+  if (location) {
+    check(
+      location.divisionCode === sub.divisionCode && location.districtCode === sub.districtCode,
+      `sub-location ${sub.name} disagrees with its location about its ancestry`,
+    )
+  }
+}
+for (const district of districts) {
+  check(
+    !!districtByCode.get(district.code),
+    `district ${district.name} is not indexable by its own code`,
+  )
+}
+
 const isoCodes = new Set(counties.map((c) => c.isoCode))
 check(isoCodes.size === 47, 'ISO 3166-2 codes are not unique across counties')
 
@@ -571,6 +724,27 @@ if (errors.length) {
 /* ---------------------------------------------------------------- emit --- */
 
 const gen = (f) => join(root, 'src', 'generated', f)
+
+/**
+ * Emits a dataset as an array of tuples instead of an array of objects.
+ *
+ * At 7150 records the repeated JSON key names cost more than the values do —
+ * `"formerProvinceCode":"RFT",` alone is ~28 bytes a row. Packing drops the
+ * keys entirely and the consuming module rebuilds the objects on import, which
+ * costs a few milliseconds and saves the best part of a megabyte over the wire.
+ */
+const writePacked = (name, type, rows, hydrator) => {
+  writeFileSync(
+    gen(`${name}.ts`),
+    `${BANNER}import type { ${type} } from '../types.js'\n\n` +
+      `type Packed = ${hydrator.tupleType}\n\n` +
+      `const packed: readonly Packed[] = ${JSON.stringify(rows)}\n\n` +
+      hydrator.body +
+      `\nexport const ${name}: readonly ${type}[] = packed.map(hydrate)\n`,
+  )
+  const kb = (JSON.stringify(rows).length / 1024).toFixed(1)
+  console.log(`  ${name.padEnd(16)} ${String(rows.length).padStart(5)} records  ${kb.padStart(7)} KB  (packed)`)
+}
 mkdirSync(out('.'), { recursive: true })
 mkdirSync(gen('.'), { recursive: true })
 
@@ -608,8 +782,142 @@ console.log('kenya-regions data build')
 writeObject('country', 'Country', country)
 write('counties', 'County', counties)
 write('constituencies', 'Constituency', constituencies)
-write('wards', 'Ward', wards)
+
+// Wards are the largest dataset in the main entry, so they pack too. Sub-county
+// slugs repeat about five times each, so they go in a lookup table.
+const subCountySlugTable = [...new Set(wards.map((w) => w.subCounty).filter(Boolean))].sort()
+const subCountySlugIndex = new Map(subCountySlugTable.map((s2, i) => [s2, i]))
+
+writePacked(
+  'wards',
+  'Ward',
+  wards.map((w) => [
+    w.name,
+    w.constituencyCode,
+    w.countyCode,
+    w.subCounty === null ? -1 : subCountySlugIndex.get(w.subCounty),
+    ...(w.aliases.length ? [w.aliases] : []),
+  ]),
+  {
+    tupleType:
+      '[name: string, constituencyCode: number, countyCode: number, subCounty: number, aliases?: string[]]',
+    body: `const SUB_COUNTIES = ${JSON.stringify(subCountySlugTable)}
+
+function slugify(input: string): string {
+  return input
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/['\u2019]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+function hydrate(row: Packed, i: number): Ward {
+  return {
+    code: i + 1,
+    name: row[0],
+    slug: slugify(row[0]),
+    constituencyCode: row[1],
+    countyCode: row[2],
+    subCounty: row[3] === -1 ? null : SUB_COUNTIES[row[3]]!,
+    aliases: row[4] ?? [],
+  }
+}
+`,
+  },
+)
+writeFileSync(out('wards.json'), JSON.stringify(wards) + '\n')
 write('subcounties', 'SubCounty', subCounties)
+write('districts', 'District', districts)
+write('divisions', 'Division', divisions)
+
+// Province codes are stored as an index into this list rather than repeating
+// the three-letter string on every row.
+const PROVINCE_CODES = PROVINCES.map((p) => p.code)
+const provinceIndex = (code) => PROVINCE_CODES.indexOf(code)
+
+writePacked(
+  'locations',
+  'Location',
+  locations.map((l) => [l.name, l.divisionCode, l.districtCode, provinceIndex(l.formerProvinceCode)]),
+  {
+    tupleType: '[name: string, divisionCode: number, districtCode: number, province: number]',
+    body: `const PROVINCE_CODES = ${JSON.stringify(PROVINCE_CODES)} as const
+
+function slugify(input: string): string {
+  return input
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/['\u2019]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+function hydrate(row: Packed, i: number): Location {
+  return {
+    code: i + 1,
+    name: row[0],
+    slug: slugify(row[0]),
+    divisionCode: row[1],
+    districtCode: row[2],
+    formerProvinceCode: PROVINCE_CODES[row[3]],
+  }
+}
+`,
+  },
+)
+
+writePacked(
+  'sublocations',
+  'SubLocation',
+  subLocations.map((s2) => [
+    s2.name, s2.locationCode, s2.divisionCode, s2.districtCode,
+    provinceIndex(s2.formerProvinceCode),
+    s2.population[2009], s2.population.male, s2.population.female,
+    s2.households, s2.areaKm2,
+  ]),
+  {
+    tupleType:
+      '[name: string, locationCode: number, divisionCode: number, districtCode: number, ' +
+      'province: number, total: number, male: number, female: number, households: number, areaKm2: number]',
+    body: `const PROVINCE_CODES = ${JSON.stringify(PROVINCE_CODES)} as const
+
+function slugify(input: string): string {
+  return input
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/['\u2019]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+function hydrate(row: Packed, i: number): SubLocation {
+  const [name, locationCode, divisionCode, districtCode, province, total, male, female, households, areaKm2] = row
+  return {
+    code: i + 1,
+    name,
+    slug: slugify(name),
+    locationCode,
+    divisionCode,
+    districtCode,
+    formerProvinceCode: PROVINCE_CODES[province],
+    population: { 2009: total, male, female },
+    households,
+    areaKm2,
+    // Derived rather than stored: it is exactly population over area.
+    densityPerKm2: areaKm2 > 0 ? Math.round((total / areaKm2) * 100) / 100 : 0,
+  }
+}
+`,
+  },
+)
+
+// Raw JSON stays available for consumers who want it without the API.
+writeFileSync(out('locations.json'), JSON.stringify(locations) + '\n')
+writeFileSync(out('sublocations.json'), JSON.stringify(subLocations) + '\n')
 write('provinces', 'Province', provinces)
 write('blocs', 'EconomicBloc', blocs)
 
@@ -648,3 +956,4 @@ console.log(`✓ validated: 47 counties, 290 constituencies, 1450 wards`)
 const mapped = wards.filter((w) => w.subCounty).length
 console.log(`  ${aliased} wards carry a spelling variant; ${wardNameConflicts.length} unresolved name conflicts logged`)
 console.log(`  ${subCounties.length} sub-counties; ${mapped}/${wards.length} wards mapped to one`)
+console.log(`  2009 provincial administration: ${districts.length} districts, ${divisions.length} divisions, ${locations.length} locations, ${subLocations.length} sub-locations`)

@@ -383,3 +383,79 @@ export interface Country {
   subdivisions: SubdivisionCounts
   memberships: string[]
 }
+
+/* ------------------------------------------ provincial administration --- */
+
+/**
+ * The provincial administration hierarchy, as enumerated by the 2009 Kenya
+ * Population and Housing Census:
+ *
+ * ```
+ * province → district → division → location → sub-location
+ * ```
+ *
+ * This is a **historical snapshot**, not the current register. Districts were
+ * superseded by counties in 2013 and by sub-counties thereafter, and the
+ * national government has gazetted new divisions, locations and sub-locations
+ * since — 59, 170 and 322 respectively in November 2024 alone. Use it for
+ * joining against census-era data, for the location and sub-location names
+ * still used by chiefs and assistant chiefs, and for historical analysis.
+ *
+ * Codes at these levels are **assigned by this package**, not official. They
+ * are derived deterministically from the hierarchy in sorted order, so they are
+ * stable across builds, but they carry no authority the way county,
+ * constituency and ward codes do.
+ */
+export type AdminLevel = 'district' | 'division' | 'location' | 'subLocation'
+
+/** A district as it stood at the 2009 census. Superseded by counties in 2013. */
+export interface District {
+  /** Package-assigned, 1–158. Not an official code. */
+  code: number
+  name: string
+  slug: string
+  formerProvinceCode: ProvinceCode
+  /** Counties this district's territory falls in, where it could be resolved. */
+  countyCodes: CountyCode[]
+}
+
+/** A division: the unit below a district, headed by an Assistant County Commissioner. */
+export interface Division {
+  /** Package-assigned, 1–635. Not an official code. */
+  code: number
+  name: string
+  slug: string
+  districtCode: number
+  formerProvinceCode: ProvinceCode
+}
+
+/** A location, headed by a Chief. */
+export interface Location {
+  /** Package-assigned, 1–2723. Not an official code. */
+  code: number
+  name: string
+  slug: string
+  divisionCode: number
+  districtCode: number
+  formerProvinceCode: ProvinceCode
+}
+
+/**
+ * A sub-location, headed by an Assistant Chief — the finest unit of the
+ * provincial administration, and the level the census enumerates at.
+ */
+export interface SubLocation {
+  /** Package-assigned, 1–7150. Not an official code. */
+  code: number
+  name: string
+  slug: string
+  locationCode: number
+  divisionCode: number
+  districtCode: number
+  formerProvinceCode: ProvinceCode
+  /** 2009 census figures. There is no published 2019 equivalent at this level. */
+  population: { 2009: number; male: number; female: number }
+  households: number
+  areaKm2: number
+  densityPerKm2: number
+}

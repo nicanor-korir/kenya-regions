@@ -3,8 +3,23 @@ import { normalize } from './internal/text.js'
 import type { ConstituencyCode, County, CountyCode, SubCounty, WardCode } from './types.js'
 
 /**
- * The 301 national government sub-counties: the decentralised units headed by
+ * The national government sub-counties: the decentralised units headed by
  * Deputy County Commissioners.
+ *
+ * **The count here is 301, and the true current number is higher.** Sources
+ * disagree and the register keeps moving:
+ *
+ * | Count | As of | Source |
+ * | --- | --- | --- |
+ * | 301 | shipped | The KNBS sub-county listing this data is built from. Independently matches the AfroCave table, which also totals 301. |
+ * | 314 | 2023 | Wikipedia, published without a list. |
+ * | 341 | Nov 2024 | 314 plus 27 sub-counties gazetted alongside 59 divisions, 170 locations and 322 sub-locations. |
+ *
+ * No authoritative machine-readable register of the current set is published,
+ * and press lists of the 27 new units are unreliable — several print 31 names
+ * under a headline count of 27. Rather than guess, this ships the enumeration
+ * it can fully source and records the rest in
+ * `data/sources/subcounty-counts.json`.
  *
  * These form a second hierarchy — county → sub-county → ward — running
  * alongside the electoral one, and the two do not coincide. 248 of the 301

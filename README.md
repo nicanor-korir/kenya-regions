@@ -13,7 +13,8 @@ Every way Kenya is divided up, as offline data with a typed API.
 [![License](https://img.shields.io/npm/l/kenya-regions?style=flat-square&color=0F6B5C)](LICENSE)
 
 Kenya itself, then 47 counties, 290 constituencies, 1450 wards, the 301
-administrative sub-counties, the 8 former provinces, ISO 3166-1 and 3166-2
+administrative sub-counties, the 2009 census hierarchy of districts,
+divisions, locations and sub-locations, the 8 former provinces, ISO 3166-1 and 3166-2
 codes, OCHA place codes, the regional economic blocs and the ASAL
 classification — bundled into the package. No network calls, no runtime
 dependencies, works in Node, the browser, a build step or a serverless cold
@@ -135,12 +136,39 @@ are shipped, under separate names, so you never have to guess which you have.**
 | | Unit | Count | Export | Run by |
 | --- | --- | --- | --- | --- |
 | County government sense | The constituency | 290 | `constituencies` | Elected MP |
-| National government sense | The administrative sub-county | 301 | `subCounties` | Deputy County Commissioner |
+| National government sense | The administrative sub-county | 301 (see below) | `subCounties` | Deputy County Commissioner |
 
 Section 48 of the County Governments Act 2012 makes a county’s decentralised
 units *equivalent to the constituencies within it*, which is why nearly every
 Kenyan address form labels the constituency “sub-county”. The national
 government’s sub-counties are a separate set with different boundaries.
+
+#### How many sub-counties are there?
+
+Honestly: nobody publishes a definitive machine-readable answer, and the number
+keeps moving.
+
+| Count | As of | Source |
+| --- | --- | --- |
+| **301** | shipped here | The KNBS sub-county listing this dataset is built from. Independently matches the [AfroCave table](https://blog.afro.co.ke/list-of-counties/), which also totals 301. |
+| 314 | 2023 | [Wikipedia](https://en.wikipedia.org/wiki/Sub-counties_of_Kenya), published without a list. |
+| **341** | Nov 2024 | 314 plus the [27 sub-counties gazetted](https://www.the-star.co.ke/news/realtime/2024-11-26-mudavadi-gazettes-27-new-sub-counties) alongside 59 divisions, 170 locations and 322 sub-locations, across 31 counties. |
+
+So **341 is the best current figure**, and the 301 shipped here is behind it.
+The gap is not closed because no authoritative register of the current set is
+published, and press lists of the 27 new units are unreliable — several print
+31 names under a headline count of 27. Guessing would put invented units next to
+sourced ones with nothing to tell them apart.
+
+What each source says is recorded in `data/sources/subcounty-counts.json`,
+including the gazettement, so the gap is documented rather than hidden. A
+corrected list from the gazette notice itself is very welcome — see
+[Contributing](#contributing).
+
+Note also that the AfroCave lists are largely the **constituencies**: it gives
+Baringo as Baringo Central, Baringo North, Baringo South, Eldama Ravine, Mogotio
+and Tiaty, which are that county's six constituencies, not its administrative
+sub-counties.
 
 They overlap heavily but not completely: **248 of the 301 share a name with a
 constituency, and 53 do not.** Baringo makes the divergence concrete — same
@@ -175,7 +203,50 @@ The national administration continues below this level — sub-county → divisi
 enumeration uses that chain, which is why census microdata will not join
 cleanly to a ward-level table.
 
-### 3. The 8 former provinces
+### 3. Districts, divisions, locations and sub-locations
+
+Below the sub-county, the national administration continues down to the
+Assistant Chief. The full chain, as enumerated by the 2009 census:
+
+```
+province → district → division → location → sub-location
+    8         158         635        2,723        7,150
+```
+
+```ts
+import { districts } from 'kenya-regions/districts'
+import { divisions } from 'kenya-regions/divisions'
+import { locations } from 'kenya-regions/locations'
+import { subLocations } from 'kenya-regions/sublocations'
+
+subLocations[0].population[2009]   // census population
+subLocations[0].households
+subLocations[0].areaKm2
+subLocations[0].densityPerKm2
+```
+
+Sub-locations are the only level below county carrying population, household
+and area figures, because they are the level the census enumerates at. Their
+populations sum to exactly **38,610,097** — the published 2009 national total —
+which the build asserts, independently confirming all 7,150 rows.
+
+> **This is a 2009 snapshot, not the current register.** Districts were
+> superseded by counties in 2013, and 59 divisions, 170 locations and 322
+> sub-locations were gazetted in November 2024 alone. Use it for joining against
+> census-era data, for the location and sub-location names chiefs and assistant
+> chiefs still work with, and for historical analysis — not as a description of
+> Kenya today.
+
+Codes at these four levels are **assigned by this package**, derived
+deterministically from the sorted hierarchy so they are stable across builds.
+Unlike county, constituency and ward codes they carry no official authority,
+and names repeat across parents, so a name alone is never a key.
+
+These four are **subpath-only** and are not re-exported from `kenya-regions`.
+Sub-locations alone are larger than everything else in the package combined, so
+nobody pays for them unless they ask.
+
+### 4. The 8 former provinces
 
 Abolished as administrative units when devolution took effect in March 2013,
 and very much alive everywhere else: pre-2013 datasets, everyday speech, and
@@ -195,7 +266,7 @@ getCountiesByProvince('RFT').length          // 14 — code works too
 Unlike the economic blocs, provinces *do* partition the country: every county
 belongs to exactly one.
 
-### 4. ISO 3166-2:KE — the same 47 counties, different numbers
+### 5. ISO 3166-2:KE — the same 47 counties, different numbers
 
 This is the single most likely source of a silent bug when joining datasets.
 **ISO numbers the counties alphabetically. The Constitution numbers them
@@ -219,7 +290,7 @@ Before the 2014 update, ISO 3166-2:KE coded the eight *provinces* instead
 (`KE-110` Nairobi, `KE-200` Central, …). Those are kept on each province as
 `legacyIsoCode` for reading old data.
 
-### 5. OCHA place codes (p-codes)
+### 6. OCHA place codes (p-codes)
 
 The humanitarian standard, used by ReliefWeb, HDX, IPC and most NGO datasets.
 These *do* follow the constitutional numbering: `KE047` is Nairobi county and
@@ -230,7 +301,7 @@ fromPcode('KE047')     // Nairobi county
 fromPcode('KE047275')  // Dagoretti North constituency
 ```
 
-### 6. Regional economic blocs
+### 7. Regional economic blocs
 
 Voluntary groupings counties formed under Article 189(2) to plan and invest
 together. Seven of them ship here — LREB, NOREB, FCDC, JKP, MKAREB, SEKEB and
@@ -242,7 +313,7 @@ Narok sits in none of them. So bloc membership is a many-to-many tag on a
 county, never a parent region — which is why `county.economicBlocs` is an
 array.
 
-### 7. ASAL — arid and semi-arid lands
+### 8. ASAL — arid and semi-arid lands
 
 A functional rather than administrative classification, used for drought
 response and food security programming. 23 counties are ASAL: 9 arid and 14
@@ -257,7 +328,7 @@ Note that this is a *county-level* simplification of something that is really
 sub-county-level: Kieni in Nyeri and Mbeere in Embu are ASAL areas inside
 counties that are otherwise not.
 
-### 8. Cities
+### 9. Cities
 
 The Urban Areas and Cities Act 2011 classifies settlements — city,
 municipality, town, market centre — independently of the county structure.
@@ -376,36 +447,61 @@ const [constituency, setConstituency] = useState<string>()
 
 ## Keeping the bundle small
 
-The ward dataset is by far the largest part. If you only need counties — which
-a dropdown usually does — import the subpath and the rest is never bundled:
+Import from a subpath and nothing else is bundled. These are real measurements —
+esbuild, minified, from a clean install of the packed tarball:
 
-```ts
-import { counties, countyOptions } from 'kenya-regions/counties'   // ~25 KB
-```
+| Import | Minified | Gzipped |
+| --- | --- | --- |
+| `import { counties } from 'kenya-regions/counties'` | **14.6 KB** | **3.5 KB** |
+| `import { counties } from 'kenya-regions'` | 93.4 KB | 26.2 KB |
 
-| Entry point | Size |
-| --- | --- |
-| `kenya-regions/country` | ~5 KB |
-| `kenya-regions/blocs` | ~2 KB |
-| `kenya-regions/provinces` | ~2 KB |
-| `kenya-regions/counties` | ~25 KB |
-| `kenya-regions/constituencies` | ~70 KB |
-| `kenya-regions/subcounties` | ~57 KB |
-| `kenya-regions/wards` | ~209 KB |
-| `kenya-regions` | ~377 KB |
+Six times smaller for the same data, which matters most in the commonest case
+of all: a county dropdown.
 
-The subpath entries deliberately do not bundle their parent datasets, so
-`kenya-regions/wards` cannot resolve `getWardsByCounty('Kiambu')` by name. It
-throws a message telling you to pass the code or use the main entry, rather
-than returning an empty array that looks like a county with no wards.
+Per entry point, as published:
+
+| Entry point | Size | Contains |
+| --- | --- | --- |
+| `kenya-regions/blocs` | ~2 KB | 7 blocs |
+| `kenya-regions/provinces` | ~2 KB | 8 provinces |
+| `kenya-regions/country` | ~5 KB | country record + helpers |
+| `kenya-regions/districts` | ~22 KB | 158 districts |
+| `kenya-regions/counties` | ~25 KB | 47 counties |
+| `kenya-regions/wards` | ~48 KB | 1450 wards |
+| `kenya-regions/subcounties` | ~57 KB | 301 sub-counties |
+| `kenya-regions/constituencies` | ~70 KB | 290 constituencies |
+| `kenya-regions/locations` | ~71 KB | 2723 locations |
+| `kenya-regions/divisions` | ~81 KB | 635 divisions |
+| `kenya-regions` | ~211 KB | everything except the four census levels |
+| `kenya-regions/sublocations` | ~429 KB | 7150 sub-locations with census figures |
+
+### How the large datasets are stored
+
+Wards, locations and sub-locations ship as **arrays of tuples**, rebuilt into
+objects on import. Past a few thousand records the repeated JSON key names cost
+more than the values do — `"formerProvinceCode":"RFT",` is about 28 bytes on
+every row — so dropping the keys is the single biggest saving available:
+
+| Dataset | As objects | Packed | |
+| --- | --- | --- | --- |
+| Wards | 180 KB | 35 KB | 5.2× |
+| Locations | 303 KB | 59 KB | 5.1× |
+| Sub-locations | 1,684 KB | 357 KB | 4.7× |
+
+Fields that can be derived are not stored at all: `slug` is computed from the
+name, and `densityPerKm2` is recomputed as population over area. Rehydration
+costs a few milliseconds at import and is invisible to callers — the exported
+arrays are ordinary typed objects.
+
+The four census levels are **subpath-only**, deliberately. Sub-locations alone
+outweigh everything else in the package, so they are never pulled into
+`kenya-regions`.
 
 Raw JSON is also published if you want the data without the API:
 
 ```ts
 import counties from 'kenya-regions/data/counties.json' with { type: 'json' }
 ```
-
----
 
 ## Shape of the data
 
@@ -475,6 +571,7 @@ traceable, and `npm run build:data` regenerates the datasets from them offline.
 | [OCHA COD-AB for Kenya](https://data.humdata.org/dataset/cod-ab-ken) | P-codes, areas, centroids, former names |
 | IEBC 2013 boundary shapefile | Independent cross-check of ward names |
 | KNBS sub-county / ward listing | The 301 administrative sub-counties |
+| KNBS 2009 census, population by sub-location | Districts, divisions, locations, sub-locations and their census figures |
 | KNBS 2019 and 2009 censuses | Population |
 | ISO 3166-1 / 3166-2:KE | Country codes, county ISO codes, withdrawn province codes |
 | UN M49 | Kenya's place in the world statistical hierarchy |
@@ -499,6 +596,9 @@ hold, and the same assertions run again in the test suite:
 - 23 ASAL counties, 9 of them arid
 - 301 sub-counties spanning all 47 counties, none without wards, every ward in
   the same county as its sub-county, and the ward back-reference round-trips
+- 158 districts, 635 divisions, 2723 locations and 7150 sub-locations, each
+  level agreeing with its parent about its ancestry, none childless, and
+  sub-location populations summing to the published 2009 national total
 - the country record agrees with the datasets: its population equals the sum of
   the counties, its capital resolves to a real county, every county ISO code
   and p-code extends the country's, and each chamber's seats add up to its
@@ -522,6 +622,11 @@ Honest about what is unresolved rather than papering over it:
   differently enough that no confident match was possible, so `ward.subCounty`
   is `null` rather than guessed. That is 99.2% coverage; the wards are listed in
   `data/sources/name-conflicts.json`. `getWardsByCounty` is always complete.
+- **The sub-county count is behind.** 301 shipped against a current figure of
+  about 341; see [How many sub-counties are there?](#how-many-sub-counties-are-there)
+- **The census hierarchy is a 2009 snapshot.** Districts no longer exist as
+  administrative units, and divisions, locations and sub-locations have been
+  added since.
 - **ASAL is county-level**, though the underlying reality is sub-county-level.
 - **Two national areas.** `kenya.area.totalKm2` is 580,367 km², the
   internationally cited figure. The gazetted county areas sum to roughly
