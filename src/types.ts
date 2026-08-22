@@ -101,7 +101,42 @@ export interface Ward {
   slug: string
   constituencyCode: ConstituencyCode
   countyCode: CountyCode
+  /**
+   * Slug of the national government sub-county this ward falls in, or `null`
+   * for the 12 wards whose name could not be matched to the sub-county source
+   * confidently. Unrelated to {@link constituencyCode} — see {@link SubCounty}.
+   */
+  subCounty: string | null
   aliases: string[]
+}
+
+/**
+ * A national government sub-county: the decentralised unit headed by a Deputy
+ * County Commissioner, forming a second hierarchy of county → sub-county →
+ * ward that runs parallel to the electoral one.
+ *
+ * This is **not** the constituency, even though county governments call
+ * constituencies "sub-counties" as well. 248 of the 301 share a name with a
+ * constituency and 53 do not, which is precisely why conflating the two is
+ * unsafe. If you are building an address form, you almost certainly want
+ * `constituencies`.
+ *
+ * Identified by {@link slug} rather than a number, because these units have no
+ * official numbering the way counties, constituencies and wards do — inventing
+ * one would imply an authority this package does not have.
+ */
+export interface SubCounty {
+  /** Unique across all 301, so it works as a primary key on its own. */
+  slug: string
+  name: string
+  countyCode: CountyCode
+  /**
+   * The constituency of the same name in the same county, where one exists.
+   * A name match, not a boundary match — the two units remain distinct.
+   */
+  constituencyCode: ConstituencyCode | null
+  /** Wards mapped to this sub-county, in code order. */
+  wardCodes: WardCode[]
 }
 
 /**

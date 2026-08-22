@@ -4,7 +4,6 @@
     "Kept separate from the source files so the sources stay verbatim copies of",
     "what was published upstream and every deviation is reviewable."
   ],
-
   "constituencies": {
     "61": {
       "name": "Chuka/Igambang'ombe",
@@ -12,16 +11,20 @@
     },
     "251": {
       "name": "Suba North",
-      "aliases": ["Mbita"],
+      "aliases": [
+        "Mbita"
+      ],
       "reason": "renamed by IEBC in the 2013 delimitation; Mbita is the pre-2013 name"
     },
     "252": {
       "name": "Suba South",
-      "aliases": ["Gwasi", "Suba"],
+      "aliases": [
+        "Gwasi",
+        "Suba"
+      ],
       "reason": "renamed by IEBC in the 2013 delimitation; Gwasi is the pre-2013 name"
     }
   },
-
   "wards": {
     "1016": {
       "name": "Shinoyi-Shikomari-Esumeyia",
@@ -40,15 +43,100 @@
       "reason": "iebc-hierarchy.csv truncates the name to 'MATOPENI'"
     }
   },
-
+  "subCountyRows": {
+    "_comment": "Corrections to knbs-subcounty-wards.csv, applied by slug match on (county, subcounty, ward).",
+    "fixes": [
+      {
+        "county": "KERICHO",
+        "subcounty": "AINAMOI",
+        "ward": "BELGUT",
+        "setSubcounty": "Belgut",
+        "setWard": "Kapsuser",
+        "reason": "Source row has the sub-county and ward swapped and uppercased. Belgut sub-county is otherwise short one ward and Kapsuser is otherwise unassigned, and Kapsuser sits in Belgut constituency."
+      },
+      {
+        "county": "Mombasa",
+        "subcounty": "Mvita",
+        "ward": "Makadara Ward-mji Wa Kale",
+        "setWard": "Mji wa Kale/Makadara",
+        "reason": "Source concatenates the two halves of the compound name in reverse order."
+      },
+      {
+        "county": "Mombasa",
+        "subcounty": "Mvita",
+        "ward": "Ganjoni Ward-shimanzi",
+        "setWard": "Shimanzi/Ganjoni",
+        "reason": "Source concatenates the two halves of the compound name in reverse order."
+      },
+      {
+        "county": "Kwale",
+        "subcounty": "Matuga",
+        "ward": "Waa Ngombeni",
+        "setWard": "Waa",
+        "reason": "Source merges Waa with the neighbouring Ng\u2019ombeni locality; the gazetted ward is Waa."
+      },
+      {
+        "county": "Kilifi",
+        "subcounty": "Rabai",
+        "ward": "Rurumaward",
+        "setWard": "Ruruma",
+        "reason": "Source omits the space before the word \"ward\"."
+      },
+      {
+        "county": "Meru",
+        "subcounty": "Igembe Central",
+        "ward": "Kiengu/Igembe East",
+        "setWard": "Igembe East",
+        "reason": "Source prefixes the ward with a locality name; Igembe East is the gazetted ward in Igembe Central."
+      },
+      {
+        "county": "EMBU",
+        "subcounty": "Runyenjes",
+        "ward": "Central",
+        "setWard": "Central Ward",
+        "reason": "The gazetted ward name carries the word \"Ward\" as part of the name itself."
+      },
+      {
+        "county": "Nairobi",
+        "subcounty": "Starehe",
+        "ward": "Ngara Ward",
+        "setWard": "Ngara",
+        "reason": "Source appends \"Ward\" to the name."
+      },
+      {
+        "county": "ELGEYO-MARAKWET",
+        "subcounty": "Marakwet West",
+        "ward": "Cherangany",
+        "setWard": "Cherang\u2019any/Chebororwa",
+        "reason": "Source uses the short form of a compound ward name."
+      },
+      {
+        "county": "NYERI",
+        "subcounty": "Nyeri Central",
+        "ward": "RURING'U / Karia",
+        "setWard": "Ruring'u",
+        "reason": "Source appends a locality to the gazetted ward name."
+      }
+    ]
+  },
   "_rejectedAliases": {
     "_comment": "Names the COD-AB source carries that are wrong rather than historical, so they must not become searchable aliases.",
     "constituencies": {
-      "58": ["Cental Imenti"],
-      "61": ["Maara"],
-      "98": ["Mukurweni"],
-      "185": ["Kajiado West"],
-      "186": ["Kajiado East"]
+      "58": [
+        "Cental Imenti"
+      ],
+      "61": [
+        "Maara"
+      ],
+      "98": [
+        "Mukurweni"
+      ],
+      "185": [
+        "Kajiado West"
+      ],
+      "186": [
+        "Kajiado East"
+      ]
     }
   }
 }

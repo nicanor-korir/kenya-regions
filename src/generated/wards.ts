@@ -8,7 +8,8 @@ export const wards: readonly Ward[] = [
   "slug": "port-reitz",
   "constituencyCode": 1,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "changamwe"
  },
  {
   "code": 2,
@@ -16,7 +17,8 @@ export const wards: readonly Ward[] = [
   "slug": "kipevu",
   "constituencyCode": 1,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "changamwe"
  },
  {
   "code": 3,
@@ -24,7 +26,8 @@ export const wards: readonly Ward[] = [
   "slug": "airport",
   "constituencyCode": 1,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "changamwe"
  },
  {
   "code": 4,
@@ -32,7 +35,8 @@ export const wards: readonly Ward[] = [
   "slug": "changamwe",
   "constituencyCode": 1,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "changamwe"
  },
  {
   "code": 5,
@@ -40,7 +44,8 @@ export const wards: readonly Ward[] = [
   "slug": "chaani",
   "constituencyCode": 1,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "changamwe"
  },
  {
   "code": 6,
@@ -48,7 +53,8 @@ export const wards: readonly Ward[] = [
   "slug": "jomvu-kuu",
   "constituencyCode": 2,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "jomvu"
  },
  {
   "code": 7,
@@ -56,7 +62,8 @@ export const wards: readonly Ward[] = [
   "slug": "miritini",
   "constituencyCode": 2,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "jomvu"
  },
  {
   "code": 8,
@@ -64,7 +71,8 @@ export const wards: readonly Ward[] = [
   "slug": "mikindani",
   "constituencyCode": 2,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "jomvu"
  },
  {
   "code": 9,
@@ -72,7 +80,8 @@ export const wards: readonly Ward[] = [
   "slug": "mjambere",
   "constituencyCode": 3,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisauni"
  },
  {
   "code": 10,
@@ -80,7 +89,8 @@ export const wards: readonly Ward[] = [
   "slug": "junda",
   "constituencyCode": 3,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisauni"
  },
  {
   "code": 11,
@@ -88,7 +98,8 @@ export const wards: readonly Ward[] = [
   "slug": "bamburi",
   "constituencyCode": 3,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisauni"
  },
  {
   "code": 12,
@@ -96,7 +107,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwakirunge",
   "constituencyCode": 3,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisauni"
  },
  {
   "code": 13,
@@ -104,7 +116,8 @@ export const wards: readonly Ward[] = [
   "slug": "mtopanga",
   "constituencyCode": 3,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisauni"
  },
  {
   "code": 14,
@@ -112,7 +125,8 @@ export const wards: readonly Ward[] = [
   "slug": "magogoni",
   "constituencyCode": 3,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisauni"
  },
  {
   "code": 15,
@@ -120,7 +134,8 @@ export const wards: readonly Ward[] = [
   "slug": "shanzu",
   "constituencyCode": 3,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisauni"
  },
  {
   "code": 16,
@@ -128,7 +143,8 @@ export const wards: readonly Ward[] = [
   "slug": "frere-town",
   "constituencyCode": 4,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyali"
  },
  {
   "code": 17,
@@ -136,7 +152,8 @@ export const wards: readonly Ward[] = [
   "slug": "ziwa-la-ngombe",
   "constituencyCode": 4,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyali"
  },
  {
   "code": 18,
@@ -144,7 +161,8 @@ export const wards: readonly Ward[] = [
   "slug": "mkomani",
   "constituencyCode": 4,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyali"
  },
  {
   "code": 19,
@@ -152,7 +170,8 @@ export const wards: readonly Ward[] = [
   "slug": "kongowea",
   "constituencyCode": 4,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyali"
  },
  {
   "code": 20,
@@ -160,7 +179,8 @@ export const wards: readonly Ward[] = [
   "slug": "kadzandani",
   "constituencyCode": 4,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyali"
  },
  {
   "code": 21,
@@ -168,7 +188,8 @@ export const wards: readonly Ward[] = [
   "slug": "mtongwe",
   "constituencyCode": 5,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "likoni"
  },
  {
   "code": 22,
@@ -176,7 +197,8 @@ export const wards: readonly Ward[] = [
   "slug": "shika-adabu",
   "constituencyCode": 5,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "likoni"
  },
  {
   "code": 23,
@@ -184,7 +206,8 @@ export const wards: readonly Ward[] = [
   "slug": "bofu",
   "constituencyCode": 5,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "likoni"
  },
  {
   "code": 24,
@@ -192,7 +215,8 @@ export const wards: readonly Ward[] = [
   "slug": "likoni",
   "constituencyCode": 5,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "likoni"
  },
  {
   "code": 25,
@@ -200,7 +224,8 @@ export const wards: readonly Ward[] = [
   "slug": "timbwani",
   "constituencyCode": 5,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "likoni"
  },
  {
   "code": 26,
@@ -208,7 +233,8 @@ export const wards: readonly Ward[] = [
   "slug": "mji-wa-kale-makadara",
   "constituencyCode": 6,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mvita"
  },
  {
   "code": 27,
@@ -216,7 +242,8 @@ export const wards: readonly Ward[] = [
   "slug": "tudor",
   "constituencyCode": 6,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mvita"
  },
  {
   "code": 28,
@@ -224,7 +251,8 @@ export const wards: readonly Ward[] = [
   "slug": "tononoka",
   "constituencyCode": 6,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mvita"
  },
  {
   "code": 29,
@@ -232,7 +260,8 @@ export const wards: readonly Ward[] = [
   "slug": "shimanzi-ganjoni",
   "constituencyCode": 6,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mvita"
  },
  {
   "code": 30,
@@ -240,7 +269,8 @@ export const wards: readonly Ward[] = [
   "slug": "majengo",
   "constituencyCode": 6,
   "countyCode": 1,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mvita"
  },
  {
   "code": 31,
@@ -248,7 +278,8 @@ export const wards: readonly Ward[] = [
   "slug": "gombatobongwe",
   "constituencyCode": 7,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "msambweni"
  },
  {
   "code": 32,
@@ -256,7 +287,8 @@ export const wards: readonly Ward[] = [
   "slug": "ukunda",
   "constituencyCode": 7,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "msambweni"
  },
  {
   "code": 33,
@@ -264,7 +296,8 @@ export const wards: readonly Ward[] = [
   "slug": "kinondo",
   "constituencyCode": 7,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "msambweni"
  },
  {
   "code": 34,
@@ -272,7 +305,8 @@ export const wards: readonly Ward[] = [
   "slug": "ramisi",
   "constituencyCode": 7,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "msambweni"
  },
  {
   "code": 35,
@@ -280,7 +314,8 @@ export const wards: readonly Ward[] = [
   "slug": "pongwekikoneni",
   "constituencyCode": 8,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lunga-lunga"
  },
  {
   "code": 36,
@@ -288,7 +323,8 @@ export const wards: readonly Ward[] = [
   "slug": "dzombo",
   "constituencyCode": 8,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lunga-lunga"
  },
  {
   "code": 37,
@@ -296,7 +332,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwereni",
   "constituencyCode": 8,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lunga-lunga"
  },
  {
   "code": 38,
@@ -304,7 +341,8 @@ export const wards: readonly Ward[] = [
   "slug": "vanga",
   "constituencyCode": 8,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lunga-lunga"
  },
  {
   "code": 39,
@@ -312,7 +350,8 @@ export const wards: readonly Ward[] = [
   "slug": "tsimba-golini",
   "constituencyCode": 9,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matuga"
  },
  {
   "code": 40,
@@ -320,7 +359,8 @@ export const wards: readonly Ward[] = [
   "slug": "waa",
   "constituencyCode": 9,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matuga"
  },
  {
   "code": 41,
@@ -328,7 +368,8 @@ export const wards: readonly Ward[] = [
   "slug": "tiwi",
   "constituencyCode": 9,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matuga"
  },
  {
   "code": 42,
@@ -336,7 +377,8 @@ export const wards: readonly Ward[] = [
   "slug": "kubo-south",
   "constituencyCode": 9,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matuga"
  },
  {
   "code": 43,
@@ -344,7 +386,8 @@ export const wards: readonly Ward[] = [
   "slug": "mkongani",
   "constituencyCode": 9,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matuga"
  },
  {
   "code": 44,
@@ -354,7 +397,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 2,
   "aliases": [
    "Ndavaya"
-  ]
+  ],
+  "subCounty": "kinango"
  },
  {
   "code": 45,
@@ -362,7 +406,8 @@ export const wards: readonly Ward[] = [
   "slug": "puma",
   "constituencyCode": 10,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kinango"
  },
  {
   "code": 46,
@@ -370,7 +415,8 @@ export const wards: readonly Ward[] = [
   "slug": "kinango",
   "constituencyCode": 10,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kinango"
  },
  {
   "code": 47,
@@ -378,7 +424,8 @@ export const wards: readonly Ward[] = [
   "slug": "mackinnon-road",
   "constituencyCode": 10,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kinango"
  },
  {
   "code": 48,
@@ -386,7 +433,8 @@ export const wards: readonly Ward[] = [
   "slug": "chengoni-samburu",
   "constituencyCode": 10,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kinango"
  },
  {
   "code": 49,
@@ -394,7 +442,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwavumbo",
   "constituencyCode": 10,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kinango"
  },
  {
   "code": 50,
@@ -402,7 +451,8 @@ export const wards: readonly Ward[] = [
   "slug": "kasemeni",
   "constituencyCode": 10,
   "countyCode": 2,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kinango"
  },
  {
   "code": 51,
@@ -410,7 +460,8 @@ export const wards: readonly Ward[] = [
   "slug": "tezo",
   "constituencyCode": 11,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kilifi-north"
  },
  {
   "code": 52,
@@ -418,7 +469,8 @@ export const wards: readonly Ward[] = [
   "slug": "sokoni",
   "constituencyCode": 11,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kilifi-north"
  },
  {
   "code": 53,
@@ -426,7 +478,8 @@ export const wards: readonly Ward[] = [
   "slug": "kibarani",
   "constituencyCode": 11,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kilifi-north"
  },
  {
   "code": 54,
@@ -434,7 +487,8 @@ export const wards: readonly Ward[] = [
   "slug": "dabaso",
   "constituencyCode": 11,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kilifi-north"
  },
  {
   "code": 55,
@@ -442,7 +496,8 @@ export const wards: readonly Ward[] = [
   "slug": "matsangoni",
   "constituencyCode": 11,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kilifi-north"
  },
  {
   "code": 56,
@@ -450,7 +505,8 @@ export const wards: readonly Ward[] = [
   "slug": "watamu",
   "constituencyCode": 11,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kilifi-north"
  },
  {
   "code": 57,
@@ -458,7 +514,8 @@ export const wards: readonly Ward[] = [
   "slug": "mnarani",
   "constituencyCode": 11,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kilifi-north"
  },
  {
   "code": 58,
@@ -466,7 +523,8 @@ export const wards: readonly Ward[] = [
   "slug": "junju",
   "constituencyCode": 12,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kilifi-south"
  },
  {
   "code": 59,
@@ -474,7 +532,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwarakaya",
   "constituencyCode": 12,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kilifi-south"
  },
  {
   "code": 60,
@@ -482,7 +541,8 @@ export const wards: readonly Ward[] = [
   "slug": "shimo-la-tewa",
   "constituencyCode": 12,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kilifi-south"
  },
  {
   "code": 61,
@@ -490,7 +550,8 @@ export const wards: readonly Ward[] = [
   "slug": "chasimba",
   "constituencyCode": 12,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kilifi-south"
  },
  {
   "code": 62,
@@ -498,7 +559,8 @@ export const wards: readonly Ward[] = [
   "slug": "mtepeni",
   "constituencyCode": 12,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kilifi-south"
  },
  {
   "code": 63,
@@ -506,7 +568,8 @@ export const wards: readonly Ward[] = [
   "slug": "mariakani",
   "constituencyCode": 13,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kaloleni"
  },
  {
   "code": 64,
@@ -514,7 +577,8 @@ export const wards: readonly Ward[] = [
   "slug": "kayafungo",
   "constituencyCode": 13,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kaloleni"
  },
  {
   "code": 65,
@@ -522,7 +586,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaloleni",
   "constituencyCode": 13,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kaloleni"
  },
  {
   "code": 66,
@@ -530,7 +595,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwanamwinga",
   "constituencyCode": 13,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kaloleni"
  },
  {
   "code": 67,
@@ -538,7 +604,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwawesa",
   "constituencyCode": 14,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rabai"
  },
  {
   "code": 68,
@@ -546,7 +613,8 @@ export const wards: readonly Ward[] = [
   "slug": "ruruma",
   "constituencyCode": 14,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rabai"
  },
  {
   "code": 69,
@@ -554,7 +622,8 @@ export const wards: readonly Ward[] = [
   "slug": "kambe-ribe",
   "constituencyCode": 14,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rabai"
  },
  {
   "code": 70,
@@ -562,7 +631,8 @@ export const wards: readonly Ward[] = [
   "slug": "rabai-kisurutini",
   "constituencyCode": 14,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rabai"
  },
  {
   "code": 71,
@@ -570,7 +640,8 @@ export const wards: readonly Ward[] = [
   "slug": "ganze",
   "constituencyCode": 15,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ganze"
  },
  {
   "code": 72,
@@ -578,7 +649,8 @@ export const wards: readonly Ward[] = [
   "slug": "bamba",
   "constituencyCode": 15,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ganze"
  },
  {
   "code": 73,
@@ -586,7 +658,8 @@ export const wards: readonly Ward[] = [
   "slug": "jaribuni",
   "constituencyCode": 15,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ganze"
  },
  {
   "code": 74,
@@ -594,7 +667,8 @@ export const wards: readonly Ward[] = [
   "slug": "sokoke",
   "constituencyCode": 15,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ganze"
  },
  {
   "code": 75,
@@ -602,7 +676,8 @@ export const wards: readonly Ward[] = [
   "slug": "jilore",
   "constituencyCode": 16,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "malindi"
  },
  {
   "code": 76,
@@ -610,7 +685,8 @@ export const wards: readonly Ward[] = [
   "slug": "kakuyuni",
   "constituencyCode": 16,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "malindi"
  },
  {
   "code": 77,
@@ -618,7 +694,8 @@ export const wards: readonly Ward[] = [
   "slug": "ganda",
   "constituencyCode": 16,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "malindi"
  },
  {
   "code": 78,
@@ -626,7 +703,8 @@ export const wards: readonly Ward[] = [
   "slug": "malindi-town",
   "constituencyCode": 16,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "malindi"
  },
  {
   "code": 79,
@@ -634,7 +712,8 @@ export const wards: readonly Ward[] = [
   "slug": "shella",
   "constituencyCode": 16,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "malindi"
  },
  {
   "code": 80,
@@ -642,7 +721,8 @@ export const wards: readonly Ward[] = [
   "slug": "marafa",
   "constituencyCode": 17,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "magarini"
  },
  {
   "code": 81,
@@ -650,7 +730,8 @@ export const wards: readonly Ward[] = [
   "slug": "magarini",
   "constituencyCode": 17,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "magarini"
  },
  {
   "code": 82,
@@ -658,7 +739,8 @@ export const wards: readonly Ward[] = [
   "slug": "gongoni",
   "constituencyCode": 17,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "magarini"
  },
  {
   "code": 83,
@@ -666,7 +748,8 @@ export const wards: readonly Ward[] = [
   "slug": "adu",
   "constituencyCode": 17,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "magarini"
  },
  {
   "code": 84,
@@ -674,7 +757,8 @@ export const wards: readonly Ward[] = [
   "slug": "garashi",
   "constituencyCode": 17,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "magarini"
  },
  {
   "code": 85,
@@ -682,7 +766,8 @@ export const wards: readonly Ward[] = [
   "slug": "sabaki",
   "constituencyCode": 17,
   "countyCode": 3,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "magarini"
  },
  {
   "code": 86,
@@ -690,7 +775,8 @@ export const wards: readonly Ward[] = [
   "slug": "kipini-east",
   "constituencyCode": 18,
   "countyCode": 4,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "garsen"
  },
  {
   "code": 87,
@@ -698,7 +784,8 @@ export const wards: readonly Ward[] = [
   "slug": "garsen-south",
   "constituencyCode": 18,
   "countyCode": 4,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "garsen"
  },
  {
   "code": 88,
@@ -706,7 +793,8 @@ export const wards: readonly Ward[] = [
   "slug": "kipini-west",
   "constituencyCode": 18,
   "countyCode": 4,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "garsen"
  },
  {
   "code": 89,
@@ -714,7 +802,8 @@ export const wards: readonly Ward[] = [
   "slug": "garsen-central",
   "constituencyCode": 18,
   "countyCode": 4,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "garsen"
  },
  {
   "code": 90,
@@ -722,7 +811,8 @@ export const wards: readonly Ward[] = [
   "slug": "garsen-west",
   "constituencyCode": 18,
   "countyCode": 4,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "garsen"
  },
  {
   "code": 91,
@@ -730,7 +820,8 @@ export const wards: readonly Ward[] = [
   "slug": "garsen-north",
   "constituencyCode": 18,
   "countyCode": 4,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "garsen"
  },
  {
   "code": 92,
@@ -738,7 +829,8 @@ export const wards: readonly Ward[] = [
   "slug": "kinakomba",
   "constituencyCode": 19,
   "countyCode": 4,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "galole"
  },
  {
   "code": 93,
@@ -746,7 +838,8 @@ export const wards: readonly Ward[] = [
   "slug": "mikinduni",
   "constituencyCode": 19,
   "countyCode": 4,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "galole"
  },
  {
   "code": 94,
@@ -754,7 +847,8 @@ export const wards: readonly Ward[] = [
   "slug": "chewani",
   "constituencyCode": 19,
   "countyCode": 4,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "galole"
  },
  {
   "code": 95,
@@ -762,7 +856,8 @@ export const wards: readonly Ward[] = [
   "slug": "wayu",
   "constituencyCode": 19,
   "countyCode": 4,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "galole"
  },
  {
   "code": 96,
@@ -770,7 +865,8 @@ export const wards: readonly Ward[] = [
   "slug": "chewele",
   "constituencyCode": 20,
   "countyCode": 4,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bura"
  },
  {
   "code": 97,
@@ -778,7 +874,8 @@ export const wards: readonly Ward[] = [
   "slug": "bura",
   "constituencyCode": 20,
   "countyCode": 4,
-  "aliases": []
+  "aliases": [],
+  "subCounty": null
  },
  {
   "code": 98,
@@ -786,7 +883,8 @@ export const wards: readonly Ward[] = [
   "slug": "bangale",
   "constituencyCode": 20,
   "countyCode": 4,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bura"
  },
  {
   "code": 99,
@@ -794,7 +892,8 @@ export const wards: readonly Ward[] = [
   "slug": "sala",
   "constituencyCode": 20,
   "countyCode": 4,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bura"
  },
  {
   "code": 100,
@@ -802,7 +901,8 @@ export const wards: readonly Ward[] = [
   "slug": "madogo",
   "constituencyCode": 20,
   "countyCode": 4,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bura"
  },
  {
   "code": 101,
@@ -810,7 +910,8 @@ export const wards: readonly Ward[] = [
   "slug": "faza",
   "constituencyCode": 21,
   "countyCode": 5,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lamu-east"
  },
  {
   "code": 102,
@@ -818,7 +919,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiunga",
   "constituencyCode": 21,
   "countyCode": 5,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lamu-east"
  },
  {
   "code": 103,
@@ -826,7 +928,8 @@ export const wards: readonly Ward[] = [
   "slug": "basuba",
   "constituencyCode": 21,
   "countyCode": 5,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lamu-east"
  },
  {
   "code": 104,
@@ -834,7 +937,8 @@ export const wards: readonly Ward[] = [
   "slug": "shella",
   "constituencyCode": 22,
   "countyCode": 5,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lamu-west"
  },
  {
   "code": 105,
@@ -842,7 +946,8 @@ export const wards: readonly Ward[] = [
   "slug": "mkomani",
   "constituencyCode": 22,
   "countyCode": 5,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lamu-west"
  },
  {
   "code": 106,
@@ -850,7 +955,8 @@ export const wards: readonly Ward[] = [
   "slug": "hindi",
   "constituencyCode": 22,
   "countyCode": 5,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lamu-west"
  },
  {
   "code": 107,
@@ -858,7 +964,8 @@ export const wards: readonly Ward[] = [
   "slug": "mkunumbi",
   "constituencyCode": 22,
   "countyCode": 5,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lamu-west"
  },
  {
   "code": 108,
@@ -866,7 +973,8 @@ export const wards: readonly Ward[] = [
   "slug": "hongwe",
   "constituencyCode": 22,
   "countyCode": 5,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lamu-west"
  },
  {
   "code": 109,
@@ -874,7 +982,8 @@ export const wards: readonly Ward[] = [
   "slug": "witu",
   "constituencyCode": 22,
   "countyCode": 5,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lamu-west"
  },
  {
   "code": 110,
@@ -882,7 +991,8 @@ export const wards: readonly Ward[] = [
   "slug": "bahari",
   "constituencyCode": 22,
   "countyCode": 5,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lamu-west"
  },
  {
   "code": 111,
@@ -890,7 +1000,8 @@ export const wards: readonly Ward[] = [
   "slug": "chala",
   "constituencyCode": 23,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "taveta"
  },
  {
   "code": 112,
@@ -898,7 +1009,8 @@ export const wards: readonly Ward[] = [
   "slug": "mahoo",
   "constituencyCode": 23,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "taveta"
  },
  {
   "code": 113,
@@ -908,7 +1020,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 6,
   "aliases": [
    "Bomani"
-  ]
+  ],
+  "subCounty": "taveta"
  },
  {
   "code": 114,
@@ -916,7 +1029,8 @@ export const wards: readonly Ward[] = [
   "slug": "mboghoni",
   "constituencyCode": 23,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "taveta"
  },
  {
   "code": 115,
@@ -924,7 +1038,8 @@ export const wards: readonly Ward[] = [
   "slug": "mata",
   "constituencyCode": 23,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "taveta"
  },
  {
   "code": 116,
@@ -932,7 +1047,8 @@ export const wards: readonly Ward[] = [
   "slug": "wundanyi-mbale",
   "constituencyCode": 24,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wundanyi"
  },
  {
   "code": 117,
@@ -940,7 +1056,8 @@ export const wards: readonly Ward[] = [
   "slug": "werugha",
   "constituencyCode": 24,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wundanyi"
  },
  {
   "code": 118,
@@ -948,7 +1065,8 @@ export const wards: readonly Ward[] = [
   "slug": "wumingu-kishushe",
   "constituencyCode": 24,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wundanyi"
  },
  {
   "code": 119,
@@ -956,7 +1074,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwanda-mgange",
   "constituencyCode": 24,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wundanyi"
  },
  {
   "code": 120,
@@ -964,7 +1083,8 @@ export const wards: readonly Ward[] = [
   "slug": "ronge",
   "constituencyCode": 25,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwatate"
  },
  {
   "code": 121,
@@ -972,7 +1092,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwatate",
   "constituencyCode": 25,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwatate"
  },
  {
   "code": 122,
@@ -980,7 +1101,8 @@ export const wards: readonly Ward[] = [
   "slug": "bura",
   "constituencyCode": 25,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwatate"
  },
  {
   "code": 123,
@@ -988,7 +1110,8 @@ export const wards: readonly Ward[] = [
   "slug": "chawia",
   "constituencyCode": 25,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwatate"
  },
  {
   "code": 124,
@@ -996,7 +1119,8 @@ export const wards: readonly Ward[] = [
   "slug": "wusi-kishamba",
   "constituencyCode": 25,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwatate"
  },
  {
   "code": 125,
@@ -1004,7 +1128,8 @@ export const wards: readonly Ward[] = [
   "slug": "mbololo",
   "constituencyCode": 26,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "voi"
  },
  {
   "code": 126,
@@ -1012,7 +1137,8 @@ export const wards: readonly Ward[] = [
   "slug": "sagalla",
   "constituencyCode": 26,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "voi"
  },
  {
   "code": 127,
@@ -1020,7 +1146,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaloleni",
   "constituencyCode": 26,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "voi"
  },
  {
   "code": 128,
@@ -1028,7 +1155,8 @@ export const wards: readonly Ward[] = [
   "slug": "marungu",
   "constituencyCode": 26,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "voi"
  },
  {
   "code": 129,
@@ -1036,7 +1164,8 @@ export const wards: readonly Ward[] = [
   "slug": "kasigau",
   "constituencyCode": 26,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "voi"
  },
  {
   "code": 130,
@@ -1044,7 +1173,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngolia",
   "constituencyCode": 26,
   "countyCode": 6,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "voi"
  },
  {
   "code": 131,
@@ -1052,7 +1182,8 @@ export const wards: readonly Ward[] = [
   "slug": "waberi",
   "constituencyCode": 27,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "garissa"
  },
  {
   "code": 132,
@@ -1060,7 +1191,8 @@ export const wards: readonly Ward[] = [
   "slug": "galbet",
   "constituencyCode": 27,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "garissa"
  },
  {
   "code": 133,
@@ -1068,7 +1200,8 @@ export const wards: readonly Ward[] = [
   "slug": "township",
   "constituencyCode": 27,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "garissa"
  },
  {
   "code": 134,
@@ -1076,7 +1209,8 @@ export const wards: readonly Ward[] = [
   "slug": "iftin",
   "constituencyCode": 27,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "garissa"
  },
  {
   "code": 135,
@@ -1084,7 +1218,8 @@ export const wards: readonly Ward[] = [
   "slug": "balambala",
   "constituencyCode": 28,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "balambala"
  },
  {
   "code": 136,
@@ -1092,7 +1227,8 @@ export const wards: readonly Ward[] = [
   "slug": "danyere",
   "constituencyCode": 28,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "balambala"
  },
  {
   "code": 137,
@@ -1100,7 +1236,8 @@ export const wards: readonly Ward[] = [
   "slug": "jara-jara",
   "constituencyCode": 28,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "balambala"
  },
  {
   "code": 138,
@@ -1108,7 +1245,8 @@ export const wards: readonly Ward[] = [
   "slug": "saka",
   "constituencyCode": 28,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "balambala"
  },
  {
   "code": 139,
@@ -1116,7 +1254,8 @@ export const wards: readonly Ward[] = [
   "slug": "sankuri",
   "constituencyCode": 28,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "garissa"
  },
  {
   "code": 140,
@@ -1124,7 +1263,8 @@ export const wards: readonly Ward[] = [
   "slug": "modogashe",
   "constituencyCode": 29,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lagdera"
  },
  {
   "code": 141,
@@ -1132,7 +1272,8 @@ export const wards: readonly Ward[] = [
   "slug": "benane",
   "constituencyCode": 29,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lagdera"
  },
  {
   "code": 142,
@@ -1140,7 +1281,8 @@ export const wards: readonly Ward[] = [
   "slug": "goreale",
   "constituencyCode": 29,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lagdera"
  },
  {
   "code": 143,
@@ -1148,7 +1290,8 @@ export const wards: readonly Ward[] = [
   "slug": "maalimin",
   "constituencyCode": 29,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lagdera"
  },
  {
   "code": 144,
@@ -1156,7 +1299,8 @@ export const wards: readonly Ward[] = [
   "slug": "sabena",
   "constituencyCode": 29,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lagdera"
  },
  {
   "code": 145,
@@ -1164,7 +1308,8 @@ export const wards: readonly Ward[] = [
   "slug": "baraki",
   "constituencyCode": 29,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lagdera"
  },
  {
   "code": 146,
@@ -1172,7 +1317,8 @@ export const wards: readonly Ward[] = [
   "slug": "dertu",
   "constituencyCode": 30,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dadaab"
  },
  {
   "code": 147,
@@ -1180,7 +1326,8 @@ export const wards: readonly Ward[] = [
   "slug": "dadaab",
   "constituencyCode": 30,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dadaab"
  },
  {
   "code": 148,
@@ -1188,7 +1335,8 @@ export const wards: readonly Ward[] = [
   "slug": "labasigale",
   "constituencyCode": 30,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dadaab"
  },
  {
   "code": 149,
@@ -1196,7 +1344,8 @@ export const wards: readonly Ward[] = [
   "slug": "damajale",
   "constituencyCode": 30,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dadaab"
  },
  {
   "code": 150,
@@ -1204,7 +1353,8 @@ export const wards: readonly Ward[] = [
   "slug": "liboi",
   "constituencyCode": 30,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dadaab"
  },
  {
   "code": 151,
@@ -1212,7 +1362,8 @@ export const wards: readonly Ward[] = [
   "slug": "abakaile",
   "constituencyCode": 30,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dadaab"
  },
  {
   "code": 152,
@@ -1220,7 +1371,8 @@ export const wards: readonly Ward[] = [
   "slug": "bura",
   "constituencyCode": 31,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "fafi"
  },
  {
   "code": 153,
@@ -1228,7 +1380,8 @@ export const wards: readonly Ward[] = [
   "slug": "dekaharia",
   "constituencyCode": 31,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "fafi"
  },
  {
   "code": 154,
@@ -1236,7 +1389,8 @@ export const wards: readonly Ward[] = [
   "slug": "jarajila",
   "constituencyCode": 31,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "fafi"
  },
  {
   "code": 155,
@@ -1244,7 +1398,8 @@ export const wards: readonly Ward[] = [
   "slug": "fafi",
   "constituencyCode": 31,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "fafi"
  },
  {
   "code": 156,
@@ -1252,7 +1407,8 @@ export const wards: readonly Ward[] = [
   "slug": "nanighi",
   "constituencyCode": 31,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "fafi"
  },
  {
   "code": 157,
@@ -1260,7 +1416,8 @@ export const wards: readonly Ward[] = [
   "slug": "hulugho",
   "constituencyCode": 32,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "hulugho"
  },
  {
   "code": 158,
@@ -1268,7 +1425,8 @@ export const wards: readonly Ward[] = [
   "slug": "sangailu",
   "constituencyCode": 32,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "hulugho"
  },
  {
   "code": 159,
@@ -1276,7 +1434,8 @@ export const wards: readonly Ward[] = [
   "slug": "ijara",
   "constituencyCode": 32,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ijara"
  },
  {
   "code": 160,
@@ -1284,7 +1443,8 @@ export const wards: readonly Ward[] = [
   "slug": "masalani",
   "constituencyCode": 32,
   "countyCode": 7,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ijara"
  },
  {
   "code": 161,
@@ -1292,7 +1452,8 @@ export const wards: readonly Ward[] = [
   "slug": "gurar",
   "constituencyCode": 33,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-north"
  },
  {
   "code": 162,
@@ -1300,7 +1461,8 @@ export const wards: readonly Ward[] = [
   "slug": "bute",
   "constituencyCode": 33,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-north"
  },
  {
   "code": 163,
@@ -1308,7 +1470,8 @@ export const wards: readonly Ward[] = [
   "slug": "korondile",
   "constituencyCode": 33,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-north"
  },
  {
   "code": 164,
@@ -1316,7 +1479,8 @@ export const wards: readonly Ward[] = [
   "slug": "malkagufu",
   "constituencyCode": 33,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-north"
  },
  {
   "code": 165,
@@ -1324,7 +1488,8 @@ export const wards: readonly Ward[] = [
   "slug": "batalu",
   "constituencyCode": 33,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-north"
  },
  {
   "code": 166,
@@ -1332,7 +1497,8 @@ export const wards: readonly Ward[] = [
   "slug": "danaba",
   "constituencyCode": 33,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-north"
  },
  {
   "code": 167,
@@ -1340,7 +1506,8 @@ export const wards: readonly Ward[] = [
   "slug": "godoma",
   "constituencyCode": 33,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-north"
  },
  {
   "code": 168,
@@ -1348,7 +1515,8 @@ export const wards: readonly Ward[] = [
   "slug": "wagberi",
   "constituencyCode": 34,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-east"
  },
  {
   "code": 169,
@@ -1356,7 +1524,8 @@ export const wards: readonly Ward[] = [
   "slug": "township",
   "constituencyCode": 34,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-east"
  },
  {
   "code": 170,
@@ -1364,7 +1533,8 @@ export const wards: readonly Ward[] = [
   "slug": "barwago",
   "constituencyCode": 34,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-east"
  },
  {
   "code": 171,
@@ -1372,7 +1542,8 @@ export const wards: readonly Ward[] = [
   "slug": "khorof-harar",
   "constituencyCode": 34,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-east"
  },
  {
   "code": 172,
@@ -1380,7 +1551,8 @@ export const wards: readonly Ward[] = [
   "slug": "elben",
   "constituencyCode": 35,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tarbaj"
  },
  {
   "code": 173,
@@ -1388,7 +1560,8 @@ export const wards: readonly Ward[] = [
   "slug": "sarman",
   "constituencyCode": 35,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tarbaj"
  },
  {
   "code": 174,
@@ -1396,7 +1569,8 @@ export const wards: readonly Ward[] = [
   "slug": "tarbaj",
   "constituencyCode": 35,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tarbaj"
  },
  {
   "code": 175,
@@ -1404,7 +1578,8 @@ export const wards: readonly Ward[] = [
   "slug": "wargadud",
   "constituencyCode": 35,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tarbaj"
  },
  {
   "code": 176,
@@ -1412,7 +1587,8 @@ export const wards: readonly Ward[] = [
   "slug": "arbajahan",
   "constituencyCode": 36,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-west"
  },
  {
   "code": 177,
@@ -1420,7 +1596,8 @@ export const wards: readonly Ward[] = [
   "slug": "hadado-athibohol",
   "constituencyCode": 36,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-west"
  },
  {
   "code": 178,
@@ -1430,7 +1607,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 8,
   "aliases": [
    "Adamasajide"
-  ]
+  ],
+  "subCounty": "wajir-west"
  },
  {
   "code": 179,
@@ -1440,7 +1618,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 8,
   "aliases": [
    "Ganyure/Wagalla"
-  ]
+  ],
+  "subCounty": "wajir-west"
  },
  {
   "code": 180,
@@ -1448,7 +1627,8 @@ export const wards: readonly Ward[] = [
   "slug": "eldas",
   "constituencyCode": 37,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "eldas"
  },
  {
   "code": 181,
@@ -1456,7 +1636,8 @@ export const wards: readonly Ward[] = [
   "slug": "della",
   "constituencyCode": 37,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "eldas"
  },
  {
   "code": 182,
@@ -1464,7 +1645,8 @@ export const wards: readonly Ward[] = [
   "slug": "lakoley-south-basir",
   "constituencyCode": 37,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "eldas"
  },
  {
   "code": 183,
@@ -1472,7 +1654,8 @@ export const wards: readonly Ward[] = [
   "slug": "elnur-tula-tula",
   "constituencyCode": 37,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "eldas"
  },
  {
   "code": 184,
@@ -1480,7 +1663,8 @@ export const wards: readonly Ward[] = [
   "slug": "benane",
   "constituencyCode": 38,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-south"
  },
  {
   "code": 185,
@@ -1488,7 +1672,8 @@ export const wards: readonly Ward[] = [
   "slug": "burder",
   "constituencyCode": 38,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-south"
  },
  {
   "code": 186,
@@ -1496,7 +1681,8 @@ export const wards: readonly Ward[] = [
   "slug": "dadaja-bulla",
   "constituencyCode": 38,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-south"
  },
  {
   "code": 187,
@@ -1504,7 +1690,8 @@ export const wards: readonly Ward[] = [
   "slug": "habasswein",
   "constituencyCode": 38,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-south"
  },
  {
   "code": 188,
@@ -1512,7 +1699,8 @@ export const wards: readonly Ward[] = [
   "slug": "lagboghol-south",
   "constituencyCode": 38,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-south"
  },
  {
   "code": 189,
@@ -1520,7 +1708,8 @@ export const wards: readonly Ward[] = [
   "slug": "ibrahim-ure",
   "constituencyCode": 38,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-south"
  },
  {
   "code": 190,
@@ -1528,7 +1717,8 @@ export const wards: readonly Ward[] = [
   "slug": "diif",
   "constituencyCode": 38,
   "countyCode": 8,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "wajir-south"
  },
  {
   "code": 191,
@@ -1536,7 +1726,8 @@ export const wards: readonly Ward[] = [
   "slug": "takaba-south",
   "constituencyCode": 39,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-west"
  },
  {
   "code": 192,
@@ -1544,7 +1735,8 @@ export const wards: readonly Ward[] = [
   "slug": "takaba",
   "constituencyCode": 39,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-west"
  },
  {
   "code": 193,
@@ -1552,7 +1744,8 @@ export const wards: readonly Ward[] = [
   "slug": "lag-sure",
   "constituencyCode": 39,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-west"
  },
  {
   "code": 194,
@@ -1560,7 +1753,8 @@ export const wards: readonly Ward[] = [
   "slug": "dandu",
   "constituencyCode": 39,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-west"
  },
  {
   "code": 195,
@@ -1568,7 +1762,8 @@ export const wards: readonly Ward[] = [
   "slug": "gither",
   "constituencyCode": 39,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-west"
  },
  {
   "code": 196,
@@ -1576,7 +1771,8 @@ export const wards: readonly Ward[] = [
   "slug": "banissa",
   "constituencyCode": 40,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "banissa"
  },
  {
   "code": 197,
@@ -1584,7 +1780,8 @@ export const wards: readonly Ward[] = [
   "slug": "derkhale",
   "constituencyCode": 40,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "banissa"
  },
  {
   "code": 198,
@@ -1592,7 +1789,8 @@ export const wards: readonly Ward[] = [
   "slug": "guba",
   "constituencyCode": 40,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "banissa"
  },
  {
   "code": 199,
@@ -1600,7 +1798,8 @@ export const wards: readonly Ward[] = [
   "slug": "malkamari",
   "constituencyCode": 40,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "banissa"
  },
  {
   "code": 200,
@@ -1608,7 +1807,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiliwehiri",
   "constituencyCode": 40,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "banissa"
  },
  {
   "code": 201,
@@ -1616,7 +1816,8 @@ export const wards: readonly Ward[] = [
   "slug": "ashabito",
   "constituencyCode": 41,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-north"
  },
  {
   "code": 202,
@@ -1624,7 +1825,8 @@ export const wards: readonly Ward[] = [
   "slug": "guticha",
   "constituencyCode": 41,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-north"
  },
  {
   "code": 203,
@@ -1632,7 +1834,8 @@ export const wards: readonly Ward[] = [
   "slug": "morothile",
   "constituencyCode": 41,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-north"
  },
  {
   "code": 204,
@@ -1640,7 +1843,8 @@ export const wards: readonly Ward[] = [
   "slug": "rhamu",
   "constituencyCode": 41,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-north"
  },
  {
   "code": 205,
@@ -1648,7 +1852,8 @@ export const wards: readonly Ward[] = [
   "slug": "rhamu-dimtu",
   "constituencyCode": 41,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-north"
  },
  {
   "code": 206,
@@ -1658,7 +1863,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 9,
   "aliases": [
    "Wargadud"
-  ]
+  ],
+  "subCounty": "mandera-south"
  },
  {
   "code": 207,
@@ -1666,7 +1872,8 @@ export const wards: readonly Ward[] = [
   "slug": "kutulo",
   "constituencyCode": 42,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-south"
  },
  {
   "code": 208,
@@ -1674,7 +1881,8 @@ export const wards: readonly Ward[] = [
   "slug": "elwak-south",
   "constituencyCode": 42,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-south"
  },
  {
   "code": 209,
@@ -1682,7 +1890,8 @@ export const wards: readonly Ward[] = [
   "slug": "elwak-north",
   "constituencyCode": 42,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-south"
  },
  {
   "code": 210,
@@ -1690,7 +1899,8 @@ export const wards: readonly Ward[] = [
   "slug": "shimbir-fatuma",
   "constituencyCode": 42,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-south"
  },
  {
   "code": 211,
@@ -1698,7 +1908,8 @@ export const wards: readonly Ward[] = [
   "slug": "arabia",
   "constituencyCode": 43,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-east"
  },
  {
   "code": 212,
@@ -1706,7 +1917,8 @@ export const wards: readonly Ward[] = [
   "slug": "bulla-mpya",
   "constituencyCode": 43,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-east"
  },
  {
   "code": 213,
@@ -1714,7 +1926,8 @@ export const wards: readonly Ward[] = [
   "slug": "khalalio",
   "constituencyCode": 43,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-east"
  },
  {
   "code": 214,
@@ -1722,7 +1935,8 @@ export const wards: readonly Ward[] = [
   "slug": "neboi",
   "constituencyCode": 43,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-east"
  },
  {
   "code": 215,
@@ -1730,7 +1944,8 @@ export const wards: readonly Ward[] = [
   "slug": "township",
   "constituencyCode": 43,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mandera-east"
  },
  {
   "code": 216,
@@ -1738,7 +1953,8 @@ export const wards: readonly Ward[] = [
   "slug": "libehia",
   "constituencyCode": 44,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lafey"
  },
  {
   "code": 217,
@@ -1746,7 +1962,8 @@ export const wards: readonly Ward[] = [
   "slug": "fino",
   "constituencyCode": 44,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lafey"
  },
  {
   "code": 218,
@@ -1754,7 +1971,8 @@ export const wards: readonly Ward[] = [
   "slug": "lafey",
   "constituencyCode": 44,
   "countyCode": 9,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lafey"
  },
  {
   "code": 219,
@@ -1764,7 +1982,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 9,
   "aliases": [
    "Waranqara"
-  ]
+  ],
+  "subCounty": "lafey"
  },
  {
   "code": 220,
@@ -1774,7 +1993,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 9,
   "aliases": [
    "Alango Gof"
-  ]
+  ],
+  "subCounty": "lafey"
  },
  {
   "code": 221,
@@ -1782,7 +2002,8 @@ export const wards: readonly Ward[] = [
   "slug": "butiye",
   "constituencyCode": 45,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "moyale"
  },
  {
   "code": 222,
@@ -1790,7 +2011,8 @@ export const wards: readonly Ward[] = [
   "slug": "sololo",
   "constituencyCode": 45,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "moyale"
  },
  {
   "code": 223,
@@ -1800,7 +2022,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 10,
   "aliases": [
    "Heillu/Manyatta"
-  ]
+  ],
+  "subCounty": "moyale"
  },
  {
   "code": 224,
@@ -1808,7 +2031,8 @@ export const wards: readonly Ward[] = [
   "slug": "golbo",
   "constituencyCode": 45,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "moyale"
  },
  {
   "code": 225,
@@ -1816,7 +2040,8 @@ export const wards: readonly Ward[] = [
   "slug": "moyale-township",
   "constituencyCode": 45,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "moyale"
  },
  {
   "code": 226,
@@ -1824,7 +2049,8 @@ export const wards: readonly Ward[] = [
   "slug": "uran",
   "constituencyCode": 45,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "moyale"
  },
  {
   "code": 227,
@@ -1832,7 +2058,8 @@ export const wards: readonly Ward[] = [
   "slug": "obbu",
   "constituencyCode": 45,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "moyale"
  },
  {
   "code": 228,
@@ -1840,7 +2067,8 @@ export const wards: readonly Ward[] = [
   "slug": "illeret",
   "constituencyCode": 46,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "north-horr"
  },
  {
   "code": 229,
@@ -1848,7 +2076,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-horr",
   "constituencyCode": 46,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "north-horr"
  },
  {
   "code": 230,
@@ -1856,7 +2085,8 @@ export const wards: readonly Ward[] = [
   "slug": "dukana",
   "constituencyCode": 46,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "north-horr"
  },
  {
   "code": 231,
@@ -1864,7 +2094,8 @@ export const wards: readonly Ward[] = [
   "slug": "maikona",
   "constituencyCode": 46,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "north-horr"
  },
  {
   "code": 232,
@@ -1872,7 +2103,8 @@ export const wards: readonly Ward[] = [
   "slug": "turbi",
   "constituencyCode": 46,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "north-horr"
  },
  {
   "code": 233,
@@ -1880,7 +2112,8 @@ export const wards: readonly Ward[] = [
   "slug": "sagante-jaldesa",
   "constituencyCode": 47,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "saku"
  },
  {
   "code": 234,
@@ -1888,7 +2121,8 @@ export const wards: readonly Ward[] = [
   "slug": "karare",
   "constituencyCode": 47,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "saku"
  },
  {
   "code": 235,
@@ -1896,7 +2130,8 @@ export const wards: readonly Ward[] = [
   "slug": "marsabit-central",
   "constituencyCode": 47,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "saku"
  },
  {
   "code": 236,
@@ -1904,7 +2139,8 @@ export const wards: readonly Ward[] = [
   "slug": "loiyangalani",
   "constituencyCode": 48,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laisamis"
  },
  {
   "code": 237,
@@ -1912,7 +2148,8 @@ export const wards: readonly Ward[] = [
   "slug": "kargi-south-horr",
   "constituencyCode": 48,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laisamis"
  },
  {
   "code": 238,
@@ -1920,7 +2157,8 @@ export const wards: readonly Ward[] = [
   "slug": "korr-ngurunit",
   "constituencyCode": 48,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laisamis"
  },
  {
   "code": 239,
@@ -1930,7 +2168,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 10,
   "aliases": [
    "Logo Logo"
-  ]
+  ],
+  "subCounty": "laisamis"
  },
  {
   "code": 240,
@@ -1938,7 +2177,8 @@ export const wards: readonly Ward[] = [
   "slug": "laisamis",
   "constituencyCode": 48,
   "countyCode": 10,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laisamis"
  },
  {
   "code": 241,
@@ -1946,7 +2186,8 @@ export const wards: readonly Ward[] = [
   "slug": "wabera",
   "constituencyCode": 49,
   "countyCode": 11,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "isiolo"
  },
  {
   "code": 242,
@@ -1954,7 +2195,8 @@ export const wards: readonly Ward[] = [
   "slug": "bulla-pesa",
   "constituencyCode": 49,
   "countyCode": 11,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "isiolo"
  },
  {
   "code": 243,
@@ -1962,7 +2204,8 @@ export const wards: readonly Ward[] = [
   "slug": "chari",
   "constituencyCode": 49,
   "countyCode": 11,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "merti"
  },
  {
   "code": 244,
@@ -1970,7 +2213,8 @@ export const wards: readonly Ward[] = [
   "slug": "cherab",
   "constituencyCode": 49,
   "countyCode": 11,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "merti"
  },
  {
   "code": 245,
@@ -1978,7 +2222,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngare-mara",
   "constituencyCode": 49,
   "countyCode": 11,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "isiolo"
  },
  {
   "code": 246,
@@ -1986,7 +2231,8 @@ export const wards: readonly Ward[] = [
   "slug": "burat",
   "constituencyCode": 49,
   "countyCode": 11,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "isiolo"
  },
  {
   "code": 247,
@@ -1994,7 +2240,8 @@ export const wards: readonly Ward[] = [
   "slug": "oldonyiro",
   "constituencyCode": 49,
   "countyCode": 11,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "isiolo"
  },
  {
   "code": 248,
@@ -2002,7 +2249,8 @@ export const wards: readonly Ward[] = [
   "slug": "garbatulla",
   "constituencyCode": 50,
   "countyCode": 11,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "garbatulla"
  },
  {
   "code": 249,
@@ -2010,7 +2258,8 @@ export const wards: readonly Ward[] = [
   "slug": "kinna",
   "constituencyCode": 50,
   "countyCode": 11,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "garbatulla"
  },
  {
   "code": 250,
@@ -2018,7 +2267,8 @@ export const wards: readonly Ward[] = [
   "slug": "sericho",
   "constituencyCode": 50,
   "countyCode": 11,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "garbatulla"
  },
  {
   "code": 251,
@@ -2026,7 +2276,8 @@ export const wards: readonly Ward[] = [
   "slug": "maua",
   "constituencyCode": 51,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igembe-south"
  },
  {
   "code": 252,
@@ -2034,7 +2285,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiegoi-antubochiu",
   "constituencyCode": 51,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igembe-south"
  },
  {
   "code": 253,
@@ -2042,7 +2294,8 @@ export const wards: readonly Ward[] = [
   "slug": "athiru-gaiti",
   "constituencyCode": 51,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igembe-south"
  },
  {
   "code": 254,
@@ -2050,7 +2303,8 @@ export const wards: readonly Ward[] = [
   "slug": "akachiu",
   "constituencyCode": 51,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igembe-south"
  },
  {
   "code": 255,
@@ -2058,7 +2312,8 @@ export const wards: readonly Ward[] = [
   "slug": "kanuni",
   "constituencyCode": 51,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igembe-south"
  },
  {
   "code": 256,
@@ -2066,7 +2321,8 @@ export const wards: readonly Ward[] = [
   "slug": "akirangondu",
   "constituencyCode": 52,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igembe-central"
  },
  {
   "code": 257,
@@ -2074,7 +2330,8 @@ export const wards: readonly Ward[] = [
   "slug": "athiru-ruujine",
   "constituencyCode": 52,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igembe-central"
  },
  {
   "code": 258,
@@ -2082,7 +2339,8 @@ export const wards: readonly Ward[] = [
   "slug": "igembe-east",
   "constituencyCode": 52,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igembe-central"
  },
  {
   "code": 259,
@@ -2090,7 +2348,8 @@ export const wards: readonly Ward[] = [
   "slug": "njia",
   "constituencyCode": 52,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igembe-central"
  },
  {
   "code": 260,
@@ -2098,7 +2357,8 @@ export const wards: readonly Ward[] = [
   "slug": "kangeta",
   "constituencyCode": 52,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igembe-central"
  },
  {
   "code": 261,
@@ -2106,7 +2366,8 @@ export const wards: readonly Ward[] = [
   "slug": "antuambui",
   "constituencyCode": 53,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igembe-north"
  },
  {
   "code": 262,
@@ -2114,7 +2375,8 @@ export const wards: readonly Ward[] = [
   "slug": "ntunene",
   "constituencyCode": 53,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igembe-north"
  },
  {
   "code": 263,
@@ -2122,7 +2384,8 @@ export const wards: readonly Ward[] = [
   "slug": "antubetwe-kiongo",
   "constituencyCode": 53,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igembe-north"
  },
  {
   "code": 264,
@@ -2130,7 +2393,8 @@ export const wards: readonly Ward[] = [
   "slug": "naathu",
   "constituencyCode": 53,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igembe-north"
  },
  {
   "code": 265,
@@ -2138,7 +2402,8 @@ export const wards: readonly Ward[] = [
   "slug": "amwathi",
   "constituencyCode": 53,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igembe-north"
  },
  {
   "code": 266,
@@ -2146,7 +2411,8 @@ export const wards: readonly Ward[] = [
   "slug": "athwana",
   "constituencyCode": 54,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tigania-west"
  },
  {
   "code": 267,
@@ -2154,7 +2420,8 @@ export const wards: readonly Ward[] = [
   "slug": "akithii",
   "constituencyCode": 54,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tigania-west"
  },
  {
   "code": 268,
@@ -2162,7 +2429,8 @@ export const wards: readonly Ward[] = [
   "slug": "kianjai",
   "constituencyCode": 54,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tigania-west"
  },
  {
   "code": 269,
@@ -2170,7 +2438,8 @@ export const wards: readonly Ward[] = [
   "slug": "nkomo",
   "constituencyCode": 54,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tigania-west"
  },
  {
   "code": 270,
@@ -2178,7 +2447,8 @@ export const wards: readonly Ward[] = [
   "slug": "mbeu",
   "constituencyCode": 54,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tigania-west"
  },
  {
   "code": 271,
@@ -2186,7 +2456,8 @@ export const wards: readonly Ward[] = [
   "slug": "thangatha",
   "constituencyCode": 55,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tigania-east"
  },
  {
   "code": 272,
@@ -2194,7 +2465,8 @@ export const wards: readonly Ward[] = [
   "slug": "mikinduri",
   "constituencyCode": 55,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tigania-east"
  },
  {
   "code": 273,
@@ -2202,7 +2474,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiguchwa",
   "constituencyCode": 55,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tigania-east"
  },
  {
   "code": 274,
@@ -2210,7 +2483,8 @@ export const wards: readonly Ward[] = [
   "slug": "muthara",
   "constituencyCode": 55,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tigania-east"
  },
  {
   "code": 275,
@@ -2218,7 +2492,8 @@ export const wards: readonly Ward[] = [
   "slug": "karama",
   "constituencyCode": 55,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tigania-east"
  },
  {
   "code": 276,
@@ -2226,7 +2501,8 @@ export const wards: readonly Ward[] = [
   "slug": "municipality",
   "constituencyCode": 56,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "imenti-north"
  },
  {
   "code": 277,
@@ -2234,7 +2510,8 @@ export const wards: readonly Ward[] = [
   "slug": "ntima-east",
   "constituencyCode": 56,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "imenti-north"
  },
  {
   "code": 278,
@@ -2242,7 +2519,8 @@ export const wards: readonly Ward[] = [
   "slug": "ntima-west",
   "constituencyCode": 56,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "imenti-north"
  },
  {
   "code": 279,
@@ -2250,7 +2528,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyaki-west",
   "constituencyCode": 56,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "imenti-north"
  },
  {
   "code": 280,
@@ -2258,7 +2537,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyaki-east",
   "constituencyCode": 56,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "imenti-north"
  },
  {
   "code": 281,
@@ -2266,7 +2546,8 @@ export const wards: readonly Ward[] = [
   "slug": "timau",
   "constituencyCode": 57,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "buuri"
  },
  {
   "code": 282,
@@ -2274,7 +2555,8 @@ export const wards: readonly Ward[] = [
   "slug": "kisima",
   "constituencyCode": 57,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "buuri"
  },
  {
   "code": 283,
@@ -2282,7 +2564,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiirua-naari",
   "constituencyCode": 57,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "buuri"
  },
  {
   "code": 284,
@@ -2290,7 +2573,8 @@ export const wards: readonly Ward[] = [
   "slug": "ruiri-rwarera",
   "constituencyCode": 57,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "buuri"
  },
  {
   "code": 285,
@@ -2298,7 +2582,8 @@ export const wards: readonly Ward[] = [
   "slug": "kibirichia",
   "constituencyCode": 57,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "buuri"
  },
  {
   "code": 286,
@@ -2306,7 +2591,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwanganthia",
   "constituencyCode": 58,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "imenti-central"
  },
  {
   "code": 287,
@@ -2314,7 +2600,8 @@ export const wards: readonly Ward[] = [
   "slug": "abothuguchi-central",
   "constituencyCode": 58,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "imenti-central"
  },
  {
   "code": 288,
@@ -2322,7 +2609,8 @@ export const wards: readonly Ward[] = [
   "slug": "abothuguchi-west",
   "constituencyCode": 58,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "imenti-central"
  },
  {
   "code": 289,
@@ -2330,7 +2618,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiagu",
   "constituencyCode": 58,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "imenti-central"
  },
  {
   "code": 290,
@@ -2338,7 +2627,8 @@ export const wards: readonly Ward[] = [
   "slug": "mitunguu",
   "constituencyCode": 59,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "imenti-south"
  },
  {
   "code": 291,
@@ -2346,7 +2636,8 @@ export const wards: readonly Ward[] = [
   "slug": "igoji-east",
   "constituencyCode": 59,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "imenti-south"
  },
  {
   "code": 292,
@@ -2354,7 +2645,8 @@ export const wards: readonly Ward[] = [
   "slug": "igoji-west",
   "constituencyCode": 59,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "imenti-south"
  },
  {
   "code": 293,
@@ -2362,7 +2654,8 @@ export const wards: readonly Ward[] = [
   "slug": "abogeta-east",
   "constituencyCode": 59,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "imenti-south"
  },
  {
   "code": 294,
@@ -2370,7 +2663,8 @@ export const wards: readonly Ward[] = [
   "slug": "abogeta-west",
   "constituencyCode": 59,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "imenti-south"
  },
  {
   "code": 295,
@@ -2378,7 +2672,8 @@ export const wards: readonly Ward[] = [
   "slug": "nkuene",
   "constituencyCode": 59,
   "countyCode": 12,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "imenti-south"
  },
  {
   "code": 296,
@@ -2386,7 +2681,8 @@ export const wards: readonly Ward[] = [
   "slug": "mitheru",
   "constituencyCode": 60,
   "countyCode": 13,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "muthambi"
  },
  {
   "code": 297,
@@ -2394,7 +2690,8 @@ export const wards: readonly Ward[] = [
   "slug": "muthambi",
   "constituencyCode": 60,
   "countyCode": 13,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "muthambi"
  },
  {
   "code": 298,
@@ -2402,7 +2699,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwimbi",
   "constituencyCode": 60,
   "countyCode": 13,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwimbi"
  },
  {
   "code": 299,
@@ -2410,7 +2708,8 @@ export const wards: readonly Ward[] = [
   "slug": "ganga",
   "constituencyCode": 60,
   "countyCode": 13,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwimbi"
  },
  {
   "code": 300,
@@ -2418,7 +2717,8 @@ export const wards: readonly Ward[] = [
   "slug": "chogoria",
   "constituencyCode": 60,
   "countyCode": 13,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwimbi"
  },
  {
   "code": 301,
@@ -2426,7 +2726,8 @@ export const wards: readonly Ward[] = [
   "slug": "mariani",
   "constituencyCode": 61,
   "countyCode": 13,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igambangombe"
  },
  {
   "code": 302,
@@ -2434,7 +2735,8 @@ export const wards: readonly Ward[] = [
   "slug": "karingani",
   "constituencyCode": 61,
   "countyCode": 13,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "chuka"
  },
  {
   "code": 303,
@@ -2442,7 +2744,8 @@ export const wards: readonly Ward[] = [
   "slug": "magumoni",
   "constituencyCode": 61,
   "countyCode": 13,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "chuka"
  },
  {
   "code": 304,
@@ -2450,7 +2753,8 @@ export const wards: readonly Ward[] = [
   "slug": "mugwe",
   "constituencyCode": 61,
   "countyCode": 13,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "chuka"
  },
  {
   "code": 305,
@@ -2458,7 +2762,8 @@ export const wards: readonly Ward[] = [
   "slug": "igambangombe",
   "constituencyCode": 61,
   "countyCode": 13,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "igambangombe"
  },
  {
   "code": 306,
@@ -2466,7 +2771,8 @@ export const wards: readonly Ward[] = [
   "slug": "gatunga",
   "constituencyCode": 62,
   "countyCode": 13,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tharaka-north"
  },
  {
   "code": 307,
@@ -2474,7 +2780,8 @@ export const wards: readonly Ward[] = [
   "slug": "mukothima",
   "constituencyCode": 62,
   "countyCode": 13,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tharaka-north"
  },
  {
   "code": 308,
@@ -2482,7 +2789,8 @@ export const wards: readonly Ward[] = [
   "slug": "nkondi",
   "constituencyCode": 62,
   "countyCode": 13,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tharaka-south"
  },
  {
   "code": 309,
@@ -2490,7 +2798,8 @@ export const wards: readonly Ward[] = [
   "slug": "chiakariga",
   "constituencyCode": 62,
   "countyCode": 13,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tharaka-south"
  },
  {
   "code": 310,
@@ -2498,7 +2807,8 @@ export const wards: readonly Ward[] = [
   "slug": "marimanti",
   "constituencyCode": 62,
   "countyCode": 13,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tharaka-south"
  },
  {
   "code": 311,
@@ -2506,7 +2816,8 @@ export const wards: readonly Ward[] = [
   "slug": "ruguru-ngandori",
   "constituencyCode": 63,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "manyatta"
  },
  {
   "code": 312,
@@ -2514,7 +2825,8 @@ export const wards: readonly Ward[] = [
   "slug": "kithimu",
   "constituencyCode": 63,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "manyatta"
  },
  {
   "code": 313,
@@ -2522,7 +2834,8 @@ export const wards: readonly Ward[] = [
   "slug": "nginda",
   "constituencyCode": 63,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "manyatta"
  },
  {
   "code": 314,
@@ -2530,7 +2843,8 @@ export const wards: readonly Ward[] = [
   "slug": "mbeti-north",
   "constituencyCode": 63,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "manyatta"
  },
  {
   "code": 315,
@@ -2538,7 +2852,8 @@ export const wards: readonly Ward[] = [
   "slug": "kirimari",
   "constituencyCode": 63,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "manyatta"
  },
  {
   "code": 316,
@@ -2546,7 +2861,8 @@ export const wards: readonly Ward[] = [
   "slug": "gaturi-south",
   "constituencyCode": 63,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "manyatta"
  },
  {
   "code": 317,
@@ -2554,7 +2870,8 @@ export const wards: readonly Ward[] = [
   "slug": "gaturi-north",
   "constituencyCode": 64,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "manyatta"
  },
  {
   "code": 318,
@@ -2562,7 +2879,8 @@ export const wards: readonly Ward[] = [
   "slug": "kagaari-south",
   "constituencyCode": 64,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "runyenjes"
  },
  {
   "code": 319,
@@ -2570,7 +2888,8 @@ export const wards: readonly Ward[] = [
   "slug": "central-ward",
   "constituencyCode": 64,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "runyenjes"
  },
  {
   "code": 320,
@@ -2578,7 +2897,8 @@ export const wards: readonly Ward[] = [
   "slug": "kagaari-north",
   "constituencyCode": 64,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "runyenjes"
  },
  {
   "code": 321,
@@ -2586,7 +2906,8 @@ export const wards: readonly Ward[] = [
   "slug": "kyeni-north",
   "constituencyCode": 64,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "runyenjes"
  },
  {
   "code": 322,
@@ -2594,7 +2915,8 @@ export const wards: readonly Ward[] = [
   "slug": "kyeni-south",
   "constituencyCode": 64,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "runyenjes"
  },
  {
   "code": 323,
@@ -2602,7 +2924,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwea",
   "constituencyCode": 65,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbeere-south"
  },
  {
   "code": 324,
@@ -2610,7 +2933,8 @@ export const wards: readonly Ward[] = [
   "slug": "makima",
   "constituencyCode": 65,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbeere-south"
  },
  {
   "code": 325,
@@ -2618,7 +2942,8 @@ export const wards: readonly Ward[] = [
   "slug": "mbeti-south",
   "constituencyCode": 65,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbeere-south"
  },
  {
   "code": 326,
@@ -2626,7 +2951,8 @@ export const wards: readonly Ward[] = [
   "slug": "mavuria",
   "constituencyCode": 65,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbeere-south"
  },
  {
   "code": 327,
@@ -2634,7 +2960,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiambere",
   "constituencyCode": 65,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbeere-south"
  },
  {
   "code": 328,
@@ -2642,7 +2969,8 @@ export const wards: readonly Ward[] = [
   "slug": "nthawa",
   "constituencyCode": 66,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbeere-north"
  },
  {
   "code": 329,
@@ -2650,7 +2978,8 @@ export const wards: readonly Ward[] = [
   "slug": "muminji",
   "constituencyCode": 66,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbeere-north"
  },
  {
   "code": 330,
@@ -2658,7 +2987,8 @@ export const wards: readonly Ward[] = [
   "slug": "evurore",
   "constituencyCode": 66,
   "countyCode": 14,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbeere-north"
  },
  {
   "code": 331,
@@ -2666,7 +2996,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngomeni",
   "constituencyCode": 67,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwingi-north"
  },
  {
   "code": 332,
@@ -2674,7 +3005,8 @@ export const wards: readonly Ward[] = [
   "slug": "kyuso",
   "constituencyCode": 67,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwingi-north"
  },
  {
   "code": 333,
@@ -2682,7 +3014,8 @@ export const wards: readonly Ward[] = [
   "slug": "mumoni",
   "constituencyCode": 67,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwingi-north"
  },
  {
   "code": 334,
@@ -2690,7 +3023,8 @@ export const wards: readonly Ward[] = [
   "slug": "tseikuru",
   "constituencyCode": 67,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwingi-north"
  },
  {
   "code": 335,
@@ -2698,7 +3032,8 @@ export const wards: readonly Ward[] = [
   "slug": "tharaka",
   "constituencyCode": 67,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwingi-north"
  },
  {
   "code": 336,
@@ -2706,7 +3041,8 @@ export const wards: readonly Ward[] = [
   "slug": "kyome-thaana",
   "constituencyCode": 68,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwingi-west"
  },
  {
   "code": 337,
@@ -2714,7 +3050,8 @@ export const wards: readonly Ward[] = [
   "slug": "nguutani",
   "constituencyCode": 68,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwingi-west"
  },
  {
   "code": 338,
@@ -2722,7 +3059,8 @@ export const wards: readonly Ward[] = [
   "slug": "migwani",
   "constituencyCode": 68,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwingi-west"
  },
  {
   "code": 339,
@@ -2730,7 +3068,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiomo-kyethani",
   "constituencyCode": 68,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwingi-west"
  },
  {
   "code": 340,
@@ -2738,7 +3077,8 @@ export const wards: readonly Ward[] = [
   "slug": "central",
   "constituencyCode": 69,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwingi-central-sub-county"
  },
  {
   "code": 341,
@@ -2746,7 +3086,8 @@ export const wards: readonly Ward[] = [
   "slug": "kivou",
   "constituencyCode": 69,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwingi-central-sub-county"
  },
  {
   "code": 342,
@@ -2754,7 +3095,8 @@ export const wards: readonly Ward[] = [
   "slug": "nguni",
   "constituencyCode": 69,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwingi-central-sub-county"
  },
  {
   "code": 343,
@@ -2762,7 +3104,8 @@ export const wards: readonly Ward[] = [
   "slug": "nuu",
   "constituencyCode": 69,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwingi-central-sub-county"
  },
  {
   "code": 344,
@@ -2770,7 +3113,8 @@ export const wards: readonly Ward[] = [
   "slug": "mui",
   "constituencyCode": 69,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwingi-central-sub-county"
  },
  {
   "code": 345,
@@ -2778,7 +3122,8 @@ export const wards: readonly Ward[] = [
   "slug": "waita",
   "constituencyCode": 69,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwingi-central-sub-county"
  },
  {
   "code": 346,
@@ -2786,7 +3131,8 @@ export const wards: readonly Ward[] = [
   "slug": "mutonguni",
   "constituencyCode": 70,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-west"
  },
  {
   "code": 347,
@@ -2794,7 +3140,8 @@ export const wards: readonly Ward[] = [
   "slug": "kauwi",
   "constituencyCode": 70,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-west"
  },
  {
   "code": 348,
@@ -2802,7 +3149,8 @@ export const wards: readonly Ward[] = [
   "slug": "matinyani",
   "constituencyCode": 70,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-west"
  },
  {
   "code": 349,
@@ -2810,7 +3158,8 @@ export const wards: readonly Ward[] = [
   "slug": "kwa-mutonga-kithumula",
   "constituencyCode": 70,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-west"
  },
  {
   "code": 350,
@@ -2818,7 +3167,8 @@ export const wards: readonly Ward[] = [
   "slug": "kisasi",
   "constituencyCode": 71,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-rural"
  },
  {
   "code": 351,
@@ -2826,7 +3176,8 @@ export const wards: readonly Ward[] = [
   "slug": "mbitini",
   "constituencyCode": 71,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-rural"
  },
  {
   "code": 352,
@@ -2834,7 +3185,8 @@ export const wards: readonly Ward[] = [
   "slug": "kwavonza-yatta",
   "constituencyCode": 71,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-rural"
  },
  {
   "code": 353,
@@ -2842,7 +3194,8 @@ export const wards: readonly Ward[] = [
   "slug": "kanyangi",
   "constituencyCode": 71,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-rural"
  },
  {
   "code": 354,
@@ -2850,7 +3203,8 @@ export const wards: readonly Ward[] = [
   "slug": "miambani",
   "constituencyCode": 72,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-central"
  },
  {
   "code": 355,
@@ -2858,7 +3212,8 @@ export const wards: readonly Ward[] = [
   "slug": "township",
   "constituencyCode": 72,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-central"
  },
  {
   "code": 356,
@@ -2866,7 +3221,8 @@ export const wards: readonly Ward[] = [
   "slug": "kyangwithya-west",
   "constituencyCode": 72,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-central"
  },
  {
   "code": 357,
@@ -2874,7 +3230,8 @@ export const wards: readonly Ward[] = [
   "slug": "mulango",
   "constituencyCode": 72,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-central"
  },
  {
   "code": 358,
@@ -2882,7 +3239,8 @@ export const wards: readonly Ward[] = [
   "slug": "kyangwithya-east",
   "constituencyCode": 72,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-central"
  },
  {
   "code": 359,
@@ -2890,7 +3248,8 @@ export const wards: readonly Ward[] = [
   "slug": "zombe-mwitika",
   "constituencyCode": 73,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-east"
  },
  {
   "code": 360,
@@ -2898,7 +3257,8 @@ export const wards: readonly Ward[] = [
   "slug": "chuluni",
   "constituencyCode": 73,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-east"
  },
  {
   "code": 361,
@@ -2906,7 +3266,8 @@ export const wards: readonly Ward[] = [
   "slug": "nzambani",
   "constituencyCode": 73,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-east"
  },
  {
   "code": 362,
@@ -2914,7 +3275,8 @@ export const wards: readonly Ward[] = [
   "slug": "voo-kyamatu",
   "constituencyCode": 73,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-east"
  },
  {
   "code": 363,
@@ -2922,7 +3284,8 @@ export const wards: readonly Ward[] = [
   "slug": "endau-malalani",
   "constituencyCode": 73,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-east"
  },
  {
   "code": 364,
@@ -2930,7 +3293,8 @@ export const wards: readonly Ward[] = [
   "slug": "mutito-kaliku",
   "constituencyCode": 73,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-east"
  },
  {
   "code": 365,
@@ -2938,7 +3302,8 @@ export const wards: readonly Ward[] = [
   "slug": "ikanga-kyatune",
   "constituencyCode": 74,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-south"
  },
  {
   "code": 366,
@@ -2946,7 +3311,8 @@ export const wards: readonly Ward[] = [
   "slug": "mutomo",
   "constituencyCode": 74,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-south"
  },
  {
   "code": 367,
@@ -2954,7 +3320,8 @@ export const wards: readonly Ward[] = [
   "slug": "mutha",
   "constituencyCode": 74,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-south"
  },
  {
   "code": 368,
@@ -2962,7 +3329,8 @@ export const wards: readonly Ward[] = [
   "slug": "ikutha",
   "constituencyCode": 74,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-south"
  },
  {
   "code": 369,
@@ -2970,7 +3338,8 @@ export const wards: readonly Ward[] = [
   "slug": "kanziko",
   "constituencyCode": 74,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-south"
  },
  {
   "code": 370,
@@ -2978,7 +3347,8 @@ export const wards: readonly Ward[] = [
   "slug": "athi",
   "constituencyCode": 74,
   "countyCode": 15,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitui-south"
  },
  {
   "code": 371,
@@ -2986,7 +3356,8 @@ export const wards: readonly Ward[] = [
   "slug": "kivaa",
   "constituencyCode": 75,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "masinga"
  },
  {
   "code": 372,
@@ -2994,7 +3365,8 @@ export const wards: readonly Ward[] = [
   "slug": "masinga-central",
   "constituencyCode": 75,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "masinga"
  },
  {
   "code": 373,
@@ -3002,7 +3374,8 @@ export const wards: readonly Ward[] = [
   "slug": "ekalakala",
   "constituencyCode": 75,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "masinga"
  },
  {
   "code": 374,
@@ -3010,7 +3383,8 @@ export const wards: readonly Ward[] = [
   "slug": "muthesya",
   "constituencyCode": 75,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "masinga"
  },
  {
   "code": 375,
@@ -3018,7 +3392,8 @@ export const wards: readonly Ward[] = [
   "slug": "ndithini",
   "constituencyCode": 75,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": null
  },
  {
   "code": 376,
@@ -3026,7 +3401,8 @@ export const wards: readonly Ward[] = [
   "slug": "ndalani",
   "constituencyCode": 76,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "yatta"
  },
  {
   "code": 377,
@@ -3034,7 +3410,8 @@ export const wards: readonly Ward[] = [
   "slug": "matuu",
   "constituencyCode": 76,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "yatta"
  },
  {
   "code": 378,
@@ -3042,7 +3419,8 @@ export const wards: readonly Ward[] = [
   "slug": "kithimani",
   "constituencyCode": 76,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "yatta"
  },
  {
   "code": 379,
@@ -3050,7 +3428,8 @@ export const wards: readonly Ward[] = [
   "slug": "ikombe",
   "constituencyCode": 76,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "yatta"
  },
  {
   "code": 380,
@@ -3058,7 +3437,8 @@ export const wards: readonly Ward[] = [
   "slug": "katangi",
   "constituencyCode": 76,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "yatta"
  },
  {
   "code": 381,
@@ -3066,7 +3446,8 @@ export const wards: readonly Ward[] = [
   "slug": "kangundo-north",
   "constituencyCode": 77,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kangundo"
  },
  {
   "code": 382,
@@ -3074,7 +3455,8 @@ export const wards: readonly Ward[] = [
   "slug": "kangundo-central",
   "constituencyCode": 77,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kangundo"
  },
  {
   "code": 383,
@@ -3082,7 +3464,8 @@ export const wards: readonly Ward[] = [
   "slug": "kangundo-east",
   "constituencyCode": 77,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kangundo"
  },
  {
   "code": 384,
@@ -3090,7 +3473,8 @@ export const wards: readonly Ward[] = [
   "slug": "kangundo-west",
   "constituencyCode": 77,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kangundo"
  },
  {
   "code": 385,
@@ -3098,7 +3482,8 @@ export const wards: readonly Ward[] = [
   "slug": "tala",
   "constituencyCode": 78,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matungulu"
  },
  {
   "code": 386,
@@ -3106,7 +3491,8 @@ export const wards: readonly Ward[] = [
   "slug": "matungulu-north",
   "constituencyCode": 78,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matungulu"
  },
  {
   "code": 387,
@@ -3114,7 +3500,8 @@ export const wards: readonly Ward[] = [
   "slug": "matungulu-east",
   "constituencyCode": 78,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matungulu"
  },
  {
   "code": 388,
@@ -3122,7 +3509,8 @@ export const wards: readonly Ward[] = [
   "slug": "matungulu-west",
   "constituencyCode": 78,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matungulu"
  },
  {
   "code": 389,
@@ -3130,7 +3518,8 @@ export const wards: readonly Ward[] = [
   "slug": "kyeleni",
   "constituencyCode": 78,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matungulu"
  },
  {
   "code": 390,
@@ -3138,7 +3527,8 @@ export const wards: readonly Ward[] = [
   "slug": "mitaboni",
   "constituencyCode": 79,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kathiani"
  },
  {
   "code": 391,
@@ -3146,7 +3536,8 @@ export const wards: readonly Ward[] = [
   "slug": "kathiani-central",
   "constituencyCode": 79,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kathiani"
  },
  {
   "code": 392,
@@ -3154,7 +3545,8 @@ export const wards: readonly Ward[] = [
   "slug": "upper-kaewa-iveti",
   "constituencyCode": 79,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kathiani"
  },
  {
   "code": 393,
@@ -3162,7 +3554,8 @@ export const wards: readonly Ward[] = [
   "slug": "lower-kaewa-kaani",
   "constituencyCode": 79,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kathiani"
  },
  {
   "code": 394,
@@ -3170,7 +3563,8 @@ export const wards: readonly Ward[] = [
   "slug": "athi-river",
   "constituencyCode": 80,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "athi-river"
  },
  {
   "code": 395,
@@ -3178,7 +3572,8 @@ export const wards: readonly Ward[] = [
   "slug": "kinanie",
   "constituencyCode": 80,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "athi-river"
  },
  {
   "code": 396,
@@ -3186,7 +3581,8 @@ export const wards: readonly Ward[] = [
   "slug": "muthwani",
   "constituencyCode": 80,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": null
  },
  {
   "code": 397,
@@ -3194,7 +3590,8 @@ export const wards: readonly Ward[] = [
   "slug": "syokimau-mulolongo",
   "constituencyCode": 80,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "athi-river"
  },
  {
   "code": 398,
@@ -3202,7 +3599,8 @@ export const wards: readonly Ward[] = [
   "slug": "kalama",
   "constituencyCode": 81,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "machakos"
  },
  {
   "code": 399,
@@ -3210,7 +3608,8 @@ export const wards: readonly Ward[] = [
   "slug": "mua",
   "constituencyCode": 81,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "machakos"
  },
  {
   "code": 400,
@@ -3218,7 +3617,8 @@ export const wards: readonly Ward[] = [
   "slug": "mutituni",
   "constituencyCode": 81,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "machakos"
  },
  {
   "code": 401,
@@ -3226,7 +3626,8 @@ export const wards: readonly Ward[] = [
   "slug": "machakos-central",
   "constituencyCode": 81,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": null
  },
  {
   "code": 402,
@@ -3234,7 +3635,8 @@ export const wards: readonly Ward[] = [
   "slug": "mumbuni-north",
   "constituencyCode": 81,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "machakos"
  },
  {
   "code": 403,
@@ -3242,7 +3644,8 @@ export const wards: readonly Ward[] = [
   "slug": "muvuti-kiima-kimwe",
   "constituencyCode": 81,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "machakos"
  },
  {
   "code": 404,
@@ -3250,7 +3653,8 @@ export const wards: readonly Ward[] = [
   "slug": "kola",
   "constituencyCode": 81,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "machakos"
  },
  {
   "code": 405,
@@ -3258,7 +3662,8 @@ export const wards: readonly Ward[] = [
   "slug": "mbiuni",
   "constituencyCode": 82,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwala"
  },
  {
   "code": 406,
@@ -3266,7 +3671,8 @@ export const wards: readonly Ward[] = [
   "slug": "makutano-mwala",
   "constituencyCode": 82,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwala"
  },
  {
   "code": 407,
@@ -3274,7 +3680,8 @@ export const wards: readonly Ward[] = [
   "slug": "masii",
   "constituencyCode": 82,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwala"
  },
  {
   "code": 408,
@@ -3282,7 +3689,8 @@ export const wards: readonly Ward[] = [
   "slug": "muthetheni",
   "constituencyCode": 82,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwala"
  },
  {
   "code": 409,
@@ -3290,7 +3698,8 @@ export const wards: readonly Ward[] = [
   "slug": "wamunyu",
   "constituencyCode": 82,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwala"
  },
  {
   "code": 410,
@@ -3298,7 +3707,8 @@ export const wards: readonly Ward[] = [
   "slug": "kibauni",
   "constituencyCode": 82,
   "countyCode": 16,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mwala"
  },
  {
   "code": 411,
@@ -3306,7 +3716,8 @@ export const wards: readonly Ward[] = [
   "slug": "tulimani",
   "constituencyCode": 83,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbooni"
  },
  {
   "code": 412,
@@ -3314,7 +3725,8 @@ export const wards: readonly Ward[] = [
   "slug": "mbooni",
   "constituencyCode": 83,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbooni"
  },
  {
   "code": 413,
@@ -3322,7 +3734,8 @@ export const wards: readonly Ward[] = [
   "slug": "kithungo-kitundu",
   "constituencyCode": 83,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbooni"
  },
  {
   "code": 414,
@@ -3332,7 +3745,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 17,
   "aliases": [
    "Kiteta/Kisau"
-  ]
+  ],
+  "subCounty": "mbooni"
  },
  {
   "code": 415,
@@ -3340,7 +3754,8 @@ export const wards: readonly Ward[] = [
   "slug": "waia-kako",
   "constituencyCode": 83,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbooni"
  },
  {
   "code": 416,
@@ -3348,7 +3763,8 @@ export const wards: readonly Ward[] = [
   "slug": "kalawa",
   "constituencyCode": 83,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": null
  },
  {
   "code": 417,
@@ -3356,7 +3772,8 @@ export const wards: readonly Ward[] = [
   "slug": "kasikeu",
   "constituencyCode": 84,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kilome"
  },
  {
   "code": 418,
@@ -3364,7 +3781,8 @@ export const wards: readonly Ward[] = [
   "slug": "mukaa",
   "constituencyCode": 84,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kilome"
  },
  {
   "code": 419,
@@ -3372,7 +3790,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiima-kiu-kalanzoni",
   "constituencyCode": 84,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kilome"
  },
  {
   "code": 420,
@@ -3380,7 +3799,8 @@ export const wards: readonly Ward[] = [
   "slug": "ukia",
   "constituencyCode": 85,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kaiti"
  },
  {
   "code": 421,
@@ -3388,7 +3808,8 @@ export const wards: readonly Ward[] = [
   "slug": "kee",
   "constituencyCode": 85,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kaiti"
  },
  {
   "code": 422,
@@ -3396,7 +3817,8 @@ export const wards: readonly Ward[] = [
   "slug": "kilungu",
   "constituencyCode": 85,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kaiti"
  },
  {
   "code": 423,
@@ -3404,7 +3826,8 @@ export const wards: readonly Ward[] = [
   "slug": "ilima",
   "constituencyCode": 85,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kaiti"
  },
  {
   "code": 424,
@@ -3412,7 +3835,8 @@ export const wards: readonly Ward[] = [
   "slug": "wote",
   "constituencyCode": 86,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "makueni"
  },
  {
   "code": 425,
@@ -3420,7 +3844,8 @@ export const wards: readonly Ward[] = [
   "slug": "muvau-kikuumini",
   "constituencyCode": 86,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "makueni"
  },
  {
   "code": 426,
@@ -3428,7 +3853,8 @@ export const wards: readonly Ward[] = [
   "slug": "mavindini",
   "constituencyCode": 86,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "makueni"
  },
  {
   "code": 427,
@@ -3436,7 +3862,8 @@ export const wards: readonly Ward[] = [
   "slug": "kitise-kithuki",
   "constituencyCode": 86,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "makueni"
  },
  {
   "code": 428,
@@ -3444,7 +3871,8 @@ export const wards: readonly Ward[] = [
   "slug": "kathonzweni",
   "constituencyCode": 86,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "makueni"
  },
  {
   "code": 429,
@@ -3452,7 +3880,8 @@ export const wards: readonly Ward[] = [
   "slug": "nzaui-kilili-kalamba",
   "constituencyCode": 86,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "makueni"
  },
  {
   "code": 430,
@@ -3460,7 +3889,8 @@ export const wards: readonly Ward[] = [
   "slug": "mbitini",
   "constituencyCode": 86,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "makueni"
  },
  {
   "code": 431,
@@ -3468,7 +3898,8 @@ export const wards: readonly Ward[] = [
   "slug": "makindu",
   "constituencyCode": 87,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibwezi-west"
  },
  {
   "code": 432,
@@ -3476,7 +3907,8 @@ export const wards: readonly Ward[] = [
   "slug": "nguumo",
   "constituencyCode": 87,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibwezi-west"
  },
  {
   "code": 433,
@@ -3484,7 +3916,8 @@ export const wards: readonly Ward[] = [
   "slug": "kikumbulyu-north",
   "constituencyCode": 87,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibwezi-west"
  },
  {
   "code": 434,
@@ -3492,7 +3925,8 @@ export const wards: readonly Ward[] = [
   "slug": "kikumbulyu-south",
   "constituencyCode": 87,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibwezi-west"
  },
  {
   "code": 435,
@@ -3500,7 +3934,8 @@ export const wards: readonly Ward[] = [
   "slug": "nguu-masumba",
   "constituencyCode": 87,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibwezi-west"
  },
  {
   "code": 436,
@@ -3508,7 +3943,8 @@ export const wards: readonly Ward[] = [
   "slug": "emali-mulala",
   "constituencyCode": 87,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibwezi-west"
  },
  {
   "code": 437,
@@ -3516,7 +3952,8 @@ export const wards: readonly Ward[] = [
   "slug": "masongaleni",
   "constituencyCode": 88,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibwezi-east"
  },
  {
   "code": 438,
@@ -3524,7 +3961,8 @@ export const wards: readonly Ward[] = [
   "slug": "mtito-andei",
   "constituencyCode": 88,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibwezi-east"
  },
  {
   "code": 439,
@@ -3532,7 +3970,8 @@ export const wards: readonly Ward[] = [
   "slug": "thange",
   "constituencyCode": 88,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibwezi-east"
  },
  {
   "code": 440,
@@ -3540,7 +3979,8 @@ export const wards: readonly Ward[] = [
   "slug": "ivingoni-nzambani",
   "constituencyCode": 88,
   "countyCode": 17,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibwezi-east"
  },
  {
   "code": 441,
@@ -3548,7 +3988,8 @@ export const wards: readonly Ward[] = [
   "slug": "engineer",
   "constituencyCode": 89,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kinangop"
  },
  {
   "code": 442,
@@ -3556,7 +3997,8 @@ export const wards: readonly Ward[] = [
   "slug": "gathara",
   "constituencyCode": 89,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kinangop"
  },
  {
   "code": 443,
@@ -3564,7 +4006,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-kinangop",
   "constituencyCode": 89,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kinangop"
  },
  {
   "code": 444,
@@ -3572,7 +4015,8 @@ export const wards: readonly Ward[] = [
   "slug": "murungaru",
   "constituencyCode": 89,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kinangop"
  },
  {
   "code": 445,
@@ -3580,7 +4024,8 @@ export const wards: readonly Ward[] = [
   "slug": "njabini-kiburu",
   "constituencyCode": 89,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kinangop"
  },
  {
   "code": 446,
@@ -3588,7 +4033,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyakio",
   "constituencyCode": 89,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kinangop"
  },
  {
   "code": 447,
@@ -3596,7 +4042,8 @@ export const wards: readonly Ward[] = [
   "slug": "githabai",
   "constituencyCode": 89,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kinangop"
  },
  {
   "code": 448,
@@ -3604,7 +4051,8 @@ export const wards: readonly Ward[] = [
   "slug": "magumu",
   "constituencyCode": 89,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kinangop"
  },
  {
   "code": 449,
@@ -3612,7 +4060,8 @@ export const wards: readonly Ward[] = [
   "slug": "wanjohi",
   "constituencyCode": 90,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kipipiri"
  },
  {
   "code": 450,
@@ -3620,7 +4069,8 @@ export const wards: readonly Ward[] = [
   "slug": "kipipiri",
   "constituencyCode": 90,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kipipiri"
  },
  {
   "code": 451,
@@ -3628,7 +4078,8 @@ export const wards: readonly Ward[] = [
   "slug": "geta",
   "constituencyCode": 90,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kipipiri"
  },
  {
   "code": 452,
@@ -3636,7 +4087,8 @@ export const wards: readonly Ward[] = [
   "slug": "githioro",
   "constituencyCode": 90,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kipipiri"
  },
  {
   "code": 453,
@@ -3644,7 +4096,8 @@ export const wards: readonly Ward[] = [
   "slug": "karau",
   "constituencyCode": 91,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "olkalou"
  },
  {
   "code": 454,
@@ -3654,7 +4107,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 18,
   "aliases": [
    "Kanjuiri Range"
-  ]
+  ],
+  "subCounty": "olkalou"
  },
  {
   "code": 455,
@@ -3662,7 +4116,8 @@ export const wards: readonly Ward[] = [
   "slug": "mirangine",
   "constituencyCode": 91,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "olkalou"
  },
  {
   "code": 456,
@@ -3670,7 +4125,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaimbaga",
   "constituencyCode": 91,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "olkalou"
  },
  {
   "code": 457,
@@ -3678,7 +4134,8 @@ export const wards: readonly Ward[] = [
   "slug": "rurii",
   "constituencyCode": 91,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "olkalou"
  },
  {
   "code": 458,
@@ -3686,7 +4143,8 @@ export const wards: readonly Ward[] = [
   "slug": "gathanji",
   "constituencyCode": 92,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "oljoroorok"
  },
  {
   "code": 459,
@@ -3694,7 +4152,8 @@ export const wards: readonly Ward[] = [
   "slug": "gatimu",
   "constituencyCode": 92,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "oljoroorok"
  },
  {
   "code": 460,
@@ -3702,7 +4161,8 @@ export const wards: readonly Ward[] = [
   "slug": "weru",
   "constituencyCode": 92,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "oljoroorok"
  },
  {
   "code": 461,
@@ -3710,7 +4170,8 @@ export const wards: readonly Ward[] = [
   "slug": "charagita",
   "constituencyCode": 92,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "oljoroorok"
  },
  {
   "code": 462,
@@ -3718,7 +4179,8 @@ export const wards: readonly Ward[] = [
   "slug": "leshau-pondo",
   "constituencyCode": 93,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ndaragwa"
  },
  {
   "code": 463,
@@ -3726,7 +4188,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiriita",
   "constituencyCode": 93,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ndaragwa"
  },
  {
   "code": 464,
@@ -3734,7 +4197,8 @@ export const wards: readonly Ward[] = [
   "slug": "central",
   "constituencyCode": 93,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ndaragwa"
  },
  {
   "code": 465,
@@ -3742,7 +4206,8 @@ export const wards: readonly Ward[] = [
   "slug": "shamata",
   "constituencyCode": 93,
   "countyCode": 18,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ndaragwa"
  },
  {
   "code": 466,
@@ -3750,7 +4215,8 @@ export const wards: readonly Ward[] = [
   "slug": "dedan-kimanthi",
   "constituencyCode": 94,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tetu"
  },
  {
   "code": 467,
@@ -3758,7 +4224,8 @@ export const wards: readonly Ward[] = [
   "slug": "wamagana",
   "constituencyCode": 94,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tetu"
  },
  {
   "code": 468,
@@ -3766,7 +4233,8 @@ export const wards: readonly Ward[] = [
   "slug": "aguthi-gaaki",
   "constituencyCode": 94,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tetu"
  },
  {
   "code": 469,
@@ -3774,7 +4242,8 @@ export const wards: readonly Ward[] = [
   "slug": "mweiga",
   "constituencyCode": 95,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kieni-west"
  },
  {
   "code": 470,
@@ -3782,7 +4251,8 @@ export const wards: readonly Ward[] = [
   "slug": "naromoru-kiamathaga",
   "constituencyCode": 95,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kieni-east"
  },
  {
   "code": 471,
@@ -3790,7 +4260,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwiyogo-endarasha",
   "constituencyCode": 95,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kieni-west"
  },
  {
   "code": 472,
@@ -3798,7 +4269,8 @@ export const wards: readonly Ward[] = [
   "slug": "mugunda",
   "constituencyCode": 95,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kieni-west"
  },
  {
   "code": 473,
@@ -3806,7 +4278,8 @@ export const wards: readonly Ward[] = [
   "slug": "gatarakwa",
   "constituencyCode": 95,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kieni-west"
  },
  {
   "code": 474,
@@ -3814,7 +4287,8 @@ export const wards: readonly Ward[] = [
   "slug": "thegu-river",
   "constituencyCode": 95,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kieni-east"
  },
  {
   "code": 475,
@@ -3822,7 +4296,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabaru",
   "constituencyCode": 95,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kieni-east"
  },
  {
   "code": 476,
@@ -3830,7 +4305,8 @@ export const wards: readonly Ward[] = [
   "slug": "gakawa",
   "constituencyCode": 95,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kieni-east"
  },
  {
   "code": 477,
@@ -3838,7 +4314,8 @@ export const wards: readonly Ward[] = [
   "slug": "ruguru",
   "constituencyCode": 96,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mathira-west"
  },
  {
   "code": 478,
@@ -3846,7 +4323,8 @@ export const wards: readonly Ward[] = [
   "slug": "magutu",
   "constituencyCode": 96,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mathira-east"
  },
  {
   "code": 479,
@@ -3854,7 +4332,8 @@ export const wards: readonly Ward[] = [
   "slug": "iriaini",
   "constituencyCode": 96,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mathira-east"
  },
  {
   "code": 480,
@@ -3862,7 +4341,8 @@ export const wards: readonly Ward[] = [
   "slug": "konyu",
   "constituencyCode": 96,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mathira-east"
  },
  {
   "code": 481,
@@ -3870,7 +4350,8 @@ export const wards: readonly Ward[] = [
   "slug": "kirimukuyu",
   "constituencyCode": 96,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mathira-west"
  },
  {
   "code": 482,
@@ -3878,7 +4359,8 @@ export const wards: readonly Ward[] = [
   "slug": "karatina-town",
   "constituencyCode": 96,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mathira-east"
  },
  {
   "code": 483,
@@ -3886,7 +4368,8 @@ export const wards: readonly Ward[] = [
   "slug": "mahiga",
   "constituencyCode": 97,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyeri-south"
  },
  {
   "code": 484,
@@ -3894,7 +4377,8 @@ export const wards: readonly Ward[] = [
   "slug": "iria-ini",
   "constituencyCode": 97,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": null
  },
  {
   "code": 485,
@@ -3902,7 +4386,8 @@ export const wards: readonly Ward[] = [
   "slug": "chinga",
   "constituencyCode": 97,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyeri-south"
  },
  {
   "code": 486,
@@ -3910,7 +4395,8 @@ export const wards: readonly Ward[] = [
   "slug": "karima",
   "constituencyCode": 97,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyeri-south"
  },
  {
   "code": 487,
@@ -3918,7 +4404,8 @@ export const wards: readonly Ward[] = [
   "slug": "gikondi",
   "constituencyCode": 98,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mukurweini"
  },
  {
   "code": 488,
@@ -3926,7 +4413,8 @@ export const wards: readonly Ward[] = [
   "slug": "rugi",
   "constituencyCode": 98,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mukurweini"
  },
  {
   "code": 489,
@@ -3934,7 +4422,8 @@ export const wards: readonly Ward[] = [
   "slug": "mukurwe-ini-west",
   "constituencyCode": 98,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mukurweini"
  },
  {
   "code": 490,
@@ -3942,7 +4431,8 @@ export const wards: readonly Ward[] = [
   "slug": "mukurwe-ini-central",
   "constituencyCode": 98,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mukurweini"
  },
  {
   "code": 491,
@@ -3950,7 +4440,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiganjo-mathari",
   "constituencyCode": 99,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyeri-central"
  },
  {
   "code": 492,
@@ -3958,7 +4449,8 @@ export const wards: readonly Ward[] = [
   "slug": "rware",
   "constituencyCode": 99,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyeri-central"
  },
  {
   "code": 493,
@@ -3966,7 +4458,8 @@ export const wards: readonly Ward[] = [
   "slug": "gatitu-muruguru",
   "constituencyCode": 99,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyeri-central"
  },
  {
   "code": 494,
@@ -3974,7 +4467,8 @@ export const wards: readonly Ward[] = [
   "slug": "ruringu",
   "constituencyCode": 99,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyeri-central"
  },
  {
   "code": 495,
@@ -3982,7 +4476,8 @@ export const wards: readonly Ward[] = [
   "slug": "kamakwa-mukaro",
   "constituencyCode": 99,
   "countyCode": 19,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyeri-central"
  },
  {
   "code": 496,
@@ -3990,7 +4485,8 @@ export const wards: readonly Ward[] = [
   "slug": "mutithi",
   "constituencyCode": 100,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-north-mwea-west"
  },
  {
   "code": 497,
@@ -3998,7 +4494,8 @@ export const wards: readonly Ward[] = [
   "slug": "kangai",
   "constituencyCode": 100,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-north-mwea-west"
  },
  {
   "code": 498,
@@ -4006,7 +4503,8 @@ export const wards: readonly Ward[] = [
   "slug": "thiba",
   "constituencyCode": 100,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-north-mwea-west"
  },
  {
   "code": 499,
@@ -4014,7 +4512,8 @@ export const wards: readonly Ward[] = [
   "slug": "wamumu",
   "constituencyCode": 100,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-north-mwea-west"
  },
  {
   "code": 500,
@@ -4022,7 +4521,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyangati",
   "constituencyCode": 100,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-south"
  },
  {
   "code": 501,
@@ -4030,7 +4530,8 @@ export const wards: readonly Ward[] = [
   "slug": "murinduko",
   "constituencyCode": 100,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-south"
  },
  {
   "code": 502,
@@ -4038,7 +4539,8 @@ export const wards: readonly Ward[] = [
   "slug": "gathigiriri",
   "constituencyCode": 100,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-south"
  },
  {
   "code": 503,
@@ -4046,7 +4548,8 @@ export const wards: readonly Ward[] = [
   "slug": "tebere",
   "constituencyCode": 100,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-south"
  },
  {
   "code": 504,
@@ -4054,7 +4557,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabare",
   "constituencyCode": 101,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-east"
  },
  {
   "code": 505,
@@ -4062,7 +4566,8 @@ export const wards: readonly Ward[] = [
   "slug": "baragwi",
   "constituencyCode": 101,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-east"
  },
  {
   "code": 506,
@@ -4070,7 +4575,8 @@ export const wards: readonly Ward[] = [
   "slug": "njukiini",
   "constituencyCode": 101,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-east"
  },
  {
   "code": 507,
@@ -4078,7 +4584,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngariama",
   "constituencyCode": 101,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-east"
  },
  {
   "code": 508,
@@ -4086,7 +4593,8 @@ export const wards: readonly Ward[] = [
   "slug": "karumandi",
   "constituencyCode": 101,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-east"
  },
  {
   "code": 509,
@@ -4094,7 +4602,8 @@ export const wards: readonly Ward[] = [
   "slug": "mukure",
   "constituencyCode": 102,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-west"
  },
  {
   "code": 510,
@@ -4102,7 +4611,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiine",
   "constituencyCode": 102,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-west"
  },
  {
   "code": 511,
@@ -4110,7 +4620,8 @@ export const wards: readonly Ward[] = [
   "slug": "kariti",
   "constituencyCode": 102,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-west"
  },
  {
   "code": 512,
@@ -4118,7 +4629,8 @@ export const wards: readonly Ward[] = [
   "slug": "mutira",
   "constituencyCode": 103,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-central"
  },
  {
   "code": 513,
@@ -4128,7 +4640,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 20,
   "aliases": [
    "Kanyekini"
-  ]
+  ],
+  "subCounty": "kirinyaga-central"
  },
  {
   "code": 514,
@@ -4136,7 +4649,8 @@ export const wards: readonly Ward[] = [
   "slug": "kerugoya",
   "constituencyCode": 103,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-central"
  },
  {
   "code": 515,
@@ -4144,7 +4658,8 @@ export const wards: readonly Ward[] = [
   "slug": "inoi",
   "constituencyCode": 103,
   "countyCode": 20,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kirinyaga-central"
  },
  {
   "code": 516,
@@ -4152,7 +4667,8 @@ export const wards: readonly Ward[] = [
   "slug": "kanyenyaini",
   "constituencyCode": 104,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kangema"
  },
  {
   "code": 517,
@@ -4160,7 +4676,8 @@ export const wards: readonly Ward[] = [
   "slug": "muguru",
   "constituencyCode": 104,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kangema"
  },
  {
   "code": 518,
@@ -4168,7 +4685,8 @@ export const wards: readonly Ward[] = [
   "slug": "rwathia",
   "constituencyCode": 104,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kangema"
  },
  {
   "code": 519,
@@ -4176,7 +4694,8 @@ export const wards: readonly Ward[] = [
   "slug": "gitugi",
   "constituencyCode": 105,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mathioya"
  },
  {
   "code": 520,
@@ -4184,7 +4703,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiru",
   "constituencyCode": 105,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mathioya"
  },
  {
   "code": 521,
@@ -4192,7 +4712,8 @@ export const wards: readonly Ward[] = [
   "slug": "kamacharia",
   "constituencyCode": 105,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mathioya"
  },
  {
   "code": 522,
@@ -4200,7 +4721,8 @@ export const wards: readonly Ward[] = [
   "slug": "wangu",
   "constituencyCode": 106,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiharu"
  },
  {
   "code": 523,
@@ -4208,7 +4730,8 @@ export const wards: readonly Ward[] = [
   "slug": "mugoiri",
   "constituencyCode": 106,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiharu"
  },
  {
   "code": 524,
@@ -4216,7 +4739,8 @@ export const wards: readonly Ward[] = [
   "slug": "mbiri",
   "constituencyCode": 106,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiharu"
  },
  {
   "code": 525,
@@ -4224,7 +4748,8 @@ export const wards: readonly Ward[] = [
   "slug": "township",
   "constituencyCode": 106,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiharu"
  },
  {
   "code": 526,
@@ -4232,7 +4757,8 @@ export const wards: readonly Ward[] = [
   "slug": "murarandia",
   "constituencyCode": 106,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiharu"
  },
  {
   "code": 527,
@@ -4240,7 +4766,8 @@ export const wards: readonly Ward[] = [
   "slug": "gaturi",
   "constituencyCode": 106,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiharu"
  },
  {
   "code": 528,
@@ -4248,7 +4775,8 @@ export const wards: readonly Ward[] = [
   "slug": "kahumbu",
   "constituencyCode": 107,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kigumo"
  },
  {
   "code": 529,
@@ -4256,7 +4784,8 @@ export const wards: readonly Ward[] = [
   "slug": "muthithi",
   "constituencyCode": 107,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kigumo"
  },
  {
   "code": 530,
@@ -4264,7 +4793,8 @@ export const wards: readonly Ward[] = [
   "slug": "kigumo",
   "constituencyCode": 107,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kigumo"
  },
  {
   "code": 531,
@@ -4272,7 +4802,8 @@ export const wards: readonly Ward[] = [
   "slug": "kangari",
   "constituencyCode": 107,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kigumo"
  },
  {
   "code": 532,
@@ -4280,7 +4811,8 @@ export const wards: readonly Ward[] = [
   "slug": "kinyona",
   "constituencyCode": 107,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kigumo"
  },
  {
   "code": 533,
@@ -4288,7 +4820,8 @@ export const wards: readonly Ward[] = [
   "slug": "kimorori-wempa",
   "constituencyCode": 108,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "muranga-south"
  },
  {
   "code": 534,
@@ -4296,7 +4829,8 @@ export const wards: readonly Ward[] = [
   "slug": "makuyu",
   "constituencyCode": 108,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "muranga-south"
  },
  {
   "code": 535,
@@ -4304,7 +4838,8 @@ export const wards: readonly Ward[] = [
   "slug": "kambiti",
   "constituencyCode": 108,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "muranga-south"
  },
  {
   "code": 536,
@@ -4312,7 +4847,8 @@ export const wards: readonly Ward[] = [
   "slug": "kamahuha",
   "constituencyCode": 108,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "muranga-south"
  },
  {
   "code": 537,
@@ -4320,7 +4856,8 @@ export const wards: readonly Ward[] = [
   "slug": "ichagaki",
   "constituencyCode": 108,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "muranga-south"
  },
  {
   "code": 538,
@@ -4328,7 +4865,8 @@ export const wards: readonly Ward[] = [
   "slug": "nginda",
   "constituencyCode": 108,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "muranga-south"
  },
  {
   "code": 539,
@@ -4336,7 +4874,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngararia",
   "constituencyCode": 109,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kandara"
  },
  {
   "code": 540,
@@ -4344,7 +4883,8 @@ export const wards: readonly Ward[] = [
   "slug": "muruka",
   "constituencyCode": 109,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kandara"
  },
  {
   "code": 541,
@@ -4352,7 +4892,8 @@ export const wards: readonly Ward[] = [
   "slug": "kagundu-ini",
   "constituencyCode": 109,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kandara"
  },
  {
   "code": 542,
@@ -4360,7 +4901,8 @@ export const wards: readonly Ward[] = [
   "slug": "gaichanjiru",
   "constituencyCode": 109,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kandara"
  },
  {
   "code": 543,
@@ -4368,7 +4910,8 @@ export const wards: readonly Ward[] = [
   "slug": "ithiru",
   "constituencyCode": 109,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kandara"
  },
  {
   "code": 544,
@@ -4376,7 +4919,8 @@ export const wards: readonly Ward[] = [
   "slug": "ruchu",
   "constituencyCode": 109,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kandara"
  },
  {
   "code": 545,
@@ -4384,7 +4928,8 @@ export const wards: readonly Ward[] = [
   "slug": "ithanga",
   "constituencyCode": 110,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gatanga"
  },
  {
   "code": 546,
@@ -4392,7 +4937,8 @@ export const wards: readonly Ward[] = [
   "slug": "kakuzi-mitubiri",
   "constituencyCode": 110,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gatanga"
  },
  {
   "code": 547,
@@ -4400,7 +4946,8 @@ export const wards: readonly Ward[] = [
   "slug": "mugumo-ini",
   "constituencyCode": 110,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gatanga"
  },
  {
   "code": 548,
@@ -4408,7 +4955,8 @@ export const wards: readonly Ward[] = [
   "slug": "kihumbu-ini",
   "constituencyCode": 110,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gatanga"
  },
  {
   "code": 549,
@@ -4416,7 +4964,8 @@ export const wards: readonly Ward[] = [
   "slug": "gatanga",
   "constituencyCode": 110,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gatanga"
  },
  {
   "code": 550,
@@ -4424,7 +4973,8 @@ export const wards: readonly Ward[] = [
   "slug": "kariara",
   "constituencyCode": 110,
   "countyCode": 21,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gatanga"
  },
  {
   "code": 551,
@@ -4432,7 +4982,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiamwangi",
   "constituencyCode": 111,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gatundu-south"
  },
  {
   "code": 552,
@@ -4440,7 +4991,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiganjo",
   "constituencyCode": 111,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gatundu-south"
  },
  {
   "code": 553,
@@ -4448,7 +5000,8 @@ export const wards: readonly Ward[] = [
   "slug": "ndarugu",
   "constituencyCode": 111,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gatundu-south"
  },
  {
   "code": 554,
@@ -4456,7 +5009,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngenda",
   "constituencyCode": 111,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gatundu-south"
  },
  {
   "code": 555,
@@ -4464,7 +5018,8 @@ export const wards: readonly Ward[] = [
   "slug": "gituamba",
   "constituencyCode": 112,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gatundu-north"
  },
  {
   "code": 556,
@@ -4472,7 +5027,8 @@ export const wards: readonly Ward[] = [
   "slug": "githobokoni",
   "constituencyCode": 112,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gatundu-north"
  },
  {
   "code": 557,
@@ -4480,7 +5036,8 @@ export const wards: readonly Ward[] = [
   "slug": "chania",
   "constituencyCode": 112,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gatundu-north"
  },
  {
   "code": 558,
@@ -4488,7 +5045,8 @@ export const wards: readonly Ward[] = [
   "slug": "mangu",
   "constituencyCode": 112,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gatundu-north"
  },
  {
   "code": 559,
@@ -4496,7 +5054,8 @@ export const wards: readonly Ward[] = [
   "slug": "murera",
   "constituencyCode": 113,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "juja"
  },
  {
   "code": 560,
@@ -4504,7 +5063,8 @@ export const wards: readonly Ward[] = [
   "slug": "theta",
   "constituencyCode": 113,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "juja"
  },
  {
   "code": 561,
@@ -4512,7 +5072,8 @@ export const wards: readonly Ward[] = [
   "slug": "juja",
   "constituencyCode": 113,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "juja"
  },
  {
   "code": 562,
@@ -4520,7 +5081,8 @@ export const wards: readonly Ward[] = [
   "slug": "witeithie",
   "constituencyCode": 113,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "juja"
  },
  {
   "code": 563,
@@ -4528,7 +5090,8 @@ export const wards: readonly Ward[] = [
   "slug": "kalimoni",
   "constituencyCode": 113,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "juja"
  },
  {
   "code": 564,
@@ -4536,7 +5099,8 @@ export const wards: readonly Ward[] = [
   "slug": "township",
   "constituencyCode": 114,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": null
  },
  {
   "code": 565,
@@ -4544,7 +5108,8 @@ export const wards: readonly Ward[] = [
   "slug": "kamenu",
   "constituencyCode": 114,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "thika-town"
  },
  {
   "code": 566,
@@ -4552,7 +5117,8 @@ export const wards: readonly Ward[] = [
   "slug": "hospital",
   "constituencyCode": 114,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "thika-town"
  },
  {
   "code": 567,
@@ -4560,7 +5126,8 @@ export const wards: readonly Ward[] = [
   "slug": "gatuanyaga",
   "constituencyCode": 114,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "thika-town"
  },
  {
   "code": 568,
@@ -4568,7 +5135,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngoliba",
   "constituencyCode": 114,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "thika-town"
  },
  {
   "code": 569,
@@ -4576,7 +5144,8 @@ export const wards: readonly Ward[] = [
   "slug": "gitothua",
   "constituencyCode": 115,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ruiru"
  },
  {
   "code": 570,
@@ -4584,7 +5153,8 @@ export const wards: readonly Ward[] = [
   "slug": "biashara",
   "constituencyCode": 115,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ruiru"
  },
  {
   "code": 571,
@@ -4592,7 +5162,8 @@ export const wards: readonly Ward[] = [
   "slug": "gatongora",
   "constituencyCode": 115,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ruiru"
  },
  {
   "code": 572,
@@ -4600,7 +5171,8 @@ export const wards: readonly Ward[] = [
   "slug": "kahawa-sukari",
   "constituencyCode": 115,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ruiru"
  },
  {
   "code": 573,
@@ -4608,7 +5180,8 @@ export const wards: readonly Ward[] = [
   "slug": "kahawa-wendani",
   "constituencyCode": 115,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ruiru"
  },
  {
   "code": 574,
@@ -4616,7 +5189,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiuu",
   "constituencyCode": 115,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ruiru"
  },
  {
   "code": 575,
@@ -4624,7 +5198,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwiki",
   "constituencyCode": 115,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ruiru"
  },
  {
   "code": 576,
@@ -4632,7 +5207,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwihoko",
   "constituencyCode": 115,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ruiru"
  },
  {
   "code": 577,
@@ -4640,7 +5216,8 @@ export const wards: readonly Ward[] = [
   "slug": "githunguri",
   "constituencyCode": 116,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "githunguri"
  },
  {
   "code": 578,
@@ -4648,7 +5225,8 @@ export const wards: readonly Ward[] = [
   "slug": "githiga",
   "constituencyCode": 116,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "githunguri"
  },
  {
   "code": 579,
@@ -4656,7 +5234,8 @@ export const wards: readonly Ward[] = [
   "slug": "ikinu",
   "constituencyCode": 116,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "githunguri"
  },
  {
   "code": 580,
@@ -4664,7 +5243,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngewa",
   "constituencyCode": 116,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "githunguri"
  },
  {
   "code": 581,
@@ -4672,7 +5252,8 @@ export const wards: readonly Ward[] = [
   "slug": "komothai",
   "constituencyCode": 116,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "githunguri"
  },
  {
   "code": 582,
@@ -4680,7 +5261,8 @@ export const wards: readonly Ward[] = [
   "slug": "tinganga",
   "constituencyCode": 117,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiambu-town"
  },
  {
   "code": 583,
@@ -4688,7 +5270,8 @@ export const wards: readonly Ward[] = [
   "slug": "ndumberi",
   "constituencyCode": 117,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiambu-town"
  },
  {
   "code": 584,
@@ -4696,7 +5279,8 @@ export const wards: readonly Ward[] = [
   "slug": "riabai",
   "constituencyCode": 117,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiambu-town"
  },
  {
   "code": 585,
@@ -4704,7 +5288,8 @@ export const wards: readonly Ward[] = [
   "slug": "township",
   "constituencyCode": 117,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": null
  },
  {
   "code": 586,
@@ -4712,7 +5297,8 @@ export const wards: readonly Ward[] = [
   "slug": "cianda",
   "constituencyCode": 118,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiambaa"
  },
  {
   "code": 587,
@@ -4720,7 +5306,8 @@ export const wards: readonly Ward[] = [
   "slug": "karuri",
   "constituencyCode": 118,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiambaa"
  },
  {
   "code": 588,
@@ -4728,7 +5315,8 @@ export const wards: readonly Ward[] = [
   "slug": "ndenderu",
   "constituencyCode": 118,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiambaa"
  },
  {
   "code": 589,
@@ -4736,7 +5324,8 @@ export const wards: readonly Ward[] = [
   "slug": "muchatha",
   "constituencyCode": 118,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiambaa"
  },
  {
   "code": 590,
@@ -4744,7 +5333,8 @@ export const wards: readonly Ward[] = [
   "slug": "kihara",
   "constituencyCode": 118,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiambaa"
  },
  {
   "code": 591,
@@ -4752,7 +5342,8 @@ export const wards: readonly Ward[] = [
   "slug": "gitaru",
   "constituencyCode": 119,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kabete"
  },
  {
   "code": 592,
@@ -4760,7 +5351,8 @@ export const wards: readonly Ward[] = [
   "slug": "muguga",
   "constituencyCode": 119,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kabete"
  },
  {
   "code": 593,
@@ -4768,7 +5360,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyadhuna",
   "constituencyCode": 119,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kabete"
  },
  {
   "code": 594,
@@ -4776,7 +5369,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabete",
   "constituencyCode": 119,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kabete"
  },
  {
   "code": 595,
@@ -4784,7 +5378,8 @@ export const wards: readonly Ward[] = [
   "slug": "uthiru",
   "constituencyCode": 119,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kabete"
  },
  {
   "code": 596,
@@ -4792,7 +5387,8 @@ export const wards: readonly Ward[] = [
   "slug": "karai",
   "constituencyCode": 120,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kikuyu"
  },
  {
   "code": 597,
@@ -4800,7 +5396,8 @@ export const wards: readonly Ward[] = [
   "slug": "nachu",
   "constituencyCode": 120,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kikuyu"
  },
  {
   "code": 598,
@@ -4808,7 +5405,8 @@ export const wards: readonly Ward[] = [
   "slug": "sigona",
   "constituencyCode": 120,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kikuyu"
  },
  {
   "code": 599,
@@ -4816,7 +5414,8 @@ export const wards: readonly Ward[] = [
   "slug": "kikuyu",
   "constituencyCode": 120,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kikuyu"
  },
  {
   "code": 600,
@@ -4824,7 +5423,8 @@ export const wards: readonly Ward[] = [
   "slug": "kinoo",
   "constituencyCode": 120,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kikuyu"
  },
  {
   "code": 601,
@@ -4832,7 +5432,8 @@ export const wards: readonly Ward[] = [
   "slug": "bibirioni",
   "constituencyCode": 121,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "limuru"
  },
  {
   "code": 602,
@@ -4840,7 +5441,8 @@ export const wards: readonly Ward[] = [
   "slug": "limuru-central",
   "constituencyCode": 121,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "limuru"
  },
  {
   "code": 603,
@@ -4848,7 +5450,8 @@ export const wards: readonly Ward[] = [
   "slug": "ndeiya",
   "constituencyCode": 121,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "limuru"
  },
  {
   "code": 604,
@@ -4856,7 +5459,8 @@ export const wards: readonly Ward[] = [
   "slug": "limuru-east",
   "constituencyCode": 121,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "limuru"
  },
  {
   "code": 605,
@@ -4864,7 +5468,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngecha-tigoni",
   "constituencyCode": 121,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "limuru"
  },
  {
   "code": 606,
@@ -4872,7 +5477,8 @@ export const wards: readonly Ward[] = [
   "slug": "kinale",
   "constituencyCode": 122,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lari"
  },
  {
   "code": 607,
@@ -4880,7 +5486,8 @@ export const wards: readonly Ward[] = [
   "slug": "kijabe",
   "constituencyCode": 122,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lari"
  },
  {
   "code": 608,
@@ -4888,7 +5495,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyanduma",
   "constituencyCode": 122,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lari"
  },
  {
   "code": 609,
@@ -4896,7 +5504,8 @@ export const wards: readonly Ward[] = [
   "slug": "kamburu",
   "constituencyCode": 122,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lari"
  },
  {
   "code": 610,
@@ -4904,7 +5513,8 @@ export const wards: readonly Ward[] = [
   "slug": "lari-kirenga",
   "constituencyCode": 122,
   "countyCode": 22,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lari"
  },
  {
   "code": 611,
@@ -4912,7 +5522,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaeris",
   "constituencyCode": 123,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-north"
  },
  {
   "code": 612,
@@ -4920,7 +5531,8 @@ export const wards: readonly Ward[] = [
   "slug": "lake-zone",
   "constituencyCode": 123,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-north"
  },
  {
   "code": 613,
@@ -4928,7 +5540,8 @@ export const wards: readonly Ward[] = [
   "slug": "lapur",
   "constituencyCode": 123,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-north"
  },
  {
   "code": 614,
@@ -4936,7 +5549,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaaleng-kaikor",
   "constituencyCode": 123,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibish"
  },
  {
   "code": 615,
@@ -4944,7 +5558,8 @@ export const wards: readonly Ward[] = [
   "slug": "kibish",
   "constituencyCode": 123,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibish"
  },
  {
   "code": 616,
@@ -4952,7 +5567,8 @@ export const wards: readonly Ward[] = [
   "slug": "nakalale",
   "constituencyCode": 123,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-west"
  },
  {
   "code": 617,
@@ -4960,7 +5576,8 @@ export const wards: readonly Ward[] = [
   "slug": "kakuma",
   "constituencyCode": 124,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-west"
  },
  {
   "code": 618,
@@ -4968,7 +5585,8 @@ export const wards: readonly Ward[] = [
   "slug": "lopur",
   "constituencyCode": 124,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-west"
  },
  {
   "code": 619,
@@ -4976,7 +5594,8 @@ export const wards: readonly Ward[] = [
   "slug": "letea",
   "constituencyCode": 124,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-west"
  },
  {
   "code": 620,
@@ -4984,7 +5603,8 @@ export const wards: readonly Ward[] = [
   "slug": "songot",
   "constituencyCode": 124,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-west"
  },
  {
   "code": 621,
@@ -4992,7 +5612,8 @@ export const wards: readonly Ward[] = [
   "slug": "kalobeyei",
   "constituencyCode": 124,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-west"
  },
  {
   "code": 622,
@@ -5000,7 +5621,8 @@ export const wards: readonly Ward[] = [
   "slug": "lokichoggio",
   "constituencyCode": 124,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-west"
  },
  {
   "code": 623,
@@ -5008,7 +5630,8 @@ export const wards: readonly Ward[] = [
   "slug": "nanaam",
   "constituencyCode": 124,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-west"
  },
  {
   "code": 624,
@@ -5016,7 +5639,8 @@ export const wards: readonly Ward[] = [
   "slug": "kerio-delta",
   "constituencyCode": 125,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-central"
  },
  {
   "code": 625,
@@ -5024,7 +5648,8 @@ export const wards: readonly Ward[] = [
   "slug": "kangatotha",
   "constituencyCode": 125,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-central"
  },
  {
   "code": 626,
@@ -5032,7 +5657,8 @@ export const wards: readonly Ward[] = [
   "slug": "kalokol",
   "constituencyCode": 125,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-central"
  },
  {
   "code": 627,
@@ -5040,7 +5666,8 @@ export const wards: readonly Ward[] = [
   "slug": "lodwar-township",
   "constituencyCode": 125,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-central"
  },
  {
   "code": 628,
@@ -5048,7 +5675,8 @@ export const wards: readonly Ward[] = [
   "slug": "kanamkemer",
   "constituencyCode": 125,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-central"
  },
  {
   "code": 629,
@@ -5056,7 +5684,8 @@ export const wards: readonly Ward[] = [
   "slug": "kotaruk-lobei",
   "constituencyCode": 126,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "loima"
  },
  {
   "code": 630,
@@ -5064,7 +5693,8 @@ export const wards: readonly Ward[] = [
   "slug": "turkwel",
   "constituencyCode": 126,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "loima"
  },
  {
   "code": 631,
@@ -5072,7 +5702,8 @@ export const wards: readonly Ward[] = [
   "slug": "loima",
   "constituencyCode": 126,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "loima"
  },
  {
   "code": 632,
@@ -5080,7 +5711,8 @@ export const wards: readonly Ward[] = [
   "slug": "lokiriama-lorengippi",
   "constituencyCode": 126,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "loima"
  },
  {
   "code": 633,
@@ -5088,7 +5720,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaputir",
   "constituencyCode": 127,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-south"
  },
  {
   "code": 634,
@@ -5096,7 +5729,8 @@ export const wards: readonly Ward[] = [
   "slug": "katilu",
   "constituencyCode": 127,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-south"
  },
  {
   "code": 635,
@@ -5104,7 +5738,8 @@ export const wards: readonly Ward[] = [
   "slug": "lobokat",
   "constituencyCode": 127,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-south"
  },
  {
   "code": 636,
@@ -5112,7 +5747,8 @@ export const wards: readonly Ward[] = [
   "slug": "kalapata",
   "constituencyCode": 127,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-south"
  },
  {
   "code": 637,
@@ -5120,7 +5756,8 @@ export const wards: readonly Ward[] = [
   "slug": "lokichar",
   "constituencyCode": 127,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-south"
  },
  {
   "code": 638,
@@ -5128,7 +5765,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapedo-napeitom",
   "constituencyCode": 128,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-east"
  },
  {
   "code": 639,
@@ -5136,7 +5774,8 @@ export const wards: readonly Ward[] = [
   "slug": "katilia",
   "constituencyCode": 128,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-east"
  },
  {
   "code": 640,
@@ -5144,7 +5783,8 @@ export const wards: readonly Ward[] = [
   "slug": "lokori-kochodin",
   "constituencyCode": 128,
   "countyCode": 23,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turkana-east"
  },
  {
   "code": 641,
@@ -5152,7 +5792,8 @@ export const wards: readonly Ward[] = [
   "slug": "riwo",
   "constituencyCode": 129,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "west-pokot"
  },
  {
   "code": 642,
@@ -5160,7 +5801,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapenguria",
   "constituencyCode": 129,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "west-pokot"
  },
  {
   "code": 643,
@@ -5168,7 +5810,8 @@ export const wards: readonly Ward[] = [
   "slug": "mnagei",
   "constituencyCode": 129,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "west-pokot"
  },
  {
   "code": 644,
@@ -5176,7 +5819,8 @@ export const wards: readonly Ward[] = [
   "slug": "siyoi",
   "constituencyCode": 129,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "west-pokot"
  },
  {
   "code": 645,
@@ -5184,7 +5828,8 @@ export const wards: readonly Ward[] = [
   "slug": "endugh",
   "constituencyCode": 129,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "west-pokot"
  },
  {
   "code": 646,
@@ -5192,7 +5837,8 @@ export const wards: readonly Ward[] = [
   "slug": "sook",
   "constituencyCode": 129,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "west-pokot"
  },
  {
   "code": 647,
@@ -5200,7 +5846,8 @@ export const wards: readonly Ward[] = [
   "slug": "sekerr",
   "constituencyCode": 130,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "pokot-central"
  },
  {
   "code": 648,
@@ -5208,7 +5855,8 @@ export const wards: readonly Ward[] = [
   "slug": "masool",
   "constituencyCode": 130,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "pokot-central"
  },
  {
   "code": 649,
@@ -5216,7 +5864,8 @@ export const wards: readonly Ward[] = [
   "slug": "lomut",
   "constituencyCode": 130,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "pokot-central"
  },
  {
   "code": 650,
@@ -5224,7 +5873,8 @@ export const wards: readonly Ward[] = [
   "slug": "weiwei",
   "constituencyCode": 130,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "pokot-central"
  },
  {
   "code": 651,
@@ -5232,7 +5882,8 @@ export const wards: readonly Ward[] = [
   "slug": "suam",
   "constituencyCode": 131,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "pokot-north"
  },
  {
   "code": 652,
@@ -5240,7 +5891,8 @@ export const wards: readonly Ward[] = [
   "slug": "kodich",
   "constituencyCode": 131,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "pokot-north"
  },
  {
   "code": 653,
@@ -5248,7 +5900,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapckok",
   "constituencyCode": 131,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "pokot-north"
  },
  {
   "code": 654,
@@ -5256,7 +5909,8 @@ export const wards: readonly Ward[] = [
   "slug": "kasei",
   "constituencyCode": 131,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "pokot-north"
  },
  {
   "code": 655,
@@ -5264,7 +5918,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiwawa",
   "constituencyCode": 131,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "pokot-north"
  },
  {
   "code": 656,
@@ -5272,7 +5927,8 @@ export const wards: readonly Ward[] = [
   "slug": "alale",
   "constituencyCode": 131,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "pokot-north"
  },
  {
   "code": 657,
@@ -5280,7 +5936,8 @@ export const wards: readonly Ward[] = [
   "slug": "chepareria",
   "constituencyCode": 132,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "pokot-south"
  },
  {
   "code": 658,
@@ -5288,7 +5945,8 @@ export const wards: readonly Ward[] = [
   "slug": "batei",
   "constituencyCode": 132,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "pokot-south"
  },
  {
   "code": 659,
@@ -5296,7 +5954,8 @@ export const wards: readonly Ward[] = [
   "slug": "lelan",
   "constituencyCode": 132,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "pokot-south"
  },
  {
   "code": 660,
@@ -5304,7 +5963,8 @@ export const wards: readonly Ward[] = [
   "slug": "tapach",
   "constituencyCode": 132,
   "countyCode": 24,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "pokot-south"
  },
  {
   "code": 661,
@@ -5312,7 +5972,8 @@ export const wards: readonly Ward[] = [
   "slug": "lodokejek",
   "constituencyCode": 133,
   "countyCode": 25,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samburu-central"
  },
  {
   "code": 662,
@@ -5320,7 +5981,8 @@ export const wards: readonly Ward[] = [
   "slug": "suguta-marmar",
   "constituencyCode": 133,
   "countyCode": 25,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samburu-central"
  },
  {
   "code": 663,
@@ -5328,7 +5990,8 @@ export const wards: readonly Ward[] = [
   "slug": "maralal",
   "constituencyCode": 133,
   "countyCode": 25,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samburu-central"
  },
  {
   "code": 664,
@@ -5336,7 +5999,8 @@ export const wards: readonly Ward[] = [
   "slug": "loosuk",
   "constituencyCode": 133,
   "countyCode": 25,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samburu-central"
  },
  {
   "code": 665,
@@ -5344,7 +6008,8 @@ export const wards: readonly Ward[] = [
   "slug": "poro",
   "constituencyCode": 133,
   "countyCode": 25,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samburu-central"
  },
  {
   "code": 666,
@@ -5352,7 +6017,8 @@ export const wards: readonly Ward[] = [
   "slug": "el-barta",
   "constituencyCode": 134,
   "countyCode": 25,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samburu-north"
  },
  {
   "code": 667,
@@ -5360,7 +6026,8 @@ export const wards: readonly Ward[] = [
   "slug": "nachola",
   "constituencyCode": 134,
   "countyCode": 25,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samburu-north"
  },
  {
   "code": 668,
@@ -5368,7 +6035,8 @@ export const wards: readonly Ward[] = [
   "slug": "ndoto",
   "constituencyCode": 134,
   "countyCode": 25,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samburu-north"
  },
  {
   "code": 669,
@@ -5376,7 +6044,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyiro",
   "constituencyCode": 134,
   "countyCode": 25,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samburu-north"
  },
  {
   "code": 670,
@@ -5384,7 +6053,8 @@ export const wards: readonly Ward[] = [
   "slug": "angata-nanyokie",
   "constituencyCode": 134,
   "countyCode": 25,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samburu-central"
  },
  {
   "code": 671,
@@ -5392,7 +6062,8 @@ export const wards: readonly Ward[] = [
   "slug": "baawa",
   "constituencyCode": 134,
   "countyCode": 25,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samburu-central"
  },
  {
   "code": 672,
@@ -5400,7 +6071,8 @@ export const wards: readonly Ward[] = [
   "slug": "waso",
   "constituencyCode": 135,
   "countyCode": 25,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samburu-east"
  },
  {
   "code": 673,
@@ -5408,7 +6080,8 @@ export const wards: readonly Ward[] = [
   "slug": "wamba-west",
   "constituencyCode": 135,
   "countyCode": 25,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samburu-east"
  },
  {
   "code": 674,
@@ -5416,7 +6089,8 @@ export const wards: readonly Ward[] = [
   "slug": "wamba-east",
   "constituencyCode": 135,
   "countyCode": 25,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samburu-east"
  },
  {
   "code": 675,
@@ -5424,7 +6098,8 @@ export const wards: readonly Ward[] = [
   "slug": "wamba-north",
   "constituencyCode": 135,
   "countyCode": 25,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samburu-east"
  },
  {
   "code": 676,
@@ -5432,7 +6107,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapomboi",
   "constituencyCode": 136,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kwanza"
  },
  {
   "code": 677,
@@ -5440,7 +6116,8 @@ export const wards: readonly Ward[] = [
   "slug": "kwanza",
   "constituencyCode": 136,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kwanza"
  },
  {
   "code": 678,
@@ -5448,7 +6125,8 @@ export const wards: readonly Ward[] = [
   "slug": "keiyo",
   "constituencyCode": 136,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kwanza"
  },
  {
   "code": 679,
@@ -5456,7 +6134,8 @@ export const wards: readonly Ward[] = [
   "slug": "bidii",
   "constituencyCode": 136,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kwanza"
  },
  {
   "code": 680,
@@ -5464,7 +6143,8 @@ export const wards: readonly Ward[] = [
   "slug": "chepchoina",
   "constituencyCode": 137,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "endebess"
  },
  {
   "code": 681,
@@ -5472,7 +6152,8 @@ export const wards: readonly Ward[] = [
   "slug": "endebess",
   "constituencyCode": 137,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "endebess"
  },
  {
   "code": 682,
@@ -5480,7 +6161,8 @@ export const wards: readonly Ward[] = [
   "slug": "matumbei",
   "constituencyCode": 137,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "endebess"
  },
  {
   "code": 683,
@@ -5488,7 +6170,8 @@ export const wards: readonly Ward[] = [
   "slug": "kinyoro",
   "constituencyCode": 138,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "saboti"
  },
  {
   "code": 684,
@@ -5496,7 +6179,8 @@ export const wards: readonly Ward[] = [
   "slug": "matisi",
   "constituencyCode": 138,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "saboti"
  },
  {
   "code": 685,
@@ -5504,7 +6188,8 @@ export const wards: readonly Ward[] = [
   "slug": "tuwani",
   "constituencyCode": 138,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "saboti"
  },
  {
   "code": 686,
@@ -5512,7 +6197,8 @@ export const wards: readonly Ward[] = [
   "slug": "saboti",
   "constituencyCode": 138,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "saboti"
  },
  {
   "code": 687,
@@ -5520,7 +6206,8 @@ export const wards: readonly Ward[] = [
   "slug": "machewa",
   "constituencyCode": 138,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "saboti"
  },
  {
   "code": 688,
@@ -5528,7 +6215,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiminini",
   "constituencyCode": 139,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiminini"
  },
  {
   "code": 689,
@@ -5536,7 +6224,8 @@ export const wards: readonly Ward[] = [
   "slug": "waitaluk",
   "constituencyCode": 139,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiminini"
  },
  {
   "code": 690,
@@ -5544,7 +6233,8 @@ export const wards: readonly Ward[] = [
   "slug": "sirende",
   "constituencyCode": 139,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiminini"
  },
  {
   "code": 691,
@@ -5552,7 +6242,8 @@ export const wards: readonly Ward[] = [
   "slug": "hospital",
   "constituencyCode": 139,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiminini"
  },
  {
   "code": 692,
@@ -5560,7 +6251,8 @@ export const wards: readonly Ward[] = [
   "slug": "sikhendu",
   "constituencyCode": 139,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiminini"
  },
  {
   "code": 693,
@@ -5568,7 +6260,8 @@ export const wards: readonly Ward[] = [
   "slug": "nabiswa",
   "constituencyCode": 139,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kiminini"
  },
  {
   "code": 694,
@@ -5576,7 +6269,8 @@ export const wards: readonly Ward[] = [
   "slug": "sinyerere",
   "constituencyCode": 140,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "cherangany"
  },
  {
   "code": 695,
@@ -5584,7 +6278,8 @@ export const wards: readonly Ward[] = [
   "slug": "makutano",
   "constituencyCode": 140,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "cherangany"
  },
  {
   "code": 696,
@@ -5592,7 +6287,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaplamai",
   "constituencyCode": 140,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "cherangany"
  },
  {
   "code": 697,
@@ -5600,7 +6296,8 @@ export const wards: readonly Ward[] = [
   "slug": "motosiet",
   "constituencyCode": 140,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "cherangany"
  },
  {
   "code": 698,
@@ -5608,7 +6305,8 @@ export const wards: readonly Ward[] = [
   "slug": "cherangany-suwerwa",
   "constituencyCode": 140,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "cherangany"
  },
  {
   "code": 699,
@@ -5616,7 +6314,8 @@ export const wards: readonly Ward[] = [
   "slug": "chepsiro-kiptoror",
   "constituencyCode": 140,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "cherangany"
  },
  {
   "code": 700,
@@ -5624,7 +6323,8 @@ export const wards: readonly Ward[] = [
   "slug": "sitatunga",
   "constituencyCode": 140,
   "countyCode": 26,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "cherangany"
  },
  {
   "code": 701,
@@ -5632,7 +6332,8 @@ export const wards: readonly Ward[] = [
   "slug": "mois-bridge",
   "constituencyCode": 141,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "soy"
  },
  {
   "code": 702,
@@ -5640,7 +6341,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapkures",
   "constituencyCode": 141,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "soy"
  },
  {
   "code": 703,
@@ -5648,7 +6350,8 @@ export const wards: readonly Ward[] = [
   "slug": "ziwa",
   "constituencyCode": 141,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "soy"
  },
  {
   "code": 704,
@@ -5656,7 +6359,8 @@ export const wards: readonly Ward[] = [
   "slug": "segero-barsombe",
   "constituencyCode": 141,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "soy"
  },
  {
   "code": 705,
@@ -5664,7 +6368,8 @@ export const wards: readonly Ward[] = [
   "slug": "kipsomba",
   "constituencyCode": 141,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "soy"
  },
  {
   "code": 706,
@@ -5672,7 +6377,8 @@ export const wards: readonly Ward[] = [
   "slug": "soy",
   "constituencyCode": 141,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "soy"
  },
  {
   "code": 707,
@@ -5680,7 +6386,8 @@ export const wards: readonly Ward[] = [
   "slug": "kuinet-kapsuswa",
   "constituencyCode": 141,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "soy"
  },
  {
   "code": 708,
@@ -5688,7 +6395,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngenyilel",
   "constituencyCode": 142,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turbo"
  },
  {
   "code": 709,
@@ -5696,7 +6404,8 @@ export const wards: readonly Ward[] = [
   "slug": "tapsagoi",
   "constituencyCode": 142,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turbo"
  },
  {
   "code": 710,
@@ -5704,7 +6413,8 @@ export const wards: readonly Ward[] = [
   "slug": "kamagut",
   "constituencyCode": 142,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turbo"
  },
  {
   "code": 711,
@@ -5712,7 +6422,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiplombe",
   "constituencyCode": 142,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turbo"
  },
  {
   "code": 712,
@@ -5720,7 +6431,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapsaos",
   "constituencyCode": 142,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turbo"
  },
  {
   "code": 713,
@@ -5728,7 +6440,8 @@ export const wards: readonly Ward[] = [
   "slug": "huruma",
   "constituencyCode": 142,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "turbo"
  },
  {
   "code": 714,
@@ -5736,7 +6449,8 @@ export const wards: readonly Ward[] = [
   "slug": "tembelio",
   "constituencyCode": 143,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "moiben"
  },
  {
   "code": 715,
@@ -5744,7 +6458,8 @@ export const wards: readonly Ward[] = [
   "slug": "sergoit",
   "constituencyCode": 143,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "moiben"
  },
  {
   "code": 716,
@@ -5752,7 +6467,8 @@ export const wards: readonly Ward[] = [
   "slug": "karuna-meibeki",
   "constituencyCode": 143,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "moiben"
  },
  {
   "code": 717,
@@ -5760,7 +6476,8 @@ export const wards: readonly Ward[] = [
   "slug": "moiben",
   "constituencyCode": 143,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "moiben"
  },
  {
   "code": 718,
@@ -5768,7 +6485,8 @@ export const wards: readonly Ward[] = [
   "slug": "kimumu",
   "constituencyCode": 143,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "moiben"
  },
  {
   "code": 719,
@@ -5776,7 +6494,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapsoya",
   "constituencyCode": 144,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ainabkoi"
  },
  {
   "code": 720,
@@ -5784,7 +6503,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaptagat",
   "constituencyCode": 144,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ainabkoi"
  },
  {
   "code": 721,
@@ -5792,7 +6512,8 @@ export const wards: readonly Ward[] = [
   "slug": "ainabkoi-olare",
   "constituencyCode": 144,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ainabkoi"
  },
  {
   "code": 722,
@@ -5800,7 +6521,8 @@ export const wards: readonly Ward[] = [
   "slug": "simat-kapseret",
   "constituencyCode": 145,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kapseret"
  },
  {
   "code": 723,
@@ -5808,7 +6530,8 @@ export const wards: readonly Ward[] = [
   "slug": "kipkenyo",
   "constituencyCode": 145,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kapseret"
  },
  {
   "code": 724,
@@ -5816,7 +6539,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngeria",
   "constituencyCode": 145,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kapseret"
  },
  {
   "code": 725,
@@ -5824,7 +6548,8 @@ export const wards: readonly Ward[] = [
   "slug": "megun",
   "constituencyCode": 145,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kapseret"
  },
  {
   "code": 726,
@@ -5832,7 +6557,8 @@ export const wards: readonly Ward[] = [
   "slug": "langas",
   "constituencyCode": 145,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kapseret"
  },
  {
   "code": 727,
@@ -5840,7 +6566,8 @@ export const wards: readonly Ward[] = [
   "slug": "racecourse",
   "constituencyCode": 146,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kesses"
  },
  {
   "code": 728,
@@ -5848,7 +6575,8 @@ export const wards: readonly Ward[] = [
   "slug": "cheptiret-kipchamo",
   "constituencyCode": 146,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kesses"
  },
  {
   "code": 729,
@@ -5856,7 +6584,8 @@ export const wards: readonly Ward[] = [
   "slug": "tulwet-chuiyat",
   "constituencyCode": 146,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kesses"
  },
  {
   "code": 730,
@@ -5864,7 +6593,8 @@ export const wards: readonly Ward[] = [
   "slug": "tarakwa",
   "constituencyCode": 146,
   "countyCode": 27,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kesses"
  },
  {
   "code": 731,
@@ -5872,7 +6602,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapyego",
   "constituencyCode": 147,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "marakwet-east"
  },
  {
   "code": 732,
@@ -5880,7 +6611,8 @@ export const wards: readonly Ward[] = [
   "slug": "sambirir",
   "constituencyCode": 147,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "marakwet-east"
  },
  {
   "code": 733,
@@ -5888,7 +6620,8 @@ export const wards: readonly Ward[] = [
   "slug": "endo",
   "constituencyCode": 147,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "marakwet-east"
  },
  {
   "code": 734,
@@ -5896,7 +6629,8 @@ export const wards: readonly Ward[] = [
   "slug": "embobut-embulot",
   "constituencyCode": 147,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "marakwet-east"
  },
  {
   "code": 735,
@@ -5904,7 +6638,8 @@ export const wards: readonly Ward[] = [
   "slug": "lelan",
   "constituencyCode": 148,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "marakwet-west"
  },
  {
   "code": 736,
@@ -5912,7 +6647,8 @@ export const wards: readonly Ward[] = [
   "slug": "sengwer",
   "constituencyCode": 148,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "marakwet-west"
  },
  {
   "code": 737,
@@ -5920,7 +6656,8 @@ export const wards: readonly Ward[] = [
   "slug": "cherangany-chebororwa",
   "constituencyCode": 148,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "marakwet-west"
  },
  {
   "code": 738,
@@ -5928,7 +6665,8 @@ export const wards: readonly Ward[] = [
   "slug": "moiben-kuserwo",
   "constituencyCode": 148,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "marakwet-west"
  },
  {
   "code": 739,
@@ -5936,7 +6674,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapsowar",
   "constituencyCode": 148,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "marakwet-west"
  },
  {
   "code": 740,
@@ -5944,7 +6683,8 @@ export const wards: readonly Ward[] = [
   "slug": "arror",
   "constituencyCode": 148,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "marakwet-west"
  },
  {
   "code": 741,
@@ -5952,7 +6692,8 @@ export const wards: readonly Ward[] = [
   "slug": "emsoo",
   "constituencyCode": 149,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "keiyo-north"
  },
  {
   "code": 742,
@@ -5960,7 +6701,8 @@ export const wards: readonly Ward[] = [
   "slug": "kamariny",
   "constituencyCode": 149,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "keiyo-north"
  },
  {
   "code": 743,
@@ -5968,7 +6710,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapchemutwa",
   "constituencyCode": 149,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "keiyo-north"
  },
  {
   "code": 744,
@@ -5976,7 +6719,8 @@ export const wards: readonly Ward[] = [
   "slug": "tambach",
   "constituencyCode": 149,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "keiyo-north"
  },
  {
   "code": 745,
@@ -5984,7 +6728,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaptarakwa",
   "constituencyCode": 150,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "keiyo-south"
  },
  {
   "code": 746,
@@ -5992,7 +6737,8 @@ export const wards: readonly Ward[] = [
   "slug": "chepkorio",
   "constituencyCode": 150,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "keiyo-south"
  },
  {
   "code": 747,
@@ -6000,7 +6746,8 @@ export const wards: readonly Ward[] = [
   "slug": "soy-north",
   "constituencyCode": 150,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "keiyo-south"
  },
  {
   "code": 748,
@@ -6008,7 +6755,8 @@ export const wards: readonly Ward[] = [
   "slug": "soy-south",
   "constituencyCode": 150,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "keiyo-south"
  },
  {
   "code": 749,
@@ -6016,7 +6764,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabiemit",
   "constituencyCode": 150,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "keiyo-south"
  },
  {
   "code": 750,
@@ -6024,7 +6773,8 @@ export const wards: readonly Ward[] = [
   "slug": "metkei",
   "constituencyCode": 150,
   "countyCode": 28,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "keiyo-south"
  },
  {
   "code": 751,
@@ -6032,7 +6782,8 @@ export const wards: readonly Ward[] = [
   "slug": "songhor-soba",
   "constituencyCode": 151,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tinderet"
  },
  {
   "code": 752,
@@ -6040,7 +6791,8 @@ export const wards: readonly Ward[] = [
   "slug": "tindiret",
   "constituencyCode": 151,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tinderet"
  },
  {
   "code": 753,
@@ -6048,7 +6800,8 @@ export const wards: readonly Ward[] = [
   "slug": "chemelil-chemase",
   "constituencyCode": 151,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tinderet"
  },
  {
   "code": 754,
@@ -6056,7 +6809,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapsimotwo",
   "constituencyCode": 151,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nandi-east"
  },
  {
   "code": 755,
@@ -6064,7 +6818,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabwareng",
   "constituencyCode": 152,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "aldai"
  },
  {
   "code": 756,
@@ -6072,7 +6827,8 @@ export const wards: readonly Ward[] = [
   "slug": "terik",
   "constituencyCode": 152,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "aldai"
  },
  {
   "code": 757,
@@ -6080,7 +6836,8 @@ export const wards: readonly Ward[] = [
   "slug": "kemeloi-maraba",
   "constituencyCode": 152,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "aldai"
  },
  {
   "code": 758,
@@ -6088,7 +6845,8 @@ export const wards: readonly Ward[] = [
   "slug": "kobujoi",
   "constituencyCode": 152,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "aldai"
  },
  {
   "code": 759,
@@ -6096,7 +6854,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaptumo-kaboi",
   "constituencyCode": 152,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "aldai"
  },
  {
   "code": 760,
@@ -6104,7 +6863,8 @@ export const wards: readonly Ward[] = [
   "slug": "koyo-ndurio",
   "constituencyCode": 152,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "aldai"
  },
  {
   "code": 761,
@@ -6112,7 +6872,8 @@ export const wards: readonly Ward[] = [
   "slug": "nandi-hills",
   "constituencyCode": 153,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nandi-east"
  },
  {
   "code": 762,
@@ -6120,7 +6881,8 @@ export const wards: readonly Ward[] = [
   "slug": "chepkunyuk",
   "constituencyCode": 153,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nandi-east"
  },
  {
   "code": 763,
@@ -6128,7 +6890,8 @@ export const wards: readonly Ward[] = [
   "slug": "ollessos",
   "constituencyCode": 153,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nandi-east"
  },
  {
   "code": 764,
@@ -6136,7 +6899,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapchorua",
   "constituencyCode": 153,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nandi-east"
  },
  {
   "code": 765,
@@ -6144,7 +6908,8 @@ export const wards: readonly Ward[] = [
   "slug": "chemundu-kapngetuny",
   "constituencyCode": 154,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "chesumei"
  },
  {
   "code": 766,
@@ -6152,7 +6917,8 @@ export const wards: readonly Ward[] = [
   "slug": "kosirai",
   "constituencyCode": 154,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "chesumei"
  },
  {
   "code": 767,
@@ -6160,7 +6926,8 @@ export const wards: readonly Ward[] = [
   "slug": "lelmokwo-ngechek",
   "constituencyCode": 154,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "chesumei"
  },
  {
   "code": 768,
@@ -6168,7 +6935,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaptel-kamoiywo",
   "constituencyCode": 154,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "chesumei"
  },
  {
   "code": 769,
@@ -6176,7 +6944,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiptuya",
   "constituencyCode": 154,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "chesumei"
  },
  {
   "code": 770,
@@ -6184,7 +6953,8 @@ export const wards: readonly Ward[] = [
   "slug": "chepkumia",
   "constituencyCode": 155,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "emgwen"
  },
  {
   "code": 771,
@@ -6192,7 +6962,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapkangani",
   "constituencyCode": 155,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "emgwen"
  },
  {
   "code": 772,
@@ -6200,7 +6971,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapsabet",
   "constituencyCode": 155,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "emgwen"
  },
  {
   "code": 773,
@@ -6208,7 +6980,8 @@ export const wards: readonly Ward[] = [
   "slug": "kilibwoni",
   "constituencyCode": 155,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "emgwen"
  },
  {
   "code": 774,
@@ -6216,7 +6989,8 @@ export const wards: readonly Ward[] = [
   "slug": "chepterwai",
   "constituencyCode": 156,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mosop"
  },
  {
   "code": 775,
@@ -6224,7 +6998,8 @@ export const wards: readonly Ward[] = [
   "slug": "kipkaren",
   "constituencyCode": 156,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mosop"
  },
  {
   "code": 776,
@@ -6232,7 +7007,8 @@ export const wards: readonly Ward[] = [
   "slug": "kurgung-surungai",
   "constituencyCode": 156,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mosop"
  },
  {
   "code": 777,
@@ -6240,7 +7016,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabiyet",
   "constituencyCode": 156,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mosop"
  },
  {
   "code": 778,
@@ -6248,7 +7025,8 @@ export const wards: readonly Ward[] = [
   "slug": "ndalat",
   "constituencyCode": 156,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mosop"
  },
  {
   "code": 779,
@@ -6256,7 +7034,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabisaga",
   "constituencyCode": 156,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mosop"
  },
  {
   "code": 780,
@@ -6264,7 +7043,8 @@ export const wards: readonly Ward[] = [
   "slug": "sangalo-kebulonik",
   "constituencyCode": 156,
   "countyCode": 29,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mosop"
  },
  {
   "code": 781,
@@ -6272,7 +7052,8 @@ export const wards: readonly Ward[] = [
   "slug": "tirioko",
   "constituencyCode": 157,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tiaty"
  },
  {
   "code": 782,
@@ -6280,7 +7061,8 @@ export const wards: readonly Ward[] = [
   "slug": "kolowa",
   "constituencyCode": 157,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tiaty"
  },
  {
   "code": 783,
@@ -6288,7 +7070,8 @@ export const wards: readonly Ward[] = [
   "slug": "ribkwo",
   "constituencyCode": 157,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tiaty"
  },
  {
   "code": 784,
@@ -6296,7 +7079,8 @@ export const wards: readonly Ward[] = [
   "slug": "silale",
   "constituencyCode": 157,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tiaty"
  },
  {
   "code": 785,
@@ -6304,7 +7088,8 @@ export const wards: readonly Ward[] = [
   "slug": "loiyamorock",
   "constituencyCode": 157,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tiaty"
  },
  {
   "code": 786,
@@ -6312,7 +7097,8 @@ export const wards: readonly Ward[] = [
   "slug": "tangulbei-korossi",
   "constituencyCode": 157,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tiaty"
  },
  {
   "code": 787,
@@ -6320,7 +7106,8 @@ export const wards: readonly Ward[] = [
   "slug": "churo-amaya",
   "constituencyCode": 157,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tiaty"
  },
  {
   "code": 788,
@@ -6328,7 +7115,8 @@ export const wards: readonly Ward[] = [
   "slug": "barwessa",
   "constituencyCode": 158,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "baringo-north"
  },
  {
   "code": 789,
@@ -6336,7 +7124,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabartonjo",
   "constituencyCode": 158,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "baringo-north"
  },
  {
   "code": 790,
@@ -6344,7 +7133,8 @@ export const wards: readonly Ward[] = [
   "slug": "saimo-kipsaraman",
   "constituencyCode": 158,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "baringo-north"
  },
  {
   "code": 791,
@@ -6352,7 +7142,8 @@ export const wards: readonly Ward[] = [
   "slug": "saimo-soi",
   "constituencyCode": 158,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "baringo-north"
  },
  {
   "code": 792,
@@ -6360,7 +7151,8 @@ export const wards: readonly Ward[] = [
   "slug": "bartabwa",
   "constituencyCode": 158,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "baringo-north"
  },
  {
   "code": 793,
@@ -6368,7 +7160,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabarnet",
   "constituencyCode": 159,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "baringo-central"
  },
  {
   "code": 794,
@@ -6376,7 +7169,8 @@ export const wards: readonly Ward[] = [
   "slug": "sacho",
   "constituencyCode": 159,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "baringo-central"
  },
  {
   "code": 795,
@@ -6384,7 +7178,8 @@ export const wards: readonly Ward[] = [
   "slug": "tenges",
   "constituencyCode": 159,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "baringo-central"
  },
  {
   "code": 796,
@@ -6392,7 +7187,8 @@ export const wards: readonly Ward[] = [
   "slug": "ewalel-chapchap",
   "constituencyCode": 159,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "baringo-central"
  },
  {
   "code": 797,
@@ -6400,7 +7196,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapropita",
   "constituencyCode": 159,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "baringo-central"
  },
  {
   "code": 798,
@@ -6408,7 +7205,8 @@ export const wards: readonly Ward[] = [
   "slug": "marigat",
   "constituencyCode": 160,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "marigat"
  },
  {
   "code": 799,
@@ -6416,7 +7214,8 @@ export const wards: readonly Ward[] = [
   "slug": "ilchamus",
   "constituencyCode": 160,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "marigat"
  },
  {
   "code": 800,
@@ -6424,7 +7223,8 @@ export const wards: readonly Ward[] = [
   "slug": "mochongoi",
   "constituencyCode": 160,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "marigat"
  },
  {
   "code": 801,
@@ -6432,7 +7232,8 @@ export const wards: readonly Ward[] = [
   "slug": "mukutani",
   "constituencyCode": 160,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "marigat"
  },
  {
   "code": 802,
@@ -6440,7 +7241,8 @@ export const wards: readonly Ward[] = [
   "slug": "mogotio",
   "constituencyCode": 161,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mogotio"
  },
  {
   "code": 803,
@@ -6448,7 +7250,8 @@ export const wards: readonly Ward[] = [
   "slug": "emining",
   "constituencyCode": 161,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mogotio"
  },
  {
   "code": 804,
@@ -6456,7 +7259,8 @@ export const wards: readonly Ward[] = [
   "slug": "kisanana",
   "constituencyCode": 161,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mogotio"
  },
  {
   "code": 805,
@@ -6464,7 +7268,8 @@ export const wards: readonly Ward[] = [
   "slug": "lembus",
   "constituencyCode": 162,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "koibatek"
  },
  {
   "code": 806,
@@ -6472,7 +7277,8 @@ export const wards: readonly Ward[] = [
   "slug": "lembus-kwen",
   "constituencyCode": 162,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "koibatek"
  },
  {
   "code": 807,
@@ -6480,7 +7286,8 @@ export const wards: readonly Ward[] = [
   "slug": "ravine",
   "constituencyCode": 162,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "koibatek"
  },
  {
   "code": 808,
@@ -6488,7 +7295,8 @@ export const wards: readonly Ward[] = [
   "slug": "mumberes-maji-mazuri",
   "constituencyCode": 162,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "koibatek"
  },
  {
   "code": 809,
@@ -6496,7 +7304,8 @@ export const wards: readonly Ward[] = [
   "slug": "lembus-perkerra",
   "constituencyCode": 162,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "koibatek"
  },
  {
   "code": 810,
@@ -6504,7 +7313,8 @@ export const wards: readonly Ward[] = [
   "slug": "koibatek",
   "constituencyCode": 162,
   "countyCode": 30,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "koibatek"
  },
  {
   "code": 811,
@@ -6512,7 +7322,8 @@ export const wards: readonly Ward[] = [
   "slug": "olmoran",
   "constituencyCode": 163,
   "countyCode": 31,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laikipia-west"
  },
  {
   "code": 812,
@@ -6520,7 +7331,8 @@ export const wards: readonly Ward[] = [
   "slug": "rumuruti-township",
   "constituencyCode": 163,
   "countyCode": 31,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laikipia-west"
  },
  {
   "code": 813,
@@ -6528,7 +7340,8 @@ export const wards: readonly Ward[] = [
   "slug": "kinamba",
   "constituencyCode": 163,
   "countyCode": 31,
-  "aliases": []
+  "aliases": [],
+  "subCounty": null
  },
  {
   "code": 814,
@@ -6536,7 +7349,8 @@ export const wards: readonly Ward[] = [
   "slug": "marmanet",
   "constituencyCode": 163,
   "countyCode": 31,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laikipia-west"
  },
  {
   "code": 815,
@@ -6544,7 +7358,8 @@ export const wards: readonly Ward[] = [
   "slug": "igwamiti",
   "constituencyCode": 163,
   "countyCode": 31,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laikipia-west"
  },
  {
   "code": 816,
@@ -6552,7 +7367,8 @@ export const wards: readonly Ward[] = [
   "slug": "salama",
   "constituencyCode": 163,
   "countyCode": 31,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laikipia-west"
  },
  {
   "code": 817,
@@ -6560,7 +7376,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngobit",
   "constituencyCode": 164,
   "countyCode": 31,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laikipia-east"
  },
  {
   "code": 818,
@@ -6568,7 +7385,8 @@ export const wards: readonly Ward[] = [
   "slug": "tigithi",
   "constituencyCode": 164,
   "countyCode": 31,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laikipia-east"
  },
  {
   "code": 819,
@@ -6576,7 +7394,8 @@ export const wards: readonly Ward[] = [
   "slug": "thingithu",
   "constituencyCode": 164,
   "countyCode": 31,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laikipia-east"
  },
  {
   "code": 820,
@@ -6584,7 +7403,8 @@ export const wards: readonly Ward[] = [
   "slug": "nanyuki",
   "constituencyCode": 164,
   "countyCode": 31,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laikipia-east"
  },
  {
   "code": 821,
@@ -6592,7 +7412,8 @@ export const wards: readonly Ward[] = [
   "slug": "umande",
   "constituencyCode": 164,
   "countyCode": 31,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laikipia-east"
  },
  {
   "code": 822,
@@ -6600,7 +7421,8 @@ export const wards: readonly Ward[] = [
   "slug": "sosian",
   "constituencyCode": 165,
   "countyCode": 31,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laikipia-north"
  },
  {
   "code": 823,
@@ -6608,7 +7430,8 @@ export const wards: readonly Ward[] = [
   "slug": "segera",
   "constituencyCode": 165,
   "countyCode": 31,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "laikipia-north"
  },
  {
   "code": 824,
@@ -6618,7 +7441,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 31,
   "aliases": [
    "Mugogodo West"
-  ]
+  ],
+  "subCounty": "laikipia-north"
  },
  {
   "code": 825,
@@ -6628,7 +7452,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 31,
   "aliases": [
    "Mugogodo East"
-  ]
+  ],
+  "subCounty": "laikipia-north"
  },
  {
   "code": 826,
@@ -6636,7 +7461,8 @@ export const wards: readonly Ward[] = [
   "slug": "mariashoni",
   "constituencyCode": 166,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "molo"
  },
  {
   "code": 827,
@@ -6644,7 +7470,8 @@ export const wards: readonly Ward[] = [
   "slug": "elburgon",
   "constituencyCode": 166,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "molo"
  },
  {
   "code": 828,
@@ -6652,7 +7479,8 @@ export const wards: readonly Ward[] = [
   "slug": "turi",
   "constituencyCode": 166,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "molo"
  },
  {
   "code": 829,
@@ -6660,7 +7488,8 @@ export const wards: readonly Ward[] = [
   "slug": "molo",
   "constituencyCode": 166,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "molo"
  },
  {
   "code": 830,
@@ -6668,7 +7497,8 @@ export const wards: readonly Ward[] = [
   "slug": "maunarok",
   "constituencyCode": 167,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "njoro"
  },
  {
   "code": 831,
@@ -6676,7 +7506,8 @@ export const wards: readonly Ward[] = [
   "slug": "mauche",
   "constituencyCode": 167,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "njoro"
  },
  {
   "code": 832,
@@ -6684,7 +7515,8 @@ export const wards: readonly Ward[] = [
   "slug": "kihingo",
   "constituencyCode": 167,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "njoro"
  },
  {
   "code": 833,
@@ -6692,7 +7524,8 @@ export const wards: readonly Ward[] = [
   "slug": "nessuit",
   "constituencyCode": 167,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "njoro"
  },
  {
   "code": 834,
@@ -6700,7 +7533,8 @@ export const wards: readonly Ward[] = [
   "slug": "lare",
   "constituencyCode": 167,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "njoro"
  },
  {
   "code": 835,
@@ -6708,7 +7542,8 @@ export const wards: readonly Ward[] = [
   "slug": "njoro",
   "constituencyCode": 167,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "njoro"
  },
  {
   "code": 836,
@@ -6716,7 +7551,8 @@ export const wards: readonly Ward[] = [
   "slug": "biashara",
   "constituencyCode": 168,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "naivasha"
  },
  {
   "code": 837,
@@ -6724,7 +7560,8 @@ export const wards: readonly Ward[] = [
   "slug": "hells-gate",
   "constituencyCode": 168,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "naivasha"
  },
  {
   "code": 838,
@@ -6732,7 +7569,8 @@ export const wards: readonly Ward[] = [
   "slug": "lakeview",
   "constituencyCode": 168,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "naivasha"
  },
  {
   "code": 839,
@@ -6742,7 +7580,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 32,
   "aliases": [
    "Mai Mahiu"
-  ]
+  ],
+  "subCounty": "naivasha"
  },
  {
   "code": 840,
@@ -6750,7 +7589,8 @@ export const wards: readonly Ward[] = [
   "slug": "maiella",
   "constituencyCode": 168,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": null
  },
  {
   "code": 841,
@@ -6758,7 +7598,8 @@ export const wards: readonly Ward[] = [
   "slug": "olkaria",
   "constituencyCode": 168,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "naivasha"
  },
  {
   "code": 842,
@@ -6766,7 +7607,8 @@ export const wards: readonly Ward[] = [
   "slug": "naivasha-east",
   "constituencyCode": 168,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "naivasha"
  },
  {
   "code": 843,
@@ -6774,7 +7616,8 @@ export const wards: readonly Ward[] = [
   "slug": "viwandani",
   "constituencyCode": 168,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "naivasha"
  },
  {
   "code": 844,
@@ -6782,7 +7625,8 @@ export const wards: readonly Ward[] = [
   "slug": "gilgil",
   "constituencyCode": 169,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gilgil"
  },
  {
   "code": 845,
@@ -6790,7 +7634,8 @@ export const wards: readonly Ward[] = [
   "slug": "elementaita",
   "constituencyCode": 169,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gilgil"
  },
  {
   "code": 846,
@@ -6798,7 +7643,8 @@ export const wards: readonly Ward[] = [
   "slug": "mbaruk-eburu",
   "constituencyCode": 169,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gilgil"
  },
  {
   "code": 847,
@@ -6806,7 +7652,8 @@ export const wards: readonly Ward[] = [
   "slug": "malewa-west",
   "constituencyCode": 169,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gilgil"
  },
  {
   "code": 848,
@@ -6814,7 +7661,8 @@ export const wards: readonly Ward[] = [
   "slug": "murindati",
   "constituencyCode": 169,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gilgil"
  },
  {
   "code": 849,
@@ -6822,7 +7670,8 @@ export const wards: readonly Ward[] = [
   "slug": "amalo",
   "constituencyCode": 170,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuresoi-south"
  },
  {
   "code": 850,
@@ -6830,7 +7679,8 @@ export const wards: readonly Ward[] = [
   "slug": "keringet",
   "constituencyCode": 170,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuresoi-south"
  },
  {
   "code": 851,
@@ -6838,7 +7688,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiptagich",
   "constituencyCode": 170,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuresoi-south"
  },
  {
   "code": 852,
@@ -6846,7 +7697,8 @@ export const wards: readonly Ward[] = [
   "slug": "tinet",
   "constituencyCode": 170,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuresoi-south"
  },
  {
   "code": 853,
@@ -6854,7 +7706,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiptororo",
   "constituencyCode": 171,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuresoi-north"
  },
  {
   "code": 854,
@@ -6862,7 +7715,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyota",
   "constituencyCode": 171,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuresoi-north"
  },
  {
   "code": 855,
@@ -6870,7 +7724,8 @@ export const wards: readonly Ward[] = [
   "slug": "sirikwa",
   "constituencyCode": 171,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuresoi-north"
  },
  {
   "code": 856,
@@ -6878,7 +7733,8 @@ export const wards: readonly Ward[] = [
   "slug": "kamara",
   "constituencyCode": 171,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuresoi-north"
  },
  {
   "code": 857,
@@ -6886,7 +7742,8 @@ export const wards: readonly Ward[] = [
   "slug": "subukia",
   "constituencyCode": 172,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "subukia"
  },
  {
   "code": 858,
@@ -6894,7 +7751,8 @@ export const wards: readonly Ward[] = [
   "slug": "waseges",
   "constituencyCode": 172,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "subukia"
  },
  {
   "code": 859,
@@ -6902,7 +7760,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabazi",
   "constituencyCode": 172,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "subukia"
  },
  {
   "code": 860,
@@ -6910,7 +7769,8 @@ export const wards: readonly Ward[] = [
   "slug": "menengai-west",
   "constituencyCode": 173,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rongai"
  },
  {
   "code": 861,
@@ -6918,7 +7778,8 @@ export const wards: readonly Ward[] = [
   "slug": "soin",
   "constituencyCode": 173,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rongai"
  },
  {
   "code": 862,
@@ -6926,7 +7787,8 @@ export const wards: readonly Ward[] = [
   "slug": "visoi",
   "constituencyCode": 173,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rongai"
  },
  {
   "code": 863,
@@ -6934,7 +7796,8 @@ export const wards: readonly Ward[] = [
   "slug": "mosop",
   "constituencyCode": 173,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rongai"
  },
  {
   "code": 864,
@@ -6942,7 +7805,8 @@ export const wards: readonly Ward[] = [
   "slug": "solai",
   "constituencyCode": 173,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rongai"
  },
  {
   "code": 865,
@@ -6950,7 +7814,8 @@ export const wards: readonly Ward[] = [
   "slug": "dundori",
   "constituencyCode": 174,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nakuru-north"
  },
  {
   "code": 866,
@@ -6958,7 +7823,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabatini",
   "constituencyCode": 174,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nakuru-north"
  },
  {
   "code": 867,
@@ -6966,7 +7832,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiamaina",
   "constituencyCode": 174,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nakuru-north"
  },
  {
   "code": 868,
@@ -6974,7 +7841,8 @@ export const wards: readonly Ward[] = [
   "slug": "lanet-umoja",
   "constituencyCode": 174,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nakuru-north"
  },
  {
   "code": 869,
@@ -6982,7 +7850,8 @@ export const wards: readonly Ward[] = [
   "slug": "bahati",
   "constituencyCode": 174,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nakuru-north"
  },
  {
   "code": 870,
@@ -6990,7 +7859,8 @@ export const wards: readonly Ward[] = [
   "slug": "barut",
   "constituencyCode": 175,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nakuru-west"
  },
  {
   "code": 871,
@@ -6998,7 +7868,8 @@ export const wards: readonly Ward[] = [
   "slug": "london",
   "constituencyCode": 175,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nakuru-west"
  },
  {
   "code": 872,
@@ -7006,7 +7877,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaptembwo",
   "constituencyCode": 175,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nakuru-west"
  },
  {
   "code": 873,
@@ -7014,7 +7886,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapkures",
   "constituencyCode": 175,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nakuru-west"
  },
  {
   "code": 874,
@@ -7022,7 +7895,8 @@ export const wards: readonly Ward[] = [
   "slug": "rhoda",
   "constituencyCode": 175,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nakuru-west"
  },
  {
   "code": 875,
@@ -7030,7 +7904,8 @@ export const wards: readonly Ward[] = [
   "slug": "shaabab",
   "constituencyCode": 175,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nakuru-west"
  },
  {
   "code": 876,
@@ -7038,7 +7913,8 @@ export const wards: readonly Ward[] = [
   "slug": "biashara",
   "constituencyCode": 176,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": null
  },
  {
   "code": 877,
@@ -7046,7 +7922,8 @@ export const wards: readonly Ward[] = [
   "slug": "kivumbini",
   "constituencyCode": 176,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nakuru-east"
  },
  {
   "code": 878,
@@ -7054,7 +7931,8 @@ export const wards: readonly Ward[] = [
   "slug": "flamingo",
   "constituencyCode": 176,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nakuru-east"
  },
  {
   "code": 879,
@@ -7062,7 +7940,8 @@ export const wards: readonly Ward[] = [
   "slug": "menengai",
   "constituencyCode": 176,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nakuru-east"
  },
  {
   "code": 880,
@@ -7070,7 +7949,8 @@ export const wards: readonly Ward[] = [
   "slug": "nakuru-east",
   "constituencyCode": 176,
   "countyCode": 32,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nakuru-east"
  },
  {
   "code": 881,
@@ -7078,7 +7958,8 @@ export const wards: readonly Ward[] = [
   "slug": "kilgoris-central",
   "constituencyCode": 177,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "transmara-west"
  },
  {
   "code": 882,
@@ -7086,7 +7967,8 @@ export const wards: readonly Ward[] = [
   "slug": "keyian",
   "constituencyCode": 177,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "transmara-west"
  },
  {
   "code": 883,
@@ -7094,7 +7976,8 @@ export const wards: readonly Ward[] = [
   "slug": "angata-barikoi",
   "constituencyCode": 177,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "transmara-west"
  },
  {
   "code": 884,
@@ -7102,7 +7985,8 @@ export const wards: readonly Ward[] = [
   "slug": "shankoe",
   "constituencyCode": 177,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "transmara-west"
  },
  {
   "code": 885,
@@ -7110,7 +7994,8 @@ export const wards: readonly Ward[] = [
   "slug": "kimintet",
   "constituencyCode": 177,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "transmara-west"
  },
  {
   "code": 886,
@@ -7118,7 +8003,8 @@ export const wards: readonly Ward[] = [
   "slug": "lolgorian",
   "constituencyCode": 177,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "transmara-west"
  },
  {
   "code": 887,
@@ -7126,7 +8012,8 @@ export const wards: readonly Ward[] = [
   "slug": "ilkerin",
   "constituencyCode": 178,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "transmara-east"
  },
  {
   "code": 888,
@@ -7134,7 +8021,8 @@ export const wards: readonly Ward[] = [
   "slug": "ololmasani",
   "constituencyCode": 178,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "transmara-east"
  },
  {
   "code": 889,
@@ -7142,7 +8030,8 @@ export const wards: readonly Ward[] = [
   "slug": "mogondo",
   "constituencyCode": 178,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "transmara-east"
  },
  {
   "code": 890,
@@ -7150,7 +8039,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapsasian",
   "constituencyCode": 178,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "transmara-east"
  },
  {
   "code": 891,
@@ -7158,7 +8048,8 @@ export const wards: readonly Ward[] = [
   "slug": "olpusimoru",
   "constituencyCode": 179,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-north"
  },
  {
   "code": 892,
@@ -7166,7 +8057,8 @@ export const wards: readonly Ward[] = [
   "slug": "olokurto",
   "constituencyCode": 179,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-north"
  },
  {
   "code": 893,
@@ -7174,7 +8066,8 @@ export const wards: readonly Ward[] = [
   "slug": "narok-town",
   "constituencyCode": 179,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-north"
  },
  {
   "code": 894,
@@ -7182,7 +8075,8 @@ export const wards: readonly Ward[] = [
   "slug": "nkareta",
   "constituencyCode": 179,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-north"
  },
  {
   "code": 895,
@@ -7190,7 +8084,8 @@ export const wards: readonly Ward[] = [
   "slug": "olorropil",
   "constituencyCode": 179,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-north"
  },
  {
   "code": 896,
@@ -7198,7 +8093,8 @@ export const wards: readonly Ward[] = [
   "slug": "melili",
   "constituencyCode": 179,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-north"
  },
  {
   "code": 897,
@@ -7206,7 +8102,8 @@ export const wards: readonly Ward[] = [
   "slug": "mosiro",
   "constituencyCode": 180,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-east"
  },
  {
   "code": 898,
@@ -7214,7 +8111,8 @@ export const wards: readonly Ward[] = [
   "slug": "ildamat",
   "constituencyCode": 180,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-east"
  },
  {
   "code": 899,
@@ -7222,7 +8120,8 @@ export const wards: readonly Ward[] = [
   "slug": "keekonyokie",
   "constituencyCode": 180,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-east"
  },
  {
   "code": 900,
@@ -7230,7 +8129,8 @@ export const wards: readonly Ward[] = [
   "slug": "suswa",
   "constituencyCode": 180,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-east"
  },
  {
   "code": 901,
@@ -7238,7 +8138,8 @@ export const wards: readonly Ward[] = [
   "slug": "majimoto-naroosura",
   "constituencyCode": 181,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-south"
  },
  {
   "code": 902,
@@ -7246,7 +8147,8 @@ export const wards: readonly Ward[] = [
   "slug": "ololulunga",
   "constituencyCode": 181,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-south"
  },
  {
   "code": 903,
@@ -7254,7 +8156,8 @@ export const wards: readonly Ward[] = [
   "slug": "melelo",
   "constituencyCode": 181,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-south"
  },
  {
   "code": 904,
@@ -7262,7 +8165,8 @@ export const wards: readonly Ward[] = [
   "slug": "loita",
   "constituencyCode": 181,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-south"
  },
  {
   "code": 905,
@@ -7270,7 +8174,8 @@ export const wards: readonly Ward[] = [
   "slug": "sogoo",
   "constituencyCode": 181,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-south"
  },
  {
   "code": 906,
@@ -7278,7 +8183,8 @@ export const wards: readonly Ward[] = [
   "slug": "sagamian",
   "constituencyCode": 181,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-south"
  },
  {
   "code": 907,
@@ -7286,7 +8192,8 @@ export const wards: readonly Ward[] = [
   "slug": "ilmotiok",
   "constituencyCode": 182,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-west"
  },
  {
   "code": 908,
@@ -7294,7 +8201,8 @@ export const wards: readonly Ward[] = [
   "slug": "mara",
   "constituencyCode": 182,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-west"
  },
  {
   "code": 909,
@@ -7302,7 +8210,8 @@ export const wards: readonly Ward[] = [
   "slug": "siana",
   "constituencyCode": 182,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-west"
  },
  {
   "code": 910,
@@ -7310,7 +8219,8 @@ export const wards: readonly Ward[] = [
   "slug": "naikarra",
   "constituencyCode": 182,
   "countyCode": 33,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "narok-west"
  },
  {
   "code": 911,
@@ -7318,7 +8228,8 @@ export const wards: readonly Ward[] = [
   "slug": "olkeri",
   "constituencyCode": 183,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-north"
  },
  {
   "code": 912,
@@ -7326,7 +8237,8 @@ export const wards: readonly Ward[] = [
   "slug": "ongata-rongai",
   "constituencyCode": 183,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-north"
  },
  {
   "code": 913,
@@ -7334,7 +8246,8 @@ export const wards: readonly Ward[] = [
   "slug": "nkaimurunya",
   "constituencyCode": 183,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-north"
  },
  {
   "code": 914,
@@ -7342,7 +8255,8 @@ export const wards: readonly Ward[] = [
   "slug": "oloolua",
   "constituencyCode": 183,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-north"
  },
  {
   "code": 915,
@@ -7350,7 +8264,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngong",
   "constituencyCode": 183,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-north"
  },
  {
   "code": 916,
@@ -7358,7 +8273,8 @@ export const wards: readonly Ward[] = [
   "slug": "purko",
   "constituencyCode": 184,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-central"
  },
  {
   "code": 917,
@@ -7366,7 +8282,8 @@ export const wards: readonly Ward[] = [
   "slug": "ildamat",
   "constituencyCode": 184,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-central"
  },
  {
   "code": 918,
@@ -7374,7 +8291,8 @@ export const wards: readonly Ward[] = [
   "slug": "dalalekutuk",
   "constituencyCode": 184,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-central"
  },
  {
   "code": 919,
@@ -7382,7 +8300,8 @@ export const wards: readonly Ward[] = [
   "slug": "matapato-north",
   "constituencyCode": 184,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-central"
  },
  {
   "code": 920,
@@ -7390,7 +8309,8 @@ export const wards: readonly Ward[] = [
   "slug": "matapato-south",
   "constituencyCode": 184,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-central"
  },
  {
   "code": 921,
@@ -7398,7 +8318,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaputiei-north",
   "constituencyCode": 185,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-east"
  },
  {
   "code": 922,
@@ -7406,7 +8327,8 @@ export const wards: readonly Ward[] = [
   "slug": "kitengela",
   "constituencyCode": 185,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-east"
  },
  {
   "code": 923,
@@ -7414,7 +8336,8 @@ export const wards: readonly Ward[] = [
   "slug": "oloosirkon-sholinke",
   "constituencyCode": 185,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-east"
  },
  {
   "code": 924,
@@ -7422,7 +8345,8 @@ export const wards: readonly Ward[] = [
   "slug": "kenyawa-poka",
   "constituencyCode": 185,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-east"
  },
  {
   "code": 925,
@@ -7430,7 +8354,8 @@ export const wards: readonly Ward[] = [
   "slug": "imaroro",
   "constituencyCode": 185,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-east"
  },
  {
   "code": 926,
@@ -7438,7 +8363,8 @@ export const wards: readonly Ward[] = [
   "slug": "keekonyokie",
   "constituencyCode": 186,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-west"
  },
  {
   "code": 927,
@@ -7446,7 +8372,8 @@ export const wards: readonly Ward[] = [
   "slug": "iloodokilani",
   "constituencyCode": 186,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-west"
  },
  {
   "code": 928,
@@ -7454,7 +8381,8 @@ export const wards: readonly Ward[] = [
   "slug": "magadi",
   "constituencyCode": 186,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-west"
  },
  {
   "code": 929,
@@ -7462,7 +8390,8 @@ export const wards: readonly Ward[] = [
   "slug": "ewuaso-oonkidongi",
   "constituencyCode": 186,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-west"
  },
  {
   "code": 930,
@@ -7470,7 +8399,8 @@ export const wards: readonly Ward[] = [
   "slug": "mosiro",
   "constituencyCode": 186,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kajiado-west"
  },
  {
   "code": 931,
@@ -7478,7 +8408,8 @@ export const wards: readonly Ward[] = [
   "slug": "entonet-lenkisim",
   "constituencyCode": 187,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "loitokitok"
  },
  {
   "code": 932,
@@ -7486,7 +8417,8 @@ export const wards: readonly Ward[] = [
   "slug": "mbirikani-eselenkei",
   "constituencyCode": 187,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "loitokitok"
  },
  {
   "code": 933,
@@ -7494,7 +8426,8 @@ export const wards: readonly Ward[] = [
   "slug": "kuku",
   "constituencyCode": 187,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "loitokitok"
  },
  {
   "code": 934,
@@ -7502,7 +8435,8 @@ export const wards: readonly Ward[] = [
   "slug": "rombo",
   "constituencyCode": 187,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "loitokitok"
  },
  {
   "code": 935,
@@ -7510,7 +8444,8 @@ export const wards: readonly Ward[] = [
   "slug": "kimana",
   "constituencyCode": 187,
   "countyCode": 34,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "loitokitok"
  },
  {
   "code": 936,
@@ -7518,7 +8453,8 @@ export const wards: readonly Ward[] = [
   "slug": "londiani",
   "constituencyCode": 188,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kipkelion-east"
  },
  {
   "code": 937,
@@ -7526,7 +8462,8 @@ export const wards: readonly Ward[] = [
   "slug": "kedowa-kimugul",
   "constituencyCode": 188,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kipkelion-east"
  },
  {
   "code": 938,
@@ -7534,7 +8471,8 @@ export const wards: readonly Ward[] = [
   "slug": "chepseon",
   "constituencyCode": 188,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kipkelion-east"
  },
  {
   "code": 939,
@@ -7542,7 +8480,8 @@ export const wards: readonly Ward[] = [
   "slug": "tendeno-sorget",
   "constituencyCode": 188,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kipkelion-east"
  },
  {
   "code": 940,
@@ -7550,7 +8489,8 @@ export const wards: readonly Ward[] = [
   "slug": "kunyak",
   "constituencyCode": 189,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kipkelion-west"
  },
  {
   "code": 941,
@@ -7558,7 +8498,8 @@ export const wards: readonly Ward[] = [
   "slug": "kamasian",
   "constituencyCode": 189,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kipkelion-west"
  },
  {
   "code": 942,
@@ -7566,7 +8507,8 @@ export const wards: readonly Ward[] = [
   "slug": "kipkelion",
   "constituencyCode": 189,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kipkelion-west"
  },
  {
   "code": 943,
@@ -7574,7 +8516,8 @@ export const wards: readonly Ward[] = [
   "slug": "chilchila",
   "constituencyCode": 189,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kipkelion-west"
  },
  {
   "code": 944,
@@ -7582,7 +8525,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapsoit",
   "constituencyCode": 190,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ainamoi"
  },
  {
   "code": 945,
@@ -7590,7 +8534,8 @@ export const wards: readonly Ward[] = [
   "slug": "ainamoi",
   "constituencyCode": 190,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ainamoi"
  },
  {
   "code": 946,
@@ -7598,7 +8543,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapkugerwet",
   "constituencyCode": 190,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ainamoi"
  },
  {
   "code": 947,
@@ -7606,7 +8552,8 @@ export const wards: readonly Ward[] = [
   "slug": "kipchebor",
   "constituencyCode": 190,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ainamoi"
  },
  {
   "code": 948,
@@ -7614,7 +8561,8 @@ export const wards: readonly Ward[] = [
   "slug": "kipchimchim",
   "constituencyCode": 190,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ainamoi"
  },
  {
   "code": 949,
@@ -7622,7 +8570,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapsaos",
   "constituencyCode": 190,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ainamoi"
  },
  {
   "code": 950,
@@ -7630,7 +8579,8 @@ export const wards: readonly Ward[] = [
   "slug": "kisiara",
   "constituencyCode": 191,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bureti"
  },
  {
   "code": 951,
@@ -7638,7 +8588,8 @@ export const wards: readonly Ward[] = [
   "slug": "tebesonik",
   "constituencyCode": 191,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bureti"
  },
  {
   "code": 952,
@@ -7646,7 +8597,8 @@ export const wards: readonly Ward[] = [
   "slug": "cheboin",
   "constituencyCode": 191,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bureti"
  },
  {
   "code": 953,
@@ -7654,7 +8606,8 @@ export const wards: readonly Ward[] = [
   "slug": "chemosot",
   "constituencyCode": 191,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bureti"
  },
  {
   "code": 954,
@@ -7662,7 +8615,8 @@ export const wards: readonly Ward[] = [
   "slug": "litein",
   "constituencyCode": 191,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bureti"
  },
  {
   "code": 955,
@@ -7670,7 +8624,8 @@ export const wards: readonly Ward[] = [
   "slug": "cheplanget",
   "constituencyCode": 191,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bureti"
  },
  {
   "code": 956,
@@ -7678,7 +8633,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapkatet",
   "constituencyCode": 191,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bureti"
  },
  {
   "code": 957,
@@ -7686,7 +8642,8 @@ export const wards: readonly Ward[] = [
   "slug": "waldai",
   "constituencyCode": 192,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "belgut"
  },
  {
   "code": 958,
@@ -7694,7 +8651,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabianga",
   "constituencyCode": 192,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "belgut"
  },
  {
   "code": 959,
@@ -7702,7 +8660,8 @@ export const wards: readonly Ward[] = [
   "slug": "cheptororiet-seretut",
   "constituencyCode": 192,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "belgut"
  },
  {
   "code": 960,
@@ -7710,7 +8669,8 @@ export const wards: readonly Ward[] = [
   "slug": "chaik",
   "constituencyCode": 192,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "belgut"
  },
  {
   "code": 961,
@@ -7718,7 +8678,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapsuser",
   "constituencyCode": 192,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "belgut"
  },
  {
   "code": 962,
@@ -7726,7 +8687,8 @@ export const wards: readonly Ward[] = [
   "slug": "sigowet",
   "constituencyCode": 193,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sigowet-soin"
  },
  {
   "code": 963,
@@ -7734,7 +8696,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaplelartet",
   "constituencyCode": 193,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sigowet-soin"
  },
  {
   "code": 964,
@@ -7742,7 +8705,8 @@ export const wards: readonly Ward[] = [
   "slug": "soliat",
   "constituencyCode": 193,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sigowet-soin"
  },
  {
   "code": 965,
@@ -7750,7 +8714,8 @@ export const wards: readonly Ward[] = [
   "slug": "soin",
   "constituencyCode": 193,
   "countyCode": 35,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sigowet-soin"
  },
  {
   "code": 966,
@@ -7758,7 +8723,8 @@ export const wards: readonly Ward[] = [
   "slug": "ndanai-abosi",
   "constituencyCode": 194,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sotik"
  },
  {
   "code": 967,
@@ -7766,7 +8732,8 @@ export const wards: readonly Ward[] = [
   "slug": "chemagel",
   "constituencyCode": 194,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sotik"
  },
  {
   "code": 968,
@@ -7774,7 +8741,8 @@ export const wards: readonly Ward[] = [
   "slug": "kipsonoi",
   "constituencyCode": 194,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sotik"
  },
  {
   "code": 969,
@@ -7782,7 +8750,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapletundo",
   "constituencyCode": 194,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sotik"
  },
  {
   "code": 970,
@@ -7790,7 +8759,8 @@ export const wards: readonly Ward[] = [
   "slug": "rongena-manaret",
   "constituencyCode": 194,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sotik"
  },
  {
   "code": 971,
@@ -7798,7 +8768,8 @@ export const wards: readonly Ward[] = [
   "slug": "kongasis",
   "constituencyCode": 195,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "chepalungu"
  },
  {
   "code": 972,
@@ -7806,7 +8777,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyangores",
   "constituencyCode": 195,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "chepalungu"
  },
  {
   "code": 973,
@@ -7814,7 +8786,8 @@ export const wards: readonly Ward[] = [
   "slug": "sigor",
   "constituencyCode": 195,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "chepalungu"
  },
  {
   "code": 974,
@@ -7822,7 +8795,8 @@ export const wards: readonly Ward[] = [
   "slug": "chebunyo",
   "constituencyCode": 195,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "chepalungu"
  },
  {
   "code": 975,
@@ -7830,7 +8804,8 @@ export const wards: readonly Ward[] = [
   "slug": "siongiroi",
   "constituencyCode": 195,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "chepalungu"
  },
  {
   "code": 976,
@@ -7838,7 +8813,8 @@ export const wards: readonly Ward[] = [
   "slug": "merigi",
   "constituencyCode": 196,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomet-east"
  },
  {
   "code": 977,
@@ -7846,7 +8822,8 @@ export const wards: readonly Ward[] = [
   "slug": "kembu",
   "constituencyCode": 196,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomet-east"
  },
  {
   "code": 978,
@@ -7854,7 +8831,8 @@ export const wards: readonly Ward[] = [
   "slug": "longisa",
   "constituencyCode": 196,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomet-east"
  },
  {
   "code": 979,
@@ -7862,7 +8840,8 @@ export const wards: readonly Ward[] = [
   "slug": "kipreres",
   "constituencyCode": 196,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomet-east"
  },
  {
   "code": 980,
@@ -7870,7 +8849,8 @@ export const wards: readonly Ward[] = [
   "slug": "chemaner",
   "constituencyCode": 196,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomet-east"
  },
  {
   "code": 981,
@@ -7878,7 +8858,8 @@ export const wards: readonly Ward[] = [
   "slug": "silibwet-township",
   "constituencyCode": 197,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomet-central"
  },
  {
   "code": 982,
@@ -7886,7 +8867,8 @@ export const wards: readonly Ward[] = [
   "slug": "ndaraweta",
   "constituencyCode": 197,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomet-central"
  },
  {
   "code": 983,
@@ -7894,7 +8876,8 @@ export const wards: readonly Ward[] = [
   "slug": "singorwet",
   "constituencyCode": 197,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomet-central"
  },
  {
   "code": 984,
@@ -7902,7 +8885,8 @@ export const wards: readonly Ward[] = [
   "slug": "chesoen",
   "constituencyCode": 197,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomet-central"
  },
  {
   "code": 985,
@@ -7910,7 +8894,8 @@ export const wards: readonly Ward[] = [
   "slug": "mutarakwa",
   "constituencyCode": 197,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomet-central"
  },
  {
   "code": 986,
@@ -7918,7 +8903,8 @@ export const wards: readonly Ward[] = [
   "slug": "chepchabas",
   "constituencyCode": 198,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "konoin"
  },
  {
   "code": 987,
@@ -7926,7 +8912,8 @@ export const wards: readonly Ward[] = [
   "slug": "kimulot",
   "constituencyCode": 198,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "konoin"
  },
  {
   "code": 988,
@@ -7934,7 +8921,8 @@ export const wards: readonly Ward[] = [
   "slug": "mogogosiek",
   "constituencyCode": 198,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "konoin"
  },
  {
   "code": 989,
@@ -7942,7 +8930,8 @@ export const wards: readonly Ward[] = [
   "slug": "boito",
   "constituencyCode": 198,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "konoin"
  },
  {
   "code": 990,
@@ -7950,7 +8939,8 @@ export const wards: readonly Ward[] = [
   "slug": "embomos",
   "constituencyCode": 198,
   "countyCode": 36,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "konoin"
  },
  {
   "code": 991,
@@ -7958,7 +8948,8 @@ export const wards: readonly Ward[] = [
   "slug": "mautuma",
   "constituencyCode": 199,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lugari"
  },
  {
   "code": 992,
@@ -7966,7 +8957,8 @@ export const wards: readonly Ward[] = [
   "slug": "lugari",
   "constituencyCode": 199,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lugari"
  },
  {
   "code": 993,
@@ -7974,7 +8966,8 @@ export const wards: readonly Ward[] = [
   "slug": "lumakanda",
   "constituencyCode": 199,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lugari"
  },
  {
   "code": 994,
@@ -7982,7 +8975,8 @@ export const wards: readonly Ward[] = [
   "slug": "chekalini",
   "constituencyCode": 199,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lugari"
  },
  {
   "code": 995,
@@ -7990,7 +8984,8 @@ export const wards: readonly Ward[] = [
   "slug": "chevaywa",
   "constituencyCode": 199,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lugari"
  },
  {
   "code": 996,
@@ -7998,7 +8993,8 @@ export const wards: readonly Ward[] = [
   "slug": "lwandeti",
   "constituencyCode": 199,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lugari"
  },
  {
   "code": 997,
@@ -8006,7 +9002,8 @@ export const wards: readonly Ward[] = [
   "slug": "likuyani",
   "constituencyCode": 200,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "likuyani"
  },
  {
   "code": 998,
@@ -8014,7 +9011,8 @@ export const wards: readonly Ward[] = [
   "slug": "sango",
   "constituencyCode": 200,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "likuyani"
  },
  {
   "code": 999,
@@ -8022,7 +9020,8 @@ export const wards: readonly Ward[] = [
   "slug": "kongoni",
   "constituencyCode": 200,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "likuyani"
  },
  {
   "code": 1000,
@@ -8030,7 +9029,8 @@ export const wards: readonly Ward[] = [
   "slug": "nzoia",
   "constituencyCode": 200,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "likuyani"
  },
  {
   "code": 1001,
@@ -8038,7 +9038,8 @@ export const wards: readonly Ward[] = [
   "slug": "sinoko",
   "constituencyCode": 200,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "likuyani"
  },
  {
   "code": 1002,
@@ -8046,7 +9047,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-kabras",
   "constituencyCode": 201,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "malava"
  },
  {
   "code": 1003,
@@ -8054,7 +9056,8 @@ export const wards: readonly Ward[] = [
   "slug": "chemuche",
   "constituencyCode": 201,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "malava"
  },
  {
   "code": 1004,
@@ -8062,7 +9065,8 @@ export const wards: readonly Ward[] = [
   "slug": "east-kabras",
   "constituencyCode": 201,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "malava"
  },
  {
   "code": 1005,
@@ -8070,7 +9074,8 @@ export const wards: readonly Ward[] = [
   "slug": "butali-chegulo",
   "constituencyCode": 201,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "malava"
  },
  {
   "code": 1006,
@@ -8078,7 +9083,8 @@ export const wards: readonly Ward[] = [
   "slug": "manda-shivanga",
   "constituencyCode": 201,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "malava"
  },
  {
   "code": 1007,
@@ -8086,7 +9092,8 @@ export const wards: readonly Ward[] = [
   "slug": "shirugu-mugai",
   "constituencyCode": 201,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "malava"
  },
  {
   "code": 1008,
@@ -8094,7 +9101,8 @@ export const wards: readonly Ward[] = [
   "slug": "south-kabras",
   "constituencyCode": 201,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "malava"
  },
  {
   "code": 1009,
@@ -8102,7 +9110,8 @@ export const wards: readonly Ward[] = [
   "slug": "butsotso-east",
   "constituencyCode": 202,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lurambi"
  },
  {
   "code": 1010,
@@ -8110,7 +9119,8 @@ export const wards: readonly Ward[] = [
   "slug": "butsotso-south",
   "constituencyCode": 202,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lurambi"
  },
  {
   "code": 1011,
@@ -8118,7 +9128,8 @@ export const wards: readonly Ward[] = [
   "slug": "butsotso-central",
   "constituencyCode": 202,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lurambi"
  },
  {
   "code": 1012,
@@ -8126,7 +9137,8 @@ export const wards: readonly Ward[] = [
   "slug": "sheywe",
   "constituencyCode": 202,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lurambi"
  },
  {
   "code": 1013,
@@ -8134,7 +9146,8 @@ export const wards: readonly Ward[] = [
   "slug": "mahiakalo",
   "constituencyCode": 202,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lurambi"
  },
  {
   "code": 1014,
@@ -8142,7 +9155,8 @@ export const wards: readonly Ward[] = [
   "slug": "shirere",
   "constituencyCode": 202,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "lurambi"
  },
  {
   "code": 1015,
@@ -8150,7 +9164,8 @@ export const wards: readonly Ward[] = [
   "slug": "ingostse-mathia",
   "constituencyCode": 203,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "navakholo"
  },
  {
   "code": 1016,
@@ -8158,7 +9173,8 @@ export const wards: readonly Ward[] = [
   "slug": "shinoyi-shikomari-esumeyia",
   "constituencyCode": 203,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "navakholo"
  },
  {
   "code": 1017,
@@ -8166,7 +9182,8 @@ export const wards: readonly Ward[] = [
   "slug": "bunyala-west",
   "constituencyCode": 203,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "navakholo"
  },
  {
   "code": 1018,
@@ -8174,7 +9191,8 @@ export const wards: readonly Ward[] = [
   "slug": "bunyala-east",
   "constituencyCode": 203,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "navakholo"
  },
  {
   "code": 1019,
@@ -8182,7 +9200,8 @@ export const wards: readonly Ward[] = [
   "slug": "bunyala-central",
   "constituencyCode": 203,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "navakholo"
  },
  {
   "code": 1020,
@@ -8190,7 +9209,8 @@ export const wards: readonly Ward[] = [
   "slug": "mumias-central",
   "constituencyCode": 204,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mumias-west"
  },
  {
   "code": 1021,
@@ -8198,7 +9218,8 @@ export const wards: readonly Ward[] = [
   "slug": "mumias-north",
   "constituencyCode": 204,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mumias-west"
  },
  {
   "code": 1022,
@@ -8206,7 +9227,8 @@ export const wards: readonly Ward[] = [
   "slug": "etenje",
   "constituencyCode": 204,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mumias-west"
  },
  {
   "code": 1023,
@@ -8214,7 +9236,8 @@ export const wards: readonly Ward[] = [
   "slug": "musanda",
   "constituencyCode": 204,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mumias-west"
  },
  {
   "code": 1024,
@@ -8224,7 +9247,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 37,
   "aliases": [
    "Lusheya/Lubinu"
-  ]
+  ],
+  "subCounty": "mumias-east"
  },
  {
   "code": 1025,
@@ -8234,7 +9258,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 37,
   "aliases": [
    "Malaha/Isongo/Makunga"
-  ]
+  ],
+  "subCounty": "mumias-east"
  },
  {
   "code": 1026,
@@ -8242,7 +9267,8 @@ export const wards: readonly Ward[] = [
   "slug": "east-wanga",
   "constituencyCode": 205,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mumias-east"
  },
  {
   "code": 1027,
@@ -8250,7 +9276,8 @@ export const wards: readonly Ward[] = [
   "slug": "koyonzo",
   "constituencyCode": 206,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matungu"
  },
  {
   "code": 1028,
@@ -8258,7 +9285,8 @@ export const wards: readonly Ward[] = [
   "slug": "kholera",
   "constituencyCode": 206,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matungu"
  },
  {
   "code": 1029,
@@ -8266,7 +9294,8 @@ export const wards: readonly Ward[] = [
   "slug": "khalaba",
   "constituencyCode": 206,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matungu"
  },
  {
   "code": 1030,
@@ -8274,7 +9303,8 @@ export const wards: readonly Ward[] = [
   "slug": "mayoni",
   "constituencyCode": 206,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matungu"
  },
  {
   "code": 1031,
@@ -8282,7 +9312,8 @@ export const wards: readonly Ward[] = [
   "slug": "namamali",
   "constituencyCode": 206,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matungu"
  },
  {
   "code": 1032,
@@ -8290,7 +9321,8 @@ export const wards: readonly Ward[] = [
   "slug": "marama-west",
   "constituencyCode": 207,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "butere"
  },
  {
   "code": 1033,
@@ -8298,7 +9330,8 @@ export const wards: readonly Ward[] = [
   "slug": "marama-central",
   "constituencyCode": 207,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "butere"
  },
  {
   "code": 1034,
@@ -8306,7 +9339,8 @@ export const wards: readonly Ward[] = [
   "slug": "marenyo-shianda",
   "constituencyCode": 207,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "butere"
  },
  {
   "code": 1035,
@@ -8314,7 +9348,8 @@ export const wards: readonly Ward[] = [
   "slug": "marama-north",
   "constituencyCode": 207,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "butere"
  },
  {
   "code": 1036,
@@ -8322,7 +9357,8 @@ export const wards: readonly Ward[] = [
   "slug": "marama-south",
   "constituencyCode": 207,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "butere"
  },
  {
   "code": 1037,
@@ -8330,7 +9366,8 @@ export const wards: readonly Ward[] = [
   "slug": "kisa-north",
   "constituencyCode": 208,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "khwisero"
  },
  {
   "code": 1038,
@@ -8338,7 +9375,8 @@ export const wards: readonly Ward[] = [
   "slug": "kisa-east",
   "constituencyCode": 208,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "khwisero"
  },
  {
   "code": 1039,
@@ -8346,7 +9384,8 @@ export const wards: readonly Ward[] = [
   "slug": "kisa-west",
   "constituencyCode": 208,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "khwisero"
  },
  {
   "code": 1040,
@@ -8354,7 +9393,8 @@ export const wards: readonly Ward[] = [
   "slug": "kisa-central",
   "constituencyCode": 208,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "khwisero"
  },
  {
   "code": 1041,
@@ -8362,7 +9402,8 @@ export const wards: readonly Ward[] = [
   "slug": "isukha-north",
   "constituencyCode": 209,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "shinyalu"
  },
  {
   "code": 1042,
@@ -8370,7 +9411,8 @@ export const wards: readonly Ward[] = [
   "slug": "murhanda",
   "constituencyCode": 209,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "shinyalu"
  },
  {
   "code": 1043,
@@ -8378,7 +9420,8 @@ export const wards: readonly Ward[] = [
   "slug": "isukha-central",
   "constituencyCode": 209,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "shinyalu"
  },
  {
   "code": 1044,
@@ -8386,7 +9429,8 @@ export const wards: readonly Ward[] = [
   "slug": "isukha-south",
   "constituencyCode": 209,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "shinyalu"
  },
  {
   "code": 1045,
@@ -8394,7 +9438,8 @@ export const wards: readonly Ward[] = [
   "slug": "isukha-east",
   "constituencyCode": 209,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "shinyalu"
  },
  {
   "code": 1046,
@@ -8402,7 +9447,8 @@ export const wards: readonly Ward[] = [
   "slug": "isukha-west",
   "constituencyCode": 209,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "shinyalu"
  },
  {
   "code": 1047,
@@ -8410,7 +9456,8 @@ export const wards: readonly Ward[] = [
   "slug": "idakho-south",
   "constituencyCode": 210,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ikolomani"
  },
  {
   "code": 1048,
@@ -8418,7 +9465,8 @@ export const wards: readonly Ward[] = [
   "slug": "idakho-east",
   "constituencyCode": 210,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ikolomani"
  },
  {
   "code": 1049,
@@ -8426,7 +9474,8 @@ export const wards: readonly Ward[] = [
   "slug": "idakho-north",
   "constituencyCode": 210,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ikolomani"
  },
  {
   "code": 1050,
@@ -8434,7 +9483,8 @@ export const wards: readonly Ward[] = [
   "slug": "idakho-central",
   "constituencyCode": 210,
   "countyCode": 37,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ikolomani"
  },
  {
   "code": 1051,
@@ -8442,7 +9492,8 @@ export const wards: readonly Ward[] = [
   "slug": "lugaga-wamuluma",
   "constituencyCode": 211,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "vihiga"
  },
  {
   "code": 1052,
@@ -8450,7 +9501,8 @@ export const wards: readonly Ward[] = [
   "slug": "south-maragoli",
   "constituencyCode": 211,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "vihiga"
  },
  {
   "code": 1053,
@@ -8458,7 +9510,8 @@ export const wards: readonly Ward[] = [
   "slug": "central-maragoli",
   "constituencyCode": 211,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "vihiga"
  },
  {
   "code": 1054,
@@ -8466,7 +9519,8 @@ export const wards: readonly Ward[] = [
   "slug": "mungoma",
   "constituencyCode": 211,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "vihiga"
  },
  {
   "code": 1055,
@@ -8474,7 +9528,8 @@ export const wards: readonly Ward[] = [
   "slug": "lyaduywa-izava",
   "constituencyCode": 212,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sabatia"
  },
  {
   "code": 1056,
@@ -8482,7 +9537,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-sabatia",
   "constituencyCode": 212,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sabatia"
  },
  {
   "code": 1057,
@@ -8490,7 +9546,8 @@ export const wards: readonly Ward[] = [
   "slug": "chavakali",
   "constituencyCode": 212,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sabatia"
  },
  {
   "code": 1058,
@@ -8498,7 +9555,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-maragoli",
   "constituencyCode": 212,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sabatia"
  },
  {
   "code": 1059,
@@ -8506,7 +9564,8 @@ export const wards: readonly Ward[] = [
   "slug": "wodanga",
   "constituencyCode": 212,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sabatia"
  },
  {
   "code": 1060,
@@ -8514,7 +9573,8 @@ export const wards: readonly Ward[] = [
   "slug": "busali",
   "constituencyCode": 212,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sabatia"
  },
  {
   "code": 1061,
@@ -8522,7 +9582,8 @@ export const wards: readonly Ward[] = [
   "slug": "shiru",
   "constituencyCode": 213,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "hamisi"
  },
  {
   "code": 1062,
@@ -8530,7 +9591,8 @@ export const wards: readonly Ward[] = [
   "slug": "muhudu",
   "constituencyCode": 213,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "hamisi"
  },
  {
   "code": 1063,
@@ -8538,7 +9600,8 @@ export const wards: readonly Ward[] = [
   "slug": "shamakhokho",
   "constituencyCode": 213,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "hamisi"
  },
  {
   "code": 1064,
@@ -8546,7 +9609,8 @@ export const wards: readonly Ward[] = [
   "slug": "gisambai",
   "constituencyCode": 213,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "hamisi"
  },
  {
   "code": 1065,
@@ -8554,7 +9618,8 @@ export const wards: readonly Ward[] = [
   "slug": "banja",
   "constituencyCode": 213,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "hamisi"
  },
  {
   "code": 1066,
@@ -8562,7 +9627,8 @@ export const wards: readonly Ward[] = [
   "slug": "tambua",
   "constituencyCode": 213,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "hamisi"
  },
  {
   "code": 1067,
@@ -8570,7 +9636,8 @@ export const wards: readonly Ward[] = [
   "slug": "jepkoyai",
   "constituencyCode": 213,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "hamisi"
  },
  {
   "code": 1068,
@@ -8578,7 +9645,8 @@ export const wards: readonly Ward[] = [
   "slug": "luanda-township",
   "constituencyCode": 214,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "luanda"
  },
  {
   "code": 1069,
@@ -8586,7 +9654,8 @@ export const wards: readonly Ward[] = [
   "slug": "wemilabi",
   "constituencyCode": 214,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "luanda"
  },
  {
   "code": 1070,
@@ -8594,7 +9663,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwibona",
   "constituencyCode": 214,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "luanda"
  },
  {
   "code": 1071,
@@ -8602,7 +9672,8 @@ export const wards: readonly Ward[] = [
   "slug": "luanda-south",
   "constituencyCode": 214,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "luanda"
  },
  {
   "code": 1072,
@@ -8610,7 +9681,8 @@ export const wards: readonly Ward[] = [
   "slug": "emabungo",
   "constituencyCode": 214,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "luanda"
  },
  {
   "code": 1073,
@@ -8618,7 +9690,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-east-bunyore",
   "constituencyCode": 215,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "emuhaya"
  },
  {
   "code": 1074,
@@ -8626,7 +9699,8 @@ export const wards: readonly Ward[] = [
   "slug": "central-bunyore",
   "constituencyCode": 215,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "emuhaya"
  },
  {
   "code": 1075,
@@ -8634,7 +9708,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-bunyore",
   "constituencyCode": 215,
   "countyCode": 38,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "emuhaya"
  },
  {
   "code": 1076,
@@ -8642,7 +9717,8 @@ export const wards: readonly Ward[] = [
   "slug": "cheptais",
   "constituencyCode": 216,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "cheptais"
  },
  {
   "code": 1077,
@@ -8650,7 +9726,8 @@ export const wards: readonly Ward[] = [
   "slug": "chesikaki",
   "constituencyCode": 216,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "cheptais"
  },
  {
   "code": 1078,
@@ -8658,7 +9735,8 @@ export const wards: readonly Ward[] = [
   "slug": "chepyuk",
   "constituencyCode": 216,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "cheptais"
  },
  {
   "code": 1079,
@@ -8666,7 +9744,8 @@ export const wards: readonly Ward[] = [
   "slug": "kapkateny",
   "constituencyCode": 216,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "cheptais"
  },
  {
   "code": 1080,
@@ -8674,7 +9753,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaptama",
   "constituencyCode": 216,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mt-elgon"
  },
  {
   "code": 1081,
@@ -8682,7 +9762,8 @@ export const wards: readonly Ward[] = [
   "slug": "elgon",
   "constituencyCode": 216,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mt-elgon"
  },
  {
   "code": 1082,
@@ -8690,7 +9771,8 @@ export const wards: readonly Ward[] = [
   "slug": "namwela",
   "constituencyCode": 217,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sirisia"
  },
  {
   "code": 1083,
@@ -8698,7 +9780,8 @@ export const wards: readonly Ward[] = [
   "slug": "malakisi-south-kulisiru",
   "constituencyCode": 217,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sirisia"
  },
  {
   "code": 1084,
@@ -8706,7 +9789,8 @@ export const wards: readonly Ward[] = [
   "slug": "lwandanyi",
   "constituencyCode": 217,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "sirisia"
  },
  {
   "code": 1085,
@@ -8714,7 +9798,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabuchai-chwele",
   "constituencyCode": 218,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kabuchai"
  },
  {
   "code": 1086,
@@ -8722,7 +9807,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-nalondo",
   "constituencyCode": 218,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kabuchai"
  },
  {
   "code": 1087,
@@ -8730,7 +9816,8 @@ export const wards: readonly Ward[] = [
   "slug": "bwake-luuya",
   "constituencyCode": 218,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kabuchai"
  },
  {
   "code": 1088,
@@ -8738,7 +9825,8 @@ export const wards: readonly Ward[] = [
   "slug": "mukuyuni",
   "constituencyCode": 218,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kabuchai"
  },
  {
   "code": 1089,
@@ -8746,7 +9834,8 @@ export const wards: readonly Ward[] = [
   "slug": "south-bukusu",
   "constituencyCode": 219,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bumula"
  },
  {
   "code": 1090,
@@ -8754,7 +9843,8 @@ export const wards: readonly Ward[] = [
   "slug": "bumula",
   "constituencyCode": 219,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bumula"
  },
  {
   "code": 1091,
@@ -8762,7 +9852,8 @@ export const wards: readonly Ward[] = [
   "slug": "khasoko",
   "constituencyCode": 219,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bumula"
  },
  {
   "code": 1092,
@@ -8770,7 +9861,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabula",
   "constituencyCode": 219,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bumula"
  },
  {
   "code": 1093,
@@ -8778,7 +9870,8 @@ export const wards: readonly Ward[] = [
   "slug": "kimaeti",
   "constituencyCode": 219,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bumula"
  },
  {
   "code": 1094,
@@ -8786,7 +9879,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-bukusu",
   "constituencyCode": 219,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bumula"
  },
  {
   "code": 1095,
@@ -8794,7 +9888,8 @@ export const wards: readonly Ward[] = [
   "slug": "siboti",
   "constituencyCode": 219,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bumula"
  },
  {
   "code": 1096,
@@ -8802,7 +9897,8 @@ export const wards: readonly Ward[] = [
   "slug": "bukembe-west",
   "constituencyCode": 220,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kanduyi"
  },
  {
   "code": 1097,
@@ -8810,7 +9906,8 @@ export const wards: readonly Ward[] = [
   "slug": "bukembe-east",
   "constituencyCode": 220,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kanduyi"
  },
  {
   "code": 1098,
@@ -8818,7 +9915,8 @@ export const wards: readonly Ward[] = [
   "slug": "township",
   "constituencyCode": 220,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kanduyi"
  },
  {
   "code": 1099,
@@ -8826,7 +9924,8 @@ export const wards: readonly Ward[] = [
   "slug": "khalaba",
   "constituencyCode": 220,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kanduyi"
  },
  {
   "code": 1100,
@@ -8834,7 +9933,8 @@ export const wards: readonly Ward[] = [
   "slug": "musikoma",
   "constituencyCode": 220,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kanduyi"
  },
  {
   "code": 1101,
@@ -8842,7 +9942,8 @@ export const wards: readonly Ward[] = [
   "slug": "east-sangalo",
   "constituencyCode": 220,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kanduyi"
  },
  {
   "code": 1102,
@@ -8850,7 +9951,8 @@ export const wards: readonly Ward[] = [
   "slug": "marakaru-tuuti",
   "constituencyCode": 220,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kanduyi"
  },
  {
   "code": 1103,
@@ -8860,7 +9962,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 39,
   "aliases": [
    "West Sang'alo"
-  ]
+  ],
+  "subCounty": "kanduyi"
  },
  {
   "code": 1104,
@@ -8868,7 +9971,8 @@ export const wards: readonly Ward[] = [
   "slug": "mihuu",
   "constituencyCode": 221,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "webuye-east"
  },
  {
   "code": 1105,
@@ -8876,7 +9980,8 @@ export const wards: readonly Ward[] = [
   "slug": "ndivisi",
   "constituencyCode": 221,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "webuye-east"
  },
  {
   "code": 1106,
@@ -8884,7 +9989,8 @@ export const wards: readonly Ward[] = [
   "slug": "maraka",
   "constituencyCode": 221,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "webuye-east"
  },
  {
   "code": 1107,
@@ -8892,7 +9998,8 @@ export const wards: readonly Ward[] = [
   "slug": "misikhu",
   "constituencyCode": 222,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "webuye-west"
  },
  {
   "code": 1108,
@@ -8900,7 +10007,8 @@ export const wards: readonly Ward[] = [
   "slug": "sitikho",
   "constituencyCode": 222,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "webuye-west"
  },
  {
   "code": 1109,
@@ -8908,7 +10016,8 @@ export const wards: readonly Ward[] = [
   "slug": "matulo",
   "constituencyCode": 222,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "webuye-west"
  },
  {
   "code": 1110,
@@ -8916,7 +10025,8 @@ export const wards: readonly Ward[] = [
   "slug": "bokoli",
   "constituencyCode": 222,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "webuye-west"
  },
  {
   "code": 1111,
@@ -8924,7 +10034,8 @@ export const wards: readonly Ward[] = [
   "slug": "kimilili",
   "constituencyCode": 223,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kimilili"
  },
  {
   "code": 1112,
@@ -8932,7 +10043,8 @@ export const wards: readonly Ward[] = [
   "slug": "kibingei",
   "constituencyCode": 223,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kimilili"
  },
  {
   "code": 1113,
@@ -8940,7 +10052,8 @@ export const wards: readonly Ward[] = [
   "slug": "maeni",
   "constituencyCode": 223,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kimilili"
  },
  {
   "code": 1114,
@@ -8948,7 +10061,8 @@ export const wards: readonly Ward[] = [
   "slug": "kamukuywa",
   "constituencyCode": 223,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kimilili"
  },
  {
   "code": 1115,
@@ -8956,7 +10070,8 @@ export const wards: readonly Ward[] = [
   "slug": "mbakalo",
   "constituencyCode": 224,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tongaren"
  },
  {
   "code": 1116,
@@ -8964,7 +10079,8 @@ export const wards: readonly Ward[] = [
   "slug": "naitiri-kabuyefwe",
   "constituencyCode": 224,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tongaren"
  },
  {
   "code": 1117,
@@ -8972,7 +10088,8 @@ export const wards: readonly Ward[] = [
   "slug": "milima",
   "constituencyCode": 224,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tongaren"
  },
  {
   "code": 1118,
@@ -8980,7 +10097,8 @@ export const wards: readonly Ward[] = [
   "slug": "ndalu-tabani",
   "constituencyCode": 224,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tongaren"
  },
  {
   "code": 1119,
@@ -8988,7 +10106,8 @@ export const wards: readonly Ward[] = [
   "slug": "tongaren",
   "constituencyCode": 224,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tongaren"
  },
  {
   "code": 1120,
@@ -8996,7 +10115,8 @@ export const wards: readonly Ward[] = [
   "slug": "soysambu-mitua",
   "constituencyCode": 224,
   "countyCode": 39,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "tongaren"
  },
  {
   "code": 1121,
@@ -9004,7 +10124,8 @@ export const wards: readonly Ward[] = [
   "slug": "malaba-central",
   "constituencyCode": 225,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "teso-north"
  },
  {
   "code": 1122,
@@ -9012,7 +10133,8 @@ export const wards: readonly Ward[] = [
   "slug": "malaba-north",
   "constituencyCode": 225,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "teso-north"
  },
  {
   "code": 1123,
@@ -9020,7 +10142,8 @@ export const wards: readonly Ward[] = [
   "slug": "angurai-south",
   "constituencyCode": 225,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "teso-north"
  },
  {
   "code": 1124,
@@ -9028,7 +10151,8 @@ export const wards: readonly Ward[] = [
   "slug": "angurai-north",
   "constituencyCode": 225,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "teso-north"
  },
  {
   "code": 1125,
@@ -9036,7 +10160,8 @@ export const wards: readonly Ward[] = [
   "slug": "angurai-east",
   "constituencyCode": 225,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "teso-north"
  },
  {
   "code": 1126,
@@ -9044,7 +10169,8 @@ export const wards: readonly Ward[] = [
   "slug": "malaba-south",
   "constituencyCode": 225,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "teso-north"
  },
  {
   "code": 1127,
@@ -9052,7 +10178,8 @@ export const wards: readonly Ward[] = [
   "slug": "angorom",
   "constituencyCode": 226,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "teso-south"
  },
  {
   "code": 1128,
@@ -9060,7 +10187,8 @@ export const wards: readonly Ward[] = [
   "slug": "chakol-south",
   "constituencyCode": 226,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "teso-south"
  },
  {
   "code": 1129,
@@ -9068,7 +10196,8 @@ export const wards: readonly Ward[] = [
   "slug": "chakol-north",
   "constituencyCode": 226,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "teso-south"
  },
  {
   "code": 1130,
@@ -9076,7 +10205,8 @@ export const wards: readonly Ward[] = [
   "slug": "amukura-west",
   "constituencyCode": 226,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "teso-south"
  },
  {
   "code": 1131,
@@ -9084,7 +10214,8 @@ export const wards: readonly Ward[] = [
   "slug": "amukura-east",
   "constituencyCode": 226,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "teso-south"
  },
  {
   "code": 1132,
@@ -9092,7 +10223,8 @@ export const wards: readonly Ward[] = [
   "slug": "amukura-central",
   "constituencyCode": 226,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "teso-south"
  },
  {
   "code": 1133,
@@ -9100,7 +10232,8 @@ export const wards: readonly Ward[] = [
   "slug": "nambale-township",
   "constituencyCode": 227,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nambale"
  },
  {
   "code": 1134,
@@ -9108,7 +10241,8 @@ export const wards: readonly Ward[] = [
   "slug": "bukhayo-north-waltsi",
   "constituencyCode": 227,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nambale"
  },
  {
   "code": 1135,
@@ -9116,7 +10250,8 @@ export const wards: readonly Ward[] = [
   "slug": "bukhayo-east",
   "constituencyCode": 227,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nambale"
  },
  {
   "code": 1136,
@@ -9124,7 +10259,8 @@ export const wards: readonly Ward[] = [
   "slug": "bukhayo-central",
   "constituencyCode": 227,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nambale"
  },
  {
   "code": 1137,
@@ -9132,7 +10268,8 @@ export const wards: readonly Ward[] = [
   "slug": "bukhayo-west",
   "constituencyCode": 228,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matayos"
  },
  {
   "code": 1138,
@@ -9140,7 +10277,8 @@ export const wards: readonly Ward[] = [
   "slug": "mayenje",
   "constituencyCode": 228,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matayos"
  },
  {
   "code": 1139,
@@ -9148,7 +10286,8 @@ export const wards: readonly Ward[] = [
   "slug": "matayos-south",
   "constituencyCode": 228,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matayos"
  },
  {
   "code": 1140,
@@ -9156,7 +10295,8 @@ export const wards: readonly Ward[] = [
   "slug": "busibwabo",
   "constituencyCode": 228,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matayos"
  },
  {
   "code": 1141,
@@ -9164,7 +10304,8 @@ export const wards: readonly Ward[] = [
   "slug": "burumba",
   "constituencyCode": 228,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "matayos"
  },
  {
   "code": 1142,
@@ -9172,7 +10313,8 @@ export const wards: readonly Ward[] = [
   "slug": "marachi-west",
   "constituencyCode": 229,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "butula"
  },
  {
   "code": 1143,
@@ -9180,7 +10322,8 @@ export const wards: readonly Ward[] = [
   "slug": "kingandole",
   "constituencyCode": 229,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "butula"
  },
  {
   "code": 1144,
@@ -9188,7 +10331,8 @@ export const wards: readonly Ward[] = [
   "slug": "marachi-central",
   "constituencyCode": 229,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "butula"
  },
  {
   "code": 1145,
@@ -9196,7 +10340,8 @@ export const wards: readonly Ward[] = [
   "slug": "marachi-east",
   "constituencyCode": 229,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "butula"
  },
  {
   "code": 1146,
@@ -9204,7 +10349,8 @@ export const wards: readonly Ward[] = [
   "slug": "marachi-north",
   "constituencyCode": 229,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "butula"
  },
  {
   "code": 1147,
@@ -9212,7 +10358,8 @@ export const wards: readonly Ward[] = [
   "slug": "elugulu",
   "constituencyCode": 229,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "butula"
  },
  {
   "code": 1148,
@@ -9220,7 +10367,8 @@ export const wards: readonly Ward[] = [
   "slug": "namboboto-nambuku",
   "constituencyCode": 230,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samia"
  },
  {
   "code": 1149,
@@ -9228,7 +10376,8 @@ export const wards: readonly Ward[] = [
   "slug": "nangina",
   "constituencyCode": 230,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samia"
  },
  {
   "code": 1150,
@@ -9236,7 +10385,8 @@ export const wards: readonly Ward[] = [
   "slug": "agenga-nanguba",
   "constituencyCode": 230,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samia"
  },
  {
   "code": 1151,
@@ -9244,7 +10394,8 @@ export const wards: readonly Ward[] = [
   "slug": "bwiri",
   "constituencyCode": 230,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "samia"
  },
  {
   "code": 1152,
@@ -9252,7 +10403,8 @@ export const wards: readonly Ward[] = [
   "slug": "bunyala-central",
   "constituencyCode": 231,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bunyala"
  },
  {
   "code": 1153,
@@ -9260,7 +10412,8 @@ export const wards: readonly Ward[] = [
   "slug": "bunyala-north",
   "constituencyCode": 231,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bunyala"
  },
  {
   "code": 1154,
@@ -9268,7 +10421,8 @@ export const wards: readonly Ward[] = [
   "slug": "bunyala-west",
   "constituencyCode": 231,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bunyala"
  },
  {
   "code": 1155,
@@ -9276,7 +10430,8 @@ export const wards: readonly Ward[] = [
   "slug": "bunyala-south",
   "constituencyCode": 231,
   "countyCode": 40,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bunyala"
  },
  {
   "code": 1156,
@@ -9284,7 +10439,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-ugenya",
   "constituencyCode": 232,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ugenya"
  },
  {
   "code": 1157,
@@ -9292,7 +10448,8 @@ export const wards: readonly Ward[] = [
   "slug": "ukwala",
   "constituencyCode": 232,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ugenya"
  },
  {
   "code": 1158,
@@ -9300,7 +10457,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-ugenya",
   "constituencyCode": 232,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ugenya"
  },
  {
   "code": 1159,
@@ -9308,7 +10466,8 @@ export const wards: readonly Ward[] = [
   "slug": "east-ugenya",
   "constituencyCode": 232,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ugenya"
  },
  {
   "code": 1160,
@@ -9316,7 +10475,8 @@ export const wards: readonly Ward[] = [
   "slug": "sidindi",
   "constituencyCode": 233,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ugunja"
  },
  {
   "code": 1161,
@@ -9324,7 +10484,8 @@ export const wards: readonly Ward[] = [
   "slug": "sigomere",
   "constituencyCode": 233,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ugunja"
  },
  {
   "code": 1162,
@@ -9332,7 +10493,8 @@ export const wards: readonly Ward[] = [
   "slug": "ugunja",
   "constituencyCode": 233,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ugunja"
  },
  {
   "code": 1163,
@@ -9340,7 +10502,8 @@ export const wards: readonly Ward[] = [
   "slug": "usonga",
   "constituencyCode": 234,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "alego-usonga"
  },
  {
   "code": 1164,
@@ -9348,7 +10511,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-alego",
   "constituencyCode": 234,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "alego-usonga"
  },
  {
   "code": 1165,
@@ -9356,7 +10520,8 @@ export const wards: readonly Ward[] = [
   "slug": "central-alego",
   "constituencyCode": 234,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "alego-usonga"
  },
  {
   "code": 1166,
@@ -9364,7 +10529,8 @@ export const wards: readonly Ward[] = [
   "slug": "siaya-township",
   "constituencyCode": 234,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "alego-usonga"
  },
  {
   "code": 1167,
@@ -9372,7 +10538,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-alego",
   "constituencyCode": 234,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "alego-usonga"
  },
  {
   "code": 1168,
@@ -9380,7 +10547,8 @@ export const wards: readonly Ward[] = [
   "slug": "south-east-alego",
   "constituencyCode": 234,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "alego-usonga"
  },
  {
   "code": 1169,
@@ -9388,7 +10556,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-gem",
   "constituencyCode": 235,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gem"
  },
  {
   "code": 1170,
@@ -9396,7 +10565,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-gem",
   "constituencyCode": 235,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gem"
  },
  {
   "code": 1171,
@@ -9404,7 +10574,8 @@ export const wards: readonly Ward[] = [
   "slug": "central-gem",
   "constituencyCode": 235,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gem"
  },
  {
   "code": 1172,
@@ -9412,7 +10583,8 @@ export const wards: readonly Ward[] = [
   "slug": "yala-township",
   "constituencyCode": 235,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gem"
  },
  {
   "code": 1173,
@@ -9420,7 +10592,8 @@ export const wards: readonly Ward[] = [
   "slug": "east-gem",
   "constituencyCode": 235,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gem"
  },
  {
   "code": 1174,
@@ -9428,7 +10601,8 @@ export const wards: readonly Ward[] = [
   "slug": "south-gem",
   "constituencyCode": 235,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "gem"
  },
  {
   "code": 1175,
@@ -9436,7 +10610,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-yimbo",
   "constituencyCode": 236,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bondo"
  },
  {
   "code": 1176,
@@ -9444,7 +10619,8 @@ export const wards: readonly Ward[] = [
   "slug": "central-sakwa",
   "constituencyCode": 236,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bondo"
  },
  {
   "code": 1177,
@@ -9452,7 +10628,8 @@ export const wards: readonly Ward[] = [
   "slug": "south-sakwa",
   "constituencyCode": 236,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bondo"
  },
  {
   "code": 1178,
@@ -9460,7 +10637,8 @@ export const wards: readonly Ward[] = [
   "slug": "yimbo-east",
   "constituencyCode": 236,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bondo"
  },
  {
   "code": 1179,
@@ -9468,7 +10646,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-sakwa",
   "constituencyCode": 236,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bondo"
  },
  {
   "code": 1180,
@@ -9476,7 +10655,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-sakwa",
   "constituencyCode": 236,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bondo"
  },
  {
   "code": 1181,
@@ -9484,7 +10664,8 @@ export const wards: readonly Ward[] = [
   "slug": "east-asembo",
   "constituencyCode": 237,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rarieda"
  },
  {
   "code": 1182,
@@ -9492,7 +10673,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-asembo",
   "constituencyCode": 237,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rarieda"
  },
  {
   "code": 1183,
@@ -9500,7 +10682,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-uyoma",
   "constituencyCode": 237,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rarieda"
  },
  {
   "code": 1184,
@@ -9508,7 +10691,8 @@ export const wards: readonly Ward[] = [
   "slug": "south-uyoma",
   "constituencyCode": 237,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rarieda"
  },
  {
   "code": 1185,
@@ -9516,7 +10700,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-uyoma",
   "constituencyCode": 237,
   "countyCode": 41,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rarieda"
  },
  {
   "code": 1186,
@@ -9524,7 +10709,8 @@ export const wards: readonly Ward[] = [
   "slug": "kajulu",
   "constituencyCode": 238,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-east"
  },
  {
   "code": 1187,
@@ -9532,7 +10718,8 @@ export const wards: readonly Ward[] = [
   "slug": "kolwa-east",
   "constituencyCode": 238,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-east"
  },
  {
   "code": 1188,
@@ -9540,7 +10727,8 @@ export const wards: readonly Ward[] = [
   "slug": "manyatta-b",
   "constituencyCode": 238,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-east"
  },
  {
   "code": 1189,
@@ -9548,7 +10736,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyalenda-a",
   "constituencyCode": 238,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-east"
  },
  {
   "code": 1190,
@@ -9556,7 +10745,8 @@ export const wards: readonly Ward[] = [
   "slug": "kolwa-central",
   "constituencyCode": 238,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-east"
  },
  {
   "code": 1191,
@@ -9564,7 +10754,8 @@ export const wards: readonly Ward[] = [
   "slug": "south-west-kisumu",
   "constituencyCode": 239,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-west"
  },
  {
   "code": 1192,
@@ -9572,7 +10763,8 @@ export const wards: readonly Ward[] = [
   "slug": "central-kisumu",
   "constituencyCode": 239,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-west"
  },
  {
   "code": 1193,
@@ -9580,7 +10772,8 @@ export const wards: readonly Ward[] = [
   "slug": "kisumu-north",
   "constituencyCode": 239,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-west"
  },
  {
   "code": 1194,
@@ -9588,7 +10781,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-kisumu",
   "constituencyCode": 239,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-west"
  },
  {
   "code": 1195,
@@ -9596,7 +10790,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-west-kisumu",
   "constituencyCode": 239,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-west"
  },
  {
   "code": 1196,
@@ -9604,7 +10799,8 @@ export const wards: readonly Ward[] = [
   "slug": "railways",
   "constituencyCode": 240,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-central"
  },
  {
   "code": 1197,
@@ -9612,7 +10808,8 @@ export const wards: readonly Ward[] = [
   "slug": "migosi",
   "constituencyCode": 240,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-central"
  },
  {
   "code": 1198,
@@ -9620,7 +10817,8 @@ export const wards: readonly Ward[] = [
   "slug": "shaurimoyo-kaloleni",
   "constituencyCode": 240,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-central"
  },
  {
   "code": 1199,
@@ -9628,7 +10826,8 @@ export const wards: readonly Ward[] = [
   "slug": "market-milimani",
   "constituencyCode": 240,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-central"
  },
  {
   "code": 1200,
@@ -9636,7 +10835,8 @@ export const wards: readonly Ward[] = [
   "slug": "kondele",
   "constituencyCode": 240,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-central"
  },
  {
   "code": 1201,
@@ -9644,7 +10844,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyalenda-b",
   "constituencyCode": 240,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kisumu-central"
  },
  {
   "code": 1202,
@@ -9652,7 +10853,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-seme",
   "constituencyCode": 241,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "seme"
  },
  {
   "code": 1203,
@@ -9660,7 +10862,8 @@ export const wards: readonly Ward[] = [
   "slug": "central-seme",
   "constituencyCode": 241,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "seme"
  },
  {
   "code": 1204,
@@ -9668,7 +10871,8 @@ export const wards: readonly Ward[] = [
   "slug": "east-seme",
   "constituencyCode": 241,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "seme"
  },
  {
   "code": 1205,
@@ -9676,7 +10880,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-seme",
   "constituencyCode": 241,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "seme"
  },
  {
   "code": 1206,
@@ -9684,7 +10889,8 @@ export const wards: readonly Ward[] = [
   "slug": "east-kano-wawidhi",
   "constituencyCode": 242,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyando"
  },
  {
   "code": 1207,
@@ -9692,7 +10898,8 @@ export const wards: readonly Ward[] = [
   "slug": "awasi-onjiko",
   "constituencyCode": 242,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyando"
  },
  {
   "code": 1208,
@@ -9700,7 +10907,8 @@ export const wards: readonly Ward[] = [
   "slug": "ahero",
   "constituencyCode": 242,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyando"
  },
  {
   "code": 1209,
@@ -9708,7 +10916,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabonyo-kanyagwal",
   "constituencyCode": 242,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyando"
  },
  {
   "code": 1210,
@@ -9716,7 +10925,8 @@ export const wards: readonly Ward[] = [
   "slug": "kobura",
   "constituencyCode": 242,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyando"
  },
  {
   "code": 1211,
@@ -9724,7 +10934,8 @@ export const wards: readonly Ward[] = [
   "slug": "miwani",
   "constituencyCode": 243,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "muhoroni"
  },
  {
   "code": 1212,
@@ -9732,7 +10943,8 @@ export const wards: readonly Ward[] = [
   "slug": "ombeyi",
   "constituencyCode": 243,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "muhoroni"
  },
  {
   "code": 1213,
@@ -9740,7 +10952,8 @@ export const wards: readonly Ward[] = [
   "slug": "masogo-nyangoma",
   "constituencyCode": 243,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "muhoroni"
  },
  {
   "code": 1214,
@@ -9748,7 +10961,8 @@ export const wards: readonly Ward[] = [
   "slug": "chemelil",
   "constituencyCode": 243,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "muhoroni"
  },
  {
   "code": 1215,
@@ -9756,7 +10970,8 @@ export const wards: readonly Ward[] = [
   "slug": "muhoroni-koru",
   "constituencyCode": 243,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "muhoroni"
  },
  {
   "code": 1216,
@@ -9764,7 +10979,8 @@ export const wards: readonly Ward[] = [
   "slug": "south-west-nyakach",
   "constituencyCode": 244,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyakach"
  },
  {
   "code": 1217,
@@ -9772,7 +10988,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-nyakach",
   "constituencyCode": 244,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyakach"
  },
  {
   "code": 1218,
@@ -9780,7 +10997,8 @@ export const wards: readonly Ward[] = [
   "slug": "central-nyakach",
   "constituencyCode": 244,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyakach"
  },
  {
   "code": 1219,
@@ -9788,7 +11006,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-nyakach",
   "constituencyCode": 244,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyakach"
  },
  {
   "code": 1220,
@@ -9796,7 +11015,8 @@ export const wards: readonly Ward[] = [
   "slug": "south-east-nyakach",
   "constituencyCode": 244,
   "countyCode": 42,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyakach"
  },
  {
   "code": 1221,
@@ -9804,7 +11024,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-kasipul",
   "constituencyCode": 245,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kasipul"
  },
  {
   "code": 1222,
@@ -9812,7 +11033,8 @@ export const wards: readonly Ward[] = [
   "slug": "south-kasipul",
   "constituencyCode": 245,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kasipul"
  },
  {
   "code": 1223,
@@ -9820,7 +11042,8 @@ export const wards: readonly Ward[] = [
   "slug": "central-kasipul",
   "constituencyCode": 245,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kasipul"
  },
  {
   "code": 1224,
@@ -9828,7 +11051,8 @@ export const wards: readonly Ward[] = [
   "slug": "east-kamagak",
   "constituencyCode": 245,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kasipul"
  },
  {
   "code": 1225,
@@ -9836,7 +11060,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-kamagak",
   "constituencyCode": 245,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kasipul"
  },
  {
   "code": 1226,
@@ -9844,7 +11069,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabondo-east",
   "constituencyCode": 246,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kabondo-kasipul"
  },
  {
   "code": 1227,
@@ -9852,7 +11078,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabondo-west",
   "constituencyCode": 246,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kabondo-kasipul"
  },
  {
   "code": 1228,
@@ -9860,7 +11087,8 @@ export const wards: readonly Ward[] = [
   "slug": "kokwanyo-kakelo",
   "constituencyCode": 246,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kabondo-kasipul"
  },
  {
   "code": 1229,
@@ -9868,7 +11096,8 @@ export const wards: readonly Ward[] = [
   "slug": "kojwach",
   "constituencyCode": 246,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kabondo-kasipul"
  },
  {
   "code": 1230,
@@ -9876,7 +11105,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-karachuonyo",
   "constituencyCode": 247,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "karachuonyo"
  },
  {
   "code": 1231,
@@ -9884,7 +11114,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-karachuonyo",
   "constituencyCode": 247,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "karachuonyo"
  },
  {
   "code": 1232,
@@ -9892,7 +11123,8 @@ export const wards: readonly Ward[] = [
   "slug": "central",
   "constituencyCode": 247,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "karachuonyo"
  },
  {
   "code": 1233,
@@ -9900,7 +11132,8 @@ export const wards: readonly Ward[] = [
   "slug": "kanyaluo",
   "constituencyCode": 247,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "karachuonyo"
  },
  {
   "code": 1234,
@@ -9908,7 +11141,8 @@ export const wards: readonly Ward[] = [
   "slug": "kibiri",
   "constituencyCode": 247,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "karachuonyo"
  },
  {
   "code": 1235,
@@ -9916,7 +11150,8 @@ export const wards: readonly Ward[] = [
   "slug": "wangchieng",
   "constituencyCode": 247,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "karachuonyo"
  },
  {
   "code": 1236,
@@ -9924,7 +11159,8 @@ export const wards: readonly Ward[] = [
   "slug": "kendu-bay-town",
   "constituencyCode": 247,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "karachuonyo"
  },
  {
   "code": 1237,
@@ -9932,7 +11168,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-gem",
   "constituencyCode": 248,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rangwe"
  },
  {
   "code": 1238,
@@ -9940,7 +11177,8 @@ export const wards: readonly Ward[] = [
   "slug": "east-gem",
   "constituencyCode": 248,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rangwe"
  },
  {
   "code": 1239,
@@ -9948,7 +11186,8 @@ export const wards: readonly Ward[] = [
   "slug": "kagan",
   "constituencyCode": 248,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rangwe"
  },
  {
   "code": 1240,
@@ -9956,7 +11195,8 @@ export const wards: readonly Ward[] = [
   "slug": "kochia",
   "constituencyCode": 248,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rangwe"
  },
  {
   "code": 1241,
@@ -9964,7 +11204,8 @@ export const wards: readonly Ward[] = [
   "slug": "homa-bay-central",
   "constituencyCode": 249,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "homa-bay-town"
  },
  {
   "code": 1242,
@@ -9972,7 +11213,8 @@ export const wards: readonly Ward[] = [
   "slug": "homa-bay-arujo",
   "constituencyCode": 249,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "homa-bay-town"
  },
  {
   "code": 1243,
@@ -9980,7 +11222,8 @@ export const wards: readonly Ward[] = [
   "slug": "homa-bay-west",
   "constituencyCode": 249,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "homa-bay-town"
  },
  {
   "code": 1244,
@@ -9988,7 +11231,8 @@ export const wards: readonly Ward[] = [
   "slug": "homa-bay-east",
   "constituencyCode": 249,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "homa-bay-town"
  },
  {
   "code": 1245,
@@ -9996,7 +11240,8 @@ export const wards: readonly Ward[] = [
   "slug": "kwabwai",
   "constituencyCode": 250,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ndhiwa"
  },
  {
   "code": 1246,
@@ -10004,7 +11249,8 @@ export const wards: readonly Ward[] = [
   "slug": "kanyadoto",
   "constituencyCode": 250,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ndhiwa"
  },
  {
   "code": 1247,
@@ -10012,7 +11258,8 @@ export const wards: readonly Ward[] = [
   "slug": "kanyikela",
   "constituencyCode": 250,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ndhiwa"
  },
  {
   "code": 1248,
@@ -10022,7 +11269,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 43,
   "aliases": [
    "Kabuoch North"
-  ]
+  ],
+  "subCounty": "ndhiwa"
  },
  {
   "code": 1249,
@@ -10030,7 +11278,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabuoch-south-pala",
   "constituencyCode": 250,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ndhiwa"
  },
  {
   "code": 1250,
@@ -10038,7 +11287,8 @@ export const wards: readonly Ward[] = [
   "slug": "kanyamwa-kologi",
   "constituencyCode": 250,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ndhiwa"
  },
  {
   "code": 1251,
@@ -10046,7 +11296,8 @@ export const wards: readonly Ward[] = [
   "slug": "kanyamwa-kosewe",
   "constituencyCode": 250,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ndhiwa"
  },
  {
   "code": 1252,
@@ -10054,7 +11305,8 @@ export const wards: readonly Ward[] = [
   "slug": "mfangano-island",
   "constituencyCode": 251,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbita"
  },
  {
   "code": 1253,
@@ -10062,7 +11314,8 @@ export const wards: readonly Ward[] = [
   "slug": "rusinga-island",
   "constituencyCode": 251,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbita"
  },
  {
   "code": 1254,
@@ -10070,7 +11323,8 @@ export const wards: readonly Ward[] = [
   "slug": "kasgunga",
   "constituencyCode": 251,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbita"
  },
  {
   "code": 1255,
@@ -10078,7 +11332,8 @@ export const wards: readonly Ward[] = [
   "slug": "gembe",
   "constituencyCode": 251,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbita"
  },
  {
   "code": 1256,
@@ -10086,7 +11341,8 @@ export const wards: readonly Ward[] = [
   "slug": "lambwe",
   "constituencyCode": 251,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mbita"
  },
  {
   "code": 1257,
@@ -10094,7 +11350,8 @@ export const wards: readonly Ward[] = [
   "slug": "gwassi-south",
   "constituencyCode": 252,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "suba"
  },
  {
   "code": 1258,
@@ -10102,7 +11359,8 @@ export const wards: readonly Ward[] = [
   "slug": "gwassi-north",
   "constituencyCode": 252,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "suba"
  },
  {
   "code": 1259,
@@ -10110,7 +11368,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaksingri-west",
   "constituencyCode": 252,
   "countyCode": 43,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "suba"
  },
  {
   "code": 1260,
@@ -10120,7 +11379,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 43,
   "aliases": [
    "Ruma-Kaksingri"
-  ]
+  ],
+  "subCounty": "suba"
  },
  {
   "code": 1261,
@@ -10128,7 +11388,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-kamagambo",
   "constituencyCode": 253,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rongo"
  },
  {
   "code": 1262,
@@ -10136,7 +11397,8 @@ export const wards: readonly Ward[] = [
   "slug": "central-kamagambo",
   "constituencyCode": 253,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rongo"
  },
  {
   "code": 1263,
@@ -10144,7 +11406,8 @@ export const wards: readonly Ward[] = [
   "slug": "east-kamagambo",
   "constituencyCode": 253,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rongo"
  },
  {
   "code": 1264,
@@ -10152,7 +11415,8 @@ export const wards: readonly Ward[] = [
   "slug": "south-kamagambo",
   "constituencyCode": 253,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "rongo"
  },
  {
   "code": 1265,
@@ -10160,7 +11424,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-sakwa",
   "constituencyCode": 254,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "awendo"
  },
  {
   "code": 1266,
@@ -10168,7 +11433,8 @@ export const wards: readonly Ward[] = [
   "slug": "south-sakwa",
   "constituencyCode": 254,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "awendo"
  },
  {
   "code": 1267,
@@ -10176,7 +11442,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-sakwa",
   "constituencyCode": 254,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "awendo"
  },
  {
   "code": 1268,
@@ -10184,7 +11451,8 @@ export const wards: readonly Ward[] = [
   "slug": "central-sakwa",
   "constituencyCode": 254,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "awendo"
  },
  {
   "code": 1269,
@@ -10192,7 +11460,8 @@ export const wards: readonly Ward[] = [
   "slug": "god-jope",
   "constituencyCode": 255,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "suna-east"
  },
  {
   "code": 1270,
@@ -10200,7 +11469,8 @@ export const wards: readonly Ward[] = [
   "slug": "suna-central",
   "constituencyCode": 255,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "suna-east"
  },
  {
   "code": 1271,
@@ -10208,7 +11478,8 @@ export const wards: readonly Ward[] = [
   "slug": "kakrao",
   "constituencyCode": 255,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "suna-east"
  },
  {
   "code": 1272,
@@ -10216,7 +11487,8 @@ export const wards: readonly Ward[] = [
   "slug": "kwa",
   "constituencyCode": 255,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "suna-east"
  },
  {
   "code": 1273,
@@ -10224,7 +11496,8 @@ export const wards: readonly Ward[] = [
   "slug": "wiga",
   "constituencyCode": 256,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "suna-west"
  },
  {
   "code": 1274,
@@ -10232,7 +11505,8 @@ export const wards: readonly Ward[] = [
   "slug": "wasweta-ii",
   "constituencyCode": 256,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "suna-west"
  },
  {
   "code": 1275,
@@ -10240,7 +11514,8 @@ export const wards: readonly Ward[] = [
   "slug": "ragana-oruba",
   "constituencyCode": 256,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "suna-west"
  },
  {
   "code": 1276,
@@ -10248,7 +11523,8 @@ export const wards: readonly Ward[] = [
   "slug": "wasimbete",
   "constituencyCode": 256,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "suna-west"
  },
  {
   "code": 1277,
@@ -10256,7 +11532,8 @@ export const wards: readonly Ward[] = [
   "slug": "west-kanyamkago",
   "constituencyCode": 257,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "uriri"
  },
  {
   "code": 1278,
@@ -10264,7 +11541,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-kanyamkago",
   "constituencyCode": 257,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "uriri"
  },
  {
   "code": 1279,
@@ -10272,7 +11550,8 @@ export const wards: readonly Ward[] = [
   "slug": "central-kanyamkago",
   "constituencyCode": 257,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "uriri"
  },
  {
   "code": 1280,
@@ -10280,7 +11559,8 @@ export const wards: readonly Ward[] = [
   "slug": "south-kanyamkago",
   "constituencyCode": 257,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "uriri"
  },
  {
   "code": 1281,
@@ -10288,7 +11568,8 @@ export const wards: readonly Ward[] = [
   "slug": "east-kanyamkago",
   "constituencyCode": 257,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "uriri"
  },
  {
   "code": 1282,
@@ -10296,7 +11577,8 @@ export const wards: readonly Ward[] = [
   "slug": "kachieng",
   "constituencyCode": 258,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyatike"
  },
  {
   "code": 1283,
@@ -10304,7 +11586,8 @@ export const wards: readonly Ward[] = [
   "slug": "kanyasa",
   "constituencyCode": 258,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyatike"
  },
  {
   "code": 1284,
@@ -10312,7 +11595,8 @@ export const wards: readonly Ward[] = [
   "slug": "north-kadem",
   "constituencyCode": 258,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyatike"
  },
  {
   "code": 1285,
@@ -10320,7 +11604,8 @@ export const wards: readonly Ward[] = [
   "slug": "macalder-kanyarwanda",
   "constituencyCode": 258,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyatike"
  },
  {
   "code": 1286,
@@ -10328,7 +11613,8 @@ export const wards: readonly Ward[] = [
   "slug": "kaler",
   "constituencyCode": 258,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyatike"
  },
  {
   "code": 1287,
@@ -10336,7 +11622,8 @@ export const wards: readonly Ward[] = [
   "slug": "got-kachola",
   "constituencyCode": 258,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyatike"
  },
  {
   "code": 1288,
@@ -10344,7 +11631,8 @@ export const wards: readonly Ward[] = [
   "slug": "muhuru",
   "constituencyCode": 258,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyatike"
  },
  {
   "code": 1289,
@@ -10352,7 +11640,8 @@ export const wards: readonly Ward[] = [
   "slug": "bukira-east",
   "constituencyCode": 259,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuria-west"
  },
  {
   "code": 1290,
@@ -10360,7 +11649,8 @@ export const wards: readonly Ward[] = [
   "slug": "bukira-centrl-ikerege",
   "constituencyCode": 259,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuria-west"
  },
  {
   "code": 1291,
@@ -10368,7 +11658,8 @@ export const wards: readonly Ward[] = [
   "slug": "isibania",
   "constituencyCode": 259,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuria-west"
  },
  {
   "code": 1292,
@@ -10376,7 +11667,8 @@ export const wards: readonly Ward[] = [
   "slug": "makerero",
   "constituencyCode": 259,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuria-west"
  },
  {
   "code": 1293,
@@ -10384,7 +11676,8 @@ export const wards: readonly Ward[] = [
   "slug": "masaba",
   "constituencyCode": 259,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuria-west"
  },
  {
   "code": 1294,
@@ -10392,7 +11685,8 @@ export const wards: readonly Ward[] = [
   "slug": "tagare",
   "constituencyCode": 259,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuria-west"
  },
  {
   "code": 1295,
@@ -10400,7 +11694,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyamosense-komosoko",
   "constituencyCode": 259,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuria-west"
  },
  {
   "code": 1296,
@@ -10408,7 +11703,8 @@ export const wards: readonly Ward[] = [
   "slug": "gokeharaka-getambwega",
   "constituencyCode": 260,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuria-east"
  },
  {
   "code": 1297,
@@ -10416,7 +11712,8 @@ export const wards: readonly Ward[] = [
   "slug": "ntimaru-west",
   "constituencyCode": 260,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuria-east"
  },
  {
   "code": 1298,
@@ -10424,7 +11721,8 @@ export const wards: readonly Ward[] = [
   "slug": "ntimaru-east",
   "constituencyCode": 260,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuria-east"
  },
  {
   "code": 1299,
@@ -10432,7 +11730,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyabasi-east",
   "constituencyCode": 260,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuria-east"
  },
  {
   "code": 1300,
@@ -10440,7 +11739,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyabasi-west",
   "constituencyCode": 260,
   "countyCode": 44,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kuria-east"
  },
  {
   "code": 1301,
@@ -10448,7 +11748,8 @@ export const wards: readonly Ward[] = [
   "slug": "bomariba",
   "constituencyCode": 261,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bonchari"
  },
  {
   "code": 1302,
@@ -10456,7 +11757,8 @@ export const wards: readonly Ward[] = [
   "slug": "bogiakumu",
   "constituencyCode": 261,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bonchari"
  },
  {
   "code": 1303,
@@ -10464,7 +11766,8 @@ export const wards: readonly Ward[] = [
   "slug": "bomorenda",
   "constituencyCode": 261,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bonchari"
  },
  {
   "code": 1304,
@@ -10472,7 +11775,8 @@ export const wards: readonly Ward[] = [
   "slug": "riana",
   "constituencyCode": 261,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bonchari"
  },
  {
   "code": 1305,
@@ -10480,7 +11784,8 @@ export const wards: readonly Ward[] = [
   "slug": "tabaka",
   "constituencyCode": 262,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "south-mugirango"
  },
  {
   "code": 1306,
@@ -10488,7 +11793,8 @@ export const wards: readonly Ward[] = [
   "slug": "boikanga",
   "constituencyCode": 262,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "south-mugirango"
  },
  {
   "code": 1307,
@@ -10496,7 +11802,8 @@ export const wards: readonly Ward[] = [
   "slug": "bogetenga",
   "constituencyCode": 262,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "south-mugirango"
  },
  {
   "code": 1308,
@@ -10504,7 +11811,8 @@ export const wards: readonly Ward[] = [
   "slug": "borabu-chitago",
   "constituencyCode": 262,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "south-mugirango"
  },
  {
   "code": 1309,
@@ -10512,7 +11820,8 @@ export const wards: readonly Ward[] = [
   "slug": "moticho",
   "constituencyCode": 262,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "south-mugirango"
  },
  {
   "code": 1310,
@@ -10520,7 +11829,8 @@ export const wards: readonly Ward[] = [
   "slug": "getenga",
   "constituencyCode": 262,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "south-mugirango"
  },
  {
   "code": 1311,
@@ -10528,7 +11838,8 @@ export const wards: readonly Ward[] = [
   "slug": "bombaba-borabu",
   "constituencyCode": 263,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomachoge-borabu"
  },
  {
   "code": 1312,
@@ -10536,7 +11847,8 @@ export const wards: readonly Ward[] = [
   "slug": "boochi-borabu",
   "constituencyCode": 263,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomachoge-borabu"
  },
  {
   "code": 1313,
@@ -10544,7 +11856,8 @@ export const wards: readonly Ward[] = [
   "slug": "bokimonge",
   "constituencyCode": 263,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomachoge-borabu"
  },
  {
   "code": 1314,
@@ -10552,7 +11865,8 @@ export const wards: readonly Ward[] = [
   "slug": "magenche",
   "constituencyCode": 263,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomachoge-borabu"
  },
  {
   "code": 1315,
@@ -10560,7 +11874,8 @@ export const wards: readonly Ward[] = [
   "slug": "masige-west",
   "constituencyCode": 264,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bobasi"
  },
  {
   "code": 1316,
@@ -10568,7 +11883,8 @@ export const wards: readonly Ward[] = [
   "slug": "masige-east",
   "constituencyCode": 264,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bobasi"
  },
  {
   "code": 1317,
@@ -10578,7 +11894,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 45,
   "aliases": [
    "Basi Central"
-  ]
+  ],
+  "subCounty": "bobasi"
  },
  {
   "code": 1318,
@@ -10586,7 +11903,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyacheki",
   "constituencyCode": 264,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bobasi"
  },
  {
   "code": 1319,
@@ -10596,7 +11914,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 45,
   "aliases": [
    "Basi Bogetaorio"
-  ]
+  ],
+  "subCounty": "bobasi"
  },
  {
   "code": 1320,
@@ -10604,7 +11923,8 @@ export const wards: readonly Ward[] = [
   "slug": "bobasi-chache",
   "constituencyCode": 264,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bobasi"
  },
  {
   "code": 1321,
@@ -10612,7 +11932,8 @@ export const wards: readonly Ward[] = [
   "slug": "sameta-mokwerero",
   "constituencyCode": 264,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bobasi"
  },
  {
   "code": 1322,
@@ -10620,7 +11941,8 @@ export const wards: readonly Ward[] = [
   "slug": "bobasi-boitangare",
   "constituencyCode": 264,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bobasi"
  },
  {
   "code": 1323,
@@ -10628,7 +11950,8 @@ export const wards: readonly Ward[] = [
   "slug": "majoge-basi",
   "constituencyCode": 265,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomachoge-chache"
  },
  {
   "code": 1324,
@@ -10636,7 +11959,8 @@ export const wards: readonly Ward[] = [
   "slug": "boochi-tendere",
   "constituencyCode": 265,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomachoge-chache"
  },
  {
   "code": 1325,
@@ -10644,7 +11968,8 @@ export const wards: readonly Ward[] = [
   "slug": "bosoti-sengera",
   "constituencyCode": 265,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "bomachoge-chache"
  },
  {
   "code": 1326,
@@ -10652,7 +11977,8 @@ export const wards: readonly Ward[] = [
   "slug": "ichuni",
   "constituencyCode": 266,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyaribari-masaba"
  },
  {
   "code": 1327,
@@ -10660,7 +11986,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyamasibi",
   "constituencyCode": 266,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyaribari-masaba"
  },
  {
   "code": 1328,
@@ -10668,7 +11995,8 @@ export const wards: readonly Ward[] = [
   "slug": "masimba",
   "constituencyCode": 266,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyaribari-masaba"
  },
  {
   "code": 1329,
@@ -10676,7 +12004,8 @@ export const wards: readonly Ward[] = [
   "slug": "gesusu",
   "constituencyCode": 266,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyaribari-masaba"
  },
  {
   "code": 1330,
@@ -10684,7 +12013,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiamokama",
   "constituencyCode": 266,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyaribari-masaba"
  },
  {
   "code": 1331,
@@ -10692,7 +12022,8 @@ export const wards: readonly Ward[] = [
   "slug": "bobaracho",
   "constituencyCode": 267,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyaribari-chache"
  },
  {
   "code": 1332,
@@ -10700,7 +12031,8 @@ export const wards: readonly Ward[] = [
   "slug": "kisii-central",
   "constituencyCode": 267,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitutu-chache-south"
  },
  {
   "code": 1333,
@@ -10708,7 +12040,8 @@ export const wards: readonly Ward[] = [
   "slug": "keumbu",
   "constituencyCode": 267,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyaribari-chache"
  },
  {
   "code": 1334,
@@ -10716,7 +12049,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiogoro",
   "constituencyCode": 267,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyaribari-chache"
  },
  {
   "code": 1335,
@@ -10724,7 +12058,8 @@ export const wards: readonly Ward[] = [
   "slug": "birongo",
   "constituencyCode": 267,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyaribari-chache"
  },
  {
   "code": 1336,
@@ -10732,7 +12067,8 @@ export const wards: readonly Ward[] = [
   "slug": "ibeno",
   "constituencyCode": 267,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyaribari-chache"
  },
  {
   "code": 1337,
@@ -10740,7 +12076,8 @@ export const wards: readonly Ward[] = [
   "slug": "monyerero",
   "constituencyCode": 268,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitutu-chache-north"
  },
  {
   "code": 1338,
@@ -10748,7 +12085,8 @@ export const wards: readonly Ward[] = [
   "slug": "sensi",
   "constituencyCode": 268,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitutu-chache-north"
  },
  {
   "code": 1339,
@@ -10756,7 +12094,8 @@ export const wards: readonly Ward[] = [
   "slug": "marani",
   "constituencyCode": 268,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitutu-chache-north"
  },
  {
   "code": 1340,
@@ -10764,7 +12103,8 @@ export const wards: readonly Ward[] = [
   "slug": "kegogi",
   "constituencyCode": 268,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitutu-chache-north"
  },
  {
   "code": 1341,
@@ -10772,7 +12112,8 @@ export const wards: readonly Ward[] = [
   "slug": "bogusero",
   "constituencyCode": 269,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitutu-chache-south"
  },
  {
   "code": 1342,
@@ -10780,7 +12121,8 @@ export const wards: readonly Ward[] = [
   "slug": "bogeka",
   "constituencyCode": 269,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitutu-chache-south"
  },
  {
   "code": 1343,
@@ -10788,7 +12130,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyakoe",
   "constituencyCode": 269,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitutu-chache-south"
  },
  {
   "code": 1344,
@@ -10796,7 +12139,8 @@ export const wards: readonly Ward[] = [
   "slug": "kitutu-central",
   "constituencyCode": 269,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": null
  },
  {
   "code": 1345,
@@ -10804,7 +12148,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyatieko",
   "constituencyCode": 269,
   "countyCode": 45,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kitutu-chache-south"
  },
  {
   "code": 1346,
@@ -10812,7 +12157,8 @@ export const wards: readonly Ward[] = [
   "slug": "rigoma",
   "constituencyCode": 270,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "masaba-north"
  },
  {
   "code": 1347,
@@ -10820,7 +12166,8 @@ export const wards: readonly Ward[] = [
   "slug": "gachuba",
   "constituencyCode": 270,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "masaba-north"
  },
  {
   "code": 1348,
@@ -10828,7 +12175,8 @@ export const wards: readonly Ward[] = [
   "slug": "kemera",
   "constituencyCode": 270,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "manga"
  },
  {
   "code": 1349,
@@ -10836,7 +12184,8 @@ export const wards: readonly Ward[] = [
   "slug": "magombo",
   "constituencyCode": 270,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "manga"
  },
  {
   "code": 1350,
@@ -10844,7 +12193,8 @@ export const wards: readonly Ward[] = [
   "slug": "manga",
   "constituencyCode": 270,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "manga"
  },
  {
   "code": 1351,
@@ -10852,7 +12202,8 @@ export const wards: readonly Ward[] = [
   "slug": "gesima",
   "constituencyCode": 270,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "masaba-north"
  },
  {
   "code": 1352,
@@ -10860,7 +12211,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyamaiya",
   "constituencyCode": 271,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyamira"
  },
  {
   "code": 1353,
@@ -10868,7 +12220,8 @@ export const wards: readonly Ward[] = [
   "slug": "bogichora",
   "constituencyCode": 271,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyamira"
  },
  {
   "code": 1354,
@@ -10876,7 +12229,8 @@ export const wards: readonly Ward[] = [
   "slug": "bosamaro",
   "constituencyCode": 271,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyamira"
  },
  {
   "code": 1355,
@@ -10884,7 +12238,8 @@ export const wards: readonly Ward[] = [
   "slug": "bonyamatuta",
   "constituencyCode": 271,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyamira"
  },
  {
   "code": 1356,
@@ -10892,7 +12247,8 @@ export const wards: readonly Ward[] = [
   "slug": "township",
   "constituencyCode": 271,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyamira"
  },
  {
   "code": 1357,
@@ -10900,7 +12256,8 @@ export const wards: readonly Ward[] = [
   "slug": "itibo",
   "constituencyCode": 272,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyamira-north"
  },
  {
   "code": 1358,
@@ -10908,7 +12265,8 @@ export const wards: readonly Ward[] = [
   "slug": "bomwagamo",
   "constituencyCode": 272,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyamira-north"
  },
  {
   "code": 1359,
@@ -10916,7 +12274,8 @@ export const wards: readonly Ward[] = [
   "slug": "bokeira",
   "constituencyCode": 272,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyamira-north"
  },
  {
   "code": 1360,
@@ -10924,7 +12283,8 @@ export const wards: readonly Ward[] = [
   "slug": "magwagwa",
   "constituencyCode": 272,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyamira-north"
  },
  {
   "code": 1361,
@@ -10932,7 +12292,8 @@ export const wards: readonly Ward[] = [
   "slug": "ekerenyo",
   "constituencyCode": 272,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "nyamira-north"
  },
  {
   "code": 1362,
@@ -10940,7 +12301,8 @@ export const wards: readonly Ward[] = [
   "slug": "mekenene",
   "constituencyCode": 273,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "borabu"
  },
  {
   "code": 1363,
@@ -10948,7 +12310,8 @@ export const wards: readonly Ward[] = [
   "slug": "kiabonyoru",
   "constituencyCode": 273,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "borabu"
  },
  {
   "code": 1364,
@@ -10956,7 +12319,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyansiongo",
   "constituencyCode": 273,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "borabu"
  },
  {
   "code": 1365,
@@ -10964,7 +12328,8 @@ export const wards: readonly Ward[] = [
   "slug": "esise",
   "constituencyCode": 273,
   "countyCode": 46,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "borabu"
  },
  {
   "code": 1366,
@@ -10972,7 +12337,8 @@ export const wards: readonly Ward[] = [
   "slug": "kitisuru",
   "constituencyCode": 274,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "westlands"
  },
  {
   "code": 1367,
@@ -10980,7 +12346,8 @@ export const wards: readonly Ward[] = [
   "slug": "parklands-highridge",
   "constituencyCode": 274,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "westlands"
  },
  {
   "code": 1368,
@@ -10988,7 +12355,8 @@ export const wards: readonly Ward[] = [
   "slug": "karura",
   "constituencyCode": 274,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "westlands"
  },
  {
   "code": 1369,
@@ -10996,7 +12364,8 @@ export const wards: readonly Ward[] = [
   "slug": "kangemi",
   "constituencyCode": 274,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "westlands"
  },
  {
   "code": 1370,
@@ -11004,7 +12373,8 @@ export const wards: readonly Ward[] = [
   "slug": "mountain-view",
   "constituencyCode": 274,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "westlands"
  },
  {
   "code": 1371,
@@ -11012,7 +12382,8 @@ export const wards: readonly Ward[] = [
   "slug": "kilimani",
   "constituencyCode": 275,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dagoretti-north"
  },
  {
   "code": 1372,
@@ -11020,7 +12391,8 @@ export const wards: readonly Ward[] = [
   "slug": "kawangware",
   "constituencyCode": 275,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dagoretti-north"
  },
  {
   "code": 1373,
@@ -11028,7 +12400,8 @@ export const wards: readonly Ward[] = [
   "slug": "gatina",
   "constituencyCode": 275,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dagoretti-north"
  },
  {
   "code": 1374,
@@ -11036,7 +12409,8 @@ export const wards: readonly Ward[] = [
   "slug": "kileleshwa",
   "constituencyCode": 275,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dagoretti-north"
  },
  {
   "code": 1375,
@@ -11044,7 +12418,8 @@ export const wards: readonly Ward[] = [
   "slug": "kabiro",
   "constituencyCode": 275,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dagoretti-north"
  },
  {
   "code": 1376,
@@ -11052,7 +12427,8 @@ export const wards: readonly Ward[] = [
   "slug": "mutuini",
   "constituencyCode": 276,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dagoretti-south"
  },
  {
   "code": 1377,
@@ -11060,7 +12436,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngando",
   "constituencyCode": 276,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dagoretti-south"
  },
  {
   "code": 1378,
@@ -11068,7 +12445,8 @@ export const wards: readonly Ward[] = [
   "slug": "riruta",
   "constituencyCode": 276,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dagoretti-south"
  },
  {
   "code": 1379,
@@ -11076,7 +12454,8 @@ export const wards: readonly Ward[] = [
   "slug": "uthiru-ruthimitu",
   "constituencyCode": 276,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dagoretti-south"
  },
  {
   "code": 1380,
@@ -11084,7 +12463,8 @@ export const wards: readonly Ward[] = [
   "slug": "waithaka",
   "constituencyCode": 276,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "dagoretti-south"
  },
  {
   "code": 1381,
@@ -11092,7 +12472,8 @@ export const wards: readonly Ward[] = [
   "slug": "karen",
   "constituencyCode": 277,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "langata"
  },
  {
   "code": 1382,
@@ -11100,7 +12481,8 @@ export const wards: readonly Ward[] = [
   "slug": "nairobi-west",
   "constituencyCode": 277,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "langata"
  },
  {
   "code": 1383,
@@ -11110,7 +12492,8 @@ export const wards: readonly Ward[] = [
   "countyCode": 47,
   "aliases": [
    "Mugumu-Ini"
-  ]
+  ],
+  "subCounty": "langata"
  },
  {
   "code": 1384,
@@ -11118,7 +12501,8 @@ export const wards: readonly Ward[] = [
   "slug": "south-c",
   "constituencyCode": 277,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "langata"
  },
  {
   "code": 1385,
@@ -11126,7 +12510,8 @@ export const wards: readonly Ward[] = [
   "slug": "nyayo-highrise",
   "constituencyCode": 277,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "langata"
  },
  {
   "code": 1386,
@@ -11134,7 +12519,8 @@ export const wards: readonly Ward[] = [
   "slug": "laini-saba",
   "constituencyCode": 278,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibra"
  },
  {
   "code": 1387,
@@ -11142,7 +12528,8 @@ export const wards: readonly Ward[] = [
   "slug": "lindi",
   "constituencyCode": 278,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibra"
  },
  {
   "code": 1388,
@@ -11150,7 +12537,8 @@ export const wards: readonly Ward[] = [
   "slug": "makina",
   "constituencyCode": 278,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibra"
  },
  {
   "code": 1389,
@@ -11158,7 +12546,8 @@ export const wards: readonly Ward[] = [
   "slug": "woodley-kenyatta-golf-course",
   "constituencyCode": 278,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibra"
  },
  {
   "code": 1390,
@@ -11166,7 +12555,8 @@ export const wards: readonly Ward[] = [
   "slug": "sarangombe",
   "constituencyCode": 278,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kibra"
  },
  {
   "code": 1391,
@@ -11174,7 +12564,8 @@ export const wards: readonly Ward[] = [
   "slug": "githurai",
   "constituencyCode": 279,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "roysambu"
  },
  {
   "code": 1392,
@@ -11182,7 +12573,8 @@ export const wards: readonly Ward[] = [
   "slug": "kahawa-west",
   "constituencyCode": 279,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "roysambu"
  },
  {
   "code": 1393,
@@ -11190,7 +12582,8 @@ export const wards: readonly Ward[] = [
   "slug": "zimmerman",
   "constituencyCode": 279,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "roysambu"
  },
  {
   "code": 1394,
@@ -11198,7 +12591,8 @@ export const wards: readonly Ward[] = [
   "slug": "roysambu",
   "constituencyCode": 279,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "roysambu"
  },
  {
   "code": 1395,
@@ -11206,7 +12600,8 @@ export const wards: readonly Ward[] = [
   "slug": "kahawa",
   "constituencyCode": 279,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "roysambu"
  },
  {
   "code": 1396,
@@ -11214,7 +12609,8 @@ export const wards: readonly Ward[] = [
   "slug": "claycity",
   "constituencyCode": 280,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kasarani"
  },
  {
   "code": 1397,
@@ -11222,7 +12618,8 @@ export const wards: readonly Ward[] = [
   "slug": "mwiki",
   "constituencyCode": 280,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kasarani"
  },
  {
   "code": 1398,
@@ -11230,7 +12627,8 @@ export const wards: readonly Ward[] = [
   "slug": "kasarani",
   "constituencyCode": 280,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kasarani"
  },
  {
   "code": 1399,
@@ -11238,7 +12636,8 @@ export const wards: readonly Ward[] = [
   "slug": "njiru",
   "constituencyCode": 280,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kasarani"
  },
  {
   "code": 1400,
@@ -11246,7 +12645,8 @@ export const wards: readonly Ward[] = [
   "slug": "ruai",
   "constituencyCode": 280,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kasarani"
  },
  {
   "code": 1401,
@@ -11254,7 +12654,8 @@ export const wards: readonly Ward[] = [
   "slug": "baba-dogo",
   "constituencyCode": 281,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ruaraka"
  },
  {
   "code": 1402,
@@ -11262,7 +12663,8 @@ export const wards: readonly Ward[] = [
   "slug": "utalii",
   "constituencyCode": 281,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ruaraka"
  },
  {
   "code": 1403,
@@ -11270,7 +12672,8 @@ export const wards: readonly Ward[] = [
   "slug": "mathare-north",
   "constituencyCode": 281,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ruaraka"
  },
  {
   "code": 1404,
@@ -11278,7 +12681,8 @@ export const wards: readonly Ward[] = [
   "slug": "lucky-summer",
   "constituencyCode": 281,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ruaraka"
  },
  {
   "code": 1405,
@@ -11286,7 +12690,8 @@ export const wards: readonly Ward[] = [
   "slug": "korogocho",
   "constituencyCode": 281,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "ruaraka"
  },
  {
   "code": 1406,
@@ -11294,7 +12699,8 @@ export const wards: readonly Ward[] = [
   "slug": "imara-daima",
   "constituencyCode": 282,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-south"
  },
  {
   "code": 1407,
@@ -11302,7 +12708,8 @@ export const wards: readonly Ward[] = [
   "slug": "kwa-njenga",
   "constituencyCode": 282,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-south"
  },
  {
   "code": 1408,
@@ -11310,7 +12717,8 @@ export const wards: readonly Ward[] = [
   "slug": "kwa-reuben",
   "constituencyCode": 282,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-south"
  },
  {
   "code": 1409,
@@ -11318,7 +12726,8 @@ export const wards: readonly Ward[] = [
   "slug": "pipeline",
   "constituencyCode": 282,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-south"
  },
  {
   "code": 1410,
@@ -11326,7 +12735,8 @@ export const wards: readonly Ward[] = [
   "slug": "kware",
   "constituencyCode": 282,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-south"
  },
  {
   "code": 1411,
@@ -11334,7 +12744,8 @@ export const wards: readonly Ward[] = [
   "slug": "kariobangi-north",
   "constituencyCode": 283,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-north"
  },
  {
   "code": 1412,
@@ -11342,7 +12753,8 @@ export const wards: readonly Ward[] = [
   "slug": "dandora-area-i",
   "constituencyCode": 283,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-north"
  },
  {
   "code": 1413,
@@ -11350,7 +12762,8 @@ export const wards: readonly Ward[] = [
   "slug": "dandora-area-ii",
   "constituencyCode": 283,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-north"
  },
  {
   "code": 1414,
@@ -11358,7 +12771,8 @@ export const wards: readonly Ward[] = [
   "slug": "dandora-area-iii",
   "constituencyCode": 283,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-north"
  },
  {
   "code": 1415,
@@ -11366,7 +12780,8 @@ export const wards: readonly Ward[] = [
   "slug": "dandora-area-iv",
   "constituencyCode": 283,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-north"
  },
  {
   "code": 1416,
@@ -11374,7 +12789,8 @@ export const wards: readonly Ward[] = [
   "slug": "kayole-north",
   "constituencyCode": 284,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-central"
  },
  {
   "code": 1417,
@@ -11382,7 +12798,8 @@ export const wards: readonly Ward[] = [
   "slug": "kayole-central",
   "constituencyCode": 284,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-central"
  },
  {
   "code": 1418,
@@ -11390,7 +12807,8 @@ export const wards: readonly Ward[] = [
   "slug": "kayole-south",
   "constituencyCode": 284,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-central"
  },
  {
   "code": 1419,
@@ -11398,7 +12816,8 @@ export const wards: readonly Ward[] = [
   "slug": "komarock",
   "constituencyCode": 284,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-central"
  },
  {
   "code": 1420,
@@ -11406,7 +12825,8 @@ export const wards: readonly Ward[] = [
   "slug": "matopeni-spring-valley",
   "constituencyCode": 284,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-central"
  },
  {
   "code": 1421,
@@ -11414,7 +12834,8 @@ export const wards: readonly Ward[] = [
   "slug": "upper-savannah",
   "constituencyCode": 285,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-east"
  },
  {
   "code": 1422,
@@ -11422,7 +12843,8 @@ export const wards: readonly Ward[] = [
   "slug": "lower-savannah",
   "constituencyCode": 285,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-east"
  },
  {
   "code": 1423,
@@ -11430,7 +12852,8 @@ export const wards: readonly Ward[] = [
   "slug": "embakasi",
   "constituencyCode": 285,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-east"
  },
  {
   "code": 1424,
@@ -11438,7 +12861,8 @@ export const wards: readonly Ward[] = [
   "slug": "utawala",
   "constituencyCode": 285,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-east"
  },
  {
   "code": 1425,
@@ -11446,7 +12870,8 @@ export const wards: readonly Ward[] = [
   "slug": "mihango",
   "constituencyCode": 285,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-east"
  },
  {
   "code": 1426,
@@ -11454,7 +12879,8 @@ export const wards: readonly Ward[] = [
   "slug": "umoja-i",
   "constituencyCode": 286,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-west"
  },
  {
   "code": 1427,
@@ -11462,7 +12888,8 @@ export const wards: readonly Ward[] = [
   "slug": "umoja-ii",
   "constituencyCode": 286,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-west"
  },
  {
   "code": 1428,
@@ -11470,7 +12897,8 @@ export const wards: readonly Ward[] = [
   "slug": "mowlem",
   "constituencyCode": 286,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-west"
  },
  {
   "code": 1429,
@@ -11478,7 +12906,8 @@ export const wards: readonly Ward[] = [
   "slug": "kariobangi-south",
   "constituencyCode": 286,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "embakasi-west"
  },
  {
   "code": 1430,
@@ -11486,7 +12915,8 @@ export const wards: readonly Ward[] = [
   "slug": "makongeni",
   "constituencyCode": 287,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "makadara"
  },
  {
   "code": 1431,
@@ -11494,7 +12924,8 @@ export const wards: readonly Ward[] = [
   "slug": "maringo-hamza",
   "constituencyCode": 287,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "makadara"
  },
  {
   "code": 1432,
@@ -11502,7 +12933,8 @@ export const wards: readonly Ward[] = [
   "slug": "harambee",
   "constituencyCode": 287,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "makadara"
  },
  {
   "code": 1433,
@@ -11510,7 +12942,8 @@ export const wards: readonly Ward[] = [
   "slug": "viwandani",
   "constituencyCode": 287,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "makadara"
  },
  {
   "code": 1434,
@@ -11518,7 +12951,8 @@ export const wards: readonly Ward[] = [
   "slug": "pumwani",
   "constituencyCode": 288,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kamukunji"
  },
  {
   "code": 1435,
@@ -11526,7 +12960,8 @@ export const wards: readonly Ward[] = [
   "slug": "eastleigh-north",
   "constituencyCode": 288,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kamukunji"
  },
  {
   "code": 1436,
@@ -11534,7 +12969,8 @@ export const wards: readonly Ward[] = [
   "slug": "eastleigh-south",
   "constituencyCode": 288,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kamukunji"
  },
  {
   "code": 1437,
@@ -11542,7 +12978,8 @@ export const wards: readonly Ward[] = [
   "slug": "airbase",
   "constituencyCode": 288,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kamukunji"
  },
  {
   "code": 1438,
@@ -11550,7 +12987,8 @@ export const wards: readonly Ward[] = [
   "slug": "california",
   "constituencyCode": 288,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "kamukunji"
  },
  {
   "code": 1439,
@@ -11558,7 +12996,8 @@ export const wards: readonly Ward[] = [
   "slug": "nairobi-central",
   "constituencyCode": 289,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "starehe"
  },
  {
   "code": 1440,
@@ -11566,7 +13005,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngara",
   "constituencyCode": 289,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "starehe"
  },
  {
   "code": 1441,
@@ -11574,7 +13014,8 @@ export const wards: readonly Ward[] = [
   "slug": "ziwani-kariokor",
   "constituencyCode": 289,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "starehe"
  },
  {
   "code": 1442,
@@ -11582,7 +13023,8 @@ export const wards: readonly Ward[] = [
   "slug": "pangani",
   "constituencyCode": 289,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "starehe"
  },
  {
   "code": 1443,
@@ -11590,7 +13032,8 @@ export const wards: readonly Ward[] = [
   "slug": "landimawe",
   "constituencyCode": 289,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "starehe"
  },
  {
   "code": 1444,
@@ -11598,7 +13041,8 @@ export const wards: readonly Ward[] = [
   "slug": "nairobi-south",
   "constituencyCode": 289,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "starehe"
  },
  {
   "code": 1445,
@@ -11606,7 +13050,8 @@ export const wards: readonly Ward[] = [
   "slug": "hospital",
   "constituencyCode": 290,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mathare"
  },
  {
   "code": 1446,
@@ -11614,7 +13059,8 @@ export const wards: readonly Ward[] = [
   "slug": "mabatini",
   "constituencyCode": 290,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mathare"
  },
  {
   "code": 1447,
@@ -11622,7 +13068,8 @@ export const wards: readonly Ward[] = [
   "slug": "huruma",
   "constituencyCode": 290,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mathare"
  },
  {
   "code": 1448,
@@ -11630,7 +13077,8 @@ export const wards: readonly Ward[] = [
   "slug": "ngei",
   "constituencyCode": 290,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mathare"
  },
  {
   "code": 1449,
@@ -11638,7 +13086,8 @@ export const wards: readonly Ward[] = [
   "slug": "mlango-kubwa",
   "constituencyCode": 290,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mathare"
  },
  {
   "code": 1450,
@@ -11646,6 +13095,7 @@ export const wards: readonly Ward[] = [
   "slug": "kiamaiko",
   "constituencyCode": 290,
   "countyCode": 47,
-  "aliases": []
+  "aliases": [],
+  "subCounty": "mathare"
  }
 ]

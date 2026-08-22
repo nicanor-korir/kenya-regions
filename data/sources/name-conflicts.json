@@ -138,5 +138,72 @@
       "hierarchy": "Pangani",
       "shapefile": "Ziwani/Kariokor"
     }
-  ]
+  ],
+  "unmappedToSubCounty": {
+    "_comment": "Wards the KNBS sub-county listing spells differently enough that no confident match was possible. Their subCounty is null rather than guessed.",
+    "count": 12,
+    "wards": [
+      {
+        "code": 97,
+        "name": "Bura",
+        "countyCode": 4
+      },
+      {
+        "code": 375,
+        "name": "Ndithini",
+        "countyCode": 16
+      },
+      {
+        "code": 396,
+        "name": "Muthwani",
+        "countyCode": 16
+      },
+      {
+        "code": 401,
+        "name": "Machakos Central",
+        "countyCode": 16
+      },
+      {
+        "code": 416,
+        "name": "Kalawa",
+        "countyCode": 17
+      },
+      {
+        "code": 484,
+        "name": "Iria-Ini",
+        "countyCode": 19
+      },
+      {
+        "code": 564,
+        "name": "Township",
+        "countyCode": 22
+      },
+      {
+        "code": 585,
+        "name": "Township",
+        "countyCode": 22
+      },
+      {
+        "code": 813,
+        "name": "Kinamba",
+        "countyCode": 31
+      },
+      {
+        "code": 840,
+        "name": "Maiella",
+        "countyCode": 32
+      },
+      {
+        "code": 876,
+        "name": "Biashara",
+        "countyCode": 32
+      },
+      {
+        "code": 1344,
+        "name": "Kitutu Central",
+        "countyCode": 45
+      }
+    ]
+  },
+  "unmatchedSubCountyRows": 9
 }

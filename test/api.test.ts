@@ -20,7 +20,6 @@ import {
   requireCounty,
   search,
   wardOptions,
-  GetCounties,
 } from '../src/index.js'
 
 describe('getCounty', () => {
@@ -214,14 +213,6 @@ describe('ambiguous ward names', () => {
     expect(getWard(1)!.name).toBe('Port Reitz')
     expect(getWard(1450)).toBeDefined()
     expect(getWard(1451)).toBeUndefined()
-  })
-})
-
-describe('v1 compatibility', () => {
-  it('still answers GetCounties, now without a network call', async () => {
-    const result = await GetCounties()
-    expect(result).toHaveLength(47)
-    expect(result[0]!.name).toBe('Mombasa')
   })
 })
 

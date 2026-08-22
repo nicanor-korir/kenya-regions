@@ -75,6 +75,16 @@
         "default": "./dist/wards.cjs"
       }
     },
+    "./subcounties": {
+      "import": {
+        "types": "./dist/subcounties.d.ts",
+        "default": "./dist/subcounties.js"
+      },
+      "require": {
+        "types": "./dist/subcounties.d.cts",
+        "default": "./dist/subcounties.cjs"
+      }
+    },
     "./provinces": {
       "import": {
         "types": "./dist/provinces.d.ts",

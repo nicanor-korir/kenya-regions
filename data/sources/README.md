@@ -10,10 +10,11 @@ generated except `name-conflicts.json`.
 | `iebc-hierarchy.csv` | IEBC county / constituency / ward listing, 1450 rows | The 47/290/1450 backbone and all three code sets |
 | `cod-ab-admin1.csv` | OCHA Common Operational Dataset, admin level 1 | County p-codes, areas, centroids |
 | `cod-ab-admin2.csv` | OCHA Common Operational Dataset, admin level 2 | Constituency p-codes, areas, centroids, former names |
+| `knbs-subcounty-wards.csv` | KNBS sub-county listing against ward names, 1450 rows | The 301 administrative sub-counties and the ward mapping |
 | `iebc-shapefile-wards.csv` | Ward names from the 2013 IEBC boundary shapefile | Independent cross-check of ward names |
 | `county-reference.csv` | Hand-maintained county attributes | Capital, former province, area, 2009 and 2019 census, ASAL class |
 | `economic-blocs.json` | Bloc membership per IGRTC / Council of Governors | Regional economic blocs |
-| `name-overrides.json` | Manual corrections, each with a reason | Fixes truncated names, drops bad aliases |
+| `name-overrides.json` | Manual corrections, each with a reason | Fixes truncated names, drops bad aliases, repairs sub-county source rows |
 | `name-conflicts.json` | **Generated.** Unresolved cross-source disagreements | Transparency, not consumed by the build |
 
 Upstream references:

@@ -3,8 +3,9 @@
  *
  * The devolved hierarchy (47 counties -> 290 constituencies -> 1450 wards) is
  * the backbone. Alongside it sit the schemes that do not nest into it: the 8
- * former provinces, ISO 3166-2 codes, OCHA place codes, the regional economic
- * blocs, and the ASAL classification. See the README for what each one is and
+ * former provinces, the national government's 301 sub-counties, ISO 3166-2
+ * codes, OCHA place codes, the regional economic blocs, and the ASAL
+ * classification. See the README for what each one is and
  * when it is the right one to use.
  *
  * Above all of that sits `kenya`, the country record: the codes the rest of
@@ -47,6 +48,13 @@ export {
 } from './wards.js'
 
 export {
+  getSubCounty,
+  getWardCodesBySubCounty,
+  requireSubCounty,
+  subCounties,
+} from './subcounties.js'
+
+export {
   formatCurrency,
   isPostalCode,
   kenya,
@@ -69,8 +77,12 @@ import {
   getWardsByConstituency as wardsByConstituencyCode,
   getWardsByCounty as wardsByCountyCode,
 } from './wards.js'
+import {
+  getSubCountiesByCounty as subCountiesByCountyCode,
+  getSubCounty,
+} from './subcounties.js'
 import type { Query } from './internal/lookup.js'
-import type { Constituency, County, Ward } from './types.js'
+import type { Constituency, County, SubCounty, Ward } from './types.js'
 
 /* -------------------------------------------------------------- children --- */
 
@@ -97,6 +109,36 @@ export function getWardsByConstituency(query: Query | Constituency): Ward[] {
 export function getWardsByCounty(query: Query | County): Ward[] {
   const county = typeof query === 'object' ? query : getCounty(query)
   return county ? wardsByCountyCode(county.code) : []
+}
+
+/**
+ * National government sub-counties inside a county, identified any way
+ * {@link getCounty} accepts.
+ *
+ * These are not constituencies — see {@link SubCounty}.
+ */
+export function getSubCountiesByCounty(query: Query | County): SubCounty[] {
+  const county = typeof query === 'object' ? query : getCounty(query)
+  return county ? subCountiesByCountyCode(county.code) : []
+}
+
+/**
+ * Wards in a sub-county, as full records rather than codes.
+ *
+ * Twelve of the 1450 wards have no sub-county assigned, so the sub-county
+ * lists do not sum to 1450. Use {@link getWardsByCounty} when you need every
+ * ward in a county.
+ */
+export function getWardsBySubCounty(query: string): Ward[] {
+  const sub = getSubCounty(query)
+  if (!sub) return []
+  return sub.wardCodes.map((code) => getWard(code)).filter((w): w is Ward => !!w)
+}
+
+/** The sub-county a ward falls in, if one is assigned. */
+export function getSubCountyOfWard(query: Query): SubCounty | undefined {
+  const ward = getWard(query)
+  return ward?.subCounty ? getSubCounty(ward.subCounty) : undefined
 }
 
 /* ------------------------------------------------------------- parents --- */
@@ -178,16 +220,4 @@ export function fromPcode(pcode: string): County | Constituency | undefined {
   if (/^KE\d{3}$/.test(trimmed)) return getCounty(trimmed)
   if (/^KE\d{6}$/.test(trimmed)) return getConstituency(trimmed)
   return undefined
-}
-
-/* ---------------------------------------------------------------- v1 --- */
-
-/**
- * @deprecated Kept so v1 code keeps working. v1 fetched this from a hosted API
- * that no longer exists; the data is now bundled, so use {@link getTree} and
- * drop the `await`.
- */
-export async function GetCounties(): Promise<County[]> {
-  const { getTree } = await import('./tree.js')
-  return getTree()
 }

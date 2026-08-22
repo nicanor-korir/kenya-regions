@@ -122,6 +122,7 @@ const hierarchy = readCsv('iebc-hierarchy.csv')
 const cod1 = readCsv('cod-ab-admin1.csv')
 const cod2 = readCsv('cod-ab-admin2.csv')
 const shapefileWards = readCsv('iebc-shapefile-wards.csv')
+const subCountyWards = readCsv('knbs-subcounty-wards.csv')
 const blocSrc = JSON.parse(readFileSync(src('economic-blocs.json'), 'utf8'))
 const overrides = JSON.parse(readFileSync(src('name-overrides.json'), 'utf8'))
 const rejectedAliases = overrides._rejectedAliases
@@ -286,6 +287,96 @@ const wards = hierarchy
   })
   .sort((a, b) => a.code - b.code)
 
+/* ------------------------------------------------------- sub-counties --- */
+
+/*
+ * The national government's sub-counties: a second, parallel hierarchy of
+ * county -> sub-county -> ward, run by Deputy County Commissioners. It is NOT
+ * the constituency, even though counties call constituencies "sub-counties"
+ * too — 249 of the 302 share a name with a constituency, and the other 53 do
+ * not, which is exactly what makes conflating the two dangerous.
+ *
+ * The source lists sub-counties against ward names rather than ward codes, so
+ * the wards are matched by name within their county, reusing the same
+ * tolerance the ward alias matching uses. Anything that cannot be matched
+ * confidently is left unassigned rather than guessed at.
+ */
+const wardsByCountyName = new Map()
+for (const ward of wards) {
+  const countyName = key(counties.find((c) => c.code === ward.countyCode).name)
+  if (!wardsByCountyName.has(countyName)) wardsByCountyName.set(countyName, [])
+  wardsByCountyName.get(countyName).push(ward)
+}
+
+const subCountyOfWard = new Map()
+const unmatchedSubCountyRows = []
+
+// Apply the reviewed corrections to the raw rows before matching.
+const rowFixes = new Map(
+  (overrides.subCountyRows?.fixes ?? []).map((f) => [
+    `${key(f.county)}|${key(f.subcounty)}|${key(f.ward)}`,
+    f,
+  ]),
+)
+
+for (const raw of subCountyWards) {
+  const fix = rowFixes.get(`${key(raw.county)}|${key(raw.subcounty)}|${key(raw.ward)}`)
+  const row = fix
+    ? { ...raw, subcounty: fix.setSubcounty ?? raw.subcounty, ward: fix.setWard ?? raw.ward }
+    : raw
+  const pool = wardsByCountyName.get(key(row.county)) ?? []
+  const candidates = [...pool].map((ward) => {
+    const names = [ward.name, ...ward.aliases]
+    let best = Infinity
+    for (const name of names) {
+      if (key(name) === key(row.ward)) best = 0
+      else if (sameName(name, row.ward)) best = Math.min(best, 0.5)
+    }
+    return { ward, score: best }
+  })
+  candidates.sort((a, b) => a.score - b.score)
+  const hit = candidates[0]
+  if (!hit || hit.score === Infinity) {
+    unmatchedSubCountyRows.push(row)
+  } else if (!subCountyOfWard.has(hit.ward.code)) {
+    subCountyOfWard.set(hit.ward.code, row.subcounty)
+  }
+}
+
+const constituencyByKey = new Map(constituencies.map((k) => [key(k.name), k]))
+const subCountyGroups = new Map()
+
+for (const [wardCode, name] of subCountyOfWard) {
+  const ward = wards.find((w) => w.code === wardCode)
+  const slug = slugify(name)
+  if (!subCountyGroups.has(slug)) {
+    const constituency = constituencyByKey.get(key(name))
+    subCountyGroups.set(slug, {
+      slug,
+      name,
+      countyCode: ward.countyCode,
+      // Where the administrative sub-county shares a name with a constituency,
+      // link them — but they remain separate units.
+      constituencyCode: constituency && constituency.countyCode === ward.countyCode
+        ? constituency.code
+        : null,
+      wardCodes: [],
+    })
+  }
+  subCountyGroups.get(slug).wardCodes.push(wardCode)
+}
+
+const subCounties = [...subCountyGroups.values()]
+  .map((s) => ({ ...s, wardCodes: s.wardCodes.sort((a, b) => a - b) }))
+  .sort((a, b) => a.countyCode - b.countyCode || a.name.localeCompare(b.name))
+
+// Attach the back-reference to each ward.
+for (const ward of wards) {
+  ward.subCounty = subCountyOfWard.has(ward.code)
+    ? slugify(subCountyOfWard.get(ward.code))
+    : null
+}
+
 /* ----------------------------------------------------------- overlays --- */
 
 const countyByName = new Map(counties.map((c) => [c.name, c]))
@@ -368,6 +459,38 @@ for (const k of constituencies) {
 const sum = (year) => counties.reduce((t, c) => t + c.population[year], 0)
 check(sum(2019) === 47564296, `2019 population total is ${sum(2019)}, expected 47564296`)
 check(sum(2009) === 38610097, `2009 population total is ${sum(2009)}, expected 38610097`)
+
+// Sub-counties: a parallel hierarchy, so it gets the same structural checks.
+check(subCounties.length === 301, `expected 301 sub-counties, got ${subCounties.length}`)
+check(
+  new Set(subCounties.map((s) => s.slug)).size === subCounties.length,
+  'sub-county slugs are not unique',
+)
+check(
+  new Set(subCounties.map((s) => s.countyCode)).size === 47,
+  'sub-counties do not cover all 47 counties',
+)
+for (const sub of subCounties) {
+  check(sub.wardCodes.length > 0, `sub-county ${sub.name} has no wards`)
+  for (const code of sub.wardCodes) {
+    const ward = wards.find((w) => w.code === code)
+    check(!!ward, `sub-county ${sub.name} references unknown ward ${code}`)
+    if (ward) {
+      check(
+        ward.countyCode === sub.countyCode,
+        `ward ${code} is in county ${ward.countyCode} but sub-county ${sub.name} is in ${sub.countyCode}`,
+      )
+      check(ward.subCounty === sub.slug, `ward ${code} back-reference disagrees with ${sub.name}`)
+    }
+  }
+}
+// Every ward slug reference must resolve.
+const subCountySlugs = new Set(subCounties.map((s) => s.slug))
+for (const ward of wards) {
+  if (ward.subCounty) {
+    check(subCountySlugs.has(ward.subCounty), `ward ${ward.code} references unknown sub-county`)
+  }
+}
 
 const isoCodes = new Set(counties.map((c) => c.isoCode))
 check(isoCodes.size === 47, 'ISO 3166-2 codes are not unique across counties')
@@ -486,6 +609,7 @@ writeObject('country', 'Country', country)
 write('counties', 'County', counties)
 write('constituencies', 'Constituency', constituencies)
 write('wards', 'Ward', wards)
+write('subcounties', 'SubCounty', subCounties)
 write('provinces', 'Province', provinces)
 write('blocs', 'EconomicBloc', blocs)
 
@@ -503,6 +627,16 @@ writeFileSync(
       generated: 'scripts/build-data.mjs',
       count: wardNameConflicts.length,
       conflicts: wardNameConflicts,
+      unmappedToSubCounty: {
+        _comment:
+          'Wards the KNBS sub-county listing spells differently enough that no ' +
+          'confident match was possible. Their subCounty is null rather than guessed.',
+        count: wards.filter((w) => !w.subCounty).length,
+        wards: wards
+          .filter((w) => !w.subCounty)
+          .map((w) => ({ code: w.code, name: w.name, countyCode: w.countyCode })),
+      },
+      unmatchedSubCountyRows: unmatchedSubCountyRows.length,
     },
     null,
     2,
@@ -511,4 +645,6 @@ writeFileSync(
 
 const aliased = wards.filter((w) => w.aliases.length).length
 console.log(`✓ validated: 47 counties, 290 constituencies, 1450 wards`)
+const mapped = wards.filter((w) => w.subCounty).length
 console.log(`  ${aliased} wards carry a spelling variant; ${wardNameConflicts.length} unresolved name conflicts logged`)
+console.log(`  ${subCounties.length} sub-counties; ${mapped}/${wards.length} wards mapped to one`)

@@ -9,6 +9,7 @@ export default defineConfig({
     'src/provinces.ts',
     'src/blocs.ts',
     'src/country.ts',
+    'src/subcounties.ts',
   ],
   format: ['esm', 'cjs'],
   dts: true,

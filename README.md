@@ -2,8 +2,8 @@
 
 Every way Kenya is divided up, as offline data with a typed API.
 
-Kenya itself, then 47 counties, 290 constituencies, 1450 wards, the 8 former
-provinces, ISO 3166-1 and 3166-2 codes, OCHA place codes, the regional economic
+Kenya itself, then 47 counties, 290 constituencies, 1450 wards, the 301
+administrative sub-counties, the 8 former provinces, ISO 3166-1 and 3166-2 codes, OCHA place codes, the regional economic
 blocs and the ASAL classification — bundled into the package. No network calls,
 no runtime dependencies, works in Node, the browser, a build step or a
 serverless cold start.
@@ -118,24 +118,49 @@ cycle.
 
 ### 2. Sub-counties — the one that causes the most confusion
 
-"Sub-county" means two different things, and datasets rarely say which.
+“Sub-county” means two different things, and datasets rarely say which. **Both
+are shipped, under separate names, so you never have to guess which you have.**
 
-- **The county government's sub-county** is the constituency. Section 48 of the
-  County Governments Act 2012 makes a county's decentralised units *equivalent
-  to the constituencies within it*. So there are 290 of these, and this package
-  exposes them as `constituencies`.
-- **The national government's sub-county** is a unit of the provincial
-  administration, headed by a Deputy County Commissioner. There are roughly 314
-  of them, and their boundaries do not line up with constituencies.
+| | Unit | Count | Export | Run by |
+| --- | --- | --- | --- | --- |
+| County government sense | The constituency | 290 | `constituencies` | Elected MP |
+| National government sense | The administrative sub-county | 301 | `subCounties` | Deputy County Commissioner |
 
-They share a name and nothing else. This package deliberately does **not**
-ship a `subCounties` export, because whichever set it contained would be wrong
-for half of the people importing it. Use `constituencies` when you mean the
-electoral/county unit, and say "administrative sub-county" when you mean the
-other one.
+Section 48 of the County Governments Act 2012 makes a county’s decentralised
+units *equivalent to the constituencies within it*, which is why nearly every
+Kenyan address form labels the constituency “sub-county”. The national
+government’s sub-counties are a separate set with different boundaries.
 
-The national administration continues below that level too — sub-county →
-division → location → sub-location, ending at the Assistant Chief. KNBS census
+They overlap heavily but not completely: **248 of the 301 share a name with a
+constituency, and 53 do not.** Baringo makes the divergence concrete — same
+number of units, different units:
+
+```ts
+getSubCountiesByCounty('Baringo').map((s) => s.name)
+// Baringo Central, Baringo North, Koibatek, Marigat, Mogotio, Tiaty
+
+getConstituenciesByCounty('Baringo').map((k) => k.name)
+// Baringo Central, Baringo North, Baringo South, Eldama Ravine, Mogotio, Tiaty
+```
+
+```ts
+import { subCounties, getSubCountiesByCounty, getWardsBySubCounty } from 'kenya-regions'
+
+subCounties.length                     // 301
+getWardsBySubCounty('koibatek')        // full ward records
+getSubCountyOfWard(1)                  // the sub-county a ward falls in
+```
+
+Sub-counties are keyed by `slug`, not a number — unlike counties,
+constituencies and wards, these units have **no official numbering**, and
+inventing one would imply an authority this package does not have. Slugs are
+unique across all 301, so they work as a primary key on their own.
+
+> **Building an address form?** You almost certainly want `constituencies`.
+> That is what “sub-county” means on nearly every Kenyan form.
+
+The national administration continues below this level — sub-county → division
+→ location → sub-location, ending at the Assistant Chief. KNBS census
 enumeration uses that chain, which is why census microdata will not join
 cleanly to a ward-level table.
 
@@ -238,7 +263,9 @@ containing each.
 Every array is exported directly, in code order.
 
 ```ts
-import { counties, constituencies, wards, provinces, blocs } from 'kenya-regions'
+import {
+  counties, constituencies, wards, subCounties, provinces, blocs,
+} from 'kenya-regions'
 import { countiesByName } from 'kenya-regions'   // alphabetical, for UIs
 ```
 
@@ -266,8 +293,12 @@ getConstituenciesByCounty('nairobi')     // 17
 getWardsByConstituency('Westlands')
 getWardsByCounty('Kiambu')               // 60
 
+getSubCountiesByCounty('Kericho')        // 6 administrative sub-counties
+getWardsBySubCounty('koibatek')          // wards in a sub-county
+
 getCountyOfConstituency('Westlands')     // Nairobi
 getConstituencyOfWard(1389)              // Kibra
+getSubCountyOfWard(1389)                 // the ward's administrative sub-county
 getWardLineage(1389)
 // { ward: 'Woodley/Kenyatta Golf Course', constituency: 'Kibra', county: 'Nairobi' }
 ```
@@ -348,6 +379,7 @@ import { counties, countyOptions } from 'kenya-regions/counties'   // ~25 KB
 | `kenya-regions/provinces` | ~2 KB |
 | `kenya-regions/counties` | ~25 KB |
 | `kenya-regions/constituencies` | ~70 KB |
+| `kenya-regions/subcounties` | ~57 KB |
 | `kenya-regions/wards` | ~209 KB |
 | `kenya-regions` | ~377 KB |
 
@@ -416,7 +448,8 @@ interface County {
 
 `Constituency` carries `code`, `name`, `slug`, `countyCode`, `pcode`,
 `areaKm2`, `centroid` and `aliases`. `Ward` carries `code`, `name`, `slug`,
-`constituencyCode`, `countyCode` and `aliases`.
+`constituencyCode`, `countyCode`, `subCounty` and `aliases`. `SubCounty`
+carries `slug`, `name`, `countyCode`, `constituencyCode` and `wardCodes`.
 
 ---
 
@@ -430,6 +463,7 @@ traceable, and `npm run build:data` regenerates the datasets from them offline.
 | IEBC county / constituency / ward hierarchy | The 47/290/1450 backbone and all three sets of codes |
 | [OCHA COD-AB for Kenya](https://data.humdata.org/dataset/cod-ab-ken) | P-codes, areas, centroids, former names |
 | IEBC 2013 boundary shapefile | Independent cross-check of ward names |
+| KNBS sub-county / ward listing | The 301 administrative sub-counties |
 | KNBS 2019 and 2009 censuses | Population |
 | ISO 3166-1 / 3166-2:KE | Country codes, county ISO codes, withdrawn province codes |
 | UN M49 | Kenya's place in the world statistical hierarchy |
@@ -452,6 +486,8 @@ hold, and the same assertions run again in the test suite:
 - county → constituency assignment agrees between two independent sources
 - ISO codes, p-codes and slugs are unique
 - 23 ASAL counties, 9 of them arid
+- 301 sub-counties spanning all 47 counties, none without wards, every ward in
+  the same county as its sub-county, and the ward back-reference round-trips
 - the country record agrees with the datasets: its population equals the sum of
   the counties, its capital resolves to a real county, every county ISO code
   and p-code extends the country's, and each chamber's seats add up to its
@@ -471,6 +507,10 @@ Honest about what is unresolved rather than papering over it:
 - **Ward names are not unique nationally.** Several counties have a "Township"
   or a "Central". `getWard('township')` returns the lowest-coded match; scope
   with `getWardsByConstituency` or use the code when it matters.
+- **12 wards have no sub-county.** The sub-county source spells them
+  differently enough that no confident match was possible, so `ward.subCounty`
+  is `null` rather than guessed. That is 99.2% coverage; the wards are listed in
+  `data/sources/name-conflicts.json`. `getWardsByCounty` is always complete.
 - **ASAL is county-level**, though the underlying reality is sub-county-level.
 - **Two national areas.** `kenya.area.totalKm2` is 580,367 km², the
   internationally cited figure. The gazetted county areas sum to roughly
@@ -479,32 +519,6 @@ Honest about what is unresolved rather than papering over it:
 
 Corrections are welcome — open an issue with a source and the build will be
 updated.
-
----
-
-## Upgrading from v1
-
-v1 fetched counties from a hosted API that no longer exists, and its
-`package.json` `main` pointed at a file that was never published, so
-`import { GetCounties } from 'kenya-regions'` failed on install. Both are
-fixed: the data is bundled and the entry points are verified against a real
-`npm pack` install in CI.
-
-`GetCounties()` still works and still returns a promise, so existing code keeps
-running:
-
-```ts
-// v1 — still works, now offline
-const counties = await GetCounties()
-
-// v2 — no await needed
-import { getTree, counties } from 'kenya-regions'
-```
-
-Everything else is new. v1 exported one function; v2 exports the datasets
-directly plus lookups, hierarchy navigation, search and select options.
-
----
 
 ## Contributing
 
