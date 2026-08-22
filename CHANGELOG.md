@@ -59,6 +59,23 @@ column, which is enough to draw Kenya from a template engine with no mapping
 library. Part of [plan 01](docs/plans/01-non-js-consumers.md); the SQL seeds
 and the recipes page are still to come.
 
+**Constituency boundaries, in the docs atlas.** The one thing this package has
+never had below the county. Open a county and its constituencies are drawn as
+dotted outlines; click one and the map zooms to it.
+
+The geometry is the IEBC's 2012 delimitation, published by OCHA on HDX and
+vendored as `data/sources/iebc-constituencies.geojson`. It is not exported from
+the package: 228 KB of paths against the county layer's 15 KB, so the split that
+sent detailed geometry to
+[kenya-regions-geo](https://github.com/nicanor-korir/kenya-regions-geo) still
+applies. The npm tarball is unchanged.
+
+The obvious source is wrong, which is why this took until now. OCHA's COD admin2
+layer carries Nairobi's sub-counties rather than its 17 constituencies, and has
+the two Kajiado seats swapped against the gazetted wards. `build:data` refuses to
+emit the boundaries unless ten known coordinates still resolve to the right seat,
+and `test/exports.test.ts` runs the same ten against the unsimplified source.
+
 **An atlas in the docs.** [nicanor-korir.github.io/kenya-regions/atlas.html](https://nicanor-korir.github.io/kenya-regions/atlas.html)
 draws the county map and walks down both hierarchies: county to constituency to
 ward on one tab, province to district to division to location to sub-location
@@ -80,7 +97,13 @@ published tarball: a file left out of it is not on the CDN either, and the CDN
 is the whole point of the CSVs.
 
 The build asserts one outline per county, that each county centroid falls
-inside its own bounding box, and that every county has a projected path.
+inside its own bounding box, that every county has a projected path, and that
+the constituency layer still puts ten known coordinates in the right seat.
+
+Verifying the constituency layer turned up a defect in data this package already
+publishes: eleven constituency `centroid` values, taken from COD, fall outside
+the IEBC polygon for the same constituency — Nairobi and Kajiado among them.
+Recorded in [plan 03](docs/plans/03-constituency-boundaries.md), not yet fixed.
 
 ## 2.1.0
 

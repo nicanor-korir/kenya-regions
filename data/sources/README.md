@@ -12,6 +12,8 @@ generated except `name-conflicts.json`.
 | `cod-ab-admin2.csv` | OCHA Common Operational Dataset, admin level 2 | Constituency p-codes, areas, centroids, former names |
 | `knbs-subcounty-wards.csv` | KNBS sub-county listing against ward names, 1450 rows | The 301 administrative sub-counties and the ward mapping |
 | `iebc-shapefile-wards.csv` | Ward names from the 2013 IEBC boundary shapefile | Independent cross-check of ward names |
+| `county-outlines.geojson` | County boundaries, simplified to roughly a kilometre | The geometry behind `kenya-regions/outlines` and `data/svg/counties.svg` |
+| `iebc-constituencies.geojson` | IEBC constituency boundaries, 2012 delimitation, 290 polygons | The dotted boundaries on the docs atlas |
 | `county-reference.csv` | Hand-maintained county attributes | Capital, former province, area, 2009 and 2019 census, ASAL class |
 | `economic-blocs.json` | Bloc membership per IGRTC / Council of Governors | Regional economic blocs |
 | `name-overrides.json` | Manual corrections, each with a reason | Fixes truncated names, drops bad aliases, repairs sub-county source rows |
@@ -20,12 +22,37 @@ generated except `name-conflicts.json`.
 Upstream references:
 
 - OCHA COD-AB for Kenya — https://data.humdata.org/dataset/cod-ab-ken
+- IEBC constituency boundaries, via OCHA on HDX —
+  https://data.humdata.org/dataset/kenya-elections (`Admin2-constituencies.zip`,
+  dated 4 December 2012, `dataset_source: IEBC`, originally from
+  `vote.iebc.or.ke`). Converted from the shapefile to GeoJSON, WGS 84 as
+  published, coordinates rounded to six decimals, five unnamed zero-area
+  slivers in Lake Victoria dropped, leaving exactly 290 polygons.
 - KNBS 2019 Kenya Population and Housing Census
 - ISO 3166-1 and ISO 3166-2:KE
 - UN M49 standard country and area codes
 - Constitution of Kenya 2010, Articles 97, 98 and 177 (seat counts)
 - Kenya national boundary via geoBoundaries ADM0 (bounding box)
 - ASAL policy / National Drought Management Authority
+
+## Why not the COD admin2 layer
+
+`cod-ab-admin2.csv` supplies constituency p-codes, areas and centroids, and its
+boundaries look like the obvious source for constituency geometry. They are not.
+It carries Nairobi's **sub-counties** rather than its 17 constituencies — it has
+`Kilimani` and `Dagoretti` where the constituencies are Dagoretti North and
+Dagoretti South — and it has the two Kajiado seats the wrong way round against
+the gazetted wards:
+
+| p-code | COD says | Gazetted wards say |
+| --- | --- | --- |
+| `KE034185` | Kajiado West | Kajiado **East** (holds Kitengela) |
+| `KE034186` | Kajiado East | Kajiado **West** (holds Magadi) |
+
+So `iebc-constituencies.geojson` is joined by IEBC code, never by p-code, and
+its own `county` attribute is ignored: it puts Marakwet West in West Pokot.
+`build:data` refuses to emit the layer unless ten known coordinates still
+resolve to the right seat, three of which are the ones COD gets wrong.
 
 ## Changing the data
 

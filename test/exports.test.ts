@@ -217,3 +217,73 @@ describe('docs atlas payload', () => {
     expect(subCounty).toBe(wards[0]!.subCounty)
   })
 })
+
+describe('constituency boundaries', () => {
+  /**
+   * The IEBC layer is the one piece of geometry below the county, and the
+   * reason it took so long to arrive is that the obvious source is wrong. These
+   * are the same ten coordinates the build gates on, run here against the
+   * full-resolution source rather than the simplified output, so a bad source
+   * swap fails even if the simplifier happens to paper over it.
+   */
+  const source = JSON.parse(read('data', 'sources', 'iebc-constituencies.geojson'))
+
+  const inRing = (ring: number[][], x: number, y: number) => {
+    let inside = false
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const [xi, yi] = ring[i] as [number, number]
+      const [xj, yj] = ring[j] as [number, number]
+      if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi)
+        inside = !inside
+    }
+    return inside
+  }
+  const inPolygon = (rings: number[][][], x: number, y: number) =>
+    inRing(rings[0]!, x, y) && !rings.slice(1).some((hole) => inRing(hole, x, y))
+  const ringsOf = (g: any): number[][][][] =>
+    g.type === 'Polygon' ? [g.coordinates] : g.coordinates
+  const locate = (lat: number, lng: number) =>
+    source.features
+      .filter((f: any) =>
+        ringsOf(f.geometry).some((rings) => inPolygon(rings, lng, lat)),
+      )
+      .map((f: any) => f.properties.code as number)
+
+  it('covers all 290 constituencies, joined by IEBC code', () => {
+    expect(source.features).toHaveLength(290)
+    const codes = source.features
+      .map((f: any) => f.properties.code)
+      .sort((a: number, b: number) => a - b)
+    expect(codes).toEqual(constituencies.map((k) => k.code))
+  })
+
+  it.each([
+    ['KICC, Nairobi CBD', -1.2884, 36.8233, 289, 'Starehe'],
+    ['Kibera', -1.312, 36.783, 278, 'Kibra'],
+    ['Karen', -1.319, 36.708, 277, 'Langata'],
+    ['Sarit Centre, Westlands', -1.263, 36.803, 274, 'Westlands'],
+    ['Kawangware', -1.283, 36.743, 275, 'Dagoretti North'],
+    ['Kasarani stadium', -1.2261, 36.8912, 280, 'Kasarani'],
+    ['Eastleigh', -1.274, 36.848, 288, 'Kamukunji'],
+    ['Kitengela', -1.515, 36.956, 185, 'Kajiado East'],
+    ['Lake Magadi', -1.88, 36.25, 186, 'Kajiado West'],
+    ['Fort Jesus, Mombasa', -4.063, 39.679, 6, 'Mvita'],
+  ])('puts %s in %s', (_label, lat, lng, code, name) => {
+    expect(locate(lat as number, lng as number)).toEqual([code])
+    expect(constituencies.find((k) => k.code === code)!.name).toBe(name)
+  })
+
+  it('ships one drawable path per constituency', () => {
+    const source2 = read('docs', 'atlas-constituencies.js')
+    const window: Record<string, unknown> = {}
+    new Function('window', source2)(window)
+    const shapes = window.KR_CONSTITUENCY_SHAPES as Record<string, string>
+    expect(Object.keys(shapes)).toHaveLength(290)
+    for (const k of constituencies) {
+      const d = shapes[String(k.code)]
+      expect(d, k.name).toBeTruthy()
+      expect(d!.startsWith('M'), k.name).toBe(true)
+      expect(d!.endsWith('Z'), k.name).toBe(true)
+    }
+  })
+})

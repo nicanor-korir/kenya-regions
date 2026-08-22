@@ -179,12 +179,28 @@ select, .filter {
    a stroke on the county itself. A county is one sibling among 47 painted in
    code order, so half its own stroke is painted over by whichever neighbour
    comes after it, and the highlight ends up covering part of the border. */
+/* Constituency boundaries, drawn inside the county you have opened. Dotted
+   because they are a different authority from the county lines: the IEBC's
+   2012 delimitation, not the county outlines the rest of the map is built on. */
+.seat {
+  fill: transparent;
+  stroke: var(--ink-2);
+  stroke-width: 1.1;
+  stroke-dasharray: 3.5 2.5;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  cursor: pointer;
+  transition: fill .15s;
+}
+.seat:hover, .seat.hot { fill: rgba(15, 107, 92, .15); stroke: var(--ink); stroke-width: 1.4; stroke-dasharray: none; }
+.seat.on { fill: rgba(138, 90, 18, .16); stroke: var(--caution); stroke-width: 1.9; stroke-dasharray: none; }
+
 .mark { fill: none; pointer-events: none; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
 .mark-hover { stroke: var(--ink); stroke-width: 1.5; }
 .mark-pick { stroke: var(--ink); stroke-width: 2; }
 .mark-flag { stroke: var(--caution); stroke-width: 2.4; }
 
-.pin { fill: #FFFFFF; stroke: var(--ink); stroke-width: 1.4; vector-effect: non-scaling-stroke; cursor: pointer; }
+.pin { fill: #FFFFFF; stroke: var(--ink); stroke-width: 1.2; vector-effect: non-scaling-stroke; cursor: pointer; }
 .pin:hover, .pin.on { fill: var(--caution); stroke-width: 2; }
 .pinlabel {
   font-family: "JetBrains Mono", monospace;
@@ -436,6 +452,7 @@ footer {
         <svg id="map" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map of Kenya by county">
           <g id="zoom">
             <g id="shapes"></g>
+            <g id="seats"></g>
             <g id="marks"></g>
             <g id="markHover"></g>
             <g id="pins"></g>
@@ -451,15 +468,20 @@ footer {
   </div>
 
   <footer>
-    <p>Drawn from the same data the package ships. Geometry is
-    <code>data/svg/counties.svg</code> and <code>data/county-outlines.json</code>,
-    simplified to roughly a kilometre. Finer boundary tiers live in
+    <p>Drawn from the same data the package ships. County outlines are
+    <code>data/svg/counties.svg</code>, simplified to roughly a kilometre.
+    Constituency boundaries are the IEBC's 2012 delimitation, published by
+    <a href="https://data.humdata.org/dataset/kenya-elections">OCHA on HDX</a>
+    and vendored as <code>data/sources/iebc-constituencies.geojson</code>. The
+    build checks them against ten known coordinates before it will emit them.
+    Finer tiers live in
     <a href="https://github.com/nicanor-korir/kenya-regions-geo">kenya-regions-geo</a>.</p>
   </footer>
 </div>
 
 <script src="atlas-geometry.js"></script>
 <script src="atlas-data.js"></script>
+<script src="atlas-constituencies.js"></script>
 <script>
 (function atlas() {
   const G = window.KR_GEOMETRY
@@ -590,6 +612,7 @@ footer {
   const svg = document.getElementById('map')
   const zoomG = document.getElementById('zoom')
   const shapesG = document.getElementById('shapes')
+  const seatsG = document.getElementById('seats')
   const marksG = document.getElementById('marks')
   const hoverG = document.getElementById('markHover')
   const pinsG = document.getElementById('pins')
@@ -664,10 +687,15 @@ footer {
       resizePins()
       return
     }
-    const pad = Math.max(box[2], box[3]) * 0.14 + 8
+    // Padding has to stay proportional. A flat 8 units is a comfortable margin
+    // around a county and roughly three times the width of a Nairobi seat.
+    const pad = Math.max(box[2], box[3]) * 0.16 + 1.5
     const w = box[2] + pad * 2
     const h = box[3] + pad * 2
-    const s = Math.min(G.width / w, G.height / h, 9)
+    // The ceiling has to clear a small urban seat. Starehe is 17 km² on a canvas
+    // spanning 890 km of longitude, about five units across, so filling the
+    // frame with it needs well over a hundred times magnification.
+    const s = Math.min(G.width / w, G.height / h, 200)
     const cx = box[0] + box[2] / 2
     const cy = box[1] + box[3] / 2
     zoomScale = s
@@ -686,6 +714,52 @@ footer {
       x1 = Math.max(x1, b[0] + b[2]); y1 = Math.max(y1, b[1] + b[3])
     }
     return x0 === Infinity ? null : [x0, y0, x1 - x0, y1 - y0]
+  }
+
+  /* ── Constituency boundaries ───────────────────────────── */
+  const SEATS = window.KR_CONSTITUENCY_SHAPES || {}
+
+  /**
+   * The box a path occupies, straight off the `d` string: it is only M, Z and
+   * coordinate pairs, so every number in it is an x or a y.
+   */
+  const boxOfPath = (d) => {
+    const n = d.match(/-?\d+(?:\.\d+)?/g)
+    let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity
+    for (let i = 0; i + 1 < n.length; i += 2) {
+      const x = +n[i], y = +n[i + 1]
+      if (x < x0) x0 = x
+      if (x > x1) x1 = x
+      if (y < y0) y0 = y
+      if (y > y1) y1 = y
+    }
+    return [x0, y0, x1 - x0, y1 - y0]
+  }
+  const seatBox = new Map()
+
+  /** The seats inside the county you have opened. Empty at national level. */
+  function drawSeats(items) {
+    seatsG.textContent = ''
+    for (const k of items) {
+      const d = SEATS[k.code]
+      if (!d) continue
+      const path = document.createElementNS(NS, 'path')
+      path.setAttribute('d', d)
+      path.setAttribute('class', 'seat')
+      path.dataset.code = k.code
+      seatsG.appendChild(path)
+      if (!seatBox.has(k.code)) seatBox.set(k.code, boxOfPath(d))
+    }
+  }
+  const markSeat = (code) => {
+    for (const path of seatsG.children) {
+      path.classList.toggle('on', Number(path.dataset.code) === code)
+    }
+  }
+  const hotSeat = (code) => {
+    for (const path of seatsG.children) {
+      path.classList.toggle('hot', Number(path.dataset.code) === code)
+    }
   }
 
   /* ── Pins: constituency centroids, the one sub-county-level
@@ -843,6 +917,14 @@ footer {
       hoverCounty(null)
       return
     }
+    const seat = e.target.closest('.seat')
+    if (seat) {
+      const k = constituency.get(Number(seat.dataset.code))
+      showTip(`<b>${esc(k.name)}</b><span>constituency ${k.pcode} · ${num((wardsIn.get(k.code) || []).length)} wards</span>`, e)
+      hoverPin(k.code)
+      hoverCounty(null)
+      return
+    }
     const path = e.target.closest('.county')
     if (!path) { hideTip(); hoverCounty(null); return }
     const c = county.get(Number(path.dataset.code))
@@ -864,6 +946,8 @@ footer {
   svg.addEventListener('click', (e) => {
     const pin = e.target.closest('.pin')
     if (pin) { go({ constituency: Number(pin.dataset.code) }); return }
+    const seat = e.target.closest('.seat')
+    if (seat) { go({ constituency: Number(seat.dataset.code) }); return }
     const path = e.target.closest('.county')
     if (!path) return
     const code = Number(path.dataset.code)
@@ -1000,6 +1084,7 @@ footer {
     if (d.county === null) {
       focusOn(null)
       drawPins([])
+      drawSeats([])
       mapnote.textContent = 'Hover a county to name it. Click one to see the constituencies, sub-counties and wards inside it.'
       panel.innerHTML =
         `<p class="kicker">Devolved · 2013 onward</p>` +
@@ -1021,13 +1106,19 @@ footer {
     const ks = (constituenciesIn.get(c.code) || []).slice().sort((a, b) => a.code - b.code)
     const scs = (subCountiesIn.get(c.code) || []).slice().sort((a, b) => a.name.localeCompare(b.name))
     focusOn(c.box)
-    drawPins(ks)
+    drawSeats(ks)
+    // Pins mark only the seat you have open: with real boundaries, seventeen
+    // dots over Nairobi were noise.
+    drawPins([])
 
     if (d.ward !== null) {
       const w = ward.get(d.ward)
       const k = constituency.get(w.constituencyCode)
+      if (seatBox.has(k.code)) focusOn(seatBox.get(k.code))
+      drawPins([k])
       selectPin(k.code)
-      mapnote.textContent = 'Wards have no published boundary here. The dot is the centre point of the constituency this ward sits in.'
+      markSeat(k.code)
+      mapnote.textContent = 'Wards have no published boundary anywhere we trust. The highlighted outline is the constituency this ward sits in.'
       panel.innerHTML =
         `<p class="kicker">Ward · ${esc(k.name)} constituency</p>` +
         `<p class="pname">${esc(w.name)}</p>` +
@@ -1049,7 +1140,7 @@ footer {
     if (d.subCounty) {
       const s = subCounty.get(d.subCounty)
       const ws = s.wardCodes.map((code) => ward.get(code)).filter(Boolean)
-      mapnote.textContent = 'Administrative sub-counties have no published boundary here. Each dot is a constituency’s centre point.'
+      mapnote.textContent = 'Administrative sub-counties have no published boundary. The dotted lines are constituencies, which are a different division of the same ground.'
       panel.innerHTML =
         `<p class="kicker">Sub-county · ${esc(c.name)} County</p>` +
         `<p class="pname">${esc(s.name)}</p>` +
@@ -1064,8 +1155,11 @@ footer {
     if (d.constituency !== null) {
       const k = constituency.get(d.constituency)
       const ws = (wardsIn.get(k.code) || []).slice().sort((a, b) => a.code - b.code)
+      if (seatBox.has(k.code)) focusOn(seatBox.get(k.code))
+      drawPins([k])
       selectPin(k.code)
-      mapnote.textContent = 'The highlighted dot is this constituency’s centre point. Constituency boundaries are not published in this package.'
+      markSeat(k.code)
+      mapnote.textContent = 'The filled outline is this constituency, from the IEBC 2012 delimitation. The dot is the centre point the panel names.'
       panel.innerHTML =
         `<p class="kicker">Constituency · ${esc(c.name)} County</p>` +
         `<p class="pname">${esc(k.name)}</p>` +
@@ -1079,7 +1173,8 @@ footer {
       return
     }
 
-    mapnote.textContent = 'Each dot is a constituency’s centre point, the finest geometry this package carries. Click one for its wards.'
+    markSeat(null)
+    mapnote.textContent = 'Dotted lines are the constituencies inside this county, from the IEBC 2012 delimitation. Click one for its wards.'
     const blocs = c.blocs.length
       ? c.blocs.map((b) => `<span class="tag">${esc(b)}</span>`).join('')
       : '<span class="tag dim">no bloc</span>'
@@ -1103,7 +1198,7 @@ footer {
         label: k.name,
         meta: `${(wardsIn.get(k.code) || []).length} wards`,
         go: 'constituency:' + k.code,
-        hover: 'pin:' + k.code,
+        hover: 'seat:' + k.code,
       }))) +
       `<h3 class="sec">Administrative sub-counties <em>${scs.length}</em></h3>` +
       picks(scs.map((s) => ({
@@ -1267,13 +1362,14 @@ footer {
     const button = e.target.closest('[data-hover]')
     if (!button) { return }
     const [kind, raw] = button.dataset.hover.split(':')
-    if (kind === 'pin') hoverPin(Number(raw))
+    if (kind === 'seat') hotSeat(Number(raw))
     if (kind === 'county') {
       flag([Number(raw)])
     }
   })
   panel.addEventListener('mouseleave', () => {
     hoverPin(null)
+    hotSeat(null)
     flag([])
   })
 

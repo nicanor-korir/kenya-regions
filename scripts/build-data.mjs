@@ -1681,7 +1681,212 @@ writeFileSync(
     '\n',
 )
 
-for (const name of ['atlas-geometry.js', 'atlas-data.js']) {
+/* ------------------------------------------- constituency boundaries --- */
+
+/**
+ * The IEBC constituency layer, simplified and projected onto the same canvas
+ * as counties.svg, for the docs atlas to draw.
+ *
+ * This is the one thing kenya-regions has never had below the county. The
+ * OCHA COD admin2 layer looks like the obvious source and is not: it carries
+ * Nairobi's sub-counties rather than its 17 constituencies, and it has Kajiado
+ * East and West the wrong way round. See docs/plans/03-constituency-boundaries.md.
+ * This file is the IEBC's own 2012 delimitation, and it is checked against ten
+ * known coordinates below before anything is written.
+ */
+const constituencySource = JSON.parse(
+  readFileSync(src('iebc-constituencies.geojson'), 'utf8'),
+)
+
+{
+  const features = constituencySource.features
+  if (features.length !== 290) {
+    throw new Error(`expected 290 constituency polygons, got ${features.length}`)
+  }
+  for (const feature of features) {
+    if (!constByCode.has(feature.properties.code)) {
+      throw new Error(
+        `constituency polygon ${feature.properties.code} is not a real code`,
+      )
+    }
+  }
+
+  const ringsOf = (geometry) =>
+    geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.coordinates
+  const coordKey = ([x, y]) => `${x},${y}`
+  const triangle = (a, b, c) =>
+    Math.abs((b[0] - a[0]) * (c[1] - a[1]) - (c[0] - a[0]) * (b[1] - a[1])) / 2
+  const ringSize = (ring) => {
+    let total = 0
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      total += ring[j][0] * ring[i][1] - ring[i][0] * ring[j][1]
+    }
+    return Math.abs(total / 2)
+  }
+
+  /**
+   * Visvalingam, with two changes that matter here.
+   *
+   * Every keep-or-drop decision is made once per distinct coordinate and then
+   * applied wherever that coordinate appears. Neighbouring constituencies share
+   * 39% of their vertices exactly, so deciding per ring would tear the border
+   * between two seats into two different lines.
+   *
+   * Importance is measured against the constituency's own area rather than the
+   * country's. One absolute threshold keeps Turkana and erases every seat in
+   * Nairobi, which is precisely where the map needs to be right.
+   */
+  const importance = new Map()
+  const owners = new Map()
+  const alwaysKeep = new Set()
+
+  for (const feature of features) {
+    const size =
+      ringsOf(feature.geometry).reduce((total, poly) => total + ringSize(poly[0]), 0) ||
+      1e-9
+    const own = []
+    for (const poly of ringsOf(feature.geometry)) {
+      for (const ring of poly) {
+        const n = ring.length
+        for (let i = 0; i < n; i++) {
+          const k = coordKey(ring[i])
+          const set = owners.get(k)
+          if (set) set.add(feature.properties.code)
+          else owners.set(k, new Set([feature.properties.code]))
+          const share =
+            triangle(ring[(i - 1 + n) % n], ring[i], ring[(i + 1) % n]) / size
+          if (share > (importance.get(k) ?? -1)) importance.set(k, share)
+          own.push([k, share])
+        }
+      }
+    }
+    // However small a seat is, it keeps enough vertices to still be a shape.
+    own.sort((a, b) => b[1] - a[1])
+    for (const [k] of own.slice(0, 24)) alwaysKeep.add(k)
+  }
+  // A point where three seats meet is a corner of the whole tiling: dropping it
+  // would move two borders at once.
+  for (const [k, set] of owners) if (set.size >= 3) alwaysKeep.add(k)
+
+  const KEEP_SHARE = 0.22
+  const ranked = [...importance.values()].sort((a, b) => a - b)
+  const cutoff = ranked[Math.floor((1 - KEEP_SHARE) * ranked.length)]
+  const survives = (point) => {
+    const k = coordKey(point)
+    return alwaysKeep.has(k) || importance.get(k) >= cutoff
+  }
+
+  const simplified = new Map()
+  const paths = {}
+  let vertices = 0
+  for (const feature of features) {
+    const polygons = []
+    for (const poly of ringsOf(feature.geometry)) {
+      const rings = []
+      for (const ring of poly) {
+        const kept = ring.filter(survives)
+        if (kept.length < 3) continue
+        if (coordKey(kept[0]) !== coordKey(kept[kept.length - 1])) kept.push(kept[0])
+        rings.push(kept)
+        vertices += kept.length
+      }
+      if (rings.length) polygons.push(rings)
+    }
+    if (!polygons.length) {
+      throw new Error(`simplification emptied constituency ${feature.properties.code}`)
+    }
+    simplified.set(feature.properties.code, polygons)
+
+    let d = ''
+    for (const rings of polygons) {
+      for (const ring of rings) {
+        const points = []
+        let previous = ''
+        for (const [lng, lat] of ring) {
+          const [x, y] = toSvg(lng, lat)
+          const point = `${x} ${y}`
+          if (point !== previous) {
+            points.push(point)
+            previous = point
+          }
+        }
+        if (points.length > 1 && points[points.length - 1] === points[0]) points.pop()
+        if (points.length >= 3) d += `M${points.join(' ')}Z`
+      }
+    }
+    paths[feature.properties.code] = d
+  }
+
+  /* -- the gate ------------------------------------------------------- */
+
+  const inRing = (ring, x, y) => {
+    let inside = false
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const [xi, yi] = ring[i]
+      const [xj, yj] = ring[j]
+      if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi)
+        inside = !inside
+    }
+    return inside
+  }
+  const inPolygon = (rings, x, y) => {
+    if (!inRing(rings[0], x, y)) return false
+    for (let i = 1; i < rings.length; i++) if (inRing(rings[i], x, y)) return false
+    return true
+  }
+  const locate = (lat, lng) => {
+    const hits = []
+    for (const [code, polygons] of simplified) {
+      if (polygons.some((rings) => inPolygon(rings, lng, lat))) hits.push(code)
+    }
+    return hits
+  }
+
+  /**
+   * Ten coordinates whose answer is not in dispute, each one grounded in the
+   * gazetted ward listing this package already publishes rather than in
+   * anybody's memory: Nairobi Central ward is in Starehe, Laini Saba is in
+   * Kibra, Karen is in Langata, Kitisuru is in Westlands, Kawangware is in
+   * Dagoretti North, Kitengela is in Kajiado East, Magadi is in Kajiado West.
+   *
+   * The first, sixth and seventh are the ones that catch the COD layer: it puts
+   * the Nairobi CBD in Dagoretti North and swaps the two Kajiado seats.
+   */
+  const KNOWN_POINTS = [
+    ['KICC, Nairobi CBD', -1.2884, 36.8233, 289],
+    ['Kibera', -1.312, 36.783, 278],
+    ['Karen', -1.319, 36.708, 277],
+    ['Sarit Centre, Westlands', -1.263, 36.803, 274],
+    ['Kawangware', -1.283, 36.743, 275],
+    ['Kasarani stadium', -1.2261, 36.8912, 280],
+    ['Eastleigh', -1.274, 36.848, 288],
+    ['Kitengela', -1.515, 36.956, 185],
+    ['Lake Magadi', -1.88, 36.25, 186],
+    ['Fort Jesus, Mombasa', -4.063, 39.679, 6],
+  ]
+  for (const [label, lat, lng, expected] of KNOWN_POINTS) {
+    const hits = locate(lat, lng)
+    if (hits.length !== 1 || hits[0] !== expected) {
+      const got = hits.map((c) => constByCode.get(c).name).join(' and ') || 'nothing'
+      throw new Error(
+        `${label} resolves to ${got}, expected ${constByCode.get(expected).name}. ` +
+          `The constituency layer is wrong or has been simplified too far.`,
+      )
+    }
+  }
+
+  writeFileSync(
+    docsOut('atlas-constituencies.js'),
+    DOCS_BANNER + 'window.KR_CONSTITUENCY_SHAPES = ' + JSON.stringify(paths) + '\n',
+  )
+  const kb = (JSON.stringify(paths).length / 1024).toFixed(1)
+  console.log(
+    `  ${'constituencies'.padEnd(16)} ${'290'.padStart(5)} shapes   ${kb.padStart(7)} KB  ` +
+      `(${vertices} vertices, ${KNOWN_POINTS.length}/${KNOWN_POINTS.length} known points)`,
+  )
+}
+
+for (const name of ['atlas-geometry.js', 'atlas-data.js', 'atlas-constituencies.js']) {
   const kb = (readFileSync(docsOut(name), 'utf8').length / 1024).toFixed(1)
   console.log(`  ${name.padEnd(16)} ${''.padStart(5)}          ${kb.padStart(7)} KB`)
 }

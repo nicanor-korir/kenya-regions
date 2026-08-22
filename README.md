@@ -682,6 +682,25 @@ It is a separate package because npm downloads the whole tarball on install
 regardless of what you import, so detailed polygons would be paid for by
 everyone who only wanted a dropdown.
 
+### Constituency boundaries
+
+The docs atlas draws the 290 constituencies as dotted outlines inside whichever
+county you open. The geometry is the IEBC's own 2012 delimitation, published by
+OCHA on HDX and vendored as `data/sources/iebc-constituencies.geojson`.
+
+It is deliberately not exported from the package. Detailed polygons are paid for
+by everyone who installs, so the rule the county layer set still holds: 15 KB of
+outlines earns its place here, and anything larger belongs in
+[kenya-regions-geo](https://github.com/nicanor-korir/kenya-regions-geo).
+
+The layer that looks like the obvious source is wrong, which is why this took
+until now. OCHA's COD admin2 file carries Nairobi's *sub-counties* rather than
+its 17 constituencies, and has the two Kajiado seats swapped against the
+gazetted wards. `npm run build:data` will not emit the boundaries unless ten
+known coordinates still resolve to the right seat — the Nairobi CBD to Starehe,
+Kitengela to Kajiado East, Lake Magadi to Kajiado West, and seven more. Break
+the join and the build stops with the coordinate that caught it.
+
 ### The map as SVG
 
 `data/svg/counties.svg` is the same outlines, already projected. Open it in a
