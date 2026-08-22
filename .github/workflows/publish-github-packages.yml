@@ -1,0 +1,51 @@
+name: Publish to GitHub Packages
+
+# Mirrors each release to GitHub Packages, which is what populates the
+# "Packages" panel on the repository page. npmjs.com and GitHub Packages are
+# separate registries, so publishing to npm never fills that panel in.
+#
+# GitHub Packages requires the package name to be scoped to the repository
+# owner, so this publishes as @nicanor-korir/kenya-regions. The canonical
+# package stays the unscoped `kenya-regions` on npmjs.com; this is a mirror.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://npm.pkg.github.com
+          scope: '@nicanor-korir'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Scope the package name for this registry only
+        run: |
+          node -e "
+            const fs = require('fs');
+            const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+            pkg.name = '@nicanor-korir/kenya-regions';
+            pkg.publishConfig = {
+              registry: 'https://npm.pkg.github.com',
+              access: 'public',
+            };
+            fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
+            console.log('publishing as', pkg.name, pkg.version);
+          "
+
+      # prepublishOnly runs the build, typecheck and tests before this lands.
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
