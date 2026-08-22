@@ -175,9 +175,14 @@ select, .filter {
   cursor: pointer;
   transition: fill-opacity .18s, fill .18s;
 }
-.county:hover { stroke: var(--ink); stroke-width: 1.4; }
-.county.picked { stroke: var(--ink); stroke-width: 1.8; }
-.county.flagged { stroke: var(--caution); stroke-width: 2.2; }
+/* Emphasis outlines are drawn as separate copies above the whole map, not as
+   a stroke on the county itself. A county is one sibling among 47 painted in
+   code order, so half its own stroke is painted over by whichever neighbour
+   comes after it, and the highlight ends up covering part of the border. */
+.mark { fill: none; pointer-events: none; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.mark-hover { stroke: var(--ink); stroke-width: 1.5; }
+.mark-pick { stroke: var(--ink); stroke-width: 2; }
+.mark-flag { stroke: var(--caution); stroke-width: 2.4; }
 
 .pin { fill: #FFFFFF; stroke: var(--ink); stroke-width: 1.4; vector-effect: non-scaling-stroke; cursor: pointer; }
 .pin:hover, .pin.on { fill: var(--caution); stroke-width: 2; }
@@ -431,6 +436,8 @@ footer {
         <svg id="map" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map of Kenya by county">
           <g id="zoom">
             <g id="shapes"></g>
+            <g id="marks"></g>
+            <g id="markHover"></g>
             <g id="pins"></g>
           </g>
         </svg>
@@ -583,6 +590,8 @@ footer {
   const svg = document.getElementById('map')
   const zoomG = document.getElementById('zoom')
   const shapesG = document.getElementById('shapes')
+  const marksG = document.getElementById('marks')
+  const hoverG = document.getElementById('markHover')
   const pinsG = document.getElementById('pins')
   const tip = document.getElementById('tip')
   const legend = document.getElementById('legend')
@@ -603,6 +612,39 @@ footer {
     path.dataset.code = c.code
     shapesG.appendChild(path)
     paths.set(c.code, path)
+  }
+
+  /* ── Emphasis outlines ─────────────────────────────────── */
+  const outlineOf = new Map(G.counties.map((c) => [c.code, c.d]))
+
+  function markPath(code, cls) {
+    const path = document.createElementNS(NS, 'path')
+    path.setAttribute('d', outlineOf.get(code))
+    path.setAttribute('class', 'mark ' + cls)
+    return path
+  }
+
+  let flagged = new Set()
+  let picked = []
+
+  /** The persistent marks: what is selected, and what the legend is pointing at. */
+  function drawMarks() {
+    marksG.textContent = ''
+    for (const code of flagged) marksG.appendChild(markPath(code, 'mark-flag'))
+    for (const code of picked) marksG.appendChild(markPath(code, 'mark-pick'))
+  }
+
+  /** The transient one, following the pointer. */
+  function hoverCounty(code) {
+    hoverG.textContent = ''
+    if (code !== null && code !== undefined) {
+      hoverG.appendChild(markPath(code, 'mark-hover'))
+    }
+  }
+
+  function flag(codes) {
+    flagged = new Set(codes)
+    drawMarks()
   }
 
   /* ── State ─────────────────────────────────────────────── */
@@ -721,9 +763,9 @@ footer {
       }
       path.style.fill = fill
       path.style.fillOpacity = opacity
-      path.classList.toggle('picked', lit !== null && lit.size === 1 && lit.has(c.code))
-      path.classList.remove('flagged')
     }
+    picked = lit === null ? [] : [...lit]
+    drawMarks()
     drawLegend(mode, breaks)
   }
 
@@ -763,11 +805,9 @@ footer {
     const li = e.target.closest('[data-swatch]')
     if (!li || !legend._keys) return
     const k = legend._keys[Number(li.dataset.swatch)]
-    for (const c of G.counties) paths.get(c.code).classList.toggle('flagged', k.has(c))
+    flag(G.counties.filter((c) => k.has(c)).map((c) => c.code))
   })
-  legend.addEventListener('mouseleave', () => {
-    for (const c of G.counties) paths.get(c.code).classList.remove('flagged')
-  })
+  legend.addEventListener('mouseleave', () => flag([]))
 
   /* ── Tooltip ───────────────────────────────────────────── */
   function showTip(html, event) {
@@ -788,11 +828,13 @@ footer {
       const k = constituency.get(Number(pin.dataset.code))
       showTip(`<b>${esc(k.name)}</b><span>constituency ${k.pcode} · ${num((wardsIn.get(k.code) || []).length)} wards</span>`, e)
       hotPin(k.code)
+      hoverCounty(null)
       return
     }
     const path = e.target.closest('.county')
-    if (!path) { hideTip(); return }
+    if (!path) { hideTip(); hoverCounty(null); return }
     const c = county.get(Number(path.dataset.code))
+    hoverCounty(c.code)
     if (state.scheme === 'provincial') {
       const p = province.get(c.province)
       showTip(
@@ -804,7 +846,7 @@ footer {
         `${num(c.pop19)} people</span>`, e)
     }
   })
-  svg.addEventListener('mouseleave', () => { hideTip(); hotPin(null) })
+  svg.addEventListener('mouseleave', () => { hideTip(); hotPin(null); hoverCounty(null) })
 
   svg.addEventListener('click', (e) => {
     const pin = e.target.closest('.pin')
@@ -1215,12 +1257,12 @@ footer {
     const [kind, raw] = button.dataset.hover.split(':')
     if (kind === 'pin') hotPin(Number(raw))
     if (kind === 'county') {
-      for (const c of G.counties) paths.get(c.code).classList.toggle('flagged', String(c.code) === raw)
+      flag([Number(raw)])
     }
   })
   panel.addEventListener('mouseleave', () => {
     hotPin(null)
-    for (const c of G.counties) paths.get(c.code).classList.remove('flagged')
+    flag([])
   })
 
   panel.addEventListener('input', (e) => {

@@ -16,6 +16,11 @@
     [data-blocs~="LREB"]       { fill: #CBE3DC }   economic bloc membership
     [data-asal="arid"]         { fill: #E8DCC0 }   the ASAL classification
 
+  One gotcha: a :hover stroke on a path only shows along the edges no
+  later county paints over, because these are 47 siblings drawn in code
+  order. To outline one county cleanly, draw a copy of its path above the
+  map with fill:none.
+
   There is no geometry below the county in this package. Constituency,
   ward and sub-county boundaries are not published here because no source
   we trust has been reconciled yet; see docs/plans/03-constituency-boundaries.md.

@@ -527,7 +527,17 @@ footer {
   fill-opacity: .5;
   cursor: pointer;
 }
-#mini path:hover { fill-opacity: .85; stroke: var(--ink); }
+#mini path:hover { fill-opacity: .85; }
+/* The hover outline is a copy drawn above the map. A stroke on the county
+   itself is painted over by whichever neighbour is drawn after it, so only
+   part of the border would show. */
+#mini .mark {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  pointer-events: none;
+  vector-effect: non-scaling-stroke;
+}
 .minimap figcaption {
   border-top: 1px solid var(--line-soft);
   padding: 9px 14px;
@@ -1715,6 +1725,11 @@ document.querySelectorAll('.code').forEach((block) => {
   const NS = 'http://www.w3.org/2000/svg';
   svg.setAttribute('viewBox', G.viewBox);
 
+  const shapes = document.createElementNS(NS, 'g');
+  const mark = document.createElementNS(NS, 'g');
+  svg.append(shapes, mark);
+
+  const outlineOf = new Map(G.counties.map((c) => [c.code, c.d]));
   for (const c of G.counties) {
     const path = document.createElementNS(NS, 'path');
     path.setAttribute('d', c.d);
@@ -1723,7 +1738,16 @@ document.querySelectorAll('.code').forEach((block) => {
     const title = document.createElementNS(NS, 'title');
     title.textContent = c.name;
     path.appendChild(title);
-    svg.appendChild(path);
+    shapes.appendChild(path);
+  }
+
+  function outline(code) {
+    mark.textContent = '';
+    if (code === null) return;
+    const path = document.createElementNS(NS, 'path');
+    path.setAttribute('d', outlineOf.get(code));
+    path.setAttribute('class', 'mark');
+    mark.appendChild(path);
   }
 
   const figure = svg.parentElement;
@@ -1734,9 +1758,10 @@ document.querySelectorAll('.code').forEach((block) => {
 
   svg.addEventListener('mousemove', (e) => {
     const path = e.target.closest('path');
-    if (!path) { tip.hidden = true; return; }
+    if (!path) { tip.hidden = true; outline(null); return; }
     const x = byCode.get(Number(path.dataset.code));
     if (!x) return;
+    outline(x.c);
     tip.innerHTML = `<b>${x.n}</b><span>${x.nk} constituencies · ${x.nw} wards</span>`;
     tip.hidden = false;
     const box = figure.getBoundingClientRect();
@@ -1745,7 +1770,7 @@ document.querySelectorAll('.code').forEach((block) => {
     tip.style.left = Math.min(Math.max(6, left), box.width - tip.offsetWidth - 6) + 'px';
     tip.style.top = Math.max(6, top) + 'px';
   });
-  svg.addEventListener('mouseleave', () => { tip.hidden = true; });
+  svg.addEventListener('mouseleave', () => { tip.hidden = true; outline(null); });
   svg.addEventListener('click', (e) => {
     const path = e.target.closest('path');
     if (path) window.location.href = 'atlas.html#/county/' + path.dataset.code;
