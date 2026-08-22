@@ -1056,7 +1056,6 @@ footer {
       panel.innerHTML =
         `<p class="kicker">Constituency · ${esc(c.name)} County</p>` +
         `<p class="pname">${esc(k.name)}</p>` +
-        `<p class="psub">Elects one member of the National Assembly. ${ws.length} wards, each electing one MCA.</p>` +
         `<div class="idgrid">${cell('IEBC code', String(k.code), 'acc')}${cell('p-code', k.pcode)}${cell('Wards', String(ws.length))}${cell('Area km²', num(Math.round(k.areaKm2)))}${cell('Centroid', '<span style="font-size:12px">' + k.lat.toFixed(3) + ', ' + k.lng.toFixed(3) + '</span>')}</div>` +
         `<h3 class="sec">Wards <em>${ws.length}</em></h3>` +
         picks(ws.map((w) => ({

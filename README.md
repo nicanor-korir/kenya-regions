@@ -609,6 +609,19 @@ hold, and the same assertions run again in the test suite:
   and p-code extends the country's, and each chamber's seats add up to its
   stated total and match the region counts
 
+The library itself is held to **100% coverage** on statements, branches,
+functions and lines, enforced by `npm run test:coverage` on every CI run, which
+is what the coverage badge reports.
+
+Holding that line is a design constraint rather than a score. A line that no
+test can reach is one of two things. Either it is dead code, in which case it
+goes: chasing the last few percent turned up a scoring tier in `search()` that
+could never execute, verified across all 31,295 token prefixes in the datasets
+before it was deleted. Or it guards against a state the data build already
+refuses to emit, in which case it stays and carries a `v8 ignore` naming the
+invariant and the test that enforces it, so an unreachable line always comes
+with the reason it is unreachable.
+
 ### Known limitations
 
 Honest about what is unresolved rather than papering over it:

@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest'
 import * as kr from '../src/index.js'
-import { editDistance, normalize, similarity, slugify, tokenize } from '../src/internal/text.js'
+import {
+  editDistance,
+  normalize,
+  similarity,
+  slugify,
+  tokenize,
+} from '../src/internal/text.js'
 import { outlineContains } from '../src/outlines.js'
 import type { CountyOutline } from '../src/types.js'
 
