@@ -163,7 +163,44 @@ select, .filter {
   box-shadow: var(--shadow);
   overflow: hidden;
 }
-#map { display: block; width: 100%; height: clamp(420px, 68vh, 820px); background: #F1F3F0; }
+#map {
+  display: block;
+  width: 100%;
+  height: clamp(420px, 68vh, 820px);
+  background: #F1F3F0;
+  cursor: grab;
+  /* Vertical drags still scroll the page, so the map cannot trap a phone. */
+  touch-action: pan-y;
+}
+#map.grabbing, #map.grabbing * { cursor: grabbing; }
+#map:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+.mapctl {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: grid;
+  gap: 4px;
+  z-index: 3;
+}
+.mapctl button {
+  width: 30px;
+  height: 30px;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, .94);
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  color: var(--ink-2);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+.mapctl button:hover { color: var(--accent); border-color: var(--accent-line); }
+.mapctl button:disabled { color: var(--line-strong); cursor: default; }
+.mapctl button:disabled:hover { border-color: var(--line-strong); }
 #zoom { transition: transform .55s cubic-bezier(.32,.72,.24,1); }
 
 .county {
@@ -449,7 +486,8 @@ footer {
         </span>
       </div>
       <figure class="mapfig">
-        <svg id="map" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map of Kenya by county">
+        <svg id="map" preserveAspectRatio="xMidYMid meet" tabindex="0"
+             role="img" aria-label="Map of Kenya by county. Drag to pan, arrow keys to pan, plus and minus to zoom.">
           <g id="zoom">
             <g id="shapes"></g>
             <g id="seats"></g>
@@ -458,6 +496,11 @@ footer {
             <g id="pins"></g>
           </g>
         </svg>
+        <div class="mapctl">
+          <button type="button" data-zoom="in" title="Zoom in" aria-label="Zoom in">+</button>
+          <button type="button" data-zoom="out" title="Zoom out" aria-label="Zoom out">−</button>
+          <button type="button" data-zoom="fit" title="Back to what is selected" aria-label="Back to what is selected">◎</button>
+        </div>
         <div class="tip" id="tip" hidden></div>
         <div class="legend" id="legend" hidden></div>
       </figure>
@@ -617,11 +660,13 @@ footer {
   const hoverG = document.getElementById('markHover')
   const pinsG = document.getElementById('pins')
   const tip = document.getElementById('tip')
+  const mapctl = document.querySelector('.mapctl')
   const legend = document.getElementById('legend')
   const crumbs = document.getElementById('crumbs')
   const panel = document.getElementById('panel')
   const shadeSel = document.getElementById('shade')
   const mapnote = document.getElementById('mapnote')
+  const HINT = ' Drag to pan, ⌘ or Ctrl with the wheel to zoom.'
   const figure = svg.parentElement
 
   svg.setAttribute('viewBox', G.viewBox)
@@ -679,12 +724,61 @@ footer {
   }
   let zoomScale = 1
 
-  /* ── Zoom ──────────────────────────────────────────────── */
+  /* ── Zoom and pan ──────────────────────────────────────── */
+
+  /**
+   * The whole map is one transform on a group: translate in viewBox units,
+   * then scale. Everything below moves that transform, whether it came from
+   * selecting a region, dragging, the wheel or the keyboard.
+   */
+  const MIN_ZOOM = 1
+  const MAX_ZOOM = 200
+  const view = { x: 0, y: 0, k: 1 }
+  let fitBox = null
+
+  function applyView(animate) {
+    zoomG.style.transition = animate ? '' : 'none'
+    zoomG.setAttribute('transform', `translate(${view.x} ${view.y}) scale(${view.k})`)
+    zoomScale = view.k
+    resizePins()
+    for (const button of mapctl.children) {
+      button.disabled =
+        (button.dataset.zoom === 'in' && view.k >= MAX_ZOOM) ||
+        (button.dataset.zoom === 'out' && view.k <= MIN_ZOOM)
+    }
+  }
+
+  /** Client pixels to viewBox units, undoing preserveAspectRatio="xMidYMid meet". */
+  function fitScale() {
+    const rect = svg.getBoundingClientRect()
+    return { rect, fit: Math.min(rect.width / G.width, rect.height / G.height) || 1 }
+  }
+  function toViewBox(clientX, clientY) {
+    const { rect, fit } = fitScale()
+    return [
+      (clientX - rect.left - (rect.width - G.width * fit) / 2) / fit,
+      (clientY - rect.top - (rect.height - G.height * fit) / 2) / fit,
+    ]
+  }
+
+  /** Scale about a fixed point, so whatever is under the cursor stays there. */
+  function zoomAbout(factor, px, py, animate) {
+    const k = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, view.k * factor))
+    const ratio = k / view.k
+    if (ratio === 1) return
+    view.x = px - (px - view.x) * ratio
+    view.y = py - (py - view.y) * ratio
+    view.k = k
+    applyView(animate)
+  }
+
   function focusOn(box) {
+    fitBox = box
     if (!box) {
-      zoomScale = 1
-      zoomG.setAttribute('transform', 'translate(0 0) scale(1)')
-      resizePins()
+      view.x = 0
+      view.y = 0
+      view.k = 1
+      applyView(true)
       return
     }
     // Padding has to stay proportional. A flat 8 units is a comfortable margin
@@ -695,16 +789,95 @@ footer {
     // The ceiling has to clear a small urban seat. Starehe is 17 km² on a canvas
     // spanning 890 km of longitude, about five units across, so filling the
     // frame with it needs well over a hundred times magnification.
-    const s = Math.min(G.width / w, G.height / h, 200)
-    const cx = box[0] + box[2] / 2
-    const cy = box[1] + box[3] / 2
-    zoomScale = s
-    zoomG.setAttribute(
-      'transform',
-      `translate(${G.width / 2 - cx * s} ${G.height / 2 - cy * s}) scale(${s})`,
-    )
-    resizePins()
+    const s = Math.min(G.width / w, G.height / h, MAX_ZOOM)
+    view.k = s
+    view.x = G.width / 2 - (box[0] + box[2] / 2) * s
+    view.y = G.height / 2 - (box[1] + box[3] / 2) * s
+    applyView(true)
   }
+
+  /* -- drag ----------------------------------------------------------- */
+
+  let drag = null
+  let suppressClick = false
+  svg.addEventListener('pointerdown', (e) => {
+    if (e.button !== 0) return
+    drag = { cx: e.clientX, cy: e.clientY, vx: view.x, vy: view.y, moved: false }
+    svg.setPointerCapture(e.pointerId)
+    svg.classList.add('grabbing')
+  })
+  svg.addEventListener('pointermove', (e) => {
+    if (!drag) return
+    const { fit } = fitScale()
+    const dx = e.clientX - drag.cx
+    const dy = e.clientY - drag.cy
+    if (!drag.moved && Math.abs(dx) + Math.abs(dy) > 4) drag.moved = true
+    view.x = drag.vx + dx / fit
+    view.y = drag.vy + dy / fit
+    applyView(false)
+  })
+  const endDrag = (e) => {
+    if (!drag) return
+    // A drag that moved must not also count as a click on whatever is beneath it.
+    suppressClick = drag.moved
+    drag = null
+    svg.classList.remove('grabbing')
+    if (e && svg.hasPointerCapture?.(e.pointerId)) svg.releasePointerCapture(e.pointerId)
+  }
+  svg.addEventListener('pointerup', endDrag)
+  svg.addEventListener('pointercancel', endDrag)
+
+  /* -- wheel ---------------------------------------------------------- */
+
+  /**
+   * Only with a modifier. A docs page that swallows the scroll wheel over a
+   * 68vh figure is a page you cannot scroll past. A trackpad pinch arrives as
+   * a wheel event with ctrlKey set, so pinching works without asking.
+   */
+  svg.addEventListener(
+    'wheel',
+    (e) => {
+      if (!e.ctrlKey && !e.metaKey) return
+      e.preventDefault()
+      const [px, py] = toViewBox(e.clientX, e.clientY)
+      zoomAbout(Math.pow(0.99, e.deltaY), px, py, false)
+    },
+    { passive: false },
+  )
+
+  svg.addEventListener('dblclick', (e) => {
+    const [px, py] = toViewBox(e.clientX, e.clientY)
+    zoomAbout(2, px, py, true)
+  })
+
+  /* -- buttons and keys ------------------------------------------------ */
+
+  mapctl.addEventListener('click', (e) => {
+    const button = e.target.closest('[data-zoom]')
+    if (!button) return
+    const how = button.dataset.zoom
+    if (how === 'fit') return focusOn(fitBox)
+    zoomAbout(how === 'in' ? 1.6 : 1 / 1.6, G.width / 2, G.height / 2, true)
+  })
+
+  svg.addEventListener('keydown', (e) => {
+    const step = 60 / view.k
+    const move = { ArrowLeft: [step, 0], ArrowRight: [-step, 0], ArrowUp: [0, step], ArrowDown: [0, -step] }[e.key]
+    if (move) {
+      view.x += move[0]
+      view.y += move[1]
+      applyView(true)
+    } else if (e.key === '+' || e.key === '=') {
+      zoomAbout(1.6, G.width / 2, G.height / 2, true)
+    } else if (e.key === '-' || e.key === '_') {
+      zoomAbout(1 / 1.6, G.width / 2, G.height / 2, true)
+    } else if (e.key === '0') {
+      focusOn(fitBox)
+    } else {
+      return
+    }
+    e.preventDefault()
+  })
 
   function unionBox(codes) {
     let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity
@@ -909,6 +1082,7 @@ footer {
   const hideTip = () => { tip.hidden = true }
 
   svg.addEventListener('mousemove', (e) => {
+    if (drag) { hideTip(); return }
     const pin = e.target.closest('.pin')
     if (pin) {
       const k = constituency.get(Number(pin.dataset.code))
@@ -944,6 +1118,7 @@ footer {
   svg.addEventListener('mouseleave', () => { hideTip(); hoverPin(null); hoverCounty(null) })
 
   svg.addEventListener('click', (e) => {
+    if (suppressClick) { suppressClick = false; return }
     const pin = e.target.closest('.pin')
     if (pin) { go({ constituency: Number(pin.dataset.code) }); return }
     const seat = e.target.closest('.seat')
@@ -1085,7 +1260,7 @@ footer {
       focusOn(null)
       drawPins([])
       drawSeats([])
-      mapnote.textContent = 'Hover a county to name it. Click one to see the constituencies, sub-counties and wards inside it.'
+      mapnote.textContent = 'Hover a county to name it. Click one to see the constituencies, sub-counties and wards inside it.' + HINT
       panel.innerHTML =
         `<p class="kicker">Devolved · 2013 onward</p>` +
         `<p class="pname">The units in force today</p>` +
@@ -1118,7 +1293,7 @@ footer {
       drawPins([k])
       selectPin(k.code)
       markSeat(k.code)
-      mapnote.textContent = 'Wards have no published boundary anywhere we trust. The highlighted outline is the constituency this ward sits in.'
+      mapnote.textContent = 'Wards have no published boundary anywhere we trust. The highlighted outline is the constituency this ward sits in.' + HINT
       panel.innerHTML =
         `<p class="kicker">Ward · ${esc(k.name)} constituency</p>` +
         `<p class="pname">${esc(w.name)}</p>` +
@@ -1140,7 +1315,7 @@ footer {
     if (d.subCounty) {
       const s = subCounty.get(d.subCounty)
       const ws = s.wardCodes.map((code) => ward.get(code)).filter(Boolean)
-      mapnote.textContent = 'Administrative sub-counties have no published boundary. The dotted lines are constituencies, which are a different division of the same ground.'
+      mapnote.textContent = 'Administrative sub-counties have no published boundary. The dotted lines are constituencies, which are a different division of the same ground.' + HINT
       panel.innerHTML =
         `<p class="kicker">Sub-county · ${esc(c.name)} County</p>` +
         `<p class="pname">${esc(s.name)}</p>` +
@@ -1159,7 +1334,7 @@ footer {
       drawPins([k])
       selectPin(k.code)
       markSeat(k.code)
-      mapnote.textContent = 'The filled outline is this constituency, from the IEBC 2012 delimitation. The dot is the centre point the panel names.'
+      mapnote.textContent = 'The filled outline is this constituency, from the IEBC 2012 delimitation. The dot is the centre point the panel names.' + HINT
       panel.innerHTML =
         `<p class="kicker">Constituency · ${esc(c.name)} County</p>` +
         `<p class="pname">${esc(k.name)}</p>` +
@@ -1174,7 +1349,7 @@ footer {
     }
 
     markSeat(null)
-    mapnote.textContent = 'Dotted lines are the constituencies inside this county, from the IEBC 2012 delimitation. Click one for its wards.'
+    mapnote.textContent = 'Dotted lines are the constituencies inside this county, from the IEBC 2012 delimitation. Click one for its wards.' + HINT
     const blocs = c.blocs.length
       ? c.blocs.map((b) => `<span class="tag">${esc(b)}</span>`).join('')
       : '<span class="tag dim">no bloc</span>'
@@ -1227,7 +1402,7 @@ footer {
 
     if (p.province === null) {
       focusOn(null)
-      mapnote.textContent = 'Colours are the eight provinces. Click one to walk down the 2009 census hierarchy.'
+      mapnote.textContent = 'Colours are the eight provinces. Click one to walk down the 2009 census hierarchy.' + HINT
       panel.innerHTML =
         `<p class="kicker">Provincial administration · 1963 – 2013</p>` +
         `<p class="pname">The hierarchy before devolution</p>` +
@@ -1260,7 +1435,7 @@ footer {
       const people = subs.reduce((t, s) => t + s.pop, 0)
       const homes = subs.reduce((t, s) => t + s.hh, 0)
       focusOn(unionBox(dt.counties))
-      mapnote.textContent = `${l.name} location sat in ${dt.name} district, which is inside ${dt.counties.map((c) => county.get(c).name).join(' and ')} today.`
+      mapnote.textContent = `${l.name} location sat in ${dt.name} district, which is inside ${dt.counties.map((c) => county.get(c).name).join(' and ')} today.` + HINT
       panel.innerHTML =
         `<p class="kicker">Location · ${esc(dv.name)} division</p>` +
         `<p class="pname">${esc(l.name)}</p>` +
@@ -1281,7 +1456,7 @@ footer {
       const dt = district.get(dv.districtCode)
       const ls = (locationsIn.get(dv.code) || []).slice().sort((a, b) => a.name.localeCompare(b.name))
       focusOn(unionBox(dt.counties))
-      mapnote.textContent = `${dv.name} division sat in ${dt.name} district.`
+      mapnote.textContent = `${dv.name} division sat in ${dt.name} district.` + HINT
       panel.innerHTML =
         `<p class="kicker">Division · ${esc(dt.name)} district</p>` +
         `<p class="pname">${esc(dv.name)}</p>` +
@@ -1302,7 +1477,7 @@ footer {
       const dvs = (divisionsIn.get(dt.code) || []).slice().sort((a, b) => a.name.localeCompare(b.name))
       const todays = countyOfDistrict(dt)
       focusOn(unionBox(dt.counties))
-      mapnote.textContent = `${dt.name} district falls inside ${todays.map((c) => c.name).join(' and ')} today.`
+      mapnote.textContent = `${dt.name} district falls inside ${todays.map((c) => c.name).join(' and ')} today.` + HINT
       panel.innerHTML =
         `<p class="kicker">District · ${esc(pr.name)} Province</p>` +
         `<p class="pname">${esc(dt.name)}</p>` +
@@ -1323,7 +1498,7 @@ footer {
     const todayCounties = pr.counties.map((c) => county.get(c))
     const divisionCount = ds.reduce((t, d) => t + (divisionsIn.get(d.code) || []).length, 0)
     focusOn(unionBox(pr.counties))
-    mapnote.textContent = `${pr.name} Province is ${todayCounties.length} of today's counties.`
+    mapnote.textContent = `${pr.name} Province is ${todayCounties.length} of today's counties.` + HINT
     panel.innerHTML =
       `<p class="kicker">Province · abolished 2013</p>` +
       `<p class="pname">${esc(pr.name)}</p>` +
