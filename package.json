@@ -1,6 +1,6 @@
 {
   "name": "kenya-regions",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Offline dataset and typed API for every way Kenya is divided: 47 counties, 290 constituencies, 1450 wards, the 8 former provinces, ISO 3166-2 codes, OCHA p-codes, regional economic blocs and the ASAL classification. No network, no dependencies.",
   "keywords": [
     "kenya",
@@ -168,6 +168,7 @@
     "dist",
     "data/*.json",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "engines": {
