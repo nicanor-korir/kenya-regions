@@ -508,6 +508,58 @@ footer {
   color: var(--ink-3);
 }
 
+/* ── Mini map: the atlas page in one figure ──────────────── */
+.minimap {
+  position: relative;
+  margin: 0 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+#mini { display: block; width: 100%; height: clamp(340px, 46vh, 520px); background: #F1F3F0; }
+#mini path {
+  stroke: #FFFFFF;
+  stroke-width: 1.1;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  fill-opacity: .5;
+  cursor: pointer;
+}
+#mini path:hover { fill-opacity: .85; stroke: var(--ink); }
+.minimap figcaption {
+  border-top: 1px solid var(--line-soft);
+  padding: 9px 14px;
+  font-size: 13px;
+  color: var(--ink-3);
+  background: var(--surface);
+}
+.minitip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  padding: 5px 9px;
+  font-size: 13px;
+  line-height: 1.35;
+  box-shadow: var(--shadow);
+}
+.minitip b { display: block; }
+.minitip span { font-family: "JetBrains Mono", monospace; font-size: 11.5px; color: var(--ink-3); }
+.golink {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  border: 1px solid var(--accent-line);
+  background: var(--accent-soft);
+  border-radius: 2px;
+  padding: 6px 13px;
+  text-decoration: none;
+}
+.golink:hover { border-color: var(--accent); }
+
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 900px) {
   .shell { grid-template-columns: 1fr; }
@@ -546,6 +598,7 @@ footer {
       <a href="#admin">Census hierarchy</a>
       <a href="#codes">Codes that clash</a>
       <a href="#explorer">County explorer</a>
+      <a href="#atlas">The map</a>
     </div>
 
     <div class="rail-group">
@@ -843,6 +896,25 @@ getCounty('KE-30').name   // 'Nairobi'  ← a different county entirely</code></
             </select>
           </div>
           <div class="exp-body" id="expBody"></div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- ═══ THE MAP ═══ -->
+      <section id="atlas">
+        <p class="kicker">Concepts</p>
+        <h2>The map</h2>
+        <div class="prose">
+          <p>The counties, drawn from the outlines the package ships. Hover to name one; click to open it in the atlas, where its constituencies, sub-counties and wards are laid out, along with the districts and divisions that occupied the same ground before 2013.</p>
+        </div>
+        <figure class="minimap">
+          <svg id="mini" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map of Kenya, shaded by former province"></svg>
+          <figcaption>47 counties, shaded by the province each was carved out of. Simplified to roughly a kilometre.</figcaption>
+        </figure>
+        <p><a class="golink" href="atlas.html">Open the atlas →</a></p>
+        <div class="prose">
+          <p>The same geometry ships three ways: as GeoJSON from <code>kenya-regions/outlines</code>, as a styleable <code>data/svg/counties.svg</code>, and as an <code>svg_path</code> column in <code>data/csv/county-outlines.csv</code> for anyone drawing a map without a mapping library.</p>
         </div>
       </section>
 
@@ -1512,6 +1584,7 @@ const rows = external.map((row) =&gt; ({
   </main>
 </div>
 
+<script src="atlas-geometry.js"></script>
 <script>
 const COUNTIES = [{"c":1,"n":"Mombasa","i":"KE-28","p":"KE001","cap":"Mombasa","pv":"Coast","b":["JKP"],"a":null,"km":212.5,"p19":1208333,"p09":939370,"city":2002,"al":[],"nk":6,"nw":30},{"c":2,"n":"Kwale","i":"KE-19","p":"KE002","cap":"Kwale","pv":"Coast","b":["JKP"],"a":"semi-arid","km":8270.3,"p19":866820,"p09":649931,"city":null,"al":[],"nk":4,"nw":20},{"c":3,"n":"Kilifi","i":"KE-14","p":"KE003","cap":"Kilifi","pv":"Coast","b":["JKP"],"a":"semi-arid","km":12245.9,"p19":1453787,"p09":1109735,"city":null,"al":[],"nk":7,"nw":35},{"c":4,"n":"Tana River","i":"KE-40","p":"KE004","cap":"Hola","pv":"Coast","b":["FCDC","JKP"],"a":"arid","km":35375.8,"p19":315943,"p09":240075,"city":null,"al":[],"nk":3,"nw":15},{"c":5,"n":"Lamu","i":"KE-21","p":"KE005","cap":"Lamu","pv":"Coast","b":["FCDC","JKP"],"a":"semi-arid","km":6497.7,"p19":143920,"p09":101539,"city":null,"al":[],"nk":2,"nw":10},{"c":6,"n":"Taita-Taveta","i":"KE-39","p":"KE006","cap":"Mwatate","pv":"Coast","b":["JKP"],"a":"semi-arid","km":17083.9,"p19":340671,"p09":284657,"city":null,"al":[],"nk":4,"nw":20},{"c":7,"n":"Garissa","i":"KE-07","p":"KE007","cap":"Garissa","pv":"North Eastern","b":["FCDC"],"a":"arid","km":45720.2,"p19":841353,"p09":623060,"city":null,"al":[],"nk":6,"nw":30},{"c":8,"n":"Wajir","i":"KE-46","p":"KE008","cap":"Wajir","pv":"North Eastern","b":["FCDC"],"a":"arid","km":55840.6,"p19":781263,"p09":661941,"city":null,"al":[],"nk":6,"nw":30},{"c":9,"n":"Mandera","i":"KE-24","p":"KE009","cap":"Mandera","pv":"North Eastern","b":["FCDC"],"a":"arid","km":25797.7,"p19":867457,"p09":1025756,"city":null,"al":[],"nk":6,"nw":30},{"c":10,"n":"Marsabit","i":"KE-25","p":"KE010","cap":"Marsabit","pv":"Eastern","b":["FCDC"],"a":"arid","km":66923.1,"p19":459785,"p09":291166,"city":null,"al":[],"nk":4,"nw":20},{"c":11,"n":"Isiolo","i":"KE-09","p":"KE011","cap":"Isiolo","pv":"Eastern","b":["FCDC"],"a":"arid","km":25336.1,"p19":268002,"p09":143294,"city":null,"al":[],"nk":2,"nw":10},{"c":12,"n":"Meru","i":"KE-26","p":"KE012","cap":"Meru","pv":"Eastern","b":["MKAREB"],"a":"semi-arid","km":7003.1,"p19":1545714,"p09":1356301,"city":null,"al":[],"nk":9,"nw":45},{"c":13,"n":"Tharaka-Nithi","i":"KE-41","p":"KE013","cap":"Kathwana","pv":"Eastern","b":["MKAREB"],"a":"semi-arid","km":2609.5,"p19":393177,"p09":365330,"city":null,"al":[],"nk":3,"nw":15},{"c":14,"n":"Embu","i":"KE-06","p":"KE014","cap":"Embu","pv":"Eastern","b":["MKAREB"],"a":"semi-arid","km":2555.9,"p19":608599,"p09":516212,"city":null,"al":[],"nk":4,"nw":20},{"c":15,"n":"Kitui","i":"KE-18","p":"KE015","cap":"Kitui","pv":"Eastern","b":["SEKEB"],"a":"semi-arid","km":24385.1,"p19":1136187,"p09":1012709,"city":null,"al":[],"nk":8,"nw":40},{"c":16,"n":"Machakos","i":"KE-22","p":"KE016","cap":"Machakos","pv":"Eastern","b":["SEKEB","NAMETRO"],"a":null,"km":5952.9,"p19":1421932,"p09":1098584,"city":null,"al":[],"nk":8,"nw":40},{"c":17,"n":"Makueni","i":"KE-23","p":"KE017","cap":"Wote","pv":"Eastern","b":["SEKEB"],"a":"semi-arid","km":8008.9,"p19":987653,"p09":884527,"city":null,"al":[],"nk":6,"nw":30},{"c":18,"n":"Nyandarua","i":"KE-35","p":"KE018","cap":"Ol Kalou","pv":"Central","b":["MKAREB"],"a":null,"km":3107.7,"p19":638289,"p09":596268,"city":null,"al":[],"nk":5,"nw":25},{"c":19,"n":"Nyeri","i":"KE-36","p":"KE019","cap":"Nyeri","pv":"Central","b":["MKAREB"],"a":"semi-arid","km":2361,"p19":759164,"p09":693558,"city":null,"al":[],"nk":6,"nw":30},{"c":20,"n":"Kirinyaga","i":"KE-15","p":"KE020","cap":"Kerugoya","pv":"Central","b":["MKAREB"],"a":null,"km":1205.4,"p19":610411,"p09":528054,"city":null,"al":[],"nk":4,"nw":20},{"c":21,"n":"Murang'a","i":"KE-29","p":"KE021","cap":"Murang'a","pv":"Central","b":["MKAREB","NAMETRO"],"a":null,"km":2325.8,"p19":1056640,"p09":942581,"city":null,"al":[],"nk":7,"nw":35},{"c":22,"n":"Kiambu","i":"KE-13","p":"KE022","cap":"Kiambu","pv":"Central","b":["MKAREB","NAMETRO"],"a":null,"km":2449.2,"p19":2417735,"p09":1623282,"city":null,"al":[],"nk":12,"nw":60},{"c":23,"n":"Turkana","i":"KE-43","p":"KE023","cap":"Lodwar","pv":"Rift Valley","b":["NOREB"],"a":"arid","km":98597.8,"p19":926976,"p09":855399,"city":null,"al":[],"nk":6,"nw":30},{"c":24,"n":"West Pokot","i":"KE-47","p":"KE024","cap":"Kapenguria","pv":"Rift Valley","b":["NOREB"],"a":"semi-arid","km":8418.2,"p19":621241,"p09":512690,"city":null,"al":[],"nk":4,"nw":20},{"c":25,"n":"Samburu","i":"KE-37","p":"KE025","cap":"Maralal","pv":"Rift Valley","b":["NOREB"],"a":"arid","km":20182.5,"p19":310327,"p09":223947,"city":null,"al":[],"nk":3,"nw":15},{"c":26,"n":"Trans Nzoia","i":"KE-42","p":"KE026","cap":"Kitale","pv":"Rift Valley","b":["LREB","NOREB"],"a":null,"km":2469.9,"p19":990341,"p09":818757,"city":null,"al":[],"nk":5,"nw":25},{"c":27,"n":"Uasin Gishu","i":"KE-44","p":"KE027","cap":"Eldoret","pv":"Rift Valley","b":["NOREB"],"a":null,"km":2955.3,"p19":1163186,"p09":894179,"city":2024,"al":[],"nk":6,"nw":30},{"c":28,"n":"Elgeyo-Marakwet","i":"KE-05","p":"KE028","cap":"Iten","pv":"Rift Valley","b":["NOREB"],"a":null,"km":3049.7,"p19":454480,"p09":369998,"city":null,"al":[],"nk":4,"nw":20},{"c":29,"n":"Nandi","i":"KE-32","p":"KE029","cap":"Kapsabet","pv":"Rift Valley","b":["LREB","NOREB"],"a":null,"km":2884.5,"p19":885711,"p09":752965,"city":null,"al":[],"nk":6,"nw":30},{"c":30,"n":"Baringo","i":"KE-01","p":"KE030","cap":"Kabarnet","pv":"Rift Valley","b":["NOREB"],"a":"arid","km":11075.3,"p19":666763,"p09":555561,"city":null,"al":[],"nk":6,"nw":30},{"c":31,"n":"Laikipia","i":"KE-20","p":"KE031","cap":"Rumuruti","pv":"Rift Valley","b":["MKAREB"],"a":"semi-arid","km":8696.1,"p19":518560,"p09":399227,"city":null,"al":[],"nk":3,"nw":15},{"c":32,"n":"Nakuru","i":"KE-31","p":"KE032","cap":"Nakuru","pv":"Rift Valley","b":["MKAREB"],"a":null,"km":7509.5,"p19":2162202,"p09":1603325,"city":2021,"al":[],"nk":11,"nw":55},{"c":33,"n":"Narok","i":"KE-33","p":"KE033","cap":"Narok","pv":"Rift Valley","b":[],"a":"semi-arid","km":17921.2,"p19":1157873,"p09":850920,"city":null,"al":[],"nk":6,"nw":30},{"c":34,"n":"Kajiado","i":"KE-10","p":"KE034","cap":"Kajiado","pv":"Rift Valley","b":["NAMETRO"],"a":"semi-arid","km":21292.7,"p19":1117840,"p09":687312,"city":null,"al":[],"nk":5,"nw":25},{"c":35,"n":"Kericho","i":"KE-12","p":"KE035","cap":"Kericho","pv":"Rift Valley","b":["LREB"],"a":null,"km":2454.5,"p19":901777,"p09":752396,"city":null,"al":[],"nk":6,"nw":30},{"c":36,"n":"Bomet","i":"KE-02","p":"KE036","cap":"Bomet","pv":"Rift Valley","b":["LREB"],"a":null,"km":1997.9,"p19":875689,"p09":730129,"city":null,"al":[],"nk":5,"nw":25},{"c":37,"n":"Kakamega","i":"KE-11","p":"KE037","cap":"Kakamega","pv":"Western","b":["LREB"],"a":null,"km":3033.8,"p19":1867579,"p09":1660651,"city":null,"al":[],"nk":12,"nw":60},{"c":38,"n":"Vihiga","i":"KE-45","p":"KE038","cap":"Mbale","pv":"Western","b":["LREB"],"a":null,"km":531.3,"p19":590013,"p09":554622,"city":null,"al":[],"nk":5,"nw":25},{"c":39,"n":"Bungoma","i":"KE-03","p":"KE039","cap":"Bungoma","pv":"Western","b":["LREB"],"a":null,"km":2206.9,"p19":1670570,"p09":1375063,"city":null,"al":[],"nk":9,"nw":45},{"c":40,"n":"Busia","i":"KE-04","p":"KE040","cap":"Busia","pv":"Western","b":["LREB"],"a":null,"km":1628.4,"p19":893681,"p09":743946,"city":null,"al":[],"nk":7,"nw":35},{"c":41,"n":"Siaya","i":"KE-38","p":"KE041","cap":"Siaya","pv":"Nyanza","b":["LREB"],"a":null,"km":2496.1,"p19":993183,"p09":842304,"city":null,"al":[],"nk":6,"nw":30},{"c":42,"n":"Kisumu","i":"KE-17","p":"KE042","cap":"Kisumu","pv":"Nyanza","b":["LREB"],"a":null,"km":2009.5,"p19":1155574,"p09":968909,"city":2001,"al":[],"nk":7,"nw":35},{"c":43,"n":"Homa Bay","i":"KE-08","p":"KE043","cap":"Homa Bay","pv":"Nyanza","b":["LREB"],"a":null,"km":3154.7,"p19":1131950,"p09":963794,"city":null,"al":[],"nk":8,"nw":40},{"c":44,"n":"Migori","i":"KE-27","p":"KE044","cap":"Migori","pv":"Nyanza","b":["LREB"],"a":null,"km":2586.4,"p19":1116436,"p09":917170,"city":null,"al":[],"nk":8,"nw":40},{"c":45,"n":"Kisii","i":"KE-16","p":"KE045","cap":"Kisii","pv":"Nyanza","b":["LREB"],"a":null,"km":1317.9,"p19":1266860,"p09":1152282,"city":null,"al":[],"nk":9,"nw":45},{"c":46,"n":"Nyamira","i":"KE-34","p":"KE046","cap":"Nyamira","pv":"Nyanza","b":["LREB"],"a":null,"km":912.5,"p19":605576,"p09":598252,"city":null,"al":[],"nk":4,"nw":20},{"c":47,"n":"Nairobi","i":"KE-30","p":"KE047","cap":"Nairobi","pv":"Nairobi","b":["NAMETRO"],"a":null,"km":694.9,"p19":4397073,"p09":3138369,"city":1963,"al":["Nairobi City"],"nk":17,"nw":85}];
 
@@ -1624,6 +1697,59 @@ document.querySelectorAll('.code').forEach((block) => {
   sel.addEventListener('change', () => { current = sel.value; render(); });
   ord.addEventListener('change', repopulate);
   repopulate();
+})();
+
+/* ── The map ────────────────────────────────────────────────
+   Same geometry and same palette as atlas.html, which loads the
+   identical atlas-geometry.js. A click hands off to that page. */
+(function minimap() {
+  const G = window.KR_GEOMETRY;
+  const svg = document.getElementById('mini');
+  if (!G || !svg) return;
+
+  const HUE = {
+    NBI: '#B7402F', CEN: '#0F6B5C', CST: '#2F6FA8', EST: '#C08A16',
+    NEA: '#9E4A78', NYZ: '#4A7C8C', RFT: '#6E8C1F', WST: '#5A5FA8',
+  };
+  const byCode = new Map(COUNTIES.map((c) => [c.c, c]));
+  const NS = 'http://www.w3.org/2000/svg';
+  svg.setAttribute('viewBox', G.viewBox);
+
+  for (const c of G.counties) {
+    const path = document.createElementNS(NS, 'path');
+    path.setAttribute('d', c.d);
+    path.setAttribute('fill', HUE[c.province] || '#C9D0CA');
+    path.dataset.code = c.code;
+    const title = document.createElementNS(NS, 'title');
+    title.textContent = c.name;
+    path.appendChild(title);
+    svg.appendChild(path);
+  }
+
+  const figure = svg.parentElement;
+  const tip = document.createElement('div');
+  tip.className = 'minitip';
+  tip.hidden = true;
+  figure.appendChild(tip);
+
+  svg.addEventListener('mousemove', (e) => {
+    const path = e.target.closest('path');
+    if (!path) { tip.hidden = true; return; }
+    const x = byCode.get(Number(path.dataset.code));
+    if (!x) return;
+    tip.innerHTML = `<b>${x.n}</b><span>${x.nk} constituencies · ${x.nw} wards</span>`;
+    tip.hidden = false;
+    const box = figure.getBoundingClientRect();
+    const left = e.clientX - box.left + 14;
+    const top = e.clientY - box.top - tip.offsetHeight - 12;
+    tip.style.left = Math.min(Math.max(6, left), box.width - tip.offsetWidth - 6) + 'px';
+    tip.style.top = Math.max(6, top) + 'px';
+  });
+  svg.addEventListener('mouseleave', () => { tip.hidden = true; });
+  svg.addEventListener('click', (e) => {
+    const path = e.target.closest('path');
+    if (path) window.location.href = 'atlas.html#/county/' + path.dataset.code;
+  });
 })();
 
 /* ── Active section in the rail ─────────────────────────── */

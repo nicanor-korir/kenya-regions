@@ -33,11 +33,17 @@ function ensureGroups() {
 
 function nest(county: County): CountyNode {
   ensureGroups()
+  // The empty fallbacks below cannot fire: the data build refuses to emit a
+  // county with no constituencies or a constituency with no wards, and
+  // test/data.test.ts asserts both. They stay as a guard rather than a
+  // non-null assertion, so a future data change degrades instead of throwing.
+  /* v8 ignore next */
   const children = constituenciesByCounty!.get(county.code) ?? []
   return {
     ...county,
     constituencies: children.map((constituency): ConstituencyNode => ({
       ...constituency,
+      /* v8 ignore next */
       wards: wardsByConstituency!.get(constituency.code) ?? [],
     })),
   }

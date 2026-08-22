@@ -92,7 +92,7 @@ no build server involved.
 npm run build:data    # regenerate data/ and src/generated/ from data/sources/
 npm run typecheck     # tsc --noEmit
 npm test              # vitest
-npm run test:coverage # vitest with the enforced thresholds
+npm run test:coverage # vitest, with 100% coverage enforced
 npm run build         # tsup, produces dist/
 npm run format        # prettier
 ```
@@ -172,6 +172,13 @@ happen silently.
 A PR is ready when:
 
 - [ ] `npm run typecheck`, `npm test` and `npm run test:coverage` pass
+
+Coverage is enforced at 100% on statements, branches, functions and lines. If a
+line cannot be reached by a test it is one of two things: dead code, which
+should be deleted, or a guard against a state the data build already refuses to
+emit. The second kind carries a `v8 ignore` comment naming the invariant and
+the test that enforces it, so an unreachable line is always accompanied by the
+reason it is unreachable.
 - [ ] `npm run build:data` leaves the tree clean (`git diff --exit-code`)
 - [ ] data changes cite a source in the PR description
 - [ ] behaviour changes come with a test

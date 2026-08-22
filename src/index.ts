@@ -177,6 +177,10 @@ export function getWardLineage(query: Query): WardLineage | undefined {
   if (!ward) return undefined
   const constituency = getConstituency(ward.constituencyCode)
   const county = getCounty(ward.countyCode)
+  // Unreachable: every ward's constituency and county are checked to exist at
+  // build time and again in test/data.test.ts. Kept so a data regression
+  // returns undefined rather than a half-built object.
+  /* v8 ignore next */
   if (!constituency || !county) return undefined
   return { ward, constituency, county }
 }

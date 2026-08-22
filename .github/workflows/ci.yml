@@ -24,11 +24,12 @@ jobs:
       - run: npm run test:coverage
 
       # The data must be reproducible from the committed sources. If this
-      # leaves the tree dirty, someone edited a generated file by hand.
+      # leaves the tree dirty, someone edited a generated file by hand, or the
+      # docs atlas payload was not rebuilt alongside the data it draws.
       - name: Data build is reproducible
         run: |
           npm run build:data
-          git diff --exit-code -- data src/generated
+          git diff --exit-code -- data src/generated docs/atlas-geometry.js docs/atlas-data.js
 
   package:
     runs-on: ubuntu-latest

@@ -176,12 +176,11 @@ select, .filter {
   transition: fill-opacity .18s, fill .18s;
 }
 .county:hover { stroke: var(--ink); stroke-width: 1.4; }
-.county.muted { fill-opacity: .18; }
 .county.picked { stroke: var(--ink); stroke-width: 1.8; }
 .county.flagged { stroke: var(--caution); stroke-width: 2.2; }
 
-.pin { fill: var(--accent); stroke: #FFFFFF; stroke-width: 1; vector-effect: non-scaling-stroke; cursor: pointer; }
-.pin.on { fill: var(--caution); }
+.pin { fill: #FFFFFF; stroke: var(--ink); stroke-width: 1.4; vector-effect: non-scaling-stroke; cursor: pointer; }
+.pin:hover, .pin.on { fill: var(--caution); stroke-width: 2; }
 .pinlabel {
   font-family: "JetBrains Mono", monospace;
   fill: var(--ink);
@@ -671,16 +670,26 @@ footer {
     })
     resizePins()
   }
+  /**
+   * Pins are drawn inside the zoomed group, so their radius has to be divided
+   * by the total on-screen scale to stay the same size however far in you are.
+   * That is the viewBox fit times the zoom, not the zoom alone.
+   */
   function resizePins() {
-    const r = 4.4 / zoomScale
-    const fs = 11 / zoomScale
+    if (!pinned.length) return
+    const rect = svg.getBoundingClientRect()
+    const fit = Math.min(rect.width / G.width, rect.height / G.height) || 1
+    const scale = fit * zoomScale
+    const r = 5 / scale
+    const fs = 12.5 / scale
     for (const p of pinned) {
       p.dot.setAttribute('r', r)
       p.text.setAttribute('font-size', fs)
-      p.text.setAttribute('dy', -r - fs * 0.45)
-      p.text.setAttribute('stroke-width', 3 / zoomScale)
+      p.text.setAttribute('dy', -r - fs * 0.5)
+      p.text.setAttribute('stroke-width', 3.5 / scale)
     }
   }
+  window.addEventListener('resize', resizePins)
   function hotPin(code) {
     for (const p of pinned) {
       const on = p.code === code
@@ -698,18 +707,20 @@ footer {
 
     for (const c of G.counties) {
       const path = paths.get(c.code)
+      // Fill-opacity is set inline rather than by class: the shading below
+      // writes the same property, and an inline value beats a stylesheet one.
+      const dim = lit !== null && !lit.has(c.code)
       let fill = ''
-      let opacity = ''
+      let opacity = dim ? '.3' : ''
       if (mode.kind === 'category') {
         fill = mode.hue(c)
-        opacity = '.5'
+        opacity = dim ? '.12' : '.5'
       } else if (mode.kind === 'ramp') {
         fill = RAMP[binOf(mode.value(c), breaks)]
-        opacity = '1'
+        opacity = dim ? '.22' : '1'
       }
       path.style.fill = fill
       path.style.fillOpacity = opacity
-      path.classList.toggle('muted', lit !== null && !lit.has(c.code))
       path.classList.toggle('picked', lit !== null && lit.size === 1 && lit.has(c.code))
       path.classList.remove('flagged')
     }
@@ -1257,7 +1268,8 @@ footer {
         return
       }
     }
-    render()
+    // A bare hash means the top of whichever scheme is showing.
+    go(state.scheme === 'devolved' ? { county: null } : { province: null }, true)
   }
 
   window.addEventListener('hashchange', readHash)

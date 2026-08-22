@@ -1,7 +1,7 @@
 import { counties } from './generated/counties.js'
 import { constituencies } from './generated/constituencies.js'
 import { wards } from './generated/wards.js'
-import { normalize, similarity, tokenize } from './internal/text.js'
+import { normalize, similarity } from './internal/text.js'
 import type { Constituency, County, Level, SearchResult, Ward } from './types.js'
 
 export interface SearchInit {
@@ -43,9 +43,11 @@ function score(query: string, candidate: string): number {
   if (c.startsWith(q)) return 0.9
   if (c.includes(q)) return 0.75
 
-  const tokens = tokenize(candidate)
-  if (tokens.some((token) => token.startsWith(q))) return 0.7
-
+  // There was a whole-token-prefix tier here. It could never fire: `normalize`
+  // concatenates the same alphanumeric runs that `tokenize` splits into, so a
+  // token starting with the query always means `c` contains the query, and the
+  // substring test above has already returned. Verified over every token prefix
+  // of every county, constituency and ward name.
   const fuzzy = similarity(q, c)
   return fuzzy >= 0.7 ? fuzzy * 0.65 : 0
 }

@@ -5,3 +5,5 @@ src/generated/
 data/
 dist/
 coverage/
+docs/atlas-geometry.js
+docs/atlas-data.js

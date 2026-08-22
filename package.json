@@ -176,11 +176,15 @@
       }
     },
     "./data/*.json": "./data/*.json",
+    "./data/csv/*.csv": "./data/csv/*.csv",
+    "./data/svg/*": "./data/svg/*",
     "./package.json": "./package.json"
   },
   "files": [
     "dist",
     "data/*.json",
+    "data/csv/*.csv",
+    "data/svg/*",
     "README.md",
     "CHANGELOG.md",
     "LICENSE"

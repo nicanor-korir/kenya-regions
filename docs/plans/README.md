@@ -8,7 +8,7 @@ not how interesting it is to build.
 
 | # | Plan | Status | Why this position |
 | --- | --- | --- | --- |
-| 01 | [Non-JavaScript consumers](01-non-js-consumers.md) | not started | Largest audience currently unserved. PHP, Python, mobile and SQL users can only vendor a JSON blob by hand. |
+| 01 | [Non-JavaScript consumers](01-non-js-consumers.md) | in progress | CSV, SVG and the documented CDN paths shipped in 2.2.0. SQL seeds and the recipes page are what is left. |
 | 02 | [Literal union types](02-literal-types.md) | not started | Hours of work, benefits every TypeScript user immediately. |
 | 03 | [Constituency boundaries](03-constituency-boundaries.md) | blocked on data | The one gap in [kenya-regions-geo](https://github.com/nicanor-korir/kenya-regions-geo). Blocked, not unstarted. |
 | 04 | [Publishing from CI with provenance](04-ci-publish-provenance.md) | not started | Prevents a failure that has already happened once. |
