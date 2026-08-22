@@ -710,6 +710,8 @@ footer {
       pinsG.appendChild(text)
       return { code: k.code, dot, text }
     })
+    pinSelected = null
+    pinHovered = null
     resizePins()
   }
   /**
@@ -732,13 +734,23 @@ footer {
     }
   }
   window.addEventListener('resize', resizePins)
-  function hotPin(code) {
+  /**
+   * A pin is lit when it is the selected constituency or the one under the
+   * pointer. Kept as two variables rather than one, so moving the mouse away
+   * does not unmark what you have actually drilled into.
+   */
+  let pinSelected = null
+  let pinHovered = null
+
+  function paintPins() {
     for (const p of pinned) {
-      const on = p.code === code
+      const on = p.code === pinSelected || p.code === pinHovered
       p.dot.classList.toggle('on', on)
       p.text.setAttribute('visibility', on ? 'visible' : 'hidden')
     }
   }
+  const hoverPin = (code) => { pinHovered = code; paintPins() }
+  const selectPin = (code) => { pinSelected = code; paintPins() }
 
   /* ── Shading ───────────────────────────────────────────── */
   function paint() {
@@ -827,7 +839,7 @@ footer {
     if (pin) {
       const k = constituency.get(Number(pin.dataset.code))
       showTip(`<b>${esc(k.name)}</b><span>constituency ${k.pcode} · ${num((wardsIn.get(k.code) || []).length)} wards</span>`, e)
-      hotPin(k.code)
+      hoverPin(k.code)
       hoverCounty(null)
       return
     }
@@ -835,6 +847,7 @@ footer {
     if (!path) { hideTip(); hoverCounty(null); return }
     const c = county.get(Number(path.dataset.code))
     hoverCounty(c.code)
+    hoverPin(null)
     if (state.scheme === 'provincial') {
       const p = province.get(c.province)
       showTip(
@@ -846,7 +859,7 @@ footer {
         `${num(c.pop19)} people</span>`, e)
     }
   })
-  svg.addEventListener('mouseleave', () => { hideTip(); hotPin(null); hoverCounty(null) })
+  svg.addEventListener('mouseleave', () => { hideTip(); hoverPin(null); hoverCounty(null) })
 
   svg.addEventListener('click', (e) => {
     const pin = e.target.closest('.pin')
@@ -1013,8 +1026,8 @@ footer {
     if (d.ward !== null) {
       const w = ward.get(d.ward)
       const k = constituency.get(w.constituencyCode)
-      hotPin(k.code)
-      mapnote.textContent = 'Wards have no published boundary here. The dot is the centroid of the constituency this ward sits in.'
+      selectPin(k.code)
+      mapnote.textContent = 'Wards have no published boundary here. The dot is the centre point of the constituency this ward sits in.'
       panel.innerHTML =
         `<p class="kicker">Ward · ${esc(k.name)} constituency</p>` +
         `<p class="pname">${esc(w.name)}</p>` +
@@ -1036,7 +1049,7 @@ footer {
     if (d.subCounty) {
       const s = subCounty.get(d.subCounty)
       const ws = s.wardCodes.map((code) => ward.get(code)).filter(Boolean)
-      mapnote.textContent = 'Administrative sub-counties have no published boundary here. The dots are constituency centroids.'
+      mapnote.textContent = 'Administrative sub-counties have no published boundary here. Each dot is a constituency’s centre point.'
       panel.innerHTML =
         `<p class="kicker">Sub-county · ${esc(c.name)} County</p>` +
         `<p class="pname">${esc(s.name)}</p>` +
@@ -1051,12 +1064,12 @@ footer {
     if (d.constituency !== null) {
       const k = constituency.get(d.constituency)
       const ws = (wardsIn.get(k.code) || []).slice().sort((a, b) => a.code - b.code)
-      hotPin(k.code)
-      mapnote.textContent = 'The highlighted dot is this constituency’s centroid. Constituency boundaries are not published in this package.'
+      selectPin(k.code)
+      mapnote.textContent = 'The highlighted dot is this constituency’s centre point. Constituency boundaries are not published in this package.'
       panel.innerHTML =
         `<p class="kicker">Constituency · ${esc(c.name)} County</p>` +
         `<p class="pname">${esc(k.name)}</p>` +
-        `<div class="idgrid">${cell('IEBC code', String(k.code), 'acc')}${cell('p-code', k.pcode)}${cell('Wards', String(ws.length))}${cell('Area km²', num(Math.round(k.areaKm2)))}${cell('Centroid', '<span style="font-size:12px">' + k.lat.toFixed(3) + ', ' + k.lng.toFixed(3) + '</span>')}</div>` +
+        `<div class="idgrid">${cell('IEBC code', String(k.code), 'acc')}${cell('p-code', k.pcode)}${cell('Wards', String(ws.length))}${cell('Area km²', num(Math.round(k.areaKm2)))}${cell('Lat, long', '<span style="font-size:12px">' + k.lat.toFixed(3) + ', ' + k.lng.toFixed(3) + '</span>')}</div>` +
         `<h3 class="sec">Wards <em>${ws.length}</em></h3>` +
         picks(ws.map((w) => ({
           label: w.name,
@@ -1066,7 +1079,7 @@ footer {
       return
     }
 
-    mapnote.textContent = 'Each dot is a constituency centroid, the finest geometry this package carries. Click one for its wards.'
+    mapnote.textContent = 'Each dot is a constituency’s centre point, the finest geometry this package carries. Click one for its wards.'
     const blocs = c.blocs.length
       ? c.blocs.map((b) => `<span class="tag">${esc(b)}</span>`).join('')
       : '<span class="tag dim">no bloc</span>'
@@ -1254,13 +1267,13 @@ footer {
     const button = e.target.closest('[data-hover]')
     if (!button) { return }
     const [kind, raw] = button.dataset.hover.split(':')
-    if (kind === 'pin') hotPin(Number(raw))
+    if (kind === 'pin') hoverPin(Number(raw))
     if (kind === 'county') {
       flag([Number(raw)])
     }
   })
   panel.addEventListener('mouseleave', () => {
-    hotPin(null)
+    hoverPin(null)
     flag([])
   })
 
