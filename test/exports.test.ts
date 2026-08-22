@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
 import {
   blocs,
@@ -21,7 +22,8 @@ import { subLocations } from '../src/sublocations.js'
  * stale or malformed file could ship unnoticed.
  */
 
-const root = join(import.meta.dirname, '..')
+// Not `import.meta.dirname`: that needs Node 20 and CI still runs 18.
+const root = fileURLToPath(new URL('..', import.meta.url))
 const read = (...parts: string[]) => readFileSync(join(root, ...parts), 'utf8')
 
 /** Enough of RFC 4180 to read files this build wrote: quotes and commas. */
@@ -33,15 +35,26 @@ function parseCsv(text: string): { header: string[]; rows: string[][] } {
   for (let i = 0; i < text.length; i++) {
     const ch = text[i]
     if (quoted) {
-      if (ch === '"' && text[i + 1] === '"') { field += '"'; i++ }
-      else if (ch === '"') quoted = false
+      if (ch === '"' && text[i + 1] === '"') {
+        field += '"'
+        i++
+      } else if (ch === '"') quoted = false
       else field += ch
     } else if (ch === '"') quoted = true
-    else if (ch === ',') { row.push(field); field = '' }
-    else if (ch === '\n') { row.push(field); rows.push(row); row = []; field = '' }
-    else field += ch
+    else if (ch === ',') {
+      row.push(field)
+      field = ''
+    } else if (ch === '\n') {
+      row.push(field)
+      rows.push(row)
+      row = []
+      field = ''
+    } else field += ch
   }
-  if (field !== '' || row.length) { row.push(field); rows.push(row) }
+  if (field !== '' || row.length) {
+    row.push(field)
+    rows.push(row)
+  }
   return { header: rows[0]!, rows: rows.slice(1) }
 }
 
@@ -113,7 +126,9 @@ describe('svg export', () => {
 
   it('carries every scheme as a data attribute', () => {
     for (const county of counties) {
-      const path = svg.match(new RegExp(`<path id="county-\\d{3}"[^>]*?data-code="${county.code}"[^>]*`))
+      const path = svg.match(
+        new RegExp(`<path id="county-\\d{3}"[^>]*?data-code="${county.code}"[^>]*`),
+      )
       expect(path, `no path for ${county.name}`).toBeTruthy()
       expect(path![0]).toContain(`data-pcode="${county.pcode}"`)
       expect(path![0]).toContain(`data-iso="${county.isoCode}"`)
@@ -189,7 +204,12 @@ describe('docs atlas payload', () => {
 
   it('packs the tuple levels in the order the schema claims', () => {
     const atlas = load('atlas-data.js', 'KR_ATLAS')
-    expect(atlas.schema.wards).toEqual(['code', 'name', 'constituencyCode', 'subCounty'])
+    expect(atlas.schema.wards).toEqual([
+      'code',
+      'name',
+      'constituencyCode',
+      'subCounty',
+    ])
     const [code, name, constituencyCode, subCounty] = atlas.wards[0]
     expect(code).toBe(wards[0]!.code)
     expect(name).toBe(wards[0]!.name)
