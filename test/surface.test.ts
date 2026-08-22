@@ -34,21 +34,55 @@ import {
 describe('public surface', () => {
   it('exports every documented name', () => {
     const expected = [
-      'kenya', 'counties', 'countiesByName', 'constituencies', 'wards',
-      'subCounties', 'provinces', 'blocs',
-      'getCounty', 'requireCounty', 'getConstituency', 'requireConstituency',
-      'getWard', 'requireWard', 'getSubCounty', 'requireSubCounty',
-      'getProvince', 'getBloc', 'findWardsByName',
-      'getConstituenciesByCounty', 'getWardsByConstituency', 'getWardsByCounty',
-      'getSubCountiesByCounty', 'getWardsBySubCounty', 'getSubCountyOfWard',
-      'getCountyOfConstituency', 'getConstituencyOfWard', 'getCountyOfWard',
-      'getWardLineage', 'getCountyTree', 'getTree',
-      'getCountiesByProvince', 'getCountiesByBloc', 'getAsalCounties',
-      'getCitiesCounties', 'search',
-      'countyOptions', 'constituencyOptions', 'wardOptions',
-      'countyToIso', 'isoToCounty', 'countyToPcode', 'fromPcode',
-      'getWardCodesBySubCounty', 'getConstituencyCodeOfSubCounty',
-      'toInternationalPhone', 'formatCurrency', 'isPostalCode', 'slugify',
+      'kenya',
+      'counties',
+      'countiesByName',
+      'constituencies',
+      'wards',
+      'subCounties',
+      'provinces',
+      'blocs',
+      'getCounty',
+      'requireCounty',
+      'getConstituency',
+      'requireConstituency',
+      'getWard',
+      'requireWard',
+      'getSubCounty',
+      'requireSubCounty',
+      'getProvince',
+      'getBloc',
+      'findWardsByName',
+      'getConstituenciesByCounty',
+      'getWardsByConstituency',
+      'getWardsByCounty',
+      'getSubCountiesByCounty',
+      'getWardsBySubCounty',
+      'getSubCountyOfWard',
+      'getCountyOfConstituency',
+      'getConstituencyOfWard',
+      'getCountyOfWard',
+      'getWardLineage',
+      'getCountyTree',
+      'getTree',
+      'getCountiesByProvince',
+      'getCountiesByBloc',
+      'getAsalCounties',
+      'getCitiesCounties',
+      'search',
+      'countyOptions',
+      'constituencyOptions',
+      'wardOptions',
+      'countyToIso',
+      'isoToCounty',
+      'countyToPcode',
+      'fromPcode',
+      'getWardCodesBySubCounty',
+      'getConstituencyCodeOfSubCounty',
+      'toInternationalPhone',
+      'formatCurrency',
+      'isPostalCode',
+      'slugify',
     ]
     for (const name of expected) {
       expect(kr, `missing export: ${name}`).toHaveProperty(name)
@@ -140,7 +174,9 @@ describe('option builders', () => {
     expect(constituencyOptions({ county: 47 })).toHaveLength(17)
     const byCode = constituencyOptions({ county: 47, alphabetical: false })
     expect(byCode[0]!.label).toBe('Westlands')
-    expect(constituencyOptions({ county: 47, valueKey: 'slug' })[0]!.value).toMatch(/^[a-z-]+$/)
+    expect(constituencyOptions({ county: 47, valueKey: 'slug' })[0]!.value).toMatch(
+      /^[a-z-]+$/,
+    )
   })
 
   it('builds ward options scoped by county, constituency, or not at all', () => {
@@ -162,9 +198,13 @@ describe('overlay helpers', () => {
   it('lists the five counties holding city status', () => {
     const cities = getCitiesCounties()
     expect(cities).toHaveLength(5)
-    expect(cities.map((c) => c.name).sort()).toEqual(
-      ['Kisumu', 'Mombasa', 'Nairobi', 'Nakuru', 'Uasin Gishu'],
-    )
+    expect(cities.map((c) => c.name).sort()).toEqual([
+      'Kisumu',
+      'Mombasa',
+      'Nairobi',
+      'Nakuru',
+      'Uasin Gishu',
+    ])
     for (const city of cities) expect(typeof city.cityStatusSince).toBe('number')
   })
 
@@ -253,7 +293,10 @@ describe('currency formatting', () => {
 describe('tree shape', () => {
   it('nests without dropping or duplicating anything', () => {
     const tree = getTree()
-    const wardCodes = tree.flatMap((c) => c.constituencies).flatMap((k) => k.wards).map((w) => w.code)
+    const wardCodes = tree
+      .flatMap((c) => c.constituencies)
+      .flatMap((k) => k.wards)
+      .map((w) => w.code)
     expect(new Set(wardCodes).size).toBe(1450)
     expect(kr.getCountyTree('nowhere')).toBeUndefined()
   })

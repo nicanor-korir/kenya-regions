@@ -14,12 +14,11 @@ export type ConstituencyCode = number
 export type WardCode = number
 
 /** Short code for a former province, e.g. `"RFT"` for Rift Valley. */
-export type ProvinceCode =
-  | 'NBI' | 'CEN' | 'CST' | 'EST' | 'NEA' | 'NYZ' | 'RFT' | 'WST'
+export type ProvinceCode = 'NBI' | 'CEN' | 'CST' | 'EST' | 'NEA' | 'NYZ' | 'RFT' | 'WST'
 
 /** Short code for a regional economic bloc. */
 export type BlocCode =
-  | 'LREB' | 'NOREB' | 'FCDC' | 'JKP' | 'MKAREB' | 'SEKEB' | 'NAMETRO'
+  'LREB' | 'NOREB' | 'FCDC' | 'JKP' | 'MKAREB' | 'SEKEB' | 'NAMETRO'
 
 /** Arid and Semi-Arid Lands classification used for drought programming. */
 export type AsalClass = 'arid' | 'semi-arid'
@@ -74,7 +73,7 @@ export interface County {
 /**
  * One of the 290 constituencies that each elect a member of the National
  * Assembly. Counties commonly call these "sub-counties", but the national
- * government's own sub-counties are a different and larger set — see the
+ * government's own sub-counties are a different and larger set. See the
  * README section on sub-counties.
  */
 export interface Constituency {
@@ -104,7 +103,7 @@ export interface Ward {
   /**
    * Slug of the national government sub-county this ward falls in, or `null`
    * for the 12 wards whose name could not be matched to the sub-county source
-   * confidently. Unrelated to {@link constituencyCode} — see {@link SubCounty}.
+   * confidently. Unrelated to {@link constituencyCode}; see {@link SubCounty}.
    */
   subCounty: string | null
   aliases: string[]
@@ -122,7 +121,7 @@ export interface Ward {
  * `constituencies`.
  *
  * Identified by {@link slug} rather than a number, because these units have no
- * official numbering the way counties, constituencies and wards do — inventing
+ * official numbering the way counties, constituencies and wards do, and inventing
  * one would imply an authority this package does not have.
  */
 export interface SubCounty {
@@ -132,7 +131,7 @@ export interface SubCounty {
   countyCode: CountyCode
   /**
    * The constituency of the same name in the same county, where one exists.
-   * A name match, not a boundary match — the two units remain distinct.
+   * A name match rather than a boundary match; the two units remain distinct.
    */
   constituencyCode: ConstituencyCode | null
   /** Wards mapped to this sub-county, in code order. */
@@ -397,7 +396,7 @@ export interface Country {
  * This is a **historical snapshot**, not the current register. Districts were
  * superseded by counties in 2013 and by sub-counties thereafter, and the
  * national government has gazetted new divisions, locations and sub-locations
- * since — 59, 170 and 322 respectively in November 2024 alone. Use it for
+ * since: 59, 170 and 322 respectively in November 2024 alone. Use it for
  * joining against census-era data, for the location and sub-location names
  * still used by chiefs and assistant chiefs, and for historical analysis.
  *
@@ -441,7 +440,7 @@ export interface Location {
 }
 
 /**
- * A sub-location, headed by an Assistant Chief — the finest unit of the
+ * A sub-location, headed by an Assistant Chief. The finest unit of the
  * provincial administration, and the level the census enumerates at.
  */
 export interface SubLocation {

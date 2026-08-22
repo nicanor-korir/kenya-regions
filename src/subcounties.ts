@@ -1,6 +1,12 @@
 import { subcounties as data } from './generated/subcounties.js'
 import { normalize } from './internal/text.js'
-import type { ConstituencyCode, County, CountyCode, SubCounty, WardCode } from './types.js'
+import type {
+  ConstituencyCode,
+  County,
+  CountyCode,
+  SubCounty,
+  WardCode,
+} from './types.js'
 
 /**
  * The national government sub-counties: the decentralised units headed by
@@ -16,12 +22,12 @@ import type { ConstituencyCode, County, CountyCode, SubCounty, WardCode } from '
  * | 341 | Nov 2024 | 314 plus 27 sub-counties gazetted alongside 59 divisions, 170 locations and 322 sub-locations. |
  *
  * No authoritative machine-readable register of the current set is published,
- * and press lists of the 27 new units are unreliable — several print 31 names
+ * and press lists of the 27 new units are unreliable, several printing 31 names
  * under a headline count of 27. Rather than guess, this ships the enumeration
  * it can fully source and records the rest in
  * `data/sources/subcounty-counts.json`.
  *
- * These form a second hierarchy — county → sub-county → ward — running
+ * These form a second hierarchy of county → sub-county → ward, running
  * alongside the electoral one, and the two do not coincide. 248 of the 301
  * share a name with a constituency; 53 do not.
  *
@@ -34,7 +40,7 @@ import type { ConstituencyCode, County, CountyCode, SubCounty, WardCode } from '
  * ```
  *
  * Building a Kenyan address form? You almost certainly want `constituencies`
- * instead — that is what "sub-county" means on nearly every such form, because
+ * instead. That is what "sub-county" means on nearly every such form, because
  * the County Governments Act makes a county's decentralised units equivalent
  * to its constituencies.
  */
@@ -81,9 +87,7 @@ export function getWardCodesBySubCounty(query: string): WardCode[] {
 }
 
 /** Constituencies that share a name with a sub-county in the same county. */
-export function getConstituencyCodeOfSubCounty(
-  query: string,
-): ConstituencyCode | null {
+export function getConstituencyCodeOfSubCounty(query: string): ConstituencyCode | null {
   return getSubCounty(query)?.constituencyCode ?? null
 }
 

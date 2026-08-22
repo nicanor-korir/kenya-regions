@@ -5,8 +5,8 @@
 
 <style>
 /* ─────────────────────────────────────────────────────────────
-   Tokens. This page commits to a single light treatment — survey
-   ink on chart paper — so there is no dark variant by design.
+   Tokens. This page commits to a single light treatment (survey
+   ink on chart paper), so there is no dark variant.
    Every colour is painted explicitly so the page holds on any
    host background. Neutrals carry a green bias toward the
    accent rather than being left neutral grey.
@@ -29,11 +29,18 @@
   --caution:      #8A5A12;
   --caution-soft: #F6EEDD;
   --caution-line: #DEC79A;
-  --code-bg:      #F1F4EF;
-  --code-str:     #0F6B5C;
-  --code-com:     #8A9490;
-  --code-num:     #8A5A12;
-  --code-key:     #4A3C7A;
+  /* Code blocks stay dark on the light page: a terminal is what this code
+     actually runs in, and the contrast makes them scan as a distinct object
+     rather than a slightly tinted paragraph. */
+  --code-bg:      #101714;
+  --code-bar:     #1A231F;
+  --code-fg:      #DCE5E0;
+  --code-line:    #26302A;
+  --code-btn:     #8A9791;
+  --code-str:     #7FD8BF;
+  --code-com:     #6B7872;
+  --code-num:     #E2B268;
+  --code-key:     #B3A6E4;
   --shadow:       0 1px 2px rgba(22,28,25,.05), 0 8px 24px -16px rgba(22,28,25,.24);
   --measure:      68ch;
 }
@@ -239,14 +246,15 @@ code {
   padding: .1em .34em;
   word-break: break-word;
 }
-pre code { background: none; border: 0; padding: 0; font-size: 13px; word-break: normal; }
+pre code { background: none; border: 0; padding: 0; font-size: 13px; word-break: normal; color: var(--code-fg); }
 
 /* ── Code blocks ─────────────────────────────────────────── */
 .code {
   margin: 0 0 18px;
-  border: 1px solid var(--line);
-  border-radius: 3px;
+  border: 1px solid var(--code-line);
+  border-radius: 4px;
   background: var(--code-bg);
+  color: var(--code-fg);
   overflow: hidden;
   max-width: var(--measure);
 }
@@ -256,18 +264,19 @@ pre code { background: none; border: 0; padding: 0; font-size: 13px; word-break:
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  padding: 6px 12px;
-  border-bottom: 1px solid var(--line);
-  background: var(--surface-2);
+  padding: 7px 13px;
+  border-bottom: 1px solid var(--code-line);
+  background: var(--code-bar);
   font-family: "JetBrains Mono", monospace;
   font-size: 11px;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: var(--ink-3);
+  color: var(--code-btn);
 }
 .code pre {
   margin: 0;
-  padding: 13px 15px;
+  padding: 14px 16px;
+  color: var(--code-fg);
   overflow-x: auto;
   line-height: 1.62;
 }
@@ -277,14 +286,20 @@ pre code { background: none; border: 0; padding: 0; font-size: 13px; word-break:
   letter-spacing: .06em;
   text-transform: uppercase;
   background: none;
-  border: 1px solid var(--line-strong);
+  border: 1px solid #37423B;
   border-radius: 2px;
-  color: var(--ink-3);
-  padding: 2px 7px;
+  color: var(--code-btn);
+  padding: 2px 8px;
   cursor: pointer;
   transition: color .12s, border-color .12s;
 }
-.copy:hover { color: var(--accent); border-color: var(--accent-line); }
+.copy:hover { color: var(--code-str); border-color: var(--code-str); }
+.copy:focus-visible { outline-color: var(--code-str); }
+.code pre::-webkit-scrollbar { height: 8px; }
+.code pre::-webkit-scrollbar-track { background: var(--code-bg); }
+.code pre::-webkit-scrollbar-thumb { background: #313C35; border-radius: 4px; }
+.code pre { scrollbar-color: #313C35 var(--code-bg); scrollbar-width: thin; }
+
 .tok-s { color: var(--code-str); }
 .tok-c { color: var(--code-com); font-style: italic; }
 .tok-n { color: var(--code-num); }
@@ -331,7 +346,7 @@ td code { white-space: nowrap; }
 }
 .note.warn .note-h { color: var(--caution); }
 
-/* ── Scheme cards (a set, deliberately unnumbered) ───────── */
+/* ── Scheme cards: a set rather than a sequence, so unnumbered ── */
 .schemes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(236px, 1fr));
@@ -558,7 +573,7 @@ footer {
     <header class="masthead">
       <p class="eyebrow">Documentation</p>
       <h1>kenya-regions</h1>
-      <p class="standfirst">Every way Kenya is divided up — country, counties, constituencies, wards, the former provinces and the code schemes that disagree with each other — bundled offline with a typed API.</p>
+      <p class="standfirst">Every way Kenya is divided up: country, counties, constituencies, wards, the former provinces, and the code schemes that disagree with each other. All of it bundled offline, with a typed API.</p>
       <div class="chips">
         <span class="chip hi">v2.0.0</span>
         <span class="chip">MIT</span>
@@ -607,7 +622,7 @@ getCounty('KE-30')                 // Nairobi, by ISO 3166-2 code
 getCounty('nairobi')               // Nairobi, by slug
 
 getWardsByCounty('Kiambu').length  // 60
-search('mbita')[0].region.name     // 'Suba North' — matched on a former name</code></pre></div>
+search('mbita')[0].region.name     // 'Suba North', found by its former name</code></pre></div>
           <p>CommonJS works identically:</p>
           <div class="code"><div class="code-bar"><span>javascript</span></div><pre><code>const { counties, getCounty } = require('kenya-regions')</code></pre></div>
         </div>
@@ -620,7 +635,7 @@ search('mbita')[0].region.name     // 'Suba North' — matched on a former name<
         <p class="kicker">Concepts</p>
         <h2>Kenya is divided up in more than one way</h2>
         <div class="prose">
-          <p>This is the reason the package exists. “Kenya’s regions” is not one list. Several schemes are in active use, they were created for different purposes, and — the part that causes bugs — <strong>they do not nest into each other</strong>.</p>
+          <p>This is the reason the package exists. “Kenya’s regions” is not one list. Several schemes are in active use, they were created for different purposes, and the part that causes bugs is that <strong>they do not nest into each other</strong>.</p>
         </div>
 
         <div class="schemes">
@@ -673,7 +688,7 @@ search('mbita')[0].region.name     // 'Suba North' — matched on a former name<
         <div class="nest">
           <div class="nest-row">
             <b>County <span class="n">1–47</span></b>
-            <span class="d">First Schedule order — starts at the coast (Mombasa is 1), ends with Nairobi (47). Elects a governor, a senator and a county woman representative.</span>
+            <span class="d">First Schedule order: starts at the coast (Mombasa is 1) and ends with Nairobi (47). Elects a governor, a senator and a county woman representative.</span>
           </div>
           <div class="nest-row">
             <b>Constituency <span class="n">1–290</span></b>
@@ -712,8 +727,8 @@ search('mbita')[0].region.name     // 'Suba North' — matched on a former name<
         </div>
 
         <div class="prose">
-          <p>Section 48 of the County Governments Act 2012 makes a county’s decentralised units <em>equivalent to the constituencies within it</em>, which is why nearly every Kenyan address form labels the constituency “sub-county”. The national government’s sub-counties are a genuinely separate set with different boundaries.</p>
-          <p>They overlap heavily but not completely: <strong>248 of the 301 share a name with a constituency, and 53 do not</strong>. Baringo makes the divergence concrete — the same number of units, but not the same units:</p>
+          <p>Section 48 of the County Governments Act 2012 makes a county’s decentralised units <em>equivalent to the constituencies within it</em>, which is why nearly every Kenyan address form labels the constituency “sub-county”. The national government’s sub-counties are a separate set with different boundaries.</p>
+          <p>They overlap heavily but not completely: <strong>248 of the 301 share a name with a constituency, and 53 do not</strong>. Baringo shows the divergence plainly. Six of each, and not the same six:</p>
           <div class="code"><div class="code-bar"><span>typescript</span></div><pre><code>getSubCountiesByCounty('Baringo').map((s) =&gt; s.name)
 // Baringo Central, Baringo North, Koibatek, Marigat, Mogotio, Tiaty
 
@@ -727,17 +742,17 @@ getConstituenciesByCounty('Baringo').map((k) =&gt; k.name)
 
           <div class="note warn">
             <p class="note-h">* How many sub-counties are there?</p>
-            <p>Nobody publishes a definitive machine-readable answer, and the number keeps moving. <strong>301</strong> is what ships here, from the KNBS listing — and it independently matches the AfroCave table, which also totals 301. <a href="https://en.wikipedia.org/wiki/Sub-counties_of_Kenya">Wikipedia</a> says <strong>314</strong> as of 2023. In November 2024 the Interior Ministry <a href="https://www.the-star.co.ke/news/realtime/2024-11-26-mudavadi-gazettes-27-new-sub-counties">gazetted 27 more</a>, alongside 59 divisions, 170 locations and 322 sub-locations across 31 counties — putting the current figure at about <strong>341</strong>.</p>
-            <p>So the shipped 301 is behind. The gap is not closed because no authoritative register of the current set is published, and press lists of the 27 are unreliable — several print 31 names under a headline count of 27. Guessing would put invented units alongside sourced ones with nothing to tell them apart. What each source says is recorded in <code>data/sources/subcounty-counts.json</code>.</p>
+            <p>Nobody publishes a definitive machine-readable answer, and the number keeps moving. <strong>301</strong> is what ships here, from the KNBS listing, and it matches the AfroCave table, which also totals 301. <a href="https://en.wikipedia.org/wiki/Sub-counties_of_Kenya">Wikipedia</a> says <strong>314</strong> as of 2023. In November 2024 the Interior Ministry <a href="https://www.the-star.co.ke/news/realtime/2024-11-26-mudavadi-gazettes-27-new-sub-counties">gazetted 27 more</a>, alongside 59 divisions, 170 locations and 322 sub-locations across 31 counties, which puts the current figure at about <strong>341</strong>.</p>
+            <p>So the shipped 301 is behind. The gap is not closed because no authoritative register of the current set is published, and press lists of the 27 are unreliable, several printing 31 names under a headline count of 27. Guessing would mix invented units in with sourced ones, with nothing to tell them apart. What each source says is recorded in <code>data/sources/subcounty-counts.json</code>.</p>
           </div>
 
           <h3>Why sub-counties have no numbers</h3>
-          <p>Counties, constituencies and wards all carry official codes. Administrative sub-counties do not — so this package keys them by <code>slug</code> instead. Inventing a numbering would imply an authority the package does not have, and would be indistinguishable from the official codes elsewhere in the data. Slugs are unique across all 301, so they work as a primary key on their own.</p>
+          <p>Counties, constituencies and wards all carry official codes. Administrative sub-counties do not, so this package keys them by <code>slug</code> instead. Inventing a numbering would imply an authority the package does not have, and would be indistinguishable from the official codes elsewhere in the data. Slugs are unique across all 301, so they work as a primary key on their own.</p>
 
           <h3>Coverage</h3>
-          <p>The source lists sub-counties against ward <em>names</em> rather than codes, so wards are matched by name within their county. <strong>1,438 of the 1,450 wards</strong> map to a sub-county — 99.2%. The remaining 12 have <code>subCounty: null</code> rather than a guess, and are listed in <code>data/sources/name-conflicts.json</code>. <code>getWardsByCounty</code> is always complete.</p>
+          <p>The source lists sub-counties against ward <em>names</em> rather than codes, so wards are matched by name within their county. <strong>1,438 of the 1,450 wards</strong> map to a sub-county, or 99.2%. The remaining 12 have <code>subCounty: null</code> rather than a guess, and are listed in <code>data/sources/name-conflicts.json</code>. <code>getWardsByCounty</code> is always complete.</p>
 
-          <p>The national administration continues below this level — sub-county → division → location → sub-location, ending at the Assistant Chief. KNBS census enumeration uses that chain, which is why census microdata will not join cleanly to a ward-level table.</p>
+          <p>The national administration continues below this level: sub-county → division → location → sub-location, ending at the Assistant Chief. KNBS census enumeration uses that chain, which is why census microdata will not join cleanly to a ward-level table.</p>
         </div>
       </section>
 
@@ -763,14 +778,14 @@ subLocations[0].households
 subLocations[0].areaKm2
 subLocations[0].densityPerKm2</code></pre></div>
 
-          <p>Sub-locations are the only level below county carrying population, household and area figures, because they are what the census counts. Their populations sum to exactly <strong>38,610,097</strong> — the published 2009 national total — which the build asserts, independently confirming all 7,150 rows.</p>
+          <p>Sub-locations are the only level below county carrying population, household and area figures, because they are what the census counts. Their populations sum to exactly <strong>38,610,097</strong>, the published 2009 national total, and the build asserts this, independently confirming all 7,150 rows.</p>
 
           <div class="note warn">
             <p class="note-h">A 2009 snapshot, not the current register</p>
-            <p>Districts no longer exist as administrative units, and 59 divisions, 170 locations and 322 sub-locations were gazetted in November 2024 alone. Use this for joining census-era data, for the location names chiefs still work with, and for historical analysis — not as a description of Kenya today.</p>
+            <p>Districts no longer exist as administrative units, and 59 divisions, 170 locations and 322 sub-locations were gazetted in November 2024 alone. Use this for joining census-era data, for the location names chiefs still work with, and for historical analysis. It is not a description of Kenya today.</p>
           </div>
 
-          <p>Codes at these four levels are <strong>assigned by this package</strong>, derived deterministically from the sorted hierarchy so they stay stable across builds. Unlike county, constituency and ward codes they carry no official authority — and names repeat across parents, so a name alone is never a key.</p>
+          <p>Codes at these four levels are <strong>assigned by this package</strong>, derived deterministically from the sorted hierarchy so they stay stable across builds. Unlike county, constituency and ward codes they carry no official authority, and names repeat across parents, so a name alone is never a key.</p>
 
           <p>All four are <strong>subpath-only</strong> and are not re-exported from <code>kenya-regions</code>. Sub-locations alone outweigh everything else in the package, so nobody pays for them unless they ask.</p>
         </div>
@@ -796,8 +811,8 @@ subLocations[0].densityPerKm2</code></pre></div>
         <div class="prose">
           <div class="code"><div class="code-bar"><span>the trap</span></div><pre><code>getCounty(30).name        // 'Baringo'
 getCounty('KE-30').name   // 'Nairobi'  ← a different county entirely</code></pre></div>
-          <p>Both live on every county record as <code>code</code> and <code>isoCode</code>. <code>isoToCounty()</code> deliberately refuses a bare number so the two cannot be mixed up by accident.</p>
-          <p>OCHA p-codes are the friendly ones: they follow the constitutional numbering exactly, so <code>KE047</code> is county 47, and constituency p-codes simply append the constituency code — <code>KE047275</code>.</p>
+          <p>Both live on every county record as <code>code</code> and <code>isoCode</code>. <code>isoToCounty()</code> refuses a bare number, so the two cannot be mixed up by accident.</p>
+          <p>OCHA p-codes are the friendly ones: they follow the constitutional numbering exactly, so <code>KE047</code> is county 47, and constituency p-codes append the constituency code, giving <code>KE047275</code>.</p>
           <div class="note">
             <p class="note-h">Before 2014, ISO coded the provinces</p>
             <p>ISO 3166-2:KE listed the eight provinces (<code>KE-110</code> Nairobi, <code>KE-200</code> Central, …) until the 2014 update deleted them and added the counties. Those old codes are preserved on each province as <code>legacyIsoCode</code> for reading historical data.</p>
@@ -836,13 +851,13 @@ getCounty('KE-30').name   // 'Nairobi'  ← a different county entirely</code></
         <p class="kicker">API reference</p>
         <h2>Data exports</h2>
         <div class="prose">
-          <p>Every dataset is exported directly as a frozen array in code order. No function call, no loading step.</p>
+          <p>Every dataset is exported directly as a frozen array, in code order. Import it and use it.</p>
         </div>
         <div class="tablewrap">
           <table>
             <thead><tr><th>Export</th><th>Type</th><th class="num">Records</th><th>Order</th></tr></thead>
             <tbody>
-              <tr><td><code>kenya</code></td><td><code>Country</code></td><td class="num">1</td><td>—</td></tr>
+              <tr><td><code>kenya</code></td><td><code>Country</code></td><td class="num">1</td><td class="num"></td></tr>
               <tr><td><code>counties</code></td><td><code>readonly County[]</code></td><td class="num">47</td><td>Constitutional code</td></tr>
               <tr><td><code>countiesByName</code></td><td><code>readonly County[]</code></td><td class="num">47</td><td>Alphabetical</td></tr>
               <tr><td><code>constituencies</code></td><td><code>readonly Constituency[]</code></td><td class="num">290</td><td>IEBC code</td></tr>
@@ -901,7 +916,7 @@ getConstituency('Kilimani') // → Dagoretti North</code></pre></div>
 
           <div class="api">
             <p class="sig"><span class="fn">getWard</span>(query: Query): Ward | undefined</p>
-            <p>Resolves a ward. Ward names are <strong>not unique nationally</strong> — several counties have a “Township” or a “Central” — so a name query returns the lowest-coded match. Use the code, or scope with <code>getWardsByConstituency</code>, when precision matters.</p>
+            <p>Resolves a ward. Ward names are <strong>not unique nationally</strong>. Several counties have a “Township” or a “Central”, so a name query returns the lowest-coded match. Use the code, or scope with <code>getWardsByConstituency</code>, when precision matters.</p>
           </div>
 
           <div class="api">
@@ -953,7 +968,7 @@ getWardsByConstituency('Westlands')</code></pre></div>
           <h3>Sub-counties</h3>
           <div class="api">
             <p class="sig"><span class="fn">subCounties</span>: readonly SubCounty[]<br><span class="fn">getSubCounty</span>(query: string): SubCounty | undefined<br><span class="fn">requireSubCounty</span>(query: string): SubCounty<br><span class="fn">getSubCountiesByCounty</span>(query): SubCounty[]<br><span class="fn">getWardsBySubCounty</span>(slug: string): Ward[]<br><span class="fn">getSubCountyOfWard</span>(query): SubCounty | undefined</p>
-            <p>The parallel national-government hierarchy. Sub-counties resolve by slug or name — names are unique across all 301, so no county scoping is needed.</p>
+            <p>The parallel national-government hierarchy. Sub-counties resolve by slug or name. Names are unique across all 301, so no county scoping is needed.</p>
             <div class="code"><div class="code-bar"><span>typescript</span></div><pre><code>subCounties.length                    // 301
 getSubCounty('koibatek')              // by slug
 getSubCounty('Koibatek')              // by name
@@ -996,9 +1011,9 @@ nairobi.constituencies[0].wards</code></pre></div>
         <div class="prose">
           <div class="api">
             <p class="sig"><span class="fn">getCountiesByProvince</span>(province: ProvinceCode | string): County[]</p>
-            <p>Provinces partition the country — every county belongs to exactly one.</p>
+            <p>Provinces partition the country: every county belongs to exactly one.</p>
             <div class="code"><div class="code-bar"><span>typescript</span></div><pre><code>getCountiesByProvince('Rift Valley').length  // 14
-getCountiesByProvince('RFT').length          // 14 — code works too</code></pre></div>
+getCountiesByProvince('RFT').length          // 14, the code works too</code></pre></div>
           </div>
 
           <div class="api">
@@ -1006,7 +1021,7 @@ getCountiesByProvince('RFT').length          // 14 — code works too</code></pr
             <p>Blocs are the opposite of a partition.</p>
             <div class="note warn">
               <p class="note-h">Blocs overlap and do not cover Kenya</p>
-              <p>Lamu and Tana River sit in both FCDC and JKP. Nandi and Trans Nzoia sit in both LREB and NOREB. Narok sits in none of them. Treat bloc membership as a many-to-many tag on a county, never as a parent region — which is why <code>county.economicBlocs</code> is an array.</p>
+              <p>Lamu and Tana River sit in both FCDC and JKP. Nandi and Trans Nzoia sit in both LREB and NOREB. Narok sits in none of them. Treat bloc membership as a many-to-many tag on a county, never as a parent region, which is why <code>county.economicBlocs</code> is an array.</p>
             </div>
           </div>
 
@@ -1027,11 +1042,11 @@ getCountiesByProvince('RFT').length          // 14 — code works too</code></pr
 
           <div class="api">
             <p class="sig"><span class="fn">getAsalCounties</span>(kind?: 'arid' | 'semi-arid'): County[]</p>
-            <p>The 23 Arid and Semi-Arid Lands counties — 9 arid, 14 semi-arid — which together cover over 80% of Kenya’s land area.</p>
+            <p>The 23 Arid and Semi-Arid Lands counties: 9 arid and 14 semi-arid, together covering over 80% of Kenya’s land area.</p>
             <div class="code"><div class="code-bar"><span>typescript</span></div><pre><code>getAsalCounties()            // 23
 getAsalCounties('arid')      // 9
 getAsalCounties('semi-arid') // 14</code></pre></div>
-            <p>Note this is a county-level simplification of something genuinely sub-county-level: Kieni in Nyeri and Mbeere in Embu are ASAL areas inside counties that otherwise are not.</p>
+            <p>This is a county-level simplification of something that is really sub-county-level: Kieni in Nyeri and Mbeere in Embu are ASAL areas inside counties that otherwise are not.</p>
           </div>
 
           <div class="api">
@@ -1065,7 +1080,7 @@ search('nairobi', { levels: ['ward'] })</code></pre></div>
             </table>
           </div>
 
-          <p>Each result carries <code>level</code>, the <code>region</code> record, a <code>score</code> from 0 to 1, and <code>matched</code> — the actual string that matched, which may be an alias rather than the current name. Showing <code>matched</code> in the UI explains to the user <em>why</em> a result appeared.</p>
+          <p>Each result carries <code>level</code>, the <code>region</code> record, a <code>score</code> from 0 to 1, and <code>matched</code>, the actual string that matched, which may be an alias rather than the current name. Showing <code>matched</code> in the UI explains to the user <em>why</em> a result appeared.</p>
           <p>Ranking is tiered rather than purely fuzzy: exact match, then prefix, then substring, then whole-token prefix, then edit distance. Counties break ties upward, because “Kisumu” is a county, a constituency <em>and</em> a ward, and the county is almost always the intended answer.</p>
         </div>
       </section>
@@ -1092,12 +1107,12 @@ wardOptions({ constituency: 'Westlands' })</code></pre></div>
               <tbody>
                 <tr><td><code>alphabetical</code></td><td>all</td><td><code>true</code></td></tr>
                 <tr><td><code>valueKey</code></td><td>all</td><td><code>'code'</code></td></tr>
-                <tr><td><code>county</code></td><td>constituency, ward</td><td>—</td></tr>
-                <tr><td><code>constituency</code></td><td>ward</td><td>—</td></tr>
+                <tr><td><code>county</code></td><td>constituency, ward</td><td class="num"></td></tr>
+                <tr><td><code>constituency</code></td><td>ward</td><td class="num"></td></tr>
               </tbody>
             </table>
           </div>
-          <p><code>valueKey</code> accepts <code>'code'</code>, <code>'slug'</code> or <code>'name'</code>, plus <code>'isoCode'</code> and <code>'pcode'</code> for counties — useful when the value has to match what a backend already stores.</p>
+          <p><code>valueKey</code> accepts <code>'code'</code>, <code>'slug'</code> or <code>'name'</code>, plus <code>'isoCode'</code> and <code>'pcode'</code> for counties, which helps when the value has to match what a backend already stores.</p>
         </div>
       </section>
 
@@ -1116,7 +1131,7 @@ fromPcode('KE047')       // Nairobi county
 fromPcode('KE047275')    // Dagoretti North constituency</code></pre></div>
             <div class="note warn">
               <p class="note-h">isoToCounty is strict on purpose</p>
-              <p>It accepts <code>'KE-30'</code> and <code>'30'</code> as an ISO code, but never silently treats a bare number as a constitutional code. Passing <code>30</code> meaning “Baringo” returns Nairobi’s ISO entry or nothing — never a quiet wrong answer.</p>
+              <p>It accepts <code>'KE-30'</code> and <code>'30'</code> as an ISO code, but never silently treats a bare number as a constitutional code. Passing <code>30</code> meaning “Baringo” returns Nairobi’s ISO entry or nothing. It never returns a quiet wrong answer.</p>
             </div>
           </div>
           <div class="api">
@@ -1142,7 +1157,7 @@ kenya.currency.code               // 'KES'   ISO 4217
 kenya.timeZone.iana               // 'Africa/Nairobi'
 kenya.location.borders            // ETH SOM SSD TZA UGA
 kenya.location.boundingBox        // { west, south, east, north }</code></pre></div>
-          <p>The codes nest into the subdivision data deliberately, and the build asserts it: every county <code>isoCode</code> extends <code>codes.iso3166Alpha2</code>, and every county <code>pcode</code> extends <code>codes.ochaPcode</code>. The country record is the root of the same code trees the counties sit in, not a fact sheet bolted on the side.</p>
+          <p>The codes nest into the subdivision data, and the build asserts it: every county <code>isoCode</code> extends <code>codes.iso3166Alpha2</code>, and every county <code>pcode</code> extends <code>codes.ochaPcode</code>. The country record is the root of the same code trees the counties sit in.</p>
 
           <h3>Where Kenya sits in UN M49</h3>
           <div class="code wide"><div class="code-bar"><span>statistical hierarchy</span></div><pre><code>001 World → 002 Africa → 202 Sub-Saharan Africa → 014 Eastern Africa → 404 Kenya</code></pre></div>
@@ -1183,7 +1198,7 @@ isPostalCode('00100')                 // true</code></pre></div>
   name: string
   slug: string
   capital: string
-  isoCode: string           // 'KE-01'–'KE-47', alphabetical — not code
+  isoCode: string           // 'KE-01'–'KE-47', alphabetical, not code
   pcode: string             // 'KE001'–'KE047', OCHA
   formerProvince: string
   formerProvinceCode: ProvinceCode
@@ -1218,7 +1233,7 @@ interface Ward {
 }
 
 interface SubCounty {
-  slug: string              // primary key — these units have no official code
+  slug: string              // primary key; these units have no official code
   name: string
   countyCode: number
   constituencyCode: number | null   // same-name constituency, if any
@@ -1270,7 +1285,7 @@ const [constituency, setConstituency] = useState&lt;string&gt;()
 
           <h3>Joining against a dataset that uses ISO codes</h3>
           <div class="code"><div class="code-bar"><span>typescript</span></div><pre><code>// A dataset keyed 'KE-01'…'KE-47' must go through isoToCounty,
-// never through getCounty(Number(...)) — the numbers are unrelated.
+// never getCounty(Number(...)): the two numbers are unrelated.
 const rows = external.map((row) =&gt; ({
   ...row,
   county: isoToCounty(row.iso),
@@ -1291,7 +1306,7 @@ const rows = external.map((row) =&gt; ({
         <p class="kicker">In practice</p>
         <h2>Bundle size</h2>
         <div class="prose">
-          <p>Import from a subpath and nothing else is bundled. These are real measurements — esbuild, minified, from a clean install of the packed tarball:</p>
+          <p>Import from a subpath and nothing else is bundled. These are real measurements, taken with esbuild, minified, from a clean install of the packed tarball:</p>
         </div>
         <div class="tablewrap" style="max-width:var(--measure)">
           <table>
@@ -1327,7 +1342,7 @@ const rows = external.map((row) =&gt; ({
 
         <div class="prose">
           <h3>How the large datasets are stored</h3>
-          <p>Wards, locations and sub-locations ship as <strong>arrays of tuples</strong>, rebuilt into objects on import. Past a few thousand records the repeated JSON key names cost more than the values do — <code>"formerProvinceCode":"RFT",</code> is about 28 bytes on every row — so dropping the keys is the single biggest saving available.</p>
+          <p>Wards, locations and sub-locations ship as <strong>arrays of tuples</strong>, rebuilt into objects on import. Past a few thousand records the repeated JSON key names cost more than the values do. <code>"formerProvinceCode":"RFT",</code> is about 28 bytes on every row, so dropping the keys is the single biggest saving available.</p>
         </div>
         <div class="tablewrap" style="max-width:var(--measure)">
           <table>
@@ -1340,7 +1355,7 @@ const rows = external.map((row) =&gt; ({
           </table>
         </div>
         <div class="prose">
-          <p>Fields that can be derived are not stored at all: <code>slug</code> is computed from the name, and <code>densityPerKm2</code> is recomputed as population over area. Rehydration costs a few milliseconds at import and is invisible to callers — the exported arrays are ordinary typed objects.</p>
+          <p>Fields that can be derived are not stored at all: <code>slug</code> is computed from the name, and <code>densityPerKm2</code> is recomputed as population over area. Rehydration costs a few milliseconds at import and is invisible to callers: the exported arrays are ordinary typed objects.</p>
           <div class="note warn">
             <p class="note-h">Subpaths cannot resolve parent names</p>
             <p><code>kenya-regions/wards</code> does not bundle the county dataset, so it cannot turn <code>'Kiambu'</code> into a code. Rather than returning an empty array that looks like a county with no wards, it throws and tells you to pass the numeric code or use the main entry.</p>
@@ -1393,7 +1408,7 @@ const rows = external.map((row) =&gt; ({
           </ul>
           <div class="note">
             <p class="note-h">The strongest check</p>
-            <p>County populations must sum to the published KNBS national totals — <strong>47,564,296</strong> for 2019 and <strong>38,610,097</strong> for 2009. Because both reconcile exactly, all 47 county figures are independently confirmed. This check caught a real error during the rebuild: Turkana had been recorded as 1,504,976 when the census figure is 926,976.</p>
+            <p>County populations must sum to the published KNBS national totals: <strong>47,564,296</strong> for 2019 and <strong>38,610,097</strong> for 2009. Because both reconcile exactly, all 47 county figures are independently confirmed. This check caught a real error during the rebuild: Turkana had been recorded as 1,504,976 when the census figure is 926,976.</p>
           </div>
         </div>
       </section>
@@ -1405,7 +1420,7 @@ const rows = external.map((row) =&gt; ({
         <div class="prose">
           <p>Stated plainly rather than papered over, so you can judge whether they affect your use.</p>
           <h4>Ward name variants</h4>
-          <p>Official sources spell some ward names differently — Wargadud / Wargudud, Ndavaya / Nadavaya. Where the variants are clearly the same place, the alternative is attached as a searchable alias, so lookups succeed either way.</p>
+          <p>Official sources spell some ward names differently: Wargadud / Wargudud, Ndavaya / Nadavaya. Where the variants are clearly the same place, the alternative is attached as a searchable alias, so lookups succeed either way.</p>
 
           <h4>27 ward code conflicts</h4>
           <p>For 27 of the 1450 wards, two official sources disagree about which numeric code belongs to which ward <em>within the same constituency</em>. County and constituency membership is unaffected, so no lookup returns a wrong parent. They are listed in <code>data/sources/name-conflicts.json</code> rather than silently resolved in favour of whichever source loaded first.</p>
@@ -1414,7 +1429,7 @@ const rows = external.map((row) =&gt; ({
           <p>Several counties have a “Township” or a “Central” ward. Use codes, or scope by constituency, when it matters.</p>
 
           <h4>12 wards have no sub-county</h4>
-          <p>The sub-county source spells them differently enough that no confident match was possible, so <code>ward.subCounty</code> is <code>null</code> rather than guessed — 99.2% coverage. They are listed in <code>data/sources/name-conflicts.json</code>, and <code>getWardsByCounty</code> is always complete.</p>
+          <p>The sub-county source spells them differently enough that no confident match was possible, so <code>ward.subCounty</code> is <code>null</code> rather than guessed, giving 99.2% coverage. They are listed in <code>data/sources/name-conflicts.json</code>, and <code>getWardsByCounty</code> is always complete.</p>
 
           <h4>The sub-county count is behind</h4>
           <p>301 ships against a current figure of about 341. See the sub-counties section for why the gap is documented rather than guessed at.</p>
@@ -1423,20 +1438,20 @@ const rows = external.map((row) =&gt; ({
           <p>Districts no longer exist as administrative units, and divisions, locations and sub-locations have been gazetted since.</p>
 
           <h4>ASAL is recorded at county level</h4>
-          <p>The underlying reality is sub-county level — some ASAL areas sit inside otherwise non-ASAL counties.</p>
+          <p>The underlying reality is sub-county level: some ASAL areas sit inside counties that are otherwise not ASAL.</p>
 
           <h4>Two national areas that do not reconcile</h4>
-          <p><code>kenya.area.totalKm2</code> is 580,367 km², the internationally cited figure. The gazetted county areas sum to roughly 591,346 km². The two are measured differently, so the build deliberately does not assert they match.</p>
+          <p><code>kenya.area.totalKm2</code> is 580,367 km², the internationally cited figure. The gazetted county areas sum to roughly 591,346 km². The two are measured differently, so the build does not assert they match.</p>
 
           <h4>No administrative sub-counties</h4>
-          <p>Covered above — the term is ambiguous, so neither set is shipped under that name.</p>
+          <p>Covered above: the term is ambiguous, so neither set is shipped under that name.</p>
         </div>
       </section>
 
     </div>
 
     <footer>
-      <p>kenya-regions v2.0.0 · MIT · Nicanor Korir. Corrections to the data are welcome — open an issue with a source and the build will be updated.</p>
+      <p>kenya-regions v2.0.0 · MIT · Nicanor Korir. Corrections to the data are welcome. Open an issue with a source and the build will be updated.</p>
     </footer>
   </main>
 </div>

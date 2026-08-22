@@ -107,7 +107,12 @@ describe('the country record agrees with the subdivisions', () => {
 
 describe('country helpers', () => {
   it('normalises Kenyan phone numbers to international format', () => {
-    for (const input of ['0712345678', '+254712345678', '254712345678', '0712 345 678']) {
+    for (const input of [
+      '0712345678',
+      '+254712345678',
+      '254712345678',
+      '0712 345 678',
+    ]) {
       expect(toInternationalPhone(input)).toBe('+254712345678')
     }
   })

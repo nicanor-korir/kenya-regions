@@ -85,7 +85,9 @@ describe('sub-counties are not constituencies', () => {
 
   it('shows the divergence concretely in Baringo', () => {
     const baringo = counties.find((c) => c.name === 'Baringo')!
-    const subs = getSubCountiesByCounty(baringo.code).map((s) => s.name).sort()
+    const subs = getSubCountiesByCounty(baringo.code)
+      .map((s) => s.name)
+      .sort()
     const cons = constituencies
       .filter((k) => k.countyCode === baringo.code)
       .map((k) => k.name)
@@ -135,8 +137,9 @@ describe('sub-county lookups', () => {
 
   it('never returns more sub-county wards than the county has', () => {
     for (const county of counties) {
-      const viaSub = getSubCountiesByCounty(county.code)
-        .flatMap((s) => s.wardCodes).length
+      const viaSub = getSubCountiesByCounty(county.code).flatMap(
+        (s) => s.wardCodes,
+      ).length
       expect(viaSub).toBeLessThanOrEqual(getWardsByCounty(county.code).length)
     }
   })

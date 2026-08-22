@@ -8,8 +8,8 @@ import type { ProvinceCode, SubLocation } from './types.js'
  * census enumerates at, so this is the only dataset here carrying population,
  * household and area figures below county level.
  *
- * Their populations sum to exactly 38,610,097 — the published 2009 national
- * total — which the build asserts.
+ * Their populations sum to exactly 38,610,097, the published 2009 national
+ * total, and the build asserts this.
  *
  * The largest dataset in the package. It ships packed as tuples and is rebuilt
  * on import, which is roughly a fifth the download of the equivalent JSON.
@@ -52,7 +52,9 @@ export function getSubLocationsByDistrict(districtCode: number): SubLocation[] {
 }
 
 /** Sub-locations that fell under a former province. */
-export function getSubLocationsByProvince(province: ProvinceCode | string): SubLocation[] {
+export function getSubLocationsByProvince(
+  province: ProvinceCode | string,
+): SubLocation[] {
   const wanted = normalize(String(province))
   return data.filter((s) => normalize(s.formerProvinceCode) === wanted)
 }

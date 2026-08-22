@@ -16,9 +16,9 @@ Kenya itself, then 47 counties, 290 constituencies, 1450 wards, the 301
 administrative sub-counties, the 2009 census hierarchy of districts,
 divisions, locations and sub-locations, the 8 former provinces, ISO 3166-1 and 3166-2
 codes, OCHA place codes, the regional economic blocs and the ASAL
-classification — bundled into the package. No network calls, no runtime
-dependencies, works in Node, the browser, a build step or a serverless cold
-start.
+classification, all bundled into the package. It makes no network calls, has no
+runtime dependencies, and works the same in Node, the browser, a build step or a
+serverless cold start.
 
 ```bash
 npm install kenya-regions
@@ -33,7 +33,7 @@ counties.length                    // 47
 getCounty('KE-30')                 // Nairobi
 getCounty(47)                      // also Nairobi
 getWardsByCounty('Kiambu').length  // 60
-search('mbita')[0].region.name     // 'Suba North' — matched on its former name
+search('mbita')[0].region.name     // 'Suba North', found by its former name
 ```
 
 ---
@@ -42,7 +42,7 @@ search('mbita')[0].region.name     // 'Suba North' — matched on its former nam
 
 The reason this package exists is that "Kenya's regions" is not one list. There
 are several schemes in active use, they were created for different purposes,
-and — this is the part that bites — **they do not nest into each other**.
+and the part that bites is that **they do not nest into each other**.
 
 ### 0. Kenya in the world
 
@@ -53,17 +53,17 @@ subdivisions roll up to.
 ```ts
 import { kenya } from 'kenya-regions'
 
-kenya.codes.iso3166Alpha2       // 'KE'   — ISO 3166-1
+kenya.codes.iso3166Alpha2       // 'KE'    ISO 3166-1
 kenya.codes.iso3166Alpha3       // 'KEN'
-kenya.codes.unM49               // '404'  — UN statistical code
-kenya.codes.callingCode         // '+254' — ITU
-kenya.currency.code             // 'KES'  — ISO 4217
+kenya.codes.unM49               // '404'   UN statistical code
+kenya.codes.callingCode         // '+254'  ITU
+kenya.currency.code             // 'KES'   ISO 4217
 kenya.timeZone.iana             // 'Africa/Nairobi'
 kenya.location.intermediateRegion // { name: 'Eastern Africa', unM49: '014' }
 kenya.location.borders.map((b) => b.iso3166Alpha3)  // ETH SOM SSD TZA UGA
 ```
 
-The codes deliberately nest into the subdivision data, and the build asserts
+The codes nest into the subdivision data, and the build asserts
 it: every county `isoCode` extends `codes.iso3166Alpha2` (`KE` → `KE-30`), and
 every county `pcode` extends `codes.ochaPcode` (`KE` → `KE047`). So the country
 record is the root of the same code trees the counties sit in, not a separate
@@ -86,8 +86,7 @@ kenya.legislature.senate.total                      // 67
 kenya.legislature.countyAssemblies.electedWardMembers  // 1450
 ```
 
-That last group is worth dwelling on, because the seat counts *are* the region
-counts: 290 constituencies elect 290 MPs, 47 counties elect 47 senators **and**
+The seat counts *are* the region counts: 290 constituencies elect 290 MPs, 47 counties elect 47 senators **and**
 47 county woman representatives, and 1450 wards elect 1450 MCAs. Add the 12
 nominated members and the National Assembly's 349 falls out; the Speaker sits
 ex officio on top. If you have ever wondered why Kenya has exactly those seat
@@ -107,7 +106,7 @@ isPostalCode('00100')                 // true
 itself, because ICU renders KES as "Ksh", "KSh" or "KES" depending on the Node
 version and browser. Pass `currencyDisplay` to take the runtime's own output.
 
-### 1. The devolved hierarchy — counties, constituencies, wards
+### 1. The devolved hierarchy: counties, constituencies, wards
 
 This is the backbone, created by the 2010 Constitution and the 2013 IEBC
 delimitation. It does nest cleanly:
@@ -128,7 +127,7 @@ constituencies at 290, and in January 2026 the IEBC deferred the next boundary
 review until after the 2027 general election, so 47/290/1450 hold through that
 cycle.
 
-### 2. Sub-counties — the one that causes the most confusion
+### 2. Sub-counties, the one that causes the most confusion
 
 “Sub-county” means two different things, and datasets rarely say which. **Both
 are shipped, under separate names, so you never have to guess which you have.**
@@ -156,13 +155,13 @@ keeps moving.
 
 So **341 is the best current figure**, and the 301 shipped here is behind it.
 The gap is not closed because no authoritative register of the current set is
-published, and press lists of the 27 new units are unreliable — several print
+published, and press lists of the 27 new units are unreliable, several printing
 31 names under a headline count of 27. Guessing would put invented units next to
 sourced ones with nothing to tell them apart.
 
 What each source says is recorded in `data/sources/subcounty-counts.json`,
 including the gazettement, so the gap is documented rather than hidden. A
-corrected list from the gazette notice itself is very welcome — see
+corrected list from the gazette notice itself is very welcome. See
 [Contributing](#contributing).
 
 Note also that the AfroCave lists are largely the **constituencies**: it gives
@@ -171,8 +170,8 @@ and Tiaty, which are that county's six constituencies, not its administrative
 sub-counties.
 
 They overlap heavily but not completely: **248 of the 301 share a name with a
-constituency, and 53 do not.** Baringo makes the divergence concrete — same
-number of units, different units:
+constituency, and 53 do not.** Baringo shows it plainly. Six of
+each, and not the same six:
 
 ```ts
 getSubCountiesByCounty('Baringo').map((s) => s.name)
@@ -190,7 +189,7 @@ getWardsBySubCounty('koibatek')        // full ward records
 getSubCountyOfWard(1)                  // the sub-county a ward falls in
 ```
 
-Sub-counties are keyed by `slug`, not a number — unlike counties,
+Sub-counties are keyed by `slug` rather than a number. Unlike counties,
 constituencies and wards, these units have **no official numbering**, and
 inventing one would imply an authority this package does not have. Slugs are
 unique across all 301, so they work as a primary key on their own.
@@ -198,8 +197,8 @@ unique across all 301, so they work as a primary key on their own.
 > **Building an address form?** You almost certainly want `constituencies`.
 > That is what “sub-county” means on nearly every Kenyan form.
 
-The national administration continues below this level — sub-county → division
-→ location → sub-location, ending at the Assistant Chief. KNBS census
+The national administration continues below this level: sub-county → division →
+location → sub-location, ending at the Assistant Chief. KNBS census
 enumeration uses that chain, which is why census microdata will not join
 cleanly to a ward-level table.
 
@@ -227,15 +226,15 @@ subLocations[0].densityPerKm2
 
 Sub-locations are the only level below county carrying population, household
 and area figures, because they are the level the census enumerates at. Their
-populations sum to exactly **38,610,097** — the published 2009 national total —
-which the build asserts, independently confirming all 7,150 rows.
+populations sum to exactly **38,610,097**, the published 2009 national total.
+The build asserts this, which independently confirms all 7,150 rows.
 
 > **This is a 2009 snapshot, not the current register.** Districts were
 > superseded by counties in 2013, and 59 divisions, 170 locations and 322
 > sub-locations were gazetted in November 2024 alone. Use it for joining against
 > census-era data, for the location and sub-location names chiefs and assistant
-> chiefs still work with, and for historical analysis — not as a description of
-> Kenya today.
+> chiefs still work with, and for historical analysis. It is not a description
+> of Kenya today.
 
 Codes at these four levels are **assigned by this package**, derived
 deterministically from the sorted hierarchy so they are stable across builds.
@@ -260,13 +259,13 @@ progressively stripped of power.
 import { provinces, getCountiesByProvince } from 'kenya-regions'
 
 getCountiesByProvince('Rift Valley').length  // 14
-getCountiesByProvince('RFT').length          // 14 — code works too
+getCountiesByProvince('RFT').length          // 14, the code works too
 ```
 
 Unlike the economic blocs, provinces *do* partition the country: every county
 belongs to exactly one.
 
-### 5. ISO 3166-2:KE — the same 47 counties, different numbers
+### 5. ISO 3166-2:KE, the same 47 counties with different numbers
 
 This is the single most likely source of a silent bug when joining datasets.
 **ISO numbers the counties alphabetically. The Constitution numbers them
@@ -304,16 +303,16 @@ fromPcode('KE047275')  // Dagoretti North constituency
 ### 7. Regional economic blocs
 
 Voluntary groupings counties formed under Article 189(2) to plan and invest
-together. Seven of them ship here — LREB, NOREB, FCDC, JKP, MKAREB, SEKEB and
+together. Seven of them ship here: LREB, NOREB, FCDC, JKP, MKAREB, SEKEB and
 the Nairobi Metropolitan Area.
 
 Critically, **blocs neither partition nor cover the country**. Lamu and Tana
 River sit in both FCDC and JKP; Nandi and Trans Nzoia in both LREB and NOREB;
 Narok sits in none of them. So bloc membership is a many-to-many tag on a
-county, never a parent region — which is why `county.economicBlocs` is an
+county, never a parent region, which is why `county.economicBlocs` is an
 array.
 
-### 8. ASAL — arid and semi-arid lands
+### 8. ASAL, arid and semi-arid lands
 
 A functional rather than administrative classification, used for drought
 response and food security programming. 23 counties are ASAL: 9 arid and 14
@@ -330,8 +329,8 @@ counties that are otherwise not.
 
 ### 9. Cities
 
-The Urban Areas and Cities Act 2011 classifies settlements — city,
-municipality, town, market centre — independently of the county structure.
+The Urban Areas and Cities Act 2011 classifies settlements as city,
+municipality, town or market centre, independently of the county structure.
 Kenya has five chartered cities: Nairobi, Mombasa, Kisumu, Nakuru (2021) and
 Eldoret (2024). `county.cityStatusSince` records the year for the county
 containing each.
@@ -353,7 +352,7 @@ import { countiesByName } from 'kenya-regions'   // alphabetical, for UIs
 
 ### Lookups
 
-`getCounty` accepts anything that identifies a county — code, zero-padded code,
+`getCounty` accepts anything that identifies a county: code, zero-padded code,
 ISO code, p-code, name, slug or former name.
 
 ```ts
@@ -391,7 +390,7 @@ getWardLineage(1389)
 const nairobi = getCountyTree('nairobi')
 nairobi.constituencies[0].wards
 
-getTree()   // all 47, fully nested — ~1800 objects, so hoist it out of renders
+getTree()   // all 47, fully nested. ~1800 objects, so hoist it out of renders
 ```
 
 ### Search
@@ -413,7 +412,7 @@ The most common reason to install this package.
 import { countyOptions, constituencyOptions, wardOptions } from 'kenya-regions'
 
 countyOptions()
-// [{ label: 'Baringo', value: '30', region: {...} }, ...] — alphabetical
+// [{ label: 'Baringo', value: '30', region: {...} }, ...] alphabetical
 
 countyOptions({ valueKey: 'slug', alphabetical: false })
 constituencyOptions({ county: 47 })
@@ -447,8 +446,8 @@ const [constituency, setConstituency] = useState<string>()
 
 ## Keeping the bundle small
 
-Import from a subpath and nothing else is bundled. These are real measurements —
-esbuild, minified, from a clean install of the packed tarball:
+Import from a subpath and nothing else is bundled. These are real measurements,
+taken with esbuild, minified, from a clean install of the packed tarball:
 
 | Import | Minified | Gzipped |
 | --- | --- | --- |
@@ -479,8 +478,8 @@ Per entry point, as published:
 
 Wards, locations and sub-locations ship as **arrays of tuples**, rebuilt into
 objects on import. Past a few thousand records the repeated JSON key names cost
-more than the values do — `"formerProvinceCode":"RFT",` is about 28 bytes on
-every row — so dropping the keys is the single biggest saving available:
+more than the values do. `"formerProvinceCode":"RFT",` is about 28 bytes on
+every row, so dropping the keys is the single biggest saving available:
 
 | Dataset | As objects | Packed | |
 | --- | --- | --- | --- |
@@ -490,10 +489,10 @@ every row — so dropping the keys is the single biggest saving available:
 
 Fields that can be derived are not stored at all: `slug` is computed from the
 name, and `densityPerKm2` is recomputed as population over area. Rehydration
-costs a few milliseconds at import and is invisible to callers — the exported
+costs a few milliseconds at import and is invisible to callers: the exported
 arrays are ordinary typed objects.
 
-The four census levels are **subpath-only**, deliberately. Sub-locations alone
+The four census levels are **subpath-only**. Sub-locations alone
 outweigh everything else in the package, so they are never pulled into
 `kenya-regions`.
 
@@ -539,7 +538,7 @@ interface County {
   name: string
   slug: string
   capital: string
-  isoCode: string           // 'KE-01'–'KE-47', alphabetical — not `code`
+  isoCode: string           // 'KE-01'-'KE-47', alphabetical, not `code`
   pcode: string             // 'KE001'–'KE047', OCHA
   formerProvince: string
   formerProvinceCode: ProvinceCode
@@ -589,7 +588,7 @@ hold, and the same assertions run again in the test suite:
 - every constituency belongs to a real county; every ward agrees with its
   constituency about which county it is in
 - no county without constituencies, no constituency without wards
-- county populations sum to the published national totals — **47,564,296** for
+- county populations sum to the published national totals, **47,564,296** for
   2019 and **38,610,097** for 2009, which independently confirms all 47 figures
 - county → constituency assignment agrees between two independent sources
 - ISO codes, p-codes and slugs are unique
@@ -633,12 +632,12 @@ Honest about what is unresolved rather than papering over it:
   591,346 km². The two are measured differently and are not meant to reconcile,
   so the build does not assert they do.
 
-Corrections are welcome — open an issue with a source and the build will be
+Corrections are welcome. Open an issue with a source and the build will be
 updated.
 
 ## Contributing
 
-Corrections are the most valuable contribution here — this is reference data
+Corrections are the most valuable contribution here. This is reference data
 about a real country, so a misspelled ward is a bug. See
 [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
 
@@ -662,7 +661,7 @@ cd kenya-regions && npm install && npm test
 
 **Never edit a file the build generates.** Everything in `data/*.json` and
 `src/generated/` comes from `data/sources/` via `scripts/build-data.mjs`. Edit
-the output directly and your change vanishes on the next build — and CI will
+the output directly and your change vanishes on the next build, and CI will
 fail, because it checks the tree still reproduces from source.
 
 ```
@@ -677,19 +676,20 @@ reviewable.
 ### Reporting something wrong
 
 - **[Data correction](https://github.com/nicanor-korir/kenya-regions/issues/new?template=data-correction.yml)**
-  — a name, code or figure is wrong. Please include a source: a gazette notice,
+  reports a name, code or figure that is wrong. Please include a source: a gazette notice,
   an IEBC or KNBS publication, a county government page or an official dataset.
-  Local knowledge is genuinely welcome context, but on its own it cannot be
+  Local knowledge is welcome context, but on its own it cannot be
   committed, because every figure here has to be checkable by a stranger. Say so
-  honestly if you have no document — the issue gets labelled `needs-source` and
+  honestly if you have no document. The issue gets labelled `needs-source` and
   stays open.
 - **[Bug report](https://github.com/nicanor-korir/kenya-regions/issues/new?template=bug-report.yml)**
-  — the library misbehaves. Include the version, your Node version, and the
-  smallest snippet that reproduces it.
+  covers the library misbehaving. Include the version, your Node version, and
+  the smallest snippet that reproduces it.
 - **[Feature or dataset request](https://github.com/nicanor-korir/kenya-regions/issues/new?template=feature-request.yml)**
-  — describe the problem rather than the solution, so alternatives stay open.
+  works best if you describe the problem rather than the solution, so
+  alternatives stay open.
 
-Check **[Known limitations](#known-limitations)** first — the 12 wards without a
+Check **[Known limitations](#known-limitations)** first. The 12 wards without a
 sub-county, the 27 ward code conflicts, duplicate ward names and the two
 national area figures are all known and documented.
 
@@ -700,8 +700,8 @@ and open a PR. A PR is ready when typecheck, tests and coverage pass, the data
 build leaves the tree clean, and any data change cites its source.
 
 CI runs all of that on Node 18, 20 and 22, then installs the packed tarball and
-imports it through every entry point — the check that exists because v1 shipped
-a `package.json` pointing at a file that was not in the tarball.
+imports it through every entry point. That check exists because v1 shipped a
+`package.json` pointing at a file that was not in the tarball.
 
 Reviews aim to be quick and specific. If a PR goes quiet, a nudge is welcome.
 

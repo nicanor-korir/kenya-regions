@@ -1,8 +1,8 @@
 # Contributing
 
 Thanks for helping. This package is reference data about a real country, so the
-most valuable contributions are usually **corrections**, not features — if a
-ward is misspelled or a boundary figure is stale, that is a bug worth fixing.
+most valuable contributions are usually **corrections**. If a ward is misspelled
+or a boundary figure is stale, that is a bug worth fixing.
 
 Everyone is welcome here regardless of background or experience level. Be
 straightforward and be kind; assume the other person is acting in good faith.
@@ -32,13 +32,13 @@ This is the most common and most useful kind of issue. Open a
 [data correction issue](https://github.com/nicanor-korir/kenya-regions/issues/new?template=data-correction.yml)
 and include:
 
-1. **What is wrong** — the exact region and field, e.g. “ward 1016 is named
+1. **What is wrong**: the exact region and field, e.g. “ward 1016 is named
    `Shinoyi-Shikomari-` but should be `Shinoyi-Shikomari-Esumeyia`”.
 2. **What it should be.**
 3. **A source.** This is the important part. A gazette notice, an IEBC or KNBS
    publication, a county government page, or an official dataset. “I live
-   there” is genuinely useful context and very welcome — but on its own it
-   cannot be committed, because every figure in this package has to be
+   there” is useful context and very welcome, but on its own it cannot be
+   committed, because every figure in this package has to be
    traceable to something a stranger can check.
 
 Corrections without a source are still worth opening. They get labelled
@@ -83,8 +83,8 @@ npm install
 npm test
 ```
 
-Node 18 or newer. No other tooling required — there is no database, no network
-access and no build server involved.
+Node 18 or newer, and nothing else. There is no database, no network access and
+no build server involved.
 
 ### The loop
 
@@ -97,7 +97,7 @@ npm run build         # tsup, produces dist/
 npm run format        # prettier
 ```
 
-`npm run build:data` refuses to emit anything that fails its structural checks —
+`npm run build:data` refuses to emit anything that fails its structural checks:
 counts, gapless code sequences, referential integrity between levels, and the
 census totals. If your change is wrong, the build tells you before the tests do.
 
@@ -129,7 +129,7 @@ No commit message convention is enforced. Clarity is the only requirement.
 
 ### Correcting a name that a source gets wrong
 
-Do **not** edit the source CSV — those are kept as faithful copies of what was
+Do **not** edit the source CSV. Those are kept as faithful copies of what was
 published upstream, so that deviations stay reviewable. Add an entry to
 `data/sources/name-overrides.json` with a `reason`:
 
@@ -148,8 +148,8 @@ output.
 ### Adding an alias
 
 If a region is commonly published under another name, add it to that record's
-`aliases` and lookups will resolve it. Historical names belong here — former
-names like `Mbita` for Suba North are exactly the case aliases exist for.
+`aliases` and lookups will resolve it. Historical names belong here: former
+names like `Mbita` for Suba North are the case aliases exist for.
 Misspellings from a single source do not.
 
 ### Adding a new field or dataset
@@ -161,9 +161,9 @@ a validation check in the same file, a test, and a README entry.
 ### Updating after a boundary review
 
 The IEBC has deferred the next review until after the 2027 election. When it
-lands, expect the ward and constituency counts to change — the hard-coded counts
-in `scripts/build-data.mjs` and the test suite are deliberate tripwires so this
-cannot happen silently.
+lands, expect the ward and constituency counts to change. The hard-coded counts
+in `scripts/build-data.mjs` and the test suite are tripwires, so this cannot
+happen silently.
 
 ---
 
@@ -180,7 +180,7 @@ A PR is ready when:
 CI runs all of this on Node 18, 20 and 22, and additionally installs the packed
 tarball and imports it through every entry point. That last check exists because
 v1 shipped a `package.json` pointing at a file that was not in the tarball, so
-the published package failed on install — it is the failure mode this project
+the published package failed on install. It is the failure mode this project
 most wants to never repeat.
 
 Reviews aim to be quick and specific. If something needs changing you will be
@@ -192,7 +192,7 @@ told exactly what; if a PR goes quiet, a nudge is welcome and not rude.
 
 ```
 data/sources/     raw inputs, kept verbatim, plus reviewed overrides
-data/*.json       generated — published for consumers who want raw JSON
+data/*.json       generated, published for consumers who want raw JSON
 scripts/          build-data.mjs: generates and validates everything
 src/              the library; src/generated/ is build output
 src/internal/     shared helpers, not part of the public API

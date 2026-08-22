@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for this — corrections are the most valuable contribution to this package.
+        Thanks for this. Corrections are the most valuable contribution to this package.
 
         Please check the **Known limitations** section of the README first. The 12 wards
         without a sub-county, the 27 ward code conflicts, duplicate ward names and the two
@@ -59,7 +59,7 @@ body:
       description: |
         A gazette notice, IEBC or KNBS publication, county government page, or official
         dataset. Local knowledge is welcome and useful context, but on its own it cannot
-        be committed — every figure here has to be checkable by a stranger. Say so
+        be committed, because every figure here has to be checkable by a stranger. Say so
         honestly if you do not have a document; the issue will be labelled `needs-source`
         and stay open.
       placeholder: "Kenya Gazette Notice No. ... / https://..."

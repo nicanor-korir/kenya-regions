@@ -6,7 +6,7 @@ import type { Division, ProvinceCode } from './types.js'
  * The 635 divisions of the 2009 census, each headed by an Assistant County
  * Commissioner. The tier between district and location.
  *
- * Division names repeat across districts, so a name alone is not a key —
+ * Division names repeat across districts, so a name alone is not a key;
  * scope with {@link getDivisionsByDistrict} when it matters. Codes are
  * assigned by this package, not official.
  */

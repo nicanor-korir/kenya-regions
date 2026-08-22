@@ -17,8 +17,8 @@ import type {
  */
 export const wards: readonly Ward[] = data
 
-// Ward names repeat across the country — several counties have a "Township" or
-// a "Central" ward — so name lookups are ambiguous by design. getWard returns
+// Ward names repeat across the country. Several counties have a "Township" or
+// a "Central" ward, so name lookups are ambiguous by design. getWard returns
 // the lowest-coded match; use getWardsByConstituency when you need precision.
 const index = createIndex<Ward>(() => data)
 
@@ -56,8 +56,8 @@ export function findWardsByName(name: string): Ward[] {
  *
  * This module deliberately does not carry the county or constituency datasets,
  * so it cannot turn `"Kiambu"` into a code. Returning an empty array for that
- * would be the worst outcome — it looks like a county with no wards. Throw
- * instead, and point at the two ways to do it properly.
+ * would be the worst outcome, because it looks like a county with no wards.
+ * Throw instead, and point at the two ways to do it properly.
  */
 function parentCode(
   value: number | string | { code: number },

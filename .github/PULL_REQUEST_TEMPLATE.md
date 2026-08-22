@@ -12,7 +12,7 @@
 - [ ] `npm run typecheck` passes
 - [ ] `npm test` passes
 - [ ] `npm run test:coverage` passes
-- [ ] `npm run build:data` leaves the tree clean — I did not hand-edit anything
+- [ ] `npm run build:data` leaves the tree clean, and I did not hand-edit anything
       under `data/*.json` or `src/generated/`
 - [ ] Behaviour changes have a test
 - [ ] README updated if the public API or data shape changed

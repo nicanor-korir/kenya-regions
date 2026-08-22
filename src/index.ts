@@ -1,5 +1,5 @@
 /**
- * kenya-regions — every way Kenya is divided up, as offline data.
+ * kenya-regions: every way Kenya is divided up, as offline data.
  *
  * The devolved hierarchy (47 counties -> 290 constituencies -> 1450 wards) is
  * the backbone. Alongside it sit the schemes that do not nest into it: the 8
@@ -12,7 +12,7 @@
  * the world identifies Kenya by, and the national totals the subdivisions roll
  * up to.
  *
- * Everything is bundled — no network calls, no runtime dependencies.
+ * Everything is bundled. There are no network calls and no runtime dependencies.
  */
 
 export * from './types.js'
@@ -55,12 +55,7 @@ export {
   subCounties,
 } from './subcounties.js'
 
-export {
-  formatCurrency,
-  isPostalCode,
-  kenya,
-  toInternationalPhone,
-} from './country.js'
+export { formatCurrency, isPostalCode, kenya, toInternationalPhone } from './country.js'
 export { getProvince, provinces } from './provinces.js'
 export { blocs, getBloc } from './blocs.js'
 export { search, type SearchInit } from './search.js'
@@ -116,7 +111,7 @@ export function getWardsByCounty(query: Query | County): Ward[] {
  * National government sub-counties inside a county, identified any way
  * {@link getCounty} accepts.
  *
- * These are not constituencies — see {@link SubCounty}.
+ * These are not constituencies; see {@link SubCounty}.
  */
 export function getSubCountiesByCounty(query: Query | County): SubCounty[] {
   const county = typeof query === 'object' ? query : getCounty(query)

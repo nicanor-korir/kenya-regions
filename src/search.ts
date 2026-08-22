@@ -19,8 +19,8 @@ const LEVELS: { level: Level; items: readonly (County | Constituency | Ward)[] }
   { level: 'ward', items: wards },
 ]
 
-// Counties are the answer people usually want when a name is ambiguous —
-// "Kisumu" is a county, a constituency and a ward — so ties break upward.
+// Counties are the answer people usually want when a name is ambiguous.
+// "Kisumu" is a county, a constituency and a ward, so ties break upward.
 const LEVEL_WEIGHT: Record<Level, number> = {
   county: 0.03,
   constituency: 0.015,
@@ -63,7 +63,11 @@ function score(query: string, candidate: string): number {
  * ```
  */
 export function search(query: string, init: SearchInit = {}): SearchResult[] {
-  const { levels = ['county', 'constituency', 'ward'], limit = 10, threshold = 0.4 } = init
+  const {
+    levels = ['county', 'constituency', 'ward'],
+    limit = 10,
+    threshold = 0.4,
+  } = init
   const trimmed = query.trim()
   if (!trimmed) return []
 
@@ -89,7 +93,9 @@ export function search(query: string, init: SearchInit = {}): SearchResult[] {
     }
   }
 
-  results.sort((a, b) => b.score - a.score || a.region.name.localeCompare(b.region.name))
+  results.sort(
+    (a, b) => b.score - a.score || a.region.name.localeCompare(b.region.name),
+  )
   return results.slice(0, limit).map((result) => ({
     ...result,
     score: Math.min(1, Number(result.score.toFixed(4))),

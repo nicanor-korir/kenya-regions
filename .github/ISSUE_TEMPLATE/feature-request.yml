@@ -24,4 +24,4 @@ body:
       label: Is there a source for the data?
       description: |
         New datasets need something authoritative behind them. If you know where the data
-        lives, say so — that is usually the hardest part.
+        lives, say so. That is usually the hardest part.

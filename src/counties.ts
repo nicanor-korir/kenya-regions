@@ -34,8 +34,8 @@ const index = createIndex<County>(
  *
  * ```ts
  * getCounty(47)          // Nairobi
- * getCounty('KE-30')     // Nairobi — ISO numbers counties alphabetically
- * getCounty('KE047')     // Nairobi — OCHA place codes follow the county code
+ * getCounty('KE-30')     // Nairobi. ISO numbers counties alphabetically
+ * getCounty('KE047')     // Nairobi. OCHA place codes follow the county code
  * getCounty('nairobi')   // Nairobi
  * ```
  */
@@ -52,7 +52,9 @@ export function requireCounty(query: Query): County {
 
 /** Counties that fell under a former province, e.g. `"RFT"` or `"Rift Valley"`. */
 export function getCountiesByProvince(province: ProvinceCode | string): County[] {
-  const wanted = String(province).toLowerCase().replace(/[^a-z]/g, '')
+  const wanted = String(province)
+    .toLowerCase()
+    .replace(/[^a-z]/g, '')
   return data.filter(
     (county) =>
       county.formerProvinceCode.toLowerCase() === wanted ||
@@ -61,8 +63,8 @@ export function getCountiesByProvince(province: ProvinceCode | string): County[]
 }
 
 /**
- * Counties belonging to a regional economic bloc. Blocs overlap — Lamu and
- * Tana River sit in both FCDC and JKP — so a county can appear in more than
+ * Counties belonging to a regional economic bloc. Blocs overlap: Lamu and
+ * Tana River sit in both FCDC and JKP, so a county can appear in more than
  * one result.
  */
 export function getCountiesByBloc(bloc: BlocCode | string): County[] {
@@ -75,9 +77,7 @@ export function getCountiesByBloc(bloc: BlocCode | string): County[] {
  * or the 14 semi-arid ones.
  */
 export function getAsalCounties(kind?: AsalClass): County[] {
-  return data.filter((county) =>
-    kind ? county.asal === kind : county.asal !== null,
-  )
+  return data.filter((county) => (kind ? county.asal === kind : county.asal !== null))
 }
 
 /** Counties whose headquarters holds city status under the Urban Areas and Cities Act. */

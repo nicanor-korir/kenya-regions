@@ -2,11 +2,11 @@ import { country as data } from './generated/country.js'
 import type { Country } from './types.js'
 
 /**
- * Kenya itself — the level above counties.
+ * Kenya itself: the level above counties.
  *
  * Two kinds of thing live here. First, the identifiers the rest of the world
  * uses for the country: ISO 3166-1, UN M49, ISO 4217, the calling code, the
- * TLD. Second, the national figures the subdivisions roll up to — census
+ * TLD. Second, the national figures the subdivisions roll up to: census
  * totals, and the parliamentary seat counts that fall straight out of the
  * region counts.
  *
@@ -15,7 +15,7 @@ import type { Country } from './types.js'
  *
  * kenya.codes.iso3166Alpha2   // 'KE'
  * kenya.currency.code         // 'KES'
- * kenya.capital.countyCode    // 47 — joins to the county data
+ * kenya.capital.countyCode    // 47, joins to the county data
  * kenya.subdivisions.wards    // 1450
  * ```
  *
@@ -34,9 +34,7 @@ export const kenya: Country = data
  */
 export function toInternationalPhone(input: string): string | undefined {
   const digits = input.replace(/[^\d+]/g, '')
-  const national = digits
-    .replace(/^\+?254/, '')
-    .replace(/^0/, '')
+  const national = digits.replace(/^\+?254/, '').replace(/^0/, '')
   // Kenyan subscriber numbers are 9 digits after the country code.
   if (!/^\d{9}$/.test(national)) return undefined
   return `${kenya.codes.callingCode}${national}`
@@ -45,8 +43,8 @@ export function toInternationalPhone(input: string): string | undefined {
 /**
  * Formats an amount in Kenyan shillings, e.g. `1234.5` -> `"KSh 1,234.50"`.
  *
- * ICU renders the KES symbol inconsistently across Node versions and browsers
- * — "Ksh", "KSh" and "KES" all appear — so this asks `Intl` for the currency
+ * ICU renders the KES symbol inconsistently across Node versions and browsers:
+ * "Ksh", "KSh" and "KES" all appear. So this asks `Intl` for the currency
  * *code*, which is stable everywhere, and substitutes the conventional symbol
  * itself. Pass `currencyDisplay` to opt out and take the runtime's own output.
  */

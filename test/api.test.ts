@@ -127,7 +127,9 @@ describe('hierarchy navigation', () => {
     const tree = getTree()
     expect(tree).toHaveLength(47)
     expect(tree.flatMap((c) => c.constituencies)).toHaveLength(290)
-    expect(tree.flatMap((c) => c.constituencies).flatMap((c) => c.wards)).toHaveLength(1450)
+    expect(tree.flatMap((c) => c.constituencies).flatMap((c) => c.wards)).toHaveLength(
+      1450,
+    )
   })
 })
 
@@ -164,7 +166,9 @@ describe('search', () => {
   })
 
   it('handles partial type-ahead queries', () => {
-    const names = search('kis', { levels: ['county'], limit: 5 }).map((r) => r.region.name)
+    const names = search('kis', { levels: ['county'], limit: 5 }).map(
+      (r) => r.region.name,
+    )
     expect(names).toEqual(expect.arrayContaining(['Kisii', 'Kisumu']))
   })
 

@@ -44,12 +44,10 @@ export function requireConstituency(query: Query): Constituency {
  * Constituencies inside a county, in code order.
  *
  * Accepts a county code or a {@link County} object. To look one up by name,
- * resolve the county with `getCounty` first — that keeps this module free of
+ * resolve the county with `getCounty` first. That keeps this module free of
  * the county dataset so `kenya-regions/constituencies` stays small.
  */
-export function getConstituenciesByCounty(
-  county: CountyCode | County,
-): Constituency[] {
+export function getConstituenciesByCounty(county: CountyCode | County): Constituency[] {
   if (typeof county === 'string' && !/^\d+$/.test((county as string).trim())) {
     throw new TypeError(
       `Cannot resolve county ${JSON.stringify(county)} from ` +

@@ -10,7 +10,7 @@ import type { Province, ProvinceCode } from './types.js'
  * pre-2013 datasets are organised by province, the police and several
  * ministries still run regional structures along the old lines, and people
  * describe where they are from this way. Keep them for grouping and for
- * joining against historical data — not for anything administrative.
+ * joining against historical data, not for anything administrative.
  *
  * Their origin is the *majimbo* settlement of 1963, which gave Kenya seven
  * regions plus the Nairobi Area; the regions were renamed provinces in 1964.

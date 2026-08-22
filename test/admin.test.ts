@@ -74,13 +74,16 @@ describe('provincial administration counts', () => {
 describe('hierarchy integrity', () => {
   it('keeps every division inside a real district', () => {
     const codes = new Set(districts.map((d) => d.code))
-    for (const division of divisions) expect(codes.has(division.districtCode)).toBe(true)
+    for (const division of divisions)
+      expect(codes.has(division.districtCode)).toBe(true)
   })
 
   it('keeps a location and its division in agreement about the district', () => {
     const byCode = new Map(divisions.map((d) => [d.code, d]))
     for (const location of locations) {
-      expect(byCode.get(location.divisionCode)?.districtCode).toBe(location.districtCode)
+      expect(byCode.get(location.divisionCode)?.districtCode).toBe(
+        location.districtCode,
+      )
     }
   })
 
@@ -193,7 +196,10 @@ describe('remaining accessors', () => {
     expect(getDivision(String(d.code))?.code).toBe(d.code)
     expect(getDivision(d.slug)?.code).toBeDefined()
     expect(getDivision('nowhere')).toBeUndefined()
-    const total = provinces.reduce((s, p) => s + getDivisionsByProvince(p.code).length, 0)
+    const total = provinces.reduce(
+      (s, p) => s + getDivisionsByProvince(p.code).length,
+      0,
+    )
     expect(total).toBe(divisions.length)
   })
 
@@ -205,7 +211,10 @@ describe('remaining accessors', () => {
     expect(getLocation('nowhere')).toBeUndefined()
     expect(findLocationsByName(l.name).length).toBeGreaterThan(0)
     expect(getLocationsByDistrict(l.districtCode).length).toBeGreaterThan(0)
-    const total = provinces.reduce((s, p) => s + getLocationsByProvince(p.code).length, 0)
+    const total = provinces.reduce(
+      (s, p) => s + getLocationsByProvince(p.code).length,
+      0,
+    )
     expect(total).toBe(locations.length)
   })
 
@@ -217,7 +226,10 @@ describe('remaining accessors', () => {
     expect(getSubLocation('nowhere')).toBeUndefined()
     expect(findSubLocationsByName(s.name).length).toBeGreaterThan(0)
     expect(getSubLocationsByDivision(s.divisionCode).length).toBeGreaterThan(0)
-    const total = provinces.reduce((s2, p) => s2 + getSubLocationsByProvince(p.code).length, 0)
+    const total = provinces.reduce(
+      (s2, p) => s2 + getSubLocationsByProvince(p.code).length,
+      0,
+    )
     expect(total).toBe(subLocations.length)
   })
 })

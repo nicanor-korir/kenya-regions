@@ -36,12 +36,10 @@ function nest(county: County): CountyNode {
   const children = constituenciesByCounty!.get(county.code) ?? []
   return {
     ...county,
-    constituencies: children.map(
-      (constituency): ConstituencyNode => ({
-        ...constituency,
-        wards: wardsByConstituency!.get(constituency.code) ?? [],
-      }),
-    ),
+    constituencies: children.map((constituency): ConstituencyNode => ({
+      ...constituency,
+      wards: wardsByConstituency!.get(constituency.code) ?? [],
+    })),
   }
 }
 

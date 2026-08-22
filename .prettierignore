@@ -1,0 +1,7 @@
+# Build output. Formatting these would fight scripts/build-data.mjs, which
+# rewrites them on every build, and would break the CI check that the tree
+# still reproduces from source.
+src/generated/
+data/
+dist/
+coverage/

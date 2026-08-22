@@ -25,14 +25,26 @@ function parseCsv(text) {
     const c = text[i]
     if (quoted) {
       if (c === '"') {
-        if (text[i + 1] === '"') { field += '"'; i++ } else quoted = false
+        if (text[i + 1] === '"') {
+          field += '"'
+          i++
+        } else quoted = false
       } else field += c
     } else if (c === '"') quoted = true
-    else if (c === ',') { row.push(field); field = '' }
-    else if (c === '\n') { row.push(field); rows.push(row); row = []; field = '' }
-    else if (c !== '\r') field += c
+    else if (c === ',') {
+      row.push(field)
+      field = ''
+    } else if (c === '\n') {
+      row.push(field)
+      rows.push(row)
+      row = []
+      field = ''
+    } else if (c !== '\r') field += c
   }
-  if (field !== '' || row.length) { row.push(field); rows.push(row) }
+  if (field !== '' || row.length) {
+    row.push(field)
+    rows.push(row)
+  }
   const header = rows.shift().map((h) => h.replace(/^﻿/, '').trim())
   return rows
     .filter((r) => r.some((v) => v !== ''))
@@ -74,7 +86,11 @@ export function slugify(input) {
 }
 
 /** Comparison key used to match the same place across sources. */
-const key = (s) => s.normalize('NFKD').replace(/[^a-zA-Z]/g, '').toLowerCase()
+const key = (s) =>
+  s
+    .normalize('NFKD')
+    .replace(/[^a-zA-Z]/g, '')
+    .toLowerCase()
 
 const pad = (n, w) => String(n).padStart(w, '0')
 
@@ -101,7 +117,7 @@ function levenshtein(a, b) {
  *
  * Compound Kenyan ward names are frequently listed with their parts in either
  * order ("Wagalla/Ganyure" vs "Ganyure/Wagalla"), so an equal token multiset
- * counts as a match. Otherwise fall back to a tight edit-distance threshold —
+ * counts as a match. Otherwise fall back to a tight edit-distance threshold:
  * loose enough for Wargadud/Wargudud, tight enough that two genuinely
  * different wards are never merged.
  */
@@ -109,7 +125,13 @@ function sameName(a, b) {
   const ka = key(a)
   const kb = key(b)
   if (ka === kb) return true
-  const tokens = (s) => s.toLowerCase().split(/[^a-z0-9]+/i).filter(Boolean).sort().join('|')
+  const tokens = (s) =>
+    s
+      .toLowerCase()
+      .split(/[^a-z0-9]+/i)
+      .filter(Boolean)
+      .sort()
+      .join('|')
   if (tokens(a) === tokens(b)) return true
   const dist = levenshtein(ka, kb)
   return dist / Math.max(ka.length, kb.length) <= 0.25
@@ -130,21 +152,64 @@ const rejectedAliases = overrides._rejectedAliases
 
 // ISO 3166-2:KE orders the same 47 counties alphabetically, so KE-01 is
 // Baringo while constitutional county code 001 is Mombasa. Two different
-// numbers for the same county — kept side by side deliberately.
+// numbers for the same county, kept side by side on purpose.
 const ISO_NAMES = [
-  'Baringo', 'Bomet', 'Bungoma', 'Busia', 'Elgeyo/Marakwet', 'Embu', 'Garissa',
-  'Homa Bay', 'Isiolo', 'Kajiado', 'Kakamega', 'Kericho', 'Kiambu', 'Kilifi',
-  'Kirinyaga', 'Kisii', 'Kisumu', 'Kitui', 'Kwale', 'Laikipia', 'Lamu',
-  'Machakos', 'Makueni', 'Mandera', 'Marsabit', 'Meru', 'Migori', 'Mombasa',
-  "Murang'a", 'Nairobi City', 'Nakuru', 'Nandi', 'Narok', 'Nyamira',
-  'Nyandarua', 'Nyeri', 'Samburu', 'Siaya', 'Taita/Taveta', 'Tana River',
-  'Tharaka-Nithi', 'Trans Nzoia', 'Turkana', 'Uasin Gishu', 'Vihiga', 'Wajir',
+  'Baringo',
+  'Bomet',
+  'Bungoma',
+  'Busia',
+  'Elgeyo/Marakwet',
+  'Embu',
+  'Garissa',
+  'Homa Bay',
+  'Isiolo',
+  'Kajiado',
+  'Kakamega',
+  'Kericho',
+  'Kiambu',
+  'Kilifi',
+  'Kirinyaga',
+  'Kisii',
+  'Kisumu',
+  'Kitui',
+  'Kwale',
+  'Laikipia',
+  'Lamu',
+  'Machakos',
+  'Makueni',
+  'Mandera',
+  'Marsabit',
+  'Meru',
+  'Migori',
+  'Mombasa',
+  "Murang'a",
+  'Nairobi City',
+  'Nakuru',
+  'Nandi',
+  'Narok',
+  'Nyamira',
+  'Nyandarua',
+  'Nyeri',
+  'Samburu',
+  'Siaya',
+  'Taita/Taveta',
+  'Tana River',
+  'Tharaka-Nithi',
+  'Trans Nzoia',
+  'Turkana',
+  'Uasin Gishu',
+  'Vihiga',
+  'Wajir',
   'West Pokot',
 ]
 
 // Granted city status under the Urban Areas and Cities Act, 2011.
 const CITIES = {
-  Nairobi: 1963, Mombasa: 2002, Kisumu: 2001, Nakuru: 2021, 'Uasin Gishu': 2024,
+  Nairobi: 1963,
+  Mombasa: 2002,
+  Kisumu: 2001,
+  Nakuru: 2021,
+  'Uasin Gishu': 2024,
 }
 
 // Former provinces, abolished as administrative units when devolution took
@@ -233,7 +298,9 @@ const constituencies = [...constSeen.values()]
     // COD-AB carries a mix of genuine former names (Dujis, Gachoka, Kilimani)
     // and outright errors. Historical names are worth keeping as searchable
     // aliases; the errors are listed in name-overrides.json and dropped here.
-    const denied = new Set((rejectedAliases.constituencies[String(code)] ?? []).map(key))
+    const denied = new Set(
+      (rejectedAliases.constituencies[String(code)] ?? []).map(key),
+    )
     const aliases = new Set(override.aliases ?? [])
     if (cod && key(cod.name) !== key(name) && !denied.has(key(cod.name))) {
       aliases.add(cod.name)
@@ -246,7 +313,9 @@ const constituencies = [...constSeen.values()]
       countyCode,
       pcode,
       areaKm2: cod ? Number(cod.area_sqkm) : null,
-      centroid: cod ? { lat: Number(cod.center_lat), lng: Number(cod.center_lon) } : null,
+      centroid: cod
+        ? { lat: Number(cod.center_lat), lng: Number(cod.center_lon) }
+        : null,
       aliases: [...aliases],
     }
   })
@@ -258,7 +327,7 @@ const constituencies = [...constSeen.values()]
 // wards. Where it spells a name differently we keep its version as a
 // searchable alias; where it names a completely different place under the
 // same code the two sources disagree about code assignment, which an alias
-// would paper over — those are reported instead.
+// would paper over, so those are reported instead.
 const shapefileByCode = new Map(
   shapefileWards.map((r) => [Number(r.ward_code), titleCase(r.ward_name)]),
 )
@@ -294,7 +363,7 @@ const wards = hierarchy
  * The national government's sub-counties: a second, parallel hierarchy of
  * county -> sub-county -> ward, run by Deputy County Commissioners. It is NOT
  * the constituency, even though counties call constituencies "sub-counties"
- * too — 249 of the 302 share a name with a constituency, and the other 53 do
+ * too: 248 of the 301 share a name with a constituency, and the other 53 do
  * not, which is exactly what makes conflating the two dangerous.
  *
  * The source lists sub-counties against ward names rather than ward codes, so
@@ -323,7 +392,11 @@ const rowFixes = new Map(
 for (const raw of subCountyWards) {
   const fix = rowFixes.get(`${key(raw.county)}|${key(raw.subcounty)}|${key(raw.ward)}`)
   const row = fix
-    ? { ...raw, subcounty: fix.setSubcounty ?? raw.subcounty, ward: fix.setWard ?? raw.ward }
+    ? {
+        ...raw,
+        subcounty: fix.setSubcounty ?? raw.subcounty,
+        ward: fix.setWard ?? raw.ward,
+      }
     : raw
   const pool = wardsByCountyName.get(key(row.county)) ?? []
   const candidates = [...pool].map((ward) => {
@@ -357,10 +430,11 @@ for (const [wardCode, name] of subCountyOfWard) {
       name,
       countyCode: ward.countyCode,
       // Where the administrative sub-county shares a name with a constituency,
-      // link them — but they remain separate units.
-      constituencyCode: constituency && constituency.countyCode === ward.countyCode
-        ? constituency.code
-        : null,
+      // link them, but they remain separate units.
+      constituencyCode:
+        constituency && constituency.countyCode === ward.countyCode
+          ? constituency.code
+          : null,
       wardCodes: [],
     })
   }
@@ -385,7 +459,7 @@ for (const ward of wards) {
  * sub-location. Names repeat across parents (several districts have a
  * "Township" division), so identity at every level is the full path, and the
  * emitted codes are assigned from that path in sorted order. They are stable
- * across builds but carry no official authority — the README says so plainly.
+ * across builds but carry no official authority, and the README says so plainly.
  */
 const PROVINCE_BY_NAME = new Map(PROVINCES.map((p) => [key(p.name), p.code]))
 
@@ -475,7 +549,9 @@ for (const district of districts) {
     district.countyCodes = [direct.code]
     continue
   }
-  const viaConstituency = constituencies.filter((k) => key(k.name) === key(district.name))
+  const viaConstituency = constituencies.filter(
+    (k) => key(k.name) === key(district.name),
+  )
   district.countyCodes = [...new Set(viaConstituency.map((k) => k.countyCode))].sort(
     (a, b) => a - b,
   )
@@ -514,25 +590,33 @@ const blocs = blocSrc.map((b) => ({
   code: b.code,
   name: b.name,
   ...(b.altName ? { altName: b.altName } : {}),
-  counties: b.counties.map((n) => {
-    const c = countyByName.get(n)
-    if (!c) throw new Error(`Bloc ${b.code} references unknown county: ${n}`)
-    return c.code
-  }).sort((a, b2) => a - b2),
+  counties: b.counties
+    .map((n) => {
+      const c = countyByName.get(n)
+      if (!c) throw new Error(`Bloc ${b.code} references unknown county: ${n}`)
+      return c.code
+    })
+    .sort((a, b2) => a - b2),
 }))
 
 /* ---------------------------------------------------------- validation --- */
 
 const errors = []
-const check = (cond, msg) => { if (!cond) errors.push(msg) }
+const check = (cond, msg) => {
+  if (!cond) errors.push(msg)
+}
 
 check(counties.length === 47, `expected 47 counties, got ${counties.length}`)
-check(constituencies.length === 290, `expected 290 constituencies, got ${constituencies.length}`)
+check(
+  constituencies.length === 290,
+  `expected 290 constituencies, got ${constituencies.length}`,
+)
 check(wards.length === 1450, `expected 1450 wards, got ${wards.length}`)
 
 const seq = (items, n, label) => {
   const codes = new Set(items.map((i) => i.code))
-  for (let i = 1; i <= n; i++) if (!codes.has(i)) errors.push(`${label} code ${i} missing`)
+  for (let i = 1; i <= n; i++)
+    if (!codes.has(i)) errors.push(`${label} code ${i} missing`)
   check(codes.size === items.length, `${label} codes are not unique`)
 }
 seq(counties, 47, 'county')
@@ -542,30 +626,51 @@ seq(wards, 1450, 'ward')
 const countyCodes = new Set(counties.map((c) => c.code))
 const constByCode = new Map(constituencies.map((c) => [c.code, c]))
 for (const k of constituencies) {
-  check(countyCodes.has(k.countyCode), `constituency ${k.code} has unknown county ${k.countyCode}`)
+  check(
+    countyCodes.has(k.countyCode),
+    `constituency ${k.code} has unknown county ${k.countyCode}`,
+  )
 }
 for (const w of wards) {
   const k = constByCode.get(w.constituencyCode)
   check(!!k, `ward ${w.code} has unknown constituency ${w.constituencyCode}`)
-  if (k) check(k.countyCode === w.countyCode,
-    `ward ${w.code} (${w.name}) county ${w.countyCode} disagrees with constituency ${k.code} county ${k.countyCode}`)
+  if (k)
+    check(
+      k.countyCode === w.countyCode,
+      `ward ${w.code} (${w.name}) county ${w.countyCode} disagrees with constituency ${k.code} county ${k.countyCode}`,
+    )
 }
 
 // Every county must have at least one constituency, every constituency a ward.
 for (const c of counties) {
-  check(constituencies.some((k) => k.countyCode === c.code), `county ${c.name} has no constituencies`)
+  check(
+    constituencies.some((k) => k.countyCode === c.code),
+    `county ${c.name} has no constituencies`,
+  )
 }
 for (const k of constituencies) {
-  check(wards.some((w) => w.constituencyCode === k.code), `constituency ${k.name} has no wards`)
+  check(
+    wards.some((w) => w.constituencyCode === k.code),
+    `constituency ${k.name} has no wards`,
+  )
 }
 
 // Census totals must reconcile with the published KNBS national figures.
 const sum = (year) => counties.reduce((t, c) => t + c.population[year], 0)
-check(sum(2019) === 47564296, `2019 population total is ${sum(2019)}, expected 47564296`)
-check(sum(2009) === 38610097, `2009 population total is ${sum(2009)}, expected 38610097`)
+check(
+  sum(2019) === 47564296,
+  `2019 population total is ${sum(2019)}, expected 47564296`,
+)
+check(
+  sum(2009) === 38610097,
+  `2009 population total is ${sum(2009)}, expected 38610097`,
+)
 
 // Sub-counties: a parallel hierarchy, so it gets the same structural checks.
-check(subCounties.length === 301, `expected 301 sub-counties, got ${subCounties.length}`)
+check(
+  subCounties.length === 301,
+  `expected 301 sub-counties, got ${subCounties.length}`,
+)
 check(
   new Set(subCounties.map((s) => s.slug)).size === subCounties.length,
   'sub-county slugs are not unique',
@@ -584,7 +689,10 @@ for (const sub of subCounties) {
         ward.countyCode === sub.countyCode,
         `ward ${code} is in county ${ward.countyCode} but sub-county ${sub.name} is in ${sub.countyCode}`,
       )
-      check(ward.subCounty === sub.slug, `ward ${code} back-reference disagrees with ${sub.name}`)
+      check(
+        ward.subCounty === sub.slug,
+        `ward ${code} back-reference disagrees with ${sub.name}`,
+      )
     }
   }
 }
@@ -592,7 +700,10 @@ for (const sub of subCounties) {
 const subCountySlugs = new Set(subCounties.map((s) => s.slug))
 for (const ward of wards) {
   if (ward.subCounty) {
-    check(subCountySlugs.has(ward.subCounty), `ward ${ward.code} references unknown sub-county`)
+    check(
+      subCountySlugs.has(ward.subCounty),
+      `ward ${ward.code} references unknown sub-county`,
+    )
   }
 }
 
@@ -601,7 +712,10 @@ for (const ward of wards) {
 check(districts.length === 158, `expected 158 districts, got ${districts.length}`)
 check(divisions.length === 635, `expected 635 divisions, got ${divisions.length}`)
 check(locations.length === 2723, `expected 2723 locations, got ${locations.length}`)
-check(subLocations.length === 7150, `expected 7150 sub-locations, got ${subLocations.length}`)
+check(
+  subLocations.length === 7150,
+  `expected 7150 sub-locations, got ${subLocations.length}`,
+)
 
 const censusTotal = subLocations.reduce((t, s) => t + s.population[2009], 0)
 check(
@@ -633,7 +747,8 @@ for (const sub of subLocations) {
   check(!!location, `sub-location ${sub.name} has unknown location`)
   if (location) {
     check(
-      location.divisionCode === sub.divisionCode && location.districtCode === sub.districtCode,
+      location.divisionCode === sub.divisionCode &&
+        location.districtCode === sub.districtCode,
       `sub-location ${sub.name} disagrees with its location about its ancestry`,
     )
   }
@@ -710,7 +825,10 @@ check(
 )
 
 // Slugs are the human-facing lookup key, so they must be unique per level.
-for (const [label, items] of [['county', counties], ['constituency', constituencies]]) {
+for (const [label, items] of [
+  ['county', counties],
+  ['constituency', constituencies],
+]) {
   const slugs = new Set(items.map((i) => i.slug))
   check(slugs.size === items.length, `${label} slugs are not unique`)
 }
@@ -728,7 +846,7 @@ const gen = (f) => join(root, 'src', 'generated', f)
 /**
  * Emits a dataset as an array of tuples instead of an array of objects.
  *
- * At 7150 records the repeated JSON key names cost more than the values do —
+ * At 7150 records the repeated JSON key names cost more than the values do:
  * `"formerProvinceCode":"RFT",` alone is ~28 bytes a row. Packing drops the
  * keys entirely and the consuming module rebuilds the objects on import, which
  * costs a few milliseconds and saves the best part of a megabyte over the wire.
@@ -743,12 +861,14 @@ const writePacked = (name, type, rows, hydrator) => {
       `\nexport const ${name}: readonly ${type}[] = packed.map(hydrate)\n`,
   )
   const kb = (JSON.stringify(rows).length / 1024).toFixed(1)
-  console.log(`  ${name.padEnd(16)} ${String(rows.length).padStart(5)} records  ${kb.padStart(7)} KB  (packed)`)
+  console.log(
+    `  ${name.padEnd(16)} ${String(rows.length).padStart(5)} records  ${kb.padStart(7)} KB  (packed)`,
+  )
 }
 mkdirSync(out('.'), { recursive: true })
 mkdirSync(gen('.'), { recursive: true })
 
-const BANNER = '// Generated by scripts/build-data.mjs — do not edit by hand.\n'
+const BANNER = '// Generated by scripts/build-data.mjs. Do not edit by hand.\n'
 
 /**
  * Emitted as TypeScript rather than imported as JSON so the data needs no
@@ -763,7 +883,9 @@ const write = (name, type, data) => {
       `export const ${name}: readonly ${type}[] = ${JSON.stringify(data, null, 1)}\n`,
   )
   const kb = (JSON.stringify(data).length / 1024).toFixed(1)
-  console.log(`  ${name.padEnd(16)} ${String(data.length).padStart(5)} records  ${kb.padStart(7)} KB`)
+  console.log(
+    `  ${name.padEnd(16)} ${String(data.length).padStart(5)} records  ${kb.padStart(7)} KB`,
+  )
 }
 
 /** Same as `write`, for the one record that is an object rather than a list. */
@@ -785,7 +907,9 @@ write('constituencies', 'Constituency', constituencies)
 
 // Wards are the largest dataset in the main entry, so they pack too. Sub-county
 // slugs repeat about five times each, so they go in a lookup table.
-const subCountySlugTable = [...new Set(wards.map((w) => w.subCounty).filter(Boolean))].sort()
+const subCountySlugTable = [
+  ...new Set(wards.map((w) => w.subCounty).filter(Boolean)),
+].sort()
 const subCountySlugIndex = new Map(subCountySlugTable.map((s2, i) => [s2, i]))
 
 writePacked(
@@ -840,9 +964,15 @@ const provinceIndex = (code) => PROVINCE_CODES.indexOf(code)
 writePacked(
   'locations',
   'Location',
-  locations.map((l) => [l.name, l.divisionCode, l.districtCode, provinceIndex(l.formerProvinceCode)]),
+  locations.map((l) => [
+    l.name,
+    l.divisionCode,
+    l.districtCode,
+    provinceIndex(l.formerProvinceCode),
+  ]),
   {
-    tupleType: '[name: string, divisionCode: number, districtCode: number, province: number]',
+    tupleType:
+      '[name: string, divisionCode: number, districtCode: number, province: number]',
     body: `const PROVINCE_CODES = ${JSON.stringify(PROVINCE_CODES)} as const
 
 function slugify(input: string): string {
@@ -873,10 +1003,16 @@ writePacked(
   'sublocations',
   'SubLocation',
   subLocations.map((s2) => [
-    s2.name, s2.locationCode, s2.divisionCode, s2.districtCode,
+    s2.name,
+    s2.locationCode,
+    s2.divisionCode,
+    s2.districtCode,
     provinceIndex(s2.formerProvinceCode),
-    s2.population[2009], s2.population.male, s2.population.female,
-    s2.households, s2.areaKm2,
+    s2.population[2009],
+    s2.population.male,
+    s2.population.female,
+    s2.households,
+    s2.areaKm2,
   ]),
   {
     tupleType:
@@ -954,6 +1090,12 @@ writeFileSync(
 const aliased = wards.filter((w) => w.aliases.length).length
 console.log(`✓ validated: 47 counties, 290 constituencies, 1450 wards`)
 const mapped = wards.filter((w) => w.subCounty).length
-console.log(`  ${aliased} wards carry a spelling variant; ${wardNameConflicts.length} unresolved name conflicts logged`)
-console.log(`  ${subCounties.length} sub-counties; ${mapped}/${wards.length} wards mapped to one`)
-console.log(`  2009 provincial administration: ${districts.length} districts, ${divisions.length} divisions, ${locations.length} locations, ${subLocations.length} sub-locations`)
+console.log(
+  `  ${aliased} wards carry a spelling variant; ${wardNameConflicts.length} unresolved name conflicts logged`,
+)
+console.log(
+  `  ${subCounties.length} sub-counties; ${mapped}/${wards.length} wards mapped to one`,
+)
+console.log(
+  `  2009 provincial administration: ${districts.length} districts, ${divisions.length} divisions, ${locations.length} locations, ${subLocations.length} sub-locations`,
+)
