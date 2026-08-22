@@ -83,3 +83,48 @@ jobs:
 
       - name: Types resolve for both ESM and CJS consumers
         run: npx --yes @arethetypeswrong/cli@latest --pack . --profile node16
+
+  geo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: geo/package-lock.json
+      - run: npm ci
+        working-directory: geo
+      - run: npm run typecheck
+        working-directory: geo
+      - run: npm test
+        working-directory: geo
+
+      # The boundary sets must stay derivable from the committed source, and
+      # must keep joining to the canonical county records.
+      - name: Geometry build is reproducible
+        working-directory: geo
+        run: |
+          npm run build:geo
+          git diff --exit-code -- data src/generated
+
+      - name: Install the packed tarball and locate a point
+        working-directory: geo
+        run: |
+          npm run build
+          npm pack
+          mkdir -p /tmp/geo-consumer && cd /tmp/geo-consumer
+          npm init -y > /dev/null
+          npm install "$GITHUB_WORKSPACE"/geo/kenya-regions-geo-*.tgz
+          cat > check.mjs <<'JS'
+          import { locate } from 'kenya-regions-geo'
+          import { counties } from 'kenya-regions-geo/counties'
+          const ok = counties.features.length === 47 &&
+            locate(counties, -1.2864, 36.8172)?.properties.name === 'Nairobi' &&
+            locate(counties, -4.0435, 39.6682)?.properties.name === 'Mombasa' &&
+            locate(counties, 51.5, -0.12) === undefined
+          if (!ok) { console.error('geo smoke test failed'); process.exit(1) }
+          console.log('geo entry points OK')
+          JS
+          node check.mjs
+

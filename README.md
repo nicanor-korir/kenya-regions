@@ -635,6 +635,33 @@ Honest about what is unresolved rather than papering over it:
 Corrections are welcome. Open an issue with a source and the build will be
 updated.
 
+## Boundary geometry
+
+Shapes are a separate package, so nobody pays for polygons they do not render:
+
+```bash
+npm install kenya-regions-geo
+```
+
+```ts
+import { locate } from 'kenya-regions-geo'
+import { counties } from 'kenya-regions-geo/counties'
+
+locate(counties, -1.2864, 36.8172)?.properties.name   // 'Nairobi'
+```
+
+County boundaries as GeoJSON at three detail tiers, from 15 KB gzipped, with
+point-in-polygon lookup and no dependencies. Features carry the same codes as
+this package, so the two join on `properties.code`. See
+[geo/README.md](geo/README.md).
+
+## Roadmap
+
+Scoped but unbuilt work lives in [docs/plans](docs/plans), including what is
+blocked and why. The two data gaps worth knowing about are
+[the sub-county count](docs/plans/07-subcounty-gap.md) and
+[constituency boundaries](docs/plans/03-constituency-boundaries.md).
+
 ## Contributing
 
 Corrections are the most valuable contribution here. This is reference data
