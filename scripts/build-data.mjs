@@ -146,6 +146,16 @@ const cod2 = readCsv('cod-ab-admin2.csv')
 const shapefileWards = readCsv('iebc-shapefile-wards.csv')
 const subCountyWards = readCsv('knbs-subcounty-wards.csv')
 const census2009 = readCsv('knbs-2009-sublocations.csv')
+
+/*
+ * Coarse county outlines, simplified to roughly a kilometre.
+ *
+ * Deliberately the only geometry in this package. It is enough to draw a
+ * national map and to answer which county a point falls in, at about 15 KB
+ * gzipped. Anything needing finer boundaries, other levels, or accuracy near a
+ * border belongs in kenya-regions-geo, where the detailed tiers live.
+ */
+const outlineSource = JSON.parse(readFileSync(src('county-outlines.geojson'), 'utf8'))
 const blocSrc = JSON.parse(readFileSync(src('economic-blocs.json'), 'utf8'))
 const overrides = JSON.parse(readFileSync(src('name-overrides.json'), 'utf8'))
 const rejectedAliases = overrides._rejectedAliases
@@ -245,6 +255,12 @@ for (const b of blocSrc) {
   }
 }
 
+/* ------------------------------------------------------------ outlines --- */
+
+const outlineBBox = new Map(
+  outlineSource.features.map((f) => [f.properties.code, f.bbox]),
+)
+
 /* ------------------------------------------------------------ counties --- */
 
 const counties = reference.map((r) => {
@@ -273,6 +289,7 @@ const counties = reference.map((r) => {
     areaKm2: Number(r.area_sqkm),
     population: { 2009: Number(r.population_2009), 2019: Number(r.population_2019) },
     centroid: cod ? { lat: Number(cod.center_lat), lng: Number(cod.center_lon) } : null,
+    bbox: outlineBBox.get(code) ?? null,
     aliases: [...aliases],
   }
 })
@@ -760,6 +777,24 @@ for (const district of districts) {
   )
 }
 
+// Outlines: one per county, and each county's centroid must fall inside its
+// own bounding box, which catches a mismatched or misjoined shape.
+check(
+  outlineSource.features.length === 47,
+  `expected 47 county outlines, got ${outlineSource.features.length}`,
+)
+for (const county of counties) {
+  check(!!county.bbox, `county ${county.name} has no outline bbox`)
+  if (county.bbox && county.centroid) {
+    const [w, s2, e, n] = county.bbox
+    check(
+      county.centroid.lng >= w && county.centroid.lng <= e &&
+        county.centroid.lat >= s2 && county.centroid.lat <= n,
+      `county ${county.name} centroid falls outside its outline bbox`,
+    )
+  }
+}
+
 const isoCodes = new Set(counties.map((c) => c.isoCode))
 check(isoCodes.size === 47, 'ISO 3166-2 codes are not unique across counties')
 
@@ -902,6 +937,26 @@ const writeObject = (name, type, data) => {
 
 console.log('kenya-regions data build')
 writeObject('country', 'Country', country)
+
+// Outlines ship as raw GeoJSON rather than through the packed encoding: the
+// whole point is that it can be handed straight to a mapping library.
+{
+  const features = outlineSource.features
+    .slice()
+    .sort((a, b) => a.properties.code - b.properties.code)
+  const collection = { type: 'FeatureCollection', features }
+  const json = JSON.stringify(collection)
+  writeFileSync(out('county-outlines.json'), json + '\n')
+  writeFileSync(
+    gen('outlines.ts'),
+    `${BANNER}import type { CountyOutlineCollection } from '../types.js'\n\n` +
+      `export const collection = ${json} as unknown as CountyOutlineCollection\n`,
+  )
+  console.log(
+    `  ${'outlines'.padEnd(16)} ${String(features.length).padStart(5)} features  ` +
+      `${(json.length / 1024).toFixed(1).padStart(7)} KB`,
+  )
+}
 write('counties', 'County', counties)
 write('constituencies', 'Constituency', constituencies)
 

@@ -28,6 +28,9 @@ export interface Centroid {
   lng: number
 }
 
+/** `[west, south, east, north]`, the GeoJSON bounding box order. */
+export type BoundingBoxTuple = [number, number, number, number]
+
 export interface Population {
   /** 2009 Kenya Population and Housing Census. */
   2009: number
@@ -66,6 +69,11 @@ export interface County {
   areaKm2: number
   population: Population
   centroid: Centroid | null
+  /**
+   * `[west, south, east, north]`, the extent of the county's outline. Enough
+   * to fit a map to a county without loading any geometry.
+   */
+  bbox: BoundingBoxTuple | null
   /** Former or alternative names this county is also published under. */
   aliases: string[]
 }
@@ -457,4 +465,40 @@ export interface SubLocation {
   households: number
   areaKm2: number
   densityPerKm2: number
+}
+
+/* ------------------------------------------------------------ outlines --- */
+
+/** `[longitude, latitude]`, the GeoJSON coordinate order. */
+export type Position = [number, number]
+
+export interface CountyOutlineGeometry {
+  type: 'Polygon' | 'MultiPolygon'
+  coordinates: Position[][] | Position[][][]
+}
+
+/**
+ * One county as a GeoJSON feature, simplified to roughly a kilometre.
+ *
+ * Coarse on purpose. It draws a recognisable national map and answers which
+ * county a point is in, but a boundary can be out by about a kilometre, so a
+ * point near a border may resolve to the wrong side. `kenya-regions-geo` ships
+ * finer tiers for when that matters.
+ */
+export interface CountyOutline {
+  type: 'Feature'
+  properties: {
+    /** Constitutional county code, 1-47. */
+    code: CountyCode
+    name: string
+    slug: string
+    pcode: string
+  }
+  bbox: BoundingBoxTuple
+  geometry: CountyOutlineGeometry
+}
+
+export interface CountyOutlineCollection {
+  type: 'FeatureCollection'
+  features: CountyOutline[]
 }

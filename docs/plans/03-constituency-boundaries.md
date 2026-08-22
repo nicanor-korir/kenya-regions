@@ -2,9 +2,12 @@
 
 **Priority: 3. Status: blocked on data.**
 
+> Lives in [kenya-regions-geo](https://github.com/nicanor-korir/kenya-regions-geo).
+> Recorded here because that is where the roadmap is kept.
+
 ## The use case
 
-`kenya-regions-geo` ships county boundaries. Constituency boundaries would
+`kenya-regions` ships coarse county outlines and `kenya-regions-geo` ships them at three tiers. Constituency boundaries would
 allow election result maps at the level results are actually reported, and
 reverse geocoding precise enough to be useful in a city, where all 17 Nairobi
 constituencies sit inside one county polygon.

@@ -25,6 +25,12 @@ export const counties: readonly County[] = [
    "lat": -3.990448,
    "lng": 39.70113
   },
+  "bbox": [
+   39.564,
+   -4.152,
+   39.762,
+   -3.921
+  ],
   "aliases": []
  },
  {
@@ -50,6 +56,12 @@ export const counties: readonly County[] = [
    "lat": -4.120591,
    "lng": 39.066136
   },
+  "bbox": [
+   38.446,
+   -4.676,
+   39.643,
+   -3.564
+  ],
   "aliases": []
  },
  {
@@ -75,6 +87,12 @@ export const counties: readonly County[] = [
    "lat": -3.152441,
    "lng": 39.672708
   },
+  "bbox": [
+   39.087,
+   -3.994,
+   40.24,
+   -2.309
+  ],
   "aliases": []
  },
  {
@@ -101,6 +119,12 @@ export const counties: readonly County[] = [
    "lat": -1.534918,
    "lng": 39.550288
   },
+  "bbox": [
+   38.42,
+   -3.069,
+   40.736,
+   -0.002
+  ],
   "aliases": []
  },
  {
@@ -127,6 +151,12 @@ export const counties: readonly County[] = [
    "lat": -2.063679,
    "lng": 40.54583
   },
+  "bbox": [
+   40.212,
+   -2.467,
+   41.531,
+   -1.661
+  ],
   "aliases": []
  },
  {
@@ -152,6 +182,12 @@ export const counties: readonly County[] = [
    "lat": -3.405203,
    "lng": 38.37176
   },
+  "bbox": [
+   37.584,
+   -4.138,
+   39.219,
+   -2.68
+  ],
   "aliases": []
  },
  {
@@ -177,6 +213,12 @@ export const counties: readonly County[] = [
    "lat": -0.52049,
    "lng": 40.35559
   },
+  "bbox": [
+   38.662,
+   -2.036,
+   41.562,
+   0.996
+  ],
   "aliases": []
  },
  {
@@ -202,6 +244,12 @@ export const counties: readonly County[] = [
    "lat": 1.939715,
    "lng": 40.024507
   },
+  "bbox": [
+   38.888,
+   0.184,
+   40.992,
+   3.695
+  ],
   "aliases": []
  },
  {
@@ -227,6 +275,12 @@ export const counties: readonly County[] = [
    "lat": 3.230964,
    "lng": 40.711346
   },
+  "bbox": [
+   39.785,
+   2.179,
+   41.906,
+   4.28
+  ],
   "aliases": []
  },
  {
@@ -252,6 +306,12 @@ export const counties: readonly County[] = [
    "lat": 2.86048,
    "lng": 37.714884
   },
+  "bbox": [
+   36.05,
+   1.263,
+   39.346,
+   4.454
+  ],
   "aliases": []
  },
  {
@@ -277,6 +337,12 @@ export const counties: readonly County[] = [
    "lat": 1.006385,
    "lng": 38.747651
   },
+  "bbox": [
+   36.864,
+   -0.085,
+   39.462,
+   2.099
+  ],
   "aliases": []
  },
  {
@@ -302,6 +368,12 @@ export const counties: readonly County[] = [
    "lat": 0.229055,
    "lng": 37.776111
   },
+  "bbox": [
+   37.088,
+   -0.213,
+   38.415,
+   0.671
+  ],
   "aliases": []
  },
  {
@@ -327,6 +399,12 @@ export const counties: readonly County[] = [
    "lat": -0.191445,
    "lng": 37.960417
   },
+  "bbox": [
+   37.308,
+   -0.45,
+   38.309,
+   0.068
+  ],
   "aliases": []
  },
  {
@@ -352,6 +430,12 @@ export const counties: readonly County[] = [
    "lat": -0.53283,
    "lng": 37.664629
   },
+  "bbox": [
+   37.268,
+   -0.916,
+   37.936,
+   -0.15
+  ],
   "aliases": []
  },
  {
@@ -377,6 +461,12 @@ export const counties: readonly County[] = [
    "lat": -1.56049,
    "lng": 38.37181
   },
+  "bbox": [
+   37.596,
+   -3.068,
+   39.076,
+   -0.053
+  ],
   "aliases": []
  },
  {
@@ -403,6 +493,12 @@ export const counties: readonly County[] = [
    "lat": -1.276237,
    "lng": 37.394595
   },
+  "bbox": [
+   36.878,
+   -1.778,
+   37.868,
+   -0.78
+  ],
   "aliases": []
  },
  {
@@ -428,6 +524,12 @@ export const counties: readonly County[] = [
    "lat": -2.253637,
    "lng": 37.876663
   },
+  "bbox": [
+   37.141,
+   -2.991,
+   38.515,
+   -1.517
+  ],
   "aliases": []
  },
  {
@@ -453,6 +555,12 @@ export const counties: readonly County[] = [
    "lat": -0.389093,
    "lng": 36.497431
   },
+  "bbox": [
+   36.201,
+   -0.919,
+   36.737,
+   0.14
+  ],
   "aliases": []
  },
  {
@@ -478,6 +586,12 @@ export const counties: readonly County[] = [
    "lat": -0.314375,
    "lng": 36.930473
   },
+  "bbox": [
+   36.604,
+   -0.645,
+   37.308,
+   0.015
+  ],
   "aliases": []
  },
  {
@@ -503,6 +617,12 @@ export const counties: readonly County[] = [
    "lat": -0.46735,
    "lng": 37.301902
   },
+  "bbox": [
+   37.144,
+   -0.785,
+   37.496,
+   -0.15
+  ],
   "aliases": []
  },
  {
@@ -529,6 +649,12 @@ export const counties: readonly County[] = [
    "lat": -0.828519,
    "lng": 37.004173
   },
+  "bbox": [
+   36.707,
+   -1.093,
+   37.421,
+   -0.567
+  ],
   "aliases": []
  },
  {
@@ -555,6 +681,12 @@ export const counties: readonly County[] = [
    "lat": -1.034385,
    "lng": 36.843216
   },
+  "bbox": [
+   36.491,
+   -1.312,
+   37.363,
+   -0.763
+  ],
   "aliases": []
  },
  {
@@ -580,6 +712,12 @@ export const counties: readonly County[] = [
    "lat": 3.162488,
    "lng": 35.313492
   },
+  "bbox": [
+   33.992,
+   0.912,
+   36.725,
+   5.414
+  ],
   "aliases": []
  },
  {
@@ -605,6 +743,12 @@ export const counties: readonly County[] = [
    "lat": 1.893374,
    "lng": 35.212768
   },
+  "bbox": [
+   34.776,
+   1.12,
+   35.79,
+   2.653
+  ],
   "aliases": []
  },
  {
@@ -630,6 +774,12 @@ export const counties: readonly County[] = [
    "lat": 1.541373,
    "lng": 36.94154
   },
+  "bbox": [
+   36.29,
+   0.568,
+   38.08,
+   2.515
+  ],
   "aliases": []
  },
  {
@@ -656,6 +806,12 @@ export const counties: readonly County[] = [
    "lat": 1.045915,
    "lng": 34.980778
   },
+  "bbox": [
+   34.58,
+   0.808,
+   35.362,
+   1.284
+  ],
   "aliases": []
  },
  {
@@ -681,6 +837,12 @@ export const counties: readonly County[] = [
    "lat": 0.478188,
    "lng": 35.303799
   },
+  "bbox": [
+   34.852,
+   0.009,
+   35.59,
+   0.946
+  ],
   "aliases": []
  },
  {
@@ -706,6 +868,12 @@ export const counties: readonly County[] = [
    "lat": 0.745102,
    "lng": 35.560856
   },
+  "bbox": [
+   35.152,
+   0.171,
+   35.722,
+   1.319
+  ],
   "aliases": []
  },
  {
@@ -732,6 +900,12 @@ export const counties: readonly County[] = [
    "lat": 0.227352,
    "lng": 35.123876
   },
+  "bbox": [
+   34.742,
+   -0.108,
+   35.438,
+   0.563
+  ],
   "aliases": []
  },
  {
@@ -757,6 +931,12 @@ export const counties: readonly County[] = [
    "lat": 0.726352,
    "lng": 36.018591
   },
+  "bbox": [
+   35.523,
+   -0.203,
+   36.49,
+   1.656
+  ],
   "aliases": []
  },
  {
@@ -782,6 +962,12 @@ export const counties: readonly County[] = [
    "lat": 0.289134,
    "lng": 36.825248
   },
+  "bbox": [
+   36.226,
+   -0.293,
+   37.394,
+   0.871
+  ],
   "aliases": []
  },
  {
@@ -807,6 +993,12 @@ export const counties: readonly County[] = [
    "lat": -0.458448,
    "lng": 36.100384
   },
+  "bbox": [
+   35.414,
+   -1.153,
+   36.6,
+   0.236
+  ],
   "aliases": []
  },
  {
@@ -830,6 +1022,12 @@ export const counties: readonly County[] = [
    "lat": -1.279878,
    "lng": 35.476358
   },
+  "bbox": [
+   34.59,
+   -2.105,
+   36.348,
+   -0.455
+  ],
   "aliases": []
  },
  {
@@ -855,6 +1053,12 @@ export const counties: readonly County[] = [
    "lat": -2.112369,
    "lng": 36.777606
   },
+  "bbox": [
+   36,
+   -3.183,
+   37.936,
+   -1.037
+  ],
   "aliases": []
  },
  {
@@ -880,6 +1084,12 @@ export const counties: readonly County[] = [
    "lat": -0.316683,
    "lng": 35.225997
   },
+  "bbox": [
+   35.005,
+   -0.656,
+   35.67,
+   0.028
+  ],
   "aliases": []
  },
  {
@@ -905,6 +1115,12 @@ export const counties: readonly County[] = [
    "lat": -0.716095,
    "lng": 35.238459
   },
+  "bbox": [
+   35.013,
+   -1.035,
+   35.587,
+   -0.399
+  ],
   "aliases": []
  },
  {
@@ -930,6 +1146,12 @@ export const counties: readonly County[] = [
    "lat": 0.49719,
    "lng": 34.800929
   },
+  "bbox": [
+   34.344,
+   0.091,
+   35.155,
+   0.9
+  ],
   "aliases": []
  },
  {
@@ -955,6 +1177,12 @@ export const counties: readonly County[] = [
    "lat": 0.084857,
    "lng": 34.707784
   },
+  "bbox": [
+   34.533,
+   -0.038,
+   34.926,
+   0.206
+  ],
   "aliases": []
  },
  {
@@ -980,6 +1208,12 @@ export const counties: readonly County[] = [
    "lat": 0.785694,
    "lng": 34.718757
   },
+  "bbox": [
+   34.362,
+   0.421,
+   35.068,
+   1.15
+  ],
   "aliases": []
  },
  {
@@ -1005,6 +1239,12 @@ export const counties: readonly County[] = [
    "lat": 0.375707,
    "lng": 34.265111
   },
+  "bbox": [
+   33.91,
+   -0.028,
+   34.435,
+   0.777
+  ],
   "aliases": []
  },
  {
@@ -1030,6 +1270,12 @@ export const counties: readonly County[] = [
    "lat": -0.057674,
    "lng": 34.199887
   },
+  "bbox": [
+   33.948,
+   -0.428,
+   34.56,
+   0.308
+  ],
   "aliases": []
  },
  {
@@ -1055,6 +1301,12 @@ export const counties: readonly County[] = [
    "lat": -0.19438,
    "lng": 34.777329
   },
+  "bbox": [
+   34.415,
+   -0.413,
+   35.343,
+   0.026
+  ],
   "aliases": []
  },
  {
@@ -1080,6 +1332,12 @@ export const counties: readonly County[] = [
    "lat": -0.562403,
    "lng": 34.314532
   },
+  "bbox": [
+   33.917,
+   -0.865,
+   35.02,
+   -0.257
+  ],
   "aliases": []
  },
  {
@@ -1105,6 +1363,12 @@ export const counties: readonly County[] = [
    "lat": -1.018704,
    "lng": 34.309173
   },
+  "bbox": [
+   33.926,
+   -1.387,
+   34.731,
+   -0.65
+  ],
   "aliases": []
  },
  {
@@ -1130,6 +1394,12 @@ export const counties: readonly County[] = [
    "lat": -0.736677,
    "lng": 34.75351
   },
+  "bbox": [
+   34.61,
+   -0.971,
+   35.013,
+   -0.502
+  ],
   "aliases": []
  },
  {
@@ -1155,6 +1425,12 @@ export const counties: readonly County[] = [
    "lat": -0.649378,
    "lng": 34.933398
   },
+  "bbox": [
+   34.779,
+   -0.888,
+   35.091,
+   -0.41
+  ],
   "aliases": []
  },
  {
@@ -1180,6 +1456,12 @@ export const counties: readonly County[] = [
    "lat": -1.300489,
    "lng": 36.827926
   },
+  "bbox": [
+   36.663,
+   -1.442,
+   37.104,
+   -1.158
+  ],
   "aliases": [
    "Nairobi City"
   ]

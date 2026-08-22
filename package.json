@@ -23,7 +23,11 @@
     "locations",
     "sub-locations",
     "census",
-    "provincial-administration"
+    "provincial-administration",
+    "geojson",
+    "outlines",
+    "map",
+    "point-in-polygon"
   ],
   "license": "MIT",
   "author": "Nicanor Korir",
@@ -159,6 +163,16 @@
       "require": {
         "types": "./dist/country.d.cts",
         "default": "./dist/country.cjs"
+      }
+    },
+    "./outlines": {
+      "import": {
+        "types": "./dist/outlines.d.ts",
+        "default": "./dist/outlines.js"
+      },
+      "require": {
+        "types": "./dist/outlines.d.cts",
+        "default": "./dist/outlines.cjs"
       }
     },
     "./data/*.json": "./data/*.json",

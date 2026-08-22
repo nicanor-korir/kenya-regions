@@ -14,6 +14,7 @@ export default defineConfig({
     'src/divisions.ts',
     'src/locations.ts',
     'src/sublocations.ts',
+    'src/outlines.ts',
   ],
   format: ['esm', 'cjs'],
   dts: true,

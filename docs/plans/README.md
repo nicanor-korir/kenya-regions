@@ -10,7 +10,7 @@ not how interesting it is to build.
 | --- | --- | --- | --- |
 | 01 | [Non-JavaScript consumers](01-non-js-consumers.md) | not started | Largest audience currently unserved. PHP, Python, mobile and SQL users can only vendor a JSON blob by hand. |
 | 02 | [Literal union types](02-literal-types.md) | not started | Hours of work, benefits every TypeScript user immediately. |
-| 03 | [Constituency boundaries](03-constituency-boundaries.md) | blocked on data | The one gap in `kenya-regions-geo`. Blocked, not unstarted. |
+| 03 | [Constituency boundaries](03-constituency-boundaries.md) | blocked on data | The one gap in [kenya-regions-geo](https://github.com/nicanor-korir/kenya-regions-geo). Blocked, not unstarted. |
 | 04 | [Publishing from CI with provenance](04-ci-publish-provenance.md) | not started | Prevents a failure that has already happened once. |
 | 05 | [Matching messy input](05-fuzzy-matching.md) | not started | The second most common real task after dropdowns. |
 | 06 | [Postal codes](06-postal-codes.md) | needs a source | Every address form wants them. |

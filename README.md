@@ -464,6 +464,7 @@ Per entry point, as published:
 | `kenya-regions/blocs` | ~2 KB | 7 blocs |
 | `kenya-regions/provinces` | ~2 KB | 8 provinces |
 | `kenya-regions/country` | ~5 KB | country record + helpers |
+| `kenya-regions/outlines` | ~53 KB | 47 coarse county outlines + point lookup |
 | `kenya-regions/districts` | ~22 KB | 158 districts |
 | `kenya-regions/counties` | ~25 KB | 47 counties |
 | `kenya-regions/wards` | ~48 KB | 1450 wards |
@@ -571,6 +572,7 @@ traceable, and `npm run build:data` regenerates the datasets from them offline.
 | IEBC 2013 boundary shapefile | Independent cross-check of ward names |
 | KNBS sub-county / ward listing | The 301 administrative sub-counties |
 | KNBS 2009 census, population by sub-location | Districts, divisions, locations, sub-locations and their census figures |
+| OCHA COD admin1 boundaries | Coarse county outlines and each county's bbox |
 | KNBS 2019 and 2009 censuses | Population |
 | ISO 3166-1 / 3166-2:KE | Country codes, county ISO codes, withdrawn province codes |
 | UN M49 | Kenya's place in the world statistical hierarchy |
@@ -635,32 +637,41 @@ Honest about what is unresolved rather than papering over it:
 Corrections are welcome. Open an issue with a source and the build will be
 updated.
 
-## Boundary geometry
+## Geometry
 
-Shapes are a separate package, so nobody pays for polygons they do not render:
+Coarse county outlines ship here, at about 15 KB gzipped. Enough to draw a
+national map and to answer which county a point is in:
+
+```ts
+import { countyOutlines, locateCounty } from 'kenya-regions/outlines'
+
+map.addSource('counties', { type: 'geojson', data: countyOutlines })
+locateCounty(-1.2864, 36.8172)?.properties.name   // 'Nairobi'
+```
+
+Every county record also carries a `bbox`, so you can fit a map to a county
+without loading any geometry at all.
+
+Boundaries are simplified to roughly a kilometre, so a point close to a county
+border can resolve to the wrong side of it. For finer tiers, and for levels
+below the county, use
+[kenya-regions-geo](https://github.com/nicanor-korir/kenya-regions-geo):
 
 ```bash
 npm install kenya-regions-geo
 ```
 
-```ts
-import { locate } from 'kenya-regions-geo'
-import { counties } from 'kenya-regions-geo/counties'
-
-locate(counties, -1.2864, 36.8172)?.properties.name   // 'Nairobi'
-```
-
-County boundaries as GeoJSON at three detail tiers, from 15 KB gzipped, with
-point-in-polygon lookup and no dependencies. Features carry the same codes as
-this package, so the two join on `properties.code`. See
-[geo/README.md](geo/README.md).
+It is a separate package because npm downloads the whole tarball on install
+regardless of what you import, so detailed polygons would be paid for by
+everyone who only wanted a dropdown.
 
 ## Roadmap
 
 Scoped but unbuilt work lives in [docs/plans](docs/plans), including what is
 blocked and why. The two data gaps worth knowing about are
 [the sub-county count](docs/plans/07-subcounty-gap.md) and
-[constituency boundaries](docs/plans/03-constituency-boundaries.md).
+[constituency boundaries](docs/plans/03-constituency-boundaries.md), which are
+blocked in `kenya-regions-geo`.
 
 ## Contributing
 
