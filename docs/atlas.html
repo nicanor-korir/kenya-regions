@@ -809,15 +809,21 @@ footer {
   svg.addEventListener('pointerdown', (e) => {
     if (e.button !== 0) return
     drag = { cx: e.clientX, cy: e.clientY, vx: view.x, vy: view.y, moved: false }
-    svg.setPointerCapture(e.pointerId)
-    svg.classList.add('grabbing')
   })
   svg.addEventListener('pointermove', (e) => {
     if (!drag) return
-    const { fit } = fitScale()
     const dx = e.clientX - drag.cx
     const dy = e.clientY - drag.cy
-    if (!drag.moved && Math.abs(dx) + Math.abs(dy) > 4) drag.moved = true
+    if (!drag.moved) {
+      if (Math.abs(dx) + Math.abs(dy) <= 4) return
+      drag.moved = true
+      // Capture only once this is definitely a drag. Capturing on pointerdown
+      // retargets the click that follows to the <svg>, so `closest('.county')`
+      // finds nothing and a plain click stops selecting anything at all.
+      svg.setPointerCapture(e.pointerId)
+      svg.classList.add('grabbing')
+    }
+    const { fit } = fitScale()
     view.x = drag.vx + dx / fit
     view.y = drag.vy + dy / fit
     applyView(false)
