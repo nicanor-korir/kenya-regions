@@ -1,0 +1,23 @@
+{
+  "_comment": "How data/svg/counties.svg and the svg_path column of data/csv/county-outlines.csv were projected. Apply this to any latitude and longitude to place it on the same canvas.",
+  "generated": "scripts/build-data.mjs",
+  "type": "sphericalMercator",
+  "viewBox": [
+    0,
+    0,
+    1000,
+    1263.5
+  ],
+  "width": 1000,
+  "height": 1263.5,
+  "scale": 7165.55521674366,
+  "originX": 0.5918411493512771,
+  "originY": 0.09463305668238342,
+  "formula": [
+    "mx = lng * PI / 180",
+    "my = ln(tan(PI / 4 + lat * PI / 360))",
+    "x  = (mx - originX) * scale",
+    "y  = (originY - my) * scale"
+  ],
+  "precision": "Coordinates are rounded to one decimal, about 90 metres."
+}

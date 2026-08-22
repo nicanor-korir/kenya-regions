@@ -14,8 +14,7 @@ exported, and only a test caught it.
 
 ## What to build
 
-Extract fenced `ts` blocks from `README.md`, `geo/README.md` and
-`docs/index.html`, write them to a temporary directory, and typecheck them
+Extract fenced `ts` blocks from `README.md` and `docs/index.html`, write them to a temporary directory, and typecheck them
 against the built package.
 
 Typechecking rather than executing is the right level. Most samples are

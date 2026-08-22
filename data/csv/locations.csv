@@ -1,0 +1,2724 @@
+code,name,slug,division_code,division_name,district_code,district_name,former_province_code
+1,Gatanga,gatanga,1,Gatanga,1,Gatanga,CEN
+2,Kigio,kigio,1,Gatanga,1,Gatanga,CEN
+3,Kiria-Ini,kiria-ini,1,Gatanga,1,Gatanga,CEN
+4,Mugumo-Ini,mugumo-ini,1,Gatanga,1,Gatanga,CEN
+5,Samuru,samuru,1,Gatanga,1,Gatanga,CEN
+6,Gambuya,gambuya,2,Kariara,1,Gatanga,CEN
+7,Kariara,kariara,2,Kariara,1,Gatanga,CEN
+8,Kigoro,kigoro,2,Kariara,1,Gatanga,CEN
+9,Ndakaini,ndakaini,2,Kariara,1,Gatanga,CEN
+10,Kiumbu-Ini,kiumbu-ini,3,Kiumbu-Ini,1,Gatanga,CEN
+11,Kiunyu,kiunyu,3,Kiumbu-Ini,1,Gatanga,CEN
+12,Mukarara,mukarara,3,Kiumbu-Ini,1,Gatanga,CEN
+13,Gituamba,gituamba,4,Chania,2,Gatundu,CEN
+14,Kairi,kairi,4,Chania,2,Gatundu,CEN
+15,Makwa,makwa,4,Chania,2,Gatundu,CEN
+16,Forest,forest,5,Forest,2,Gatundu,CEN
+17,Kiamwangi,kiamwangi,6,Gatundu,2,Gatundu,CEN
+18,Kiganjo,kiganjo,6,Gatundu,2,Gatundu,CEN
+19,Ndarugu,ndarugu,6,Gatundu,2,Gatundu,CEN
+20,Ngenda,ngenda,6,Gatundu,2,Gatundu,CEN
+21,Gakoe,gakoe,7,Mangu,2,Gatundu,CEN
+22,Gathaite,gathaite,7,Mangu,2,Gatundu,CEN
+23,Githombokoni,githombokoni,7,Mangu,2,Gatundu,CEN
+24,Karuri,karuri,7,Mangu,2,Gatundu,CEN
+25,Mangu,mangu,7,Mangu,2,Gatundu,CEN
+26,Githunguri,githunguri,8,Githunguri,3,Githunguri,CEN
+27,Ngewa,ngewa,8,Githunguri,3,Githunguri,CEN
+28,Githiga,githiga,9,Ikinu,3,Githunguri,CEN
+29,Ikinu,ikinu,9,Ikinu,3,Githunguri,CEN
+30,Kiratina,kiratina,10,Komothai,3,Githunguri,CEN
+31,Komothai,komothai,10,Komothai,3,Githunguri,CEN
+32,Cianda,cianda,11,Kiambaa,4,Kiambu East(Kiambaa),CEN
+33,Kiambaa,kiambaa,11,Kiambaa,4,Kiambu East(Kiambaa),CEN
+34,Kihara,kihara,11,Kiambaa,4,Kiambu East(Kiambaa),CEN
+35,Ruaka,ruaka,11,Kiambaa,4,Kiambu East(Kiambaa),CEN
+36,Waguthu,waguthu,11,Kiambaa,4,Kiambu East(Kiambaa),CEN
+37,Kamiti,kamiti,12,Kiambu Muini.,4,Kiambu East(Kiambaa),CEN
+38,Kiambaa S/A,kiambaa-s-a,12,Kiambu Muini.,4,Kiambu East(Kiambaa),CEN
+39,Ndumberi,ndumberi,12,Kiambu Muini.,4,Kiambu East(Kiambaa),CEN
+40,Riabai,riabai,12,Kiambu Muini.,4,Kiambu East(Kiambaa),CEN
+41,Tinganga,tinganga,12,Kiambu Muini.,4,Kiambu East(Kiambaa),CEN
+42,Karambaini,karambaini,13,Limuru,5,Kiambu West,CEN
+43,Limuru,limuru,13,Limuru,5,Kiambu West,CEN
+44,Ngecha,ngecha,13,Limuru,5,Kiambu West,CEN
+45,Rironi,rironi,13,Limuru,5,Kiambu West,CEN
+46,Tigoni,tigoni,13,Limuru,5,Kiambu West,CEN
+47,Ndeiya,ndeiya,14,Ndeiya,5,Kiambu West,CEN
+48,Kabete,kabete,15,Kabete,6,Kikuyu,CEN
+49,Muguga,muguga,15,Kabete,6,Kikuyu,CEN
+50,Nyathuna,nyathuna,15,Kabete,6,Kikuyu,CEN
+51,Karai,karai,16,Kikuyu,6,Kikuyu,CEN
+52,Kikuyu,kikuyu,16,Kikuyu,6,Kikuyu,CEN
+53,Kinoo,kinoo,16,Kikuyu,6,Kikuyu,CEN
+54,Inoi,inoi,17,Central,7,Kirinyaga,CEN
+55,Kanyekine,kanyekine,17,Central,7,Kirinyaga,CEN
+56,Kerugoya,kerugoya,17,Central,7,Kirinyaga,CEN
+57,Koroma,koroma,17,Central,7,Kirinyaga,CEN
+58,Kutus,kutus,17,Central,7,Kirinyaga,CEN
+59,Mutira,mutira,17,Central,7,Kirinyaga,CEN
+60,Baragwi,baragwi,18,Gichugu,7,Kirinyaga,CEN
+61,Kabare,kabare,18,Gichugu,7,Kirinyaga,CEN
+62,Karumandi,karumandi,18,Gichugu,7,Kirinyaga,CEN
+63,Kirima,kirima,18,Gichugu,7,Kirinyaga,CEN
+64,Ngariama,ngariama,18,Gichugu,7,Kirinyaga,CEN
+65,Njukiini,njukiini,18,Gichugu,7,Kirinyaga,CEN
+66,Mt Kenya Forest,mt-kenya-forest,19,Mt Kenya Forest,7,Kirinyaga,CEN
+67,Kangai,kangai,20,Mwea,7,Kirinyaga,CEN
+68,Murinduko,murinduko,20,Mwea,7,Kirinyaga,CEN
+69,Mutithi,mutithi,20,Mwea,7,Kirinyaga,CEN
+70,Nyangati,nyangati,20,Mwea,7,Kirinyaga,CEN
+71,Tebere,tebere,20,Mwea,7,Kirinyaga,CEN
+72,Thiba,thiba,20,Mwea,7,Kirinyaga,CEN
+73,Kariti,kariti,21,Ndia,7,Kirinyaga,CEN
+74,Kiine,kiine,21,Ndia,7,Kirinyaga,CEN
+75,Mukure,mukure,21,Ndia,7,Kirinyaga,CEN
+76,Mwerua,mwerua,21,Ndia,7,Kirinyaga,CEN
+77,Gatamaiyu,gatamaiyu,22,Gatamaiyu,8,Lari,CEN
+78,Kamburu,kamburu,22,Gatamaiyu,8,Lari,CEN
+79,Nyanduma,nyanduma,22,Gatamaiyu,8,Lari,CEN
+80,Gitithia,gitithia,23,Lari,8,Lari,CEN
+81,Kamae,kamae,23,Lari,8,Lari,CEN
+82,Kijabe,kijabe,23,Lari,8,Lari,CEN
+83,Kinale,kinale,23,Lari,8,Lari,CEN
+84,Kirenga,kirenga,23,Lari,8,Lari,CEN
+85,Lari,lari,23,Lari,8,Lari,CEN
+86,Aberdare Forest,aberdare-forest,24,Aberdare Forest,9,Muranga North,CEN
+87,Kahuhia,kahuhia,25,Kahuro,9,Muranga North,CEN
+88,Mugoiri,mugoiri,25,Kahuro,9,Muranga North,CEN
+89,Murarandia,murarandia,25,Kahuro,9,Muranga North,CEN
+90,Weithaga,weithaga,25,Kahuro,9,Muranga North,CEN
+91,Iyego,iyego,26,Kangema,9,Muranga North,CEN
+92,Kanyenyaini,kanyenyaini,26,Kangema,9,Muranga North,CEN
+93,Kiruri,kiruri,26,Kangema,9,Muranga North,CEN
+94,Muguru,muguru,26,Kangema,9,Muranga North,CEN
+95,Rwathia,rwathia,26,Kangema,9,Muranga North,CEN
+96,Gaturi,gaturi,27,Kiharu,9,Muranga North,CEN
+97,Gikindu,gikindu,27,Kiharu,9,Muranga North,CEN
+98,Kimathi,kimathi,27,Kiharu,9,Muranga North,CEN
+99,Mbiri,mbiri,27,Kiharu,9,Muranga North,CEN
+100,Township,township,27,Kiharu,9,Muranga North,CEN
+101,Gitugi,gitugi,28,Mathioya,9,Muranga North,CEN
+102,Kamacharia,kamacharia,28,Mathioya,9,Muranga North,CEN
+103,Kiru,kiru,28,Mathioya,9,Muranga North,CEN
+104,Njumbi,njumbi,28,Mathioya,9,Muranga North,CEN
+105,Aberdare Forest,aberdare-forest,29,Aberdare Forest,10,Muranga South,CEN
+106,Gaichanjiru,gaichanjiru,30,Kandara,10,Muranga South,CEN
+107,Ithiru,ithiru,30,Kandara,10,Muranga South,CEN
+108,Kagundu-Ini,kagundu-ini,30,Kandara,10,Muranga South,CEN
+109,Muruka,muruka,30,Kandara,10,Muranga South,CEN
+110,Ngararia,ngararia,30,Kandara,10,Muranga South,CEN
+111,Ruchu,ruchu,30,Kandara,10,Muranga South,CEN
+112,Kangari,kangari,31,Kigumo,10,Muranga South,CEN
+113,Kigumo,kigumo,31,Kigumo,10,Muranga South,CEN
+114,Kinyona,kinyona,31,Kigumo,10,Muranga South,CEN
+115,Kamahuha,kamahuha,32,Makuyu,10,Muranga South,CEN
+116,Kambiti,kambiti,32,Makuyu,10,Muranga South,CEN
+117,Makuyu,makuyu,32,Makuyu,10,Muranga South,CEN
+118,Ichagaki,ichagaki,33,Maragua,10,Muranga South,CEN
+119,Kahumbu,kahumbu,33,Maragua,10,Muranga South,CEN
+120,Maragua Ridge,maragua-ridge,33,Maragua,10,Muranga South,CEN
+121,Muthithi,muthithi,33,Maragua,10,Muranga South,CEN
+122,Nginda,nginda,33,Maragua,10,Muranga South,CEN
+123,Aberdare Forest,aberdare-forest,34,Aberdare Forest,11,Nyandarua North,CEN
+124,Kahutha,kahutha,35,Ndaragwa,11,Nyandarua North,CEN
+125,Kanyagia,kanyagia,35,Ndaragwa,11,Nyandarua North,CEN
+126,Kirita,kirita,35,Ndaragwa,11,Nyandarua North,CEN
+127,Leshau,leshau,35,Ndaragwa,11,Nyandarua North,CEN
+128,Mathingira,mathingira,35,Ndaragwa,11,Nyandarua North,CEN
+129,Shamata,shamata,35,Ndaragwa,11,Nyandarua North,CEN
+130,Gathanji,gathanji,36,Oljoro-Orok,11,Nyandarua North,CEN
+131,Gatimu,gatimu,36,Oljoro-Orok,11,Nyandarua North,CEN
+132,Ol Joro-Orok,ol-joro-orok,36,Oljoro-Orok,11,Nyandarua North,CEN
+133,Weru,weru,36,Oljoro-Orok,11,Nyandarua North,CEN
+134,Kaimbaga,kaimbaga,37,Olkalou,11,Nyandarua North,CEN
+135,Ndundori,ndundori,37,Olkalou,11,Nyandarua North,CEN
+136,Ngorika,ngorika,37,Olkalou,11,Nyandarua North,CEN
+137,Ol Kalou,ol-kalou,37,Olkalou,11,Nyandarua North,CEN
+138,Rurii,rurii,37,Olkalou,11,Nyandarua North,CEN
+139,Tumaini,tumaini,37,Olkalou,11,Nyandarua North,CEN
+140,Aberdare Forest,aberdare-forest,38,Aberdare Forest,12,Nyandarua South,CEN
+141,Engineer,engineer,39,Kinangop North,12,Nyandarua South,CEN
+142,Kinangop North,kinangop-north,39,Kinangop North,12,Nyandarua South,CEN
+143,Magumu,magumu,40,Kinangop South,12,Nyandarua South,CEN
+144,Njabini,njabini,40,Kinangop South,12,Nyandarua South,CEN
+145,Nyakio,nyakio,40,Kinangop South,12,Nyandarua South,CEN
+146,Geta,geta,41,Kipipiri,12,Nyandarua South,CEN
+147,Kipipiri,kipipiri,41,Kipipiri,12,Nyandarua South,CEN
+148,Lereshwa,lereshwa,41,Kipipiri,12,Nyandarua South,CEN
+149,Malewa,malewa,41,Kipipiri,12,Nyandarua South,CEN
+150,Wanjohi,wanjohi,41,Kipipiri,12,Nyandarua South,CEN
+151,Aberdare Forest,aberdare-forest,42,Aberdares Forest,13,Nyeri North,CEN
+152,Gakawa,gakawa,43,Kieni East,13,Nyeri North,CEN
+153,Kabaru,kabaru,43,Kieni East,13,Nyeri North,CEN
+154,Kiamathaga,kiamathaga,43,Kieni East,13,Nyeri North,CEN
+155,Naromoru,naromoru,43,Kieni East,13,Nyeri North,CEN
+156,Thegu,thegu,43,Kieni East,13,Nyeri North,CEN
+157,Endarasha,endarasha,44,Kieni West,13,Nyeri North,CEN
+158,Gatarakwa,gatarakwa,44,Kieni West,13,Nyeri North,CEN
+159,Mugunda,mugunda,44,Kieni West,13,Nyeri North,CEN
+160,Mweiga,mweiga,44,Kieni West,13,Nyeri North,CEN
+161,Mwiyogo,mwiyogo,44,Kieni West,13,Nyeri North,CEN
+162,Iriaini,iriaini,45,Mathira,13,Nyeri North,CEN
+163,Karatina,karatina,45,Mathira,13,Nyeri North,CEN
+164,Kirimukuyu,kirimukuyu,45,Mathira,13,Nyeri North,CEN
+165,Konyu,konyu,45,Mathira,13,Nyeri North,CEN
+166,Magutu,magutu,45,Mathira,13,Nyeri North,CEN
+167,Ngorano,ngorano,45,Mathira,13,Nyeri North,CEN
+168,Ruguru,ruguru,45,Mathira,13,Nyeri North,CEN
+169,Mt. Kenya Forest,mt-kenya-forest,46,Mt. Kenya Forest,13,Nyeri North,CEN
+170,Forest,forest,47,Forest,14,Nyeri South,CEN
+171,Gakindu,gakindu,48,Mukurweini,14,Nyeri South,CEN
+172,Giathugu,giathugu,48,Mukurweini,14,Nyeri South,CEN
+173,Gikondi,gikondi,48,Mukurweini,14,Nyeri South,CEN
+174,Githi,githi,48,Mukurweini,14,Nyeri South,CEN
+175,Muhito,muhito,48,Mukurweini,14,Nyeri South,CEN
+176,Rutune,rutune,48,Mukurweini,14,Nyeri South,CEN
+177,Thanu,thanu,48,Mukurweini,14,Nyeri South,CEN
+178,Kiganjo,kiganjo,49,Municipality,14,Nyeri South,CEN
+179,Mukaro,mukaro,49,Municipality,14,Nyeri South,CEN
+180,Chinga North,chinga-north,50,Othaya,14,Nyeri South,CEN
+181,Chinga South,chinga-south,50,Othaya,14,Nyeri South,CEN
+182,Iriaini,iriaini,50,Othaya,14,Nyeri South,CEN
+183,Karima,karima,50,Othaya,14,Nyeri South,CEN
+184,Mahiga,mahiga,50,Othaya,14,Nyeri South,CEN
+185,Mumwe,mumwe,50,Othaya,14,Nyeri South,CEN
+186,Aguthii,aguthii,51,Tetu East,14,Nyeri South,CEN
+187,Gaaki,gaaki,51,Tetu East,14,Nyeri South,CEN
+188,Karundu,karundu,51,Tetu East,14,Nyeri South,CEN
+189,Muhoya,muhoya,52,Tetu West,14,Nyeri South,CEN
+190,Tetu,tetu,52,Tetu West,14,Nyeri South,CEN
+191,Thegenge,thegenge,52,Tetu West,14,Nyeri South,CEN
+192,Gikumari,gikumari,53,Githurai,15,Ruiru,CEN
+193,Githurai,githurai,53,Githurai,15,Ruiru,CEN
+194,Kahawa Sukari,kahawa-sukari,53,Githurai,15,Ruiru,CEN
+195,Theta,theta,53,Githurai,15,Ruiru,CEN
+196,Mugutha,mugutha,54,Ruiru,15,Ruiru,CEN
+197,Ruiru,ruiru,54,Ruiru,15,Ruiru,CEN
+198,Ithanga,ithanga,55,Kakuzi,16,Thika East,CEN
+199,Kakuzi,kakuzi,55,Kakuzi,16,Thika East,CEN
+200,Mitumbiri,mitumbiri,55,Kakuzi,16,Thika East,CEN
+201,Ngelelya,ngelelya,55,Kakuzi,16,Thika East,CEN
+202,Gatuanyaga,gatuanyaga,56,Thika East,16,Thika East,CEN
+203,Munyu,munyu,56,Thika East,16,Thika East,CEN
+204,Ngoliba,ngoliba,56,Thika East,16,Thika East,CEN
+205,Juja,juja,57,Juja,17,Thika West,CEN
+206,Kalimoni,kalimoni,57,Juja,17,Thika West,CEN
+207,Komo,komo,57,Juja,17,Thika West,CEN
+208,Biashara,biashara,58,Thika West,17,Thika West,CEN
+209,Makongeni,makongeni,58,Thika West,17,Thika West,CEN
+210,Jibana,jibana,59,Kaloleni,18,Kaloleni,CST
+211,Kaloleni,kaloleni,59,Kaloleni,18,Kaloleni,CST
+212,Kambe,kambe,59,Kaloleni,18,Kaloleni,CST
+213,Kayafungo,kayafungo,59,Kaloleni,18,Kaloleni,CST
+214,Ribe,ribe,59,Kaloleni,18,Kaloleni,CST
+215,Mariakani,mariakani,60,Mariakani,18,Kaloleni,CST
+216,Mwanamwinga,mwanamwinga,60,Mariakani,18,Kaloleni,CST
+217,Tsangatsini,tsangatsini,60,Mariakani,18,Kaloleni,CST
+218,Mwawesa,mwawesa,61,Rabai,18,Kaloleni,CST
+219,Rabai,rabai,61,Rabai,18,Kaloleni,CST
+220,Ruruma,ruruma,61,Rabai,18,Kaloleni,CST
+221,Arabuko Sokoke Forest,arabuko-sokoke-forest,62,Arabuko Sokoke Forest,19,Kilifi,CST
+222,Matsangoni,matsangoni,63,Bahari,19,Kilifi,CST
+223,Ngerenya,ngerenya,63,Bahari,19,Kilifi,CST
+224,Roka,roka,63,Bahari,19,Kilifi,CST
+225,Tezo,tezo,63,Bahari,19,Kilifi,CST
+226,Township,township,63,Bahari,19,Kilifi,CST
+227,Bamba,bamba,64,Bamba,19,Kilifi,CST
+228,Bandari,bandari,64,Bamba,19,Kilifi,CST
+229,Mitangani,mitangani,64,Bamba,19,Kilifi,CST
+230,Mtsara Watsatsu,mtsara-watsatsu,64,Bamba,19,Kilifi,CST
+231,Ndigiria,ndigiria,64,Bamba,19,Kilifi,CST
+232,Banda Ra Salama,banda-ra-salama,65,Chonyi,19,Kilifi,CST
+233,Chasimba,chasimba,65,Chonyi,19,Kilifi,CST
+234,Mwarakaya,mwarakaya,65,Chonyi,19,Kilifi,CST
+235,Ziani,ziani,65,Chonyi,19,Kilifi,CST
+236,Dungicha,dungicha,66,Ganze,19,Kilifi,CST
+237,Ganze,ganze,66,Ganze,19,Kilifi,CST
+238,Palakumi,palakumi,66,Ganze,19,Kilifi,CST
+239,Jaribuni,jaribuni,67,Jaribuni,19,Kilifi,CST
+240,Kauma,kauma,67,Jaribuni,19,Kilifi,CST
+241,Vyambani,vyambani,67,Jaribuni,19,Kilifi,CST
+242,Junju,junju,68,Kikambala,19,Kilifi,CST
+243,Mtwapa,mtwapa,68,Kikambala,19,Kilifi,CST
+244,Takaungu,takaungu,68,Kikambala,19,Kilifi,CST
+245,Dida,dida,69,Vitengeni,19,Kilifi,CST
+246,Mrima wa Ndege,mrima-wa-ndege,69,Vitengeni,19,Kilifi,CST
+247,Mwahera,mwahera,69,Vitengeni,19,Kilifi,CST
+248,Sokoke,sokoke,69,Vitengeni,19,Kilifi,CST
+249,Vitengeni,vitengeni,69,Vitengeni,19,Kilifi,CST
+250,Chaani,chaani,70,Changamwe,20,Kilindini,CST
+251,Changamwe,changamwe,70,Changamwe,20,Kilindini,CST
+252,Portreitz,portreitz,70,Changamwe,20,Kilindini,CST
+253,Mikindani,mikindani,71,Jomvu,20,Kilindini,CST
+254,Miritini,miritini,71,Jomvu,20,Kilindini,CST
+255,Likoni,likoni,72,Likoni,20,Kilindini,CST
+256,Mtongwe,mtongwe,73,Longo,20,Kilindini,CST
+257,Shika Adabu,shika-adabu,73,Longo,20,Kilindini,CST
+258,Gandini,gandini,74,Kasemeni,21,Kinango,CST
+259,Kasemeni,kasemeni,74,Kasemeni,21,Kinango,CST
+260,Mtaa,mtaa,74,Kasemeni,21,Kinango,CST
+261,Mwatate,mwatate,74,Kasemeni,21,Kinango,CST
+262,Mwavundo,mwavundo,74,Kasemeni,21,Kinango,CST
+263,Kinango,kinango,75,Kinango,21,Kinango,CST
+264,Puma,puma,75,Kinango,21,Kinango,CST
+265,Vigurungani,vigurungani,75,Kinango,21,Kinango,CST
+266,Ndavaya,ndavaya,76,Ndavaya,21,Kinango,CST
+267,Chengoni,chengoni,77,Samburu,21,Kinango,CST
+268,Mackinon Road,mackinon-road,77,Samburu,21,Kinango,CST
+269,Makamini,makamini,77,Samburu,21,Kinango,CST
+270,Samburu South,samburu-south,77,Samburu,21,Kinango,CST
+271,Taru,taru,77,Samburu,21,Kinango,CST
+272,Lukore,lukore,78,Kubo,22,Kwale,CST
+273,Majimboni,majimboni,78,Kubo,22,Kwale,CST
+274,Mangawani,mangawani,78,Kubo,22,Kwale,CST
+275,Mkongani,mkongani,78,Kubo,22,Kwale,CST
+276,Mwaluphamba,mwaluphamba,78,Kubo,22,Kwale,CST
+277,Mwaluvanga,mwaluvanga,78,Kubo,22,Kwale,CST
+278,Golini,golini,79,Matuga,22,Kwale,CST
+279,Mbuguni,mbuguni,79,Matuga,22,Kwale,CST
+280,Ngombeni,ngombeni,79,Matuga,22,Kwale,CST
+281,Tiwi,tiwi,79,Matuga,22,Kwale,CST
+282,Tsimba,tsimba,79,Matuga,22,Kwale,CST
+283,Waa,waa,79,Matuga,22,Kwale,CST
+284,Shimb Ahills Nat. Resv,shimb-ahills-nat-resv,80,Shimba Hills Nat. Resv 01,22,Kwale,CST
+285,Langoni,langoni,81,Amu,23,Lamu,CST
+286,Matondoni,matondoni,81,Amu,23,Lamu,CST
+287,Mkomani,mkomani,81,Amu,23,Lamu,CST
+288,Shella/Manda,shella-manda,81,Amu,23,Lamu,CST
+289,Faza,faza,82,Faza,23,Lamu,CST
+290,Pate,pate,82,Faza,23,Lamu,CST
+291,Siyu,siyu,82,Faza,23,Lamu,CST
+292,Tchundwa,tchundwa,82,Faza,23,Lamu,CST
+293,H/Magogoni,h-magogoni,83,Hindi,23,Lamu,CST
+294,Mokowe,mokowe,83,Hindi,23,Lamu,CST
+295,Basuba,basuba,84,Kiunga,23,Lamu,CST
+296,Kiunga,kiunga,84,Kiunga,23,Lamu,CST
+297,Kizingitini,kizingitini,85,Kizingitini,23,Lamu,CST
+298,Mbwajumwali,mbwajumwali,85,Kizingitini,23,Lamu,CST
+299,Ndau,ndau,85,Kizingitini,23,Lamu,CST
+300,Bahari,bahari,86,Mpeketoni,23,Lamu,CST
+301,Hongwe,hongwe,86,Mpeketoni,23,Lamu,CST
+302,Mapenya,mapenya,86,Mpeketoni,23,Lamu,CST
+303,Mkunumbi,mkunumbi,86,Mpeketoni,23,Lamu,CST
+304,Mpeketoni,mpeketoni,86,Mpeketoni,23,Lamu,CST
+305,Ndambwe,ndambwe,86,Mpeketoni,23,Lamu,CST
+306,Didewaride,didewaride,87,Witu,23,Lamu,CST
+307,Witu,witu,87,Witu,23,Lamu,CST
+308,Chakama,chakama,88,Langobaya,24,Malindi,CST
+309,Jilore,jilore,88,Langobaya,24,Malindi,CST
+310,Langobaya,langobaya,88,Langobaya,24,Malindi,CST
+311,Malanga,malanga,88,Langobaya,24,Malindi,CST
+312,Fundissa,fundissa,89,Magarini,24,Malindi,CST
+313,Gongoni,gongoni,89,Magarini,24,Malindi,CST
+314,Magarini,magarini,89,Magarini,24,Malindi,CST
+315,Ganda,ganda,90,Malindi,24,Malindi,CST
+316,Gede,gede,90,Malindi,24,Malindi,CST
+317,Goshi,goshi,90,Malindi,24,Malindi,CST
+318,Malindi,malindi,90,Malindi,24,Malindi,CST
+319,Watamu,watamu,90,Malindi,24,Malindi,CST
+320,Adu,adu,91,Marafa,24,Malindi,CST
+321,Bungale,bungale,91,Marafa,24,Malindi,CST
+322,Dagamra,dagamra,91,Marafa,24,Malindi,CST
+323,Garashi,garashi,91,Marafa,24,Malindi,CST
+324,Marafa,marafa,91,Marafa,24,Malindi,CST
+325,Bamburi,bamburi,92,Bamburi,25,Mombasa,CST
+326,Ganjoni,ganjoni,93,Island,25,Mombasa,CST
+327,Majengo,majengo,93,Island,25,Mombasa,CST
+328,Mwembe Tayari,mwembe-tayari,93,Island,25,Mombasa,CST
+329,Old Town,old-town,93,Island,25,Mombasa,CST
+330,Railway,railway,93,Island,25,Mombasa,CST
+331,Tononoka,tononoka,93,Island,25,Mombasa,CST
+332,Tudor,tudor,93,Island,25,Mombasa,CST
+333,Kisauni,kisauni,94,Kisauni,25,Mombasa,CST
+334,Kongowea,kongowea,94,Kisauni,25,Mombasa,CST
+335,Diani,diani,95,Diani,26,Msambweni,CST
+336,Kinondo,kinondo,95,Diani,26,Msambweni,CST
+337,Dzombo,dzombo,96,Lunga Lunga,26,Msambweni,CST
+338,Kikoneni,kikoneni,96,Lunga Lunga,26,Msambweni,CST
+339,Lunga Lunga,lunga-lunga,96,Lunga Lunga,26,Msambweni,CST
+340,Mwereni,mwereni,96,Lunga Lunga,26,Msambweni,CST
+341,Vanga,vanga,96,Lunga Lunga,26,Msambweni,CST
+342,Kingwende Shirazi,kingwende-shirazi,97,Msambweni,26,Msambweni,CST
+343,Mivumoni,mivumoni,97,Msambweni,26,Msambweni,CST
+344,Msambweni,msambweni,97,Msambweni,26,Msambweni,CST
+345,Pongwe / Kidimo,pongwe-kidimo,97,Msambweni,26,Msambweni,CST
+346,Ronge Juu,ronge-juu,98,Mwambirwa,27,Taita,CST
+347,Bura,bura,99,Mwatate,27,Taita,CST
+348,Chawia,chawia,99,Mwatate,27,Taita,CST
+349,Kidaya/ Ngerenyi,kidaya-ngerenyi,99,Mwatate,27,Taita,CST
+350,Kishamba,kishamba,99,Mwatate,27,Taita,CST
+351,Mwachabo,mwachabo,99,Mwatate,27,Taita,CST
+352,Mwakitau,mwakitau,99,Mwatate,27,Taita,CST
+353,Mwatate,mwatate,99,Mwatate,27,Taita,CST
+354,National Park,national-park,100,National Park,27,Taita,CST
+355,Kasigau,kasigau,101,Nyangala,27,Taita,CST
+356,Marungu,marungu,101,Nyangala,27,Taita,CST
+357,Mbololo,mbololo,102,Tausa,27,Taita,CST
+358,Ngolia,ngolia,102,Tausa,27,Taita,CST
+359,Ronge,ronge,102,Tausa,27,Taita,CST
+360,Nat. Park,nat-park,103,Tsavo East Nat. Park,27,Taita,CST
+361,Sagalla,sagalla,104,Voi,27,Taita,CST
+362,Voi,voi,104,Voi,27,Taita,CST
+363,Kishushe,kishushe,105,Wundanyi,27,Taita,CST
+364,Mbale,mbale,105,Wundanyi,27,Taita,CST
+365,Mgange,mgange,105,Wundanyi,27,Taita,CST
+366,Mwanda,mwanda,105,Wundanyi,27,Taita,CST
+367,Werugha,werugha,105,Wundanyi,27,Taita,CST
+368,Wumingu,wumingu,105,Wundanyi,27,Taita,CST
+369,Wundanyi,wundanyi,105,Wundanyi,27,Taita,CST
+370,Assa,assa,106,Garsen,28,Tana Delta,CST
+371,Bilisa,bilisa,106,Garsen,28,Tana Delta,CST
+372,Galili,galili,106,Garsen,28,Tana Delta,CST
+373,Mwina,mwina,106,Garsen,28,Tana Delta,CST
+374,Ndera,ndera,106,Garsen,28,Tana Delta,CST
+375,Salama,salama,106,Garsen,28,Tana Delta,CST
+376,Shirikisho,shirikisho,106,Garsen,28,Tana Delta,CST
+377,Kilelengwani,kilelengwani,107,Kipini,28,Tana Delta,CST
+378,Kipini,kipini,107,Kipini,28,Tana Delta,CST
+379,Ozi,ozi,107,Kipini,28,Tana Delta,CST
+380,Chara,chara,108,Tarasaa,28,Tana Delta,CST
+381,Kipao,kipao,108,Tarasaa,28,Tana Delta,CST
+382,Kone Mansa,kone-mansa,108,Tarasaa,28,Tana Delta,CST
+383,Ngao,ngao,108,Tarasaa,28,Tana Delta,CST
+384,Wachu Oda,wachu-oda,108,Tarasaa,28,Tana Delta,CST
+385,Tsavo East Park,tsavo-east-park,109,Tsavo East Park,28,Tana Delta,CST
+386,Bangale,bangale,110,Bangale,29,Tana River,CST
+387,Buwa,buwa,110,Bangale,29,Tana River,CST
+388,Kamaguru,kamaguru,110,Bangale,29,Tana River,CST
+389,Mbalambala,mbalambala,110,Bangale,29,Tana River,CST
+390,Bura,bura,111,Bura,29,Tana River,CST
+391,Chewele,chewele,111,Bura,29,Tana River,CST
+392,Hirimani,hirimani,111,Bura,29,Tana River,CST
+393,Nanighi,nanighi,111,Bura,29,Tana River,CST
+394,Chewani,chewani,112,Galole,29,Tana River,CST
+395,Chifiri,chifiri,112,Galole,29,Tana River,CST
+396,Kalkacha,kalkacha,112,Galole,29,Tana River,CST
+397,Kiarikungu,kiarikungu,112,Galole,29,Tana River,CST
+398,Makere,makere,112,Galole,29,Tana River,CST
+399,Masabubu,masabubu,112,Galole,29,Tana River,CST
+400,Mikinduni,mikinduni,112,Galole,29,Tana River,CST
+401,Milalulu,milalulu,112,Galole,29,Tana River,CST
+402,Waldena,waldena,112,Galole,29,Tana River,CST
+403,Wayu,wayu,112,Galole,29,Tana River,CST
+404,Zubaki,zubaki,112,Galole,29,Tana River,CST
+405,Madogo,madogo,113,Madogo,29,Tana River,CST
+406,Mororo,mororo,113,Madogo,29,Tana River,CST
+407,Saka,saka,113,Madogo,29,Tana River,CST
+408,Sala,sala,113,Madogo,29,Tana River,CST
+409,Gwano,gwano,114,Wenje,29,Tana River,CST
+410,Jamuhuri,jamuhuri,114,Wenje,29,Tana River,CST
+411,Kinakomba,kinakomba,114,Wenje,29,Tana River,CST
+412,Mazuni,mazuni,114,Wenje,29,Tana River,CST
+413,Ndura,ndura,114,Wenje,29,Tana River,CST
+414,Bomani,bomani,115,Bomeni,30,Taveta,CST
+415,Bomeni,bomeni,115,Bomeni,30,Taveta,CST
+416,Kimorigo,kimorigo,115,Bomeni,30,Taveta,CST
+417,Kitobo,kitobo,115,Bomeni,30,Taveta,CST
+418,Ngarashi,ngarashi,115,Bomeni,30,Taveta,CST
+419,Challa,challa,116,Challa,30,Taveta,CST
+420,Njukini,njukini,116,Challa,30,Taveta,CST
+421,Jipe,jipe,117,Jipe,30,Taveta,CST
+422,Timbila,timbila,117,Jipe,30,Taveta,CST
+423,National Park,national-park,118,National Park,30,Taveta,CST
+424,Balesa Ririba,balesa-ririba,119,Dukana,31,Chalbi,EST
+425,Balesa Saru,balesa-saru,119,Dukana,31,Chalbi,EST
+426,Dukana,dukana,119,Dukana,31,Chalbi,EST
+427,Hurri Hills,hurri-hills,120,Maikona,31,Chalbi,EST
+428,Kalacha,kalacha,120,Maikona,31,Chalbi,EST
+429,Maikona,maikona,120,Maikona,31,Chalbi,EST
+430,Galas,galas,121,North Horr,31,Chalbi,EST
+431,Illeret,illeret,121,North Horr,31,Chalbi,EST
+432,North Horr,north-horr,121,North Horr,31,Chalbi,EST
+433,Bubisa,bubisa,122,Turbi,31,Chalbi,EST
+434,Shura,shura,122,Turbi,31,Chalbi,EST
+435,Turbi,turbi,122,Turbi,31,Chalbi,EST
+436,Mbeti North,mbeti-north,123,Central,32,Embu,EST
+437,Municipality,municipality,123,Central,32,Embu,EST
+438,Kyeni Central,kyeni-central,124,Kyeni,32,Embu,EST
+439,Kyeni East,kyeni-east,124,Kyeni,32,Embu,EST
+440,Kyeni N. West,kyeni-n-west,124,Kyeni,32,Embu,EST
+441,Kyeni N.East,kyeni-n-east,124,Kyeni,32,Embu,EST
+442,Kyeni South,kyeni-south,124,Kyeni,32,Embu,EST
+443,Gaturi North,gaturi-north,125,Manyatta,32,Embu,EST
+444,Kathangariri,kathangariri,125,Manyatta,32,Embu,EST
+445,Kibugu,kibugu,125,Manyatta,32,Embu,EST
+446,Mbuvore,mbuvore,125,Manyatta,32,Embu,EST
+447,Ngandori East,ngandori-east,125,Manyatta,32,Embu,EST
+448,Ngandori West,ngandori-west,125,Manyatta,32,Embu,EST
+449,Ruguru,ruguru,125,Manyatta,32,Embu,EST
+450,Mt. Kenya Forest,mt-kenya-forest,126,Mt. Kenya Forest,32,Embu,EST
+451,Gaturi South,gaturi-south,127,Nembure,32,Embu,EST
+452,Kithimu,kithimu,127,Nembure,32,Embu,EST
+453,Makengi,makengi,127,Nembure,32,Embu,EST
+454,Kagaari East,kagaari-east,128,Runyenjes,32,Embu,EST
+455,Kagaari N. West,kagaari-n-west,128,Runyenjes,32,Embu,EST
+456,Kagaari N.East,kagaari-n-east,128,Runyenjes,32,Embu,EST
+457,Kagaari S.West,kagaari-s-west,128,Runyenjes,32,Embu,EST
+458,Runyenjes East,runyenjes-east,128,Runyenjes,32,Embu,EST
+459,Runyenjes West,runyenjes-west,128,Runyenjes,32,Embu,EST
+460,Garbatulla,garbatulla,129,Garbatulla,33,Garbatulla,EST
+461,Garfasa,garfasa,129,Garbatulla,33,Garbatulla,EST
+462,Malkadaka,malkadaka,129,Garbatulla,33,Garbatulla,EST
+463,Kinna,kinna,130,Kinna,33,Garbatulla,EST
+464,Kula Mawe,kula-mawe,130,Kinna,33,Garbatulla,EST
+465,Rapsu,rapsu,130,Kinna,33,Garbatulla,EST
+466,Eldera,eldera,131,Sericho,33,Garbatulla,EST
+467,Iresa Boru,iresa-boru,131,Sericho,33,Garbatulla,EST
+468,Modogashe,modogashe,131,Sericho,33,Garbatulla,EST
+469,Sericho,sericho,131,Sericho,33,Garbatulla,EST
+470,Antubochiu,antubochiu,132,Igembe Central,34,Igembe,EST
+471,Kanthiari,kanthiari,132,Igembe Central,34,Igembe,EST
+472,Kiegoi,kiegoi,132,Igembe Central,34,Igembe,EST
+473,Kithetu,kithetu,132,Igembe Central,34,Igembe,EST
+474,Luluma,luluma,132,Igembe Central,34,Igembe,EST
+475,Maua,maua,132,Igembe Central,34,Igembe,EST
+476,Kiengu,kiengu,133,Igembe East,34,Igembe,EST
+477,Miori,miori,133,Igembe East,34,Igembe,EST
+478,Nguyuyu,nguyuyu,133,Igembe East,34,Igembe,EST
+479,Antubeiga,antubeiga,134,Igembe North,34,Igembe,EST
+480,Kangeta,kangeta,134,Igembe North,34,Igembe,EST
+481,Meru North National Park,meru-north-national-park,134,Igembe North,34,Igembe,EST
+482,Mukululu,mukululu,134,Igembe North,34,Igembe,EST
+483,Muringene,muringene,134,Igembe North,34,Igembe,EST
+484,Njia,njia,134,Igembe North,34,Igembe,EST
+485,Nkinyanga,nkinyanga,134,Igembe North,34,Igembe,EST
+486,Athiru Gaiti,athiru-gaiti,135,Igembe S.East,34,Igembe,EST
+487,Kindani,kindani,135,Igembe S.East,34,Igembe,EST
+488,Kirimampio,kirimampio,135,Igembe S.East,34,Igembe,EST
+489,Akachiu,akachiu,136,Igembe S.West,34,Igembe,EST
+490,Athi,athi,136,Igembe S.West,34,Igembe,EST
+491,Guka,guka,136,Igembe S.West,34,Igembe,EST
+492,Nduguto,nduguto,136,Igembe S.West,34,Igembe,EST
+493,Kabuline,kabuline,137,Igembe South,34,Igembe,EST
+494,Kanuni,kanuni,137,Igembe South,34,Igembe,EST
+495,Kiguru,kiguru,137,Igembe South,34,Igembe,EST
+496,Akirangondu,akirangondu,138,Laare,34,Igembe,EST
+497,Antuambui,antuambui,138,Laare,34,Igembe,EST
+498,Ntunene,ntunene,138,Laare,34,Igembe,EST
+499,Kabachi,kabachi,139,Mutuati,34,Igembe,EST
+500,Naathu,naathu,139,Mutuati,34,Igembe,EST
+501,Antubetwe,antubetwe,140,Ndoleli,34,Igembe,EST
+502,Athiru Ruunjine,athiru-ruunjine,140,Ndoleli,34,Igembe,EST
+503,Kawiru,kawiru,140,Ndoleli,34,Igembe,EST
+504,Luguti,luguti,140,Ndoleli,34,Igembe,EST
+505,Kiirua,kiirua,141,Buuri,35,Imenti North,EST
+506,Naari,naari,141,Buuri,35,Imenti North,EST
+507,Ruiri,ruiri,141,Buuri,35,Imenti North,EST
+508,Rwarera,rwarera,141,Buuri,35,Imenti North,EST
+509,Chugu,chugu,142,Miriga Mieru E.,35,Imenti North,EST
+510,Giaki,giaki,142,Miriga Mieru E.,35,Imenti North,EST
+511,Kiburine,kiburine,142,Miriga Mieru E.,35,Imenti North,EST
+512,Mulathankari,mulathankari,142,Miriga Mieru E.,35,Imenti North,EST
+513,Munithu,munithu,142,Miriga Mieru E.,35,Imenti North,EST
+514,Nkabune,nkabune,142,Miriga Mieru E.,35,Imenti North,EST
+515,Thuura,thuura,142,Miriga Mieru E.,35,Imenti North,EST
+516,Igoki,igoki,143,Miriga Mieru W.,35,Imenti North,EST
+517,Municipality,municipality,143,Miriga Mieru W.,35,Imenti North,EST
+518,Ntakira,ntakira,143,Miriga Mieru W.,35,Imenti North,EST
+519,Nthimbiri,nthimbiri,143,Miriga Mieru W.,35,Imenti North,EST
+520,Ntima,ntima,143,Miriga Mieru W.,35,Imenti North,EST
+521,Mt. Kenya Forest,mt-kenya-forest,144,Mt. Kenya Forest,35,Imenti North,EST
+522,Kirimara,kirimara,145,Timau,35,Imenti North,EST
+523,Kisima,kisima,145,Timau,35,Imenti North,EST
+524,Ngusishi,ngusishi,145,Timau,35,Imenti North,EST
+525,Ntirimiti,ntirimiti,145,Timau,35,Imenti North,EST
+526,Ontulili,ontulili,145,Timau,35,Imenti North,EST
+527,Abogeta,abogeta,146,Abogeta,36,Imenti South,EST
+528,Igoki,igoki,146,Abogeta,36,Imenti South,EST
+529,Kanyakine,kanyakine,146,Abogeta,36,Imenti South,EST
+530,Kiringa,kiringa,146,Abogeta,36,Imenti South,EST
+531,Kithangari,kithangari,146,Abogeta,36,Imenti South,EST
+532,Nkachie,nkachie,146,Abogeta,36,Imenti South,EST
+533,Igoji,igoji,147,Igoji,36,Imenti South,EST
+534,Karia,karia,147,Igoji,36,Imenti South,EST
+535,Kianjogu,kianjogu,147,Igoji,36,Imenti South,EST
+536,Kinoro,kinoro,147,Igoji,36,Imenti South,EST
+537,Mweru,mweru,147,Igoji,36,Imenti South,EST
+538,Mt. Kenya Forest,mt-kenya-forest,148,Mt. Kenya Forest,36,Imenti South,EST
+539,Kathera,kathera,149,Nkuene,36,Imenti South,EST
+540,Mikumbune,mikumbune,149,Nkuene,36,Imenti South,EST
+541,Mitunguu,mitunguu,149,Nkuene,36,Imenti South,EST
+542,Uruku,uruku,149,Nkuene,36,Imenti South,EST
+543,Central,central,150,Central,37,Isiolo,EST
+544,West,west,150,Central,37,Isiolo,EST
+545,Korbesa,korbesa,151,Cherab,37,Isiolo,EST
+546,Malkagalla,malkagalla,151,Cherab,37,Isiolo,EST
+547,Yamicha,yamicha,151,Cherab,37,Isiolo,EST
+548,East,east,152,East,37,Isiolo,EST
+549,Ngare Mara,ngare-mara,152,East,37,Isiolo,EST
+550,Bisan Biliqu,bisan-biliqu,153,Merti,37,Isiolo,EST
+551,Bulesa,bulesa,153,Merti,37,Isiolo,EST
+552,Merti,merti,153,Merti,37,Isiolo,EST
+553,Kipsing,kipsing,154,Oldonyiro,37,Isiolo,EST
+554,Oldonyiro,oldonyiro,154,Oldonyiro,37,Isiolo,EST
+555,Kakuyuni,kakuyuni,155,Kakuyuni,38,Kangundo,EST
+556,Kawethei,kawethei,155,Kakuyuni,38,Kangundo,EST
+557,Kangundo,kangundo,156,Kangundo,38,Kangundo,EST
+558,Kanzalu,kanzalu,156,Kangundo,38,Kangundo,EST
+559,Kivaani,kivaani,156,Kangundo,38,Kangundo,EST
+560,Kalandini,kalandini,157,Matungulu,38,Kangundo,EST
+561,Komarock,komarock,157,Matungulu,38,Kangundo,EST
+562,Kyanzavi,kyanzavi,157,Matungulu,38,Kangundo,EST
+563,Kyeleni,kyeleni,157,Matungulu,38,Kangundo,EST
+564,Matungulu,matungulu,157,Matungulu,38,Kangundo,EST
+565,Nguluni,nguluni,157,Matungulu,38,Kangundo,EST
+566,Tala,tala,157,Matungulu,38,Kangundo,EST
+567,Chyulu G. R.,chyulu-g-r,158,Chyulu G. R.,39,Kibwezi,EST
+568,Kikumbulyu,kikumbulyu,159,Kibwezi,39,Kibwezi,EST
+569,Masongaleni,masongaleni,159,Kibwezi,39,Kibwezi,EST
+570,Kinyambu,kinyambu,160,Machinery,39,Kibwezi,EST
+571,Utithi,utithi,160,Machinery,39,Kibwezi,EST
+572,Kiboko,kiboko,161,Makindu,39,Kibwezi,EST
+573,Makindu,makindu,161,Makindu,39,Kibwezi,EST
+574,Nguumo,nguumo,161,Makindu,39,Kibwezi,EST
+575,Twaandu,twaandu,161,Makindu,39,Kibwezi,EST
+576,Kambu,kambu,162,Mtito Andei,39,Kibwezi,EST
+577,Kathekani,kathekani,162,Mtito Andei,39,Kibwezi,EST
+578,Mtito Andei,mtito-andei,162,Mtito Andei,39,Kibwezi,EST
+579,Ngwata,ngwata,162,Mtito Andei,39,Kibwezi,EST
+580,Nthongoni,nthongoni,162,Mtito Andei,39,Kibwezi,EST
+581,Nzambani,nzambani,162,Mtito Andei,39,Kibwezi,EST
+582,Tsavo W. N. P.,tsavo-w-n-p,163,Tsavo W. N. P.,39,Kibwezi,EST
+583,Itoleka,itoleka,164,Central,40,Kitui,EST
+584,Katulani,katulani,164,Central,40,Kitui,EST
+585,Kyangwithya East,kyangwithya-east,164,Central,40,Kitui,EST
+586,Kyangwithya West,kyangwithya-west,164,Central,40,Kitui,EST
+587,Maliku,maliku,164,Central,40,Kitui,EST
+588,Miambani,miambani,164,Central,40,Kitui,EST
+589,Mulango,mulango,164,Central,40,Kitui,EST
+590,Township,township,164,Central,40,Kitui,EST
+591,Kisasi,kisasi,165,Chuluni,40,Kitui,EST
+592,Mbitini,mbitini,165,Chuluni,40,Kitui,EST
+593,Mbusyani,mbusyani,165,Chuluni,40,Kitui,EST
+594,Nzambani,nzambani,165,Chuluni,40,Kitui,EST
+595,Nzangathi,nzangathi,165,Chuluni,40,Kitui,EST
+596,Thua,thua,165,Chuluni,40,Kitui,EST
+597,Kalimani,kalimani,166,Matinyani,40,Kitui,EST
+598,Kathivo,kathivo,166,Matinyani,40,Kitui,EST
+599,Kauma,kauma,166,Matinyani,40,Kitui,EST
+600,Kithumula,kithumula,166,Matinyani,40,Kitui,EST
+601,Kwa Mulungu,kwa-mulungu,166,Matinyani,40,Kitui,EST
+602,Kwa Mutonga,kwa-mutonga,166,Matinyani,40,Kitui,EST
+603,Matinyani,matinyani,166,Matinyani,40,Kitui,EST
+604,Mutulu,mutulu,166,Matinyani,40,Kitui,EST
+605,Kaliku,kaliku,167,Mutitu,40,Kitui,EST
+606,Mutito,mutito,167,Mutitu,40,Kitui,EST
+607,Zombe,zombe,167,Mutitu,40,Kitui,EST
+608,Kakeani,kakeani,168,Mutonguni,40,Kitui,EST
+609,Katutu,katutu,168,Mutonguni,40,Kitui,EST
+610,Kauwi,kauwi,168,Mutonguni,40,Kitui,EST
+611,Kivani,kivani,168,Mutonguni,40,Kitui,EST
+612,Musengo,musengo,168,Mutonguni,40,Kitui,EST
+613,Mutanda,mutanda,168,Mutonguni,40,Kitui,EST
+614,Mutonguni,mutonguni,168,Mutonguni,40,Kitui,EST
+615,Usiani,usiani,168,Mutonguni,40,Kitui,EST
+616,Endau,endau,169,Mwitika,40,Kitui,EST
+617,Kyamatu,kyamatu,169,Mwitika,40,Kitui,EST
+618,Malalani,malalani,169,Mwitika,40,Kitui,EST
+619,Mwitika,mwitika,169,Mwitika,40,Kitui,EST
+620,Kanyangi,kanyangi,170,Yatta,40,Kitui,EST
+621,Kanyongonyo,kanyongonyo,170,Yatta,40,Kitui,EST
+622,Kiseuni,kiseuni,170,Yatta,40,Kitui,EST
+623,Kwa Vonza,kwa-vonza,170,Yatta,40,Kitui,EST
+624,Nthongoni,nthongoni,170,Yatta,40,Kitui,EST
+625,Yatta,yatta,170,Yatta,40,Kitui,EST
+626,Kamuwongo,kamuwongo,171,Kyuso,41,Kyuso,EST
+627,Kimangao,kimangao,171,Kyuso,41,Kyuso,EST
+628,Kyuso,kyuso,171,Kyuso,41,Kyuso,EST
+629,Mivukoni,mivukoni,171,Kyuso,41,Kyuso,EST
+630,Kakuyu,kakuyu,172,Mumoni,41,Kyuso,EST
+631,Kanthungu,kanthungu,172,Mumoni,41,Kyuso,EST
+632,Katse,katse,172,Mumoni,41,Kyuso,EST
+633,Mukonga,mukonga,172,Mumoni,41,Kyuso,EST
+634,Mutanda,mutanda,172,Mumoni,41,Kyuso,EST
+635,Nguuku,nguuku,172,Mumoni,41,Kyuso,EST
+636,Tharaka,tharaka,172,Mumoni,41,Kyuso,EST
+637,Mitamisyi,mitamisyi,173,Ngomeni,41,Kyuso,EST
+638,Ngomeni,ngomeni,173,Ngomeni,41,Kyuso,EST
+639,Masyungwa,masyungwa,174,Tseikuru,41,Kyuso,EST
+640,Musavani,musavani,174,Tseikuru,41,Kyuso,EST
+641,Tseikuru,tseikuru,174,Tseikuru,41,Kyuso,EST
+642,Korr,korr,175,Korr,42,Laisamis,EST
+643,Ngurun It,ngurun-it,175,Korr,42,Laisamis,EST
+644,Laisamis,laisamis,176,Laisamis,42,Laisamis,EST
+645,Logologo,logologo,176,Laisamis,42,Laisamis,EST
+646,Lontolio,lontolio,176,Laisamis,42,Laisamis,EST
+647,Merile,merile,176,Laisamis,42,Laisamis,EST
+648,Kargi,kargi,177,Loiyangalani,42,Laisamis,EST
+649,Loiyangalani,loiyangalani,177,Loiyangalani,42,Laisamis,EST
+650,Mt. Kulal,mt-kulal,177,Loiyangalani,42,Laisamis,EST
+651,South Horr,south-horr,177,Loiyangalani,42,Laisamis,EST
+652,Mt. Kenya Forest,mt-kenya-forest,178,Mt. Kenya Forest,43,Maara,EST
+653,Gitije,gitije,179,Muthambi,43,Maara,EST
+654,Mitheru,mitheru,179,Muthambi,43,Maara,EST
+655,Muthambi,muthambi,179,Muthambi,43,Maara,EST
+656,Chogoria,chogoria,180,Mwimbi,43,Maara,EST
+657,Ganga,ganga,180,Mwimbi,43,Maara,EST
+658,Kiera,kiera,180,Mwimbi,43,Maara,EST
+659,Maara,maara,180,Mwimbi,43,Maara,EST
+660,Murugi,murugi,180,Mwimbi,43,Maara,EST
+661,Athi River,athi-river,181,Athi River,44,Machakos,EST
+662,Katani,katani,181,Athi River,44,Machakos,EST
+663,Lukenya,lukenya,181,Athi River,44,Machakos,EST
+664,Kathekakai,kathekakai,182,Central,44,Machakos,EST
+665,Kiime Kimwe,kiime-kimwe,182,Central,44,Machakos,EST
+666,Kimutwa,kimutwa,182,Central,44,Machakos,EST
+667,Mua Hills,mua-hills,182,Central,44,Machakos,EST
+668,Mumbuni,mumbuni,182,Central,44,Machakos,EST
+669,Mutituni,mutituni,182,Central,44,Machakos,EST
+670,Muvuti,muvuti,182,Central,44,Machakos,EST
+671,Ngelani,ngelani,182,Central,44,Machakos,EST
+672,Township,township,182,Central,44,Machakos,EST
+673,Kalama,kalama,183,Kalama,44,Machakos,EST
+674,Kola,kola,183,Kalama,44,Machakos,EST
+675,Kyangala,kyangala,183,Kalama,44,Machakos,EST
+676,Lumbwa,lumbwa,183,Kalama,44,Machakos,EST
+677,Iveti,iveti,184,Kathiani,44,Machakos,EST
+678,Kaewa,kaewa,184,Kathiani,44,Machakos,EST
+679,Kathiani,kathiani,184,Kathiani,44,Machakos,EST
+680,Mitaboni,mitaboni,184,Kathiani,44,Machakos,EST
+681,Iuani,iuani,185,Kaiti,45,Makueni,EST
+682,Kilala,kilala,185,Kaiti,45,Makueni,EST
+683,Kivani,kivani,185,Kaiti,45,Makueni,EST
+684,Ukia,ukia,185,Kaiti,45,Makueni,EST
+685,Kathonzweni,kathonzweni,186,Kathonzweni,45,Makueni,EST
+686,Kwakavisi,kwakavisi,186,Kathonzweni,45,Makueni,EST
+687,Kee,kee,187,Kee,45,Makueni,EST
+688,Watema,watema,187,Kee,45,Makueni,EST
+689,Ilima,ilima,188,Kilungu,45,Makueni,EST
+690,Kikoko,kikoko,188,Kilungu,45,Makueni,EST
+691,Kithembe,kithembe,188,Kilungu,45,Makueni,EST
+692,Musalal,musalal,188,Kilungu,45,Makueni,EST
+693,Kanzokea,kanzokea,189,Kithuki,45,Makueni,EST
+694,Kithuki,kithuki,189,Kithuki,45,Makueni,EST
+695,Kitise,kitise,190,Kitise,45,Makueni,EST
+696,Mbuvo,mbuvo,190,Kitise,45,Makueni,EST
+697,Kanthuni,kanthuni,191,Mavindini,45,Makueni,EST
+698,Mavindini,mavindini,191,Mavindini,45,Makueni,EST
+699,Muusini,muusini,191,Mavindini,45,Makueni,EST
+700,Kako,kako,192,Wote,45,Makueni,EST
+701,Kikumini,kikumini,192,Wote,45,Makueni,EST
+702,Muvau,muvau,192,Wote,45,Makueni,EST
+703,Nziu,nziu,192,Wote,45,Makueni,EST
+704,Wote,wote,192,Wote,45,Makueni,EST
+705,Dakabaricha,dakabaricha,193,Central,46,Marsabit,EST
+706,Hula Hula,hula-hula,193,Central,46,Marsabit,EST
+707,Jirime,jirime,193,Central,46,Marsabit,EST
+708,Karare,karare,193,Central,46,Marsabit,EST
+709,Moutain,moutain,193,Central,46,Marsabit,EST
+710,Nagayo,nagayo,193,Central,46,Marsabit,EST
+711,Songa,songa,193,Central,46,Marsabit,EST
+712,Qilta,qilta,194,Dirri,46,Marsabit,EST
+713,Sagante,sagante,194,Dirri,46,Marsabit,EST
+714,Dirib Gombo,dirib-gombo,195,Gadamoji,46,Marsabit,EST
+715,Jaldesa,jaldesa,195,Gadamoji,46,Marsabit,EST
+716,M.G.Reserve,m-g-reserve,196,Marsabit G. R,46,Marsabit,EST
+717,Ishiara,ishiara,197,Evurore,47,Mbeere,EST
+718,Kanyuambora,kanyuambora,197,Evurore,47,Mbeere,EST
+719,Kiangombe,kiangombe,197,Evurore,47,Mbeere,EST
+720,Ndurumori,ndurumori,197,Evurore,47,Mbeere,EST
+721,Kianjiru,kianjiru,198,Gachoka,47,Mbeere,EST
+722,Mbeti South,mbeti-south,198,Gachoka,47,Mbeere,EST
+723,Mbita,mbita,198,Gachoka,47,Mbeere,EST
+724,Gichiche,gichiche,199,Kiritiri,47,Mbeere,EST
+725,Kiambere,kiambere,199,Kiritiri,47,Mbeere,EST
+726,Kithunthiri,kithunthiri,199,Kiritiri,47,Mbeere,EST
+727,Mavuria,mavuria,199,Kiritiri,47,Mbeere,EST
+728,Mutuobare,mutuobare,199,Kiritiri,47,Mbeere,EST
+729,Makima,makima,200,Makima,47,Mbeere,EST
+730,Karaba,karaba,201,Mwea,47,Mbeere,EST
+731,Riakanau,riakanau,201,Mwea,47,Mbeere,EST
+732,Gitiburi,gitiburi,202,Siakago,47,Mbeere,EST
+733,Muminji,muminji,202,Siakago,47,Mbeere,EST
+734,Mutitu,mutitu,202,Siakago,47,Mbeere,EST
+735,Nthawa,nthawa,202,Siakago,47,Mbeere,EST
+736,Athi,athi,203,Kalawa,48,Mbooni,EST
+737,Kalawa,kalawa,203,Kalawa,48,Mbooni,EST
+738,Katangini,katangini,203,Kalawa,48,Mbooni,EST
+739,Kathulumbi,kathulumbi,203,Kalawa,48,Mbooni,EST
+740,Kisau,kisau,204,Kisau,48,Mbooni,EST
+741,Kiteta,kiteta,204,Kisau,48,Mbooni,EST
+742,Waia,waia,204,Kisau,48,Mbooni,EST
+743,Kithungo,kithungo,205,Mbooni,48,Mbooni,EST
+744,Kitundu,kitundu,205,Mbooni,48,Mbooni,EST
+745,Mbooni,mbooni,205,Mbooni,48,Mbooni,EST
+746,Utangwa,utangwa,205,Mbooni,48,Mbooni,EST
+747,Itetani,itetani,206,Tulimani,48,Mbooni,EST
+748,Kalawani,kalawani,206,Tulimani,48,Mbooni,EST
+749,Tulimani,tulimani,206,Tulimani,48,Mbooni,EST
+750,Yandue,yandue,206,Tulimani,48,Mbooni,EST
+751,Gatimbi,gatimbi,207,Abothuguchi C.,49,Meru Central,EST
+752,Kariene,kariene,207,Abothuguchi C.,49,Meru Central,EST
+753,Kiria,kiria,207,Abothuguchi C.,49,Meru Central,EST
+754,Kirigara,kirigara,207,Abothuguchi C.,49,Meru Central,EST
+755,Mariene,mariene,207,Abothuguchi C.,49,Meru Central,EST
+756,Nkuene,nkuene,207,Abothuguchi C.,49,Meru Central,EST
+757,Nyweri,nyweri,207,Abothuguchi C.,49,Meru Central,EST
+758,Gaitu East,gaitu-east,208,Abothuguchi E.,49,Meru Central,EST
+759,Gaitu West,gaitu-west,208,Abothuguchi E.,49,Meru Central,EST
+760,Mwanganthia,mwanganthia,208,Abothuguchi E.,49,Meru Central,EST
+761,Nduruma,nduruma,208,Abothuguchi E.,49,Meru Central,EST
+762,Katheri Central,katheri-central,209,Abothuguchi W.,49,Meru Central,EST
+763,Katheri East,katheri-east,209,Abothuguchi W.,49,Meru Central,EST
+764,Katheri West,katheri-west,209,Abothuguchi W.,49,Meru Central,EST
+765,Kibaranyaki,kibaranyaki,209,Abothuguchi W.,49,Meru Central,EST
+766,Kithirune East,kithirune-east,209,Abothuguchi W.,49,Meru Central,EST
+767,Kithirune West,kithirune-west,209,Abothuguchi W.,49,Meru Central,EST
+768,Marathi,marathi,209,Abothuguchi W.,49,Meru Central,EST
+769,Kiagu,kiagu,210,Kiagu,49,Meru Central,EST
+770,Kiija,kiija,210,Kiagu,49,Meru Central,EST
+771,Makandune,makandune,210,Kiagu,49,Meru Central,EST
+772,Kiamiogo,kiamiogo,211,Kibirichia,49,Meru Central,EST
+773,Kibirichia,kibirichia,211,Kibirichia,49,Meru Central,EST
+774,Ntugi,ntugi,211,Kibirichia,49,Meru Central,EST
+775,Ntumburi,ntumburi,211,Kibirichia,49,Meru Central,EST
+776,Mt. Kenya Forest,mt-kenya-forest,212,Mt. Kenya Forest,49,Meru Central,EST
+777,Gitareni,gitareni,213,Chuka,50,Meru South,EST
+778,Karingani,karingani,213,Chuka,50,Meru South,EST
+779,Kiangondu,kiangondu,213,Chuka,50,Meru South,EST
+780,Kithangani,kithangani,213,Chuka,50,Meru South,EST
+781,Mugwe,mugwe,213,Chuka,50,Meru South,EST
+782,Muiru,muiru,213,Chuka,50,Meru South,EST
+783,Itugururu,itugururu,214,Igambangombe,50,Meru South,EST
+784,Kajuki,kajuki,214,Igambangombe,50,Meru South,EST
+785,Kamaindi,kamaindi,214,Igambangombe,50,Meru South,EST
+786,Kamwimbi,kamwimbi,214,Igambangombe,50,Meru South,EST
+787,Mutino,mutino,214,Igambangombe,50,Meru South,EST
+788,Kabuboni,kabuboni,215,Magumoni,50,Meru South,EST
+789,Magumoni,magumoni,215,Magumoni,50,Meru South,EST
+790,Mukuuni,mukuuni,215,Magumoni,50,Meru South,EST
+791,Mwonge,mwonge,215,Magumoni,50,Meru South,EST
+792,Rubate,rubate,215,Magumoni,50,Meru South,EST
+793,Thuita,thuita,215,Magumoni,50,Meru South,EST
+794,Mt. Kenya Forest,mt-kenya-forest,216,Mt. Kenya Forest,50,Meru South,EST
+795,Bori,bori,217,Central,51,Moyale,EST
+796,Butiye,butiye,217,Central,51,Moyale,EST
+797,Heilu,heilu,217,Central,51,Moyale,EST
+798,Kinisa,kinisa,217,Central,51,Moyale,EST
+799,Lami,lami,217,Central,51,Moyale,EST
+800,Manyatta,manyatta,217,Central,51,Moyale,EST
+801,Somare,somare,217,Central,51,Moyale,EST
+802,Township,township,217,Central,51,Moyale,EST
+803,Dabel,dabel,218,Golbo,51,Moyale,EST
+804,Godoma,godoma,218,Golbo,51,Moyale,EST
+805,Nana,nana,218,Golbo,51,Moyale,EST
+806,Odda,odda,218,Golbo,51,Moyale,EST
+807,Amballo,amballo,219,Obbu,51,Moyale,EST
+808,Anona,anona,219,Obbu,51,Moyale,EST
+809,D/Fachana,d-fachana,219,Obbu,51,Moyale,EST
+810,Sololo Makutano,sololo-makutano,219,Obbu,51,Moyale,EST
+811,Sololo,sololo,219,Obbu,51,Moyale,EST
+812,Waye,waye,219,Obbu,51,Moyale,EST
+813,Golole,golole,220,Uran,51,Moyale,EST
+814,Rawana,rawana,220,Uran,51,Moyale,EST
+815,Uran,uran,220,Uran,51,Moyale,EST
+816,Walda,walda,220,Uran,51,Moyale,EST
+817,Athi,athi,221,Athi,52,Mutomo,EST
+818,Kalivu,kalivu,221,Athi,52,Mutomo,EST
+819,Maluma,maluma,221,Athi,52,Mutomo,EST
+820,Ikanga,ikanga,222,Ikanga,52,Mutomo,EST
+821,Kyatune,kyatune,222,Ikanga,52,Mutomo,EST
+822,Ikutha,ikutha,223,Ikutha,52,Mutomo,EST
+823,Kasaala,kasaala,223,Ikutha,52,Mutomo,EST
+824,Kanziko,kanziko,224,Kanziko,52,Mutomo,EST
+825,Simisi,simisi,224,Kanziko,52,Mutomo,EST
+826,Mathima,mathima,225,Mutha,52,Mutomo,EST
+827,Mutha,mutha,225,Mutha,52,Mutomo,EST
+828,Ndakani,ndakani,225,Mutha,52,Mutomo,EST
+829,Voo,voo,225,Mutha,52,Mutomo,EST
+830,Kibwea,kibwea,226,Mutomo,52,Mutomo,EST
+831,Mutomo,mutomo,226,Mutomo,52,Mutomo,EST
+832,Tsavo East National Park,tsavo-east-national-park,227,Tsavo East National Park,52,Mutomo,EST
+833,Ikalaasa,ikalaasa,228,Kibauni,53,Mwala,EST
+834,Kibauni,kibauni,228,Kibauni,53,Mwala,EST
+835,Ngomano,ngomano,228,Kibauni,53,Mwala,EST
+836,Makutano,makutano,229,Masii,53,Mwala,EST
+837,Mango,mango,229,Masii,53,Mwala,EST
+838,Masii,masii,229,Masii,53,Mwala,EST
+839,Muthetheni,muthetheni,229,Masii,53,Mwala,EST
+840,Vyulya,vyulya,229,Masii,53,Mwala,EST
+841,Kathama,kathama,230,Mwala,53,Mwala,EST
+842,Mbiuni,mbiuni,230,Mwala,53,Mwala,EST
+843,Mwala,mwala,230,Mwala,53,Mwala,EST
+844,Miu,miu,231,Yathui,53,Mwala,EST
+845,Wamunyu,wamunyu,231,Yathui,53,Mwala,EST
+846,Yathui,yathui,231,Yathui,53,Mwala,EST
+847,Endui,endui,232,Central,54,Mwingi,EST
+848,Kanzanzu,kanzanzu,232,Central,54,Mwingi,EST
+849,Kiomo,kiomo,232,Central,54,Mwingi,EST
+850,Kyethani,kyethani,232,Central,54,Mwingi,EST
+851,Mumbuni,mumbuni,232,Central,54,Mwingi,EST
+852,Mwingi,mwingi,232,Central,54,Mwingi,EST
+853,Nzeluni,nzeluni,232,Central,54,Mwingi,EST
+854,Waita,waita,232,Central,54,Mwingi,EST
+855,Kyome,kyome,233,Migwani,54,Mwingi,EST
+856,Migwani,migwani,233,Migwani,54,Mwingi,EST
+857,Ngutani,ngutani,233,Migwani,54,Mwingi,EST
+858,Nzauni,nzauni,233,Migwani,54,Mwingi,EST
+859,Thaana Nzau,thaana-nzau,233,Migwani,54,Mwingi,EST
+860,Thitani,thitani,233,Migwani,54,Mwingi,EST
+861,Kalitini,kalitini,234,Mui,54,Mwingi,EST
+862,Mui,mui,234,Mui,54,Mwingi,EST
+863,Mbuvu,mbuvu,235,Nguni,54,Mwingi,EST
+864,Nguni,nguni,235,Nguni,54,Mwingi,EST
+865,Ukasi,ukasi,235,Nguni,54,Mwingi,EST
+866,Mutyangombe,mutyangombe,236,Nuu,54,Mwingi,EST
+867,Nuu,nuu,236,Nuu,54,Mwingi,EST
+868,Wingemi,wingemi,236,Nuu,54,Mwingi,EST
+869,Ikangavya,ikangavya,237,Kalamba,55,Nzaui,EST
+870,Kalamba,kalamba,237,Kalamba,55,Nzaui,EST
+871,Kithumba,kithumba,237,Kalamba,55,Nzaui,EST
+872,Kasikeu,kasikeu,238,Kasikeu,55,Nzaui,EST
+873,Mumela,mumela,238,Kasikeu,55,Nzaui,EST
+874,Kitaingo,kitaingo,239,Kilome,55,Nzaui,EST
+875,Mukaa,mukaa,239,Kilome,55,Nzaui,EST
+876,Kwale,kwale,240,Kiou,55,Nzaui,EST
+877,Muani,muani,240,Kiou,55,Nzaui,EST
+878,Kiima Kiu,kiima-kiu,241,Malili,55,Nzaui,EST
+879,Malili,malili,241,Malili,55,Nzaui,EST
+880,Ngaamba,ngaamba,241,Malili,55,Nzaui,EST
+881,Kilili,kilili,242,Matiliku,55,Nzaui,EST
+882,Nzaui,nzaui,242,Matiliku,55,Nzaui,EST
+883,Kakutha,kakutha,243,Mbitini,55,Nzaui,EST
+884,Kavuthu,kavuthu,243,Mbitini,55,Nzaui,EST
+885,Mutyambua,mutyambua,243,Mbitini,55,Nzaui,EST
+886,Emali,emali,244,Mulala,55,Nzaui,EST
+887,Kyemundu,kyemundu,244,Mulala,55,Nzaui,EST
+888,Mulala,mulala,244,Mulala,55,Nzaui,EST
+889,Ithumba,ithumba,245,Nguu,55,Nzaui,EST
+890,Mweini,mweini,245,Nguu,55,Nzaui,EST
+891,Nguu,nguu,245,Nguu,55,Nzaui,EST
+892,Wolwa,wolwa,245,Nguu,55,Nzaui,EST
+893,Gituma,gituma,246,Tharaka Central,56,Tharaka,EST
+894,Karocho,karocho,246,Tharaka Central,56,Tharaka,EST
+895,Marimanti,marimanti,246,Tharaka Central,56,Tharaka,EST
+896,Matakiri,matakiri,246,Tharaka Central,56,Tharaka,EST
+897,Mwanyani,mwanyani,246,Tharaka Central,56,Tharaka,EST
+898,Nkondi,nkondi,246,Tharaka Central,56,Tharaka,EST
+899,Ntugi,ntugi,246,Tharaka Central,56,Tharaka,EST
+900,Turima,turima,246,Tharaka Central,56,Tharaka,EST
+901,Gatue,gatue,247,Tharaka North,56,Tharaka,EST
+902,Gikingo,gikingo,247,Tharaka North,56,Tharaka,EST
+903,Kanjoro,kanjoro,247,Tharaka North,56,Tharaka,EST
+904,Kathangachini,kathangachini,247,Tharaka North,56,Tharaka,EST
+905,Maragwa,maragwa,247,Tharaka North,56,Tharaka,EST
+906,Ntoroni,ntoroni,247,Tharaka North,56,Tharaka,EST
+907,Thiiti,thiiti,247,Tharaka North,56,Tharaka,EST
+908,Chiakariga,chiakariga,248,Tharaka South,56,Tharaka,EST
+909,Gakurungu,gakurungu,248,Tharaka South,56,Tharaka,EST
+910,Kamanyaki,kamanyaki,248,Tharaka South,56,Tharaka,EST
+911,Kamarandi,kamarandi,248,Tharaka South,56,Tharaka,EST
+912,Nkarini,nkarini,248,Tharaka South,56,Tharaka,EST
+913,Tunyai,tunyai,248,Tharaka South,56,Tharaka,EST
+914,Athwana,athwana,249,Akithi,57,Tigania,EST
+915,Kitheo,kitheo,249,Akithi,57,Tigania,EST
+916,Nchooro,nchooro,249,Akithi,57,Tigania,EST
+917,Rwanda,rwanda,249,Akithi,57,Tigania,EST
+918,Thinyaine,thinyaine,249,Akithi,57,Tigania,EST
+919,Antuanduru,antuanduru,250,Karama,57,Tigania,EST
+920,Karama,karama,250,Karama,57,Tigania,EST
+921,Mula,mula,250,Karama,57,Tigania,EST
+922,Mituntu,mituntu,251,Mituntu,57,Tigania,EST
+923,Mumui,mumui,251,Mituntu,57,Tigania,EST
+924,Thau,thau,251,Mituntu,57,Tigania,EST
+925,Buuri,buuri,252,Muthara,57,Tigania,EST
+926,Muthara,muthara,252,Muthara,57,Tigania,EST
+927,Ngaremara,ngaremara,252,Muthara,57,Tigania,EST
+928,Kiguchwa,kiguchwa,253,Tigania Central,57,Tigania,EST
+929,Micii Mikuru,micii-mikuru,253,Tigania Central,57,Tigania,EST
+930,Mikinduri E.,mikinduri-e,253,Tigania Central,57,Tigania,EST
+931,Mikinduri W.,mikinduri-w,253,Tigania Central,57,Tigania,EST
+932,Kiandiu,kiandiu,254,Tigania West,57,Tigania,EST
+933,Kianjai,kianjai,254,Tigania West,57,Tigania,EST
+934,Miathene,miathene,254,Tigania West,57,Tigania,EST
+935,Amugaa,amugaa,255,Tigania,57,Tigania,EST
+936,Ankamia,ankamia,255,Tigania,57,Tigania,EST
+937,Igarii,igarii,255,Tigania,57,Tigania,EST
+938,Thangatha,thangatha,255,Tigania,57,Tigania,EST
+939,Kimachia,kimachia,256,Uringu,57,Tigania,EST
+940,Kiorimba,kiorimba,256,Uringu,57,Tigania,EST
+941,Mbeu,mbeu,256,Uringu,57,Tigania,EST
+942,Nkomo,nkomo,256,Uringu,57,Tigania,EST
+943,Ikombe,ikombe,257,Ikombe,58,Yatta,EST
+944,Kinyaata,kinyaata,257,Ikombe,58,Yatta,EST
+945,Katangi,katangi,258,Katangi,58,Yatta,EST
+946,Kyua,kyua,258,Katangi,58,Yatta,EST
+947,Ekalakala,ekalakala,259,Masinga,58,Yatta,EST
+948,Ikaatini,ikaatini,259,Masinga,58,Yatta,EST
+949,Kangonde,kangonde,259,Masinga,58,Yatta,EST
+950,Kithyoko,kithyoko,259,Masinga,58,Yatta,EST
+951,Kivaa,kivaa,259,Masinga,58,Yatta,EST
+952,Masinga,masinga,259,Masinga,58,Yatta,EST
+953,Mananja,mananja,260,Ndithini,58,Yatta,EST
+954,Muthesya,muthesya,260,Ndithini,58,Yatta,EST
+955,Ndithini,ndithini,260,Ndithini,58,Yatta,EST
+956,Kithimani,kithimani,261,Yatta,58,Yatta,EST
+957,Matuu,matuu,261,Yatta,58,Yatta,EST
+958,Mavoloni,mavoloni,261,Yatta,58,Yatta,EST
+959,Ndalani,ndalani,261,Yatta,58,Yatta,EST
+960,Dandora,dandora,262,Embakasi,59,Nairobi East,NBI
+961,Embakasi,embakasi,262,Embakasi,59,Nairobi East,NBI
+962,Kariobangi South,kariobangi-south,262,Embakasi,59,Nairobi East,NBI
+963,Kayole,kayole,262,Embakasi,59,Nairobi East,NBI
+964,Mukuru kwa Njenga,mukuru-kwa-njenga,262,Embakasi,59,Nairobi East,NBI
+965,Njiru,njiru,262,Embakasi,59,Nairobi East,NBI
+966,Ruai,ruai,262,Embakasi,59,Nairobi East,NBI
+967,Umoja,umoja,262,Embakasi,59,Nairobi East,NBI
+968,Makadara,makadara,263,Makadara,59,Nairobi East,NBI
+969,Makongeni,makongeni,263,Makadara,59,Nairobi East,NBI
+970,Maringo,maringo,263,Makadara,59,Nairobi East,NBI
+971,Mukuru Nyayo,mukuru-nyayo,263,Makadara,59,Nairobi East,NBI
+972,Viwandani,viwandani,263,Makadara,59,Nairobi East,NBI
+973,Huruma,huruma,264,Central,60,Nairobi North,NBI
+974,Kariokor,kariokor,264,Central,60,Nairobi North,NBI
+975,Mathare,mathare,264,Central,60,Nairobi North,NBI
+976,Ngara,ngara,264,Central,60,Nairobi North,NBI
+977,Starehe,starehe,264,Central,60,Nairobi North,NBI
+978,Githurai,githurai,265,Kasarani,60,Nairobi North,NBI
+979,Kahawa,kahawa,265,Kasarani,60,Nairobi North,NBI
+980,Kariobangi,kariobangi,265,Kasarani,60,Nairobi North,NBI
+981,Kasarani,kasarani,265,Kasarani,60,Nairobi North,NBI
+982,Korogocho,korogocho,265,Kasarani,60,Nairobi North,NBI
+983,Roysambu,roysambu,265,Kasarani,60,Nairobi North,NBI
+984,Ruaraka,ruaraka,265,Kasarani,60,Nairobi North,NBI
+985,Bahati,bahati,266,Pumwani,60,Nairobi North,NBI
+986,Eastleigh North,eastleigh-north,266,Pumwani,60,Nairobi North,NBI
+987,Eastleigh South,eastleigh-south,266,Pumwani,60,Nairobi North,NBI
+988,Kamukunji,kamukunji,266,Pumwani,60,Nairobi North,NBI
+989,Pumwani,pumwani,266,Pumwani,60,Nairobi North,NBI
+990,Kawangware,kawangware,267,Dagoretti,61,Nairobi West,NBI
+991,Kenyatta /Golf Course,kenyatta-golf-course,267,Dagoretti,61,Nairobi West,NBI
+992,Mutuini,mutuini,267,Dagoretti,61,Nairobi West,NBI
+993,Riruta,riruta,267,Dagoretti,61,Nairobi West,NBI
+994,Uthiru-Ruthimitu,uthiru-ruthimitu,267,Dagoretti,61,Nairobi West,NBI
+995,Waithaka,waithaka,267,Dagoretti,61,Nairobi West,NBI
+996,Karen,karen,268,Kibera,61,Nairobi West,NBI
+997,Kibera,kibera,268,Kibera,61,Nairobi West,NBI
+998,Laini Saba,laini-saba,268,Kibera,61,Nairobi West,NBI
+999,Langata,langata,268,Kibera,61,Nairobi West,NBI
+1000,Mugumo-Ini,mugumo-ini,268,Kibera,61,Nairobi West,NBI
+1001,Nairobi West,nairobi-west,268,Kibera,61,Nairobi West,NBI
+1002,Serangombe,serangombe,268,Kibera,61,Nairobi West,NBI
+1003,Highridge,highridge,269,Westlands,62,Westlands,NBI
+1004,Kangemi,kangemi,269,Westlands,62,Westlands,NBI
+1005,Kileleshwa,kileleshwa,269,Westlands,62,Westlands,NBI
+1006,Kilimani,kilimani,269,Westlands,62,Westlands,NBI
+1007,Kitisuru,kitisuru,269,Westlands,62,Westlands,NBI
+1008,Parklands,parklands,269,Westlands,62,Westlands,NBI
+1009,Bura,bura,270,Bura,63,Fafi,NEA
+1010,Kamuthe,kamuthe,270,Bura,63,Fafi,NEA
+1011,Mansabubu,mansabubu,270,Bura,63,Fafi,NEA
+1012,Nanighi,nanighi,270,Bura,63,Fafi,NEA
+1013,Bulagolol,bulagolol,271,Galmagala,63,Fafi,NEA
+1014,Galmagala,galmagala,271,Galmagala,63,Fafi,NEA
+1015,Gubis,gubis,271,Galmagala,63,Fafi,NEA
+1016,Amuma,amuma,272,Jarajilla,63,Fafi,NEA
+1017,Fafi,fafi,272,Jarajilla,63,Fafi,NEA
+1018,Welmerer,welmerer,272,Jarajilla,63,Fafi,NEA
+1019,Yumbis,yumbis,272,Jarajilla,63,Fafi,NEA
+1020,Balambala,balambala,273,Balambala,64,Garissa,NEA
+1021,Dujis,dujis,273,Balambala,64,Garissa,NEA
+1022,Jarajara,jarajara,273,Balambala,64,Garissa,NEA
+1023,Bour-Algi,bour-algi,274,Central,64,Garissa,NEA
+1024,Iftin,iftin,274,Central,64,Garissa,NEA
+1025,Kora-Kora,kora-kora,274,Central,64,Garissa,NEA
+1026,Township,township,274,Central,64,Garissa,NEA
+1027,Waberi,waberi,274,Central,64,Garissa,NEA
+1028,Danyere,danyere,275,Danyere,64,Garissa,NEA
+1029,Libahilow,libahilow,275,Danyere,64,Garissa,NEA
+1030,Sikley,sikley,275,Danyere,64,Garissa,NEA
+1031,Raya,raya,276,Sankuri,64,Garissa,NEA
+1032,Saka,saka,276,Sankuri,64,Garissa,NEA
+1033,Sankuri,sankuri,276,Sankuri,64,Garissa,NEA
+1034,Shimbir,shimbir,276,Sankuri,64,Garissa,NEA
+1035,Bodhai,bodhai,277,Bodhai,65,Ijara,NEA
+1036,Hadi,hadi,278,Hulugho,65,Ijara,NEA
+1037,Hulugho,hulugho,278,Hulugho,65,Ijara,NEA
+1038,Bulagolol,bulagolol,279,Ijara,65,Ijara,NEA
+1039,Gerille,gerille,279,Ijara,65,Ijara,NEA
+1040,Ijara,ijara,279,Ijara,65,Ijara,NEA
+1041,Ruqa,ruqa,279,Ijara,65,Ijara,NEA
+1042,Sangole,sangole,279,Ijara,65,Ijara,NEA
+1043,Hara,hara,280,Masalani,65,Ijara,NEA
+1044,Korisa,korisa,280,Masalani,65,Ijara,NEA
+1045,Kotile,kotile,280,Masalani,65,Ijara,NEA
+1046,Masalani,masalani,280,Masalani,65,Ijara,NEA
+1047,Handaro,handaro,281,Sangailu,65,Ijara,NEA
+1048,Sangailu,sangailu,281,Sangailu,65,Ijara,NEA
+1049,Banane,banane,282,Benane,66,Lagdera,NEA
+1050,Eldere,eldere,282,Benane,66,Lagdera,NEA
+1051,Tokojo,tokojo,282,Benane,66,Lagdera,NEA
+1052,Abakaile,abakaile,283,Dadaab,66,Lagdera,NEA
+1053,Alango-Arba,alango-arba,283,Dadaab,66,Lagdera,NEA
+1054,Dadaab,dadaab,283,Dadaab,66,Lagdera,NEA
+1055,Dagahaley,dagahaley,283,Dadaab,66,Lagdera,NEA
+1056,Dertu,dertu,283,Dadaab,66,Lagdera,NEA
+1057,Kumahumato,kumahumato,283,Dadaab,66,Lagdera,NEA
+1058,Labisigale,labisigale,283,Dadaab,66,Lagdera,NEA
+1059,Damajale,damajale,284,Liboi,66,Lagdera,NEA
+1060,Kulan,kulan,284,Liboi,66,Lagdera,NEA
+1061,Liboi,liboi,284,Liboi,66,Lagdera,NEA
+1062,Ilan,ilan,285,Modogashe,66,Lagdera,NEA
+1063,Maalim,maalim,285,Modogashe,66,Lagdera,NEA
+1064,Modogashe,modogashe,285,Modogashe,66,Lagdera,NEA
+1065,Baraki,baraki,286,Shant-Abak,66,Lagdera,NEA
+1066,Garufa,garufa,286,Shant-Abak,66,Lagdera,NEA
+1067,Goreale,goreale,286,Shant-Abak,66,Lagdera,NEA
+1068,Ashabito,ashabito,287,Ashabito,67,Mandera Central,NEA
+1069,Guticha,guticha,287,Ashabito,67,Mandera Central,NEA
+1070,Kubionile,kubionile,287,Ashabito,67,Mandera Central,NEA
+1071,Marothile,marothile,287,Ashabito,67,Mandera Central,NEA
+1072,Olla,olla,287,Ashabito,67,Mandera Central,NEA
+1073,Orgurueini,orgurueini,287,Ashabito,67,Mandera Central,NEA
+1074,Sarman,sarman,287,Ashabito,67,Mandera Central,NEA
+1075,Shirshir,shirshir,287,Ashabito,67,Mandera Central,NEA
+1076,Bulla Affya,bulla-affya,288,Elwak,67,Mandera Central,NEA
+1077,Elwak South,elwak-south,288,Elwak,67,Mandera Central,NEA
+1078,Elwak Town,elwak-town,288,Elwak,67,Mandera Central,NEA
+1079,Wante,wante,288,Elwak,67,Mandera Central,NEA
+1080,Borehole 11,borehole-11,289,Kotulo,67,Mandera Central,NEA
+1081,Dabasiti,dabasiti,289,Kotulo,67,Mandera Central,NEA
+1082,El-Ramu,el-ramu,289,Kotulo,67,Mandera Central,NEA
+1083,Garsesala,garsesala,289,Kotulo,67,Mandera Central,NEA
+1084,Kotulo,kotulo,289,Kotulo,67,Mandera Central,NEA
+1085,Kutayu,kutayu,289,Kotulo,67,Mandera Central,NEA
+1086,Garsey,garsey,290,Rhamu Dimtu,67,Mandera Central,NEA
+1087,Mado,mado,290,Rhamu Dimtu,67,Mandera Central,NEA
+1088,Rhamu Dimtu,rhamu-dimtu,290,Rhamu Dimtu,67,Mandera Central,NEA
+1089,Yabicho,yabicho,290,Rhamu Dimtu,67,Mandera Central,NEA
+1090,Girissa,girissa,291,Rhamu,67,Mandera Central,NEA
+1091,Rhamu,rhamu,291,Rhamu,67,Mandera Central,NEA
+1092,Shantoley,shantoley,291,Rhamu,67,Mandera Central,NEA
+1093,Burmayo N.,burmayo-n,292,Shimbir Fatuma,67,Mandera Central,NEA
+1094,Burmayo S,burmayo-s,292,Shimbir Fatuma,67,Mandera Central,NEA
+1095,Fincharo,fincharo,292,Shimbir Fatuma,67,Mandera Central,NEA
+1096,Shimbir Fatuma,shimbir-fatuma,292,Shimbir Fatuma,67,Mandera Central,NEA
+1097,Quramathow,quramathow,293,Wargadud,67,Mandera Central,NEA
+1098,Wargadud E.,wargadud-e,293,Wargadud,67,Mandera Central,NEA
+1099,Wargadud,wargadud,293,Wargadud,67,Mandera Central,NEA
+1100,Barwako,barwako,294,Central,68,Mandera East,NEA
+1101,Bp1,bp1,294,Central,68,Mandera East,NEA
+1102,Bulla Jamhuria,bulla-jamhuria,294,Central,68,Mandera East,NEA
+1103,Bulla Mpya,bulla-mpya,294,Central,68,Mandera East,NEA
+1104,Central,central,294,Central,68,Mandera East,NEA
+1105,Kamor,kamor,294,Central,68,Mandera East,NEA
+1106,Neboi,neboi,294,Central,68,Mandera East,NEA
+1107,Shafshefy,shafshefy,294,Central,68,Mandera East,NEA
+1108,Township,township,294,Central,68,Mandera East,NEA
+1109,Arabia,arabia,295,Fino,68,Mandera East,NEA
+1110,Fino,fino,295,Fino,68,Mandera East,NEA
+1111,Omar Jillow,omar-jillow,295,Fino,68,Mandera East,NEA
+1112,Aresa,aresa,296,Hareri,68,Mandera East,NEA
+1113,Hareri,hareri,296,Hareri,68,Mandera East,NEA
+1114,Sala,sala,296,Hareri,68,Mandera East,NEA
+1115,Bella,bella,297,Khalalio,68,Mandera East,NEA
+1116,Bulla Haji,bulla-haji,297,Khalalio,68,Mandera East,NEA
+1117,Burabor,burabor,297,Khalalio,68,Mandera East,NEA
+1118,Garbagoley,garbagoley,297,Khalalio,68,Mandera East,NEA
+1119,Gedudiye,gedudiye,297,Khalalio,68,Mandera East,NEA
+1120,Gingo,gingo,297,Khalalio,68,Mandera East,NEA
+1121,Hareri Hosle,hareri-hosle,297,Khalalio,68,Mandera East,NEA
+1122,Karow,karow,297,Khalalio,68,Mandera East,NEA
+1123,Khalalio,khalalio,297,Khalalio,68,Mandera East,NEA
+1124,Alango,alango,298,Laffey,68,Mandera East,NEA
+1125,Damasa,damasa,298,Laffey,68,Mandera East,NEA
+1126,Kabo,kabo,298,Laffey,68,Mandera East,NEA
+1127,Kamora Liban,kamora-liban,298,Laffey,68,Mandera East,NEA
+1128,Laffeey,laffeey,298,Laffey,68,Mandera East,NEA
+1129,Farey,farey,299,Libehia,68,Mandera East,NEA
+1130,Libehia,libehia,299,Libehia,68,Mandera East,NEA
+1131,Oda,oda,299,Libehia,68,Mandera East,NEA
+1132,Sarohindi,sarohindi,299,Libehia,68,Mandera East,NEA
+1133,Bambo,bambo,300,Warankara,68,Mandera East,NEA
+1134,Gari,gari,300,Warankara,68,Mandera East,NEA
+1135,Warankara,warankara,300,Warankara,68,Mandera East,NEA
+1136,Banisa,banisa,301,Banisa,69,Mandera West,NEA
+1137,Derkale,derkale,301,Banisa,69,Mandera West,NEA
+1138,Eymole,eymole,301,Banisa,69,Mandera West,NEA
+1139,Kiliwehiri,kiliwehiri,301,Banisa,69,Mandera West,NEA
+1140,Lulis,lulis,301,Banisa,69,Mandera West,NEA
+1141,Dandu,dandu,302,Dandu,69,Mandera West,NEA
+1142,Gither,gither,302,Dandu,69,Mandera West,NEA
+1143,Kubihalo,kubihalo,302,Dandu,69,Mandera West,NEA
+1144,Guba,guba,303,Malkamari,69,Mandera West,NEA
+1145,Hullow,hullow,303,Malkamari,69,Mandera West,NEA
+1146,Malkamari,malkamari,303,Malkamari,69,Mandera West,NEA
+1147,Malkaruka,malkaruka,303,Malkamari,69,Mandera West,NEA
+1148,Didkuro,didkuro,304,Takaba,69,Mandera West,NEA
+1149,Duduble,duduble,304,Takaba,69,Mandera West,NEA
+1150,Lagsure,lagsure,304,Takaba,69,Mandera West,NEA
+1151,Takaba,takaba,304,Takaba,69,Mandera West,NEA
+1152,Wangai Dahan,wangai-dahan,304,Takaba,69,Mandera West,NEA
+1153,Barwaqo,barwaqo,305,Central,70,Wajir East,NEA
+1154,Holidhan,holidhan,305,Central,70,Wajir East,NEA
+1155,Jogbaru,jogbaru,305,Central,70,Wajir East,NEA
+1156,Township,township,305,Central,70,Wajir East,NEA
+1157,Wagberi,wagberi,305,Central,70,Wajir East,NEA
+1158,Desheg,desheg,306,Kutulo,70,Wajir East,NEA
+1159,Kutulo,kutulo,306,Kutulo,70,Wajir East,NEA
+1160,Lafaley,lafaley,306,Kutulo,70,Wajir East,NEA
+1161,Wargdud,wargdud,306,Kutulo,70,Wajir East,NEA
+1162,Dambas,dambas,307,Tarbaj,70,Wajir East,NEA
+1163,Dunto,dunto,307,Tarbaj,70,Wajir East,NEA
+1164,E - Ben,e-ben,307,Tarbaj,70,Wajir East,NEA
+1165,Mansa,mansa,307,Tarbaj,70,Wajir East,NEA
+1166,Orgoralle,orgoralle,307,Tarbaj,70,Wajir East,NEA
+1167,Sarman,sarman,307,Tarbaj,70,Wajir East,NEA
+1168,Tarbaj,tarbaj,307,Tarbaj,70,Wajir East,NEA
+1169,Khorof -Harar,khorof-harar,308,Wajir - Bor,70,Wajir East,NEA
+1170,Riba,riba,308,Wajir - Bor,70,Wajir East,NEA
+1171,Wajir - Bor,wajir-bor,308,Wajir - Bor,70,Wajir East,NEA
+1172,Batalu,batalu,309,Buna,71,Wajir North,NEA
+1173,Buna,buna,309,Buna,71,Wajir North,NEA
+1174,Ingirir,ingirir,309,Buna,71,Wajir North,NEA
+1175,Korondile,korondile,309,Buna,71,Wajir North,NEA
+1176,Lakole North,lakole-north,309,Buna,71,Wajir North,NEA
+1177,Leinsayu,leinsayu,309,Buna,71,Wajir North,NEA
+1178,Malkaguf,malkaguf,309,Buna,71,Wajir North,NEA
+1179,Bute,bute,310,Bute,71,Wajir North,NEA
+1180,Dugow,dugow,310,Bute,71,Wajir North,NEA
+1181,Godoma,godoma,310,Bute,71,Wajir North,NEA
+1182,Olgoji,olgoji,310,Bute,71,Wajir North,NEA
+1183,Ajawa,ajawa,311,Gurar,71,Wajir North,NEA
+1184,Danaba,danaba,311,Gurar,71,Wajir North,NEA
+1185,Gurar,gurar,311,Gurar,71,Wajir North,NEA
+1186,Quadama,quadama,311,Gurar,71,Wajir North,NEA
+1187,Burder,burder,312,Diff,72,Wajir South,NEA
+1188,Diff,diff,312,Diff,72,Wajir South,NEA
+1189,Gerille,gerille,312,Diff,72,Wajir South,NEA
+1190,Ibrahim - Ure,ibrahim-ure,312,Diff,72,Wajir South,NEA
+1191,Abakore,abakore,313,Habaswen,72,Wajir South,NEA
+1192,Dilmanyaley,dilmanyaley,313,Habaswen,72,Wajir South,NEA
+1193,Habaswein,habaswein,313,Habaswen,72,Wajir South,NEA
+1194,Kibilay,kibilay,313,Habaswen,72,Wajir South,NEA
+1195,Kiwanja Ndege,kiwanja-ndege,313,Habaswen,72,Wajir South,NEA
+1196,Lagbogol South,lagbogol-south,313,Habaswen,72,Wajir South,NEA
+1197,Tesorie,tesorie,313,Habaswen,72,Wajir South,NEA
+1198,Kulaaley,kulaaley,314,Kulaaley,72,Wajir South,NEA
+1199,Banane,banane,315,Sebule,72,Wajir South,NEA
+1200,Dadajabula,dadajabula,315,Sebule,72,Wajir South,NEA
+1201,Dagahley,dagahley,315,Sebule,72,Wajir South,NEA
+1202,Kursin,kursin,315,Sebule,72,Wajir South,NEA
+1203,Macheza,macheza,315,Sebule,72,Wajir South,NEA
+1204,Sarif,sarif,315,Sebule,72,Wajir South,NEA
+1205,Sebule,sebule,315,Sebule,72,Wajir South,NEA
+1206,Shimbir,shimbir,315,Sebule,72,Wajir South,NEA
+1207,Ademasajida,ademasajida,316,Ademasajida,73,Wajir West,NEA
+1208,Hadado South,hadado-south,316,Ademasajida,73,Wajir West,NEA
+1209,Lolikuta South,lolikuta-south,316,Ademasajida,73,Wajir West,NEA
+1210,Anole,anole,317,Eldas,73,Wajir West,NEA
+1211,Dela,dela,317,Eldas,73,Wajir West,NEA
+1212,Eldas,eldas,317,Eldas,73,Wajir West,NEA
+1213,Kilkiley,kilkiley,317,Eldas,73,Wajir West,NEA
+1214,Lakoley South,lakoley-south,317,Eldas,73,Wajir West,NEA
+1215,Arbajahan,arbajahan,318,Griftu,73,Wajir West,NEA
+1216,Basir,basir,318,Griftu,73,Wajir West,NEA
+1217,Bojiheri,bojiheri,318,Griftu,73,Wajir West,NEA
+1218,Elnur,elnur,318,Griftu,73,Wajir West,NEA
+1219,Ganyure,ganyure,318,Griftu,73,Wajir West,NEA
+1220,Garsekoftu,garsekoftu,318,Griftu,73,Wajir West,NEA
+1221,Griftu,griftu,318,Griftu,73,Wajir West,NEA
+1222,Kukala,kukala,318,Griftu,73,Wajir West,NEA
+1223,Matho,matho,318,Griftu,73,Wajir West,NEA
+1224,Tulatula,tulatula,318,Griftu,73,Wajir West,NEA
+1225,Wagalla,wagalla,318,Griftu,73,Wajir West,NEA
+1226,Athibohol,athibohol,319,Hadado,73,Wajir West,NEA
+1227,Hadado North,hadado-north,319,Hadado,73,Wajir West,NEA
+1228,Logbogol North,logbogol-north,319,Hadado,73,Wajir West,NEA
+1229,Lolikuta North,lolikuta-north,319,Hadado,73,Wajir West,NEA
+1230,Bondo Township,bondo-township,320,Maranda,74,Bondo,NYZ
+1231,North Sakwa,north-sakwa,320,Maranda,74,Bondo,NYZ
+1232,South West Sakwa,south-west-sakwa,320,Maranda,74,Bondo,NYZ
+1233,West Sakwa,west-sakwa,320,Maranda,74,Bondo,NYZ
+1234,Central Sakwa,central-sakwa,321,Nyangoma,74,Bondo,NYZ
+1235,South Sakwa,south-sakwa,321,Nyangoma,74,Bondo,NYZ
+1236,Central Yimbo,central-yimbo,322,Usigu,74,Bondo,NYZ
+1237,East Yimbo,east-yimbo,322,Usigu,74,Bondo,NYZ
+1238,Mageta Island,mageta-island,322,Usigu,74,Bondo,NYZ
+1239,North Yimbo,north-yimbo,322,Usigu,74,Bondo,NYZ
+1240,West Yimbo,west-yimbo,322,Usigu,74,Bondo,NYZ
+1241,Esise,esise,323,Ekerenyo,75,Borabu,NYZ
+1242,Kiangeni,kiangeni,323,Ekerenyo,75,Borabu,NYZ
+1243,Mekenene,mekenene,323,Ekerenyo,75,Borabu,NYZ
+1244,Nyansiongo,nyansiongo,323,Ekerenyo,75,Borabu,NYZ
+1245,Chitago,chitago,324,Etago,76,Gucha South,NYZ
+1246,Getenga,getenga,324,Etago,76,Gucha South,NYZ
+1247,Nyansakia,nyansakia,324,Etago,76,Gucha South,NYZ
+1248,Otendo,otendo,324,Etago,76,Gucha South,NYZ
+1249,S/ Mugirago Borabu,s-mugirago-borabu,324,Etago,76,Gucha South,NYZ
+1250,Nyakembene,nyakembene,325,Nyamarambe,76,Gucha South,NYZ
+1251,S / Mugirango Central,s-mugirango-central,325,Nyamarambe,76,Gucha South,NYZ
+1252,S/ Mugirago Chache,s-mugirago-chache,325,Nyamarambe,76,Gucha South,NYZ
+1253,Boochi Borabu,boochi-borabu,326,Kenyenya,77,Gucha,NYZ
+1254,Magenche,magenche,326,Kenyenya,77,Gucha,NYZ
+1255,Majoge Borabu,majoge-borabu,326,Kenyenya,77,Gucha,NYZ
+1256,Majoge Masaba,majoge-masaba,326,Kenyenya,77,Gucha,NYZ
+1257,Bassi Bogetario,bassi-bogetario,327,Nyacheki,77,Gucha,NYZ
+1258,Bassi Borabu,bassi-borabu,327,Nyacheki,77,Gucha,NYZ
+1259,Gionsaria,gionsaria,327,Nyacheki,77,Gucha,NYZ
+1260,Nyacheki,nyacheki,327,Nyacheki,77,Gucha,NYZ
+1261,Rigena,rigena,327,Nyacheki,77,Gucha,NYZ
+1262,Bassi Central,bassi-central,328,Nyamache,77,Gucha,NYZ
+1263,Bassi Masige East,bassi-masige-east,328,Nyamache,77,Gucha,NYZ
+1264,Bassi Masige West,bassi-masige-west,328,Nyamache,77,Gucha,NYZ
+1265,Majoge Chache,majoge-chache,329,Ogembo,77,Gucha,NYZ
+1266,Sengera,sengera,329,Ogembo,77,Gucha,NYZ
+1267,Tendere,tendere,329,Ogembo,77,Gucha,NYZ
+1268,Bassi Boitangare,bassi-boitangare,330,Sameta,77,Gucha,NYZ
+1269,Bassi Chache,bassi-chache,330,Sameta,77,Gucha,NYZ
+1270,Mokwerero,mokwerero,330,Sameta,77,Gucha,NYZ
+1271,Nyangiti,nyangiti,330,Sameta,77,Gucha,NYZ
+1272,East Kanyada,east-kanyada,331,Asego,78,Homabay,NYZ
+1273,Homa Bay Town,homa-bay-town,331,Asego,78,Homabay,NYZ
+1274,West Kanyada,west-kanyada,331,Asego,78,Homabay,NYZ
+1275,East Kwabwai,east-kwabwai,332,Kobama,78,Homabay,NYZ
+1276,West Kwabwai,west-kwabwai,332,Kobama,78,Homabay,NYZ
+1277,Central Kanyamwa,central-kanyamwa,333,Ndhiwa,78,Homabay,NYZ
+1278,North Kanyamwa,north-kanyamwa,333,Ndhiwa,78,Homabay,NYZ
+1279,South Kanyamwa,south-kanyamwa,333,Ndhiwa,78,Homabay,NYZ
+1280,West Kanyamwa,west-kanyamwa,333,Ndhiwa,78,Homabay,NYZ
+1281,Central Kanyidoto,central-kanyidoto,334,Nyarongi,78,Homabay,NYZ
+1282,North Kanyikela,north-kanyikela,334,Nyarongi,78,Homabay,NYZ
+1283,South Kanyikela,south-kanyikela,334,Nyarongi,78,Homabay,NYZ
+1284,West .Kanyidoto,west-kanyidoto,334,Nyarongi,78,Homabay,NYZ
+1285,Central Gem,central-gem,335,Rangwe,78,Homabay,NYZ
+1286,Central Kochia,central-kochia,335,Rangwe,78,Homabay,NYZ
+1287,East Gem,east-gem,335,Rangwe,78,Homabay,NYZ
+1288,East Kagan,east-kagan,335,Rangwe,78,Homabay,NYZ
+1289,East Kochia,east-kochia,335,Rangwe,78,Homabay,NYZ
+1290,Gongo,gongo,335,Rangwe,78,Homabay,NYZ
+1291,West Gem,west-gem,335,Rangwe,78,Homabay,NYZ
+1292,West Kagan,west-kagan,335,Rangwe,78,Homabay,NYZ
+1293,West Kochia,west-kochia,335,Rangwe,78,Homabay,NYZ
+1294,Central Kabuoch,central-kabuoch,336,Riana,78,Homabay,NYZ
+1295,North Kabuoch,north-kabuoch,336,Riana,78,Homabay,NYZ
+1296,South Kabuoch,south-kabuoch,336,Riana,78,Homabay,NYZ
+1297,West Kabuoch,west-kabuoch,336,Riana,78,Homabay,NYZ
+1298,Ibeno,ibeno,337,Keumbu,79,Kisii Central,NYZ
+1299,Keumbu,keumbu,337,Keumbu,79,Kisii Central,NYZ
+1300,Bosongo,bosongo,338,Kiogoro,79,Kisii Central,NYZ
+1301,Kegati,kegati,338,Kiogoro,79,Kisii Central,NYZ
+1302,Kiogoro,kiogoro,338,Kiogoro,79,Kisii Central,NYZ
+1303,Kegogi,kegogi,339,Marani,79,Kisii Central,NYZ
+1304,Mwagichana,mwagichana,339,Marani,79,Kisii Central,NYZ
+1305,Mwakibagendi,mwakibagendi,339,Marani,79,Kisii Central,NYZ
+1306,Mwamonari,mwamonari,339,Marani,79,Kisii Central,NYZ
+1307,Ngenyi,ngenyi,339,Marani,79,Kisii Central,NYZ
+1308,Sensi,sensi,339,Marani,79,Kisii Central,NYZ
+1309,Bogeka,bogeka,340,Mosocho,79,Kisii Central,NYZ
+1310,Etora,etora,340,Mosocho,79,Kisii Central,NYZ
+1311,Nyakoe,nyakoe,340,Mosocho,79,Kisii Central,NYZ
+1312,Nyamachemange,nyamachemange,340,Mosocho,79,Kisii Central,NYZ
+1313,Nyanguru,nyanguru,340,Mosocho,79,Kisii Central,NYZ
+1314,Nyatieko,nyatieko,340,Mosocho,79,Kisii Central,NYZ
+1315,Township,township,340,Mosocho,79,Kisii Central,NYZ
+1316,Bogiakumu,bogiakumu,341,Suneka,80,Kisii South,NYZ
+1317,Bomariba,bomariba,341,Suneka,80,Kisii South,NYZ
+1318,Bomorenda,bomorenda,341,Suneka,80,Kisii South,NYZ
+1319,Iyabe,iyabe,341,Suneka,80,Kisii South,NYZ
+1320,Riana,riana,341,Suneka,80,Kisii South,NYZ
+1321,Bwanda,bwanda,342,Kadibo,81,Kisumu East,NYZ
+1322,East Kochieng,east-kochieng,342,Kadibo,81,Kisumu East,NYZ
+1323,Kanyagwal,kanyagwal,342,Kadibo,81,Kisumu East,NYZ
+1324,Katho,katho,342,Kadibo,81,Kisumu East,NYZ
+1325,Kawino North,kawino-north,342,Kadibo,81,Kisumu East,NYZ
+1326,Kawino South,kawino-south,342,Kadibo,81,Kisumu East,NYZ
+1327,Kombura,kombura,342,Kadibo,81,Kisumu East,NYZ
+1328,West Kochieng,west-kochieng,342,Kadibo,81,Kisumu East,NYZ
+1329,Kajulu East,kajulu-east,343,Winam,81,Kisumu East,NYZ
+1330,Kajulu West,kajulu-west,343,Winam,81,Kisumu East,NYZ
+1331,Kisumu Central,kisumu-central,343,Winam,81,Kisumu East,NYZ
+1332,Kisumu East,kisumu-east,343,Winam,81,Kisumu East,NYZ
+1333,Kisumu North,kisumu-north,343,Winam,81,Kisumu East,NYZ
+1334,Kisumu South West,kisumu-south-west,343,Winam,81,Kisumu East,NYZ
+1335,Kolwa Central,kolwa-central,343,Winam,81,Kisumu East,NYZ
+1336,Kolwa East,kolwa-east,343,Winam,81,Kisumu East,NYZ
+1337,Kolwa West,kolwa-west,343,Winam,81,Kisumu East,NYZ
+1338,Kondele,kondele,343,Winam,81,Kisumu East,NYZ
+1339,Miwani,miwani,343,Winam,81,Kisumu East,NYZ
+1340,Town,town,343,Winam,81,Kisumu East,NYZ
+1341,North Central Seme,north-central-seme,344,Kombewa,82,Kisumu West,NYZ
+1342,South Central Seme,south-central-seme,344,Kombewa,82,Kisumu West,NYZ
+1343,South West Seme,south-west-seme,344,Kombewa,82,Kisumu West,NYZ
+1344,West Seme,west-seme,344,Kombewa,82,Kisumu West,NYZ
+1345,East Seme,east-seme,345,Maseno,82,Kisumu West,NYZ
+1346,Kisumu North West,kisumu-north-west,345,Maseno,82,Kisumu West,NYZ
+1347,Otwenya,otwenya,345,Maseno,82,Kisumu West,NYZ
+1348,West Kisumu,west-kisumu,345,Maseno,82,Kisumu West,NYZ
+1349,Kebaroti,kebaroti,346,Kegonga,83,Kuria East,NYZ
+1350,Maeta,maeta,346,Kegonga,83,Kuria East,NYZ
+1351,Nguruna,nguruna,346,Kegonga,83,Kuria East,NYZ
+1352,Nyabasi East,nyabasi-east,346,Kegonga,83,Kuria East,NYZ
+1353,Nyabasi North,nyabasi-north,346,Kegonga,83,Kuria East,NYZ
+1354,Nyabasi West,nyabasi-west,346,Kegonga,83,Kuria East,NYZ
+1355,Bwirege East,bwirege-east,347,Ntimaru,83,Kuria East,NYZ
+1356,Bwirege West,bwirege-west,347,Ntimaru,83,Kuria East,NYZ
+1357,Siabai,siabai,347,Ntimaru,83,Kuria East,NYZ
+1358,Wangirabose,wangirabose,347,Ntimaru,83,Kuria East,NYZ
+1359,Bukira Central,bukira-central,348,Kehancha,84,Kuria West,NYZ
+1360,Bukira East,bukira-east,348,Kehancha,84,Kuria West,NYZ
+1361,Bukira North,bukira-north,348,Kehancha,84,Kuria West,NYZ
+1362,Bukira South,bukira-south,348,Kehancha,84,Kuria West,NYZ
+1363,Bukira West,bukira-west,348,Kehancha,84,Kuria West,NYZ
+1364,Gokehara,gokehara,348,Kehancha,84,Kuria West,NYZ
+1365,Bugumbe South,bugumbe-south,349,Mabera,84,Kuria West,NYZ
+1366,Bugumbe West,bugumbe-west,349,Mabera,84,Kuria West,NYZ
+1367,Tagare,tagare,349,Mabera,84,Kuria West,NYZ
+1368,Bugumbe Central,bugumbe-central,350,Masaba,84,Kuria West,NYZ
+1369,Bugumbe East,bugumbe-east,350,Masaba,84,Kuria West,NYZ
+1370,Bugumbe North,bugumbe-north,350,Masaba,84,Kuria West,NYZ
+1371,Kombe,kombe,350,Masaba,84,Kuria West,NYZ
+1372,Central Kitutu,central-kitutu,351,Manga,85,Manga,NYZ
+1373,Kemera,kemera,351,Manga,85,Manga,NYZ
+1374,North Kitutu,north-kitutu,351,Manga,85,Manga,NYZ
+1375,Mogonga,mogonga,352,Kiamokama,86,Masaba,NYZ
+1376,N/Irianyi,n-irianyi,352,Kiamokama,86,Masaba,NYZ
+1377,Nyamagesa,nyamagesa,352,Kiamokama,86,Masaba,NYZ
+1378,Nyaribari C,nyaribari-c,352,Kiamokama,86,Masaba,NYZ
+1379,Gesusu,gesusu,353,Masaba,86,Masaba,NYZ
+1380,Ikorongo,ikorongo,353,Masaba,86,Masaba,NYZ
+1381,North Masaba,north-masaba,353,Masaba,86,Masaba,NYZ
+1382,Ramasha,ramasha,353,Masaba,86,Masaba,NYZ
+1383,East Kitutu,east-kitutu,354,Rigoma,86,Masaba,NYZ
+1384,Gachuba,gachuba,354,Rigoma,86,Masaba,NYZ
+1385,Gesima,gesima,354,Rigoma,86,Masaba,NYZ
+1386,Mochenwa,mochenwa,354,Rigoma,86,Masaba,NYZ
+1387,Central Karungu,central-karungu,355,Karungu,87,Migori,NYZ
+1388,East Karungu,east-karungu,355,Karungu,87,Migori,NYZ
+1389,S.E. Karungu,s-e-karungu,355,Karungu,87,Migori,NYZ
+1390,West Karungu,west-karungu,355,Karungu,87,Migori,NYZ
+1391,Central Muhuru,central-muhuru,356,Muhuru,87,Migori,NYZ
+1392,East Muhuru,east-muhuru,356,Muhuru,87,Migori,NYZ
+1393,South East Muhuru,south-east-muhuru,356,Muhuru,87,Migori,NYZ
+1394,West Muhuru,west-muhuru,356,Muhuru,87,Migori,NYZ
+1395,Central Kadem,central-kadem,357,Nyatike,87,Migori,NYZ
+1396,East Kadem,east-kadem,357,Nyatike,87,Migori,NYZ
+1397,Kaler,kaler,357,Nyatike,87,Migori,NYZ
+1398,North East Kadem,north-east-kadem,357,Nyatike,87,Migori,NYZ
+1399,North Kadem,north-kadem,357,Nyatike,87,Migori,NYZ
+1400,South East Kadem,south-east-kadem,357,Nyatike,87,Migori,NYZ
+1401,South Kadem,south-kadem,357,Nyatike,87,Migori,NYZ
+1402,West Kadem,west-kadem,357,Nyatike,87,Migori,NYZ
+1403,Central Suna,central-suna,358,Suba East,87,Migori,NYZ
+1404,East Suna,east-suna,358,Suba East,87,Migori,NYZ
+1405,God Jope,god-jope,358,Suba East,87,Migori,NYZ
+1406,North Suna,north-suna,358,Suba East,87,Migori,NYZ
+1407,Suna Rabuor,suna-rabuor,358,Suba East,87,Migori,NYZ
+1408,Suna Ragana,suna-ragana,358,Suba East,87,Migori,NYZ
+1409,Upper Suna,upper-suna,358,Suba East,87,Migori,NYZ
+1410,Lower Suna,lower-suna,359,Suba West,87,Migori,NYZ
+1411,South Suna,south-suna,359,Suba West,87,Migori,NYZ
+1412,Suna Nyabisawa,suna-nyabisawa,359,Suba West,87,Migori,NYZ
+1413,Suna Raha,suna-raha,359,Suba West,87,Migori,NYZ
+1414,Suna Wasimbete,suna-wasimbete,359,Suba West,87,Migori,NYZ
+1415,West Suna,west-suna,359,Suba West,87,Migori,NYZ
+1416,Itibo,itibo,360,Ekerenyo,88,Nyamira,NYZ
+1417,Kiabonyoru,kiabonyoru,360,Ekerenyo,88,Nyamira,NYZ
+1418,Obwari,obwari,360,Ekerenyo,88,Nyamira,NYZ
+1419,Keera,keera,361,Nyamaiya,88,Nyamira,NYZ
+1420,W.Mugirango,w-mugirango,361,Nyamaiya,88,Nyamira,NYZ
+1421,Bogichora,bogichora,362,Nyamira,88,Nyamira,NYZ
+1422,Bonyamatuta Chache,bonyamatuta-chache,362,Nyamira,88,Nyamira,NYZ
+1423,Bonyamatuta Masaba,bonyamatuta-masaba,362,Nyamira,88,Nyamira,NYZ
+1424,Bosamaro Chache,bosamaro-chache,362,Nyamira,88,Nyamira,NYZ
+1425,Bosamaro Masaba,bosamaro-masaba,362,Nyamira,88,Nyamira,NYZ
+1426,Bokeira,bokeira,363,Nyamusi,88,Nyamira,NYZ
+1427,Bomwagamo,bomwagamo,363,Nyamusi,88,Nyamira,NYZ
+1428,Borangi,borangi,363,Nyamusi,88,Nyamira,NYZ
+1429,Asao,asao,364,Lower Nyakach,89,Nyando,NYZ
+1430,Central Nyakach,central-nyakach,364,Lower Nyakach,89,Nyando,NYZ
+1431,E. Nyakach,e-nyakach,364,Lower Nyakach,89,Nyando,NYZ
+1432,N. Nyakach,n-nyakach,364,Lower Nyakach,89,Nyando,NYZ
+1433,N.E. Nyakach,n-e-nyakach,364,Lower Nyakach,89,Nyando,NYZ
+1434,Nyalunya,nyalunya,364,Lower Nyakach,89,Nyando,NYZ
+1435,Pap-Onditi,pap-onditi,364,Lower Nyakach,89,Nyando,NYZ
+1436,Rangul,rangul,364,Lower Nyakach,89,Nyando,NYZ
+1437,N.E. Kano,n-e-kano,365,Miwani,89,Nyando,NYZ
+1438,Nyangoma,nyangoma,365,Miwani,89,Nyando,NYZ
+1439,Ombeyi,ombeyi,365,Miwani,89,Nyando,NYZ
+1440,Chemelil,chemelil,366,Muhoroni,89,Nyando,NYZ
+1441,Fort Ternan,fort-ternan,366,Muhoroni,89,Nyando,NYZ
+1442,God Nyithindo,god-nyithindo,366,Muhoroni,89,Nyando,NYZ
+1443,Koru,koru,366,Muhoroni,89,Nyando,NYZ
+1444,Muhoroni,muhoroni,366,Muhoroni,89,Nyando,NYZ
+1445,Tamu,tamu,366,Muhoroni,89,Nyando,NYZ
+1446,Awasi,awasi,367,Nyando,89,Nyando,NYZ
+1447,Kakola,kakola,367,Nyando,89,Nyando,NYZ
+1448,Kikolo (East Kano),kikolo-east-kano,367,Nyando,89,Nyando,NYZ
+1449,Kochogo,kochogo,367,Nyando,89,Nyando,NYZ
+1450,Onjiko,onjiko,367,Nyando,89,Nyando,NYZ
+1451,Wawidhi,wawidhi,367,Nyando,89,Nyando,NYZ
+1452,Oboch,oboch,368,Upper Nyakach,89,Nyando,NYZ
+1453,Sigoti,sigoti,368,Upper Nyakach,89,Nyando,NYZ
+1454,South Nyakach,south-nyakach,368,Upper Nyakach,89,Nyando,NYZ
+1455,Thurdibuoro,thurdibuoro,368,Upper Nyakach,89,Nyando,NYZ
+1456,West Nyakach,west-nyakach,368,Upper Nyakach,89,Nyando,NYZ
+1457,C. Karachounyo,c-karachounyo,369,East Karachuonyo,90,Rachuonyo,NYZ
+1458,Kamser Nyakongo,kamser-nyakongo,369,East Karachuonyo,90,Rachuonyo,NYZ
+1459,Kanyaluo East,kanyaluo-east,369,East Karachuonyo,90,Rachuonyo,NYZ
+1460,Kanyaluo South,kanyaluo-south,369,East Karachuonyo,90,Rachuonyo,NYZ
+1461,Kanyaluo West,kanyaluo-west,369,East Karachuonyo,90,Rachuonyo,NYZ
+1462,Kobuya,kobuya,369,East Karachuonyo,90,Rachuonyo,NYZ
+1463,Kogweno Oriang,kogweno-oriang,369,East Karachuonyo,90,Rachuonyo,NYZ
+1464,N.E. Karachuonyo,n-e-karachuonyo,369,East Karachuonyo,90,Rachuonyo,NYZ
+1465,North Karachuoyo,north-karachuoyo,369,East Karachuonyo,90,Rachuonyo,NYZ
+1466,Rambira,rambira,369,East Karachuonyo,90,Rachuonyo,NYZ
+1467,Wangchieng,wangchieng,369,East Karachuonyo,90,Rachuonyo,NYZ
+1468,Atela,atela,370,Kabondo,90,Rachuonyo,NYZ
+1469,Kasewe,kasewe,370,Kabondo,90,Rachuonyo,NYZ
+1470,Kawour,kawour,370,Kabondo,90,Rachuonyo,NYZ
+1471,Kodhoch West,kodhoch-west,370,Kabondo,90,Rachuonyo,NYZ
+1472,Ramba,ramba,370,Kabondo,90,Rachuonyo,NYZ
+1473,Ramula,ramula,370,Kabondo,90,Rachuonyo,NYZ
+1474,Wangchieng,wangchieng,370,Kabondo,90,Rachuonyo,NYZ
+1475,East Kamagak,east-kamagak,371,Kasipul,90,Rachuonyo,NYZ
+1476,Kachien,kachien,371,Kasipul,90,Rachuonyo,NYZ
+1477,Kakelo,kakelo,371,Kasipul,90,Rachuonyo,NYZ
+1478,Kamagak West,kamagak-west,371,Kasipul,90,Rachuonyo,NYZ
+1479,Kodera,kodera,371,Kasipul,90,Rachuonyo,NYZ
+1480,Kojwach,kojwach,371,Kasipul,90,Rachuonyo,NYZ
+1481,Kokech,kokech,371,Kasipul,90,Rachuonyo,NYZ
+1482,Kokwanyo,kokwanyo,371,Kasipul,90,Rachuonyo,NYZ
+1483,Konuonga,konuonga,371,Kasipul,90,Rachuonyo,NYZ
+1484,Kowidi,kowidi,371,Kasipul,90,Rachuonyo,NYZ
+1485,North Kamagak,north-kamagak,371,Kasipul,90,Rachuonyo,NYZ
+1486,Kakdhim West,kakdhim-west,372,W.Karachuonyo,90,Rachuonyo,NYZ
+1487,Kakdhimu East,kakdhimu-east,372,W.Karachuonyo,90,Rachuonyo,NYZ
+1488,Kakoth Kataa,kakoth-kataa,372,W.Karachuonyo,90,Rachuonyo,NYZ
+1489,Kakoth Kateng,kakoth-kateng,372,W.Karachuonyo,90,Rachuonyo,NYZ
+1490,Kanam A,kanam-a,372,W.Karachuonyo,90,Rachuonyo,NYZ
+1491,Kanam B,kanam-b,372,W.Karachuonyo,90,Rachuonyo,NYZ
+1492,Kanjira,kanjira,372,W.Karachuonyo,90,Rachuonyo,NYZ
+1493,Kanyipir,kanyipir,372,W.Karachuonyo,90,Rachuonyo,NYZ
+1494,Kawadhgone Nyongo,kawadhgone-nyongo,372,W.Karachuonyo,90,Rachuonyo,NYZ
+1495,Kobiero,kobiero,372,W.Karachuonyo,90,Rachuonyo,NYZ
+1496,Koyugi,koyugi,372,W.Karachuonyo,90,Rachuonyo,NYZ
+1497,Central Uyoma,central-uyoma,373,Madiany,91,Rarieda,NYZ
+1498,East Uyoma,east-uyoma,373,Madiany,91,Rarieda,NYZ
+1499,South Uyoma,south-uyoma,373,Madiany,91,Rarieda,NYZ
+1500,West Uyoma,west-uyoma,373,Madiany,91,Rarieda,NYZ
+1501,Central Asembo,central-asembo,374,Rarieda,91,Rarieda,NYZ
+1502,East Asembo,east-asembo,374,Rarieda,91,Rarieda,NYZ
+1503,South Asembo,south-asembo,374,Rarieda,91,Rarieda,NYZ
+1504,West Asembo,west-asembo,374,Rarieda,91,Rarieda,NYZ
+1505,Central Sakwa,central-sakwa,375,Awendo,92,Rongo,NYZ
+1506,East Sakwa,east-sakwa,375,Awendo,92,Rongo,NYZ
+1507,North Sakwa,north-sakwa,375,Awendo,92,Rongo,NYZ
+1508,South Sakwa,south-sakwa,375,Awendo,92,Rongo,NYZ
+1509,West Sakwa,west-sakwa,375,Awendo,92,Rongo,NYZ
+1510,C.Kamagambo,c-kamagambo,376,Rongo,92,Rongo,NYZ
+1511,E. Kamagambo,e-kamagambo,376,Rongo,92,Rongo,NYZ
+1512,N. Kamagambo,n-kamagambo,376,Rongo,92,Rongo,NYZ
+1513,S.Kamagambo,s-kamagambo,376,Rongo,92,Rongo,NYZ
+1514,W.Kamagambo,w-kamagambo,376,Rongo,92,Rongo,NYZ
+1515,Central Kanyamkago,central-kanyamkago,377,Uriri,92,Rongo,NYZ
+1516,East Kanyamkago,east-kanyamkago,377,Uriri,92,Rongo,NYZ
+1517,Kamgundho,kamgundho,377,Uriri,92,Rongo,NYZ
+1518,North Kanyamkago,north-kanyamkago,377,Uriri,92,Rongo,NYZ
+1519,South Kanyamkago,south-kanyamkago,377,Uriri,92,Rongo,NYZ
+1520,West Kanyamkago,west-kanyamkago,377,Uriri,92,Rongo,NYZ
+1521,Central Alego,central-alego,378,Boro,93,Siaya,NYZ
+1522,North Alego,north-alego,378,Boro,93,Siaya,NYZ
+1523,South Central Alego,south-central-alego,378,Boro,93,Siaya,NYZ
+1524,East Alego,east-alego,379,Karemo,93,Siaya,NYZ
+1525,Siaya Township,siaya-township,379,Karemo,93,Siaya,NYZ
+1526,South Alego,south-alego,379,Karemo,93,Siaya,NYZ
+1527,South East Alego,south-east-alego,379,Karemo,93,Siaya,NYZ
+1528,Central Ugenya,central-ugenya,380,Ugunja,93,Siaya,NYZ
+1529,East Uholo,east-uholo,380,Ugunja,93,Siaya,NYZ
+1530,North Uholo,north-uholo,380,Ugunja,93,Siaya,NYZ
+1531,South Ugenya,south-ugenya,380,Ugunja,93,Siaya,NYZ
+1532,West Uholo,west-uholo,380,Ugunja,93,Siaya,NYZ
+1533,East Ugenya,east-ugenya,381,Ukwala,93,Siaya,NYZ
+1534,North East Ugenya,north-east-ugenya,381,Ukwala,93,Siaya,NYZ
+1535,North Ugenya,north-ugenya,381,Ukwala,93,Siaya,NYZ
+1536,North West Ugenya,north-west-ugenya,381,Ukwala,93,Siaya,NYZ
+1537,Ukwala,ukwala,381,Ukwala,93,Siaya,NYZ
+1538,West Ugenya,west-ugenya,381,Ukwala,93,Siaya,NYZ
+1539,South Wst Alego,south-wst-alego,382,Uranga,93,Siaya,NYZ
+1540,Usonga,usonga,382,Uranga,93,Siaya,NYZ
+1541,West Alego,west-alego,382,Uranga,93,Siaya,NYZ
+1542,North East Gem,north-east-gem,383,Wagai,93,Siaya,NYZ
+1543,North West Gem,north-west-gem,383,Wagai,93,Siaya,NYZ
+1544,South Gem,south-gem,383,Wagai,93,Siaya,NYZ
+1545,South West Gem,south-west-gem,383,Wagai,93,Siaya,NYZ
+1546,West Gem,west-gem,383,Wagai,93,Siaya,NYZ
+1547,Central Gem,central-gem,384,Yala,93,Siaya,NYZ
+1548,East Gem,east-gem,384,Yala,93,Siaya,NYZ
+1549,North Gem,north-gem,384,Yala,93,Siaya,NYZ
+1550,Yala Township,yala-township,384,Yala,93,Siaya,NYZ
+1551,Kaksingri Centrl,kaksingri-centrl,385,Central,94,Suba,NYZ
+1552,Kaksingri East,kaksingri-east,385,Central,94,Suba,NYZ
+1553,Kaksingri West,kaksingri-west,385,Central,94,Suba,NYZ
+1554,Ruma,ruma,385,Central,94,Suba,NYZ
+1555,Gwassi Central,gwassi-central,386,Gwassi,94,Suba,NYZ
+1556,Gwassi East,gwassi-east,386,Gwassi,94,Suba,NYZ
+1557,Gwassi North,gwassi-north,386,Gwassi,94,Suba,NYZ
+1558,Gwassi South,gwassi-south,386,Gwassi,94,Suba,NYZ
+1559,Gwassi West,gwassi-west,386,Gwassi,94,Suba,NYZ
+1560,Lambwe East,lambwe-east,387,Lambwe,94,Suba,NYZ
+1561,Lambwe West,lambwe-west,387,Lambwe,94,Suba,NYZ
+1562,Gembe Central,gembe-central,388,Mbita,94,Suba,NYZ
+1563,Gembe East,gembe-east,388,Mbita,94,Suba,NYZ
+1564,Gembe West,gembe-west,388,Mbita,94,Suba,NYZ
+1565,Rusinga East,rusinga-east,388,Mbita,94,Suba,NYZ
+1566,Rusinga West,rusinga-west,388,Mbita,94,Suba,NYZ
+1567,Mfangano East,mfangano-east,389,Mfangano,94,Suba,NYZ
+1568,Mfangano North,mfangano-north,389,Mfangano,94,Suba,NYZ
+1569,Mfangano South,mfangano-south,389,Mfangano,94,Suba,NYZ
+1570,Mfangano West,mfangano-west,389,Mfangano,94,Suba,NYZ
+1571,Kaboskei,kaboskei,390,Bartabwa,95,Baringo North,RFT
+1572,Kinyach,kinyach,390,Bartabwa,95,Baringo North,RFT
+1573,Ngoroba,ngoroba,390,Bartabwa,95,Baringo North,RFT
+1574,Kaboskei Kerio,kaboskei-kerio,391,Barwessa,95,Baringo North,RFT
+1575,Kabutiei,kabutiei,391,Barwessa,95,Baringo North,RFT
+1576,Lawan,lawan,391,Barwessa,95,Baringo North,RFT
+1577,Bartum,bartum,392,Kabartonjo,95,Baringo North,RFT
+1578,Katiorin,katiorin,392,Kabartonjo,95,Baringo North,RFT
+1579,Kelyo,kelyo,392,Kabartonjo,95,Baringo North,RFT
+1580,Ossen,ossen,392,Kabartonjo,95,Baringo North,RFT
+1581,Saimo,saimo,392,Kabartonjo,95,Baringo North,RFT
+1582,Kapkata,kapkata,393,Kipsaraman,95,Baringo North,RFT
+1583,Kapteberewo,kapteberewo,393,Kipsaraman,95,Baringo North,RFT
+1584,Sibilo,sibilo,393,Kipsaraman,95,Baringo North,RFT
+1585,Ewalel,ewalel,394,Kabarnet,96,Baringo,RFT
+1586,Kabarnet Mosop,kabarnet-mosop,394,Kabarnet,96,Baringo,RFT
+1587,Kapropita,kapropita,394,Kabarnet,96,Baringo,RFT
+1588,Kituro,kituro,394,Kabarnet,96,Baringo,RFT
+1589,Ngetimoi,ngetimoi,394,Kabarnet,96,Baringo,RFT
+1590,Orokwo,orokwo,394,Kabarnet,96,Baringo,RFT
+1591,Talai,talai,394,Kabarnet,96,Baringo,RFT
+1592,Ewalel Soi,ewalel-soi,395,Marigat,96,Baringo,RFT
+1593,Ilchamus,ilchamus,395,Marigat,96,Baringo,RFT
+1594,Ilngaarua,ilngaarua,395,Marigat,96,Baringo,RFT
+1595,Kapkuikui,kapkuikui,395,Marigat,96,Baringo,RFT
+1596,Kimalel,kimalel,395,Marigat,96,Baringo,RFT
+1597,Kimondis,kimondis,395,Marigat,96,Baringo,RFT
+1598,Loboi,loboi,395,Marigat,96,Baringo,RFT
+1599,Marigat,marigat,395,Marigat,96,Baringo,RFT
+1600,Ngambo,ngambo,395,Marigat,96,Baringo,RFT
+1601,Salaban,salaban,395,Marigat,96,Baringo,RFT
+1602,Sandai,sandai,395,Marigat,96,Baringo,RFT
+1603,Arabal,arabal,396,Mochongoi,96,Baringo,RFT
+1604,Chebinyinyi,chebinyinyi,396,Mochongoi,96,Baringo,RFT
+1605,Kimoriot,kimoriot,396,Mochongoi,96,Baringo,RFT
+1606,Mochongoi,mochongoi,396,Mochongoi,96,Baringo,RFT
+1607,Kiserian,kiserian,397,Mukutani,96,Baringo,RFT
+1608,Mukutani,mukutani,397,Mukutani,96,Baringo,RFT
+1609,Chepkerwo,chepkerwo,398,Sacho,96,Baringo,RFT
+1610,Kabasis,kabasis,398,Sacho,96,Baringo,RFT
+1611,Kibonjos,kibonjos,398,Sacho,96,Baringo,RFT
+1612,Sacho Mosop,sacho-mosop,398,Sacho,96,Baringo,RFT
+1613,Sacho-Soi,sacho-soi,398,Sacho,96,Baringo,RFT
+1614,Kabarnet Soi,kabarnet-soi,399,Salawa,96,Baringo,RFT
+1615,Kapropita Soi,kapropita-soi,399,Salawa,96,Baringo,RFT
+1616,Kiboino,kiboino,399,Salawa,96,Baringo,RFT
+1617,Lelmen,lelmen,399,Salawa,96,Baringo,RFT
+1618,Bekibon,bekibon,400,Tenges,96,Baringo,RFT
+1619,Emom,emom,400,Tenges,96,Baringo,RFT
+1620,Kisonei,kisonei,400,Tenges,96,Baringo,RFT
+1621,Tenges,tenges,400,Tenges,96,Baringo,RFT
+1622,Tuluongoi,tuluongoi,400,Tenges,96,Baringo,RFT
+1623,Chesoen,chesoen,401,Bomet Central,97,Bomet,RFT
+1624,Itembe,itembe,401,Bomet Central,97,Bomet,RFT
+1625,Kiromwok,kiromwok,401,Bomet Central,97,Bomet,RFT
+1626,Kyogong,kyogong,401,Bomet Central,97,Bomet,RFT
+1627,Merigi,merigi,401,Bomet Central,97,Bomet,RFT
+1628,Mugango,mugango,401,Bomet Central,97,Bomet,RFT
+1629,Ndaraweta,ndaraweta,401,Bomet Central,97,Bomet,RFT
+1630,Sibaiyan,sibaiyan,401,Bomet Central,97,Bomet,RFT
+1631,Singorwet,singorwet,401,Bomet Central,97,Bomet,RFT
+1632,Township,township,401,Bomet Central,97,Bomet,RFT
+1633,Cheboin,cheboin,402,Longisa,97,Bomet,RFT
+1634,Chemaner,chemaner,402,Longisa,97,Bomet,RFT
+1635,Kapkimolwa,kapkimolwa,402,Longisa,97,Bomet,RFT
+1636,Kembu,kembu,402,Longisa,97,Bomet,RFT
+1637,Kimunchul,kimunchul,402,Longisa,97,Bomet,RFT
+1638,Kiplabotwa,kiplabotwa,402,Longisa,97,Bomet,RFT
+1639,Kipreres,kipreres,402,Longisa,97,Bomet,RFT
+1640,Tegat,tegat,402,Longisa,97,Bomet,RFT
+1641,Cheleget,cheleget,403,Sigor,97,Bomet,RFT
+1642,Kaboson,kaboson,403,Sigor,97,Bomet,RFT
+1643,Kapkesosio,kapkesosio,403,Sigor,97,Bomet,RFT
+1644,Lelaitich,lelaitich,403,Sigor,97,Bomet,RFT
+1645,Sigor,sigor,403,Sigor,97,Bomet,RFT
+1646,Sugumerga,sugumerga,403,Sigor,97,Bomet,RFT
+1647,Bingwa,bingwa,404,Siongiroi,97,Bomet,RFT
+1648,Chebunyo,chebunyo,404,Siongiroi,97,Bomet,RFT
+1649,Kamaget,kamaget,404,Siongiroi,97,Bomet,RFT
+1650,Kongasis,kongasis,404,Siongiroi,97,Bomet,RFT
+1651,Makimeny,makimeny,404,Siongiroi,97,Bomet,RFT
+1652,Mogor,mogor,404,Siongiroi,97,Bomet,RFT
+1653,Siongiroi,siongiroi,404,Siongiroi,97,Bomet,RFT
+1654,Chebwagan,chebwagan,405,Buret,98,Buret,RFT
+1655,Chemoiben,chemoiben,405,Buret,98,Buret,RFT
+1656,Cheplanget,cheplanget,405,Buret,98,Buret,RFT
+1657,Kapkatet,kapkatet,405,Buret,98,Buret,RFT
+1658,Kusumek,kusumek,405,Buret,98,Buret,RFT
+1659,Litein,litein,405,Buret,98,Buret,RFT
+1660,Ngesumin,ngesumin,405,Buret,98,Buret,RFT
+1661,Cheboin,cheboin,406,Cheborge,98,Buret,RFT
+1662,Cheborge,cheborge,406,Cheborge,98,Buret,RFT
+1663,Kapsogut,kapsogut,406,Cheborge,98,Buret,RFT
+1664,Kibugat,kibugat,406,Cheborge,98,Buret,RFT
+1665,Tebesonik,tebesonik,406,Cheborge,98,Buret,RFT
+1666,Techoget,techoget,406,Cheborge,98,Buret,RFT
+1667,Cheptalal,cheptalal,407,Cheptalal,98,Buret,RFT
+1668,Embomos,embomos,407,Cheptalal,98,Buret,RFT
+1669,Kiptenden,kiptenden,407,Cheptalal,98,Buret,RFT
+1670,Satiet,satiet,407,Cheptalal,98,Buret,RFT
+1671,Sotit,sotit,407,Cheptalal,98,Buret,RFT
+1672,Chebagang,chebagang,408,Kimulot,98,Buret,RFT
+1673,Kaptebengwet,kaptebengwet,408,Kimulot,98,Buret,RFT
+1674,Kaptien,kaptien,408,Kimulot,98,Buret,RFT
+1675,Kimulot,kimulot,408,Kimulot,98,Buret,RFT
+1676,Saosa,saosa,408,Kimulot,98,Buret,RFT
+1677,Boito,boito,409,Konoin,98,Buret,RFT
+1678,Chemelet,chemelet,409,Konoin,98,Buret,RFT
+1679,Koiwa,koiwa,409,Konoin,98,Buret,RFT
+1680,Mogogosiek,mogogosiek,409,Konoin,98,Buret,RFT
+1681,Mosonik,mosonik,409,Konoin,98,Buret,RFT
+1682,Simot,simot,409,Konoin,98,Buret,RFT
+1683,Chemosot,chemosot,410,Roret,98,Buret,RFT
+1684,Getarwet,getarwet,410,Roret,98,Buret,RFT
+1685,Kabartegan,kabartegan,410,Roret,98,Buret,RFT
+1686,Kapkisiara,kapkisiara,410,Roret,98,Buret,RFT
+1687,Kisiara,kisiara,410,Roret,98,Buret,RFT
+1688,Tulwet,tulwet,410,Roret,98,Buret,RFT
+1689,Tinet Forest,tinet-forest,411,Tinet Forest,98,Buret,RFT
+1690,Amaya,amaya,412,Churo,99,East Pokot,RFT
+1691,Churo,churo,412,Churo,99,East Pokot,RFT
+1692,Kaptuya,kaptuya,412,Churo,99,East Pokot,RFT
+1693,Kollowa,kollowa,413,Kollowa,99,East Pokot,RFT
+1694,Loiwat,loiwat,413,Kollowa,99,East Pokot,RFT
+1695,Lokis,lokis,413,Kollowa,99,East Pokot,RFT
+1696,Ngoron,ngoron,413,Kollowa,99,East Pokot,RFT
+1697,Tirioko,tirioko,413,Kollowa,99,East Pokot,RFT
+1698,Loruk,loruk,414,Mondi,99,East Pokot,RFT
+1699,Loyamorock,loyamorock,414,Mondi,99,East Pokot,RFT
+1700,Naudo,naudo,414,Mondi,99,East Pokot,RFT
+1701,Silale,silale,414,Mondi,99,East Pokot,RFT
+1702,Akoret,akoret,415,Nginyang,99,East Pokot,RFT
+1703,Kositei,kositei,415,Nginyang,99,East Pokot,RFT
+1704,Ribkwo,ribkwo,415,Nginyang,99,East Pokot,RFT
+1705,Korossi,korossi,416,Tangulbei,99,East Pokot,RFT
+1706,Orus,orus,416,Tangulbei,99,East Pokot,RFT
+1707,Tangulbei,tangulbei,416,Tangulbei,99,East Pokot,RFT
+1708,Ainabkoi,ainabkoi,417,Ainabkoi,100,Eldoret East,RFT
+1709,Chepkero,chepkero,417,Ainabkoi,100,Eldoret East,RFT
+1710,Chepngoror,chepngoror,417,Ainabkoi,100,Eldoret East,RFT
+1711,Kapngetuny,kapngetuny,417,Ainabkoi,100,Eldoret East,RFT
+1712,Kapsoya,kapsoya,417,Ainabkoi,100,Eldoret East,RFT
+1713,Kaptagat,kaptagat,417,Ainabkoi,100,Eldoret East,RFT
+1714,Kipkabus,kipkabus,417,Ainabkoi,100,Eldoret East,RFT
+1715,Kipsinende,kipsinende,417,Ainabkoi,100,Eldoret East,RFT
+1716,Olare,olare,417,Ainabkoi,100,Eldoret East,RFT
+1717,Plateau,plateau,417,Ainabkoi,100,Eldoret East,RFT
+1718,Chepkoilel,chepkoilel,418,Moiben,100,Eldoret East,RFT
+1719,Kaplolo,kaplolo,418,Moiben,100,Eldoret East,RFT
+1720,Karuna,karuna,418,Moiben,100,Eldoret East,RFT
+1721,Kimoning,kimoning,418,Moiben,100,Eldoret East,RFT
+1722,Koitoror,koitoror,418,Moiben,100,Eldoret East,RFT
+1723,Moibeki,moibeki,418,Moiben,100,Eldoret East,RFT
+1724,Moiben,moiben,418,Moiben,100,Eldoret East,RFT
+1725,Mumetet,mumetet,418,Moiben,100,Eldoret East,RFT
+1726,Sergoit,sergoit,418,Moiben,100,Eldoret East,RFT
+1727,Tembelio,tembelio,418,Moiben,100,Eldoret East,RFT
+1728,Barsombe,barsombe,419,Soy,101,Eldoret West,RFT
+1729,Kibulgeny,kibulgeny,419,Soy,101,Eldoret West,RFT
+1730,Kiplombe,kiplombe,419,Soy,101,Eldoret West,RFT
+1731,Kipsomba,kipsomba,419,Soy,101,Eldoret West,RFT
+1732,Koisagat,koisagat,419,Soy,101,Eldoret West,RFT
+1733,Mois Bridge,mois-bridge,419,Soy,101,Eldoret West,RFT
+1734,Segero,segero,419,Soy,101,Eldoret West,RFT
+1735,Sirikwa,sirikwa,419,Soy,101,Eldoret West,RFT
+1736,Soy,soy,419,Soy,101,Eldoret West,RFT
+1737,Ziwa,ziwa,419,Soy,101,Eldoret West,RFT
+1738,Kamagut,kamagut,420,Turbo,101,Eldoret West,RFT
+1739,Kaptambee,kaptambee,420,Turbo,101,Eldoret West,RFT
+1740,Kapyemit,kapyemit,420,Turbo,101,Eldoret West,RFT
+1741,Ngenyilel,ngenyilel,420,Turbo,101,Eldoret West,RFT
+1742,Sosiani,sosiani,420,Turbo,101,Eldoret West,RFT
+1743,Sugoi,sugoi,420,Turbo,101,Eldoret West,RFT
+1744,Tapsagoi,tapsagoi,420,Turbo,101,Eldoret West,RFT
+1745,Elangata Wuas,elangata-wuas,421,Central,102,Kajiado Central,RFT
+1746,Enkaroni,enkaroni,421,Central,102,Kajiado Central,RFT
+1747,Enkorika,enkorika,421,Central,102,Kajiado Central,RFT
+1748,Ildamat,ildamat,421,Central,102,Kajiado Central,RFT
+1749,Kikuro,kikuro,421,Central,102,Kajiado Central,RFT
+1750,Kilonito,kilonito,421,Central,102,Kajiado Central,RFT
+1751,Loodokilani,loodokilani,421,Central,102,Kajiado Central,RFT
+1752,Nkoile,nkoile,421,Central,102,Kajiado Central,RFT
+1753,Olbelibel,olbelibel,421,Central,102,Kajiado Central,RFT
+1754,Olontulungum,olontulungum,421,Central,102,Kajiado Central,RFT
+1755,Sajiloni,sajiloni,421,Central,102,Kajiado Central,RFT
+1756,Torosei,torosei,421,Central,102,Kajiado Central,RFT
+1757,Township,township,421,Central,102,Kajiado Central,RFT
+1758,Arroi,arroi,422,Mashuru,102,Kajiado Central,RFT
+1759,Ilmunkush,ilmunkush,422,Mashuru,102,Kajiado Central,RFT
+1760,Imaroro,imaroro,422,Mashuru,102,Kajiado Central,RFT
+1761,Kinyewa,kinyewa,422,Mashuru,102,Kajiado Central,RFT
+1762,Mafarasha,mafarasha,422,Mashuru,102,Kajiado Central,RFT
+1763,Merrueshi,merrueshi,422,Mashuru,102,Kajiado Central,RFT
+1764,Nkama,nkama,422,Mashuru,102,Kajiado Central,RFT
+1765,Osilalei,osilalei,422,Mashuru,102,Kajiado Central,RFT
+1766,Poka,poka,422,Mashuru,102,Kajiado Central,RFT
+1767,Bissil,bissil,423,Namanga,102,Kajiado Central,RFT
+1768,Longorswa,longorswa,423,Namanga,102,Kajiado Central,RFT
+1769,Mailwa,mailwa,423,Namanga,102,Kajiado Central,RFT
+1770,Meto,meto,423,Namanga,102,Kajiado Central,RFT
+1771,Namanga,namanga,423,Namanga,102,Kajiado Central,RFT
+1772,Central Keekonyokie,central-keekonyokie,424,Ewaso Kedong,103,Kajiado North,RFT
+1773,Enstashat,enstashat,424,Ewaso Kedong,103,Kajiado North,RFT
+1774,Esonorua,esonorua,424,Ewaso Kedong,103,Kajiado North,RFT
+1775,Mosiro,mosiro,424,Ewaso Kedong,103,Kajiado North,RFT
+1776,North Keekonyokie,north-keekonyokie,424,Ewaso Kedong,103,Kajiado North,RFT
+1777,Isinya,isinya,425,Isinya,103,Kajiado North,RFT
+1778,Kitenkela,kitenkela,425,Isinya,103,Kajiado North,RFT
+1779,Oloosirkon,oloosirkon,425,Isinya,103,Kajiado North,RFT
+1780,Olturoto,olturoto,425,Isinya,103,Kajiado North,RFT
+1781,Magadi,magadi,426,Magadi,103,Kajiado North,RFT
+1782,Oldonyo-Nyokie,oldonyo-nyokie,426,Magadi,103,Kajiado North,RFT
+1783,Olkiramatian,olkiramatian,426,Magadi,103,Kajiado North,RFT
+1784,Shompole,shompole,426,Magadi,103,Kajiado North,RFT
+1785,Kiserian,kiserian,427,Ngong,103,Kajiado North,RFT
+1786,Lemelepo,lemelepo,427,Ngong,103,Kajiado North,RFT
+1787,Ngong,ngong,427,Ngong,103,Kajiado North,RFT
+1788,Nkaimurunya,nkaimurunya,427,Ngong,103,Kajiado North,RFT
+1789,Olchorro-Onyore,olchorro-onyore,427,Ngong,103,Kajiado North,RFT
+1790,Olkeri,olkeri,427,Ngong,103,Kajiado North,RFT
+1791,Oloolua,oloolua,427,Ngong,103,Kajiado North,RFT
+1792,Ongata Rongai,ongata-rongai,427,Ngong,103,Kajiado North,RFT
+1793,South Keekonyoike,south-keekonyoike,427,Ngong,103,Kajiado North,RFT
+1794,Kabiemit,kabiemit,428,Chepkorio,104,Keiyo,RFT
+1795,Kaptarakwa,kaptarakwa,428,Chepkorio,104,Keiyo,RFT
+1796,Kitany,kitany,428,Chepkorio,104,Keiyo,RFT
+1797,Marichor,marichor,428,Chepkorio,104,Keiyo,RFT
+1798,Mosop,mosop,428,Chepkorio,104,Keiyo,RFT
+1799,Nyaru,nyaru,428,Chepkorio,104,Keiyo,RFT
+1800,Chebaror,chebaror,429,Kamariny,104,Keiyo,RFT
+1801,Irong,irong,429,Kamariny,104,Keiyo,RFT
+1802,Kamoi,kamoi,429,Kamariny,104,Keiyo,RFT
+1803,Kapchemutwa,kapchemutwa,429,Kamariny,104,Keiyo,RFT
+1804,Mutei,mutei,429,Kamariny,104,Keiyo,RFT
+1805,Kamwosor,kamwosor,430,Metkei,104,Keiyo,RFT
+1806,Kapkwony,kapkwony,430,Metkei,104,Keiyo,RFT
+1807,Kocholwo,kocholwo,430,Metkei,104,Keiyo,RFT
+1808,Maoi,maoi,430,Metkei,104,Keiyo,RFT
+1809,Metkei,metkei,430,Metkei,104,Keiyo,RFT
+1810,Tumeiyo,tumeiyo,430,Metkei,104,Keiyo,RFT
+1811,Chemoibon,chemoibon,431,Soy,104,Keiyo,RFT
+1812,Chepsigot,chepsigot,431,Soy,104,Keiyo,RFT
+1813,Epke,epke,431,Soy,104,Keiyo,RFT
+1814,Kibargoi,kibargoi,431,Soy,104,Keiyo,RFT
+1815,Soy,soy,431,Soy,104,Keiyo,RFT
+1816,Kamogich,kamogich,432,Tambach,104,Keiyo,RFT
+1817,Keu,keu,432,Tambach,104,Keiyo,RFT
+1818,Kiptuilong,kiptuilong,432,Tambach,104,Keiyo,RFT
+1819,Kokwao,kokwao,432,Tambach,104,Keiyo,RFT
+1820,Ainamoi,ainamoi,433,Ainamoi,105,Kericho,RFT
+1821,Chepkoinik,chepkoinik,433,Ainamoi,105,Kericho,RFT
+1822,Kapsaos,kapsaos,433,Ainamoi,105,Kericho,RFT
+1823,Kapsoit,kapsoit,433,Ainamoi,105,Kericho,RFT
+1824,Kenegut,kenegut,433,Ainamoi,105,Kericho,RFT
+1825,Kipchebor,kipchebor,433,Ainamoi,105,Kericho,RFT
+1826,Poiywek,poiywek,433,Ainamoi,105,Kericho,RFT
+1827,Sitotwet,sitotwet,433,Ainamoi,105,Kericho,RFT
+1828,Telanet,telanet,433,Ainamoi,105,Kericho,RFT
+1829,Tendwet,tendwet,433,Ainamoi,105,Kericho,RFT
+1830,Township,township,433,Ainamoi,105,Kericho,RFT
+1831,Kaborok,kaborok,434,Belgut,105,Kericho,RFT
+1832,Kapsuser,kapsuser,434,Belgut,105,Kericho,RFT
+1833,Kaptoboit,kaptoboit,434,Belgut,105,Kericho,RFT
+1834,Kipkoiyan,kipkoiyan,434,Belgut,105,Kericho,RFT
+1835,Kipsolu,kipsolu,434,Belgut,105,Kericho,RFT
+1836,Waldai,waldai,434,Belgut,105,Kericho,RFT
+1837,Chaik,chaik,435,Kabianga,105,Kericho,RFT
+1838,Chemamul,chemamul,435,Kabianga,105,Kericho,RFT
+1839,Kabianga,kabianga,435,Kabianga,105,Kericho,RFT
+1840,Kiptome,kiptome,435,Kabianga,105,Kericho,RFT
+1841,Mobego,mobego,435,Kabianga,105,Kericho,RFT
+1842,Seretut,seretut,435,Kabianga,105,Kericho,RFT
+1843,Cheptuiyet,cheptuiyet,436,Sigowet,105,Kericho,RFT
+1844,Iraa,iraa,436,Sigowet,105,Kericho,RFT
+1845,Kabeneti,kabeneti,436,Sigowet,105,Kericho,RFT
+1846,Kaplelartet,kaplelartet,436,Sigowet,105,Kericho,RFT
+1847,Kiptere,kiptere,436,Sigowet,105,Kericho,RFT
+1848,Kolyongowet,kolyongowet,436,Sigowet,105,Kericho,RFT
+1849,Sigowet,sigowet,436,Sigowet,105,Kericho,RFT
+1850,Kaitui,kaitui,437,Soin,105,Kericho,RFT
+1851,Kapsegut,kapsegut,437,Soin,105,Kericho,RFT
+1852,Kapsorok,kapsorok,437,Soin,105,Kericho,RFT
+1853,Koitaburot,koitaburot,437,Soin,105,Kericho,RFT
+1854,Soin,soin,437,Soin,105,Kericho,RFT
+1855,Soliat,soliat,437,Soin,105,Kericho,RFT
+1856,Cheboswa,cheboswa,438,Chepseon,106,Kipkelion,RFT
+1857,Chepseon,chepseon,438,Chepseon,106,Kipkelion,RFT
+1858,Kapseger,kapseger,438,Chepseon,106,Kipkelion,RFT
+1859,Kimugul,kimugul,438,Chepseon,106,Kipkelion,RFT
+1860,Kipyemit,kipyemit,438,Chepseon,106,Kipkelion,RFT
+1861,Chilchila,chilchila,439,Chilchila,106,Kipkelion,RFT
+1862,Kipteris,kipteris,439,Chilchila,106,Kipkelion,RFT
+1863,Kokwet,kokwet,439,Chilchila,106,Kipkelion,RFT
+1864,Siwot,siwot,439,Chilchila,106,Kipkelion,RFT
+1865,Toroto,toroto,439,Chilchila,106,Kipkelion,RFT
+1866,Borowet,borowet,440,Kamasian,106,Kipkelion,RFT
+1867,Kamasian,kamasian,440,Kamasian,106,Kipkelion,RFT
+1868,Kipsegi,kipsegi,440,Kamasian,106,Kipkelion,RFT
+1869,Leloch,leloch,440,Kamasian,106,Kipkelion,RFT
+1870,Barsiele,barsiele,441,Kipkelion,106,Kipkelion,RFT
+1871,Kipchorian,kipchorian,441,Kipkelion,106,Kipkelion,RFT
+1872,Lesirwa,lesirwa,441,Kipkelion,106,Kipkelion,RFT
+1873,Macheisok,macheisok,441,Kipkelion,106,Kipkelion,RFT
+1874,Kapkoros,kapkoros,442,Kunyak,106,Kipkelion,RFT
+1875,Kapkwen,kapkwen,442,Kunyak,106,Kipkelion,RFT
+1876,Kunyak,kunyak,442,Kunyak,106,Kipkelion,RFT
+1877,Kedowa,kedowa,443,Londiani,106,Kipkelion,RFT
+1878,Kimasian,kimasian,443,Londiani,106,Kipkelion,RFT
+1879,Kipsirichet,kipsirichet,443,Londiani,106,Kipkelion,RFT
+1880,Lemotit,lemotit,443,Londiani,106,Kipkelion,RFT
+1881,Londiani,londiani,443,Londiani,106,Kipkelion,RFT
+1882,Subukia,subukia,443,Londiani,106,Kipkelion,RFT
+1883,Tendeno,tendeno,443,Londiani,106,Kipkelion,RFT
+1884,Masaita,masaita,444,Sorget,106,Kipkelion,RFT
+1885,Sorget,sorget,444,Sorget,106,Kipkelion,RFT
+1886,Kabiyet,kabiyet,445,Eldama Ravine,107,Koibatek,RFT
+1887,Koisamo,koisamo,445,Eldama Ravine,107,Koibatek,RFT
+1888,Lembus-Central,lembus-central,445,Eldama Ravine,107,Koibatek,RFT
+1889,Lembus-Chemorgong,lembus-chemorgong,445,Eldama Ravine,107,Koibatek,RFT
+1890,Lembus-Kiptoim,lembus-kiptoim,445,Eldama Ravine,107,Koibatek,RFT
+1891,Maji Mazuri,maji-mazuri,445,Eldama Ravine,107,Koibatek,RFT
+1892,Perkerra,perkerra,445,Eldama Ravine,107,Koibatek,RFT
+1893,Ravine,ravine,445,Eldama Ravine,107,Koibatek,RFT
+1894,Saos-Kibias,saos-kibias,445,Eldama Ravine,107,Koibatek,RFT
+1895,Emining,emining,446,Emining,107,Koibatek,RFT
+1896,Kimose,kimose,446,Emining,107,Koibatek,RFT
+1897,Koibos-Soi,koibos-soi,446,Emining,107,Koibatek,RFT
+1898,Koitebes,koitebes,446,Emining,107,Koibatek,RFT
+1899,Rosoga,rosoga,446,Emining,107,Koibatek,RFT
+1900,Kiplombe,kiplombe,447,Esageri,107,Koibatek,RFT
+1901,Lembus-Kabimoi,lembus-kabimoi,447,Esageri,107,Koibatek,RFT
+1902,Lembus-Kiptoim,lembus-kiptoim,447,Esageri,107,Koibatek,RFT
+1903,Sabatia,sabatia,447,Esageri,107,Koibatek,RFT
+1904,Cheberen,cheberen,448,Kimngorom,107,Koibatek,RFT
+1905,Kimngoron,kimngoron,448,Kimngorom,107,Koibatek,RFT
+1906,Kabuswo,kabuswo,449,Kisanana,107,Koibatek,RFT
+1907,Kapnosgei,kapnosgei,449,Kisanana,107,Koibatek,RFT
+1908,Kisanana,kisanana,449,Kisanana,107,Koibatek,RFT
+1909,Ngendalel,ngendalel,449,Kisanana,107,Koibatek,RFT
+1910,Oldebes,oldebes,449,Kisanana,107,Koibatek,RFT
+1911,Olkokwe,olkokwe,449,Kisanana,107,Koibatek,RFT
+1912,Sinende,sinende,449,Kisanana,107,Koibatek,RFT
+1913,Kamar,kamar,450,Mogotio,107,Koibatek,RFT
+1914,Kapkechui,kapkechui,450,Mogotio,107,Koibatek,RFT
+1915,Koabos,koabos,450,Mogotio,107,Koibatek,RFT
+1916,Lembus-Mogoto,lembus-mogoto,450,Mogotio,107,Koibatek,RFT
+1917,Molosirwe,molosirwe,450,Mogotio,107,Koibatek,RFT
+1918,Ngubereti,ngubereti,450,Mogotio,107,Koibatek,RFT
+1919,Simotwe,simotwe,450,Mogotio,107,Koibatek,RFT
+1920,Lembus-Mosop,lembus-mosop,451,Mumberes,107,Koibatek,RFT
+1921,Mumberes,mumberes,451,Mumberes,107,Koibatek,RFT
+1922,Sirwa,sirwa,452,Sirwa,107,Koibatek,RFT
+1923,Torongo,torongo,453,Torongo,107,Koibatek,RFT
+1924,Tugumoi,tugumoi,453,Torongo,107,Koibatek,RFT
+1925,Chepchoina,chepchoina,454,Endebess,108,Kwanza,RFT
+1926,Endebess,endebess,454,Endebess,108,Kwanza,RFT
+1927,Kaibei,kaibei,454,Endebess,108,Kwanza,RFT
+1928,Kaisagat,kaisagat,455,Kwanza,108,Kwanza,RFT
+1929,Kapomboi,kapomboi,455,Kwanza,108,Kwanza,RFT
+1930,Kapsitwet,kapsitwet,455,Kwanza,108,Kwanza,RFT
+1931,Kwanza,kwanza,455,Kwanza,108,Kwanza,RFT
+1932,Namanjalala,namanjalala,455,Kwanza,108,Kwanza,RFT
+1933,Impala,impala,456,Central,109,Laikipia East,RFT
+1934,Marura,marura,456,Central,109,Laikipia East,RFT
+1935,Nanyuki,nanyuki,456,Central,109,Laikipia East,RFT
+1936,Nturukuma,nturukuma,456,Central,109,Laikipia East,RFT
+1937,Segera,segera,456,Central,109,Laikipia East,RFT
+1938,Ethi,ethi,457,Daiga,109,Laikipia East,RFT
+1939,Naibor,naibor,457,Daiga,109,Laikipia East,RFT
+1940,Umande,umande,457,Daiga,109,Laikipia East,RFT
+1941,Lamuria,lamuria,458,Lamuria,109,Laikipia East,RFT
+1942,Sirima,sirima,458,Lamuria,109,Laikipia East,RFT
+1943,Tigithi,tigithi,458,Lamuria,109,Laikipia East,RFT
+1944,Mwituria,mwituria,459,Munyaka,109,Laikipia East,RFT
+1945,Ngobit,ngobit,459,Munyaka,109,Laikipia East,RFT
+1946,Wiyumiririe,wiyumiririe,459,Munyaka,109,Laikipia East,RFT
+1947,Ildigiri,ildigiri,460,Mukogodo,110,Laikipia North,RFT
+1948,Ilingwesi,ilingwesi,460,Mukogodo,110,Laikipia North,RFT
+1949,Ilipolei,ilipolei,460,Mukogodo,110,Laikipia North,RFT
+1950,Ilmotiok,ilmotiok,460,Mukogodo,110,Laikipia North,RFT
+1951,Makurian,makurian,460,Mukogodo,110,Laikipia North,RFT
+1952,Mukogodo,mukogodo,460,Mukogodo,110,Laikipia North,RFT
+1953,Mumunyot,mumunyot,460,Mukogodo,110,Laikipia North,RFT
+1954,Oloibosoit,oloibosoit,460,Mukogodo,110,Laikipia North,RFT
+1955,Sieku,sieku,460,Mukogodo,110,Laikipia North,RFT
+1956,Gituamba,gituamba,461,Ngarua,111,Laikipia West,RFT
+1957,Karaba,karaba,461,Ngarua,111,Laikipia West,RFT
+1958,Kinamba,kinamba,461,Ngarua,111,Laikipia West,RFT
+1959,Muhotetu,muhotetu,461,Ngarua,111,Laikipia West,RFT
+1960,Sipili,sipili,461,Ngarua,111,Laikipia West,RFT
+1961,Igwamiti,igwamiti,462,Nyahururu,111,Laikipia West,RFT
+1962,Maina,maina,462,Nyahururu,111,Laikipia West,RFT
+1963,Mutitu,mutitu,462,Nyahururu,111,Laikipia West,RFT
+1964,Nyahururu,nyahururu,462,Nyahururu,111,Laikipia West,RFT
+1965,Krima,krima,463,Olmoran,111,Laikipia West,RFT
+1966,Lonyiek,lonyiek,463,Olmoran,111,Laikipia West,RFT
+1967,Magadi,magadi,463,Olmoran,111,Laikipia West,RFT
+1968,Olmoran,olmoran,463,Olmoran,111,Laikipia West,RFT
+1969,Marmanet,marmanet,464,Rumuruti,111,Laikipia West,RFT
+1970,Mutara,mutara,464,Rumuruti,111,Laikipia West,RFT
+1971,Muthengera,muthengera,464,Rumuruti,111,Laikipia West,RFT
+1972,Rumuruti,rumuruti,464,Rumuruti,111,Laikipia West,RFT
+1973,Salama,salama,464,Rumuruti,111,Laikipia West,RFT
+1974,Sosian,sosian,464,Rumuruti,111,Laikipia West,RFT
+1975,Kuku,kuku,465,Central,112,Loitokitok,RFT
+1976,Loolopon,loolopon,465,Central,112,Loitokitok,RFT
+1977,Olorika,olorika,465,Central,112,Loitokitok,RFT
+1978,Amboseli,amboseli,466,Entonet,112,Loitokitok,RFT
+1979,Entonet,entonet,466,Entonet,112,Loitokitok,RFT
+1980,Olchorro,olchorro,466,Entonet,112,Loitokitok,RFT
+1981,Inkariak -Ronkena,inkariak-ronkena,467,Kimana,112,Loitokitok,RFT
+1982,Kimana,kimana,467,Kimana,112,Loitokitok,RFT
+1983,Esselengei,esselengei,468,Lenkisim,112,Loitokitok,RFT
+1984,Lenkisim,lenkisim,468,Lenkisim,112,Loitokitok,RFT
+1985,Olgulului,olgulului,468,Lenkisim,112,Loitokitok,RFT
+1986,Mbirikani,mbirikani,469,Oltiasika,112,Loitokitok,RFT
+1987,Oltasika,oltasika,469,Oltiasika,112,Loitokitok,RFT
+1988,Entarara,entarara,470,Rombo,112,Loitokitok,RFT
+1989,Njukini,njukini,470,Rombo,112,Loitokitok,RFT
+1990,Rombo,rombo,470,Rombo,112,Loitokitok,RFT
+1991,Kuserwo,kuserwo,471,Chebiemit,113,Marakwet,RFT
+1992,Moiben,moiben,471,Chebiemit,113,Marakwet,RFT
+1993,Chebororwa,chebororwa,472,Kapcherop,113,Marakwet,RFT
+1994,Cherengany,cherengany,472,Kapcherop,113,Marakwet,RFT
+1995,Kamoi,kamoi,472,Kapcherop,113,Marakwet,RFT
+1996,Kapchochur,kapchochur,472,Kapcherop,113,Marakwet,RFT
+1997,Kapterit,kapterit,472,Kapcherop,113,Marakwet,RFT
+1998,Koisungur,koisungur,472,Kapcherop,113,Marakwet,RFT
+1999,Lelan,lelan,472,Kapcherop,113,Marakwet,RFT
+2000,Sengwer,sengwer,472,Kapcherop,113,Marakwet,RFT
+2001,Kapsowar,kapsowar,473,Kapsowar,113,Marakwet,RFT
+2002,Kipsaiya,kipsaiya,473,Kapsowar,113,Marakwet,RFT
+2003,Koibarak,koibarak,473,Kapsowar,113,Marakwet,RFT
+2004,Kaptich,kaptich,474,Kapyego,113,Marakwet,RFT
+2005,Kapyego,kapyego,474,Kapyego,113,Marakwet,RFT
+2006,Embobut,embobut,475,Tirap,113,Marakwet,RFT
+2007,Embolot,embolot,475,Tirap,113,Marakwet,RFT
+2008,Kipkaner,kipkaner,475,Tirap,113,Marakwet,RFT
+2009,Koibatek,koibatek,475,Tirap,113,Marakwet,RFT
+2010,Sambirir,sambirir,475,Tirap,113,Marakwet,RFT
+2011,Endo,endo,476,Tot,113,Marakwet,RFT
+2012,Kaben,kaben,476,Tot,113,Marakwet,RFT
+2013,Koibirir,koibirir,476,Tot,113,Marakwet,RFT
+2014,Mokoro,mokoro,476,Tot,113,Marakwet,RFT
+2015,Murkutwo,murkutwo,476,Tot,113,Marakwet,RFT
+2016,Arror,arror,477,Tunyo,113,Marakwet,RFT
+2017,Chemsuman,chemsuman,477,Tunyo,113,Marakwet,RFT
+2018,Kibaimwa,kibaimwa,477,Tunyo,113,Marakwet,RFT
+2019,Mon,mon,477,Tunyo,113,Marakwet,RFT
+2020,Elburgon,elburgon,478,Elburgon,114,Molo,RFT
+2021,Mariashoni,mariashoni,478,Elburgon,114,Molo,RFT
+2022,Turi,turi,478,Elburgon,114,Molo,RFT
+2023,Kamara,kamara,479,Kamara,114,Molo,RFT
+2024,Mau Summit,mau-summit,479,Kamara,114,Molo,RFT
+2025,Sirikwa,sirikwa,479,Kamara,114,Molo,RFT
+2026,Chebara,chebara,480,Keringet,114,Molo,RFT
+2027,Chemaner,chemaner,480,Keringet,114,Molo,RFT
+2028,Kapsimbeiywo,kapsimbeiywo,480,Keringet,114,Molo,RFT
+2029,Keringet,keringet,480,Keringet,114,Molo,RFT
+2030,Kipsonoi,kipsonoi,480,Keringet,114,Molo,RFT
+2031,Nyota,nyota,480,Keringet,114,Molo,RFT
+2032,Silibwet,silibwet,480,Keringet,114,Molo,RFT
+2033,Tenoyetta,tenoyetta,480,Keringet,114,Molo,RFT
+2034,Tinet,tinet,480,Keringet,114,Molo,RFT
+2035,Kiptoro,kiptoro,481,Kuresoi,114,Molo,RFT
+2036,Kuresoi,kuresoi,481,Kuresoi,114,Molo,RFT
+2037,Mkulima,mkulima,481,Kuresoi,114,Molo,RFT
+2038,Tulwet,tulwet,481,Kuresoi,114,Molo,RFT
+2039,Bagaria,bagaria,482,Lare,114,Molo,RFT
+2040,Gichobo,gichobo,482,Lare,114,Molo,RFT
+2041,Lare,lare,482,Lare,114,Molo,RFT
+2042,Naishi,naishi,482,Lare,114,Molo,RFT
+2043,Mau Narok,mau-narok,483,Mau Narok,114,Molo,RFT
+2044,Sururu,sururu,483,Mau Narok,114,Molo,RFT
+2045,Kapkembu,kapkembu,484,Mauche,114,Molo,RFT
+2046,Mauche,mauche,484,Mauche,114,Molo,RFT
+2047,Teret,teret,484,Mauche,114,Molo,RFT
+2048,Tuiyotich,tuiyotich,484,Mauche,114,Molo,RFT
+2049,Molo,molo,485,Molo,114,Molo,RFT
+2050,Sachangwany,sachangwany,485,Molo,114,Molo,RFT
+2051,Kihingo,kihingo,486,Njoro,114,Molo,RFT
+2052,Nessuit,nessuit,486,Njoro,114,Molo,RFT
+2053,Njoro,njoro,486,Njoro,114,Molo,RFT
+2054,Amalo,amalo,487,Olenguruone,114,Molo,RFT
+2055,Cheptuech,cheptuech,487,Olenguruone,114,Molo,RFT
+2056,Emitik,emitik,487,Olenguruone,114,Molo,RFT
+2057,Kaplamai,kaplamai,487,Olenguruone,114,Molo,RFT
+2058,Kiptagich,kiptagich,487,Olenguruone,114,Molo,RFT
+2059,Sinendet,sinendet,487,Olenguruone,114,Molo,RFT
+2060,Kiambogo,kiambogo,488,Elementaita,115,Naivasha,RFT
+2061,Miti Mingi,miti-mingi,488,Elementaita,115,Naivasha,RFT
+2062,Gilgil,gilgil,489,Gilgil,115,Naivasha,RFT
+2063,Karunga,karunga,489,Gilgil,115,Naivasha,RFT
+2064,Maiela,maiela,490,Kongoni,115,Naivasha,RFT
+2065,Moi Ndabi,moi-ndabi,490,Kongoni,115,Naivasha,RFT
+2066,Ndabibi,ndabibi,490,Kongoni,115,Naivasha,RFT
+2067,Longonot,longonot,491,Mai Mahiu,115,Naivasha,RFT
+2068,Mai Mahiu,mai-mahiu,491,Mai Mahiu,115,Naivasha,RFT
+2069,Hells Gate,hells-gate,492,Naivasha,115,Naivasha,RFT
+2070,Karati,karati,492,Naivasha,115,Naivasha,RFT
+2071,Lake View,lake-view,492,Naivasha,115,Naivasha,RFT
+2072,Malewa,malewa,492,Naivasha,115,Naivasha,RFT
+2073,Naivasha East,naivasha-east,492,Naivasha,115,Naivasha,RFT
+2074,Naivasha Town,naivasha-town,492,Naivasha,115,Naivasha,RFT
+2075,Bahati,bahati,493,Bahati,116,Nakuru North,RFT
+2076,Kabatini,kabatini,493,Bahati,116,Nakuru North,RFT
+2077,Kiamaina,kiamaina,493,Bahati,116,Nakuru North,RFT
+2078,Ndungiri /Kirima,ndungiri-kirima,493,Bahati,116,Nakuru North,RFT
+2079,Dundori,dundori,494,Dundori,116,Nakuru North,RFT
+2080,Lanet / Umoja,lanet-umoja,494,Dundori,116,Nakuru North,RFT
+2081,Kabazi,kabazi,495,Kabazi,116,Nakuru North,RFT
+2082,Subukia Central,subukia-central,496,Subukia,116,Nakuru North,RFT
+2083,Subukia,subukia,496,Subukia,116,Nakuru North,RFT
+2084,Baruti,baruti,497,Baruti,117,Nakuru,RFT
+2085,Kapkures,kapkures,497,Baruti,117,Nakuru,RFT
+2086,Kampi ya Moto,kampi-ya-moto,498,Kampi ya Moto,117,Nakuru,RFT
+2087,Makongeni,makongeni,498,Kampi ya Moto,117,Nakuru,RFT
+2088,Makutano,makutano,498,Kampi ya Moto,117,Nakuru,RFT
+2089,Ol Rongai,ol-rongai,498,Kampi ya Moto,117,Nakuru,RFT
+2090,Lake Nakuru Nat. Park,lake-nakuru-nat-park,499,Lake Nakuru Nat. Park,117,Nakuru,RFT
+2091,Free Area,free-area,500,Lanet,117,Nakuru,RFT
+2092,Lanet,lanet,500,Lanet,117,Nakuru,RFT
+2093,Manyatta,manyatta,501,Mbogoini,117,Nakuru,RFT
+2094,Mwitethia,mwitethia,501,Mbogoini,117,Nakuru,RFT
+2095,Waseges,waseges,501,Mbogoini,117,Nakuru,RFT
+2096,Bondeni,bondeni,502,Municipality,117,Nakuru,RFT
+2097,Kaptembwo,kaptembwo,502,Municipality,117,Nakuru,RFT
+2098,Viwanda,viwanda,502,Municipality,117,Nakuru,RFT
+2099,Kiamunyi,kiamunyi,503,Ngata,117,Nakuru,RFT
+2100,Menengai,menengai,503,Ngata,117,Nakuru,RFT
+2101,Ngata,ngata,503,Ngata,117,Nakuru,RFT
+2102,Ogilgei,ogilgei,503,Ngata,117,Nakuru,RFT
+2103,Piave,piave,503,Ngata,117,Nakuru,RFT
+2104,Boror,boror,504,Rongai,117,Nakuru,RFT
+2105,Lengenet,lengenet,504,Rongai,117,Nakuru,RFT
+2106,Rongai,rongai,504,Rongai,117,Nakuru,RFT
+2107,Summek,summek,504,Rongai,117,Nakuru,RFT
+2108,Visoi,visoi,504,Rongai,117,Nakuru,RFT
+2109,Banita,banita,505,Solai,117,Nakuru,RFT
+2110,Maji Tamu,maji-tamu,505,Solai,117,Nakuru,RFT
+2111,Ruyobei,ruyobei,505,Solai,117,Nakuru,RFT
+2112,Solai,solai,505,Solai,117,Nakuru,RFT
+2113,Chemundu,chemundu,506,Kapsabet,118,Nandi Central,RFT
+2114,Chepkumia,chepkumia,506,Kapsabet,118,Nandi Central,RFT
+2115,Kamobo,kamobo,506,Kapsabet,118,Nandi Central,RFT
+2116,Kamoiywo,kamoiywo,506,Kapsabet,118,Nandi Central,RFT
+2117,Kapkangani,kapkangani,506,Kapsabet,118,Nandi Central,RFT
+2118,Kapsabet,kapsabet,506,Kapsabet,118,Nandi Central,RFT
+2119,Kapsisiywa,kapsisiywa,506,Kapsabet,118,Nandi Central,RFT
+2120,Kaptel,kaptel,506,Kapsabet,118,Nandi Central,RFT
+2121,Kaptildil,kaptildil,506,Kapsabet,118,Nandi Central,RFT
+2122,Kiminda,kiminda,506,Kapsabet,118,Nandi Central,RFT
+2123,Kiptuiya,kiptuiya,506,Kapsabet,118,Nandi Central,RFT
+2124,Kombe,kombe,506,Kapsabet,118,Nandi Central,RFT
+2125,Arwos,arwos,507,Kilibwoni,118,Nandi Central,RFT
+2126,Kabirirsang,kabirirsang,507,Kilibwoni,118,Nandi Central,RFT
+2127,Kaplamai,kaplamai,507,Kilibwoni,118,Nandi Central,RFT
+2128,Kilibwoni,kilibwoni,507,Kilibwoni,118,Nandi Central,RFT
+2129,Kipsigak,kipsigak,507,Kilibwoni,118,Nandi Central,RFT
+2130,Kipture,kipture,507,Kilibwoni,118,Nandi Central,RFT
+2131,Lolminingai,lolminingai,507,Kilibwoni,118,Nandi Central,RFT
+2132,Terige,terige,507,Kilibwoni,118,Nandi Central,RFT
+2133,Tulon,tulon,507,Kilibwoni,118,Nandi Central,RFT
+2134,Chepterit,chepterit,508,Kosirai,118,Nandi Central,RFT
+2135,Kosirai,kosirai,508,Kosirai,118,Nandi Central,RFT
+2136,Chebarus,chebarus,509,Nandi Hills,119,Nandi East,RFT
+2137,Chemilil,chemilil,509,Nandi Hills,119,Nandi East,RFT
+2138,Chemomi,chemomi,509,Nandi Hills,119,Nandi East,RFT
+2139,Chepsire,chepsire,509,Nandi Hills,119,Nandi East,RFT
+2140,Cheptililik,cheptililik,509,Nandi Hills,119,Nandi East,RFT
+2141,Kapchorwa,kapchorwa,509,Nandi Hills,119,Nandi East,RFT
+2142,Kaplelmet,kaplelmet,509,Nandi Hills,119,Nandi East,RFT
+2143,Kapsimatwo,kapsimatwo,509,Nandi Hills,119,Nandi East,RFT
+2144,Kipsebwo,kipsebwo,509,Nandi Hills,119,Nandi East,RFT
+2145,Kosoiywo,kosoiywo,509,Nandi Hills,119,Nandi East,RFT
+2146,Mogobich,mogobich,509,Nandi Hills,119,Nandi East,RFT
+2147,Nandi Hills,nandi-hills,509,Nandi Hills,119,Nandi East,RFT
+2148,Siret,siret,509,Nandi Hills,119,Nandi East,RFT
+2149,Taito,taito,509,Nandi Hills,119,Nandi East,RFT
+2150,Tartar,tartar,509,Nandi Hills,119,Nandi East,RFT
+2151,Chepkunyuk,chepkunyuk,510,Ollessos,119,Nandi East,RFT
+2152,Kibabet,kibabet,510,Ollessos,119,Nandi East,RFT
+2153,Koilot,koilot,510,Ollessos,119,Nandi East,RFT
+2154,Lelwak,lelwak,510,Ollessos,119,Nandi East,RFT
+2155,Ollessos,ollessos,510,Ollessos,119,Nandi East,RFT
+2156,Siwo,siwo,510,Ollessos,119,Nandi East,RFT
+2157,Sochoi,sochoi,510,Ollessos,119,Nandi East,RFT
+2158,Kabisaga,kabisaga,511,Kabiyet,120,Nandi North,RFT
+2159,Kabiyet,kabiyet,511,Kabiyet,120,Nandi North,RFT
+2160,Kamasia,kamasia,511,Kabiyet,120,Nandi North,RFT
+2161,Kebulonik,kebulonik,511,Kabiyet,120,Nandi North,RFT
+2162,Lolkeringet,lolkeringet,511,Kabiyet,120,Nandi North,RFT
+2163,Sangalo,sangalo,511,Kabiyet,120,Nandi North,RFT
+2164,Chepterwai,chepterwai,512,Kipkaren,120,Nandi North,RFT
+2165,Kabiemet,kabiemet,512,Kipkaren,120,Nandi North,RFT
+2166,Kamasai,kamasai,512,Kipkaren,120,Nandi North,RFT
+2167,Kapkoimur,kapkoimur,512,Kipkaren,120,Nandi North,RFT
+2168,Kaptich,kaptich,512,Kipkaren,120,Nandi North,RFT
+2169,Kipkaren,kipkaren,512,Kipkaren,120,Nandi North,RFT
+2170,Kipngoror,kipngoror,512,Kipkaren,120,Nandi North,RFT
+2171,Kurgung,kurgung,512,Kipkaren,120,Nandi North,RFT
+2172,Ndalat,ndalat,512,Kipkaren,120,Nandi North,RFT
+2173,Surungai,surungai,512,Kipkaren,120,Nandi North,RFT
+2174,Biribiriet,biribiriet,513,Kosirai,120,Nandi North,RFT
+2175,Itigo,itigo,513,Kosirai,120,Nandi North,RFT
+2176,Kokwet,kokwet,513,Kosirai,120,Nandi North,RFT
+2177,Lelmokwo,lelmokwo,513,Kosirai,120,Nandi North,RFT
+2178,Mutwot,mutwot,513,Kosirai,120,Nandi North,RFT
+2179,Ngechek,ngechek,513,Kosirai,120,Nandi North,RFT
+2180,Sigot,sigot,513,Kosirai,120,Nandi North,RFT
+2181,Bonjoge,bonjoge,514,Aldai,121,Nandi South,RFT
+2182,Chebilat,chebilat,514,Aldai,121,Nandi South,RFT
+2183,Chemase,chemase,514,Aldai,121,Nandi South,RFT
+2184,Kapkerer,kapkerer,514,Aldai,121,Nandi South,RFT
+2185,Kapkolei,kapkolei,514,Aldai,121,Nandi South,RFT
+2186,Kapkures,kapkures,514,Aldai,121,Nandi South,RFT
+2187,Kemeloi,kemeloi,514,Aldai,121,Nandi South,RFT
+2188,Kibwareng,kibwareng,514,Aldai,121,Nandi South,RFT
+2189,Maraba,maraba,514,Aldai,121,Nandi South,RFT
+2190,Mugen,mugen,514,Aldai,121,Nandi South,RFT
+2191,Ndurio,ndurio,514,Aldai,121,Nandi South,RFT
+2192,Terik,terik,514,Aldai,121,Nandi South,RFT
+2193,Kaboi,kaboi,515,Kaptumo,121,Nandi South,RFT
+2194,Kapsaos,kapsaos,515,Kaptumo,121,Nandi South,RFT
+2195,Kaptumo,kaptumo,515,Kaptumo,121,Nandi South,RFT
+2196,Koyo,koyo,515,Kaptumo,121,Nandi South,RFT
+2197,Lower Melili,lower-melili,516,Central,122,Narok North,RFT
+2198,Nkareta,nkareta,516,Central,122,Narok North,RFT
+2199,Oletukat,oletukat,516,Central,122,Narok North,RFT
+2200,Enoosupukia,enoosupukia,517,Mau,122,Narok North,RFT
+2201,Entontol,entontol,517,Mau,122,Narok North,RFT
+2202,Ildamat,ildamat,517,Mau,122,Narok North,RFT
+2203,Keekoyokie,keekoyokie,517,Mau,122,Narok North,RFT
+2204,Mosiro,mosiro,517,Mau,122,Narok North,RFT
+2205,Ntulele,ntulele,517,Mau,122,Narok North,RFT
+2206,Olchorro,olchorro,517,Mau,122,Narok North,RFT
+2207,Olopironito,olopironito,517,Mau,122,Narok North,RFT
+2208,Ongata Naado,ongata-naado,517,Mau,122,Narok North,RFT
+2209,Siayapei,siayapei,517,Mau,122,Narok North,RFT
+2210,Suswa,suswa,517,Mau,122,Narok North,RFT
+2211,Upper Melili,upper-melili,517,Mau,122,Narok North,RFT
+2212,Empatipati,empatipati,518,Olokurto,122,Narok North,RFT
+2213,Enabelibel,enabelibel,518,Olokurto,122,Narok North,RFT
+2214,Entiyani,entiyani,518,Olokurto,122,Narok North,RFT
+2215,Naituyupaki,naituyupaki,518,Olokurto,122,Narok North,RFT
+2216,Olokurto,olokurto,518,Olokurto,122,Narok North,RFT
+2217,Ololongoi,ololongoi,518,Olokurto,122,Narok North,RFT
+2218,Olorropil,olorropil,518,Olokurto,122,Narok North,RFT
+2219,Olposimoru,olposimoru,518,Olokurto,122,Narok North,RFT
+2220,Topoti,topoti,518,Olokurto,122,Narok North,RFT
+2221,Entasekera,entasekera,519,Loita,123,Narok South,RFT
+2222,Ilkerin,ilkerin,519,Loita,123,Narok South,RFT
+2223,Morijo Loita,morijo-loita,519,Loita,123,Narok South,RFT
+2224,Olmesutie,olmesutie,519,Loita,123,Narok South,RFT
+2225,Orlorte,orlorte,519,Loita,123,Narok South,RFT
+2226,Aitong,aitong,520,Mara,123,Narok South,RFT
+2227,Koiyaki,koiyaki,520,Mara,123,Narok South,RFT
+2228,Naikara,naikara,520,Mara,123,Narok South,RFT
+2229,Olderkesi,olderkesi,520,Mara,123,Narok South,RFT
+2230,Olkinyei,olkinyei,520,Mara,123,Narok South,RFT
+2231,Siana,siana,520,Mara,123,Narok South,RFT
+2232,Enelerai,enelerai,521,Mulot,123,Narok South,RFT
+2233,Ilmotiok,ilmotiok,521,Mulot,123,Narok South,RFT
+2234,Mulot,mulot,521,Mulot,123,Narok South,RFT
+2235,Sagamian,sagamian,521,Mulot,123,Narok South,RFT
+2236,Sogoo,sogoo,521,Mulot,123,Narok South,RFT
+2237,Endonyo Ngiro,endonyo-ngiro,522,Ololulunga,123,Narok South,RFT
+2238,Lemek,lemek,522,Ololulunga,123,Narok South,RFT
+2239,Melelo,melelo,522,Ololulunga,123,Narok South,RFT
+2240,Nkorikori,nkorikori,522,Ololulunga,123,Narok South,RFT
+2241,Olkiriane,olkiriane,522,Ololulunga,123,Narok South,RFT
+2242,Ololulunga,ololulunga,522,Ololulunga,123,Narok South,RFT
+2243,Elangata Enterit,elangata-enterit,523,Osupuko,123,Narok South,RFT
+2244,Maji Moto,maji-moto,523,Osupuko,123,Narok South,RFT
+2245,Naroosura,naroosura,523,Osupuko,123,Narok South,RFT
+2246,Ntuka,ntuka,523,Osupuko,123,Narok South,RFT
+2247,Olenkuluo,olenkuluo,523,Osupuko,123,Narok South,RFT
+2248,Chepkokogh,chepkokogh,524,Chesegon,124,Pokot Central,RFT
+2249,Cheptulel,cheptulel,524,Chesegon,124,Pokot Central,RFT
+2250,Lomut,lomut,524,Chesegon,124,Pokot Central,RFT
+2251,Mosop,mosop,524,Chesegon,124,Pokot Central,RFT
+2252,Sekerot,sekerot,524,Chesegon,124,Pokot Central,RFT
+2253,Kaptabuk,kaptabuk,525,Lelan,124,Pokot Central,RFT
+2254,Kapyongen,kapyongen,525,Lelan,124,Pokot Central,RFT
+2255,Lelan,lelan,525,Lelan,124,Pokot Central,RFT
+2256,Batei,batei,526,Sigor,124,Pokot Central,RFT
+2257,Kopro,kopro,526,Sigor,124,Pokot Central,RFT
+2258,Masol,masol,526,Sigor,124,Pokot Central,RFT
+2259,Mwino,mwino,526,Sigor,124,Pokot Central,RFT
+2260,Parkou,parkou,526,Sigor,124,Pokot Central,RFT
+2261,Parua,parua,526,Sigor,124,Pokot Central,RFT
+2262,Sekerr,sekerr,526,Sigor,124,Pokot Central,RFT
+2263,Wei Wei,wei-wei,526,Sigor,124,Pokot Central,RFT
+2264,Chebon,chebon,527,Tapach,124,Pokot Central,RFT
+2265,Sondany,sondany,527,Tapach,124,Pokot Central,RFT
+2266,Tapach,tapach,527,Tapach,124,Pokot Central,RFT
+2267,Akoret,akoret,528,Alale,125,Pokot North,RFT
+2268,Alale,alale,528,Alale,125,Pokot North,RFT
+2269,Chemorongit,chemorongit,528,Alale,125,Pokot North,RFT
+2270,Kalapata,kalapata,528,Alale,125,Pokot North,RFT
+2271,Kases,kases,528,Alale,125,Pokot North,RFT
+2272,Kiwawa,kiwawa,528,Alale,125,Pokot North,RFT
+2273,Lokitanyala,lokitanyala,528,Alale,125,Pokot North,RFT
+2274,Kapchok,kapchok,529,Kacheliba,125,Pokot North,RFT
+2275,Kodich,kodich,529,Kacheliba,125,Pokot North,RFT
+2276,Kopulio,kopulio,529,Kacheliba,125,Pokot North,RFT
+2277,Lokichar,lokichar,529,Kacheliba,125,Pokot North,RFT
+2278,Suam,suam,529,Kacheliba,125,Pokot North,RFT
+2279,Kaptolomwo,kaptolomwo,530,Kasei,125,Pokot North,RFT
+2280,Kasei,kasei,530,Kasei,125,Pokot North,RFT
+2281,Korpu,korpu,530,Kasei,125,Pokot North,RFT
+2282,Lopet,lopet,530,Kasei,125,Pokot North,RFT
+2283,Angata Nanyukie,angata-nanyukie,531,Kirisia,126,Samburu Central,RFT
+2284,Barsaloi,barsaloi,531,Kirisia,126,Samburu Central,RFT
+2285,Loosuk,loosuk,531,Kirisia,126,Samburu Central,RFT
+2286,Maralal Town,maralal-town,531,Kirisia,126,Samburu Central,RFT
+2287,Opiroi,opiroi,531,Kirisia,126,Samburu Central,RFT
+2288,Poro,poro,531,Kirisia,126,Samburu Central,RFT
+2289,Sirata Oiroboi,sirata-oiroboi,531,Kirisia,126,Samburu Central,RFT
+2290,Amaiya,amaiya,532,Lorroki,126,Samburu Central,RFT
+2291,Baawa,baawa,532,Lorroki,126,Samburu Central,RFT
+2292,Kirimon,kirimon,532,Lorroki,126,Samburu Central,RFT
+2293,Kisima,kisima,532,Lorroki,126,Samburu Central,RFT
+2294,Lodokejek,lodokejek,532,Lorroki,126,Samburu Central,RFT
+2295,Suguta Maramar,suguta-maramar,532,Lorroki,126,Samburu Central,RFT
+2296,Koiting,koiting,533,Wamba,127,Samburu East,RFT
+2297,Londungokwe,londungokwe,533,Wamba,127,Samburu East,RFT
+2298,Naimirimo,naimirimo,533,Wamba,127,Samburu East,RFT
+2299,Ngilai Central,ngilai-central,533,Wamba,127,Samburu East,RFT
+2300,Ngilai West,ngilai-west,533,Wamba,127,Samburu East,RFT
+2301,Nkare Narok,nkare-narok,533,Wamba,127,Samburu East,RFT
+2302,Nkaroni,nkaroni,533,Wamba,127,Samburu East,RFT
+2303,Wamba,wamba,533,Wamba,127,Samburu East,RFT
+2304,Ndonyo Wasin,ndonyo-wasin,534,Waso,127,Samburu East,RFT
+2305,Serolipi,serolipi,534,Waso,127,Samburu East,RFT
+2306,Waso East,waso-east,534,Waso,127,Samburu East,RFT
+2307,Waso West,waso-west,534,Waso,127,Samburu East,RFT
+2308,Baragoi,baragoi,535,Baragoi,128,Samburu North,RFT
+2309,Elbarata,elbarata,535,Baragoi,128,Samburu North,RFT
+2310,Latakwen,latakwen,535,Baragoi,128,Samburu North,RFT
+2311,Marti,marti,535,Baragoi,128,Samburu North,RFT
+2312,Nachola,nachola,535,Baragoi,128,Samburu North,RFT
+2313,Ndoto,ndoto,535,Baragoi,128,Samburu North,RFT
+2314,Suyan,suyan,535,Baragoi,128,Samburu North,RFT
+2315,Arism,arism,536,Nyiro,128,Samburu North,RFT
+2316,Kawop,kawop,536,Nyiro,128,Samburu North,RFT
+2317,Parakat,parakat,536,Nyiro,128,Samburu North,RFT
+2318,Seren,seren,536,Nyiro,128,Samburu North,RFT
+2319,South Horr,south-horr,536,Nyiro,128,Samburu North,RFT
+2320,Tuum,tuum,536,Nyiro,128,Samburu North,RFT
+2321,Waso Rongai,waso-rongai,536,Nyiro,128,Samburu North,RFT
+2322,Abosi,abosi,537,Abosi,129,Sotik,RFT
+2323,Chebilat,chebilat,538,Kapletundo,129,Sotik,RFT
+2324,Chebirbelek,chebirbelek,538,Kapletundo,129,Sotik,RFT
+2325,Kamungei,kamungei,538,Kapletundo,129,Sotik,RFT
+2326,Kapletundo,kapletundo,538,Kapletundo,129,Sotik,RFT
+2327,Kimawit,kimawit,538,Kapletundo,129,Sotik,RFT
+2328,Kimolwet,kimolwet,538,Kapletundo,129,Sotik,RFT
+2329,Kanusin,kanusin,539,Mutarakwa,129,Sotik,RFT
+2330,Kiptulwa,kiptulwa,539,Mutarakwa,129,Sotik,RFT
+2331,Mutarakwa,mutarakwa,539,Mutarakwa,129,Sotik,RFT
+2332,Kapkelei,kapkelei,540,Ndanai,129,Sotik,RFT
+2333,Ndanai,ndanai,540,Ndanai,129,Sotik,RFT
+2334,Chemagel,chemagel,541,Sotik,129,Sotik,RFT
+2335,Kaplong,kaplong,541,Sotik,129,Sotik,RFT
+2336,Manaret,manaret,541,Sotik,129,Sotik,RFT
+2337,Rongena,rongena,541,Sotik,129,Sotik,RFT
+2338,Tembwo,tembwo,541,Sotik,129,Sotik,RFT
+2339,Yaganek,yaganek,541,Sotik,129,Sotik,RFT
+2340,Ainapngetuny,ainapngetuny,542,Tinderet,130,Tinderet,RFT
+2341,Chemamul,chemamul,542,Tinderet,130,Tinderet,RFT
+2342,Chepkemel,chepkemel,542,Tinderet,130,Tinderet,RFT
+2343,Kabirer,kabirer,542,Tinderet,130,Tinderet,RFT
+2344,Kabolebo,kabolebo,542,Tinderet,130,Tinderet,RFT
+2345,Kabutiei,kabutiei,542,Tinderet,130,Tinderet,RFT
+2346,Kamelil,kamelil,542,Tinderet,130,Tinderet,RFT
+2347,Kamelilo,kamelilo,542,Tinderet,130,Tinderet,RFT
+2348,Kapkitony,kapkitony,542,Tinderet,130,Tinderet,RFT
+2349,Kapkoros,kapkoros,542,Tinderet,130,Tinderet,RFT
+2350,Meteitei,meteitei,542,Tinderet,130,Tinderet,RFT
+2351,Soba,soba,542,Tinderet,130,Tinderet,RFT
+2352,Songhor,songhor,542,Tinderet,130,Tinderet,RFT
+2353,Tachasis,tachasis,542,Tinderet,130,Tinderet,RFT
+2354,Tinderet,tinderet,542,Tinderet,130,Tinderet,RFT
+2355,Angata Barikoi,angata-barikoi,543,Angata Barikoi,131,Trans Mara,RFT
+2356,Machangwa,machangwa,543,Angata Barikoi,131,Trans Mara,RFT
+2357,Oldonyorok,oldonyorok,543,Angata Barikoi,131,Trans Mara,RFT
+2358,Emurua Dikirr,emurua-dikirr,544,Emurua Dikirr,131,Trans Mara,RFT
+2359,Kapsasian,kapsasian,544,Emurua Dikirr,131,Trans Mara,RFT
+2360,Mugor,mugor,544,Emurua Dikirr,131,Trans Mara,RFT
+2361,Murkan,murkan,544,Emurua Dikirr,131,Trans Mara,RFT
+2362,Enoosaen,enoosaen,545,Keiyan,131,Trans Mara,RFT
+2363,Isampin,isampin,545,Keiyan,131,Trans Mara,RFT
+2364,Masurura,masurura,545,Keiyan,131,Trans Mara,RFT
+2365,Moita,moita,545,Keiyan,131,Trans Mara,RFT
+2366,Ndonyo,ndonyo,545,Keiyan,131,Trans Mara,RFT
+2367,Nkararo,nkararo,545,Keiyan,131,Trans Mara,RFT
+2368,Olontare,olontare,545,Keiyan,131,Trans Mara,RFT
+2369,Sikawa,sikawa,545,Keiyan,131,Trans Mara,RFT
+2370,Olalui,olalui,546,Kilgoris,131,Trans Mara,RFT
+2371,Oloiborsoito,oloiborsoito,546,Kilgoris,131,Trans Mara,RFT
+2372,Ololchani,ololchani,546,Kilgoris,131,Trans Mara,RFT
+2373,Olomismis,olomismis,546,Kilgoris,131,Trans Mara,RFT
+2374,Osinoni,osinoni,546,Kilgoris,131,Trans Mara,RFT
+2375,Osupuko,osupuko,546,Kilgoris,131,Trans Mara,RFT
+2376,Poroko,poroko,546,Kilgoris,131,Trans Mara,RFT
+2377,Shankoe,shankoe,546,Kilgoris,131,Trans Mara,RFT
+2378,Emarti,emarti,547,Kirindon,131,Trans Mara,RFT
+2379,Esoit-Naibor,esoit-naibor,547,Kirindon,131,Trans Mara,RFT
+2380,Kimintet,kimintet,547,Kirindon,131,Trans Mara,RFT
+2381,Ntulele,ntulele,547,Kirindon,131,Trans Mara,RFT
+2382,Enkoiperiai,enkoiperiai,548,Lolgorian,131,Trans Mara,RFT
+2383,Moyoi,moyoi,548,Lolgorian,131,Trans Mara,RFT
+2384,Oloiren,oloiren,548,Lolgorian,131,Trans Mara,RFT
+2385,Sokon,sokon,548,Lolgorian,131,Trans Mara,RFT
+2386,Njipiship,njipiship,549,Ololmasani,131,Trans Mara,RFT
+2387,Ololmasani,ololmasani,549,Ololmasani,131,Trans Mara,RFT
+2388,Kapune,kapune,550,Pirrar,131,Trans Mara,RFT
+2389,Meguarra,meguarra,550,Pirrar,131,Trans Mara,RFT
+2390,Oronkai,oronkai,550,Pirrar,131,Trans Mara,RFT
+2391,Shartuka,shartuka,550,Pirrar,131,Trans Mara,RFT
+2392,Chepsiro,chepsiro,551,Cherangany,132,Trans Nzoia East,RFT
+2393,Cherangany,cherangany,551,Cherangany,132,Trans Nzoia East,RFT
+2394,Kiptoror,kiptoror,551,Cherangany,132,Trans Nzoia East,RFT
+2395,Milimani,milimani,551,Cherangany,132,Trans Nzoia East,RFT
+2396,Suwerwa,suwerwa,551,Cherangany,132,Trans Nzoia East,RFT
+2397,Makutano,makutano,552,Kaplamai,132,Trans Nzoia East,RFT
+2398,Motosiet,motosiet,552,Kaplamai,132,Trans Nzoia East,RFT
+2399,Sinyerere,sinyerere,552,Kaplamai,132,Trans Nzoia East,RFT
+2400,Sitatunga,sitatunga,552,Kaplamai,132,Trans Nzoia East,RFT
+2401,Kibomet,kibomet,553,Central,133,Trans Nzoia West,RFT
+2402,Matisi,matisi,553,Central,133,Trans Nzoia West,RFT
+2403,Municipality,municipality,553,Central,133,Trans Nzoia West,RFT
+2404,Waitaluk,waitaluk,553,Central,133,Trans Nzoia West,RFT
+2405,Kiminini,kiminini,554,Kiminini,133,Trans Nzoia West,RFT
+2406,Sikhendu,sikhendu,554,Kiminini,133,Trans Nzoia West,RFT
+2407,Kinyoro,kinyoro,555,Kinyoro,133,Trans Nzoia West,RFT
+2408,Kisawai,kisawai,555,Kinyoro,133,Trans Nzoia West,RFT
+2409,Kiboroa,kiboroa,556,Saboti,133,Trans Nzoia West,RFT
+2410,Machewa,machewa,556,Saboti,133,Trans Nzoia West,RFT
+2411,Saboti,saboti,556,Saboti,133,Trans Nzoia West,RFT
+2412,Kanamkemer,kanamkemer,557,Central,134,Turkana Central,RFT
+2413,Lodwer Township,lodwer-township,557,Central,134,Turkana Central,RFT
+2414,Kalokol,kalokol,558,Kalokol,134,Turkana Central,RFT
+2415,Kangatotha,kangatotha,558,Kalokol,134,Turkana Central,RFT
+2416,Namukuse,namukuse,558,Kalokol,134,Turkana Central,RFT
+2417,Kangirisaye,kangirisaye,559,Kerio,134,Turkana Central,RFT
+2418,Kerio,kerio,559,Kerio,134,Turkana Central,RFT
+2419,Lorengelup,lorengelup,559,Kerio,134,Turkana Central,RFT
+2420,Loima,loima,560,Loima,134,Turkana Central,RFT
+2421,Lokiriama,lokiriama,560,Loima,134,Turkana Central,RFT
+2422,Lorengippi,lorengippi,560,Loima,134,Turkana Central,RFT
+2423,Kotaruk,kotaruk,561,Turkwel,134,Turkana Central,RFT
+2424,Lomeyan,lomeyan,561,Turkwel,134,Turkana Central,RFT
+2425,Lorugum,lorugum,561,Turkwel,134,Turkana Central,RFT
+2426,Nadapal,nadapal,561,Turkwel,134,Turkana Central,RFT
+2427,Kaeris,kaeris,562,Kaaleng,135,Turkana North,RFT
+2428,Kaikor,kaikor,562,Kaaleng,135,Turkana North,RFT
+2429,Loruth,loruth,562,Kaaleng,135,Turkana North,RFT
+2430,Yapakuno,yapakuno,562,Kaaleng,135,Turkana North,RFT
+2431,Kakuma,kakuma,563,Kakuma,135,Turkana North,RFT
+2432,Nakalale,nakalale,563,Kakuma,135,Turkana North,RFT
+2433,Pelekech,pelekech,563,Kakuma,135,Turkana North,RFT
+2434,Kibish,kibish,564,Kibish,135,Turkana North,RFT
+2435,Naita,naita,564,Kibish,135,Turkana North,RFT
+2436,Natapar,natapar,564,Kibish,135,Turkana North,RFT
+2437,Karebur,karebur,565,Lapur,135,Turkana North,RFT
+2438,Kokuro,kokuro,565,Lapur,135,Turkana North,RFT
+2439,Meyan,meyan,565,Lapur,135,Turkana North,RFT
+2440,Lokichoggio,lokichoggio,566,Lokichoggio,135,Turkana North,RFT
+2441,Lorao,lorao,566,Lokichoggio,135,Turkana North,RFT
+2442,Loteteleit,loteteleit,566,Lokichoggio,135,Turkana North,RFT
+2443,Mogila,mogila,566,Lokichoggio,135,Turkana North,RFT
+2444,Nanam,nanam,566,Lokichoggio,135,Turkana North,RFT
+2445,Songot,songot,566,Lokichoggio,135,Turkana North,RFT
+2446,Kataboi,kataboi,567,Lokitaung,135,Turkana North,RFT
+2447,Lokitaung,lokitaung,567,Lokitaung,135,Turkana North,RFT
+2448,Ngissiger,ngissiger,567,Lokitaung,135,Turkana North,RFT
+2449,Riakomor,riakomor,567,Lokitaung,135,Turkana North,RFT
+2450,Kalobeyei,kalobeyei,568,Oropoi,135,Turkana North,RFT
+2451,Letea,letea,568,Oropoi,135,Turkana North,RFT
+2452,Loreng,loreng,568,Oropoi,135,Turkana North,RFT
+2453,Kainuk,kainuk,569,Kainuk,136,Turkana South,RFT
+2454,Kaputir,kaputir,569,Kainuk,136,Turkana South,RFT
+2455,Katilu,katilu,570,Katilu,136,Turkana South,RFT
+2456,Kalapata,kalapata,571,Lokichar,136,Turkana South,RFT
+2457,Lochwangi Kamatak,lochwangi-kamatak,571,Lokichar,136,Turkana South,RFT
+2458,Lokichar,lokichar,571,Lokichar,136,Turkana South,RFT
+2459,Katilia,katilia,572,Lokori,136,Turkana South,RFT
+2460,Kochodin,kochodin,572,Lokori,136,Turkana South,RFT
+2461,Lochakula,lochakula,572,Lokori,136,Turkana South,RFT
+2462,Lokori,lokori,572,Lokori,136,Turkana South,RFT
+2463,Kamuge,kamuge,573,Lomelo,136,Turkana South,RFT
+2464,Kapedo,kapedo,573,Lomelo,136,Turkana South,RFT
+2465,Lomelo,lomelo,573,Lomelo,136,Turkana South,RFT
+2466,Nadome,nadome,573,Lomelo,136,Turkana South,RFT
+2467,Napeitom,napeitom,573,Lomelo,136,Turkana South,RFT
+2468,Kapseret,kapseret,574,Kapseret,137,Wareng,RFT
+2469,Ngeria,ngeria,574,Kapseret,137,Wareng,RFT
+2470,Pioneer,pioneer,574,Kapseret,137,Wareng,RFT
+2471,Simat,simat,574,Kapseret,137,Wareng,RFT
+2472,Cheptiret,cheptiret,575,Kesses,137,Wareng,RFT
+2473,Chuiyat,chuiyat,575,Kesses,137,Wareng,RFT
+2474,Kapkoi,kapkoi,575,Kesses,137,Wareng,RFT
+2475,Kesses,kesses,575,Kesses,137,Wareng,RFT
+2476,Kipchamo,kipchamo,575,Kesses,137,Wareng,RFT
+2477,Megun,megun,575,Kesses,137,Wareng,RFT
+2478,Oleinguse,oleinguse,575,Kesses,137,Wareng,RFT
+2479,Tarakwa,tarakwa,575,Kesses,137,Wareng,RFT
+2480,Timboroa,timboroa,575,Kesses,137,Wareng,RFT
+2481,Tulwet,tulwet,575,Kesses,137,Wareng,RFT
+2482,Chepkopegh,chepkopegh,576,Chepareria,138,West Pokot,RFT
+2483,Kipkomo,kipkomo,576,Chepareria,138,West Pokot,RFT
+2484,Senetwo,senetwo,576,Chepareria,138,West Pokot,RFT
+2485,Ywalateke,ywalateke,576,Chepareria,138,West Pokot,RFT
+2486,Chemwochoi,chemwochoi,577,Kapenguria,138,West Pokot,RFT
+2487,Kaibos,kaibos,577,Kapenguria,138,West Pokot,RFT
+2488,Kaisakat,kaisakat,577,Kapenguria,138,West Pokot,RFT
+2489,Kapenguria,kapenguria,577,Kapenguria,138,West Pokot,RFT
+2490,Kapkoris,kapkoris,577,Kapenguria,138,West Pokot,RFT
+2491,Keringet,keringet,577,Kapenguria,138,West Pokot,RFT
+2492,Kishaunet,kishaunet,577,Kapenguria,138,West Pokot,RFT
+2493,Mnagei,mnagei,577,Kapenguria,138,West Pokot,RFT
+2494,Talau,talau,577,Kapenguria,138,West Pokot,RFT
+2495,Kanyarkwat,kanyarkwat,578,Kongelai,138,West Pokot,RFT
+2496,Miskwony,miskwony,578,Kongelai,138,West Pokot,RFT
+2497,Riwo,riwo,578,Kongelai,138,West Pokot,RFT
+2498,Serewo,serewo,578,Kongelai,138,West Pokot,RFT
+2499,Chepkomos,chepkomos,579,Sook,138,West Pokot,RFT
+2500,Endugh,endugh,579,Sook,138,West Pokot,RFT
+2501,Nakwijit,nakwijit,579,Sook,138,West Pokot,RFT
+2502,Ptoyo,ptoyo,579,Sook,138,West Pokot,RFT
+2503,Sook,sook,579,Sook,138,West Pokot,RFT
+2504,Tamugh,tamugh,579,Sook,138,West Pokot,RFT
+2505,Chetambe,chetambe,580,Ndivisi,139,Bungoma East,WST
+2506,Lugusi,lugusi,580,Ndivisi,139,Bungoma East,WST
+2507,Namarambi,namarambi,580,Ndivisi,139,Bungoma East,WST
+2508,Ndivisi,ndivisi,580,Ndivisi,139,Bungoma East,WST
+2509,Bokoli,bokoli,581,Webuye,139,Bungoma East,WST
+2510,Misikhu,misikhu,581,Webuye,139,Bungoma East,WST
+2511,Sitikho,sitikho,581,Webuye,139,Bungoma East,WST
+2512,Webuye,webuye,581,Webuye,139,Bungoma East,WST
+2513,Kamukuywa,kamukuywa,582,Kimilili,140,Bungoma North,WST
+2514,Kibingei,kibingei,582,Kimilili,140,Bungoma North,WST
+2515,Kimilili,kimilili,582,Kimilili,140,Bungoma North,WST
+2516,Maeni,maeni,582,Kimilili,140,Bungoma North,WST
+2517,Kabuyefwe,kabuyefwe,583,Tongaren,140,Bungoma North,WST
+2518,Kiminini,kiminini,583,Tongaren,140,Bungoma North,WST
+2519,Mbakalo,mbakalo,583,Tongaren,140,Bungoma North,WST
+2520,Naitiri,naitiri,583,Tongaren,140,Bungoma North,WST
+2521,Ndalu,ndalu,583,Tongaren,140,Bungoma North,WST
+2522,Tongaren,tongaren,583,Tongaren,140,Bungoma North,WST
+2523,Bumula,bumula,584,Bumula,141,Bungoma South,WST
+2524,Kabula,kabula,584,Bumula,141,Bungoma South,WST
+2525,Khasoko,khasoko,584,Bumula,141,Bungoma South,WST
+2526,Kibuke,kibuke,584,Bumula,141,Bungoma South,WST
+2527,Kimaeti,kimaeti,584,Bumula,141,Bungoma South,WST
+2528,Mabusi,mabusi,584,Bumula,141,Bungoma South,WST
+2529,Mukwa,mukwa,584,Bumula,141,Bungoma South,WST
+2530,Napara,napara,584,Bumula,141,Bungoma South,WST
+2531,Siboti,siboti,584,Bumula,141,Bungoma South,WST
+2532,South Bukusu,south-bukusu,584,Bumula,141,Bungoma South,WST
+2533,Bukembe,bukembe,585,Kanduyi,141,Bungoma South,WST
+2534,East Bukusu,east-bukusu,585,Kanduyi,141,Bungoma South,WST
+2535,Kibabii,kibabii,585,Kanduyi,141,Bungoma South,WST
+2536,Musikoma,musikoma,585,Kanduyi,141,Bungoma South,WST
+2537,Township,township,585,Kanduyi,141,Bungoma South,WST
+2538,Chwele,chwele,586,Chwele,142,Bungoma West,WST
+2539,Mukuyuni,mukuyuni,586,Chwele,142,Bungoma West,WST
+2540,Lwandanyi,lwandanyi,587,Malakisi,142,Bungoma West,WST
+2541,Malakisi,malakisi,587,Malakisi,142,Bungoma West,WST
+2542,Namubila,namubila,587,Malakisi,142,Bungoma West,WST
+2543,Kabuchai,kabuchai,588,Nalondo,142,Bungoma West,WST
+2544,Luuya,luuya,588,Nalondo,142,Bungoma West,WST
+2545,North Bukusu,north-bukusu,588,Nalondo,142,Bungoma West,WST
+2546,Sirare,sirare,588,Nalondo,142,Bungoma West,WST
+2547,Namwela,namwela,589,Sirisia,142,Bungoma West,WST
+2548,Sirisia,sirisia,589,Sirisia,142,Bungoma West,WST
+2549,Bunyala Central,bunyala-central,590,Budalangi,143,Bunyala,WST
+2550,Bunyala East,bunyala-east,590,Budalangi,143,Bunyala,WST
+2551,Bunyala North,bunyala-north,590,Budalangi,143,Bunyala,WST
+2552,Bunyala South,bunyala-south,590,Budalangi,143,Bunyala,WST
+2553,Bunyala West,bunyala-west,590,Budalangi,143,Bunyala,WST
+2554,Khajula,khajula,590,Budalangi,143,Bunyala,WST
+2555,Bujumba,bujumba,591,Butula,144,Busia,WST
+2556,Bumala,bumala,591,Butula,144,Busia,WST
+2557,Elugulu,elugulu,591,Butula,144,Busia,WST
+2558,Elukhari,elukhari,591,Butula,144,Busia,WST
+2559,Marachi Central,marachi-central,591,Butula,144,Busia,WST
+2560,Marachi East,marachi-east,591,Butula,144,Busia,WST
+2561,Bukhayo West,bukhayo-west,592,Matayos,144,Busia,WST
+2562,Busibwabo,busibwabo,592,Matayos,144,Busia,WST
+2563,Lwanya,lwanya,592,Matayos,144,Busia,WST
+2564,Nangoma,nangoma,592,Matayos,144,Busia,WST
+2565,Nasewa,nasewa,592,Matayos,144,Busia,WST
+2566,Bukhayo Central,bukhayo-central,593,Nambale,144,Busia,WST
+2567,Bukhayo East,bukhayo-east,593,Nambale,144,Busia,WST
+2568,Bukhayo North,bukhayo-north,593,Nambale,144,Busia,WST
+2569,Nambale T/Ship,nambale-t-ship,593,Nambale,144,Busia,WST
+2570,Walatsi,walatsi,593,Nambale,144,Busia,WST
+2571,Township,township,594,Township,144,Busia,WST
+2572,Lunza,lunza,595,Butere,145,Butere,WST
+2573,Manyala,manyala,595,Butere,145,Butere,WST
+2574,Marama C.,marama-c,595,Butere,145,Butere,WST
+2575,Marama N.,marama-n,595,Butere,145,Butere,WST
+2576,Marenyo,marenyo,595,Butere,145,Butere,WST
+2577,S.Marama,s-marama,595,Butere,145,Butere,WST
+2578,Shianda,shianda,595,Butere,145,Butere,WST
+2579,Township,township,595,Butere,145,Butere,WST
+2580,Kisa Central,kisa-central,596,Khwisero,145,Butere,WST
+2581,Kisa East,kisa-east,596,Khwisero,145,Butere,WST
+2582,Kisa South,kisa-south,596,Khwisero,145,Butere,WST
+2583,Kisa West,kisa-west,596,Khwisero,145,Butere,WST
+2584,Mulwanda,mulwanda,596,Khwisero,145,Butere,WST
+2585,North Kisa,north-kisa,596,Khwisero,145,Butere,WST
+2586,Shirombe,shirombe,596,Khwisero,145,Butere,WST
+2587,E.Bunyore,e-bunyore,597,Emuhaya,146,Emuhaya,WST
+2588,N.Bunyore,n-bunyore,597,Emuhaya,146,Emuhaya,WST
+2589,N.E.Bunyore,n-e-bunyore,597,Emuhaya,146,Emuhaya,WST
+2590,Wekhomo,wekhomo,597,Emuhaya,146,Emuhaya,WST
+2591,C.Bunyore,c-bunyore,598,Luanda,146,Emuhaya,WST
+2592,S.Bunyore,s-bunyore,598,Luanda,146,Emuhaya,WST
+2593,S.W. Bunyore,s-w-bunyore,598,Luanda,146,Emuhaya,WST
+2594,W. Bunyore,w-bunyore,598,Luanda,146,Emuhaya,WST
+2595,Gisambai,gisambai,599,Jepkoyai,147,Hamisi,WST
+2596,Jepkoyai,jepkoyai,599,Jepkoyai,147,Hamisi,WST
+2597,Senende,senende,600,Shamakhokho,147,Hamisi,WST
+2598,Shamakhokho,shamakhokho,600,Shamakhokho,147,Hamisi,WST
+2599,Muhudu,muhudu,601,Shaviringa,147,Hamisi,WST
+2600,Shaviringa,shaviringa,601,Shaviringa,147,Hamisi,WST
+2601,Banja,banja,602,Tambua,147,Hamisi,WST
+2602,Tambua,tambua,602,Tambua,147,Hamisi,WST
+2603,Central Butsotso,central-butsotso,603,Lurambi,148,Kakamega Central,WST
+2604,East Butsotso,east-butsotso,603,Lurambi,148,Kakamega Central,WST
+2605,North Butsotso,north-butsotso,603,Lurambi,148,Kakamega Central,WST
+2606,South Butsotso,south-butsotso,603,Lurambi,148,Kakamega Central,WST
+2607,Bukhungu,bukhungu,604,Municipality,148,Kakamega Central,WST
+2608,Shieywe,shieywe,604,Municipality,148,Kakamega Central,WST
+2609,East Bunyala,east-bunyala,605,Navakholo,148,Kakamega Central,WST
+2610,Nambacha,nambacha,605,Navakholo,148,Kakamega Central,WST
+2611,West Bunyala,west-bunyala,605,Navakholo,148,Kakamega Central,WST
+2612,Ivihiga,ivihiga,606,Ileho,149,Kakamega East,WST
+2613,Kambiri,kambiri,606,Ileho,149,Kakamega East,WST
+2614,Kak. Forest,kak-forest,607,Kak. Forest,149,Kakamega East,WST
+2615,Ilesi,ilesi,608,Shinyalu,149,Kakamega East,WST
+2616,Khayega,khayega,608,Shinyalu,149,Kakamega East,WST
+2617,Murhanda,murhanda,608,Shinyalu,149,Kakamega East,WST
+2618,Shibuye,shibuye,608,Shinyalu,149,Kakamega East,WST
+2619,Matioli,matioli,609,Kabras Central,150,Kakamega North,WST
+2620,Mugai,mugai,609,Kabras Central,150,Kakamega North,WST
+2621,Shirugu,shirugu,609,Kabras Central,150,Kakamega North,WST
+2622,Township,township,609,Kabras Central,150,Kakamega North,WST
+2623,Chemuche,chemuche,610,Kabras East,150,Kakamega North,WST
+2624,Chesero,chesero,610,Kabras East,150,Kakamega North,WST
+2625,Chegulo,chegulo,611,Kabras North,150,Kakamega North,WST
+2626,Shivanga,shivanga,611,Kabras North,150,Kakamega North,WST
+2627,Sirungai,sirungai,611,Kabras North,150,Kakamega North,WST
+2628,Mahira,mahira,612,Kabras South,150,Kakamega North,WST
+2629,Shianda,shianda,612,Kabras South,150,Kakamega North,WST
+2630,Burundu,burundu,613,Kabras West,150,Kakamega North,WST
+2631,Lukume,lukume,613,Kabras West,150,Kakamega North,WST
+2632,Isulu,isulu,614,Ikolomani North,151,Kakamega South,WST
+2633,Shirumba,shirumba,614,Ikolomani North,151,Kakamega South,WST
+2634,Shisere,shisere,614,Ikolomani North,151,Kakamega South,WST
+2635,Eregi,eregi,615,Ikolomani South,151,Kakamega South,WST
+2636,Iguhu,iguhu,615,Ikolomani South,151,Kakamega South,WST
+2637,Shikumu,shikumu,615,Ikolomani South,151,Kakamega South,WST
+2638,Kongoni,kongoni,616,Likuyani,152,Lugari,WST
+2639,Likuyani,likuyani,616,Likuyani,152,Lugari,WST
+2640,Nzoia,nzoia,616,Likuyani,152,Lugari,WST
+2641,Sinoko,sinoko,616,Likuyani,152,Lugari,WST
+2642,Chekalini,chekalini,617,Lugari,152,Lugari,WST
+2643,Lugari,lugari,617,Lugari,152,Lugari,WST
+2644,Lumakanda,lumakanda,617,Lugari,152,Lugari,WST
+2645,Mautuma,mautuma,617,Lugari,152,Lugari,WST
+2646,Chevaywa,chevaywa,618,Matete,152,Lugari,WST
+2647,Luandeti,luandeti,618,Matete,152,Lugari,WST
+2648,Chepkube,chepkube,619,Cheptais,153,Mt. Elgon,WST
+2649,Cheptais,cheptais,619,Cheptais,153,Mt. Elgon,WST
+2650,Chesikak,chesikak,619,Cheptais,153,Mt. Elgon,WST
+2651,Sasur,sasur,619,Cheptais,153,Mt. Elgon,WST
+2652,Elgon,elgon,620,Kapsokwony,153,Mt. Elgon,WST
+2653,Kamuneru,kamuneru,620,Kapsokwony,153,Mt. Elgon,WST
+2654,Kapsokwony,kapsokwony,620,Kapsokwony,153,Mt. Elgon,WST
+2655,Namorio,namorio,620,Kapsokwony,153,Mt. Elgon,WST
+2656,Chemoge,chemoge,621,Kaptama,153,Mt. Elgon,WST
+2657,Kaboywo,kaboywo,621,Kaptama,153,Mt. Elgon,WST
+2658,Kaptama,kaptama,621,Kaptama,153,Mt. Elgon,WST
+2659,Kongit,kongit,621,Kaptama,153,Mt. Elgon,WST
+2660,Chepyuk,chepyuk,622,Kopsiro,153,Mt. Elgon,WST
+2661,Chongeywo,chongeywo,622,Kopsiro,153,Mt. Elgon,WST
+2662,Emia,emia,622,Kopsiro,153,Mt. Elgon,WST
+2663,Kapkateny,kapkateny,622,Kopsiro,153,Mt. Elgon,WST
+2664,Mt.Elgon Forest,mt-elgon-forest,623,Mt.Elgon Forest,153,Mt. Elgon,WST
+2665,East Wanga,east-wanga,624,East Wanga,154,Mumias,WST
+2666,Isongo,isongo,624,East Wanga,154,Mumias,WST
+2667,Lubinu,lubinu,624,East Wanga,154,Mumias,WST
+2668,Malaha,malaha,624,East Wanga,154,Mumias,WST
+2669,Koyonzo,koyonzo,625,Matungu,154,Mumias,WST
+2670,Matungu,matungu,625,Matungu,154,Mumias,WST
+2671,Nabongo,nabongo,626,Mumias,154,Mumias,WST
+2672,Etenje,etenje,627,South Wanga,154,Mumias,WST
+2673,Musanda,musanda,627,South Wanga,154,Mumias,WST
+2674,Agenga,agenga,628,Funyula,155,Samia,WST
+2675,Bwiri,bwiri,628,Funyula,155,Samia,WST
+2676,Namboboto,namboboto,628,Funyula,155,Samia,WST
+2677,Nambuku,nambuku,628,Funyula,155,Samia,WST
+2678,Nangosia,nangosia,628,Funyula,155,Samia,WST
+2679,Nanguba,nanguba,628,Funyula,155,Samia,WST
+2680,Odiado,odiado,628,Funyula,155,Samia,WST
+2681,Akadetewai,akadetewai,629,Amagoro,156,Teso North,WST
+2682,Amagoro,amagoro,629,Amagoro,156,Teso North,WST
+2683,Amoni,amoni,629,Amagoro,156,Teso North,WST
+2684,Kamolo,kamolo,629,Amagoro,156,Teso North,WST
+2685,Kamuriai,kamuriai,629,Amagoro,156,Teso North,WST
+2686,Kocholia,kocholia,629,Amagoro,156,Teso North,WST
+2687,Kokare,kokare,629,Amagoro,156,Teso North,WST
+2688,Okuleu,okuleu,629,Amagoro,156,Teso North,WST
+2689,Osajai,osajai,629,Amagoro,156,Teso North,WST
+2690,Aboloi,aboloi,630,Angurai,156,Teso North,WST
+2691,Angurai,angurai,630,Angurai,156,Teso North,WST
+2692,Chamasiri,chamasiri,630,Angurai,156,Teso North,WST
+2693,Changara,changara,630,Angurai,156,Teso North,WST
+2694,Kakapel,kakapel,630,Angurai,156,Teso North,WST
+2695,Katakwa,katakwa,630,Angurai,156,Teso North,WST
+2696,Kolanya,kolanya,630,Angurai,156,Teso North,WST
+2697,Moding,moding,630,Angurai,156,Teso North,WST
+2698,Akoreet,akoreet,631,Amukura,157,Teso South,WST
+2699,Amukura,amukura,631,Amukura,157,Teso South,WST
+2700,Aremit,aremit,631,Amukura,157,Teso South,WST
+2701,Kaliwa,kaliwa,631,Amukura,157,Teso South,WST
+2702,Kaujakito,kaujakito,631,Amukura,157,Teso South,WST
+2703,Kotur,kotur,631,Amukura,157,Teso South,WST
+2704,Kwangamor,kwangamor,631,Amukura,157,Teso South,WST
+2705,Amongura,amongura,632,Chakol,157,Teso South,WST
+2706,Angoromo,angoromo,632,Chakol,157,Teso South,WST
+2707,Apegel,apegel,632,Chakol,157,Teso South,WST
+2708,Asinge,asinge,632,Chakol,157,Teso South,WST
+2709,Ochude,ochude,632,Chakol,157,Teso South,WST
+2710,Okame,okame,632,Chakol,157,Teso South,WST
+2711,Chavakali,chavakali,633,Chavakali,158,Vihiga,WST
+2712,Izava North,izava-north,633,Chavakali,158,Vihiga,WST
+2713,Izava South,izava-south,633,Chavakali,158,Vihiga,WST
+2714,W. Maragoli,w-maragoli,633,Chavakali,158,Vihiga,WST
+2715,Busali East,busali-east,634,Sabatia,158,Vihiga,WST
+2716,Busali West,busali-west,634,Sabatia,158,Vihiga,WST
+2717,N. Maragoli,n-maragoli,634,Sabatia,158,Vihiga,WST
+2718,Wodanga,wodanga,634,Sabatia,158,Vihiga,WST
+2719,C. Maragoli,c-maragoli,635,Vihiga,158,Vihiga,WST
+2720,Lugaga,lugaga,635,Vihiga,158,Vihiga,WST
+2721,Mungoma,mungoma,635,Vihiga,158,Vihiga,WST
+2722,S.Maragoli,s-maragoli,635,Vihiga,158,Vihiga,WST
+2723,Wamuluma,wamuluma,635,Vihiga,158,Vihiga,WST

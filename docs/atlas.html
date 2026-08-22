@@ -1,0 +1,1268 @@
+<meta charset="utf-8">
+<title>kenya-regions · atlas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Every level Kenya is divided into, on one map: 47 counties, 290 constituencies, 1450 wards, and the provincial administration that came before them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+
+<style>
+/* Tokens are the landing page's, unchanged, so the two read as one site. */
+:root { color-scheme: light; }
+:root {
+  --ground:       #F6F7F5;
+  --surface:      #FFFFFF;
+  --surface-2:    #ECEFEA;
+  --line:         #D6DBD5;
+  --line-soft:    #E4E8E2;
+  --line-strong:  #B4BCB4;
+  --ink:          #161C19;
+  --ink-2:        #444E47;
+  --ink-3:        #6D766F;
+  --accent:       #0F6B5C;
+  --accent-hover: #0B5148;
+  --accent-soft:  #E0EDE9;
+  --accent-line:  #A9CFC6;
+  --caution:      #8A5A12;
+  --caution-soft: #F6EEDD;
+  --caution-line: #DEC79A;
+  --shadow:       0 1px 2px rgba(22,28,25,.05), 0 8px 24px -16px rgba(22,28,25,.24);
+  --measure:      68ch;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: "Public Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .001ms !important; }
+}
+
+a { color: var(--accent); text-underline-offset: 2px; text-decoration-thickness: 1px; }
+a:hover { color: var(--accent-hover); }
+p { margin: 0 0 14px; max-width: var(--measure); text-wrap: pretty; }
+
+.page { max-width: 1440px; margin: 0 auto; padding: 0 28px 90px; }
+
+/* ── Masthead ────────────────────────────────────────────── */
+.top { padding: 30px 0 20px; border-bottom: 1px solid var(--line); }
+.back {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11.5px;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+h1 {
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(26px, 3.6vw, 36px);
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1.08;
+  margin: 12px 0 10px;
+}
+.standfirst {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 66ch;
+  margin: 0;
+}
+
+/* ── Scheme tabs ─────────────────────────────────────────── */
+.tabs { display: flex; gap: 0; margin: 22px 0 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.tab {
+  font: inherit;
+  font-size: 14px;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 9px 16px 8px 0;
+  margin-right: 22px;
+  color: var(--ink-3);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.tab b { display: block; font-size: 15px; font-weight: 700; color: inherit; }
+.tab span { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .08em; }
+.tab:hover { color: var(--ink-2); }
+.tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ── Two-column body ─────────────────────────────────────── */
+.atlas {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
+  gap: 26px;
+  align-items: start;
+  padding-top: 22px;
+}
+
+/* ── Map column ──────────────────────────────────────────── */
+.mapcol { position: sticky; top: 14px; }
+.mapbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-bottom: 0;
+  border-radius: 3px 3px 0 0;
+  background: var(--surface-2);
+}
+.crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; font-size: 13px; min-height: 26px; }
+.crumb {
+  font: inherit;
+  font-size: 13px;
+  background: none;
+  border: 0;
+  padding: 2px 0;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.crumb[disabled] { color: var(--ink); text-decoration: none; cursor: default; font-weight: 600; }
+.crumbs i { color: var(--ink-3); font-style: normal; }
+.shade { display: flex; align-items: center; gap: 8px; }
+.shade label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+select, .filter {
+  font: inherit;
+  font-size: 14px;
+  font-family: "Public Sans", sans-serif;
+  padding: 4px 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.mapfig {
+  position: relative;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 0 0 3px 3px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+#map { display: block; width: 100%; height: clamp(420px, 68vh, 820px); background: #F1F3F0; }
+#zoom { transition: transform .55s cubic-bezier(.32,.72,.24,1); }
+
+.county {
+  fill: #DFE5E1;
+  stroke: #FFFFFF;
+  stroke-width: 1.1;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  cursor: pointer;
+  transition: fill-opacity .18s, fill .18s;
+}
+.county:hover { stroke: var(--ink); stroke-width: 1.4; }
+.county.muted { fill-opacity: .18; }
+.county.picked { stroke: var(--ink); stroke-width: 1.8; }
+.county.flagged { stroke: var(--caution); stroke-width: 2.2; }
+
+.pin { fill: var(--accent); stroke: #FFFFFF; stroke-width: 1; vector-effect: non-scaling-stroke; cursor: pointer; }
+.pin.on { fill: var(--caution); }
+.pinlabel {
+  font-family: "JetBrains Mono", monospace;
+  fill: var(--ink);
+  stroke: #FFFFFF;
+  paint-order: stroke;
+  pointer-events: none;
+  text-anchor: middle;
+}
+
+.tip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  padding: 6px 10px;
+  font-size: 13px;
+  line-height: 1.35;
+  box-shadow: var(--shadow);
+  max-width: 240px;
+  z-index: 4;
+}
+.tip b { display: block; font-size: 14px; }
+.tip span { color: var(--ink-3); font-family: "JetBrains Mono", monospace; font-size: 11.5px; }
+
+.legend {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  background: rgba(255,255,255,.94);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 9px 11px;
+  font-size: 12px;
+  max-width: 260px;
+  z-index: 3;
+}
+.legend h6 {
+  margin: 0 0 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 700;
+}
+.legend ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.legend li { display: flex; align-items: center; gap: 7px; cursor: default; line-height: 1.3; }
+.legend li.act { cursor: pointer; }
+.legend li.act:hover { color: var(--accent); }
+.legend i { width: 12px; height: 12px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.12); }
+.legend .ramp { display: flex; gap: 0; margin-bottom: 4px; }
+.legend .ramp i { width: 26px; height: 10px; border-radius: 0; border: 0; }
+.legend .ends { display: flex; justify-content: space-between; font-family: "JetBrains Mono", monospace; font-size: 10.5px; color: var(--ink-3); }
+
+.mapnote { font-size: 12.5px; color: var(--ink-3); margin: 9px 2px 0; max-width: none; }
+.mapnote a { color: var(--ink-3); }
+
+/* ── Panel ───────────────────────────────────────────────── */
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  padding: 18px 20px 22px;
+  min-height: 420px;
+}
+.kicker {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 7px;
+}
+.pname {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.14;
+  margin: 0 0 3px;
+}
+.psub { font-size: 13.5px; color: var(--ink-3); margin: 0 0 16px; }
+
+/* Flex rather than grid so a short last row grows to fill the width,
+   instead of leaving a stub cell the colour of the gaps. */
+.idgrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  background: var(--line-soft);
+  border: 1px solid var(--line-soft);
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 0 0 18px;
+}
+.idcell { flex: 1 1 118px; background: var(--surface); padding: 8px 11px; }
+.idcell span {
+  display: block;
+  font-size: 10.5px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 2px;
+}
+.idcell b {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+.idcell.clash b { color: var(--caution); }
+.idcell.acc b { color: var(--accent); }
+
+.tag {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  padding: 1px 6px;
+  border: 1px solid var(--accent-line);
+  border-radius: 2px;
+  color: var(--accent);
+  margin: 0 4px 4px 0;
+}
+.tag.dim { border-color: var(--line-strong); color: var(--ink-3); }
+
+h3.sec {
+  font-size: 12px;
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 700;
+  margin: 20px 0 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+h3.sec em { font-style: normal; color: var(--ink); }
+.filter { width: 100%; margin: 0 0 8px; }
+
+.picks { list-style: none; margin: 0 0 4px; padding: 0; max-height: 340px; overflow-y: auto; border: 1px solid var(--line-soft); border-radius: 3px; }
+.picks li + li { border-top: 1px solid var(--line-soft); }
+.pick {
+  font: inherit;
+  font-size: 14px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  padding: 7px 11px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  color: var(--ink);
+}
+.pick:hover, .pick.hot { background: var(--accent-soft); color: var(--accent-hover); }
+.pick em { font-style: normal; font-family: "JetBrains Mono", monospace; font-size: 11.5px; color: var(--ink-3); flex: none; font-variant-numeric: tabular-nums; }
+.pick:hover em { color: var(--accent); }
+.pick[disabled] { cursor: default; color: var(--ink-2); }
+.pick[disabled]:hover { background: none; }
+.picks.plain .pick { cursor: default; }
+.leaf { padding: 7px 11px; font-size: 14px; display: flex; justify-content: space-between; gap: 12px; }
+.leaf em { font-style: normal; font-family: "JetBrains Mono", monospace; font-size: 11.5px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+
+.note {
+  border: 1px solid var(--accent-line);
+  background: var(--accent-soft);
+  border-radius: 3px;
+  padding: 11px 13px;
+  margin: 16px 0 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.note.warn { border-color: var(--caution-line); background: var(--caution-soft); }
+.note p { margin: 0; max-width: none; }
+.note p + p { margin-top: 8px; }
+.note-h {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+.note.warn .note-h { color: var(--caution); }
+
+/* The 1963 hierarchy, as a set of steps rather than a list. */
+.nest { margin: 0 0 6px; }
+.nest-row { border-left: 2px solid var(--accent-line); padding: 6px 0 6px 13px; }
+.nest-row + .nest-row { margin-left: 20px; }
+.nest-row b { font-family: "JetBrains Mono", monospace; font-size: 13.5px; }
+.nest-row .n { color: var(--accent); font-variant-numeric: tabular-nums; }
+.nest-row span.d { display: block; font-size: 12.5px; color: var(--ink-2); line-height: 1.45; }
+
+footer {
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+  padding: 22px 0 0;
+  font-size: 13.5px;
+  color: var(--ink-3);
+}
+
+@media (max-width: 1080px) {
+  .atlas { grid-template-columns: 1fr; }
+  .mapcol { position: static; }
+  #map { height: clamp(380px, 58vh, 640px); }
+  .picks { max-height: none; }
+}
+@media (max-width: 600px) {
+  .page { padding: 0 16px 60px; }
+}
+</style>
+
+<div class="page">
+  <header class="top">
+    <a class="back" href="index.html">← kenya-regions</a>
+    <h1>Atlas</h1>
+    <p class="standfirst">Every level Kenya is divided into, on one map. Hover to name a
+    county, click to go down a level. The two tabs are two different countries
+    administratively: the devolved units in force today, and the provincial
+    administration they replaced.</p>
+  </header>
+
+  <div class="tabs" role="tablist" aria-label="Which division of Kenya">
+    <button class="tab" role="tab" id="tab-devolved" aria-selected="true" data-scheme="devolved">
+      <b>Devolved</b><span>2013 →</span>
+    </button>
+    <button class="tab" role="tab" id="tab-provincial" aria-selected="false" data-scheme="provincial">
+      <b>Provincial administration</b><span>1963 – 2013</span>
+    </button>
+  </div>
+
+  <div class="atlas">
+    <div class="mapcol">
+      <div class="mapbar">
+        <nav class="crumbs" id="crumbs" aria-label="Where you are"></nav>
+        <span class="shade">
+          <label for="shade">Shade by</label>
+          <select id="shade"></select>
+        </span>
+      </div>
+      <figure class="mapfig">
+        <svg id="map" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map of Kenya by county">
+          <g id="zoom">
+            <g id="shapes"></g>
+            <g id="pins"></g>
+          </g>
+        </svg>
+        <div class="tip" id="tip" hidden></div>
+        <div class="legend" id="legend" hidden></div>
+      </figure>
+      <p class="mapnote" id="mapnote"></p>
+    </div>
+
+    <aside class="panel" id="panel" aria-live="polite"></aside>
+  </div>
+
+  <footer>
+    <p>Drawn from the same data the package ships. Geometry is
+    <code>data/svg/counties.svg</code> and <code>data/county-outlines.json</code>,
+    simplified to roughly a kilometre. Finer boundary tiers live in
+    <a href="https://github.com/nicanor-korir/kenya-regions-geo">kenya-regions-geo</a>.</p>
+  </footer>
+</div>
+
+<script src="atlas-geometry.js"></script>
+<script src="atlas-data.js"></script>
+<script>
+(function atlas() {
+  const G = window.KR_GEOMETRY
+  const A = window.KR_ATLAS
+  if (!G || !A) return
+
+  /* ── Indexes ───────────────────────────────────────────── */
+  const byKey = (rows, k) => new Map(rows.map((r) => [r[k], r]))
+  const groupBy = (rows, read) => {
+    const out = new Map()
+    for (const row of rows) {
+      const k = read(row)
+      const bucket = out.get(k)
+      if (bucket) bucket.push(row)
+      else out.set(k, [row])
+    }
+    return out
+  }
+
+  const wards = A.wards.map(([code, name, constituencyCode, subCounty]) =>
+    ({ code, name, constituencyCode, subCounty }))
+  const divisions = A.divisions.map(([code, name, districtCode]) =>
+    ({ code, name, districtCode }))
+  const locations = A.locations.map(([code, name, divisionCode]) =>
+    ({ code, name, divisionCode }))
+  const subLocations = A.subLocations.map(([code, name, locationCode, pop, hh, km2]) =>
+    ({ code, name, locationCode, pop, hh, km2 }))
+
+  const county = byKey(G.counties, 'code')
+  const province = byKey(A.provinces, 'code')
+  const constituency = byKey(A.constituencies, 'code')
+  const ward = byKey(wards, 'code')
+  const subCounty = byKey(A.subCounties, 'slug')
+  const district = byKey(A.districts, 'code')
+  const division = byKey(divisions, 'code')
+  const locationByCode = byKey(locations, 'code')
+
+  const constituenciesIn = groupBy(A.constituencies, (k) => k.countyCode)
+  const subCountiesIn = groupBy(A.subCounties, (s) => s.countyCode)
+  const wardsIn = groupBy(wards, (w) => w.constituencyCode)
+  const districtsIn = groupBy(A.districts, (d) => d.province)
+  const divisionsIn = groupBy(divisions, (d) => d.districtCode)
+  const locationsIn = groupBy(locations, (l) => l.divisionCode)
+  const subLocationsIn = groupBy(subLocations, (s) => s.locationCode)
+
+  const countyOfDistrict = (d) => d.counties.map((c) => county.get(c))
+  const num = (n) => (n === null || n === undefined ? '—' : n.toLocaleString('en-KE'))
+  const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;')
+
+  /* ── Projection, so a centroid can be placed on the same canvas ── */
+  const P = G.projection
+  const project = (lat, lng) => [
+    ((lng * Math.PI) / 180 - P.originX) * P.scale,
+    (P.originY - Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI) / 360))) * P.scale,
+  ]
+
+  /* ── Palettes ──────────────────────────────────────────── */
+  const PROVINCE_HUE = {
+    NBI: '#B7402F', CEN: '#0F6B5C', CST: '#2F6FA8', EST: '#C08A16',
+    NEA: '#9E4A78', NYZ: '#4A7C8C', RFT: '#6E8C1F', WST: '#5A5FA8',
+  }
+  const BLOC_HUE = {
+    LREB: '#2F6FA8', NOREB: '#6E8C1F', FCDC: '#9E4A78', JKP: '#4A7C8C',
+    MKAREB: '#0F6B5C', SEKEB: '#C08A16', NAMETRO: '#B7402F',
+  }
+  const ASAL_HUE = { arid: '#C08A16', 'semi-arid': '#DCC58A' }
+  const RAMP = ['#DEE8E4', '#B9D3CB', '#8FBBAF', '#5D9E8D', '#2E7D6B', '#0B4A40']
+
+  /* Quantile bins, because population and density are both long-tailed:
+     equal-width bins would put 45 counties in the first bucket. */
+  function bins(values) {
+    const sorted = values.slice().sort((a, b) => a - b)
+    const breaks = []
+    for (let i = 1; i < RAMP.length; i++) {
+      breaks.push(sorted[Math.floor((i / RAMP.length) * sorted.length)])
+    }
+    return breaks
+  }
+  const binOf = (value, breaks) => {
+    let i = 0
+    while (i < breaks.length && value >= breaks[i]) i++
+    return i
+  }
+
+  const density = (c) => Math.round(c.pop19 / c.areaKm2)
+  const SHADES = {
+    none: { label: 'Nothing', kind: 'flat' },
+    province: {
+      label: 'Former province',
+      kind: 'category',
+      hue: (c) => PROVINCE_HUE[c.province],
+      keys: () => A.provinces.map((p) => ({
+        key: p.code, name: p.name, hue: PROVINCE_HUE[p.code],
+        has: (c) => c.province === p.code,
+      })),
+    },
+    bloc: {
+      label: 'Economic bloc',
+      kind: 'category',
+      hue: (c) => (c.blocs.length ? BLOC_HUE[c.blocs[0]] : '#C9D0CA'),
+      keys: () => A.blocs.map((b) => ({
+        key: b.code, name: b.code + ' · ' + b.name, hue: BLOC_HUE[b.code],
+        has: (c) => c.blocs.includes(b.code),
+      })).concat([{ key: '', name: 'No bloc', hue: '#C9D0CA', has: (c) => !c.blocs.length }]),
+      note: 'Twelve counties belong to two blocs. Each is filled with the first, so hover a swatch to see a bloc in full.',
+    },
+    asal: {
+      label: 'ASAL class',
+      kind: 'category',
+      hue: (c) => (c.asal ? ASAL_HUE[c.asal] : '#C9D0CA'),
+      keys: () => [
+        { key: 'arid', name: 'Arid', hue: ASAL_HUE.arid, has: (c) => c.asal === 'arid' },
+        { key: 'semi-arid', name: 'Semi-arid', hue: ASAL_HUE['semi-arid'], has: (c) => c.asal === 'semi-arid' },
+        { key: '', name: 'Neither', hue: '#C9D0CA', has: (c) => !c.asal },
+      ],
+    },
+    pop19: { label: 'Population, 2019', kind: 'ramp', value: (c) => c.pop19, fmt: num },
+    density: { label: 'People per km²', kind: 'ramp', value: density, fmt: num },
+    constituencies: {
+      label: 'Constituencies',
+      kind: 'ramp',
+      value: (c) => (constituenciesIn.get(c.code) || []).length,
+      fmt: (n) => String(n),
+    },
+  }
+
+  /* ── DOM ───────────────────────────────────────────────── */
+  const svg = document.getElementById('map')
+  const zoomG = document.getElementById('zoom')
+  const shapesG = document.getElementById('shapes')
+  const pinsG = document.getElementById('pins')
+  const tip = document.getElementById('tip')
+  const legend = document.getElementById('legend')
+  const crumbs = document.getElementById('crumbs')
+  const panel = document.getElementById('panel')
+  const shadeSel = document.getElementById('shade')
+  const mapnote = document.getElementById('mapnote')
+  const figure = svg.parentElement
+
+  svg.setAttribute('viewBox', G.viewBox)
+
+  const NS = 'http://www.w3.org/2000/svg'
+  const paths = new Map()
+  for (const c of G.counties) {
+    const path = document.createElementNS(NS, 'path')
+    path.setAttribute('d', c.d)
+    path.setAttribute('class', 'county')
+    path.dataset.code = c.code
+    shapesG.appendChild(path)
+    paths.set(c.code, path)
+  }
+
+  /* ── State ─────────────────────────────────────────────── */
+  const state = {
+    scheme: 'devolved',
+    shade: { devolved: 'province', provincial: 'province' },
+    devolved: { county: null, constituency: null, subCounty: null, ward: null },
+    provincial: { province: null, district: null, division: null, location: null },
+  }
+  let zoomScale = 1
+
+  /* ── Zoom ──────────────────────────────────────────────── */
+  function focusOn(box) {
+    if (!box) {
+      zoomScale = 1
+      zoomG.setAttribute('transform', 'translate(0 0) scale(1)')
+      resizePins()
+      return
+    }
+    const pad = Math.max(box[2], box[3]) * 0.14 + 8
+    const w = box[2] + pad * 2
+    const h = box[3] + pad * 2
+    const s = Math.min(G.width / w, G.height / h, 9)
+    const cx = box[0] + box[2] / 2
+    const cy = box[1] + box[3] / 2
+    zoomScale = s
+    zoomG.setAttribute(
+      'transform',
+      `translate(${G.width / 2 - cx * s} ${G.height / 2 - cy * s}) scale(${s})`,
+    )
+    resizePins()
+  }
+
+  function unionBox(codes) {
+    let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity
+    for (const code of codes) {
+      const b = county.get(code).box
+      x0 = Math.min(x0, b[0]); y0 = Math.min(y0, b[1])
+      x1 = Math.max(x1, b[0] + b[2]); y1 = Math.max(y1, b[1] + b[3])
+    }
+    return x0 === Infinity ? null : [x0, y0, x1 - x0, y1 - y0]
+  }
+
+  /* ── Pins: constituency centroids, the one sub-county-level
+        geometry the package actually has. ─────────────────── */
+  let pinned = []
+  function drawPins(items) {
+    pinsG.textContent = ''
+    pinned = items.map((k) => {
+      const [x, y] = project(k.lat, k.lng)
+      const dot = document.createElementNS(NS, 'circle')
+      dot.setAttribute('cx', x)
+      dot.setAttribute('cy', y)
+      dot.setAttribute('class', 'pin')
+      dot.dataset.code = k.code
+      pinsG.appendChild(dot)
+      const text = document.createElementNS(NS, 'text')
+      text.setAttribute('x', x)
+      text.setAttribute('y', y)
+      text.setAttribute('class', 'pinlabel')
+      text.textContent = k.name
+      text.setAttribute('visibility', 'hidden')
+      pinsG.appendChild(text)
+      return { code: k.code, dot, text }
+    })
+    resizePins()
+  }
+  function resizePins() {
+    const r = 4.4 / zoomScale
+    const fs = 11 / zoomScale
+    for (const p of pinned) {
+      p.dot.setAttribute('r', r)
+      p.text.setAttribute('font-size', fs)
+      p.text.setAttribute('dy', -r - fs * 0.45)
+      p.text.setAttribute('stroke-width', 3 / zoomScale)
+    }
+  }
+  function hotPin(code) {
+    for (const p of pinned) {
+      const on = p.code === code
+      p.dot.classList.toggle('on', on)
+      p.text.setAttribute('visibility', on ? 'visible' : 'hidden')
+    }
+  }
+
+  /* ── Shading ───────────────────────────────────────────── */
+  function paint() {
+    const mode = SHADES[state.shade[state.scheme]]
+    const lit = litSet()
+    let breaks = null
+    if (mode.kind === 'ramp') breaks = bins(G.counties.map(mode.value))
+
+    for (const c of G.counties) {
+      const path = paths.get(c.code)
+      let fill = ''
+      let opacity = ''
+      if (mode.kind === 'category') {
+        fill = mode.hue(c)
+        opacity = '.5'
+      } else if (mode.kind === 'ramp') {
+        fill = RAMP[binOf(mode.value(c), breaks)]
+        opacity = '1'
+      }
+      path.style.fill = fill
+      path.style.fillOpacity = opacity
+      path.classList.toggle('muted', lit !== null && !lit.has(c.code))
+      path.classList.toggle('picked', lit !== null && lit.size === 1 && lit.has(c.code))
+      path.classList.remove('flagged')
+    }
+    drawLegend(mode, breaks)
+  }
+
+  /** Which counties the current selection is about; null means all of them. */
+  function litSet() {
+    if (state.scheme === 'devolved') {
+      return state.devolved.county === null ? null : new Set([state.devolved.county])
+    }
+    const p = state.provincial
+    if (p.district !== null) return new Set(district.get(p.district).counties)
+    if (p.province !== null) return new Set(province.get(p.province).counties)
+    return null
+  }
+
+  function drawLegend(mode, breaks) {
+    if (mode.kind === 'flat') { legend.hidden = true; return }
+    legend.hidden = false
+    if (mode.kind === 'category') {
+      const rows = mode.keys().map((k, i) =>
+        `<li class="act" data-swatch="${i}"><i style="background:${k.hue}"></i>${esc(k.name)}</li>`).join('')
+      legend.innerHTML =
+        `<h6>${esc(mode.label)}</h6><ul>${rows}</ul>` +
+        (mode.note ? `<p style="margin:7px 0 0;font-size:11.5px;color:var(--ink-3);line-height:1.4">${mode.note}</p>` : '')
+      legend._keys = mode.keys()
+    } else {
+      const lo = mode.fmt(Math.min(...G.counties.map(mode.value)))
+      const hi = mode.fmt(Math.max(...G.counties.map(mode.value)))
+      legend.innerHTML =
+        `<h6>${esc(mode.label)}</h6>` +
+        `<div class="ramp">${RAMP.map((c) => `<i style="background:${c}"></i>`).join('')}</div>` +
+        `<div class="ends"><span>${lo}</span><span>${hi}</span></div>`
+      legend._keys = null
+    }
+  }
+
+  legend.addEventListener('mouseover', (e) => {
+    const li = e.target.closest('[data-swatch]')
+    if (!li || !legend._keys) return
+    const k = legend._keys[Number(li.dataset.swatch)]
+    for (const c of G.counties) paths.get(c.code).classList.toggle('flagged', k.has(c))
+  })
+  legend.addEventListener('mouseleave', () => {
+    for (const c of G.counties) paths.get(c.code).classList.remove('flagged')
+  })
+
+  /* ── Tooltip ───────────────────────────────────────────── */
+  function showTip(html, event) {
+    tip.innerHTML = html
+    tip.hidden = false
+    const box = figure.getBoundingClientRect()
+    const x = event.clientX - box.left
+    const y = event.clientY - box.top
+    const w = tip.offsetWidth
+    tip.style.left = Math.min(Math.max(6, x + 14), box.width - w - 6) + 'px'
+    tip.style.top = Math.max(6, y - tip.offsetHeight - 12) + 'px'
+  }
+  const hideTip = () => { tip.hidden = true }
+
+  svg.addEventListener('mousemove', (e) => {
+    const pin = e.target.closest('.pin')
+    if (pin) {
+      const k = constituency.get(Number(pin.dataset.code))
+      showTip(`<b>${esc(k.name)}</b><span>constituency ${k.pcode} · ${num((wardsIn.get(k.code) || []).length)} wards</span>`, e)
+      hotPin(k.code)
+      return
+    }
+    const path = e.target.closest('.county')
+    if (!path) { hideTip(); return }
+    const c = county.get(Number(path.dataset.code))
+    if (state.scheme === 'provincial') {
+      const p = province.get(c.province)
+      showTip(
+        `<b>${esc(p.name)} Province</b><span>${esc(c.name)} today · ` +
+        `${num((districtsIn.get(p.code) || []).length)} districts in 2009</span>`, e)
+    } else {
+      showTip(
+        `<b>${esc(c.name)}</b><span>${num((constituenciesIn.get(c.code) || []).length)} constituencies · ` +
+        `${num(c.pop19)} people</span>`, e)
+    }
+  })
+  svg.addEventListener('mouseleave', () => { hideTip(); hotPin(null) })
+
+  svg.addEventListener('click', (e) => {
+    const pin = e.target.closest('.pin')
+    if (pin) { go({ constituency: Number(pin.dataset.code) }); return }
+    const path = e.target.closest('.county')
+    if (!path) return
+    const code = Number(path.dataset.code)
+    if (state.scheme === 'devolved') go({ county: code })
+    else go({ province: county.get(code).province })
+  })
+
+  /* ── Navigation ────────────────────────────────────────── */
+  function go(patch, skipHash) {
+    if (state.scheme === 'devolved') {
+      const d = state.devolved
+      if ('county' in patch) { d.county = patch.county; d.constituency = null; d.subCounty = null; d.ward = null }
+      if ('constituency' in patch) {
+        d.constituency = patch.constituency
+        d.subCounty = null
+        d.ward = null
+        if (patch.constituency !== null) d.county = constituency.get(patch.constituency).countyCode
+      }
+      if ('subCounty' in patch) {
+        d.subCounty = patch.subCounty
+        d.constituency = null
+        d.ward = null
+        if (patch.subCounty) d.county = subCounty.get(patch.subCounty).countyCode
+      }
+      if ('ward' in patch) {
+        d.ward = patch.ward
+        if (patch.ward !== null) {
+          const w = ward.get(patch.ward)
+          d.constituency = w.constituencyCode
+          d.county = constituency.get(w.constituencyCode).countyCode
+        }
+      }
+    } else {
+      const p = state.provincial
+      if ('province' in patch) { p.province = patch.province; p.district = null; p.division = null; p.location = null }
+      if ('district' in patch) {
+        p.district = patch.district; p.division = null; p.location = null
+        if (patch.district !== null) p.province = district.get(patch.district).province
+      }
+      if ('division' in patch) {
+        p.division = patch.division; p.location = null
+        if (patch.division !== null) {
+          p.district = division.get(patch.division).districtCode
+          p.province = district.get(p.district).province
+        }
+      }
+      if ('location' in patch) {
+        p.location = patch.location
+        if (patch.location !== null) {
+          p.division = locationByCode.get(patch.location).divisionCode
+          p.district = division.get(p.division).districtCode
+          p.province = district.get(p.district).province
+        }
+      }
+    }
+    render()
+    if (!skipHash) writeHash()
+  }
+
+  function setScheme(name, skipHash) {
+    state.scheme = name
+    for (const tab of document.querySelectorAll('.tab')) {
+      tab.setAttribute('aria-selected', String(tab.dataset.scheme === name))
+    }
+    fillShadeSelect()
+    render()
+    if (!skipHash) writeHash()
+  }
+
+  function fillShadeSelect() {
+    const allowed = state.scheme === 'devolved'
+      ? ['province', 'bloc', 'asal', 'pop19', 'density', 'constituencies', 'none']
+      : ['province', 'none']
+    shadeSel.innerHTML = allowed
+      .map((k) => `<option value="${k}">${esc(SHADES[k].label)}</option>`).join('')
+    if (!allowed.includes(state.shade[state.scheme])) state.shade[state.scheme] = allowed[0]
+    shadeSel.value = state.shade[state.scheme]
+    shadeSel.parentElement.style.visibility = allowed.length > 1 ? '' : 'hidden'
+  }
+
+  shadeSel.addEventListener('change', () => {
+    state.shade[state.scheme] = shadeSel.value
+    paint()
+  })
+  for (const tab of document.querySelectorAll('.tab')) {
+    tab.addEventListener('click', () => setScheme(tab.dataset.scheme))
+  }
+
+  /* ── Breadcrumbs ───────────────────────────────────────── */
+  function drawCrumbs(trail) {
+    crumbs.innerHTML = trail.map((step, i) => {
+      const last = i === trail.length - 1
+      const button = `<button class="crumb" ${last ? 'disabled' : ''} ` +
+        `data-go="${step.go || ''}">${esc(step.label)}</button>`
+      return i ? `<i>›</i>${button}` : button
+    }).join('')
+  }
+
+  /* ── Panel rendering ───────────────────────────────────── */
+  const cell = (label, value, cls) =>
+    `<div class="idcell ${cls || ''}"><span>${esc(label)}</span><b>${value}</b></div>`
+
+  const picks = (items, opts) => {
+    const o = opts || {}
+    const rows = items.map((it) =>
+      `<li>${it.go
+        ? `<button class="pick" data-go="${it.go}"${it.hover ? ` data-hover="${it.hover}"` : ''}>` +
+          `<span>${esc(it.label)}</span><em>${it.meta || ''}</em></button>`
+        : `<div class="leaf"><span>${esc(it.label)}</span><em>${it.meta || ''}</em></div>`}</li>`).join('')
+    const filter = items.length > 12
+      ? `<input class="filter" type="search" placeholder="Filter ${items.length}…" aria-label="Filter list">`
+      : ''
+    return filter + `<ul class="picks">${rows}</ul>`
+  }
+
+  function render() {
+    paint()
+    if (state.scheme === 'devolved') renderDevolved()
+    else renderProvincial()
+  }
+
+  function renderDevolved() {
+    const d = state.devolved
+    const trail = [{ label: 'Kenya', go: 'county:' }]
+    if (d.county !== null) {
+      const c = county.get(d.county)
+      trail.push({ label: c.name, go: 'county:' + c.code })
+      if (d.constituency !== null) trail.push({ label: constituency.get(d.constituency).name, go: 'constituency:' + d.constituency })
+      if (d.subCounty) trail.push({ label: subCounty.get(d.subCounty).name + ' sub-county', go: 'subCounty:' + d.subCounty })
+      if (d.ward !== null) trail.push({ label: ward.get(d.ward).name + ' ward', go: 'ward:' + d.ward })
+    }
+    drawCrumbs(trail)
+
+    if (d.county === null) {
+      focusOn(null)
+      drawPins([])
+      mapnote.textContent = 'Hover a county to name it. Click one to see the constituencies, sub-counties and wards inside it.'
+      panel.innerHTML =
+        `<p class="kicker">Devolved · 2013 onward</p>` +
+        `<p class="pname">The units in force today</p>` +
+        `<p class="psub">Created by the 2010 Constitution and the 2012 boundary review. This is the only hierarchy that nests cleanly.</p>` +
+        `<div class="idgrid">${cell('Counties', '47', 'acc')}${cell('Constituencies', '290')}${cell('Wards', num(1450))}${cell('Sub-counties', String(A.subCounties.length))}</div>` +
+        `<h3 class="sec">All counties <em>47</em></h3>` +
+        picks(G.counties.map((c) => ({
+          label: c.name,
+          meta: `${(constituenciesIn.get(c.code) || []).length} · ${num(c.pop19)}`,
+          go: 'county:' + c.code,
+          hover: 'county:' + c.code,
+        }))) +
+        `<p style="font-size:12px;color:var(--ink-3);margin:6px 2px 0">Constituencies · population 2019</p>`
+      return
+    }
+
+    const c = county.get(d.county)
+    const ks = (constituenciesIn.get(c.code) || []).slice().sort((a, b) => a.code - b.code)
+    const scs = (subCountiesIn.get(c.code) || []).slice().sort((a, b) => a.name.localeCompare(b.name))
+    focusOn(c.box)
+    drawPins(ks)
+
+    if (d.ward !== null) {
+      const w = ward.get(d.ward)
+      const k = constituency.get(w.constituencyCode)
+      hotPin(k.code)
+      mapnote.textContent = 'Wards have no published boundary here. The dot is the centroid of the constituency this ward sits in.'
+      panel.innerHTML =
+        `<p class="kicker">Ward · ${esc(k.name)} constituency</p>` +
+        `<p class="pname">${esc(w.name)}</p>` +
+        `<p class="psub">One of ${(wardsIn.get(k.code) || []).length} wards in ${esc(k.name)}, ${esc(c.name)} County. Elects one MCA.</p>` +
+        `<div class="idgrid">${cell('IEBC code', String(w.code), 'acc')}${cell('Constituency', String(k.code))}${cell('County', String(c.code))}</div>` +
+        `<h3 class="sec">Sits inside</h3>` +
+        picks([
+          { label: c.name + ' County', meta: String(c.code), go: 'county:' + c.code },
+          { label: k.name + ' constituency', meta: String(k.code), go: 'constituency:' + k.code },
+          w.subCounty
+            ? { label: subCounty.get(w.subCounty).name + ' sub-county', meta: 'admin', go: 'subCounty:' + w.subCounty }
+            : { label: 'No sub-county matched', meta: 'unmapped' },
+        ]) +
+        (w.subCounty ? '' :
+          `<div class="note warn"><p class="note-h">Unmapped</p><p>Twelve of the 1,450 wards are spelled differently enough in the KNBS sub-county listing that no confident match was possible. This is one of them, so its sub-county is <code>null</code> rather than a guess.</p></div>`)
+      return
+    }
+
+    if (d.subCounty) {
+      const s = subCounty.get(d.subCounty)
+      const ws = s.wardCodes.map((code) => ward.get(code)).filter(Boolean)
+      mapnote.textContent = 'Administrative sub-counties have no published boundary here. The dots are constituency centroids.'
+      panel.innerHTML =
+        `<p class="kicker">Sub-county · ${esc(c.name)} County</p>` +
+        `<p class="pname">${esc(s.name)}</p>` +
+        `<p class="psub">An administrative sub-county: a national government unit, headed by a deputy county commissioner.</p>` +
+        `<div class="idgrid">${cell('Wards', String(ws.length), 'acc')}${cell('County', String(c.code))}${cell('Slug', '<span style="font-size:12px">' + esc(s.slug) + '</span>')}</div>` +
+        `<h3 class="sec">Wards <em>${ws.length}</em></h3>` +
+        picks(ws.map((w) => ({ label: w.name, meta: String(w.code), go: 'ward:' + w.code }))) +
+        `<div class="note"><p class="note-h">Two meanings</p><p>“Sub-county” is used for both this unit and for a constituency. They coincide often but not always, which is why the package keeps them apart. <a href="index.html#subcounties">The difference, in full</a>.</p></div>`
+      return
+    }
+
+    if (d.constituency !== null) {
+      const k = constituency.get(d.constituency)
+      const ws = (wardsIn.get(k.code) || []).slice().sort((a, b) => a.code - b.code)
+      hotPin(k.code)
+      mapnote.textContent = 'The highlighted dot is this constituency’s centroid. Constituency boundaries are not published in this package.'
+      panel.innerHTML =
+        `<p class="kicker">Constituency · ${esc(c.name)} County</p>` +
+        `<p class="pname">${esc(k.name)}</p>` +
+        `<p class="psub">Elects one member of the National Assembly. ${ws.length} wards, each electing one MCA.</p>` +
+        `<div class="idgrid">${cell('IEBC code', String(k.code), 'acc')}${cell('p-code', k.pcode)}${cell('Wards', String(ws.length))}${cell('Area km²', num(Math.round(k.areaKm2)))}${cell('Centroid', '<span style="font-size:12px">' + k.lat.toFixed(3) + ', ' + k.lng.toFixed(3) + '</span>')}</div>` +
+        `<h3 class="sec">Wards <em>${ws.length}</em></h3>` +
+        picks(ws.map((w) => ({
+          label: w.name,
+          meta: String(w.code),
+          go: 'ward:' + w.code,
+        })))
+      return
+    }
+
+    mapnote.textContent = 'Each dot is a constituency centroid, the finest geometry this package carries. Click one for its wards.'
+    const blocs = c.blocs.length
+      ? c.blocs.map((b) => `<span class="tag">${esc(b)}</span>`).join('')
+      : '<span class="tag dim">no bloc</span>'
+    panel.innerHTML =
+      `<p class="kicker">County · ${esc(province.get(c.province).name)} Province before 2013</p>` +
+      `<p class="pname">${esc(c.name)}</p>` +
+      `<p class="psub">Headquarters ${esc(c.capital)}${c.city ? ' · city since ' + c.city : ''}</p>` +
+      `<div class="idgrid">` +
+        cell('Code', String(c.code).padStart(3, '0'), 'clash') +
+        cell('ISO 3166-2', c.iso, 'clash') +
+        cell('p-code', c.pcode, 'acc') +
+        cell('Constituencies', String(ks.length)) +
+        cell('Wards', String(ks.reduce((t, k) => t + (wardsIn.get(k.code) || []).length, 0))) +
+        cell('Area km²', num(c.areaKm2)) +
+        cell('Population 2019', num(c.pop19)) +
+        cell('People per km²', num(density(c))) +
+      `</div>` +
+      `<p style="margin:0 0 4px">${blocs}${c.asal ? `<span class="tag">${esc(c.asal)}</span>` : '<span class="tag dim">not ASAL</span>'}</p>` +
+      `<h3 class="sec">Constituencies <em>${ks.length}</em></h3>` +
+      picks(ks.map((k) => ({
+        label: k.name,
+        meta: `${(wardsIn.get(k.code) || []).length} wards`,
+        go: 'constituency:' + k.code,
+        hover: 'pin:' + k.code,
+      }))) +
+      `<h3 class="sec">Administrative sub-counties <em>${scs.length}</em></h3>` +
+      picks(scs.map((s) => ({
+        label: s.name,
+        meta: `${s.wardCodes.length} wards`,
+        go: 'subCounty:' + s.slug,
+      }))) +
+      `<div class="note"><p class="note-h">Why two lists</p><p>Constituencies are electoral and fixed by the IEBC. Administrative sub-counties are national government units. ${esc(c.name)} has ${ks.length} of the first and ${scs.length} of the second.</p></div>`
+  }
+
+  function renderProvincial() {
+    const p = state.provincial
+    const trail = [{ label: 'Kenya, before 2013', go: 'province:' }]
+    if (p.province !== null) {
+      trail.push({ label: province.get(p.province).name, go: 'province:' + p.province })
+      if (p.district !== null) trail.push({ label: district.get(p.district).name + ' district', go: 'district:' + p.district })
+      if (p.division !== null) trail.push({ label: division.get(p.division).name + ' division', go: 'division:' + p.division })
+      if (p.location !== null) trail.push({ label: locationByCode.get(p.location).name + ' location', go: 'location:' + p.location })
+    }
+    drawCrumbs(trail)
+    drawPins([])
+
+    const boundaryNote =
+      `<div class="note warn"><p class="note-h">No boundaries below the county</p>` +
+      `<p>Districts, divisions, locations and sub-locations were abolished in name in 2013 and no boundary file for them is published here. The map shades today's counties, which is the closest thing to a picture these units have.</p></div>`
+
+    if (p.province === null) {
+      focusOn(null)
+      mapnote.textContent = 'Colours are the eight provinces. Click one to walk down the 2009 census hierarchy.'
+      panel.innerHTML =
+        `<p class="kicker">Provincial administration · 1963 – 2013</p>` +
+        `<p class="pname">The hierarchy before devolution</p>` +
+        `<p class="psub">Counted in the 2009 census, dissolved by the 2010 Constitution. Still the shape of a great many older records.</p>` +
+        `<div class="nest">` +
+          `<div class="nest-row"><b>Province <span class="n">8</span></b><span class="d">Now the <code>formerProvince</code> field on every county.</span></div>` +
+          `<div class="nest-row"><b>District <span class="n">${A.districts.length}</span></b><span class="d">Roughly what became today's counties, but more of them.</span></div>` +
+          `<div class="nest-row"><b>Division <span class="n">${num(divisions.length)}</span></b><span class="d">Headed by a District Officer.</span></div>` +
+          `<div class="nest-row"><b>Location <span class="n">${num(locations.length)}</span></b><span class="d">Headed by a Chief.</span></div>` +
+          `<div class="nest-row"><b>Sub-location <span class="n">${num(subLocations.length)}</span></b><span class="d">The census enumeration unit. Headed by an Assistant Chief.</span></div>` +
+        `</div>` +
+        `<h3 class="sec">Provinces <em>8</em></h3>` +
+        picks(A.provinces.map((pr) => ({
+          label: pr.name,
+          meta: `${(districtsIn.get(pr.code) || []).length} districts`,
+          go: 'province:' + pr.code,
+        }))) +
+        boundaryNote
+      return
+    }
+
+    const pr = province.get(p.province)
+    const ds = (districtsIn.get(pr.code) || []).slice().sort((a, b) => a.name.localeCompare(b.name))
+
+    if (p.location !== null) {
+      const l = locationByCode.get(p.location)
+      const dv = division.get(l.divisionCode)
+      const dt = district.get(dv.districtCode)
+      const subs = (subLocationsIn.get(l.code) || []).slice().sort((a, b) => a.name.localeCompare(b.name))
+      const people = subs.reduce((t, s) => t + s.pop, 0)
+      const homes = subs.reduce((t, s) => t + s.hh, 0)
+      focusOn(unionBox(dt.counties))
+      mapnote.textContent = `${l.name} location sat in ${dt.name} district, which is inside ${dt.counties.map((c) => county.get(c).name).join(' and ')} today.`
+      panel.innerHTML =
+        `<p class="kicker">Location · ${esc(dv.name)} division</p>` +
+        `<p class="pname">${esc(l.name)}</p>` +
+        `<p class="psub">${esc(dt.name)} district, ${esc(pr.name)} Province. Headed by a Chief.</p>` +
+        `<div class="idgrid">${cell('Sub-locations', String(subs.length), 'acc')}${cell('Population 2009', num(people))}${cell('Households', num(homes))}</div>` +
+        `<h3 class="sec">Sub-locations <em>${subs.length}</em></h3>` +
+        picks(subs.map((s) => ({
+          label: s.name,
+          meta: `${num(s.pop)} · ${s.km2 ? num(s.km2) + ' km²' : '—'}`,
+        }))) +
+        `<p style="font-size:12px;color:var(--ink-3);margin:6px 2px 0">Population 2009 · area</p>` +
+        boundaryNote
+      return
+    }
+
+    if (p.division !== null) {
+      const dv = division.get(p.division)
+      const dt = district.get(dv.districtCode)
+      const ls = (locationsIn.get(dv.code) || []).slice().sort((a, b) => a.name.localeCompare(b.name))
+      focusOn(unionBox(dt.counties))
+      mapnote.textContent = `${dv.name} division sat in ${dt.name} district.`
+      panel.innerHTML =
+        `<p class="kicker">Division · ${esc(dt.name)} district</p>` +
+        `<p class="pname">${esc(dv.name)}</p>` +
+        `<p class="psub">${esc(pr.name)} Province. Headed by a District Officer.</p>` +
+        `<div class="idgrid">${cell('Locations', String(ls.length), 'acc')}${cell('Code', String(dv.code))}</div>` +
+        `<h3 class="sec">Locations <em>${ls.length}</em></h3>` +
+        picks(ls.map((l) => ({
+          label: l.name,
+          meta: `${(subLocationsIn.get(l.code) || []).length} sub-loc.`,
+          go: 'location:' + l.code,
+        }))) +
+        boundaryNote
+      return
+    }
+
+    if (p.district !== null) {
+      const dt = district.get(p.district)
+      const dvs = (divisionsIn.get(dt.code) || []).slice().sort((a, b) => a.name.localeCompare(b.name))
+      const todays = countyOfDistrict(dt)
+      focusOn(unionBox(dt.counties))
+      mapnote.textContent = `${dt.name} district falls inside ${todays.map((c) => c.name).join(' and ')} today.`
+      panel.innerHTML =
+        `<p class="kicker">District · ${esc(pr.name)} Province</p>` +
+        `<p class="pname">${esc(dt.name)}</p>` +
+        `<p class="psub">One of the ${A.districts.length} districts counted in 2009.</p>` +
+        `<div class="idgrid">${cell('Divisions', String(dvs.length), 'acc')}${cell('Code', String(dt.code))}${cell('Counties today', String(todays.length))}</div>` +
+        `<h3 class="sec">Today it is inside</h3>` +
+        picks(todays.map((c) => ({ label: c.name + ' County', meta: String(c.code) }))) +
+        `<h3 class="sec">Divisions <em>${dvs.length}</em></h3>` +
+        picks(dvs.map((dv) => ({
+          label: dv.name,
+          meta: `${(locationsIn.get(dv.code) || []).length} loc.`,
+          go: 'division:' + dv.code,
+        }))) +
+        boundaryNote
+      return
+    }
+
+    const todayCounties = pr.counties.map((c) => county.get(c))
+    const divisionCount = ds.reduce((t, d) => t + (divisionsIn.get(d.code) || []).length, 0)
+    focusOn(unionBox(pr.counties))
+    mapnote.textContent = `${pr.name} Province is ${todayCounties.length} of today's counties.`
+    panel.innerHTML =
+      `<p class="kicker">Province · abolished 2013</p>` +
+      `<p class="pname">${esc(pr.name)}</p>` +
+      `<p class="psub">Legacy ISO code ${esc(pr.iso)}. Became ${todayCounties.length} ${todayCounties.length === 1 ? 'county' : 'counties'}.</p>` +
+      `<div class="idgrid">${cell('Districts', String(ds.length), 'acc')}${cell('Divisions', String(divisionCount))}${cell('Counties today', String(todayCounties.length))}${cell('Population 2019', num(todayCounties.reduce((t, c) => t + c.pop19, 0)))}</div>` +
+      `<h3 class="sec">Districts <em>${ds.length}</em></h3>` +
+      picks(ds.map((d) => ({
+        label: d.name,
+        meta: `${(divisionsIn.get(d.code) || []).length} div.`,
+        go: 'district:' + d.code,
+      }))) +
+      `<h3 class="sec">Counties today <em>${todayCounties.length}</em></h3>` +
+      picks(todayCounties.map((c) => ({ label: c.name, meta: String(c.code) }))) +
+      boundaryNote
+  }
+
+  /* ── Panel and crumb interaction ───────────────────────── */
+  function dispatch(token) {
+    const i = token.indexOf(':')
+    const kind = token.slice(0, i)
+    const raw = token.slice(i + 1)
+    if (kind === 'pin') return
+    const value = raw === '' ? null : (kind === 'province' || kind === 'subCounty' ? raw : Number(raw))
+    go({ [kind]: value })
+  }
+
+  for (const root of [panel, crumbs]) {
+    root.addEventListener('click', (e) => {
+      const button = e.target.closest('[data-go]')
+      if (!button || button.disabled || !button.dataset.go) return
+      dispatch(button.dataset.go)
+    })
+  }
+
+  panel.addEventListener('mouseover', (e) => {
+    const button = e.target.closest('[data-hover]')
+    if (!button) { return }
+    const [kind, raw] = button.dataset.hover.split(':')
+    if (kind === 'pin') hotPin(Number(raw))
+    if (kind === 'county') {
+      for (const c of G.counties) paths.get(c.code).classList.toggle('flagged', String(c.code) === raw)
+    }
+  })
+  panel.addEventListener('mouseleave', () => {
+    hotPin(null)
+    for (const c of G.counties) paths.get(c.code).classList.remove('flagged')
+  })
+
+  panel.addEventListener('input', (e) => {
+    if (!e.target.classList.contains('filter')) return
+    const needle = e.target.value.trim().toLowerCase()
+    const list = e.target.nextElementSibling
+    for (const li of list.children) {
+      li.hidden = needle !== '' && !li.textContent.toLowerCase().includes(needle)
+    }
+  })
+
+  /* ── Deep links ────────────────────────────────────────── */
+  function writeHash() {
+    const parts = []
+    if (state.scheme === 'devolved') {
+      const d = state.devolved
+      if (d.county !== null) parts.push('county', d.county)
+      if (d.constituency !== null) parts.push('constituency', d.constituency)
+      if (d.subCounty) parts.push('subCounty', d.subCounty)
+      if (d.ward !== null) parts.push('ward', d.ward)
+    } else {
+      const p = state.provincial
+      parts.push('scheme', 'provincial')
+      if (p.province !== null) parts.push('province', p.province)
+      if (p.district !== null) parts.push('district', p.district)
+      if (p.division !== null) parts.push('division', p.division)
+      if (p.location !== null) parts.push('location', p.location)
+    }
+    const hash = parts.length ? '#/' + parts.join('/') : '#/'
+    if (location.hash !== hash) history.replaceState(null, '', hash)
+  }
+
+  function readHash() {
+    const parts = window.location.hash.replace(/^#\/?/, '').split('/').filter(Boolean)
+    const pairs = []
+    for (let i = 0; i < parts.length; i += 2) pairs.push([parts[i], parts[i + 1]])
+    const scheme = pairs.find(([k]) => k === 'scheme')
+    setScheme(scheme && scheme[1] === 'provincial' ? 'provincial' : 'devolved', true)
+    const deepest = pairs.filter(([k]) => k !== 'scheme').pop()
+    if (deepest && deepest[1] !== undefined) {
+      const [kind, raw] = deepest
+      const known = ['county', 'constituency', 'subCounty', 'ward', 'province', 'district', 'division', 'location']
+      if (known.includes(kind)) {
+        go({ [kind]: kind === 'province' || kind === 'subCounty' ? raw : Number(raw) }, true)
+        return
+      }
+    }
+    render()
+  }
+
+  window.addEventListener('hashchange', readHash)
+
+  fillShadeSelect()
+  readHash()
+})()
+</script>

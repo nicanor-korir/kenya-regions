@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>kenya-regions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -557,6 +558,7 @@ footer {
       <a href="#options">Select options</a>
       <a href="#codes-api">Code conversion</a>
       <a href="#country-api">Country</a>
+      <a href="#geometry">Geometry</a>
       <a href="#types">Types</a>
     </div>
 
@@ -575,7 +577,7 @@ footer {
       <h1>kenya-regions</h1>
       <p class="standfirst">Every way Kenya is divided up: country, counties, constituencies, wards, the former provinces, and the code schemes that disagree with each other. All of it bundled offline, with a typed API.</p>
       <div class="chips">
-        <span class="chip hi">v2.1.0</span>
+        <span class="chip hi">v2.2.0</span>
         <span class="chip">MIT</span>
         <span class="chip">Zero dependencies</span>
         <span class="chip">ESM + CJS</span>
@@ -1188,6 +1190,57 @@ isPostalCode('00100')                 // true</code></pre></div>
         </div>
       </section>
 
+      <!-- ═══ GEOMETRY ═══ -->
+      <section id="geometry">
+        <p class="kicker">API reference</p>
+        <h2>Geometry</h2>
+        <div class="prose">
+          <p>Coarse county outlines ship with this package, at about 15 KB gzipped. Enough to draw a national map and to answer which county a point falls in.</p>
+          <div class="code"><div class="code-bar"><span>typescript</span></div><pre><code>import { countyOutlines, locateCounty } from 'kenya-regions/outlines'
+
+map.addSource('counties', { type: 'geojson', data: countyOutlines })
+
+locateCounty(-1.2864, 36.8172)?.properties.name   // 'Nairobi'
+locateCounty(51.5, -0.12)                         // undefined, not in Kenya</code></pre></div>
+
+          <p>Arguments are <strong>latitude then longitude</strong>, matching how coordinates are spoken and written, even though GeoJSON stores them the other way round.</p>
+
+          <p>Every county record also carries a <code>bbox</code>, so a map can be fitted to a county without loading any geometry at all:</p>
+          <div class="code"><div class="code-bar"><span>typescript</span></div><pre><code>getCounty('Nairobi').bbox   // [36.663, -1.442, 37.104, -1.158]</code></pre></div>
+
+          <div class="api">
+            <p class="sig"><span class="fn">countyOutlines</span>: CountyOutlineCollection<br><span class="fn">locateCounty</span>(lat: number, lng: number): CountyOutline | undefined<br><span class="fn">getCountyOutline</span>(code: number): CountyOutline | undefined<br><span class="fn">outlineContains</span>(outline: CountyOutline, lat: number, lng: number): boolean</p>
+            <p>Feature properties carry <code>code</code>, <code>name</code>, <code>slug</code> and <code>pcode</code>, so <code>getCounty(feature.properties.code)</code> gives you the full record.</p>
+          </div>
+
+          <div class="note warn">
+            <p class="note-h">Accuracy is bounded by the simplification</p>
+            <p>Boundaries are simplified to roughly a kilometre, so a point close to a county border can resolve to the wrong side of it. Anything that has to hold at the edge needs a finer tier.</p>
+          </div>
+
+          <h3>Finer tiers and other levels</h3>
+          <p>Boundaries at higher detail, and levels below the county, live in a separate package:</p>
+          <div class="code"><div class="code-bar"><span>shell</span></div><pre><code>npm install kenya-regions-geo</code></pre></div>
+          <div class="code"><div class="code-bar"><span>typescript</span></div><pre><code>import { locate } from 'kenya-regions-geo'
+import { counties } from 'kenya-regions-geo/counties-detailed'
+
+locate(counties, -1.2864, 36.8172)?.properties.name</code></pre></div>
+          <div class="tablewrap" style="max-width:var(--measure)">
+            <table>
+              <thead><tr><th>Entry point</th><th>Simplified to</th><th class="num">Gzipped</th></tr></thead>
+              <tbody>
+                <tr><td><code>kenya-regions/outlines</code></td><td>~1 km</td><td class="num">14.7 KB</td></tr>
+                <tr><td><code>kenya-regions-geo/counties-compact</code></td><td>~1 km</td><td class="num">14.8 KB</td></tr>
+                <tr><td><code>kenya-regions-geo/counties</code></td><td>~200 m</td><td class="num">54 KB</td></tr>
+                <tr><td><code>kenya-regions-geo/counties-detailed</code></td><td>~40 m</td><td class="num">177 KB</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The split exists because npm downloads the whole tarball on install regardless of which subpath is imported. Subpath exports only help bundlers, so anything shipped in the main package is paid for by everyone, including the person who only wanted a dropdown.</p>
+          <p>Constituency boundaries are not published yet. The obvious source has its Nairobi polygons carrying the administrative sub-counties rather than the constituencies, so a point in the CBD resolves to the wrong constituency. See <a href="https://github.com/nicanor-korir/kenya-regions/blob/main/docs/plans/03-constituency-boundaries.md">the plan</a> for the evidence and what would unblock it.</p>
+        </div>
+      </section>
+
       <!-- ═══ TYPES ═══ -->
       <section id="types">
         <p class="kicker">API reference</p>
@@ -1208,6 +1261,7 @@ isPostalCode('00100')                 // true</code></pre></div>
   areaKm2: number
   population: { 2009: number; 2019: number }
   centroid: { lat: number; lng: number } | null
+  bbox: [number, number, number, number] | null   // west, south, east, north
   aliases: string[]
 }
 
@@ -1327,6 +1381,7 @@ const rows = external.map((row) =&gt; ({
               <tr><td><code>kenya-regions/blocs</code></td><td class="num">~2 KB</td><td>7 blocs</td></tr>
               <tr><td><code>kenya-regions/provinces</code></td><td class="num">~2 KB</td><td>8 provinces</td></tr>
               <tr><td><code>kenya-regions/country</code></td><td class="num">~5 KB</td><td>country record + helpers</td></tr>
+              <tr><td><code>kenya-regions/outlines</code></td><td class="num">~53 KB</td><td>47 coarse county outlines + point lookup</td></tr>
               <tr><td><code>kenya-regions/districts</code></td><td class="num">~22 KB</td><td>158 districts</td></tr>
               <tr><td><code>kenya-regions/counties</code></td><td class="num">~25 KB</td><td>47 counties</td></tr>
               <tr><td><code>kenya-regions/wards</code></td><td class="num">~48 KB</td><td>1450 wards</td></tr>
@@ -1381,6 +1436,7 @@ const rows = external.map((row) =&gt; ({
               <tr><td>IEBC 2013 boundary shapefile</td><td>Independent cross-check of ward names</td></tr>
               <tr><td>KNBS sub-county / ward listing</td><td>The 301 administrative sub-counties</td></tr>
               <tr><td>KNBS 2009 census, population by sub-location</td><td>Districts, divisions, locations, sub-locations and their census figures</td></tr>
+              <tr><td>OCHA COD admin1 boundaries</td><td>Coarse county outlines and each county bbox</td></tr>
               <tr><td>KNBS 2019 and 2009 censuses</td><td>Population</td></tr>
               <tr><td>ISO 3166-1 and 3166-2:KE</td><td>Country and county codes, withdrawn province codes</td></tr>
               <tr><td>UN M49</td><td>Kenya’s place in the world statistical hierarchy</td></tr>
@@ -1451,7 +1507,7 @@ const rows = external.map((row) =&gt; ({
     </div>
 
     <footer>
-      <p>kenya-regions v2.1.0 · MIT · Nicanor Korir. Corrections to the data are welcome. Open an issue with a source and the build will be updated.</p>
+      <p>kenya-regions v2.2.0 · MIT · Nicanor Korir. Corrections to the data are welcome. Open an issue with a source and the build will be updated.</p>
     </footer>
   </main>
 </div>

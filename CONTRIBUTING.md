@@ -198,7 +198,14 @@ src/              the library; src/generated/ is build output
 src/internal/     shared helpers, not part of the public API
 test/             vitest suites, including the data integrity assertions
 docs/index.html   the standalone documentation page
+docs/plans/       scoped but unbuilt work, and decisions to leave things out
 ```
+
+Boundary geometry beyond the coarse county outlines lives in a separate
+repository,
+[kenya-regions-geo](https://github.com/nicanor-korir/kenya-regions-geo). It
+builds against the published `kenya-regions`, so a boundary cannot claim a code
+this package does not issue.
 
 ## Releasing
 

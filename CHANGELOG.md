@@ -1,5 +1,40 @@
 # Changelog
 
+## 2.2.0
+
+### Added
+
+**Coarse county outlines.** The first geometry in this package, at about
+15 KB gzipped:
+
+```ts
+import { countyOutlines, locateCounty } from 'kenya-regions/outlines'
+
+map.addSource('counties', { type: 'geojson', data: countyOutlines })
+locateCounty(-1.2864, 36.8172)?.properties.name   // 'Nairobi'
+```
+
+Enough to draw a national map and to answer which county a point falls in.
+Boundaries are simplified to roughly a kilometre, so a point close to a county
+border can resolve to the wrong side of it.
+
+**`bbox` on every county record**, so a map can be fitted to a county without
+loading any geometry at all.
+
+New subpath: `kenya-regions/outlines`. New exports: `countyOutlines`,
+`locateCounty`, `getCountyOutline`, `outlineContains`.
+
+### Notes
+
+Finer boundary tiers, and levels below the county, live in a separate package:
+[kenya-regions-geo](https://github.com/nicanor-korir/kenya-regions-geo). The
+split exists because npm downloads the whole tarball on install regardless of
+which subpath is imported, so anything shipped here is paid for by everyone.
+15 KB earns that; 640 KB of detailed boundaries does not.
+
+The tarball grows from 903 KB to 956 KB. The build asserts one outline per
+county, and that each county centroid falls inside its own bounding box.
+
 ## 2.1.0
 
 Adds the two administrative hierarchies that sit either side of the electoral

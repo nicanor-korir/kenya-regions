@@ -1,0 +1,9 @@
+code,name,legacy_iso_code,county_count,county_codes
+NBI,Nairobi,KE-110,1,47
+CEN,Central,KE-200,5,18;19;20;21;22
+CST,Coast,KE-300,6,1;2;3;4;5;6
+EST,Eastern,KE-400,8,10;11;12;13;14;15;16;17
+NEA,North Eastern,KE-500,3,7;8;9
+NYZ,Nyanza,KE-600,6,41;42;43;44;45;46
+RFT,Rift Valley,KE-700,14,23;24;25;26;27;28;29;30;31;32;33;34;35;36
+WST,Western,KE-800,4,37;38;39;40

@@ -1,0 +1,159 @@
+code,name,slug,former_province_code,former_province,county_codes
+1,Gatanga,gatanga,CEN,Central,21
+2,Gatundu,gatundu,CEN,Central,
+3,Githunguri,githunguri,CEN,Central,22
+4,Kiambu East(Kiambaa),kiambu-east-kiambaa,CEN,Central,
+5,Kiambu West,kiambu-west,CEN,Central,
+6,Kikuyu,kikuyu,CEN,Central,22
+7,Kirinyaga,kirinyaga,CEN,Central,20
+8,Lari,lari,CEN,Central,22
+9,Muranga North,muranga-north,CEN,Central,
+10,Muranga South,muranga-south,CEN,Central,
+11,Nyandarua North,nyandarua-north,CEN,Central,
+12,Nyandarua South,nyandarua-south,CEN,Central,
+13,Nyeri North,nyeri-north,CEN,Central,
+14,Nyeri South,nyeri-south,CEN,Central,
+15,Ruiru,ruiru,CEN,Central,22
+16,Thika East,thika-east,CEN,Central,
+17,Thika West,thika-west,CEN,Central,
+18,Kaloleni,kaloleni,CST,Coast,3
+19,Kilifi,kilifi,CST,Coast,3
+20,Kilindini,kilindini,CST,Coast,
+21,Kinango,kinango,CST,Coast,2
+22,Kwale,kwale,CST,Coast,2
+23,Lamu,lamu,CST,Coast,5
+24,Malindi,malindi,CST,Coast,3
+25,Mombasa,mombasa,CST,Coast,1
+26,Msambweni,msambweni,CST,Coast,2
+27,Taita,taita,CST,Coast,
+28,Tana Delta,tana-delta,CST,Coast,
+29,Tana River,tana-river,CST,Coast,4
+30,Taveta,taveta,CST,Coast,6
+31,Chalbi,chalbi,EST,Eastern,
+32,Embu,embu,EST,Eastern,14
+33,Garbatulla,garbatulla,EST,Eastern,
+34,Igembe,igembe,EST,Eastern,
+35,Imenti North,imenti-north,EST,Eastern,
+36,Imenti South,imenti-south,EST,Eastern,
+37,Isiolo,isiolo,EST,Eastern,11
+38,Kangundo,kangundo,EST,Eastern,16
+39,Kibwezi,kibwezi,EST,Eastern,
+40,Kitui,kitui,EST,Eastern,15
+41,Kyuso,kyuso,EST,Eastern,
+42,Laisamis,laisamis,EST,Eastern,10
+43,Maara,maara,EST,Eastern,13
+44,Machakos,machakos,EST,Eastern,16
+45,Makueni,makueni,EST,Eastern,17
+46,Marsabit,marsabit,EST,Eastern,10
+47,Mbeere,mbeere,EST,Eastern,
+48,Mbooni,mbooni,EST,Eastern,17
+49,Meru Central,meru-central,EST,Eastern,
+50,Meru South,meru-south,EST,Eastern,
+51,Moyale,moyale,EST,Eastern,10
+52,Mutomo,mutomo,EST,Eastern,
+53,Mwala,mwala,EST,Eastern,16
+54,Mwingi,mwingi,EST,Eastern,
+55,Nzaui,nzaui,EST,Eastern,
+56,Tharaka,tharaka,EST,Eastern,13
+57,Tigania,tigania,EST,Eastern,
+58,Yatta,yatta,EST,Eastern,16
+59,Nairobi East,nairobi-east,NBI,Nairobi,
+60,Nairobi North,nairobi-north,NBI,Nairobi,
+61,Nairobi West,nairobi-west,NBI,Nairobi,
+62,Westlands,westlands,NBI,Nairobi,47
+63,Fafi,fafi,NEA,North Eastern,7
+64,Garissa,garissa,NEA,North Eastern,7
+65,Ijara,ijara,NEA,North Eastern,7
+66,Lagdera,lagdera,NEA,North Eastern,7
+67,Mandera Central,mandera-central,NEA,North Eastern,
+68,Mandera East,mandera-east,NEA,North Eastern,9
+69,Mandera West,mandera-west,NEA,North Eastern,9
+70,Wajir East,wajir-east,NEA,North Eastern,8
+71,Wajir North,wajir-north,NEA,North Eastern,8
+72,Wajir South,wajir-south,NEA,North Eastern,8
+73,Wajir West,wajir-west,NEA,North Eastern,8
+74,Bondo,bondo,NYZ,Nyanza,41
+75,Borabu,borabu,NYZ,Nyanza,46
+76,Gucha South,gucha-south,NYZ,Nyanza,
+77,Gucha,gucha,NYZ,Nyanza,
+78,Homabay,homabay,NYZ,Nyanza,43
+79,Kisii Central,kisii-central,NYZ,Nyanza,
+80,Kisii South,kisii-south,NYZ,Nyanza,
+81,Kisumu East,kisumu-east,NYZ,Nyanza,42
+82,Kisumu West,kisumu-west,NYZ,Nyanza,42
+83,Kuria East,kuria-east,NYZ,Nyanza,44
+84,Kuria West,kuria-west,NYZ,Nyanza,44
+85,Manga,manga,NYZ,Nyanza,
+86,Masaba,masaba,NYZ,Nyanza,
+87,Migori,migori,NYZ,Nyanza,44
+88,Nyamira,nyamira,NYZ,Nyanza,46
+89,Nyando,nyando,NYZ,Nyanza,42
+90,Rachuonyo,rachuonyo,NYZ,Nyanza,
+91,Rarieda,rarieda,NYZ,Nyanza,41
+92,Rongo,rongo,NYZ,Nyanza,44
+93,Siaya,siaya,NYZ,Nyanza,41
+94,Suba,suba,NYZ,Nyanza,
+95,Baringo North,baringo-north,RFT,Rift Valley,30
+96,Baringo,baringo,RFT,Rift Valley,30
+97,Bomet,bomet,RFT,Rift Valley,36
+98,Buret,buret,RFT,Rift Valley,
+99,East Pokot,east-pokot,RFT,Rift Valley,
+100,Eldoret East,eldoret-east,RFT,Rift Valley,
+101,Eldoret West,eldoret-west,RFT,Rift Valley,
+102,Kajiado Central,kajiado-central,RFT,Rift Valley,34
+103,Kajiado North,kajiado-north,RFT,Rift Valley,34
+104,Keiyo,keiyo,RFT,Rift Valley,
+105,Kericho,kericho,RFT,Rift Valley,35
+106,Kipkelion,kipkelion,RFT,Rift Valley,
+107,Koibatek,koibatek,RFT,Rift Valley,
+108,Kwanza,kwanza,RFT,Rift Valley,26
+109,Laikipia East,laikipia-east,RFT,Rift Valley,31
+110,Laikipia North,laikipia-north,RFT,Rift Valley,31
+111,Laikipia West,laikipia-west,RFT,Rift Valley,31
+112,Loitokitok,loitokitok,RFT,Rift Valley,
+113,Marakwet,marakwet,RFT,Rift Valley,
+114,Molo,molo,RFT,Rift Valley,32
+115,Naivasha,naivasha,RFT,Rift Valley,32
+116,Nakuru North,nakuru-north,RFT,Rift Valley,
+117,Nakuru,nakuru,RFT,Rift Valley,32
+118,Nandi Central,nandi-central,RFT,Rift Valley,
+119,Nandi East,nandi-east,RFT,Rift Valley,
+120,Nandi North,nandi-north,RFT,Rift Valley,
+121,Nandi South,nandi-south,RFT,Rift Valley,
+122,Narok North,narok-north,RFT,Rift Valley,33
+123,Narok South,narok-south,RFT,Rift Valley,33
+124,Pokot Central,pokot-central,RFT,Rift Valley,
+125,Pokot North,pokot-north,RFT,Rift Valley,
+126,Samburu Central,samburu-central,RFT,Rift Valley,
+127,Samburu East,samburu-east,RFT,Rift Valley,25
+128,Samburu North,samburu-north,RFT,Rift Valley,25
+129,Sotik,sotik,RFT,Rift Valley,36
+130,Tinderet,tinderet,RFT,Rift Valley,29
+131,Trans Mara,trans-mara,RFT,Rift Valley,
+132,Trans Nzoia East,trans-nzoia-east,RFT,Rift Valley,
+133,Trans Nzoia West,trans-nzoia-west,RFT,Rift Valley,
+134,Turkana Central,turkana-central,RFT,Rift Valley,23
+135,Turkana North,turkana-north,RFT,Rift Valley,23
+136,Turkana South,turkana-south,RFT,Rift Valley,23
+137,Wareng,wareng,RFT,Rift Valley,
+138,West Pokot,west-pokot,RFT,Rift Valley,24
+139,Bungoma East,bungoma-east,WST,Western,
+140,Bungoma North,bungoma-north,WST,Western,
+141,Bungoma South,bungoma-south,WST,Western,
+142,Bungoma West,bungoma-west,WST,Western,
+143,Bunyala,bunyala,WST,Western,
+144,Busia,busia,WST,Western,40
+145,Butere,butere,WST,Western,37
+146,Emuhaya,emuhaya,WST,Western,38
+147,Hamisi,hamisi,WST,Western,38
+148,Kakamega Central,kakamega-central,WST,Western,
+149,Kakamega East,kakamega-east,WST,Western,
+150,Kakamega North,kakamega-north,WST,Western,
+151,Kakamega South,kakamega-south,WST,Western,
+152,Lugari,lugari,WST,Western,37
+153,Mt. Elgon,mt-elgon,WST,Western,39
+154,Mumias,mumias,WST,Western,
+155,Samia,samia,WST,Western,
+156,Teso North,teso-north,WST,Western,40
+157,Teso South,teso-south,WST,Western,40
+158,Vihiga,vihiga,WST,Western,38

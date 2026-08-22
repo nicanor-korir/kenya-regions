@@ -1112,6 +1112,571 @@ writeFileSync(out('sublocations.json'), JSON.stringify(subLocations) + '\n')
 write('provinces', 'Province', provinces)
 write('blocs', 'EconomicBloc', blocs)
 
+/* -------------------------------------------------- svg, csv, atlas --- */
+
+/**
+ * Everything below re-renders data already emitted above into shapes that do
+ * not need `npm install`: an SVG a designer can open, CSVs a spreadsheet or a
+ * `COPY FROM` can read, and the payload the docs atlas draws itself from.
+ */
+
+const csvOut = (f) => join(root, 'data', 'csv', f)
+const svgOut = (f) => join(root, 'data', 'svg', f)
+const docsOut = (f) => join(root, 'docs', f)
+mkdirSync(join(root, 'data', 'csv'), { recursive: true })
+mkdirSync(join(root, 'data', 'svg'), { recursive: true })
+
+const countyByCode = new Map(counties.map((c) => [c.code, c]))
+const provinceByCode = new Map(provinces.map((p) => [p.code, p]))
+
+const constituencyTally = new Map()
+for (const k of constituencies) {
+  constituencyTally.set(k.countyCode, (constituencyTally.get(k.countyCode) ?? 0) + 1)
+}
+const wardTally = new Map()
+for (const w of wards) {
+  wardTally.set(w.countyCode, (wardTally.get(w.countyCode) ?? 0) + 1)
+}
+
+/* -- projection ------------------------------------------------------- */
+
+/**
+ * Spherical Mercator, the projection every web map already uses, fitted to a
+ * 1000-unit-wide viewBox. Equal-area would be the honest choice for comparing
+ * county sizes, but the point of these files is that a path can be dropped
+ * straight onto a Leaflet or MapLibre view without reprojecting anything.
+ */
+const SVG_WIDTH = 1000
+
+const mercator = (lng, lat) => [
+  (lng * Math.PI) / 180,
+  Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI) / 360)),
+]
+
+/** One decimal at this width is about 90 m, well under the ~1 km simplification. */
+const round1 = (v) => Math.round(v * 10) / 10
+
+const outlineFeatures = outlineSource.features
+  .slice()
+  .sort((a, b) => a.properties.code - b.properties.code)
+
+const eachRing = (geometry, fn) => {
+  const polygons =
+    geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.coordinates
+  for (const polygon of polygons) for (const ring of polygon) fn(ring)
+}
+
+const extent = { minX: Infinity, minY: Infinity, maxX: -Infinity, maxY: -Infinity }
+for (const feature of outlineFeatures) {
+  eachRing(feature.geometry, (ring) => {
+    for (const [lng, lat] of ring) {
+      const [x, y] = mercator(lng, lat)
+      if (x < extent.minX) extent.minX = x
+      if (x > extent.maxX) extent.maxX = x
+      if (y < extent.minY) extent.minY = y
+      if (y > extent.maxY) extent.maxY = y
+    }
+  })
+}
+
+const svgScale = SVG_WIDTH / (extent.maxX - extent.minX)
+const SVG_HEIGHT = round1((extent.maxY - extent.minY) * svgScale)
+
+const toSvg = (lng, lat) => {
+  const [x, y] = mercator(lng, lat)
+  return [round1((x - extent.minX) * svgScale), round1((extent.maxY - y) * svgScale)]
+}
+
+/**
+ * A path, plus the box it occupies, in viewBox units.
+ *
+ * Rings are emitted as `M x y x y … Z`: after the first pair every pair is an
+ * implicit lineto, which drops one byte per vertex over repeating `L`. Points
+ * that collapse onto their neighbour once rounded are dropped, and the closing
+ * vertex GeoJSON repeats is left to `Z`.
+ */
+function svgShape(geometry) {
+  let d = ''
+  let x0 = Infinity
+  let y0 = Infinity
+  let x1 = -Infinity
+  let y1 = -Infinity
+  eachRing(geometry, (ring) => {
+    const points = []
+    let previous = ''
+    for (const [lng, lat] of ring) {
+      const [x, y] = toSvg(lng, lat)
+      if (x < x0) x0 = x
+      if (x > x1) x1 = x
+      if (y < y0) y0 = y
+      if (y > y1) y1 = y
+      const point = `${x} ${y}`
+      if (point !== previous) {
+        points.push(point)
+        previous = point
+      }
+    }
+    if (points.length > 1 && points[points.length - 1] === points[0]) points.pop()
+    if (points.length < 3) return
+    d += `M${points.join(' ')}Z`
+  })
+  return { d, bbox: [x0, y0, round1(x1 - x0), round1(y1 - y0)] }
+}
+
+const shapes = new Map(
+  outlineFeatures.map((feature) => [feature.properties.code, svgShape(feature.geometry)]),
+)
+
+// Past the error report above, so these throw rather than collect.
+if (shapes.size !== 47) throw new Error(`expected 47 county shapes, got ${shapes.size}`)
+for (const county of counties) {
+  if (!shapes.has(county.code)) {
+    throw new Error(`no outline for county ${county.code} ${county.name}`)
+  }
+}
+
+/* -- counties.svg ----------------------------------------------------- */
+
+const xml = (value) =>
+  String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+
+{
+  const groups = provinces
+    .map((province) => {
+      const members = province.counties
+        .map((code) => countyByCode.get(code))
+        .sort((a, b) => a.code - b.code)
+        .map((county) => {
+          const { d } = shapes.get(county.code)
+          const attributes = [
+            `id="county-${pad(county.code, 3)}"`,
+            `class="county"`,
+            `data-code="${county.code}"`,
+            `data-name="${xml(county.name)}"`,
+            `data-slug="${county.slug}"`,
+            `data-pcode="${county.pcode}"`,
+            `data-iso="${county.isoCode}"`,
+            `data-capital="${xml(county.capital)}"`,
+            `data-province="${province.code}"`,
+            `data-blocs="${county.economicBlocs.join(' ')}"`,
+            county.asal ? `data-asal="${county.asal}"` : null,
+            `data-constituencies="${constituencyTally.get(county.code)}"`,
+            `data-wards="${wardTally.get(county.code)}"`,
+            `data-area-km2="${county.areaKm2}"`,
+            `data-population-2019="${county.population[2019]}"`,
+          ].filter(Boolean)
+          return (
+            `    <path ${attributes.join(' ')}\n` +
+            `          d="${d}"><title>${xml(county.name)}</title></path>`
+          )
+        })
+        .join('\n')
+      return (
+        `  <g id="province-${province.code}" class="province"` +
+        ` data-province="${province.code}"` +
+        ` data-province-name="${xml(province.name)}">\n${members}\n  </g>`
+      )
+    })
+    .join('\n')
+
+  const svg =
+    `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<!--\n` +
+    `  Kenya, all 47 counties. Generated by scripts/build-data.mjs from\n` +
+    `  data/county-outlines.json. Do not edit by hand.\n` +
+    `\n` +
+    `  Spherical Mercator fitted to a ${SVG_WIDTH}-unit viewBox. Boundaries are\n` +
+    `  simplified to roughly a kilometre: enough to draw a map, not enough to\n` +
+    `  measure one. data/svg/projection.json carries the transform, so you can\n` +
+    `  place your own coordinates on this same canvas.\n` +
+    `\n` +
+    `  Paths are grouped by former province and carry every scheme the package\n` +
+    `  knows as data attributes, so one file draws several different maps:\n` +
+    `\n` +
+    `    #county-047                { fill: #B7402F }   one county\n` +
+    `    #province-CST .county      { fill: #DCE7F0 }   the eight former provinces\n` +
+    `    [data-blocs~="LREB"]       { fill: #CBE3DC }   economic bloc membership\n` +
+    `    [data-asal="arid"]         { fill: #E8DCC0 }   the ASAL classification\n` +
+    `\n` +
+    `  There is no geometry below the county in this package. Constituency,\n` +
+    `  ward and sub-county boundaries are not published here because no source\n` +
+    `  we trust has been reconciled yet; see docs/plans/03-constituency-boundaries.md.\n` +
+    `-->\n` +
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${SVG_WIDTH} ${SVG_HEIGHT}"` +
+    ` width="${SVG_WIDTH}" height="${SVG_HEIGHT}" role="img"` +
+    ` aria-labelledby="kr-title kr-desc">\n` +
+    `  <title id="kr-title">Kenya: the 47 counties</title>\n` +
+    `  <desc id="kr-desc">The 47 counties created by the 2010 Constitution,` +
+    ` grouped by the former province each was carved out of.</desc>\n` +
+    `  <style>\n` +
+    `    .county { fill: #E9EDEA; stroke: #FFFFFF; stroke-width: 1.2;` +
+    ` stroke-linejoin: round; }\n` +
+    `  </style>\n` +
+    `${groups}\n` +
+    `</svg>\n`
+
+  writeFileSync(svgOut('counties.svg'), svg)
+  console.log(
+    `  ${'counties.svg'.padEnd(16)} ${'47'.padStart(5)} paths    ` +
+      `${(svg.length / 1024).toFixed(1).padStart(7)} KB`,
+  )
+}
+
+writeFileSync(
+  svgOut('projection.json'),
+  JSON.stringify(
+    {
+      _comment:
+        'How data/svg/counties.svg and the svg_path column of ' +
+        'data/csv/county-outlines.csv were projected. Apply this to any ' +
+        'latitude and longitude to place it on the same canvas.',
+      generated: 'scripts/build-data.mjs',
+      type: 'sphericalMercator',
+      viewBox: [0, 0, SVG_WIDTH, SVG_HEIGHT],
+      width: SVG_WIDTH,
+      height: SVG_HEIGHT,
+      scale: svgScale,
+      originX: extent.minX,
+      originY: extent.maxY,
+      formula: [
+        'mx = lng * PI / 180',
+        'my = ln(tan(PI / 4 + lat * PI / 360))',
+        'x  = (mx - originX) * scale',
+        'y  = (originY - my) * scale',
+      ],
+      precision: 'Coordinates are rounded to one decimal, about 90 metres.',
+    },
+    null,
+    2,
+  ) + '\n',
+)
+
+/* -- csv -------------------------------------------------------------- */
+
+/** RFC 4180 quoting. Lists join on `;` so the field survives a comma split. */
+const csvCell = (value) => {
+  if (value === null || value === undefined) return ''
+  const text = Array.isArray(value) ? value.join(';') : String(value)
+  return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text
+}
+
+const writeCsv = (name, columns, rows) => {
+  const lines = [columns.map(([header]) => header).join(',')]
+  for (const row of rows) {
+    lines.push(columns.map(([, read]) => csvCell(read(row))).join(','))
+  }
+  const text = lines.join('\n') + '\n'
+  writeFileSync(csvOut(`${name}.csv`), text)
+  console.log(
+    `  ${(name + '.csv').padEnd(16)} ${String(rows.length).padStart(5)} rows     ` +
+      `${(text.length / 1024).toFixed(1).padStart(7)} KB`,
+  )
+}
+
+writeCsv(
+  'counties',
+  [
+    ['code', (c) => c.code],
+    ['name', (c) => c.name],
+    ['slug', (c) => c.slug],
+    ['capital', (c) => c.capital],
+    ['iso_code', (c) => c.isoCode],
+    ['pcode', (c) => c.pcode],
+    ['former_province', (c) => c.formerProvince],
+    ['former_province_code', (c) => c.formerProvinceCode],
+    ['economic_blocs', (c) => c.economicBlocs],
+    ['asal', (c) => c.asal],
+    ['city_status_since', (c) => c.cityStatusSince],
+    ['constituencies', (c) => constituencyTally.get(c.code)],
+    ['wards', (c) => wardTally.get(c.code)],
+    ['area_km2', (c) => c.areaKm2],
+    ['population_2009', (c) => c.population[2009]],
+    ['population_2019', (c) => c.population[2019]],
+    ['centroid_lat', (c) => c.centroid.lat],
+    ['centroid_lng', (c) => c.centroid.lng],
+    ['bbox_min_lng', (c) => c.bbox[0]],
+    ['bbox_min_lat', (c) => c.bbox[1]],
+    ['bbox_max_lng', (c) => c.bbox[2]],
+    ['bbox_max_lat', (c) => c.bbox[3]],
+    ['aliases', (c) => c.aliases],
+  ],
+  counties,
+)
+
+writeCsv(
+  'constituencies',
+  [
+    ['code', (k) => k.code],
+    ['name', (k) => k.name],
+    ['slug', (k) => k.slug],
+    ['county_code', (k) => k.countyCode],
+    ['county_name', (k) => countyByCode.get(k.countyCode).name],
+    ['pcode', (k) => k.pcode],
+    ['area_km2', (k) => k.areaKm2],
+    ['centroid_lat', (k) => k.centroid.lat],
+    ['centroid_lng', (k) => k.centroid.lng],
+    ['aliases', (k) => k.aliases],
+  ],
+  constituencies,
+)
+
+writeCsv(
+  'wards',
+  [
+    ['code', (w) => w.code],
+    ['name', (w) => w.name],
+    ['slug', (w) => w.slug],
+    ['constituency_code', (w) => w.constituencyCode],
+    ['constituency_name', (w) => constByCode.get(w.constituencyCode).name],
+    ['county_code', (w) => w.countyCode],
+    ['county_name', (w) => countyByCode.get(w.countyCode).name],
+    ['sub_county', (w) => w.subCounty],
+    ['aliases', (w) => w.aliases],
+  ],
+  wards,
+)
+
+writeCsv(
+  'subcounties',
+  [
+    ['slug', (s) => s.slug],
+    ['name', (s) => s.name],
+    ['county_code', (s) => s.countyCode],
+    ['county_name', (s) => countyByCode.get(s.countyCode).name],
+    ['constituency_code', (s) => s.constituencyCode],
+    ['ward_count', (s) => s.wardCodes.length],
+    ['ward_codes', (s) => s.wardCodes],
+  ],
+  subCounties,
+)
+
+writeCsv(
+  'provinces',
+  [
+    ['code', (p) => p.code],
+    ['name', (p) => p.name],
+    ['legacy_iso_code', (p) => p.legacyIsoCode],
+    ['county_count', (p) => p.counties.length],
+    ['county_codes', (p) => p.counties],
+  ],
+  provinces,
+)
+
+writeCsv(
+  'blocs',
+  [
+    ['code', (b) => b.code],
+    ['name', (b) => b.name],
+    ['county_count', (b) => b.counties.length],
+    ['county_codes', (b) => b.counties],
+  ],
+  blocs,
+)
+
+writeCsv(
+  'districts',
+  [
+    ['code', (d) => d.code],
+    ['name', (d) => d.name],
+    ['slug', (d) => d.slug],
+    ['former_province_code', (d) => d.formerProvinceCode],
+    ['former_province', (d) => provinceByCode.get(d.formerProvinceCode).name],
+    ['county_codes', (d) => d.countyCodes],
+  ],
+  districts,
+)
+
+writeCsv(
+  'divisions',
+  [
+    ['code', (d) => d.code],
+    ['name', (d) => d.name],
+    ['slug', (d) => d.slug],
+    ['district_code', (d) => d.districtCode],
+    ['district_name', (d) => districtByCode.get(d.districtCode).name],
+    ['former_province_code', (d) => d.formerProvinceCode],
+  ],
+  divisions,
+)
+
+writeCsv(
+  'locations',
+  [
+    ['code', (l) => l.code],
+    ['name', (l) => l.name],
+    ['slug', (l) => l.slug],
+    ['division_code', (l) => l.divisionCode],
+    ['division_name', (l) => divisionByCode.get(l.divisionCode).name],
+    ['district_code', (l) => l.districtCode],
+    ['district_name', (l) => districtByCode.get(l.districtCode).name],
+    ['former_province_code', (l) => l.formerProvinceCode],
+  ],
+  locations,
+)
+
+writeCsv(
+  'sublocations',
+  [
+    ['code', (s) => s.code],
+    ['name', (s) => s.name],
+    ['slug', (s) => s.slug],
+    ['location_code', (s) => s.locationCode],
+    ['location_name', (s) => locationByCode.get(s.locationCode).name],
+    ['division_code', (s) => s.divisionCode],
+    ['district_code', (s) => s.districtCode],
+    ['former_province_code', (s) => s.formerProvinceCode],
+    ['population_2009', (s) => s.population[2009]],
+    ['population_male', (s) => s.population.male],
+    ['population_female', (s) => s.population.female],
+    ['households', (s) => s.households],
+    ['area_km2', (s) => s.areaKm2],
+    ['density_per_km2', (s) => s.densityPerKm2],
+  ],
+  subLocations,
+)
+
+/**
+ * The map as a table. `svg_path` is the county's outline as an SVG path,
+ * already projected onto the viewBox in data/svg/projection.json, so a
+ * spreadsheet or a template engine can draw Kenya without touching GeoJSON.
+ */
+writeCsv(
+  'county-outlines',
+  [
+    ['code', (c) => c.code],
+    ['name', (c) => c.name],
+    ['slug', (c) => c.slug],
+    ['pcode', (c) => c.pcode],
+    ['former_province_code', (c) => c.formerProvinceCode],
+    ['centroid_lat', (c) => c.centroid.lat],
+    ['centroid_lng', (c) => c.centroid.lng],
+    ['bbox_min_lng', (c) => c.bbox[0]],
+    ['bbox_min_lat', (c) => c.bbox[1]],
+    ['bbox_max_lng', (c) => c.bbox[2]],
+    ['bbox_max_lat', (c) => c.bbox[3]],
+    ['svg_x', (c) => shapes.get(c.code).bbox[0]],
+    ['svg_y', (c) => shapes.get(c.code).bbox[1]],
+    ['svg_width', (c) => shapes.get(c.code).bbox[2]],
+    ['svg_height', (c) => shapes.get(c.code).bbox[3]],
+    ['svg_path', (c) => shapes.get(c.code).d],
+  ],
+  counties,
+)
+
+/* -- docs atlas payload ----------------------------------------------- */
+
+const DOCS_BANNER =
+  '/* Generated by scripts/build-data.mjs. Do not edit by hand. */\n'
+
+/**
+ * Split in two because docs/index.html only wants the map, and the map is a
+ * tenth of the payload. atlas.html loads both; the landing page loads the
+ * geometry alone.
+ */
+writeFileSync(
+  docsOut('atlas-geometry.js'),
+  DOCS_BANNER +
+    'window.KR_GEOMETRY = ' +
+    JSON.stringify({
+      viewBox: `0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`,
+      width: SVG_WIDTH,
+      height: SVG_HEIGHT,
+      projection: { scale: svgScale, originX: extent.minX, originY: extent.maxY },
+      counties: counties.map((c) => ({
+        code: c.code,
+        name: c.name,
+        slug: c.slug,
+        pcode: c.pcode,
+        iso: c.isoCode,
+        capital: c.capital,
+        province: c.formerProvinceCode,
+        blocs: c.economicBlocs,
+        asal: c.asal,
+        city: c.cityStatusSince,
+        areaKm2: c.areaKm2,
+        pop09: c.population[2009],
+        pop19: c.population[2019],
+        lat: c.centroid.lat,
+        lng: c.centroid.lng,
+        box: shapes.get(c.code).bbox,
+        d: shapes.get(c.code).d,
+      })),
+    }) +
+    '\n',
+)
+
+writeFileSync(
+  docsOut('atlas-data.js'),
+  DOCS_BANNER +
+    'window.KR_ATLAS = ' +
+    JSON.stringify({
+      // Tuples for the four big levels; the small ones stay readable.
+      schema: {
+        wards: ['code', 'name', 'constituencyCode', 'subCounty'],
+        divisions: ['code', 'name', 'districtCode'],
+        locations: ['code', 'name', 'divisionCode'],
+        subLocations: [
+          'code',
+          'name',
+          'locationCode',
+          'population2009',
+          'households',
+          'areaKm2',
+        ],
+      },
+      provinces: provinces.map((p) => ({
+        code: p.code,
+        name: p.name,
+        iso: p.legacyIsoCode,
+        counties: p.counties,
+      })),
+      blocs: blocs.map((b) => ({ code: b.code, name: b.name, counties: b.counties })),
+      constituencies: constituencies.map((k) => ({
+        code: k.code,
+        name: k.name,
+        countyCode: k.countyCode,
+        pcode: k.pcode,
+        areaKm2: k.areaKm2,
+        lat: k.centroid.lat,
+        lng: k.centroid.lng,
+      })),
+      subCounties: subCounties.map((s) => ({
+        slug: s.slug,
+        name: s.name,
+        countyCode: s.countyCode,
+        constituencyCode: s.constituencyCode,
+        wardCodes: s.wardCodes,
+      })),
+      wards: wards.map((w) => [w.code, w.name, w.constituencyCode, w.subCounty]),
+      districts: districts.map((d) => ({
+        code: d.code,
+        name: d.name,
+        province: d.formerProvinceCode,
+        counties: d.countyCodes,
+      })),
+      divisions: divisions.map((d) => [d.code, d.name, d.districtCode]),
+      locations: locations.map((l) => [l.code, l.name, l.divisionCode]),
+      subLocations: subLocations.map((s) => [
+        s.code,
+        s.name,
+        s.locationCode,
+        s.population[2009],
+        s.households,
+        s.areaKm2,
+      ]),
+    }) +
+    '\n',
+)
+
+for (const name of ['atlas-geometry.js', 'atlas-data.js']) {
+  const kb = (readFileSync(docsOut(name), 'utf8').length / 1024).toFixed(1)
+  console.log(`  ${name.padEnd(16)} ${''.padStart(5)}          ${kb.padStart(7)} KB`)
+}
+
 // Committed so the disagreements between official sources stay visible rather
 // than being silently resolved in favour of whichever source was loaded first.
 writeFileSync(
