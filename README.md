@@ -681,6 +681,24 @@ already cover. The gap worth having is constituency and ward boundaries, and
 that is [blocked on a trustworthy
 source](docs/plans/03-constituency-boundaries.md) rather than on effort.
 
+## An example app
+
+[`examples/nextjs`](examples/nextjs) is a small Next.js app that installs this
+package from npm the way anyone else would, and uses it in every place a
+Next.js app can run code: a Server Component, a Client Component, a Server
+Action and two Route Handlers. It exists to catch the failure v1 shipped, where
+the package installed cleanly and then broke on import.
+
+```bash
+cd examples/nextjs && npm install
+npm run smoke    # ESM and CJS checks, no browser
+npm run dev
+```
+
+The address form is the piece worth copying: three dependent dropdowns, checked
+again on the server, where only the ward code is trusted and the county and
+constituency are re-derived from it.
+
 ## Roadmap
 
 Scoped but unbuilt work lives in [docs/plans](docs/plans), including what is

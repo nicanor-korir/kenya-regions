@@ -1,0 +1,25 @@
+{
+  "name": "kenya-regions-nextjs-example",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A consumer of the published kenya-regions package, used to check it actually works in a real app.",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "smoke": "node scripts/smoke.mjs && node scripts/smoke.cjs"
+  },
+  "dependencies": {
+    "kenya-regions": "^2.2.0",
+    "next": "^16.3.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^5.7.2"
+  }
+}
