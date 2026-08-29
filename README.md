@@ -723,9 +723,9 @@ The most useful open work needs local knowledge rather than TypeScript:
   pick the county you know, read its ward list in the
   [atlas](https://nicanor-korir.github.io/kenya-regions/atlas.html), and say what
   is wrong. Comment to claim one.
-- **[12 wards with no sub-county](https://github.com/nicanor-korir/kenya-regions/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+no+sub-county)** —
+- **[12 wards with no sub-county](https://github.com/nicanor-korir/kenya-regions/issues?q=is%3Aissue+is%3Aopen+in%3Atitle+%22has+no+sub-county%22)** —
   one ward each, one line to fix, labelled `good first issue`.
-- **[27 ward code conflicts](https://github.com/nicanor-korir/kenya-regions/issues?q=is%3Aissue+is%3Aopen+Resolve+ward+code+conflict)** —
+- **[27 ward code conflicts](https://github.com/nicanor-korir/kenya-regions/issues?q=is%3Aissue+is%3Aopen+in%3Atitle+%22ward+code+conflict%22)** —
   grouped by county, where two official sources disagree about which name
   belongs to which code.
 

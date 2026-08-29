@@ -16,8 +16,8 @@ work needs someone who knows a place:
 | Start here | What it needs |
 | --- | --- |
 | [Adopt your county](https://github.com/nicanor-korir/kenya-regions/issues/24) | You read the ward list for a county you know and say what is wrong |
-| [Wards with no sub-county](https://github.com/nicanor-korir/kenya-regions/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) | One ward each, one line to fix |
-| [Ward code conflicts](https://github.com/nicanor-korir/kenya-regions/issues?q=is%3Aissue+is%3Aopen+Resolve+ward+code+conflict) | Which of two official sources has the code right |
+| [Wards with no sub-county](https://github.com/nicanor-korir/kenya-regions/issues?q=is%3Aissue+is%3Aopen+in%3Atitle+%22has+no+sub-county%22) | One ward each, one line to fix |
+| [Ward code conflicts](https://github.com/nicanor-korir/kenya-regions/issues?q=is%3Aissue+is%3Aopen+in%3Atitle+%22ward+code+conflict%22) | Which of two official sources has the code right |
 | [`help wanted`](https://github.com/nicanor-korir/kenya-regions/labels/help%20wanted) | Everything else that is open |
 
 ---
