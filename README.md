@@ -711,7 +711,27 @@ blocked in `kenya-regions-geo`.
 
 Corrections are the most valuable contribution here. This is reference data
 about a real country, so a misspelled ward is a bug. See
-[CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
+[CONTRIBUTING.md](CONTRIBUTING.md) for the full guide, and
+[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for how people are expected to treat
+each other here.
+
+### Where to start
+
+The most useful open work needs local knowledge rather than TypeScript:
+
+- **[Adopt your county](https://github.com/nicanor-korir/kenya-regions/issues/24)** —
+  pick the county you know, read its ward list in the
+  [atlas](https://nicanor-korir.github.io/kenya-regions/atlas.html), and say what
+  is wrong. Comment to claim one.
+- **[12 wards with no sub-county](https://github.com/nicanor-korir/kenya-regions/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+no+sub-county)** —
+  one ward each, one line to fix, labelled `good first issue`.
+- **[27 ward code conflicts](https://github.com/nicanor-korir/kenya-regions/issues?q=is%3Aissue+is%3Aopen+Resolve+ward+code+conflict)** —
+  grouped by county, where two official sources disagree about which name
+  belongs to which code.
+
+A correction without a source is still worth opening. It gets labelled
+`needs-source` and stays open, and those issues often point at real problems
+somebody else can then find the document for.
 
 ### Quick start
 

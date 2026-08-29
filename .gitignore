@@ -8,3 +8,6 @@ coverage/
 .vscode/
 
 coverage/
+
+# Launch and outreach notes, local only
+LAUNCH-PLAN.md
