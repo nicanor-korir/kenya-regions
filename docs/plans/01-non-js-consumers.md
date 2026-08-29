@@ -1,7 +1,8 @@
 # 01. Non-JavaScript consumers
 
-**Priority: 1. Status: in progress. CSV and the documented CDN paths shipped
-in 2.2.0; SQL seeds and the recipes page are still open.**
+**Priority: 1. Status: in progress. CSV and SVG shipped in 2.2.0. The CDN paths
+are real but still undocumented in the README (#29); SQL seeds and the recipes
+page are open.**
 
 ## The use case
 
@@ -27,8 +28,11 @@ reachable over a CDN, and JSON is the wrong shape for half these cases anyway.
 
 ## What to build
 
-**Documented CDN URLs.** *Done in 2.2.0.* The README now states the paths and
-pins them by version:
+**Documented CDN URLs.** *Not done.* The paths work, because 2.2.0 ships the
+files in the tarball and the CDNs serve the tarball. But nothing in the README
+says so — the only mention anywhere is one unpinned unpkg line in the
+changelog — so the audience this plan is about still has no way to find them.
+Tracked in [#29](https://github.com/nicanor-korir/kenya-regions/issues/29). The paths to document, pinned by version:
 
 ```
 https://cdn.jsdelivr.net/npm/kenya-regions@2.2.0/data/counties.json
@@ -61,7 +65,8 @@ sections.
 
 ## How you would know it worked
 
-- ~~Every level available as `.json` and `.csv` at a documented, stable URL~~ done
+- Every level available as `.json` and `.csv` at a documented, stable URL —
+  the files are published, the documentation is not ([#29](https://github.com/nicanor-korir/kenya-regions/issues/29))
 - SQL seeds that run clean against a fresh database in all three dialects, with
   row counts matching the datasets, asserted in CI
 - The recipes page shows a working example for PHP, Python, SQL and spreadsheets
